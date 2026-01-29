@@ -98,7 +98,7 @@ const PricingSection = () => {
                   Rinnovo dominio, hosting e assistenza
                 </p>
                 <p className="text-lg font-semibold text-foreground">
-                  €199<span className="text-sm font-normal text-muted-foreground">/anno</span>
+                  €199<span className="text-sm font-normal text-muted-foreground">/anno · IVA esclusa</span>
                 </p>
               </div>
             </div>
