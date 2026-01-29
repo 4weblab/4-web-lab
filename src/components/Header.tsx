@@ -5,7 +5,7 @@ const navItems = [
   { label: 'Chi siamo', href: '#chi-siamo' },
   { label: 'Punti di forza', href: '#punti-di-forza' },
   { label: 'Servizi', href: '#servizi' },
-  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Prezzi', href: '#prezzi' },
   { label: 'Dove siamo', href: '#mappa' },
   { label: 'Contatti', href: '#contatti' },
 ];
