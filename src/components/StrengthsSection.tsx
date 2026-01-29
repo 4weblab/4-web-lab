@@ -1,4 +1,4 @@
-import { Zap, Search, Smartphone, Shield, HeadphonesIcon, TrendingUp } from 'lucide-react';
+import { Zap, Search, Smartphone, Shield, HeadphonesIcon, Wrench } from 'lucide-react';
 
 const strengths = [
   {
@@ -22,14 +22,14 @@ const strengths = [
     description: 'Protocolli HTTPS, aggiornamenti costanti e conformità alle normative privacy.',
   },
   {
-    icon: HeadphonesIcon,
+    icon: Wrench,
     title: 'Supporto dedicato',
-    description: 'Assistenza continua e un referente sempre disponibile per ogni tua esigenza.',
+    description: 'Un referente sempre disponibile per ogni tua esigenza tecnica o creativa.',
   },
   {
-    icon: TrendingUp,
-    title: 'Crescita misurabile',
-    description: 'Report chiari per monitorare visite, contatti e risultati del tuo investimento.',
+    icon: HeadphonesIcon,
+    title: 'Sempre operativo',
+    description: 'Assistenza continua per garantire che il tuo sito sia sempre funzionante e aggiornato.',
   },
 ];
 
