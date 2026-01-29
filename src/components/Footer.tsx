@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 // TODO: Sostituire con dati reali (NAP - Name, Address, Phone)
 const businessInfo = {
-  name: 'WebStudio',
-  fullName: 'WebStudio S.r.l.',
+  name: '4 Web Lab',
+  fullName: '4 Web Lab S.r.l.',
   vatNumber: 'P.IVA: 00000000000', // TODO: Inserire P.IVA reale
   address: 'Via Roma 123',
   city: 'Milano',
@@ -12,7 +12,7 @@ const businessInfo = {
   country: 'Italia',
   phone: '+39 02 1234567',
   whatsapp: '391234567890',
-  email: 'info@webstudio.it', // TODO: Inserire email reale
+  email: 'info@4weblab.it', // TODO: Inserire email reale
 };
 
 const Footer = () => {
@@ -34,9 +34,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <span className="w-10 h-10 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'var(--gradient-accent)' }}>
-                WS
-              </span>
+              <img 
+                src="/logo.png" 
+                alt="4 Web Lab logo" 
+                className="w-10 h-10 rounded-lg object-contain"
+              />
               <span className="font-serif text-xl font-semibold">{businessInfo.name}</span>
             </div>
             <p className="text-primary-foreground/70 mb-4 max-w-md">

@@ -14,4 +14,4 @@ User-agent: *
 Allow: /
 
 # TODO: Sostituire con URL reale del dominio
-Sitemap: https://www.webstudio.it/sitemap.xml
+Sitemap: https://www.4weblab.it/sitemap.xml
