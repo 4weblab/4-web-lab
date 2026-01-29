@@ -11,8 +11,8 @@ const businessInfo = {
   city: 'Milano',
   postalCode: '20100',
   country: 'Italia',
-  phone: '+39 02 1234567',
-  whatsapp: '391234567890',
+  phone: '+39 351 682 6560',
+  whatsapp: '393516826560',
   email: 'info@4weblab.it' // TODO: Inserire email reale
 };
 const Footer = () => {

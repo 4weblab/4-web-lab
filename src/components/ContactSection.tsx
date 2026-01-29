@@ -1,7 +1,6 @@
 import { MessageCircle, Clock, CheckCircle } from 'lucide-react';
 
-// TODO: Sostituire con numero WhatsApp reale
-const whatsappNumber = '391234567890';
+const whatsappNumber = '393516826560';
 const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.');
 
 const ContactSection = () => {
