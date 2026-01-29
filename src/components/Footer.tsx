@@ -39,10 +39,7 @@ const Footer = () => {
             <p className="text-primary-foreground/70 mb-4 max-w-md">
               Studio di produzione web per piccole attività e PMI. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione.
             </p>
-            <p className="text-primary-foreground/60 text-sm">
-              {businessInfo.fullName}<br />
-              {businessInfo.vatNumber}
-            </p>
+            
           </div>
 
           {/* Quick Links */}
@@ -76,17 +73,11 @@ const Footer = () => {
               <li>
                 <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
                   <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" aria-hidden="true" />
-                  <address className="not-italic">
-                    {businessInfo.address}<br />
-                    {businessInfo.postalCode} {businessInfo.city}
-                  </address>
+                  
                 </a>
               </li>
               <li>
-                <a href={`tel:${businessInfo.phone.replace(/\s/g, '')}`} className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  <Phone className="w-5 h-5" aria-hidden="true" />
-                  {businessInfo.phone}
-                </a>
+                
               </li>
               <li>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
