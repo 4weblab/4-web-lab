@@ -11,8 +11,8 @@ const businessInfo = {
   city: 'Milano',
   postalCode: '20100',
   country: 'Italia',
-  phone: '+39 351 682 6560',
-  whatsapp: '393516826560',
+  phone: '+39 02 1234567',
+  whatsapp: '391234567890',
   email: 'info@4weblab.it' // TODO: Inserire email reale
 };
 const Footer = () => {
@@ -68,7 +68,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-sans font-semibold text-lg mb-4">Contatti</h3>
+            
             <ul className="space-y-3">
               <li>
                 <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
@@ -77,10 +77,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="tel:+393516826560" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
-                  <Phone className="w-5 h-5" aria-hidden="true" />
-                  +39 351 682 6560
-                </a>
+                
               </li>
               <li>
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors">
