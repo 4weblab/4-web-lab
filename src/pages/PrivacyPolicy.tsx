@@ -37,11 +37,11 @@ const PrivacyPolicy = () => {
             </p>
             {/* TODO: Inserire dati reali del titolare */}
             <address className="not-italic text-muted-foreground bg-muted p-4 rounded-lg">
-              <strong>WebStudio S.r.l.</strong><br />
+              <strong>4 Web Lab S.r.l.</strong><br />
               Via Roma 123<br />
               20100 Milano (MI)<br />
               P.IVA: 00000000000<br />
-              Email: privacy@webstudio.it
+              Email: privacy@4weblab.it
             </address>
           </section>
 

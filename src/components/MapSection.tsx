@@ -2,7 +2,7 @@ import { MapPin, Navigation } from 'lucide-react';
 
 // TODO: Sostituire con i dati reali dell'attività
 const businessData = {
-  name: 'WebStudio',
+  name: '4 Web Lab',
   address: 'Via Roma 123',
   city: 'Milano',
   postalCode: '20100',

@@ -60,11 +60,13 @@ const Header = () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
           }}
         >
-          <span className="w-8 h-8 rounded-lg flex items-center justify-center text-sm font-bold" style={{ background: 'var(--gradient-accent)' }}>
-            WS
-          </span>
+          <img 
+            src="/logo.png" 
+            alt="4 Web Lab logo" 
+            className="w-8 h-8 rounded-lg object-contain"
+          />
           <span className={isScrolled ? 'text-foreground' : 'text-primary-foreground md:text-foreground'}>
-            WebStudio
+            4 Web Lab
           </span>
         </a>
 

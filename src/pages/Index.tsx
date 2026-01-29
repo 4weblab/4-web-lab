@@ -14,9 +14,9 @@ import CookieBanner from '@/components/CookieBanner';
 const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "WebStudio",
+  "name": "4 Web Lab",
   "description": "Studio di produzione siti web professionali per piccole attività e PMI a Milano. Design moderno, SEO locale e performance elevate.",
-  "url": "https://www.webstudio.it", // TODO: Inserire URL reale
+  "url": "https://www.4weblab.it", // TODO: Inserire URL reale
   "telephone": "+39021234567", // TODO: Inserire telefono reale
   "address": {
     "@type": "PostalAddress",
@@ -39,7 +39,7 @@ const businessSchema = {
     }
   ],
   "priceRange": "€€",
-  "image": "https://www.webstudio.it/og-image.jpg", // TODO: Inserire URL immagine reale
+  "image": "https://www.4weblab.it/og-image.jpg", // TODO: Inserire URL immagine reale
   "sameAs": [
     // TODO: Inserire profili social reali
   ]

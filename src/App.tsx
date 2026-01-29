@@ -13,10 +13,10 @@ const queryClient = new QueryClient();
 
 // TODO: Sostituire con dati reali
 const siteMetadata = {
-  title: "WebStudio | Creazione Siti Web Professionali per PMI a Milano",
+  title: "4 Web Lab | Creazione Siti Web Professionali per PMI a Milano",
   description: "Studio di produzione siti web per piccole attività e PMI. Design moderno, ottimizzazione SEO locale e performance elevate. Richiedi un preventivo gratuito.",
-  url: "https://www.webstudio.it", // TODO: Inserire URL reale
-  image: "https://www.webstudio.it/og-image.jpg", // TODO: Inserire immagine OG reale
+  url: "https://www.4weblab.it", // TODO: Inserire URL reale
+  image: "https://www.4weblab.it/og-image.jpg", // TODO: Inserire immagine OG reale
 };
 
 const App = () => (
@@ -45,7 +45,7 @@ const App = () => (
       <meta name="twitter:image" content={siteMetadata.image} />
       
       {/* Additional SEO */}
-      <meta name="author" content="WebStudio" />
+      <meta name="author" content="4 Web Lab" />
       <meta name="geo.region" content="IT-MI" />
       <meta name="geo.placename" content="Milano" />
       <html lang="it" />
