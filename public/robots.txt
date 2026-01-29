@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# TODO: Sostituire con URL reale del dominio
+Sitemap: https://www.webstudio.it/sitemap.xml

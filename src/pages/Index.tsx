@@ -1,13 +1,79 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import AboutSection from '@/components/AboutSection';
+import StrengthsSection from '@/components/StrengthsSection';
+import ServicesSection from '@/components/ServicesSection';
+import GallerySection from '@/components/GallerySection';
+import MapSection from '@/components/MapSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import WhatsAppButton from '@/components/WhatsAppButton';
+import CookieBanner from '@/components/CookieBanner';
+
+// TODO: Sostituire con dati reali dell'attività per Schema.org
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "WebStudio",
+  "description": "Studio di produzione siti web professionali per piccole attività e PMI a Milano. Design moderno, SEO locale e performance elevate.",
+  "url": "https://www.webstudio.it", // TODO: Inserire URL reale
+  "telephone": "+39021234567", // TODO: Inserire telefono reale
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Via Roma 123", // TODO: Inserire indirizzo reale
+    "addressLocality": "Milano",
+    "postalCode": "20100",
+    "addressCountry": "IT"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 45.4642, // TODO: Inserire coordinate reali
+    "longitude": 9.1900
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  ],
+  "priceRange": "€€",
+  "image": "https://www.webstudio.it/og-image.jpg", // TODO: Inserire URL immagine reale
+  "sameAs": [
+    // TODO: Inserire profili social reali
+  ]
+};
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <>
+      {/* Schema.org JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(businessSchema) }}
+      />
+
+      <Header />
+      
+      <main id="main-content">
+        <Hero />
+        <AboutSection />
+        <StrengthsSection />
+        <ServicesSection />
+        <GallerySection />
+        <MapSection />
+        <ContactSection />
+      </main>
+
+      <Footer />
+      
+      {/* Floating WhatsApp button (mobile only) */}
+      <WhatsAppButton />
+      
+      {/* Cookie banner */}
+      <CookieBanner />
+    </>
   );
 };
 
