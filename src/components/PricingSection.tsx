@@ -47,9 +47,9 @@ const PricingSection = () => {
               </div>
               
               <div className="mb-2">
+                <span className="text-sm text-muted-foreground block mb-1">a partire da</span>
                 <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">
-                  {/* TODO: Inserire prezzo reale */}
-                  €XXX
+                  €599
                 </span>
               </div>
               <p className="text-muted-foreground text-sm">
