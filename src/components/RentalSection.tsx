@@ -26,6 +26,7 @@ const plans = [
     features: [
       'Sito responsive',
       'Hosting e gestione inclusi',
+      'Personalizzazione base',
       'Assistenza base',
     ],
     highlighted: false,
