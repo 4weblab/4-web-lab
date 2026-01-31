@@ -11,7 +11,7 @@ const benefits = [
 ];
 
 const clarifications = [
-  'Il dominio è intestato a lei',
+  'Dominio di vostra proprietà',
   'Il sito è fornito in licenza d\'uso finché il servizio è attivo',
   'Alla cessazione del servizio, il sito viene disattivato',
   'È disponibile un\'opzione di riscatto dopo un periodo minimo',
