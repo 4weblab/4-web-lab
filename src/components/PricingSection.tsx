@@ -1,35 +1,20 @@
 import { Check, Gift, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const includedFeatures = [
-  'Sviluppo sito web professionale',
-  'Personalizzazione contenuti',
-  'Scelta font e tipografia',
-  'Palette colori su misura',
-  'Ottimizzazione SEO locale',
-  '1 anno di hosting incluso',
-  '1 anno di dominio incluso',
-];
-
+const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso', '1 anno di dominio incluso'];
 const PricingSection = () => {
   // TODO: Sostituire con numero WhatsApp reale
   const whatsappNumber = '391234567890';
   const message = encodeURIComponent('Ciao! Vorrei richiedere un preventivo per il sito web.');
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
-
-  return (
-    <section 
-      id="prezzi" 
-      className="section-padding" 
-      style={{ background: 'var(--gradient-surface)', scrollMarginTop: 'var(--header-height)' }}
-    >
+  return <section id="prezzi" className="section-padding" style={{
+    background: 'var(--gradient-surface)',
+    scrollMarginTop: 'var(--header-height)'
+  }}>
       <div className="container-section">
         <div className="text-center mb-12">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-4">Un'offerta, un prezzo</h2>
-          <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Nessun costo nascosto, nessuna sorpresa. Tutto ciò che serve per il tuo sito web professionale in un'unica soluzione.
-          </p>
+          <h2 className="heading-2 mb-4">La nostra soluzione ad acquisto diretto</h2>
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">Nessun costo nascosto, nessuna sorpresa. Tutto ciò che serve per il tuo sito web professionale in un'unica soluzione. Per chi preferisce acquistare il sito in un’unica soluzione, senza canone mensile</p>
         </div>
 
         <div className="max-w-lg mx-auto">
@@ -59,28 +44,17 @@ const PricingSection = () => {
 
             {/* Features list */}
             <ul className="space-y-3 mb-8" role="list" aria-label="Cosa include l'offerta">
-              {includedFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {includedFeatures.map((feature, index) => <li key={index} className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center mt-0.5">
                     <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                   </span>
                   <span className="text-foreground">{feature}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
 
             {/* CTA */}
-            <Button 
-              asChild 
-              size="lg" 
-              className="w-full"
-            >
-              <a 
-                href={whatsappLink}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Richiedi preventivo su WhatsApp"
-              >
+            <Button asChild size="lg" className="w-full">
+              <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Richiedi preventivo su WhatsApp">
                 Richiedi preventivo
               </a>
             </Button>
@@ -110,8 +84,6 @@ const PricingSection = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PricingSection;
