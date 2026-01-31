@@ -6,7 +6,7 @@ const benefits = [
   'Un sito web professionale già pronto',
   'Hosting, pubblicazione e gestione tecnica inclusi',
   'Assistenza e piccoli aggiornamenti inclusi',
-  'Nessuna spesa iniziale elevata',
+  'Nessuna spesa iniziale',
   'Nessuna competenza tecnica richiesta',
 ];
 
