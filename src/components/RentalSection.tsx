@@ -14,7 +14,7 @@ const clarifications = [
   'Dominio di vostra proprietà',
   'Il sito è fornito in licenza d\'uso finché il servizio è attivo',
   'Alla cessazione del servizio, il sito viene disattivato',
-  'È disponibile un\'opzione di riscatto dopo un periodo minimo',
+  'Disponibile un\'opzione di riscatto dopo un periodo minimo di 12 mesi',
 ];
 
 const plans = [
