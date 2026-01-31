@@ -35,6 +35,7 @@ const plans = [
     price: '69',
     description: 'Il pacchetto completo per una presenza online solida.',
     icon: Zap,
+    includesFrom: 'Pacchetto START più:',
     features: [
       'Grafica più curata',
       'SEO base locale',
@@ -49,6 +50,7 @@ const plans = [
     price: '99',
     description: 'Per chi vuole delegare tutto.',
     icon: Briefcase,
+    includesFrom: 'Pacchetto PRO più:',
     features: [
       'Testi e immagini curate',
       'Aggiornamenti continui',
@@ -163,6 +165,11 @@ const RentalSection = () => {
                 </CardHeader>
                 
                 <CardContent>
+                  {plan.includesFrom && (
+                    <p className="text-xs text-muted-foreground mb-3 pb-3 border-b border-border italic">
+                      {plan.includesFrom}
+                    </p>
+                  )}
                   <ul className="space-y-3" role="list" aria-label={`Caratteristiche piano ${plan.name}`}>
                     {plan.features.map((feature, index) => (
                       <li key={index} className="flex items-start gap-3">
