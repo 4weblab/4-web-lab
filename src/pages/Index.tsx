@@ -13,9 +13,9 @@ import CookieBanner from '@/components/CookieBanner';
 // TODO: Sostituire con dati reali dell'attività per Schema.org
 const businessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": "ProfessionalService",
   "name": "4 Web Lab",
-  "description": "Studio di produzione siti web professionali per piccole attività e PMI a Milano. Design moderno, SEO locale e performance elevate.",
+  "description": "Studio di produzione siti web professionali per professionisti, negozi e piccole e medie imprese in tutta Italia. Design moderno, SEO e performance elevate.",
   "url": "https://www.4weblab.it", // TODO: Inserire URL reale
   "telephone": "+39021234567", // TODO: Inserire telefono reale
   "address": {

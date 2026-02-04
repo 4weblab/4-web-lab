@@ -8,8 +8,8 @@ const strengths = [
   },
   {
     icon: Search,
-    title: 'SEO locale integrata',
-    description: 'Ottimizzazione per farti trovare dai clienti nella tua zona, con strategie mirate per Google.',
+    title: 'SEO integrata',
+    description: 'Ottimizzazione per farti trovare dai clienti su Google, con strategie mirate per il posizionamento nazionale.',
   },
   {
     icon: Smartphone,
@@ -41,7 +41,7 @@ const StrengthsSection = () => {
           <div className="section-divider" />
           <h2 className="heading-2 mb-4">Perché sceglierci</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Vantaggi concreti che fanno la differenza per la tua attività online.
+            Supportiamo professionisti, negozi e piccole e medie imprese in tutta Italia nella realizzazione di siti web professionali pensati per crescere online.
           </p>
         </div>
 

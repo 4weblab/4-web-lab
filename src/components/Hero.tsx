@@ -32,12 +32,12 @@ const Hero = () => {
       <div className="container-section relative z-10 text-center py-20">
         <div className="max-w-4xl mx-auto">
           <h1 className="heading-1 text-primary-foreground mb-6 animate-fade-in-up text-balance">
-            Creiamo siti web che fanno crescere il tuo business
+            Siti web professionali per professionisti, negozi e piccole e medie imprese in tutta Italia
           </h1>
           
           <p className="body-large text-primary-foreground/80 mb-10 max-w-2xl mx-auto animate-fade-in-up text-balance" style={{
           animationDelay: '0.1s'
-        }}>Soluzioni web professionali per attivià e PMI. Design moderno, performance elevate e strategie SEO per farti trovare dai tuoi clienti.</p>
+        }}>Progettiamo siti web moderni, veloci e ottimizzati SEO, lavorando da remoto con un metodo chiaro, strutturato e orientato ai risultati.</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{
           animationDelay: '0.2s'

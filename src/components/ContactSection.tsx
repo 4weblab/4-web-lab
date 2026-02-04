@@ -12,6 +12,9 @@ const ContactSection = () => {
         <div className="max-w-2xl mx-auto text-center">
           <div className="w-16 h-1 rounded-full mx-auto mb-6 bg-accent" />
           <h2 className="heading-2 text-primary-foreground mb-4">Parliamo del tuo progetto</h2>
+          <p className="body-large text-primary-foreground/80 mb-4 text-balance">
+            Lavoriamo con clienti in tutta Italia: puoi contattarci ovunque ti trovi.
+          </p>
           <p className="body-large text-primary-foreground/80 mb-8 text-balance">
             Contattaci su WhatsApp per una consulenza gratuita. Rispondiamo rapidamente e senza impegno.
           </p>
