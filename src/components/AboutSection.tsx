@@ -15,8 +15,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <p className="body-base text-muted-foreground">
-              Aiutiamo imprenditori, artigiani, professionisti e piccole aziende a costruire una presenza online efficace. 
-              Non vendiamo template: progettiamo soluzioni su misura, pensate per convertire visitatori in clienti.
+              Collaboriamo con professionisti, negozi e aziende in tutta Italia, seguendo ogni progetto da remoto attraverso un processo strutturato che garantisce chiarezza, tempi certi e qualità. Non vendiamo template: progettiamo soluzioni su misura, pensate per convertire visitatori in clienti.
             </p>
             <p className="body-base text-muted-foreground">
               Ogni progetto nasce dall'ascolto delle esigenze del cliente e si sviluppa con un approccio orientato ai risultati: 
