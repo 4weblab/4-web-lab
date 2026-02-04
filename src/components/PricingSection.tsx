@@ -41,7 +41,7 @@ const PricingSection = () => {
                 una tantum · IVA esclusa
               </p>
               <p className="text-muted-foreground text-sm mt-3">
-                Un servizio pensato per professionisti, negozi e piccole e medie imprese che cercano un sito web professionale completo, ovunque si trovino in Italia.
+                Una soluzione ideale per chi cerca la realizzazione di un sito web professionale completo, ovunque si trovi in Italia.
               </p>
             </div>
 

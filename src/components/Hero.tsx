@@ -37,7 +37,7 @@ const Hero = () => {
           
           <p className="body-large text-primary-foreground/80 mb-10 max-w-2xl mx-auto animate-fade-in-up text-balance" style={{
           animationDelay: '0.1s'
-        }}>Progettiamo siti web moderni, veloci e ottimizzati SEO, lavorando da remoto con un metodo chiaro, strutturato e orientato ai risultati.</p>
+        }}>Progettiamo e realizziamo siti web moderni, veloci e ottimizzati SEO, lavorando da remoto con un metodo chiaro, strutturato e orientato ai risultati.</p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{
           animationDelay: '0.2s'
