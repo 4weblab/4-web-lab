@@ -55,6 +55,10 @@ const ContactSection = () => {
               </div>
             </div>
           </div>
+
+          <p className="text-sm text-primary-foreground/60 mt-8">
+            Richieste da tutta Italia – rispondiamo rapidamente a ogni contatto.
+          </p>
         </div>
       </div>
     </section>
