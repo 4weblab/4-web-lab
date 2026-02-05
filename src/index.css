@@ -230,6 +230,14 @@
     @apply bg-primary-foreground/10 border-primary-foreground/50;
   }
 
+   .btn-outline-light {
+     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium bg-primary-foreground text-primary border-2 border-primary-foreground transition-all duration-200;
+   }
+ 
+   .btn-outline-light:hover {
+     @apply bg-primary-foreground/90;
+   }
+ 
   /* Card styles */
   .card-elevated {
     @apply bg-card rounded-xl p-6;
