@@ -2,13 +2,16 @@ import { Globe, Palette, BarChart3, Wrench, RefreshCw, MessageSquare, ChevronLef
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useIsMobile } from '@/hooks/use-mobile';
+ import { Link } from 'react-router-dom';
 
 const services = [
   {
     icon: Globe,
     title: 'Siti web professionali',
-    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+     description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e aziende che operano in tutta Italia.',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
+     linkText: 'professionisti',
+     linkUrl: '/realizzazione-siti-web-per-professionisti',
   },
   {
     icon: Palette,
@@ -138,7 +141,14 @@ const ServicesSection = () => {
                     </div>
                     
                     <h3 className="font-sans font-semibold text-xl mb-2">{service.title}</h3>
-                    <p className="text-muted-foreground mb-4 flex-grow">{service.description}</p>
+                     <p className="text-muted-foreground mb-4 flex-grow">
+                       {service.description}
+                       {service.linkText && service.linkUrl && (
+                         <>
+                           {' '}Soluzione ideale per <Link to={service.linkUrl} className="text-accent hover:underline font-medium">{service.linkText}</Link> che necessitano di un sito web professionale strutturato.
+                         </>
+                       )}
+                     </p>
                     
                     <ul className="space-y-2 mt-auto">
                       {service.features.map((feature, featureIndex) => (
