@@ -2,16 +2,17 @@ import { Globe, Palette, BarChart3, Wrench, RefreshCw, MessageSquare, ChevronLef
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useIsMobile } from '@/hooks/use-mobile';
- import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { AnimatedSection } from './AnimatedSection';
 
 const services = [
   {
     icon: Globe,
     title: 'Siti web professionali',
-     description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e aziende che operano in tutta Italia.',
+    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e aziende che operano in tutta Italia.',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
-     linkText: 'professionisti',
-     linkUrl: '/realizzazione-siti-web-per-professionisti',
+    linkText: 'professionisti',
+    linkUrl: '/realizzazione-siti-web-per-professionisti',
   },
   {
     icon: Palette,
@@ -47,13 +48,13 @@ const services = [
 
 const ServicesSection = () => {
   const isMobile = useIsMobile();
-  const [emblaRef, emblaApi] = useEmblaCarousel({ 
+  const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
     skipSnaps: false,
     slidesToScroll: 1,
   });
-  
+
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [canScrollPrev, setCanScrollPrev] = useState(false);
   const [canScrollNext, setCanScrollNext] = useState(false);
@@ -90,114 +91,108 @@ const ServicesSection = () => {
   return (
     <section id="servizi" className="section-padding bg-background" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
-        <div className="text-center mb-8 md:mb-12">
+        <AnimatedSection className="text-center mb-10 md:mb-14">
           <div className="section-divider" />
           <h2 className="heading-2 mb-4">I nostri servizi</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Soluzioni complete per la tua presenza online, dalla creazione alla gestione quotidiana.
           </p>
-        </div>
+        </AnimatedSection>
 
-        {/* Carousel Container */}
-        <div className="relative">
-          {/* Navigation Arrows - Desktop only */}
-          {!isMobile && (
-            <>
-              <button
-                onClick={scrollPrev}
-                className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-10 w-10 h-10 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={!canScrollPrev}
-                aria-label="Servizio precedente"
-              >
-                <ChevronLeft className="w-5 h-5" />
-              </button>
-              <button
-                onClick={scrollNext}
-                className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-10 w-10 h-10 rounded-full bg-primary text-primary-foreground shadow-lg flex items-center justify-center hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                disabled={!canScrollNext}
-                aria-label="Servizio successivo"
-              >
-                <ChevronRight className="w-5 h-5" />
-              </button>
-            </>
-          )}
-
-          {/* Carousel */}
-          <div className="overflow-hidden" ref={emblaRef}>
-            <div className="flex">
-              {services.map((service, index) => (
-                <div
-                  key={index}
-                  className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 pl-4 first:pl-0 md:first:pl-4"
+        <AnimatedSection delay={0.2}>
+          <div className="relative">
+            {/* Navigation Arrows - Desktop only */}
+            {!isMobile && (
+              <>
+                <button
+                  onClick={scrollPrev}
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-10 w-11 h-11 rounded-full bg-card text-foreground border border-border/50 flex items-center justify-center hover:bg-muted hover:border-accent/30 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+                  disabled={!canScrollPrev}
+                  aria-label="Servizio precedente"
+                  style={{ boxShadow: 'var(--shadow-md)' }}
                 >
-                  <article 
-                    className="card-elevated flex flex-col h-full transition-all duration-300 hover:-translate-y-1 hover:shadow-lg group mx-2"
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  onClick={scrollNext}
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-10 w-11 h-11 rounded-full bg-card text-foreground border border-border/50 flex items-center justify-center hover:bg-muted hover:border-accent/30 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+                  disabled={!canScrollNext}
+                  aria-label="Servizio successivo"
+                  style={{ boxShadow: 'var(--shadow-md)' }}
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </>
+            )}
+
+            {/* Carousel */}
+            <div className="overflow-hidden" ref={emblaRef}>
+              <div className="flex">
+                {services.map((service, index) => (
+                  <div
+                    key={index}
+                    className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 pl-4 first:pl-0 md:first:pl-4"
                   >
-                    <div 
-                      className="w-12 h-12 rounded-lg flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
-                      style={{ background: 'var(--gradient-accent)' }}
-                    >
-                      <service.icon className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
-                    </div>
-                    
-                    <h3 className="font-sans font-semibold text-xl mb-2">{service.title}</h3>
-                     <p className="text-muted-foreground mb-4 flex-grow">
-                       {service.description}
-                       {service.linkText && service.linkUrl && (
-                         <>
-                           {' '}Soluzione ideale per <Link to={service.linkUrl} className="text-accent hover:underline font-medium">{service.linkText}</Link> che necessitano di un sito web professionale strutturato.
-                         </>
-                       )}
-                     </p>
-                    
-                    <ul className="space-y-2 mt-auto">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
-                  </article>
-                </div>
+                    <article className="card-glass flex flex-col h-full group hover:-translate-y-1.5 transition-transform duration-300 mx-2">
+                      <div className="icon-box w-12 h-12 rounded-xl mb-5 transition-transform duration-300 group-hover:scale-110">
+                        <service.icon className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                      </div>
+
+                      <h3 className="font-sans font-semibold text-xl mb-3">{service.title}</h3>
+                      <p className="text-muted-foreground mb-5 flex-grow leading-relaxed">
+                        {service.description}
+                        {service.linkText && service.linkUrl && (
+                          <>
+                            {' '}Soluzione ideale per <Link to={service.linkUrl} className="text-accent hover:underline font-medium">{service.linkText}</Link> che necessitano di un sito web professionale strutturato.
+                          </>
+                        )}
+                      </p>
+
+                      <ul className="space-y-2.5 mt-auto">
+                        {service.features.map((feature, featureIndex) => (
+                          <li key={featureIndex} className="flex items-center gap-2.5 text-sm text-muted-foreground">
+                            <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Dots Navigation */}
+            <div className="flex justify-center gap-2 mt-8" role="tablist" aria-label="Navigazione servizi">
+              {services.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => scrollTo(index)}
+                  className={`h-2.5 rounded-full transition-all duration-400 ${
+                    selectedIndex === index
+                      ? 'bg-accent w-7'
+                      : 'bg-muted-foreground/25 w-2.5 hover:bg-muted-foreground/40'
+                  }`}
+                  role="tab"
+                  aria-selected={selectedIndex === index}
+                  aria-label={`Vai al servizio ${index + 1}`}
+                />
               ))}
             </div>
+
+            {isMobile && (
+              <p className="text-sm text-muted-foreground text-center mt-4">
+                Scorri per vedere tutti i servizi
+              </p>
+            )}
           </div>
+        </AnimatedSection>
 
-          {/* Dots Navigation */}
-          <div className="flex justify-center gap-2 mt-6" role="tablist" aria-label="Navigazione servizi">
-            {services.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => scrollTo(index)}
-                className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                  selectedIndex === index 
-                    ? 'bg-primary w-6' 
-                    : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
-                }`}
-                role="tab"
-                aria-selected={selectedIndex === index}
-                aria-label={`Vai al servizio ${index + 1}`}
-              />
-            ))}
-          </div>
-
-          {/* Mobile swipe hint */}
-          {isMobile && (
-            <p className="text-sm text-muted-foreground text-center mt-4">
-              Scorri per vedere tutti i servizi
-            </p>
-          )}
-        </div>
-
-        <div className="text-center mt-10 md:mt-12">
-          <button
-            onClick={handleContactClick}
-            className="btn-secondary"
-          >
+        <AnimatedSection className="text-center mt-12 md:mt-14" delay={0.3}>
+          <button onClick={handleContactClick} className="btn-secondary">
             Richiedi informazioni sui servizi
           </button>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );
