@@ -1,6 +1,7 @@
 import { Check, Monitor, Zap, Briefcase } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
 
 const benefits = [
   'Un sito web professionale già pronto',
@@ -71,15 +72,15 @@ const RentalSection = () => {
   };
 
   return (
-    <section 
-      id="noleggio" 
+    <section
+      id="noleggio"
       className="section-padding bg-background"
       style={{ scrollMarginTop: 'var(--header-height)' }}
       aria-labelledby="rental-heading"
     >
       <div className="container-section">
         {/* Header */}
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-14">
           <div className="section-divider" />
           <h2 id="rental-heading" className="heading-2 mb-4">
             Il sito come servizio, senza pensieri
@@ -87,20 +88,20 @@ const RentalSection = () => {
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Un sito professionale sempre online, con assistenza inclusa e costi chiari.
           </p>
-        </div>
+        </AnimatedSection>
 
         {/* Content */}
-        <div className="max-w-3xl mx-auto mb-12">
-          <p className="text-foreground mb-6 leading-relaxed">
-            Con il nostro servizio, lei paga un <strong>canone mensile</strong> per avere 
-            un sito web professionale sempre operativo, senza preoccuparsi di nulla. 
+        <AnimatedSection className="max-w-3xl mx-auto mb-14" delay={0.1}>
+          <p className="text-foreground mb-8 leading-relaxed text-lg">
+            Con il nostro servizio, lei paga un <strong>canone mensile</strong> per avere
+            un sito web professionale sempre operativo, senza preoccuparsi di nulla.
             Nessuna spesa iniziale importante, nessuna competenza tecnica richiesta.
           </p>
 
           {/* Benefits */}
-          <div className="grid sm:grid-cols-2 gap-3 mb-8">
+          <div className="grid sm:grid-cols-2 gap-4 mb-10">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start gap-3">
+              <div key={index} className="flex items-start gap-3 p-3 rounded-xl bg-accent/5 border border-accent/10 transition-colors duration-300 hover:bg-accent/8">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center mt-0.5">
                   <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                 </span>
@@ -110,12 +111,12 @@ const RentalSection = () => {
           </div>
 
           {/* Clarifications */}
-          <div className="p-6 rounded-lg border border-border bg-muted/30 mb-8">
-            <h3 className="font-semibold text-foreground mb-4">Trasparenza totale</h3>
-            <ul className="space-y-2">
+          <div className="card-glass mb-10">
+            <h3 className="font-semibold text-foreground mb-4 text-lg">Trasparenza totale</h3>
+            <ul className="space-y-3">
               {clarifications.map((item, index) => (
-                <li key={index} className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <span className="text-accent mt-1">•</span>
+                <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <span className="text-accent mt-0.5 font-bold">•</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -123,85 +124,87 @@ const RentalSection = () => {
           </div>
 
           {/* Key phrase */}
-          <blockquote className="text-center text-lg md:text-xl font-serif italic text-foreground border-l-4 border-accent pl-6 py-2 my-8">
+          <blockquote className="text-center text-lg md:text-xl font-serif italic text-foreground border-l-4 border-accent pl-6 py-3 my-10 bg-accent/5 rounded-r-2xl">
             "Lei pensa alla sua attività, al sito pensiamo noi."
           </blockquote>
-        </div>
+        </AnimatedSection>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-12">
+        <StaggerContainer className="grid md:grid-cols-3 gap-7 max-w-5xl mx-auto mb-14" staggerDelay={0.12}>
           {plans.map((plan) => {
             const Icon = plan.icon;
             return (
-              <Card 
-                key={plan.name} 
-                className={`relative overflow-hidden transition-all duration-300 ${
-                  plan.highlighted 
-                    ? 'border-accent shadow-lg scale-[1.02] md:scale-105' 
-                    : 'border-border hover:border-accent/50 hover:shadow-md'
-                }`}
-              >
-                {plan.highlighted && plan.badge && (
-                  <div className="absolute top-0 right-0">
-                    <Badge className="rounded-none rounded-bl-lg bg-accent text-accent-foreground">
-                      {plan.badge}
-                    </Badge>
-                  </div>
-                )}
-                
-                <CardHeader className="text-center pb-4">
-                  <div className={`w-12 h-12 rounded-full mx-auto mb-4 flex items-center justify-center ${
-                    plan.highlighted ? 'bg-accent/20' : 'bg-muted'
-                  }`}>
-                    <Icon className={`w-6 h-6 ${plan.highlighted ? 'text-accent' : 'text-muted-foreground'}`} aria-hidden="true" />
-                  </div>
-                  <CardTitle className="text-xl font-bold">{plan.name}</CardTitle>
-                  <div className="mt-2">
-                    <span className="text-4xl font-serif font-bold text-foreground">{plan.price} €</span>
-                    <span className="text-muted-foreground text-sm">/mese</span>
-                  </div>
-                  <CardDescription className="mt-3 text-balance">
-                    {plan.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent>
-                  {plan.includesFrom && (
-                    <p className="text-xs text-muted-foreground mb-3 pb-3 border-b border-border italic">
-                      {plan.includesFrom}
-                    </p>
+              <StaggerItem key={plan.name}>
+                <Card
+                  className={`relative overflow-hidden transition-all duration-400 h-full ${
+                    plan.highlighted
+                      ? 'border-accent/60 scale-[1.02] md:scale-105 ring-1 ring-accent/20'
+                      : 'border-border/40 hover:border-accent/30'
+                  }`}
+                  style={{ boxShadow: plan.highlighted ? 'var(--shadow-accent)' : 'var(--shadow-md)' }}
+                >
+                  {plan.highlighted && plan.badge && (
+                    <div className="absolute top-0 right-0">
+                      <Badge className="rounded-none rounded-bl-xl bg-accent text-accent-foreground px-4 py-1.5 text-xs font-bold">
+                        {plan.badge}
+                      </Badge>
+                    </div>
                   )}
-                  <ul className="space-y-3" role="list" aria-label={`Caratteristiche piano ${plan.name}`}>
-                    {plan.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
-                          plan.highlighted ? 'bg-accent/20' : 'bg-muted'
-                        }`}>
-                          <Check className={`w-3 h-3 ${plan.highlighted ? 'text-accent' : 'text-muted-foreground'}`} aria-hidden="true" />
-                        </span>
-                        <span className="text-sm text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+
+                  <CardHeader className="text-center pb-4">
+                    <div className={`w-14 h-14 rounded-2xl mx-auto mb-5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
+                      plan.highlighted ? 'bg-accent/15' : 'bg-muted'
+                    }`}>
+                      <Icon className={`w-7 h-7 ${plan.highlighted ? 'text-accent' : 'text-muted-foreground'}`} aria-hidden="true" />
+                    </div>
+                    <CardTitle className="text-xl font-bold">{plan.name}</CardTitle>
+                    <div className="mt-3">
+                      <span className="text-4xl font-serif font-bold text-foreground">{plan.price} €</span>
+                      <span className="text-muted-foreground text-sm">/mese</span>
+                    </div>
+                    <CardDescription className="mt-3 text-balance">
+                      {plan.description}
+                    </CardDescription>
+                  </CardHeader>
+
+                  <CardContent>
+                    {plan.includesFrom && (
+                      <p className="text-xs text-muted-foreground mb-3 pb-3 border-b border-border/50 italic">
+                        {plan.includesFrom}
+                      </p>
+                    )}
+                    <ul className="space-y-3" role="list" aria-label={`Caratteristiche piano ${plan.name}`}>
+                      {plan.features.map((feature, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center mt-0.5 ${
+                            plan.highlighted ? 'bg-accent/20' : 'bg-muted'
+                          }`}>
+                            <Check className={`w-3 h-3 ${plan.highlighted ? 'text-accent' : 'text-muted-foreground'}`} aria-hidden="true" />
+                          </span>
+                          <span className="text-sm text-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              </StaggerItem>
             );
           })}
-        </div>
+        </StaggerContainer>
 
         {/* CTA */}
-        <div className="text-center">
+        <AnimatedSection className="text-center" delay={0.3}>
           <button
             onClick={scrollToContact}
-            className="btn-primary text-lg px-8 py-4"
+            className="btn-primary text-lg px-9 py-4"
             aria-label="Richiedi una proposta personalizzata"
           >
             Richieda una proposta personalizzata
           </button>
-          <p className="text-sm text-muted-foreground mt-4">
+          <p className="text-sm text-muted-foreground mt-5">
             IVA esclusa · Nessun vincolo a lungo termine
           </p>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

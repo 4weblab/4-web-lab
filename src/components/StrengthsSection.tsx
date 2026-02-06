@@ -1,5 +1,6 @@
 import { Zap, Search, Smartphone, Shield, HeadphonesIcon, Wrench } from 'lucide-react';
- import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
 
 const strengths = [
   {
@@ -38,31 +39,27 @@ const StrengthsSection = () => {
   return (
     <section id="punti-di-forza" className="section-padding" style={{ background: 'var(--gradient-surface)', scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-14">
           <div className="section-divider" />
           <h2 className="heading-2 mb-4">Perché sceglierci</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-             Supportiamo <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>, negozi e piccole e medie imprese in tutta Italia nella realizzazione di siti web professionali orientati alla crescita online.
+            Supportiamo <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>, negozi e piccole e medie imprese in tutta Italia nella realizzazione di siti web professionali orientati alla crescita online.
           </p>
-        </div>
+        </AnimatedSection>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6" staggerDelay={0.08}>
           {strengths.map((strength, index) => (
-            <article 
-              key={index} 
-              className="card-elevated text-center transition-all duration-300 hover:-translate-y-1 group"
-            >
-              <div 
-                className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4 transition-transform duration-300 group-hover:scale-110"
-                style={{ background: 'var(--gradient-accent)' }}
-              >
-                <strength.icon className="w-7 h-7 text-accent-foreground" aria-hidden="true" />
-              </div>
-              <h3 className="font-sans font-semibold text-lg mb-2">{strength.title}</h3>
-              <p className="text-muted-foreground text-sm">{strength.description}</p>
-            </article>
+            <StaggerItem key={index}>
+              <article className="card-glass text-center group hover:-translate-y-1.5 transition-transform duration-300 h-full">
+                <div className="icon-box w-14 h-14 rounded-2xl mx-auto mb-5 transition-transform duration-300 group-hover:scale-110">
+                  <strength.icon className="w-7 h-7 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <h3 className="font-sans font-semibold text-lg mb-3">{strength.title}</h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">{strength.description}</p>
+              </article>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

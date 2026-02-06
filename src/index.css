@@ -6,65 +6,64 @@
 
 /* 
  * Design System - Studio Web Professionale
- * Palette: Ardesia profondo + Ambra/Oro accent + Neutri raffinati
- * All colors in HSL
+ * Premium Visual Upgrade: Glassmorphism + Soft Shadows + Refined Gradients
  */
 
 @layer base {
   :root {
-    /* Core palette - Tech Blue theme inspired by 4WebLab logo */
     --background: 210 25% 98%;
     --foreground: 215 50% 12%;
 
-    /* Surfaces */
     --card: 0 0% 100%;
     --card-foreground: 215 50% 12%;
     --popover: 0 0% 100%;
     --popover-foreground: 215 50% 12%;
 
-    /* Primary - Deep navy blue from logo */
     --primary: 215 50% 18%;
     --primary-foreground: 210 25% 98%;
 
-    /* Secondary - Soft blue-gray */
     --secondary: 210 20% 96%;
     --secondary-foreground: 215 50% 20%;
 
-    /* Accent - Vibrant blue from logo gradient */
     --accent: 207 90% 54%;
     --accent-foreground: 0 0% 100%;
 
-    /* Muted surfaces */
     --muted: 210 20% 96%;
     --muted-foreground: 215 15% 46%;
 
-    /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    /* Borders & inputs */
     --border: 210 18% 90%;
     --input: 210 18% 90%;
     --ring: 207 90% 54%;
 
-    --radius: 0.625rem;
+    --radius: 0.75rem;
 
     /* Custom tokens */
     --section-spacing: 6rem;
     --container-max: 1200px;
-    --header-height: 4rem;
+    --header-height: 4.5rem;
 
-    /* Gradients - Blue theme */
-    --gradient-hero: linear-gradient(135deg, hsl(215 50% 18%) 0%, hsl(210 45% 25%) 100%);
+    /* Gradients - Refined */
+    --gradient-hero: linear-gradient(145deg, hsl(215 50% 14%) 0%, hsl(210 48% 22%) 50%, hsl(207 60% 28%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(207 90% 54%) 0%, hsl(215 85% 45%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(210 25% 98%) 0%, hsl(210 20% 96%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(210 25% 97%) 0%, hsl(210 22% 94%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.8) 0%, hsla(0, 0%, 100%, 0.4) 100%);
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(215 50% 12% / 0.05);
-    --shadow-md: 0 4px 6px -1px hsl(215 50% 12% / 0.08), 0 2px 4px -2px hsl(215 50% 12% / 0.06);
-    --shadow-lg: 0 10px 15px -3px hsl(215 50% 12% / 0.1), 0 4px 6px -4px hsl(215 50% 12% / 0.06);
-    --shadow-xl: 0 20px 25px -5px hsl(215 50% 12% / 0.1), 0 8px 10px -6px hsl(215 50% 12% / 0.06);
-    --shadow-accent: 0 4px 14px 0 hsl(207 90% 54% / 0.35);
+    /* Premium Shadows */
+    --shadow-sm: 0 1px 3px 0 hsl(215 50% 12% / 0.04), 0 1px 2px -1px hsl(215 50% 12% / 0.04);
+    --shadow-md: 0 4px 8px -2px hsl(215 50% 12% / 0.06), 0 2px 4px -2px hsl(215 50% 12% / 0.04);
+    --shadow-lg: 0 12px 24px -4px hsl(215 50% 12% / 0.08), 0 4px 8px -4px hsl(215 50% 12% / 0.04);
+    --shadow-xl: 0 24px 48px -8px hsl(215 50% 12% / 0.1), 0 12px 16px -6px hsl(215 50% 12% / 0.04);
+    --shadow-accent: 0 4px 16px 0 hsl(207 90% 54% / 0.3);
+    --shadow-accent-lg: 0 8px 32px 0 hsl(207 90% 54% / 0.35);
+    --shadow-glass: 0 8px 32px 0 hsl(215 50% 12% / 0.06);
+
+    /* Glassmorphism */
+    --glass-bg: hsla(0, 0%, 100%, 0.7);
+    --glass-border: hsla(0, 0%, 100%, 0.5);
+    --glass-blur: 16px;
 
     /* Sidebar */
     --sidebar-background: 0 0% 98%;
@@ -80,33 +79,28 @@
   .dark {
     --background: 215 50% 7%;
     --foreground: 210 25% 98%;
-
     --card: 215 50% 10%;
     --card-foreground: 210 25% 98%;
-
     --popover: 215 50% 10%;
     --popover-foreground: 210 25% 98%;
-
     --primary: 210 25% 98%;
     --primary-foreground: 215 50% 12%;
-
     --secondary: 215 35% 18%;
     --secondary-foreground: 210 25% 98%;
-
     --accent: 207 90% 54%;
     --accent-foreground: 0 0% 100%;
-
     --muted: 215 35% 18%;
     --muted-foreground: 210 20% 65%;
-
     --destructive: 0 62% 30%;
     --destructive-foreground: 210 25% 98%;
-
     --border: 215 35% 18%;
     --input: 215 35% 18%;
     --ring: 207 90% 54%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(215 50% 7%) 0%, hsl(210 45% 12%) 100%);
+    --gradient-hero: linear-gradient(145deg, hsl(215 50% 5%) 0%, hsl(210 45% 10%) 50%, hsl(207 50% 14%) 100%);
+    --gradient-glass: linear-gradient(135deg, hsla(215, 50%, 18%, 0.6) 0%, hsla(215, 50%, 12%, 0.3) 100%);
+    --glass-bg: hsla(215, 50%, 12%, 0.5);
+    --glass-border: hsla(215, 35%, 25%, 0.5);
     --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.3);
     --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.4);
     --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.4);
@@ -156,12 +150,10 @@
     @apply font-semibold tracking-tight text-foreground;
   }
 
-  /* Focus styles for accessibility */
   :focus-visible {
     @apply outline-none ring-2 ring-accent ring-offset-2 ring-offset-background;
   }
 
-  /* Minimum tap target size */
   button, a, [role="button"] {
     min-height: 44px;
     min-width: 44px;
@@ -174,7 +166,7 @@
   }
 
   .section-padding {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28;
   }
 
   /* Typography scale */
@@ -198,16 +190,16 @@
     @apply text-base leading-relaxed;
   }
 
-  /* Button variants */
+  /* Premium Button variants */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium text-accent-foreground transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-medium text-accent-foreground transition-all duration-300;
     background: var(--gradient-accent);
     box-shadow: var(--shadow-accent);
   }
 
   .btn-primary:hover {
-    @apply scale-[1.02];
-    box-shadow: 0 6px 20px 0 hsl(38 92% 50% / 0.45);
+    @apply scale-[1.03];
+    box-shadow: var(--shadow-accent-lg);
   }
 
   .btn-primary:active {
@@ -215,36 +207,57 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium bg-secondary text-secondary-foreground border border-border transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-medium bg-secondary text-secondary-foreground border border-border/50 transition-all duration-300;
+    box-shadow: var(--shadow-sm);
   }
 
   .btn-secondary:hover {
-    @apply bg-muted border-muted-foreground/20;
+    @apply bg-muted border-accent/30;
+    box-shadow: var(--shadow-md);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium bg-transparent text-primary-foreground border-2 border-primary-foreground/30 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-medium bg-transparent text-primary-foreground border-2 border-primary-foreground/25 transition-all duration-300;
+    backdrop-filter: blur(8px);
+    background: hsla(0, 0%, 100%, 0.06);
   }
 
   .btn-outline:hover {
-    @apply bg-primary-foreground/10 border-primary-foreground/50;
+    @apply border-primary-foreground/50;
+    background: hsla(0, 0%, 100%, 0.12);
   }
 
-   .btn-outline-light {
-     @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-medium bg-primary-foreground text-primary border-2 border-primary-foreground transition-all duration-200;
-   }
- 
-   .btn-outline-light:hover {
-     @apply bg-primary-foreground/90;
-   }
- 
-  /* Card styles */
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-xl font-medium bg-primary-foreground text-primary border-2 border-primary-foreground transition-all duration-300;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn-outline-light:hover {
+    @apply bg-primary-foreground/90;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Premium Card styles */
   .card-elevated {
-    @apply bg-card rounded-xl p-6;
+    @apply bg-card rounded-2xl p-7 border border-border/40 transition-all duration-400;
     box-shadow: var(--shadow-md);
   }
 
   .card-elevated:hover {
+    box-shadow: var(--shadow-xl);
+    border-color: hsl(var(--accent) / 0.15);
+  }
+
+  /* Glassmorphism card */
+  .card-glass {
+    @apply rounded-2xl p-7 border transition-all duration-400;
+    background: var(--glass-bg);
+    border-color: var(--glass-border);
+    backdrop-filter: blur(var(--glass-blur));
+    box-shadow: var(--shadow-glass);
+  }
+
+  .card-glass:hover {
     box-shadow: var(--shadow-lg);
   }
 
@@ -275,18 +288,19 @@
 
   /* WhatsApp floating button */
   .whatsapp-float {
-    @apply fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full transition-transform duration-200;
+    @apply fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full transition-all duration-300;
     background: #25D366;
-    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
   }
 
   .whatsapp-float:hover {
     @apply scale-110;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
   }
 
-  /* Section divider */
+  /* Section divider - refined */
   .section-divider {
-    @apply w-16 h-1 rounded-full mx-auto mb-6;
+    @apply w-16 h-1 rounded-full mx-auto mb-8;
     background: var(--gradient-accent);
   }
 
@@ -304,10 +318,26 @@
   .link-underline:hover::after {
     @apply origin-bottom-left scale-x-100;
   }
+
+  /* Icon container - premium gradient with glow */
+  .icon-box {
+    @apply flex items-center justify-center rounded-xl transition-all duration-300;
+    background: var(--gradient-accent);
+    box-shadow: 0 2px 8px 0 hsl(207 90% 54% / 0.2);
+  }
+
+  .icon-box:hover,
+  .group:hover .icon-box {
+    box-shadow: 0 4px 16px 0 hsl(207 90% 54% / 0.35);
+  }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .duration-400 {
+    transition-duration: 400ms;
   }
 }
