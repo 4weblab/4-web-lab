@@ -4,6 +4,7 @@ import useEmblaCarousel from 'embla-carousel-react';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { Link } from 'react-router-dom';
 import { AnimatedSection } from './AnimatedSection';
+import { motion } from 'framer-motion';
 
 const services = [
   {
@@ -91,9 +92,9 @@ const ServicesSection = () => {
   return (
     <section id="servizi" className="section-padding bg-background" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
-        <AnimatedSection className="text-center mb-10 md:mb-14">
+        <AnimatedSection className="text-center mb-12 md:mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-4">I nostri servizi</h2>
+          <h2 className="heading-2 mb-5">I nostri servizi</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Soluzioni complete per la tua presenza online, dalla creazione alla gestione quotidiana.
           </p>
@@ -101,27 +102,31 @@ const ServicesSection = () => {
 
         <AnimatedSection delay={0.2}>
           <div className="relative">
-            {/* Navigation Arrows - Desktop only */}
+            {/* Navigation Arrows – Desktop only */}
             {!isMobile && (
               <>
-                <button
+                <motion.button
                   onClick={scrollPrev}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-12 z-10 w-11 h-11 rounded-full bg-card text-foreground border border-border/50 flex items-center justify-center hover:bg-muted hover:border-accent/30 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-14 z-10 w-12 h-12 rounded-full bg-card text-foreground border border-border/50 flex items-center justify-center transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
                   disabled={!canScrollPrev}
                   aria-label="Servizio precedente"
                   style={{ boxShadow: 'var(--shadow-md)' }}
+                  whileHover={{ scale: 1.1, boxShadow: 'var(--shadow-lg)' }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
+                </motion.button>
+                <motion.button
                   onClick={scrollNext}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-12 z-10 w-11 h-11 rounded-full bg-card text-foreground border border-border/50 flex items-center justify-center hover:bg-muted hover:border-accent/30 transition-all duration-300 disabled:opacity-40 disabled:cursor-not-allowed"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-14 z-10 w-12 h-12 rounded-full bg-card text-foreground border border-border/50 flex items-center justify-center transition-all duration-300 disabled:opacity-30 disabled:cursor-not-allowed"
                   disabled={!canScrollNext}
                   aria-label="Servizio successivo"
                   style={{ boxShadow: 'var(--shadow-md)' }}
+                  whileHover={{ scale: 1.1, boxShadow: 'var(--shadow-lg)' }}
+                  whileTap={{ scale: 0.95 }}
                 >
                   <ChevronRight className="w-5 h-5" />
-                </button>
+                </motion.button>
               </>
             )}
 
@@ -133,13 +138,13 @@ const ServicesSection = () => {
                     key={index}
                     className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 pl-4 first:pl-0 md:first:pl-4"
                   >
-                    <article className="card-glass flex flex-col h-full group hover:-translate-y-1.5 transition-transform duration-300 mx-2">
-                      <div className="icon-box w-12 h-12 rounded-xl mb-5 transition-transform duration-300 group-hover:scale-110">
+                    <article className="card-glass flex flex-col h-full group hover:-translate-y-2 transition-all duration-400 mx-2">
+                      <div className="icon-box w-13 h-13 rounded-xl mb-6 transition-all duration-300 group-hover:scale-110">
                         <service.icon className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
                       </div>
 
-                      <h3 className="font-sans font-semibold text-xl mb-3">{service.title}</h3>
-                      <p className="text-muted-foreground mb-5 flex-grow leading-relaxed">
+                      <h3 className="font-sans font-bold text-xl mb-3">{service.title}</h3>
+                      <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
                         {service.description}
                         {service.linkText && service.linkUrl && (
                           <>
@@ -148,7 +153,7 @@ const ServicesSection = () => {
                         )}
                       </p>
 
-                      <ul className="space-y-2.5 mt-auto">
+                      <ul className="space-y-3 mt-auto">
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center gap-2.5 text-sm text-muted-foreground">
                             <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
@@ -163,15 +168,15 @@ const ServicesSection = () => {
             </div>
 
             {/* Dots Navigation */}
-            <div className="flex justify-center gap-2 mt-8" role="tablist" aria-label="Navigazione servizi">
+            <div className="flex justify-center gap-2.5 mt-10" role="tablist" aria-label="Navigazione servizi">
               {services.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => scrollTo(index)}
                   className={`h-2.5 rounded-full transition-all duration-400 ${
                     selectedIndex === index
-                      ? 'bg-accent w-7'
-                      : 'bg-muted-foreground/25 w-2.5 hover:bg-muted-foreground/40'
+                      ? 'bg-accent w-8'
+                      : 'bg-muted-foreground/20 w-2.5 hover:bg-muted-foreground/35'
                   }`}
                   role="tab"
                   aria-selected={selectedIndex === index}
@@ -188,7 +193,7 @@ const ServicesSection = () => {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection className="text-center mt-12 md:mt-14" delay={0.3}>
+        <AnimatedSection className="text-center mt-14 md:mt-16" delay={0.3}>
           <button onClick={handleContactClick} className="btn-secondary">
             Richiedi informazioni sui servizi
           </button>

@@ -7,7 +7,7 @@ import RentalSection from '@/components/RentalSection';
 import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import MobileCTABar from '@/components/MobileCTABar';
 import CookieBanner from '@/components/CookieBanner';
 
 // TODO: Sostituire con dati reali dell'attività per Schema.org
@@ -16,18 +16,18 @@ const businessSchema = {
   "@type": "ProfessionalService",
   "name": "4 Web Lab",
   "description": "Studio di produzione siti web professionali per professionisti, negozi e piccole e medie imprese in tutta Italia. Design moderno, SEO e performance elevate.",
-  "url": "https://www.4weblab.it", // TODO: Inserire URL reale
-  "telephone": "+39021234567", // TODO: Inserire telefono reale
+  "url": "https://www.4weblab.it",
+  "telephone": "+39021234567",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Via Roma 123", // TODO: Inserire indirizzo reale
+    "streetAddress": "Via Roma 123",
     "addressLocality": "Milano",
     "postalCode": "20100",
     "addressCountry": "IT"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 45.4642, // TODO: Inserire coordinate reali
+    "latitude": 45.4642,
     "longitude": 9.1900
   },
   "openingHoursSpecification": [
@@ -39,10 +39,8 @@ const businessSchema = {
     }
   ],
   "priceRange": "€€",
-  "image": "https://www.4weblab.it/og-image.jpg", // TODO: Inserire URL immagine reale
-  "sameAs": [
-    // TODO: Inserire profili social reali
-  ]
+  "image": "https://www.4weblab.it/og-image.jpg",
+  "sameAs": []
 };
 
 const Index = () => {
@@ -68,8 +66,8 @@ const Index = () => {
 
       <Footer />
       
-      {/* Floating WhatsApp button (mobile only) */}
-      <WhatsAppButton />
+      {/* Sticky mobile CTA bar (call + WhatsApp) */}
+      <MobileCTABar />
       
       {/* Cookie banner */}
       <CookieBanner />
