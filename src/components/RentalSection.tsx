@@ -80,9 +80,9 @@ const RentalSection = () => {
     >
       <div className="container-section">
         {/* Header */}
-        <AnimatedSection className="text-center mb-14">
+        <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 id="rental-heading" className="heading-2 mb-4">
+          <h2 id="rental-heading" className="heading-2 mb-5">
             Il sito come servizio, senza pensieri
           </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
@@ -91,7 +91,7 @@ const RentalSection = () => {
         </AnimatedSection>
 
         {/* Content */}
-        <AnimatedSection className="max-w-3xl mx-auto mb-14" delay={0.1}>
+        <AnimatedSection className="max-w-3xl mx-auto mb-16" delay={0.1}>
           <p className="text-foreground mb-8 leading-relaxed text-lg">
             Con il nostro servizio, lei paga un <strong>canone mensile</strong> per avere
             un sito web professionale sempre operativo, senza preoccuparsi di nulla.
@@ -101,7 +101,7 @@ const RentalSection = () => {
           {/* Benefits */}
           <div className="grid sm:grid-cols-2 gap-4 mb-10">
             {benefits.map((benefit, index) => (
-              <div key={index} className="flex items-start gap-3 p-3 rounded-xl bg-accent/5 border border-accent/10 transition-colors duration-300 hover:bg-accent/8">
+              <div key={index} className="flex items-start gap-3 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center mt-0.5">
                   <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                 </span>
@@ -112,7 +112,7 @@ const RentalSection = () => {
 
           {/* Clarifications */}
           <div className="card-glass mb-10">
-            <h3 className="font-semibold text-foreground mb-4 text-lg">Trasparenza totale</h3>
+            <h3 className="font-bold text-foreground mb-4 text-lg">Trasparenza totale</h3>
             <ul className="space-y-3">
               {clarifications.map((item, index) => (
                 <li key={index} className="flex items-start gap-3 text-sm text-muted-foreground">
@@ -130,13 +130,13 @@ const RentalSection = () => {
         </AnimatedSection>
 
         {/* Pricing Cards */}
-        <StaggerContainer className="grid md:grid-cols-3 gap-7 max-w-5xl mx-auto mb-14" staggerDelay={0.12}>
+        <StaggerContainer className="grid md:grid-cols-3 gap-7 max-w-5xl mx-auto mb-16" staggerDelay={0.12}>
           {plans.map((plan) => {
             const Icon = plan.icon;
             return (
               <StaggerItem key={plan.name}>
                 <Card
-                  className={`relative overflow-hidden transition-all duration-400 h-full ${
+                  className={`relative overflow-hidden transition-all duration-400 h-full hover:-translate-y-2 ${
                     plan.highlighted
                       ? 'border-accent/60 scale-[1.02] md:scale-105 ring-1 ring-accent/20'
                       : 'border-border/40 hover:border-accent/30'
@@ -145,14 +145,14 @@ const RentalSection = () => {
                 >
                   {plan.highlighted && plan.badge && (
                     <div className="absolute top-0 right-0">
-                      <Badge className="rounded-none rounded-bl-xl bg-accent text-accent-foreground px-4 py-1.5 text-xs font-bold">
+                      <Badge className="rounded-none rounded-bl-2xl bg-accent text-accent-foreground px-4 py-1.5 text-xs font-bold tracking-wide">
                         {plan.badge}
                       </Badge>
                     </div>
                   )}
 
                   <CardHeader className="text-center pb-4">
-                    <div className={`w-14 h-14 rounded-2xl mx-auto mb-5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${
+                    <div className={`w-14 h-14 rounded-2xl mx-auto mb-5 flex items-center justify-center transition-all duration-300 ${
                       plan.highlighted ? 'bg-accent/15' : 'bg-muted'
                     }`}>
                       <Icon className={`w-7 h-7 ${plan.highlighted ? 'text-accent' : 'text-muted-foreground'}`} aria-hidden="true" />
@@ -196,12 +196,12 @@ const RentalSection = () => {
         <AnimatedSection className="text-center" delay={0.3}>
           <button
             onClick={scrollToContact}
-            className="btn-primary text-lg px-9 py-4"
+            className="btn-primary text-lg px-10 py-4"
             aria-label="Richiedi una proposta personalizzata"
           >
             Richieda una proposta personalizzata
           </button>
-          <p className="text-sm text-muted-foreground mt-5">
+          <p className="text-sm text-muted-foreground mt-6">
             IVA esclusa · Nessun vincolo a lungo termine
           </p>
         </AnimatedSection>

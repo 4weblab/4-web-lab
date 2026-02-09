@@ -19,9 +19,9 @@ const MapSection = () => {
   return (
     <section id="mappa" className="section-padding bg-background" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
-        <AnimatedSection className="text-center mb-14">
+        <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-4">Dove siamo</h2>
+          <h2 className="heading-2 mb-5">Dove siamo</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Vieni a trovarci nel nostro studio per un incontro di persona.
           </p>
@@ -31,12 +31,12 @@ const MapSection = () => {
           <div className="grid lg:grid-cols-3 gap-8 items-start">
             {/* Address info */}
             <div className="lg:col-span-1 card-glass">
-              <div className="flex items-start gap-4 mb-7">
-                <div className="icon-box w-12 h-12 flex-shrink-0">
+              <div className="flex items-start gap-4 mb-8">
+                <div className="icon-box w-13 h-13 flex-shrink-0">
                   <MapPin className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="font-sans font-semibold text-lg mb-1.5">Indirizzo</h3>
+                  <h3 className="font-sans font-bold text-lg mb-1.5">Indirizzo</h3>
                   <address className="text-muted-foreground not-italic leading-relaxed">
                     {businessData.address}<br />
                     {businessData.postalCode} {businessData.city}<br />
@@ -56,14 +56,14 @@ const MapSection = () => {
                 Apri indicazioni su Google Maps
               </a>
 
-              <p className="text-sm text-muted-foreground mt-5 text-center">
+              <p className="text-sm text-muted-foreground mt-6 text-center">
                 Lun - Ven: 9:00 - 18:00
               </p>
             </div>
 
             {/* Map embed */}
             <div className="lg:col-span-2">
-              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden" style={{ boxShadow: 'var(--shadow-lg)' }}>
+              <div className="relative aspect-[16/9] rounded-2xl overflow-hidden border border-border/30" style={{ boxShadow: 'var(--shadow-lg)' }}>
                 <iframe
                   src={embedUrl}
                   width="100%"

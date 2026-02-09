@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import WhatsAppButton from '@/components/WhatsAppButton';
+import MobileCTABar from '@/components/MobileCTABar';
 import { ArrowRight, CheckCircle2, Users, Target, Settings, Award } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 
@@ -48,18 +48,18 @@ const SitiWebProfessionisti = () => {
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-8">
-                <div className="icon-box w-12 h-12">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
                   <Users className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h2 className="heading-2">A chi è rivolto il servizio</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-5">
+                <p className="mb-6">
                   Il nostro servizio di realizzazione siti web per professionisti è pensato per chi opera nel mondo delle
                   libere professioni e degli studi professionali. Ci rivolgiamo a:
                 </p>
-                <StaggerContainer className="space-y-3 mb-7" staggerDelay={0.08}>
+                <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
                     'Consulenti e liberi professionisti che desiderano presentarsi online in modo autorevole',
                     'Studi professionali (legali, commercialisti, architetti, ingegneri, notai) che necessitano di un sito web professionale',
@@ -67,7 +67,7 @@ const SitiWebProfessionisti = () => {
                     'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile',
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="flex items-start gap-3 p-3 rounded-xl bg-accent/5 border border-accent/10">
+                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
@@ -87,18 +87,18 @@ const SitiWebProfessionisti = () => {
         <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-8">
-                <div className="icon-box w-12 h-12">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
                   <Target className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h2 className="heading-2">Cosa deve comunicare un sito web per professionisti</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-6">
+                <p className="mb-7">
                   Un sito web professionale per chi opera nel mondo delle professioni deve trasmettere valori fondamentali
                   che generano fiducia e facilitano il contatto con potenziali clienti. Ecco gli elementi chiave:
                 </p>
-                <StaggerContainer className="grid md:grid-cols-2 gap-6 mb-7" staggerDelay={0.1}>
+                <StaggerContainer className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
                   {[
                     {
                       title: 'Autorevolezza',
@@ -118,8 +118,8 @@ const SitiWebProfessionisti = () => {
                     },
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="card-glass h-full hover:-translate-y-1 transition-transform duration-300">
-                        <h3 className="font-semibold text-foreground mb-2">{item.title}</h3>
+                      <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
+                        <h3 className="font-bold text-foreground mb-2.5">{item.title}</h3>
                         <p className="text-sm">{item.description}</p>
                       </div>
                     </StaggerItem>
@@ -138,8 +138,8 @@ const SitiWebProfessionisti = () => {
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-8">
-                <div className="icon-box w-12 h-12">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
                   <Settings className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h2 className="heading-2">Il nostro metodo di lavoro</h2>
@@ -174,12 +174,12 @@ const SitiWebProfessionisti = () => {
                     },
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="flex gap-5 items-start p-5 rounded-2xl bg-accent/3 border border-accent/8 transition-colors duration-300 hover:bg-accent/5">
-                        <div className="icon-box w-11 h-11 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
+                      <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
+                        <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
                           {item.step}
                         </div>
                         <div>
-                          <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                          <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
                           <p className="text-sm">{item.description}</p>
                         </div>
                       </div>
@@ -199,18 +199,18 @@ const SitiWebProfessionisti = () => {
         <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-8">
-                <div className="icon-box w-12 h-12">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
                   <Award className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h2 className="heading-2">Perché scegliere 4weblab</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-5">
+                <p className="mb-6">
                   Siamo una realtà strutturata specializzata nella realizzazione di siti web per professionisti.
                   Ecco cosa ci distingue:
                 </p>
-                <StaggerContainer className="space-y-3 mb-7" staggerDelay={0.08}>
+                <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
                     'Approccio consulenziale: non vendiamo solo un sito, ma una soluzione pensata per i tuoi obiettivi',
                     'Esperienza nel settore professionale: conosciamo le esigenze specifiche di chi opera nelle libere professioni',
@@ -219,7 +219,7 @@ const SitiWebProfessionisti = () => {
                     'Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace',
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="flex items-start gap-3 p-3 rounded-xl bg-accent/5 border border-accent/10">
+                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
@@ -237,11 +237,20 @@ const SitiWebProfessionisti = () => {
 
         {/* CTA Section */}
         <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
-          <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full bg-accent/6 blur-[120px]" aria-hidden="true" />
+          {/* Noise texture */}
+          <div className="noise-overlay" aria-hidden="true">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <filter id="sat-cta-noise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+              </filter>
+              <rect width="100%" height="100%" filter="url(#sat-cta-noise)" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-3xl mx-auto text-center">
-              <h2 className="heading-2 text-primary-foreground mb-5">Richiedi un preventivo per il tuo sito web professionale</h2>
-              <p className="body-large text-primary-foreground/75 mb-10">
+              <h2 className="heading-2 text-primary-foreground mb-6">Richiedi un preventivo per il tuo sito web professionale</h2>
+              <p className="body-large text-primary-foreground/70 mb-12">
                 Vuoi realizzare un sito web per professionisti che ti rappresenti al meglio?
                 Contattaci per un confronto senza impegno: lavoriamo con professionisti in tutta Italia.
               </p>
@@ -260,7 +269,7 @@ const SitiWebProfessionisti = () => {
       </main>
 
       <Footer />
-      <WhatsAppButton />
+      <MobileCTABar />
     </>
   );
 };

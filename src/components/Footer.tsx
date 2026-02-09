@@ -26,27 +26,27 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-primary text-primary-foreground py-14">
+    <footer className="bg-primary text-primary-foreground py-16 md:pb-16 pb-[calc(var(--mobile-cta-height)+1rem)]">
       <div className="container-section">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-2.5 mb-5">
+            <div className="flex items-center gap-2.5 mb-6">
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
                 src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png"
               />
-              <span className="font-serif text-xl font-semibold">{businessInfo.name}</span>
+              <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
             </div>
-            <p className="text-primary-foreground/65 mb-5 max-w-md leading-relaxed">
+            <p className="text-primary-foreground/60 mb-5 max-w-md leading-relaxed">
               Studio di produzione web per piccole attività e PMI. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-sans font-semibold text-lg mb-5">Link rapidi</h3>
+            <h3 className="font-sans font-bold text-lg mb-5">Link rapidi</h3>
             <ul className="space-y-3">
               {[
                 { label: 'Chi siamo', id: 'chi-siamo' },
@@ -57,7 +57,7 @@ const Footer = () => {
                 <li key={item.id}>
                   <button
                     onClick={() => scrollToSection(item.id)}
-                    className="text-primary-foreground/65 hover:text-primary-foreground transition-colors duration-300 link-underline"
+                    className="text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300 link-underline"
                   >
                     {item.label}
                   </button>
@@ -68,12 +68,12 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-sans font-semibold text-lg mb-5">Contatti</h3>
+            <h3 className="font-sans font-bold text-lg mb-5">Contatti</h3>
             <ul className="space-y-3">
               <li>
                 <a
                   href="tel:+393516826560"
-                  className="flex items-center gap-2.5 text-primary-foreground/65 hover:text-primary-foreground transition-colors duration-300"
+                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
                 >
                   <Phone className="w-5 h-5" aria-hidden="true" />
                   +39 351 682 6560
@@ -84,7 +84,7 @@ const Footer = () => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-primary-foreground/65 hover:text-primary-foreground transition-colors duration-300"
+                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
                 >
                   <MessageCircle className="w-5 h-5" aria-hidden="true" />
                   WhatsApp
@@ -95,16 +95,16 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-primary-foreground/15 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/50 text-sm">
+        <div className="border-t border-primary-foreground/12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <p className="text-primary-foreground/45 text-sm">
             © {currentYear} {businessInfo.name}. Tutti i diritti riservati.
           </p>
           <div className="flex items-center gap-5 text-sm">
-            <Link to="/privacy" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300">
+            <Link to="/privacy" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
               Privacy Policy
             </Link>
-            <span className="text-primary-foreground/20">|</span>
-            <Link to="/cookie" className="text-primary-foreground/50 hover:text-primary-foreground transition-colors duration-300">
+            <span className="text-primary-foreground/15">|</span>
+            <Link to="/cookie" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
               Cookie Policy
             </Link>
           </div>
