@@ -1,33 +1,28 @@
 import { Users, Target, Lightbulb } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
-
-const cards = [
-  {
-    icon: Users,
-    title: 'Approccio personale',
-    description: 'Lavoriamo fianco a fianco con ogni cliente, comprendendo le specifiche esigenze del suo settore.',
-  },
-  {
-    icon: Target,
-    title: 'Orientati ai risultati',
-    description: 'Non solo belli da vedere: i nostri siti sono progettati per portare contatti e clienti.',
-  },
-  {
-    icon: Lightbulb,
-    title: 'Soluzioni su misura',
-    description: 'Niente template generici: ogni progetto è costruito sulle tue reali necessità.',
-  },
-];
-
+const cards = [{
+  icon: Users,
+  title: 'Approccio personale',
+  description: 'Lavoriamo fianco a fianco con ogni cliente, comprendendo le specifiche esigenze del suo settore.'
+}, {
+  icon: Target,
+  title: 'Orientati ai risultati',
+  description: 'Non solo belli da vedere: i nostri siti sono progettati per portare contatti e clienti.'
+}, {
+  icon: Lightbulb,
+  title: 'Soluzioni su misura',
+  description: 'Niente template generici: ogni progetto è costruito sulle tue reali necessità.'
+}];
 const AboutSection = () => {
-  return (
-    <section id="chi-siamo" className="section-padding bg-background" style={{ scrollMarginTop: 'var(--header-height)' }}>
+  return <section id="chi-siamo" className="section-padding bg-background" style={{
+    scrollMarginTop: 'var(--header-height)'
+  }}>
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Chi siamo</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Siamo uno studio di produzione web specializzato nella creazione di siti internet per piccole attività e PMI.
+            Siamo uno studio di produzione web specializzato nella creazione di siti internet per attività commerciali / negozi, professionisti e piccole media imprese.      
           </p>
         </AnimatedSection>
 
@@ -46,8 +41,7 @@ const AboutSection = () => {
           </AnimatedSection>
 
           <StaggerContainer className="grid gap-5" staggerDelay={0.12}>
-            {cards.map((card, index) => (
-              <StaggerItem key={index}>
+            {cards.map((card, index) => <StaggerItem key={index}>
                 <div className="card-glass flex items-start gap-5 group hover:-translate-y-1.5 transition-all duration-400">
                   <div className="icon-box w-13 h-13 flex-shrink-0">
                     <card.icon className="w-6 h-6 text-accent-foreground" />
@@ -57,13 +51,10 @@ const AboutSection = () => {
                     <p className="text-muted-foreground text-sm leading-relaxed">{card.description}</p>
                   </div>
                 </div>
-              </StaggerItem>
-            ))}
+              </StaggerItem>)}
           </StaggerContainer>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
