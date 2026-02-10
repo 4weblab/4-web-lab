@@ -35,9 +35,13 @@ const Header = () => {
 
   const handleNavClick = (href: string) => {
     setIsOpen(false);
-    const element = document.querySelector(href);
+    const sectionId = href.substring(1);
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height') || '72', 10);
+      const top = element.getBoundingClientRect().top + window.scrollY - headerHeight;
+      window.scrollTo({ top, behavior: 'smooth' });
     }
   };
 
