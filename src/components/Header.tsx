@@ -98,7 +98,7 @@ const Header = () => {
                     ? 'text-accent-foreground'
                     : isScrolled
                     ? 'text-foreground hover:bg-muted/60'
-                    : 'text-foreground hover:bg-muted/60'
+                    : 'text-primary-foreground hover:bg-primary-foreground/10'
                 }`}
                 style={
                   activeSection === item.href.substring(1)
