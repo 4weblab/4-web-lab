@@ -27,6 +27,12 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
         aria-hidden="true"
       />
+      {/* Dark gradient overlay for readability */}
+      <div
+        className="absolute inset-0"
+        style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 100%)' }}
+        aria-hidden="true"
+      />
 
       {/* Noise texture overlay */}
       <div className="noise-overlay" aria-hidden="true">
@@ -54,6 +60,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto">
           <motion.h1
             className="heading-1 text-primary-foreground mb-8 text-balance"
+            style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
@@ -63,6 +70,7 @@ const Hero = () => {
 
           <motion.p
             className="body-large text-primary-foreground/70 mb-14 max-w-2xl mx-auto text-balance"
+            style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
