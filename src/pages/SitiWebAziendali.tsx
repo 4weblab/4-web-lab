@@ -11,7 +11,10 @@ import teamImg from '@/assets/aziendali-team.jpg';
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
-    window.location.href = '/#contatti';
+    const el = document.getElementById('contatti-aziendali');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -280,7 +283,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <section id="contatti-aziendali" className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <filter id="az-cta-noise">
