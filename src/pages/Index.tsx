@@ -7,7 +7,7 @@ import RentalSection from '@/components/RentalSection';
 import PricingSection from '@/components/PricingSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import MobileCTABar from '@/components/MobileCTABar';
+
 import CookieBanner from '@/components/CookieBanner';
 
 // TODO: Sostituire con dati reali dell'attività per Schema.org
@@ -66,8 +66,6 @@ const Index = () => {
 
       <Footer />
       
-      {/* Sticky mobile CTA bar (call + WhatsApp) */}
-      <MobileCTABar />
       
       {/* Cookie banner */}
       <CookieBanner />
