@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 
-const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso', '1 anno di dominio incluso'];
+const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso'];
 
 const PricingSection = () => {
   const whatsappNumber = '391234567890';
