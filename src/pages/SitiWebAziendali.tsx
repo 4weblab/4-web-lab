@@ -29,7 +29,7 @@ const SitiWebAziendali = () => {
         <link rel="canonical" href="https://www.4weblab.it/siti-web-aziendali" />
       </Helmet>
 
-      <Header />
+      <Header satelliteMode />
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero Section */}
