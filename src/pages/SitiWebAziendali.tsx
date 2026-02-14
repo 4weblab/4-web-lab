@@ -13,8 +13,7 @@ const SitiWebAziendali = () => {
   const handleContactClick = () => {
     const el = document.getElementById('contatti-aziendali');
     if (el) {
-      const y = el.getBoundingClientRect().top + window.scrollY - 200;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+      el.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
