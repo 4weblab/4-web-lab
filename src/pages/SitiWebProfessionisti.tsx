@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import MobileCTABar from '@/components/MobileCTABar';
+
 import { ArrowRight, CheckCircle2, Users, Target, Settings, Award, MessageCircle } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
@@ -284,7 +284,7 @@ const SitiWebProfessionisti = () => {
       </main>
 
       <Footer />
-      <MobileCTABar />
+      
     </>);
 
 };

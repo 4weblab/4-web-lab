@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import MobileCTABar from '@/components/MobileCTABar';
+
 import { Building2, TrendingUp, Layers, Settings, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
@@ -323,7 +323,7 @@ const SitiWebAziendali = () => {
       </main>
 
       <Footer />
-      <MobileCTABar />
+      
     </>);
 
 };
