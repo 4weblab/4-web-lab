@@ -257,15 +257,10 @@ const SitiWebProfessionisti = () => {
                 Vuoi realizzare un sito web per professionisti che ti rappresenti al meglio?
                 Contattaci per un confronto senza impegno: lavoriamo con professionisti in tutta Italia.
               </p>
-              <div className="flex flex-col sm:flex-row gap-5 justify-center">
-                <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
-                  Contattaci ora
-                  <ArrowRight className="w-4 h-4" />
-                </button>
-                <Link to="/" className="btn-outline-light inline-flex items-center gap-2">
-                  Scopri tutti i servizi
-                </Link>
-              </div>
+              <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
+                Contattaci ora
+                <ArrowRight className="w-4 h-4" />
+              </button>
             </AnimatedSection>
           </div>
         </section>
