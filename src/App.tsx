@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 
 // TODO: Sostituire con dati reali
 const siteMetadata = {
-  title: "Siti web professionali per negozi, professionisti di settore e aziende in tutta Italia | 4weblab",
+  title: "Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab",
   description: "Studio di produzione siti web per piccole attività e PMI. Design moderno, ottimizzazione SEO locale e performance elevate. Richiedi un preventivo gratuito.",
   url: "https://www.4weblab.it", // TODO: Inserire URL reale
   image: "https://www.4weblab.it/og-image.jpg", // TODO: Inserire immagine OG reale
