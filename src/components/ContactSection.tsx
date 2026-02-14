@@ -50,8 +50,8 @@ const ContactSection = () => {
             <p className="body-large text-primary-foreground/70 mb-4 text-balance">
               Lavoriamo con clienti in tutta Italia: puoi contattarci ovunque ti trovi.
             </p>
-            <p className="body-large text-primary-foreground/70 mb-12 text-balance">
-              Contattaci su WhatsApp per una consulenza gratuita. Rispondiamo rapidamente e senza impegno.
+            <p className="body-large text-primary-foreground/70 mb-12 text-balance">Contattaci per una consulenza gratuita. Rispondiamo rapidamente e senza impegno.
+
             </p>
           </AnimatedSection>
 
