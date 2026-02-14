@@ -43,7 +43,7 @@ const StrengthsSection = () => {
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Perché sceglierci</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Supportiamo <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>, negozi e piccole e medie imprese in tutta Italia nella realizzazione di siti web professionali orientati alla crescita online.
+            Supportiamo <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>, negozi e <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">piccole e medie imprese</Link> in tutta Italia nella realizzazione di siti web professionali orientati alla crescita online.
           </p>
         </AnimatedSection>
 

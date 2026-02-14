@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import heroBg from '@/assets/hero-bg.webp';
 
 const Hero = () => {
@@ -65,7 +66,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
 
-            Siti web professionali per commercianti, professionisti e piccole medie imprese in tutta Italia
+            Siti web professionali per commercianti, professionisti e <Link to="/siti-web-aziendali" className="text-primary-foreground/90 hover:underline font-medium">piccole medie imprese</Link> in tutta Italia
           </motion.h1>
 
           <motion.p
