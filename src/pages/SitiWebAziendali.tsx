@@ -1,0 +1,319 @@
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import MobileCTABar from '@/components/MobileCTABar';
+import { Building2, TrendingUp, Layers, Settings, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import mockupImg from '@/assets/aziendali-mockup.jpg';
+import teamImg from '@/assets/aziendali-team.jpg';
+
+const SitiWebAziendali = () => {
+  const handleContactClick = () => {
+    window.location.href = '/#contatti';
+  };
+
+  return (
+    <>
+      <Helmet>
+        <title>Siti web aziendali strutturati e multipagina | 4weblab</title>
+        <meta
+          name="description"
+          content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.4weblab.it/siti-web-aziendali" />
+      </Helmet>
+
+      <Header />
+
+      <main id="main-content" className="pt-[var(--header-height)]">
+        {/* Hero Section */}
+        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-surface)' }}>
+          <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-[100px]" aria-hidden="true" />
+          <div className="container-section relative z-10">
+            <AnimatedSection className="max-w-4xl mx-auto text-center">
+              <h1 className="heading-1 mb-8">
+                Siti web aziendali strutturati e multipagina
+              </h1>
+              <p className="body-large text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
+                Realizziamo siti web aziendali per aziende e PMI in tutta Italia, con architetture strutturate,
+                scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo
+                per consolidare la presenza online della tua impresa.
+              </p>
+              <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
+                Contattaci ora
+                <ArrowRight className="w-4 h-4" />
+              </button>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Perché un'azienda ha bisogno di un sito strutturato */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Building2 className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Perché un'azienda ha bisogno di un sito strutturato</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
+                <p>
+                  Un sito web aziendale non è un semplice biglietto da visita digitale: è uno strumento strategico
+                  per la crescita del business. La realizzazione di un sito web per aziende richiede un approccio
+                  strutturato che tenga conto di obiettivi, pubblico e posizionamento nel mercato.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
+                {[
+                  {
+                    title: 'Credibilità e autorevolezza',
+                    description: 'Un sito web aziendale professionale trasmette solidità e affidabilità, elementi fondamentali per conquistare la fiducia di clienti e partner.',
+                  },
+                  {
+                    title: 'Presenza online solida',
+                    description: 'Essere presenti online con un sito strutturato significa farsi trovare dove i clienti cercano: su Google, sui motori di ricerca, sul web.',
+                  },
+                  {
+                    title: 'Acquisizione contatti',
+                    description: 'Un sito web per aziende ben progettato facilita la conversione dei visitatori in contatti qualificati attraverso form, call-to-action e percorsi chiari.',
+                  },
+                  {
+                    title: 'SEO e crescita nel tempo',
+                    description: 'La realizzazione di un sito web aziendale ottimizzato per i motori di ricerca garantisce visibilità crescente e un flusso costante di nuove opportunità.',
+                  },
+                ].map((item, index) => (
+                  <StaggerItem key={index}>
+                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
+                      <h3 className="font-bold text-foreground mb-2.5">{item.title}</h3>
+                      <p className="text-sm">{item.description}</p>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+            </div>
+          </div>
+        </section>
+
+        {/* Cosa realizziamo per le aziende */}
+        <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Layers className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Cosa realizziamo per le aziende</h2>
+              </AnimatedSection>
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" direction="left">
+                  <p className="mb-6">
+                    Progettiamo e sviluppiamo siti web aziendali multipagina con architetture pensate per crescere
+                    insieme al business. Ogni progetto nasce da un'analisi approfondita delle esigenze dell'azienda
+                    e si traduce in una struttura chiara, navigabile e orientata alla conversione.
+                  </p>
+                  <p className="mb-6">
+                    I nostri siti web per aziende includono sezioni dedicate ai servizi, all'identità aziendale,
+                    ai contatti e a ogni area strategica del business. Realizziamo architetture scalabili,
+                    pronte per evolversi nel tempo con nuove pagine, funzionalità e contenuti.
+                  </p>
+                  <p>
+                    Ogni sito è sviluppato con tecnologie moderne che garantiscono velocità, sicurezza
+                    e un'esperienza utente ottimale su qualsiasi dispositivo.
+                  </p>
+                </AnimatedSection>
+                <AnimatedSection direction="right">
+                  <img
+                    src={mockupImg}
+                    alt="Mockup di sito web aziendale multipagina su monitor in ambiente ufficio moderno"
+                    className="rounded-2xl shadow-lg w-full"
+                    loading="lazy"
+                  />
+                </AnimatedSection>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Siti multipagina e strutturati */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <TrendingUp className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Siti multipagina e strutturati</h2>
+              </AnimatedSection>
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <AnimatedSection direction="left" className="order-2 md:order-1">
+                  <img
+                    src={teamImg}
+                    alt="Team che pianifica l'architettura di un sito web aziendale strutturato"
+                    className="rounded-2xl shadow-lg w-full"
+                    loading="lazy"
+                  />
+                </AnimatedSection>
+                <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground order-1 md:order-2" direction="right">
+                  <p className="mb-6">
+                    Un sito web aziendale strutturato non è semplicemente un sito con più pagine: è un ecosistema
+                    digitale progettato con una gerarchia dei contenuti chiara, una navigazione intuitiva
+                    e un'architettura informativa che guida il visitatore verso le azioni desiderate.
+                  </p>
+                  <p className="mb-6">
+                    Progettiamo siti web per piccole e medie imprese con strutture che facilitano l'indicizzazione
+                    sui motori di ricerca, migliorano l'esperienza utente e permettono di aggiungere nuove sezioni
+                    senza compromettere la coerenza complessiva.
+                  </p>
+                  <p>
+                    La scalabilità è al centro del nostro approccio: ogni sito è pensato per accompagnare
+                    la crescita dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
+                  </p>
+                </AnimatedSection>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Il nostro metodo */}
+        <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Settings className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Il nostro metodo</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p className="mb-8">
+                  In 4weblab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
+                  pensato per collaborazioni da remoto con aziende in tutta Italia. Il nostro processo
+                  garantisce trasparenza, tempi certi e qualità in ogni fase della realizzazione del sito web aziendale.
+                </p>
+                <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
+                  {[
+                    {
+                      step: '01',
+                      title: 'Analisi e briefing',
+                      description: 'Raccogliamo le informazioni sulla tua azienda, i tuoi obiettivi di business e il pubblico di riferimento attraverso un confronto strutturato.',
+                    },
+                    {
+                      step: '02',
+                      title: 'Progettazione',
+                      description: 'Definiamo la struttura del sito, l\'architettura delle informazioni e il design in linea con l\'identità aziendale e gli obiettivi di crescita.',
+                    },
+                    {
+                      step: '03',
+                      title: 'Sviluppo',
+                      description: 'Realizziamo il sito web aziendale con tecnologie moderne, garantendo velocità, sicurezza, responsività e ottimizzazione SEO.',
+                    },
+                    {
+                      step: '04',
+                      title: 'Revisione e lancio',
+                      description: 'Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo supporto per la gestione.',
+                    },
+                  ].map((item, index) => (
+                    <StaggerItem key={index}>
+                      <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
+                        <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
+                          {item.step}
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
+                          <p className="text-sm">{item.description}</p>
+                        </div>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+                <p>
+                  Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per aziende
+                  ovunque si trovino, mantenendo comunicazione costante e risultati misurabili.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Perché scegliere 4weblab */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Award className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Perché scegliere 4weblab</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p className="mb-6">
+                  Siamo una realtà strutturata specializzata nella realizzazione di siti web aziendali.
+                  Ecco cosa ci distingue:
+                </p>
+                <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
+                  {[
+                    'Specializzazione nei siti web per aziende e PMI: conosciamo le dinamiche e le esigenze delle imprese',
+                    'Architetture scalabili: ogni sito è progettato per crescere insieme al tuo business',
+                    'Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto in tutta Italia',
+                    'Ottimizzazione SEO integrata: ogni pagina è costruita per posizionarsi sui motori di ricerca',
+                    'Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace e aggiornato',
+                  ].map((item, index) => (
+                    <StaggerItem key={index}>
+                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
+                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+                <p>
+                  Scegliere 4weblab significa affidarsi a un partner affidabile per la realizzazione di un sito web aziendale
+                  che rappresenti al meglio la tua impresa e ne accompagni la crescita.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+          <div className="noise-overlay" aria-hidden="true">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <filter id="az-cta-noise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+              </filter>
+              <rect width="100%" height="100%" filter="url(#az-cta-noise)" />
+            </svg>
+          </div>
+          <div className="absolute bottom-0 right-1/3 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
+          <div className="container-section relative z-10">
+            <AnimatedSection className="max-w-3xl mx-auto text-center">
+              <h2 className="heading-2 text-primary-foreground mb-6">Richiedi un preventivo per il tuo sito web aziendale</h2>
+              <p className="body-large text-primary-foreground/70 mb-12">
+                Vuoi realizzare un sito web aziendale strutturato e professionale?
+                Contattaci per un confronto senza impegno: lavoriamo con aziende e PMI in tutta Italia.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-5 justify-center">
+                <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
+                  Contattaci ora
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+                <Link to="/" className="btn-outline-light inline-flex items-center gap-2">
+                  Scopri tutti i servizi
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+      <MobileCTABar />
+    </>
+  );
+};
+
+export default SitiWebAziendali;
