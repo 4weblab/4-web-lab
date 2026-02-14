@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 
-const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso'];
+const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso', '1 anno di dominio incluso'];
 
 const PricingSection = () => {
   const whatsappNumber = '391234567890';
@@ -51,14 +51,14 @@ const PricingSection = () => {
 
             {/* Features list */}
             <ul className="space-y-4 mb-10" role="list" aria-label="Cosa include l'offerta">
-              {includedFeatures.map((feature, index) => (
-                <li key={index} className="flex items-start gap-3">
+              {includedFeatures.map((feature, index) =>
+              <li key={index} className="flex items-start gap-3">
                   <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
                     <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                   </span>
                   <span className="text-foreground">{feature}</span>
                 </li>
-              ))}
+              )}
             </ul>
 
             {/* CTA */}
@@ -80,7 +80,7 @@ const PricingSection = () => {
               <div>
                 <h3 className="font-bold text-foreground mb-1.5">Dal secondo anno</h3>
                 <p className="text-muted-foreground text-sm mb-2">
-                  Rinnovo dominio, hosting e assistenza
+                  Rinnovo hosting e assistenza
                 </p>
                 <p className="text-lg font-bold text-foreground">
                   €199<span className="text-sm font-normal text-muted-foreground">/anno · IVA esclusa</span>
@@ -95,8 +95,8 @@ const PricingSection = () => {
           </p>
         </AnimatedSection>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default PricingSection;
