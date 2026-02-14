@@ -90,9 +90,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
         {satelliteMode ? (
           <Link
             to="/"
-            className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-              isScrolled ? 'text-foreground hover:bg-muted/60' : 'text-primary-foreground hover:bg-primary-foreground/10'
-            }`}
+            className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-foreground hover:bg-muted/60"
           >
             <ArrowLeft className="w-4 h-4" />
             Torna alla Home
@@ -132,9 +130,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
         {satelliteMode ? (
           <Link
             to="/"
-            className={`md:hidden inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-              isScrolled ? 'text-foreground hover:bg-muted/60' : 'text-primary-foreground hover:bg-primary-foreground/10'
-            }`}
+            className="md:hidden inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 text-foreground hover:bg-muted/60"
           >
             <ArrowLeft className="w-4 h-4" />
             Torna alla Home
