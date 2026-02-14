@@ -51,7 +51,6 @@ const Footer = () => {
               {[
               { label: 'Chi siamo', id: 'chi-siamo' },
               { label: 'Servizi', id: 'servizi' },
-              { label: 'Portfolio', id: 'portfolio' },
               { label: 'Contatti', id: 'contatti' }].
               map((item) =>
               <li key={item.id}>
