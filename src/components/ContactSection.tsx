@@ -6,22 +6,22 @@ const whatsappNumber = '393516826560';
 const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.');
 
 const features = [
-  {
-    icon: CheckCircle,
-    title: 'Consulenza gratuita',
-    description: 'Prima analisi delle tue esigenze senza impegno',
-  },
-  {
-    icon: Clock,
-    title: 'Risposta rapida',
-    description: 'Ti rispondiamo entro poche ore',
-  },
-  {
-    icon: MessageCircle,
-    title: 'Contatto diretto',
-    description: 'Parli subito con chi realizzerà il tuo sito',
-  },
-];
+{
+  icon: CheckCircle,
+  title: 'Consulenza gratuita',
+  description: 'Prima analisi delle tue esigenze senza impegno'
+},
+{
+  icon: Clock,
+  title: 'Risposta rapida',
+  description: 'Ti rispondiamo entro poche ore'
+},
+{
+  icon: MessageCircle,
+  title: 'Contatto diretto',
+  description: 'Parli subito con chi realizzerà il tuo sito'
+}];
+
 
 const ContactSection = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
@@ -63,16 +63,16 @@ const ContactSection = () => {
               className="btn-primary text-lg px-10 py-4 inline-flex"
               aria-label="Contattaci su WhatsApp"
               whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.97 }}
-            >
+              whileTap={{ scale: 0.97 }}>
+
               <MessageCircle className="w-6 h-6" aria-hidden="true" />
               Scrivici su WhatsApp
             </motion.a>
           </AnimatedSection>
 
           <StaggerContainer className="grid sm:grid-cols-3 gap-6 mt-16 text-left" staggerDelay={0.1} delay={0.3}>
-            {features.map((feature, index) => (
-              <StaggerItem key={index}>
+            {features.map((feature, index) =>
+            <StaggerItem key={index}>
                 <div className="flex items-start gap-3.5 p-5 rounded-2xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10 transition-all duration-300 hover:bg-primary-foreground/8 hover:border-primary-foreground/15">
                   <feature.icon className="w-5 h-5 text-accent flex-shrink-0 mt-1" aria-hidden="true" />
                   <div>
@@ -81,18 +81,18 @@ const ContactSection = () => {
                   </div>
                 </div>
               </StaggerItem>
-            ))}
+            )}
           </StaggerContainer>
 
           <AnimatedSection delay={0.5}>
-            <p className="text-sm text-primary-foreground/45 mt-12">
-              Richieste da tutta Italia – rispondiamo rapidamente a ogni contatto.
-            </p>
+            
+
+
           </AnimatedSection>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ContactSection;
