@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileCTABar from '@/components/MobileCTABar';
-import { ArrowRight, CheckCircle2, Users, Target, Settings, Award } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Users, Target, Settings, Award, MessageCircle } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 
 const SitiWebProfessionisti = () => {
@@ -257,9 +257,9 @@ const SitiWebProfessionisti = () => {
                 Vuoi realizzare un sito web per professionisti che ti rappresenti al meglio?
                 Contattaci per un confronto senza impegno: lavoriamo con professionisti in tutta Italia.
               </p>
-              <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
+              <button onClick={handleContactClick} className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
+                <MessageCircle className="w-5 h-5" />
                 Contattaci ora
-                <ArrowRight className="w-4 h-4" />
               </button>
             </AnimatedSection>
           </div>
