@@ -299,8 +299,8 @@ const SitiWebAziendali = () => {
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <h2 className="heading-2 text-primary-foreground mb-6">Richiedi un preventivo per il tuo sito web aziendale</h2>
                 <p className="body-large text-primary-foreground/70 mb-8">
-                  Vuoi realizzare un sito web aziendale strutturato e professionale?
-                  Contattaci per un confronto senza impegno: lavoriamo con aziende e PMI in tutta Italia.
+                  Vuoi realizzare un sito web aziendale strutturato e professionale? Contattaci per un confronto senza impegno: lavoriamo con Aziende in tutta Italia.
+                
                 </p>
                 <div>
                   <button onClick={handleContactClick} className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
