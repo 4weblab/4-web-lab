@@ -23,8 +23,8 @@ const SitiWebAziendali = () => {
         <title>Siti web aziendali strutturati e multipagina | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO."
-        />
+          content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
+
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.4weblab.it/siti-web-aziendali" />
       </Helmet>
@@ -41,9 +41,9 @@ const SitiWebAziendali = () => {
                 Siti web aziendali strutturati e multipagina
               </h1>
               <p className="body-large text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
-                Realizziamo siti web aziendali per aziende e PMI in tutta Italia, con architetture strutturate,
-                scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo
-                per consolidare la presenza online della tua impresa.
+                Realizziamo siti web per aziende e PMI in tutta Italia, con architetture strutturate, scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo per consolidare la presenza online della tua impresa.
+              
+
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
                 Contattaci ora
@@ -72,30 +72,30 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
                 {[
-                  {
-                    title: 'Credibilità e autorevolezza',
-                    description: 'Un sito web aziendale professionale trasmette solidità e affidabilità, elementi fondamentali per conquistare la fiducia di clienti e partner.',
-                  },
-                  {
-                    title: 'Presenza online solida',
-                    description: 'Essere presenti online con un sito strutturato significa farsi trovare dove i clienti cercano: su Google, sui motori di ricerca, sul web.',
-                  },
-                  {
-                    title: 'Acquisizione contatti',
-                    description: 'Un sito web per aziende ben progettato facilita la conversione dei visitatori in contatti qualificati attraverso form, call-to-action e percorsi chiari.',
-                  },
-                  {
-                    title: 'SEO e crescita nel tempo',
-                    description: 'La realizzazione di un sito web aziendale ottimizzato per i motori di ricerca garantisce visibilità crescente e un flusso costante di nuove opportunità.',
-                  },
-                ].map((item, index) => (
-                  <StaggerItem key={index}>
+                {
+                  title: 'Credibilità e autorevolezza',
+                  description: 'Un sito web aziendale professionale trasmette solidità e affidabilità, elementi fondamentali per conquistare la fiducia di clienti e partner.'
+                },
+                {
+                  title: 'Presenza online solida',
+                  description: 'Essere presenti online con un sito strutturato significa farsi trovare dove i clienti cercano: su Google, sui motori di ricerca, sul web.'
+                },
+                {
+                  title: 'Acquisizione contatti',
+                  description: 'Un sito web per aziende ben progettato facilita la conversione dei visitatori in contatti qualificati attraverso form, call-to-action e percorsi chiari.'
+                },
+                {
+                  title: 'SEO e crescita nel tempo',
+                  description: 'La realizzazione di un sito web aziendale ottimizzato per i motori di ricerca garantisce visibilità crescente e un flusso costante di nuove opportunità.'
+                }].
+                map((item, index) =>
+                <StaggerItem key={index}>
                     <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
                       <h3 className="font-bold text-foreground mb-2.5">{item.title}</h3>
                       <p className="text-sm">{item.description}</p>
                     </div>
                   </StaggerItem>
-                ))}
+                )}
               </StaggerContainer>
             </div>
           </div>
@@ -133,8 +133,8 @@ const SitiWebAziendali = () => {
                     src={mockupImg}
                     alt="Mockup di sito web aziendale multipagina su monitor in ambiente ufficio moderno"
                     className="rounded-2xl shadow-lg w-full"
-                    loading="lazy"
-                  />
+                    loading="lazy" />
+
                 </AnimatedSection>
               </div>
             </div>
@@ -157,8 +157,8 @@ const SitiWebAziendali = () => {
                     src={teamImg}
                     alt="Team che pianifica l'architettura di un sito web aziendale strutturato"
                     className="rounded-2xl shadow-lg w-full"
-                    loading="lazy"
-                  />
+                    loading="lazy" />
+
                 </AnimatedSection>
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground order-1 md:order-2" direction="right">
                   <p className="mb-6">
@@ -199,28 +199,28 @@ const SitiWebAziendali = () => {
                 </p>
                 <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
                   {[
-                    {
-                      step: '01',
-                      title: 'Analisi e briefing',
-                      description: 'Raccogliamo le informazioni sulla tua azienda, i tuoi obiettivi di business e il pubblico di riferimento attraverso un confronto strutturato.',
-                    },
-                    {
-                      step: '02',
-                      title: 'Progettazione',
-                      description: 'Definiamo la struttura del sito, l\'architettura delle informazioni e il design in linea con l\'identità aziendale e gli obiettivi di crescita.',
-                    },
-                    {
-                      step: '03',
-                      title: 'Sviluppo',
-                      description: 'Realizziamo il sito web aziendale con tecnologie moderne, garantendo velocità, sicurezza, responsività e ottimizzazione SEO.',
-                    },
-                    {
-                      step: '04',
-                      title: 'Revisione e lancio',
-                      description: 'Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo supporto per la gestione.',
-                    },
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
+                  {
+                    step: '01',
+                    title: 'Analisi e briefing',
+                    description: 'Raccogliamo le informazioni sulla tua azienda, i tuoi obiettivi di business e il pubblico di riferimento attraverso un confronto strutturato.'
+                  },
+                  {
+                    step: '02',
+                    title: 'Progettazione',
+                    description: 'Definiamo la struttura del sito, l\'architettura delle informazioni e il design in linea con l\'identità aziendale e gli obiettivi di crescita.'
+                  },
+                  {
+                    step: '03',
+                    title: 'Sviluppo',
+                    description: 'Realizziamo il sito web aziendale con tecnologie moderne, garantendo velocità, sicurezza, responsività e ottimizzazione SEO.'
+                  },
+                  {
+                    step: '04',
+                    title: 'Revisione e lancio',
+                    description: 'Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo supporto per la gestione.'
+                  }].
+                  map((item, index) =>
+                  <StaggerItem key={index}>
                       <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
                         <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
                           {item.step}
@@ -231,7 +231,7 @@ const SitiWebAziendali = () => {
                         </div>
                       </div>
                     </StaggerItem>
-                  ))}
+                  )}
                 </StaggerContainer>
                 <p>
                   Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per aziende
@@ -259,19 +259,19 @@ const SitiWebAziendali = () => {
                 </p>
                 <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
-                    'Specializzazione nei siti web per aziende e PMI: conosciamo le dinamiche e le esigenze delle imprese',
-                    'Architetture scalabili: ogni sito è progettato per crescere insieme al tuo business',
-                    'Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto in tutta Italia',
-                    'Ottimizzazione SEO integrata: ogni pagina è costruita per posizionarsi sui motori di ricerca',
-                    'Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace e aggiornato',
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
+                  'Specializzazione nei siti web per aziende e PMI: conosciamo le dinamiche e le esigenze delle imprese',
+                  'Architetture scalabili: ogni sito è progettato per crescere insieme al tuo business',
+                  'Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto in tutta Italia',
+                  'Ottimizzazione SEO integrata: ogni pagina è costruita per posizionarsi sui motori di ricerca',
+                  'Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace e aggiornato'].
+                  map((item, index) =>
+                  <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     </StaggerItem>
-                  ))}
+                  )}
                 </StaggerContainer>
                 <p>
                   Scegliere 4weblab significa affidarsi a un partner affidabile per la realizzazione di un sito web aziendale
@@ -305,8 +305,8 @@ const SitiWebAziendali = () => {
                 <div>
                   <button onClick={handleContactClick} className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WhatsApp" className="w-6 h-6">
-                      <circle cx="256" cy="256" r="256" fill="#25D366"/>
-                      <path fill="#FFFFFF" d="M371.1 140.9c-30.9-30.9-72-47.9-115.7-47.9-90.2 0-163.6 73.4-163.6 163.6 0 28.8 7.5 56.9 21.7 81.7L88 419l83.8-24.9c23.9 13 50.8 19.9 78.6 19.9h.1c90.2 0 163.6-73.4 163.6-163.6 0-43.7-17-84.8-47.9-115.5zm-115.7 249.4h-.1c-24.4 0-48.3-6.6-69.2-19.1l-5-3-49.7 14.8 14.9-48.4-3.3-5.2c-13.9-22.1-21.3-47.6-21.3-73.7 0-77.1 62.7-139.8 139.9-139.8 37.4 0 72.6 14.6 99 41 26.4 26.4 41 61.6 41 99 0 77.1-62.7 139.8-139.9 139.8zm76.7-104.9c-4.2-2.1-24.8-12.2-28.7-13.6-3.9-1.4-6.7-2.1-9.5 2.1-2.8 4.2-10.9 13.6-13.4 16.4-2.5 2.8-4.9 3.2-9.1 1.1-4.2-2.1-17.6-6.5-33.5-20.8-12.4-11.1-20.8-24.9-23.3-29.1-2.5-4.2-.3-6.4 1.9-8.5 2-2 4.2-4.9 6.3-7.4 2.1-2.5 2.8-4.2 4.2-7 1.4-2.8.7-5.3-.3-7.4-1.1-2.1-9.5-22.9-13-31.4-3.4-8.2-6.9-7.1-9.5-7.3-2.5-.1-5.3-.1-8.1-.1-2.8 0-7.4 1.1-11.2 5.3-3.9 4.2-14.7 14.4-14.7 35.1 0 20.7 15.1 40.7 17.2 43.5 2.1 2.8 29.7 45.4 72 63 10.1 4.4 18 7 24.1 9 10.1 3.2 19.3 2.8 26.5 1.7 8.1-1.2 24.8-10.1 28.3-19.9 3.5-9.8 3.5-18.2 2.5-19.9-1.1-1.8-3.9-2.8-8.1-4.9z"/>
+                      <circle cx="256" cy="256" r="256" fill="#25D366" />
+                      <path fill="#FFFFFF" d="M371.1 140.9c-30.9-30.9-72-47.9-115.7-47.9-90.2 0-163.6 73.4-163.6 163.6 0 28.8 7.5 56.9 21.7 81.7L88 419l83.8-24.9c23.9 13 50.8 19.9 78.6 19.9h.1c90.2 0 163.6-73.4 163.6-163.6 0-43.7-17-84.8-47.9-115.5zm-115.7 249.4h-.1c-24.4 0-48.3-6.6-69.2-19.1l-5-3-49.7 14.8 14.9-48.4-3.3-5.2c-13.9-22.1-21.3-47.6-21.3-73.7 0-77.1 62.7-139.8 139.9-139.8 37.4 0 72.6 14.6 99 41 26.4 26.4 41 61.6 41 99 0 77.1-62.7 139.8-139.9 139.8zm76.7-104.9c-4.2-2.1-24.8-12.2-28.7-13.6-3.9-1.4-6.7-2.1-9.5 2.1-2.8 4.2-10.9 13.6-13.4 16.4-2.5 2.8-4.9 3.2-9.1 1.1-4.2-2.1-17.6-6.5-33.5-20.8-12.4-11.1-20.8-24.9-23.3-29.1-2.5-4.2-.3-6.4 1.9-8.5 2-2 4.2-4.9 6.3-7.4 2.1-2.5 2.8-4.2 4.2-7 1.4-2.8.7-5.3-.3-7.4-1.1-2.1-9.5-22.9-13-31.4-3.4-8.2-6.9-7.1-9.5-7.3-2.5-.1-5.3-.1-8.1-.1-2.8 0-7.4 1.1-11.2 5.3-3.9 4.2-14.7 14.4-14.7 35.1 0 20.7 15.1 40.7 17.2 43.5 2.1 2.8 29.7 45.4 72 63 10.1 4.4 18 7 24.1 9 10.1 3.2 19.3 2.8 26.5 1.7 8.1-1.2 24.8-10.1 28.3-19.9 3.5-9.8 3.5-18.2 2.5-19.9-1.1-1.8-3.9-2.8-8.1-4.9z" />
                     </svg>
                     Contattaci ora
                   </button>
@@ -324,8 +324,8 @@ const SitiWebAziendali = () => {
 
       <Footer />
       <MobileCTABar />
-    </>
-  );
+    </>);
+
 };
 
 export default SitiWebAziendali;
