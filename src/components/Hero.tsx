@@ -19,20 +19,20 @@ const Hero = () => {
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'var(--gradient-hero)' }}
-    >
+      style={{ background: 'var(--gradient-hero)' }}>
+
       {/* Background image with overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-12"
         style={{ backgroundImage: `url(${heroBg})` }}
-        aria-hidden="true"
-      />
+        aria-hidden="true" />
+
       {/* Dark gradient overlay for readability */}
       <div
         className="absolute inset-0"
         style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 100%)' }}
-        aria-hidden="true"
-      />
+        aria-hidden="true" />
+
 
       {/* Noise texture overlay */}
       <div className="noise-overlay" aria-hidden="true">
@@ -42,8 +42,8 @@ const Hero = () => {
               type="fractalNoise"
               baseFrequency="0.65"
               numOctaves="3"
-              stitchTiles="stitch"
-            />
+              stitchTiles="stitch" />
+
           </filter>
           <rect width="100%" height="100%" filter="url(#hero-noise)" />
         </svg>
@@ -63,9 +63,9 @@ const Hero = () => {
             style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-          >
-            Siti web professionali per professionisti, negozi e piccole e medie imprese in tutta Italia
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
+
+            Siti web professionali per commercianti, professionisti e piccole medie imprese in tutta Italia
           </motion.h1>
 
           <motion.p
@@ -73,8 +73,8 @@ const Hero = () => {
             style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-          >
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
+
             Progettiamo e realizziamo siti web moderni, veloci e ottimizzati SEO, lavorando da remoto con un metodo chiaro, strutturato e orientato ai risultati.
           </motion.p>
 
@@ -82,13 +82,13 @@ const Hero = () => {
             className="flex flex-col sm:flex-row items-center justify-center gap-5"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          >
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+
             <button
               onClick={handleScrollToContact}
               className="btn-primary text-lg px-10 py-4"
-              aria-label="Richiedi un preventivo gratuito"
-            >
+              aria-label="Richiedi un preventivo gratuito">
+
               Richiedi preventivo gratuito
             </button>
 
@@ -101,13 +101,13 @@ const Hero = () => {
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors"
           aria-label="Scorri verso il basso"
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-        >
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}>
+
           <ArrowDown className="w-6 h-6" />
         </motion.button>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default Hero;
