@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle } from 'lucide-react';
+import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const businessInfo = {
@@ -87,6 +87,14 @@ const Footer = () => {
 
                   <MessageCircle className="w-5 h-5" aria-hidden="true" />
                   WhatsApp
+              </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@4weblab.it"
+                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
+                  <Mail className="w-5 h-5" aria-hidden="true" />
+                  info@4weblab.it
                 </a>
               </li>
             </ul>
