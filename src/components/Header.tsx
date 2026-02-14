@@ -8,7 +8,7 @@ const navItems = [
   { label: 'Punti di forza', href: '#punti-di-forza' },
   { label: 'Servizi', href: '#servizi' },
   { label: 'Prezzi', href: '#prezzi' },
-  { label: 'Dove siamo', href: '#mappa' },
+  
   { label: 'Contatti', href: '#contatti' },
 ];
 interface HeaderProps {
