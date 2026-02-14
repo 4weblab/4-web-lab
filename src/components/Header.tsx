@@ -69,14 +69,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       }}
     >
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
-        <a
-          href="#"
-          className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5"
-          onClick={(e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          }}
-        >
+        <div className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5">
           <img
             alt="4 Web Lab logo"
             className="w-9 h-9 rounded-lg object-contain"
@@ -85,7 +78,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground md:text-foreground'}`}>
             4 Web Lab
           </span>
-        </a>
+        </div>
 
         {satelliteMode ? (
           <Link
