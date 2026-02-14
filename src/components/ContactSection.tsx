@@ -1,6 +1,7 @@
 import { MessageCircle, Clock, CheckCircle } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
 import { motion } from 'framer-motion';
+import ContactFormWeb3Forms from './ContactFormWeb3Forms';
 
 const whatsappNumber = '393516826560';
 const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.');
@@ -85,9 +86,10 @@ const ContactSection = () => {
           </StaggerContainer>
 
           <AnimatedSection delay={0.5}>
-            
-
-
+            <div className="mt-16 p-8 rounded-2xl bg-primary-foreground/5 backdrop-blur-sm border border-primary-foreground/10">
+              <h3 className="font-sans font-semibold text-primary-foreground text-lg mb-6 text-center">Oppure compila il form</h3>
+              <ContactFormWeb3Forms />
+            </div>
           </AnimatedSection>
         </div>
       </div>
