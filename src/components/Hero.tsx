@@ -69,7 +69,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="body-large text-primary-foreground/70 mb-14 max-w-2xl mx-auto text-balance"
+            className="body-large text-primary-foreground/90 mb-14 max-w-2xl mx-auto text-balance"
             style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
