@@ -83,7 +83,7 @@ const PricingSection = () => {
                   Rinnovo hosting e assistenza
                 </p>
                 <p className="text-lg font-bold text-foreground">
-                  €199<span className="text-sm font-normal text-muted-foreground">/anno · IVA esclusa</span>
+                  €99<span className="text-sm font-normal text-muted-foreground">/anno · IVA esclusa</span>
                 </p>
               </div>
             </div>
