@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import MobileCTABar from '@/components/MobileCTABar';
 import { ArrowRight, CheckCircle2, Users, Target, Settings, Award, MessageCircle } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 
 const SitiWebProfessionisti = () => {
   const handleContactClick = () => {
@@ -270,9 +271,9 @@ const SitiWebProfessionisti = () => {
                 </div>
               </div>
 
-              {/* Box destra - Form placeholder */}
-              <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex items-center justify-center min-h-[300px]">
-                <p className="text-primary-foreground/40 text-sm italic">Form in arrivo...</p>
+              {/* Box destra - Form */}
+              <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">
+                <ContactFormWeb3Forms />
               </div>
             </AnimatedSection>
           </div>
