@@ -41,7 +41,10 @@ const SitiWebProfessionisti = () => {
 
 
               </p>
-              <button className="btn-primary inline-flex items-center gap-2 mt-2">
+              <button
+                onClick={() => document.getElementById('contatti-professionisti')?.scrollIntoView({ behavior: 'smooth' })}
+                className="btn-primary inline-flex items-center gap-2 mt-2"
+              >
                 Contattaci
               </button>
             </AnimatedSection>
@@ -240,7 +243,7 @@ const SitiWebProfessionisti = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <section id="contatti-professionisti" className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           {/* Noise texture */}
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
