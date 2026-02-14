@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
@@ -10,8 +11,11 @@ const navItems = [
   { label: 'Dove siamo', href: '#mappa' },
   { label: 'Contatti', href: '#contatti' },
 ];
+interface HeaderProps {
+  satelliteMode?: boolean;
+}
 
-const Header = () => {
+const Header = ({ satelliteMode = false }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
@@ -83,54 +87,77 @@ const Header = () => {
           </span>
         </a>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden md:flex items-center gap-1">
-          {navItems.map((item) => (
-            <li key={item.href}>
-              <a
-                href={item.href}
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick(item.href);
-                }}
-                className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
-                  activeSection === item.href.substring(1)
-                    ? 'text-accent-foreground'
-                    : isScrolled
-                    ? 'text-foreground hover:bg-muted/60'
-                    : 'text-primary-foreground hover:bg-primary-foreground/10'
-                }`}
-                style={
-                  activeSection === item.href.substring(1)
-                    ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
-                    : {}
-                }
-                aria-current={activeSection === item.href.substring(1) ? 'page' : undefined}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {satelliteMode ? (
+          <Link
+            to="/"
+            className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+              isScrolled ? 'text-foreground hover:bg-muted/60' : 'text-primary-foreground hover:bg-primary-foreground/10'
+            }`}
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Torna alla Home
+          </Link>
+        ) : (
+          <ul className="hidden md:flex items-center gap-1">
+            {navItems.map((item) => (
+              <li key={item.href}>
+                <a
+                  href={item.href}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(item.href);
+                  }}
+                  className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
+                    activeSection === item.href.substring(1)
+                      ? 'text-accent-foreground'
+                      : isScrolled
+                      ? 'text-foreground hover:bg-muted/60'
+                      : 'text-primary-foreground hover:bg-primary-foreground/10'
+                  }`}
+                  style={
+                    activeSection === item.href.substring(1)
+                      ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
+                      : {}
+                  }
+                  aria-current={activeSection === item.href.substring(1) ? 'page' : undefined}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-expanded={isOpen}
-          aria-controls="mobile-menu"
-          aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
-        >
-          {isOpen ? (
-            <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-          ) : (
-            <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-          )}
-        </button>
+        {satelliteMode ? (
+          <Link
+            to="/"
+            className={`md:hidden inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+              isScrolled ? 'text-foreground hover:bg-muted/60' : 'text-primary-foreground hover:bg-primary-foreground/10'
+            }`}
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Torna alla Home
+          </Link>
+        ) : (
+          <button
+            className="md:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
+          >
+            {isOpen ? (
+              <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+            ) : (
+              <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+            )}
+          </button>
+        )}
 
         {/* Mobile Menu */}
         <AnimatePresence>
-          {isOpen && (
+          {isOpen && !satelliteMode && (
             <motion.div
               id="mobile-menu"
               className="absolute top-full left-0 right-0 md:hidden border-b border-border/30"
