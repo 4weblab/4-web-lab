@@ -17,8 +17,8 @@ const SitiWebProfessionisti = () => {
         <title>Realizzazione siti web per professionisti | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti."
-        />
+          content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti." />
+
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.4weblab.it/realizzazione-siti-web-per-professionisti" />
       </Helmet>
@@ -34,11 +34,11 @@ const SitiWebProfessionisti = () => {
               <h1 className="heading-1 mb-8">
                 Realizzazione siti web per professionisti
               </h1>
-              <p className="body-large text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">
-                In 4weblab realizziamo siti web professionali per professionisti e studi professionali in tutta Italia.
-                Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza
-                e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che
-                permette collaborazioni efficaci ovunque ti trovi.
+              <p className="body-large text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">In 4weblab realizziamo siti web per professionisti e studi professionali in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
+
+
+
+
               </p>
             </AnimatedSection>
           </div>
@@ -61,18 +61,18 @@ const SitiWebProfessionisti = () => {
                 </p>
                 <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
-                    'Consulenti e liberi professionisti che desiderano presentarsi online in modo autorevole',
-                    'Studi professionali (legali, commercialisti, architetti, ingegneri, notai) che necessitano di un sito web professionale',
-                    'Tecnici e periti che vogliono ampliare la propria visibilità sul territorio nazionale',
-                    'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile',
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
+                  'Consulenti e liberi professionisti che desiderano presentarsi online in modo autorevole',
+                  'Studi professionali (legali, commercialisti, architetti, ingegneri, notai) che necessitano di un sito web professionale',
+                  'Tecnici e periti che vogliono ampliare la propria visibilità sul territorio nazionale',
+                  'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile'].
+                  map((item, index) =>
+                  <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     </StaggerItem>
-                  ))}
+                  )}
                 </StaggerContainer>
                 <p>
                   Indipendentemente dal settore di appartenenza, il nostro obiettivo è offrire siti web per professionisti
@@ -100,30 +100,30 @@ const SitiWebProfessionisti = () => {
                 </p>
                 <StaggerContainer className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
                   {[
-                    {
-                      title: 'Autorevolezza',
-                      description: 'Il sito deve riflettere la competenza e l\'esperienza del professionista, creando una prima impressione solida e credibile.',
-                    },
-                    {
-                      title: 'Chiarezza dei servizi',
-                      description: 'I servizi offerti devono essere presentati in modo chiaro e comprensibile, permettendo al visitatore di capire immediatamente cosa può aspettarsi.',
-                    },
-                    {
-                      title: 'Fiducia e affidabilità',
-                      description: 'Elementi come testimonianze, certificazioni e una comunicazione trasparente contribuiscono a costruire un rapporto di fiducia.',
-                    },
-                    {
-                      title: 'Semplicità di contatto',
-                      description: 'Form di contatto, numeri di telefono e call-to-action ben visibili facilitano la conversione del visitatore in cliente.',
-                    },
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
+                  {
+                    title: 'Autorevolezza',
+                    description: 'Il sito deve riflettere la competenza e l\'esperienza del professionista, creando una prima impressione solida e credibile.'
+                  },
+                  {
+                    title: 'Chiarezza dei servizi',
+                    description: 'I servizi offerti devono essere presentati in modo chiaro e comprensibile, permettendo al visitatore di capire immediatamente cosa può aspettarsi.'
+                  },
+                  {
+                    title: 'Fiducia e affidabilità',
+                    description: 'Elementi come testimonianze, certificazioni e una comunicazione trasparente contribuiscono a costruire un rapporto di fiducia.'
+                  },
+                  {
+                    title: 'Semplicità di contatto',
+                    description: 'Form di contatto, numeri di telefono e call-to-action ben visibili facilitano la conversione del visitatore in cliente.'
+                  }].
+                  map((item, index) =>
+                  <StaggerItem key={index}>
                       <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
                         <h3 className="font-bold text-foreground mb-2.5">{item.title}</h3>
                         <p className="text-sm">{item.description}</p>
                       </div>
                     </StaggerItem>
-                  ))}
+                  )}
                 </StaggerContainer>
                 <p>
                   Un sito web per professionisti ben progettato diventa uno strumento di lavoro essenziale,
@@ -152,28 +152,28 @@ const SitiWebProfessionisti = () => {
                 </p>
                 <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
                   {[
-                    {
-                      step: '01',
-                      title: 'Analisi e briefing',
-                      description: 'Raccogliamo le informazioni sulla tua attività, i tuoi obiettivi e il pubblico di riferimento attraverso un confronto strutturato.',
-                    },
-                    {
-                      step: '02',
-                      title: 'Progettazione',
-                      description: 'Definiamo la struttura del sito, l\'architettura delle informazioni e il design in linea con la tua identità professionale.',
-                    },
-                    {
-                      step: '03',
-                      title: 'Sviluppo',
-                      description: 'Realizziamo il sito web professionale con tecnologie moderne, garantendo velocità, sicurezza e ottimizzazione SEO.',
-                    },
-                    {
-                      step: '04',
-                      title: 'Revisione e lancio',
-                      description: 'Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo formazione per la gestione.',
-                    },
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
+                  {
+                    step: '01',
+                    title: 'Analisi e briefing',
+                    description: 'Raccogliamo le informazioni sulla tua attività, i tuoi obiettivi e il pubblico di riferimento attraverso un confronto strutturato.'
+                  },
+                  {
+                    step: '02',
+                    title: 'Progettazione',
+                    description: 'Definiamo la struttura del sito, l\'architettura delle informazioni e il design in linea con la tua identità professionale.'
+                  },
+                  {
+                    step: '03',
+                    title: 'Sviluppo',
+                    description: 'Realizziamo il sito web professionale con tecnologie moderne, garantendo velocità, sicurezza e ottimizzazione SEO.'
+                  },
+                  {
+                    step: '04',
+                    title: 'Revisione e lancio',
+                    description: 'Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo formazione per la gestione.'
+                  }].
+                  map((item, index) =>
+                  <StaggerItem key={index}>
                       <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
                         <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
                           {item.step}
@@ -184,7 +184,7 @@ const SitiWebProfessionisti = () => {
                         </div>
                       </div>
                     </StaggerItem>
-                  ))}
+                  )}
                 </StaggerContainer>
                 <p>
                   Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per professionisti
@@ -212,19 +212,19 @@ const SitiWebProfessionisti = () => {
                 </p>
                 <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
-                    'Approccio consulenziale: non vendiamo solo un sito, ma una soluzione pensata per i tuoi obiettivi',
-                    'Esperienza nel settore professionale: conosciamo le esigenze specifiche di chi opera nelle libere professioni',
-                    'Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto',
-                    'Attenzione ai risultati: ogni sito è progettato per generare fiducia e facilitare il contatto con nuovi clienti',
-                    'Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace',
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
+                  'Approccio consulenziale: non vendiamo solo un sito, ma una soluzione pensata per i tuoi obiettivi',
+                  'Esperienza nel settore professionale: conosciamo le esigenze specifiche di chi opera nelle libere professioni',
+                  'Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto',
+                  'Attenzione ai risultati: ogni sito è progettato per generare fiducia e facilitare il contatto con nuovi clienti',
+                  'Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace'].
+                  map((item, index) =>
+                  <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
                     </StaggerItem>
-                  ))}
+                  )}
                 </StaggerContainer>
                 <p>
                   Scegliere 4weblab significa affidarsi a un partner affidabile per la realizzazione di un sito web professionale
@@ -270,8 +270,8 @@ const SitiWebProfessionisti = () => {
 
       <Footer />
       <MobileCTABar />
-    </>
-  );
+    </>);
+
 };
 
 export default SitiWebProfessionisti;
