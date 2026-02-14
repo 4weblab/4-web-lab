@@ -92,13 +92,6 @@ const Hero = () => {
               Richiedi preventivo gratuito
             </button>
 
-            <button
-              onClick={handleScrollToAbout}
-              className="btn-outline"
-              aria-label="Scopri di più sui nostri servizi"
-            >
-              Scopri di più
-            </button>
           </motion.div>
         </div>
 
