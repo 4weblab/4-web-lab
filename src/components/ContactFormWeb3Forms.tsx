@@ -127,8 +127,8 @@ export default function ContactFormWeb3Forms() {
       {/* Telefono / Email */}
       <div className="grid gap-4 md:grid-cols-2">
         <label className="flex flex-col gap-1.5">
-          <span className={labelClasses}>Cellulare</span>
-          <input name="phone" type="tel" inputMode="tel" autoComplete="tel" placeholder="+39 ..." className={inputClasses} />
+          <span className={labelClasses}>Cellulare *</span>
+          <input name="phone" type="tel" inputMode="tel" required autoComplete="tel" placeholder="+39 ..." className={inputClasses} />
         </label>
         <label className="flex flex-col gap-1.5">
           <span className={labelClasses}>Email *</span>
@@ -192,10 +192,9 @@ export default function ContactFormWeb3Forms() {
 
       {/* Messaggio */}
       <label className="flex flex-col gap-1.5">
-        <span className={labelClasses}>Messaggio *</span>
+        <span className={labelClasses}>Messaggio</span>
         <textarea
           name="message"
-          required
           rows={4}
           className={`${inputClasses} resize-none`}
         />
