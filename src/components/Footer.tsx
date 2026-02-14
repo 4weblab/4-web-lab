@@ -11,13 +11,13 @@ const businessInfo = {
   country: 'Italia',
   phone: '+39 351 682 6560',
   whatsapp: '393516826560',
-  email: 'info@4weblab.it',
+  email: 'info@4weblab.it'
 };
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   const whatsappUrl = `https://wa.me/${businessInfo.whatsapp}`;
-  
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -35,12 +35,12 @@ const Footer = () => {
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
-                src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png"
-              />
+                src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png" />
+
               <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
             </div>
-            <p className="text-primary-foreground/60 mb-5 max-w-md leading-relaxed">
-              Studio di produzione web per piccole attività e PMI. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione.
+            <p className="text-primary-foreground/60 mb-5 max-w-md leading-relaxed">Studio di produzione web per negozi, professionisti ed aziende. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione.
+
             </p>
           </div>
 
@@ -49,20 +49,20 @@ const Footer = () => {
             <h3 className="font-sans font-bold text-lg mb-5">Link rapidi</h3>
             <ul className="space-y-3">
               {[
-                { label: 'Chi siamo', id: 'chi-siamo' },
-                { label: 'Servizi', id: 'servizi' },
-                { label: 'Portfolio', id: 'portfolio' },
-                { label: 'Contatti', id: 'contatti' },
-              ].map((item) => (
-                <li key={item.id}>
+              { label: 'Chi siamo', id: 'chi-siamo' },
+              { label: 'Servizi', id: 'servizi' },
+              { label: 'Portfolio', id: 'portfolio' },
+              { label: 'Contatti', id: 'contatti' }].
+              map((item) =>
+              <li key={item.id}>
                   <button
-                    onClick={() => scrollToSection(item.id)}
-                    className="text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300 link-underline"
-                  >
+                  onClick={() => scrollToSection(item.id)}
+                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300 link-underline">
+
                     {item.label}
                   </button>
                 </li>
-              ))}
+              )}
             </ul>
           </div>
 
@@ -73,8 +73,8 @@ const Footer = () => {
               <li>
                 <a
                   href="tel:+393516826560"
-                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
-                >
+                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
+
                   <Phone className="w-5 h-5" aria-hidden="true" />
                   +39 351 682 6560
                 </a>
@@ -84,8 +84,8 @@ const Footer = () => {
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300"
-                >
+                  className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
+
                   <MessageCircle className="w-5 h-5" aria-hidden="true" />
                   WhatsApp
                 </a>
@@ -110,8 +110,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>);
+
 };
 
 export default Footer;
