@@ -1,39 +1,32 @@
 
 
-## Sistemazione definitiva Meta Tag Open Graph e Twitter
+## Aggiornamento sitemap.xml
 
-### Interventi previsti
+### Modifiche previste
 
-**1. `index.html` — Meta tag statici (per crawler senza JS)**
+Sul file `public/sitemap.xml`:
 
-Sostituzione di tutti i meta tag OG e Twitter attualmente presenti con i valori definitivi:
+1. Aggiunta di due nuovi blocchi `<url>` per le pagine satellite:
+   - `https://www.4weblab.it/realizzazione-siti-web-per-professionisti` (changefreq: monthly, priority: 0.8)
+   - `https://www.4weblab.it/siti-web-aziendali` (changefreq: monthly, priority: 0.8)
 
-- `og:title` = titolo ufficiale della home
-- `og:description` = descrizione SEO completa
-- `og:url` = `https://www.4weblab.it/`
-- `og:image` = `https://www.4weblab.it/og-image.jpg`
-- `og:type` = `website`
-- `og:locale` = `it_IT`
-- `twitter:card` = `summary_large_image`
-- `twitter:title`, `twitter:description`, `twitter:image` allineati ai valori OG
-- Rimozione di ogni riferimento a `lovable.dev`
-- Rimozione del meta `twitter:site` che punta a `@Lovable`
+2. Rimozione del commento TODO presente nel file
 
-**2. `src/App.tsx` — React Helmet (per crawler con JS)**
-
-Allineamento di tutti i meta tag OG e Twitter agli stessi identici valori dello statico. Rimozione dei commenti TODO e del blocco `siteMetadata` con placeholder. L'`og:url` avra il trailing slash corretto.
-
-**3. Immagine OG**
-
-L'immagine caricata dall'utente e un'immagine di riferimento/anteprima. Il file `og-image.jpg` verra caricato manualmente dall'utente nel percorso `/og-image.jpg` (root pubblica del dominio). Nessun file immagine verra copiato nel progetto.
-
----
+3. Nessuna modifica agli URL esistenti (home, privacy, cookie)
 
 ### Dettagli tecnici
 
-File modificati:
-- `index.html` — sostituzione blocco meta tag nella `<head>`
-- `src/App.tsx` — allineamento Helmet, rimozione TODO e placeholder Lovable
+File modificato: `public/sitemap.xml`
 
-Nessuna modifica a layout, componenti o struttura del sito.
+Struttura risultante:
+
+```text
+Home          -> priority 1.0, monthly
+Professionisti -> priority 0.8, monthly
+Aziendali     -> priority 0.8, monthly
+Privacy       -> priority 0.3, yearly  (invariato)
+Cookie        -> priority 0.3, yearly  (invariato)
+```
+
+La `lastmod` delle nuove pagine sara impostata alla data odierna (2025-02-16).
 
