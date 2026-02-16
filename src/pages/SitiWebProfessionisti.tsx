@@ -271,6 +271,7 @@ const SitiWebProfessionisti = () => {
                     </svg>
                     Scrivici su Whatsapp
                   </button>
+                  <p className="text-xs text-primary-foreground/50 mt-2"><strong>Richiede WhatsApp Web su PC</strong></p>
                 </div>
               </div>
 
