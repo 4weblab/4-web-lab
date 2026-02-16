@@ -13,5 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-# TODO: Sostituire con URL reale del dominio
 Sitemap: https://www.4weblab.it/sitemap.xml
