@@ -302,7 +302,7 @@ const SitiWebAziendali = () => {
                   Vuoi realizzare un sito web aziendale strutturato e professionale? Contattaci per un confronto senza impegno: lavoriamo con Aziende in tutta Italia.
                 
                 </p>
-                <div>
+                <div className="text-center">
                   <button onClick={handleContactClick} className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WhatsApp" className="w-6 h-6">
                       <circle cx="256" cy="256" r="256" fill="#25D366" />
