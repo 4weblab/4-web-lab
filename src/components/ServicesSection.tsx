@@ -2,7 +2,7 @@ import { Globe, Palette, BarChart3, Wrench, RefreshCw, MessageSquare, ChevronLef
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { Link } from 'react-router-dom';
+
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 
@@ -10,39 +10,37 @@ const services = [
   {
     icon: Globe,
     title: 'Siti web professionali',
-    descriptionParts: ['Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e ', { text: 'aziende', link: '/siti-web-aziendali' }, ' che operano in tutta Italia.'],
+    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e aziende che operano in tutta Italia.',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
-    linkText: 'professionisti',
-    linkUrl: '/realizzazione-siti-web-per-professionisti',
   },
   {
     icon: Palette,
     title: 'Restyling e rebranding',
-    descriptionParts: ['Rinnoviamo il tuo sito esistente con un design moderno e funzionalità aggiornate. Servizio pensato per professionisti, negozi e ', { text: 'aziende', link: '/siti-web-aziendali' }, ' che operano in tutta Italia.'],
+    description: 'Rinnoviamo il tuo sito esistente con un design moderno e funzionalità aggiornate. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
     features: ['Analisi del sito attuale', 'Nuovo design su misura', 'Migrazione contenuti'],
   },
   {
     icon: BarChart3,
     title: 'SEO e visibilità',
-    descriptionParts: ['Strategie di ottimizzazione per posizionarti su Google e farti trovare dai clienti. Servizio pensato per professionisti, negozi e ', { text: 'aziende', link: '/siti-web-aziendali' }, ' che operano in tutta Italia.'],
+    description: 'Strategie di ottimizzazione per posizionarti su Google e farti trovare dai clienti. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
     features: ['Ricerca parole chiave', 'Ottimizzazione on-page', 'Google Business Profile'],
   },
   {
     icon: Wrench,
     title: 'Manutenzione e assistenza',
-    descriptionParts: ['Aggiornamenti, backup e supporto tecnico per mantenere il tuo sito sempre efficiente. Servizio pensato per professionisti, negozi e ', { text: 'aziende', link: '/siti-web-aziendali' }, ' che operano in tutta Italia.'],
+    description: 'Aggiornamenti, backup e supporto tecnico per mantenere il tuo sito sempre efficiente. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
     features: ['Aggiornamenti periodici', 'Backup automatici', 'Supporto prioritario'],
   },
   {
     icon: RefreshCw,
     title: 'Gestione contenuti',
-    descriptionParts: ['Aggiornamento testi, immagini e contenuti del tuo sito in modo rapido e professionale. Servizio pensato per professionisti, negozi e ', { text: 'aziende', link: '/siti-web-aziendali' }, ' che operano in tutta Italia.'],
+    description: 'Aggiornamento testi, immagini e contenuti del tuo sito in modo rapido e professionale. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
     features: ['Modifiche rapide', 'Caricamento media', 'Nuove sezioni'],
   },
   {
     icon: MessageSquare,
     title: 'Consulenza web',
-    descriptionParts: ['Analisi e consigli strategici per migliorare la tua presenza digitale. Servizio pensato per professionisti, negozi e ', { text: 'aziende', link: '/siti-web-aziendali' }, ' che operano in tutta Italia.'],
+    description: 'Analisi e consigli strategici per migliorare la tua presenza digitale. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
     features: ['Audit del sito', 'Strategia digitale', 'Report e analisi'],
   },
 ];
@@ -145,14 +143,7 @@ const ServicesSection = () => {
 
                       <h3 className="font-sans font-bold text-xl mb-3">{service.title}</h3>
                       <p className="text-muted-foreground mb-6 flex-grow leading-relaxed">
-                        {service.descriptionParts.map((part, i) =>
-                          typeof part === 'string' ? part : <Link key={i} to={part.link} className="text-accent hover:underline font-medium">{part.text}</Link>
-                        )}
-                        {service.linkText && service.linkUrl && (
-                          <>
-                            {' '}Soluzione ideale per <Link to={service.linkUrl} className="text-accent hover:underline font-medium">{service.linkText}</Link> che necessitano di un sito web professionale strutturato.
-                          </>
-                        )}
+                        {service.description}
                       </p>
 
                       <ul className="space-y-3 mt-auto">
