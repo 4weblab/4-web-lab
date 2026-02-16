@@ -70,7 +70,7 @@ const ContactSection = () => {
               </svg>
               Scrivici su Whatsapp
             </a>
-            <p className="text-xs text-primary-foreground/50 mt-2"><strong>Richiede WhatsApp Web su PC</strong></p>
+            <p className="text-xs text-primary-foreground/50 mt-2 text-center"><strong>Richiede WhatsApp Web su PC</strong></p>
           </AnimatedSection>
 
           <StaggerContainer className="grid sm:grid-cols-3 gap-6 mt-16 text-left" staggerDelay={0.1} delay={0.3}>
