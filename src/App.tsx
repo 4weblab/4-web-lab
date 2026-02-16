@@ -14,12 +14,11 @@ import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
-// TODO: Sostituire con dati reali
 const siteMetadata = {
   title: "Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab",
   description: "Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti.",
-  url: "https://www.4weblab.it", // TODO: Inserire URL reale
-  image: "https://www.4weblab.it/og-image.jpg", // TODO: Inserire immagine OG reale
+  url: "https://www.4weblab.it/",
+  image: "https://www.4weblab.it/og-image.jpg",
 };
 
 const App = () => (
