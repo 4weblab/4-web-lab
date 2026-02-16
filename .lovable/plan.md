@@ -1,32 +1,14 @@
 
 
-## Aggiornamento sitemap.xml
+## Aggiornamento Favicon
 
-### Modifiche previste
+### Cosa verra fatto
 
-Sul file `public/sitemap.xml`:
-
-1. Aggiunta di due nuovi blocchi `<url>` per le pagine satellite:
-   - `https://www.4weblab.it/realizzazione-siti-web-per-professionisti` (changefreq: monthly, priority: 0.8)
-   - `https://www.4weblab.it/siti-web-aziendali` (changefreq: monthly, priority: 0.8)
-
-2. Rimozione del commento TODO presente nel file
-
-3. Nessuna modifica agli URL esistenti (home, privacy, cookie)
+1. Copia del file caricato (`favicon.png`) nella cartella `public/`
+2. Aggiornamento di `index.html` per puntare alla nuova favicon con il tag `<link rel="icon">`
 
 ### Dettagli tecnici
 
-File modificato: `public/sitemap.xml`
-
-Struttura risultante:
-
-```text
-Home          -> priority 1.0, monthly
-Professionisti -> priority 0.8, monthly
-Aziendali     -> priority 0.8, monthly
-Privacy       -> priority 0.3, yearly  (invariato)
-Cookie        -> priority 0.3, yearly  (invariato)
-```
-
-La `lastmod` delle nuove pagine sara impostata alla data odierna (2025-02-16).
+- **File copiato**: `user-uploads://favicon.png` -> `public/favicon.png`
+- **File modificato**: `index.html` - aggiunta del tag `<link rel="icon" href="/favicon.png" type="image/png">`
 
