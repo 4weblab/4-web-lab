@@ -10,6 +10,7 @@ import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import SitiWebProfessionisti from "./pages/SitiWebProfessionisti";
 import SitiWebAziendali from "./pages/SitiWebAziendali";
+import SitiWebPadova from "./pages/SitiWebPadova";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -63,6 +64,7 @@ const App = () => (
             <Route path="/" element={<Index />} />
              <Route path="/realizzazione-siti-web-per-professionisti" element={<SitiWebProfessionisti />} />
              <Route path="/siti-web-aziendali" element={<SitiWebAziendali />} />
+             <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
