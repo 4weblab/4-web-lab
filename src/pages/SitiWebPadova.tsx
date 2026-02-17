@@ -120,19 +120,19 @@ const SitiWebPadova = () => {
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
                 {
-                  title: 'Siti web per professionisti a Padova',
+                  title: 'Siti web per professionisti',
                   description: 'Presenze digitali autorevoli per liberi professionisti e studi che vogliono farsi trovare e trasmettere fiducia online.',
                   link: '/realizzazione-siti-web-per-professionisti',
                   linkLabel: 'Scopri il servizio'
                 },
                 {
-                  title: 'Siti web per negozi a Padova',
+                  title: 'Siti web per negozi',
                   description: 'Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.',
                   link: null,
                   linkLabel: null
                 },
                 {
-                  title: 'Siti web aziendali strutturati a Padova',
+                  title: 'Siti web aziendali strutturati',
                   description: 'Piattaforme web complete per aziende che necessitano di una presenza online solida, organizzata e orientata alla conversione.',
                   link: '/siti-web-aziendali',
                   linkLabel: 'Scopri il servizio'
