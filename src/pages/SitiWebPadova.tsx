@@ -257,8 +257,8 @@ const SitiWebPadova = () => {
                 <h2 className="heading-2 text-primary-foreground mb-6">
                   Vuoi realizzare un sito web professionale a Padova?
                 </h2>
-                <p className="body-large text-primary-foreground/70 mb-8">
-                  Siamo una realtà con sede operativa a Padova, specializzata nella creazione di siti web per professionisti, negozi e aziende. Contattaci per un confronto senza impegno.
+                <p className="body-large text-primary-foreground/70 mb-8">Contattaci per un confronto senza impegno.
+
                 </p>
                 <div className="text-center">
                   <button
