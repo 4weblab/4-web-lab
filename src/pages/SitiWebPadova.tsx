@@ -132,7 +132,7 @@ const SitiWebPadova = () => {
                   linkLabel: null
                 },
                 {
-                  title: 'Siti web aziendali strutturati a Padova',
+                  title: 'Siti web aziendali strutturati',
                   description: 'Piattaforme web complete per aziende che necessitano di una presenza online solida, organizzata e orientata alla conversione.',
                   link: '/siti-web-aziendali',
                   linkLabel: 'Scopri il servizio'
