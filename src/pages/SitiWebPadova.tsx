@@ -75,7 +75,7 @@ const SitiWebPadova = () => {
                     <div className="icon-box w-13 h-13">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <h2 className="heading-2">Perché affidare a noi il vostro sito</h2>
+                    <h2 className="heading-2">Perché scegliere una realtà con sede a Padova</h2>
                   </div>
                   <p className="body-base text-muted-foreground">
                     Avere un punto di riferimento locale significa poter contare su una comunicazione più diretta, una comprensione profonda del territorio e la possibilità di un confronto anche dal vivo.
@@ -89,7 +89,7 @@ const SitiWebPadova = () => {
                   'Comunicazione diretta e senza intermediari',
                   'Possibilità di confronto anche dal vivo su richiesta',
                   'Supporto continuativo dopo la pubblicazione',
-                  'Struttura organizzata'].
+                  'Struttura organizzata, non freelance improvvisato'].
                   map((item, index) =>
                   <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
@@ -120,19 +120,19 @@ const SitiWebPadova = () => {
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
                 {
-                  title: 'Siti web per professionisti',
+                  title: 'Siti web per professionisti a Padova',
                   description: 'Presenze digitali autorevoli per liberi professionisti e studi che vogliono farsi trovare e trasmettere fiducia online.',
                   link: '/realizzazione-siti-web-per-professionisti',
                   linkLabel: 'Scopri il servizio'
                 },
                 {
-                  title: 'Siti web per negozi',
+                  title: 'Siti web per negozi a Padova',
                   description: 'Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.',
                   link: null,
                   linkLabel: null
                 },
                 {
-                  title: 'Siti web aziendali strutturati',
+                  title: 'Siti web aziendali strutturati a Padova',
                   description: 'Piattaforme web complete per aziende che necessitano di una presenza online solida, organizzata e orientata alla conversione.',
                   link: '/siti-web-aziendali',
                   linkLabel: 'Scopri il servizio'
@@ -171,7 +171,7 @@ const SitiWebPadova = () => {
 
               <AnimatedSection delay={0.1}>
                 <p className="body-base text-muted-foreground mb-10 max-w-3xl">
-                  Ogni progetto di realizzazione siti web a Padova segue un percorso strutturato, pensato per garantire qualità, trasparenza e risultati misurabili.
+                  Ogni progetto di realizzazione siti web segue un percorso strutturato, pensato per garantire qualità, trasparenza e risultati misurabili.
                 </p>
               </AnimatedSection>
 
