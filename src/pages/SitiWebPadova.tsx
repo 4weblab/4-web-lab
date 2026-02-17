@@ -229,8 +229,8 @@ const SitiWebPadova = () => {
                 <p className="mb-6">
                   La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del territorio. Lavoriamo con professionisti, commercianti e aziende della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la solidità di un metodo collaudato a livello nazionale.
                 </p>
-                <p>
-                  Che tu operi nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
+                <p>Che lei operi nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
+
                 </p>
               </AnimatedSection>
             </div>
