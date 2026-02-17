@@ -126,7 +126,7 @@ const SitiWebPadova = () => {
                   linkLabel: 'Scopri il servizio'
                 },
                 {
-                  title: 'Siti web per negozi a Padova',
+                  title: 'Siti web per attività commerciali',
                   description: 'Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.',
                   link: null,
                   linkLabel: null
