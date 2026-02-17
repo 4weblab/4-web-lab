@@ -89,7 +89,7 @@ const SitiWebPadova = () => {
                   'Comunicazione diretta e senza intermediari',
                   'Possibilità di confronto anche dal vivo su richiesta',
                   'Supporto continuativo dopo la pubblicazione',
-                  'Struttura organizzata, non freelance improvvisato'].
+                  'Struttura organizzata'].
                   map((item, index) =>
                   <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
