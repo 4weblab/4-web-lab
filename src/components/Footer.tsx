@@ -46,7 +46,7 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="font-sans font-bold text-lg mb-5">Link rapidi</h3>
+            <h3 className="hidden md:block font-sans font-bold text-lg mb-5">Link rapidi</h3>
             <ul className="flex flex-row gap-4 md:flex-col md:gap-0 md:space-y-3">
               {[
               { label: 'Chi siamo', id: 'chi-siamo' },
@@ -67,7 +67,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="font-sans font-bold text-lg mb-5">Contatti</h3>
+            <h3 className="hidden md:block font-sans font-bold text-lg mb-5">Contatti</h3>
             <ul className="space-y-3">
               <li>
                 <a
