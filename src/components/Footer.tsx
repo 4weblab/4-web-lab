@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <ul className="flex flex-row flex-nowrap gap-x-8 gap-y-3 mt-4">
+          <ul className="flex flex-col sm:flex-row sm:flex-nowrap gap-x-8 gap-y-3 mt-4 items-center">
             <li>
               <a
                 href="tel:+393516826560"
