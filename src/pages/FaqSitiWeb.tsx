@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { ChevronDown, HelpCircle, ArrowRight } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ContactSection from '@/components/ContactSection';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 
 const faqs = [
@@ -206,41 +206,7 @@ const FaqSitiWeb = () => {
           </div>
         </section>
 
-        {/* CTA finale */}
-        <section
-          className="section-padding relative overflow-hidden"
-          style={{ background: 'var(--gradient-hero)' }}
-        >
-          <div className="noise-overlay" aria-hidden="true">
-            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="faq-cta-noise">
-                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
-              </filter>
-              <rect width="100%" height="100%" filter="url(#faq-cta-noise)" />
-            </svg>
-          </div>
-          <div className="absolute bottom-0 left-1/3 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
-
-          <div className="container-section relative z-10">
-            <AnimatedSection className="max-w-2xl mx-auto text-center">
-              <h2 className="heading-2 text-primary-foreground mb-5">
-                Hai ancora dubbi sul tuo progetto?
-              </h2>
-              <p className="body-large text-primary-foreground/75 mb-10">
-                Parla con noi senza impegno. Analizziamo la tua situazione e ti diamo indicazioni concrete su cosa ti serve davvero.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Link
-                  to="/realizzazione-siti-web-padova"
-                  className="btn-primary inline-flex items-center gap-2 text-base px-8 py-4"
-                >
-                  Richiedi una consulenza per il tuo sito web
-                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                </Link>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
+        <ContactSection />
       </main>
 
       <Footer />
