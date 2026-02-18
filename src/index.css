@@ -153,7 +153,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Playfair Display', Georgia, serif;
-    @apply font-bold tracking-tight text-foreground;
+    @apply font-extrabold tracking-tight text-foreground;
   }
 
   :focus-visible {
@@ -172,7 +172,7 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32;
+    @apply py-28 md:py-36;
   }
 
   /* Typography scale – larger, bolder */
@@ -182,8 +182,8 @@
   }
 
   .heading-2 {
-    @apply text-3xl sm:text-4xl md:text-5xl leading-[1.12] font-bold;
-    letter-spacing: -0.015em;
+    @apply text-3xl sm:text-4xl md:text-5xl leading-[1.12] font-extrabold;
+    letter-spacing: -0.02em;
   }
 
   .heading-3 {
@@ -200,33 +200,34 @@
 
   /* Premium Button variants */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold text-accent-foreground transition-all duration-300;
-    background: var(--gradient-accent);
-    box-shadow: var(--shadow-accent);
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-accent-foreground transition-all duration-200;
+    background: linear-gradient(135deg, hsl(207 95% 42%) 0%, hsl(210 85% 32%) 100%);
+    box-shadow: var(--shadow-accent), 0 2px 8px 0 hsl(207 90% 30% / 0.25);
   }
 
   .btn-primary:hover {
-    @apply scale-[1.04];
-    box-shadow: var(--shadow-accent-lg);
-    filter: brightness(1.08);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-accent-lg), 0 6px 20px 0 hsl(207 90% 30% / 0.35);
+    filter: brightness(1.1);
   }
 
   .btn-primary:active {
-    @apply scale-[0.97];
+    transform: scale(0.97);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold bg-secondary text-secondary-foreground border border-border/50 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-secondary text-secondary-foreground border border-border/50 transition-all duration-200;
     box-shadow: var(--shadow-sm);
   }
 
   .btn-secondary:hover {
     @apply bg-muted border-accent/30;
+    transform: scale(1.02);
     box-shadow: var(--shadow-md);
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold bg-transparent text-primary-foreground border-2 border-primary-foreground/25 transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-transparent text-primary-foreground border-2 border-primary-foreground/25 transition-all duration-200;
     backdrop-filter: blur(8px);
     background: hsla(0, 0%, 100%, 0.06);
   }
@@ -234,16 +235,17 @@
   .btn-outline:hover {
     @apply border-primary-foreground/50;
     background: hsla(0, 0%, 100%, 0.14);
-    @apply scale-[1.03];
+    transform: scale(1.02);
   }
 
   .btn-outline-light {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl font-semibold bg-primary-foreground text-primary border-2 border-primary-foreground transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold bg-primary-foreground text-primary border-2 border-primary-foreground transition-all duration-200;
     box-shadow: var(--shadow-sm);
   }
 
   .btn-outline-light:hover {
-    @apply bg-primary-foreground/90 scale-[1.03];
+    @apply bg-primary-foreground/90;
+    transform: scale(1.02);
     box-shadow: var(--shadow-md);
   }
 

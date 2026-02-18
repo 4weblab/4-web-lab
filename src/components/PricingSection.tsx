@@ -11,7 +11,7 @@ const PricingSection = () => {
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
 
   return (
-    <section id="prezzi" className="section-padding" style={{ background: 'var(--gradient-surface)', scrollMarginTop: 'var(--header-height)' }}>
+    <section id="prezzi" className="section-padding" style={{ background: 'hsl(210 25% 98%)', scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
@@ -23,7 +23,7 @@ const PricingSection = () => {
 
         <AnimatedSection className="max-w-lg mx-auto" delay={0.15}>
           {/* Main pricing card */}
-          <div className="card-glass p-10 relative overflow-hidden border-accent/25">
+          <div className="card-glass p-10 relative overflow-hidden" style={{ border: '1px solid hsl(210 30% 88%)', boxShadow: '0 8px 32px -4px hsl(210 73% 15% / 0.12), 0 2px 8px -2px hsl(210 73% 15% / 0.07)' }}>
             {/* Accent ribbon */}
             <div className="absolute top-0 right-0 px-5 py-1.5 rounded-bl-2xl text-xs font-bold tracking-wide" style={{ background: 'var(--gradient-accent)', color: 'white' }}>
               TUTTO INCLUSO

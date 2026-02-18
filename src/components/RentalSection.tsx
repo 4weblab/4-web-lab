@@ -74,8 +74,8 @@ const RentalSection = () => {
   return (
     <section
       id="noleggio"
-      className="section-padding bg-background"
-      style={{ scrollMarginTop: 'var(--header-height)' }}
+      className="section-padding"
+      style={{ background: 'hsl(210 22% 96%)', scrollMarginTop: 'var(--header-height)' }}
       aria-labelledby="rental-heading">
 
       <div className="container-section">
