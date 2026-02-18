@@ -76,18 +76,18 @@ const Footer = () => {
 
         {/* Bottom bar */}
         <div className="border-t border-primary-foreground/12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/45 text-sm">
+          <p className="text-primary-foreground/45 text-sm text-center sm:text-left">
             © {currentYear} {businessInfo.name}. Tutti i diritti riservati.
           </p>
-          <div className="flex-wrap gap-x-5 gap-y-2 text-sm flex-col flex items-center justify-start">
+          <div className="flex flex-col sm:flex-row items-center gap-y-2 gap-x-4 text-sm text-center">
             <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
               Realizzazione siti web a Padova
             </Link>
-            <span className="text-primary-foreground/15">|</span>
+            <span className="hidden sm:inline text-primary-foreground/15">|</span>
             <Link to="/privacy" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
               Privacy Policy
             </Link>
-            <span className="text-primary-foreground/15">|</span>
+            <span className="hidden sm:inline text-primary-foreground/15">|</span>
             <Link to="/cookie" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
               Cookie Policy
             </Link>
