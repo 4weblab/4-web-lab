@@ -24,7 +24,7 @@ const Hero = () => {
 
       {/* Background image with overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-12"
+        className="absolute inset-0 bg-cover bg-left sm:bg-center bg-no-repeat opacity-20"
         style={{ backgroundImage: `url(${heroBg})` }}
         aria-hidden="true" />
 
@@ -57,8 +57,8 @@ const Hero = () => {
       <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-accent/8 blur-[100px]" aria-hidden="true" />
       <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px]" aria-hidden="true" />
 
-      <div className="container-section relative z-10 text-center py-24">
-        <div className="max-w-5xl mx-auto">
+      <div className="container-section relative z-10 py-24">
+        <div className="max-w-xl text-left">
           <motion.h1
             className="heading-1 text-primary-foreground mb-8 text-balance"
             style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}
@@ -70,7 +70,7 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="body-large text-primary-foreground/90 mb-14 max-w-2xl mx-auto text-balance"
+            className="body-large text-primary-foreground/90 mb-14 text-balance"
             style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ const Hero = () => {
           </motion.p>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-5"
+            className="flex flex-col sm:flex-row items-start gap-5"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
