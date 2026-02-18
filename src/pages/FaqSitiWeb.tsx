@@ -227,14 +227,7 @@ const FaqSitiWeb = () => {
                 Hai ancora dubbi sul tuo progetto?
               </h2>
               <p className="body-large text-primary-foreground/75 mb-10">
-                Parla con noi senza impegno. Analizziamo la tua situazione e ti diamo indicazioni concrete su cosa ti serve davvero.{' '}
-                <Link
-                  to="/"
-                  className="text-accent font-semibold hover:underline"
-                >
-                  Torna alla home
-                </Link>{' '}
-                oppure scopri come operiamo a Padova e provincia.
+                Parla con noi senza impegno. Analizziamo la tua situazione e ti diamo indicazioni concrete su cosa ti serve davvero.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
