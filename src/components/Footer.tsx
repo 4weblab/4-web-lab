@@ -68,7 +68,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div>
             <h3 className="hidden md:block font-sans font-bold text-lg mb-5">Contatti</h3>
-            <ul className="space-y-3">
+            <ul className="flex flex-wrap gap-x-6 gap-y-3">
               <li>
                 <a
                   href="tel:+393516826560"
