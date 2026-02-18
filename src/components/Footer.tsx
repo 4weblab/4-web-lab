@@ -44,26 +44,6 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="hidden md:block font-sans font-bold text-lg mb-5">Link rapidi</h3>
-            <ul className="flex flex-row gap-4 md:flex-col md:gap-0 md:space-y-3">
-              {[
-              { label: 'Chi siamo', id: 'chi-siamo' },
-              { label: 'Servizi', id: 'servizi' },
-              { label: 'Contatti', id: 'contatti' }].
-              map((item) =>
-              <li key={item.id}>
-                  <button
-                  onClick={() => scrollToSection(item.id)}
-                  className="text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300 link-underline">
-
-                    {item.label}
-                  </button>
-                </li>
-              )}
-            </ul>
-          </div>
 
           {/* Contact Info */}
           <div>
