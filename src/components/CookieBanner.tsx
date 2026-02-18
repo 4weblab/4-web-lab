@@ -25,7 +25,7 @@ const CookieBanner = () => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="fixed left-0 right-0 z-40 border-t border-border/30 bottom-[var(--mobile-cta-height)] md:bottom-0"
+          className="fixed left-0 right-0 z-40 border-t border-border/30 bottom-0"
           style={{
             background: 'var(--glass-bg)',
             backdropFilter: 'blur(20px)',
