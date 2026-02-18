@@ -1,21 +1,24 @@
 
+## Sostituzione sfondo Hero
 
-## Disposizione orizzontale dei link rapidi su mobile
-
-Attualmente i tre link "Chi siamo", "Servizi" e "Contatti" nel footer sono disposti in colonna (`space-y-3` sulla `ul`). La modifica li disporra in riga solo su mobile.
-
-### Modifiche tecniche
-
-**File: `src/components/Footer.tsx` (riga 50)**
-
-Sostituire le classi della `<ul>` da:
+### Situazione attuale
+Il componente `src/components/Hero.tsx` importa l'immagine di sfondo così:
+```ts
+import heroBg from '@/assets/hero-bg.webp';
 ```
-className="space-y-3"
-```
-a:
-```
-className="flex flex-row gap-4 md:flex-col md:gap-0 md:space-y-3"
-```
+Nella cartella `src/assets/` esistono anche `hero-bg.jpg` e `hero-bg.png` (varianti non utilizzate).
 
-Questo applica `flex-row` con `gap-4` su mobile, e ripristina il layout verticale con `space-y-3` da `md` in su.
+### Modifiche pianificate
 
+**1. Copia della nuova immagine**
+- Copia `user-uploads://hero-4weblab-style-light-1600w.webp` → `src/assets/hero-bg.webp` (sovrascrive il file esistente, così non serve cambiare il nome nell'import)
+
+**2. Eliminazione dei file obsoleti**
+- Elimina `src/assets/hero-bg.jpg`
+- Elimina `src/assets/hero-bg.png`
+
+**3. Aggiornamento `src/components/Hero.tsx`**
+- Nessuna modifica necessaria all'import se si sovrascrive `hero-bg.webp`, il riferimento resta invariato
+
+### Note
+La nuova immagine ha uno sfondo chiaro/beige, molto diverso dall'attuale scuro. Poiché la Hero usa testi bianchi su overlay scuro, l'overlay a gradiente nero esistente continuerà a garantire la leggibilità dei testi.
