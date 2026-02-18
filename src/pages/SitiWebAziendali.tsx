@@ -33,19 +33,15 @@ const SitiWebAziendali = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero Section */}
-        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-surface)' }}>
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-[100px]" aria-hidden="true" />
+        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
-              <h1 className="heading-1 mb-8">
+              <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti web aziendali strutturati e multipagina
               </h1>
-              <p className="body-large text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">Realizziamo siti web per aziende in tutta Italia, con architetture strutturate, scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo per consolidare la presenza online della tua impresa.
-
-
-
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Realizziamo siti web per aziende in tutta Italia, con architetture strutturate, scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo per consolidare la presenza online della tua impresa.
               </p>
-              <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2">
+              <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Contattaci ora
                 <ArrowRight className="w-4 h-4" />
               </button>

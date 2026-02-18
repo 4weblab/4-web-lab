@@ -28,22 +28,17 @@ const SitiWebProfessionisti = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero Section */}
-        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-surface)' }}>
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 rounded-full bg-accent/5 blur-[100px]" aria-hidden="true" />
+        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
-              <h1 className="heading-1 mb-8">
+              <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Realizzazione siti web per professionisti
               </h1>
-              <p className="body-large text-muted-foreground mb-8 max-w-3xl mx-auto text-balance">In 4weblab realizziamo siti web per professionisti e studi professionali in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
-
-
-
-
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">In 4weblab realizziamo siti web per professionisti e studi professionali in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
               </p>
               <button
                 onClick={() => document.getElementById('contatti-professionisti')?.scrollIntoView({ behavior: 'smooth' })}
-                className="btn-primary inline-flex items-center gap-2 mt-2"
+                className="btn-primary inline-flex items-center gap-2 mt-2 px-10 py-5"
               >
                 Contattaci
               </button>
