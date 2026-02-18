@@ -22,36 +22,11 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ background: 'var(--gradient-hero)' }}>
 
-      {/* Background image with overlay */}
+      {/* Background image */}
       <div
-        className="absolute inset-0 bg-cover bg-left sm:bg-center bg-no-repeat opacity-20"
+        className="absolute inset-0 bg-cover bg-left sm:bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroBg})` }}
         aria-hidden="true" />
-
-      {/* Dark gradient overlay for readability */}
-      <div
-        className="absolute inset-0"
-        style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.5) 100%)' }}
-        aria-hidden="true" />
-
-
-      {/* Noise texture overlay */}
-      <div className="noise-overlay" aria-hidden="true">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <filter id="hero-noise">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.65"
-              numOctaves="3"
-              stitchTiles="stitch" />
-
-          </filter>
-          <rect width="100%" height="100%" filter="url(#hero-noise)" />
-        </svg>
-      </div>
-
-      {/* Radial spotlight behind headline */}
-      <div className="hero-spotlight" aria-hidden="true" />
 
       {/* Decorative glow orbs */}
       <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-accent/8 blur-[100px]" aria-hidden="true" />
