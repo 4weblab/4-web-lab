@@ -237,12 +237,6 @@ const FaqSitiWeb = () => {
                   Richiedi una consulenza per il tuo sito web
                   <ArrowRight className="w-4 h-4" aria-hidden="true" />
                 </Link>
-                <Link
-                  to="/"
-                  className="inline-flex items-center gap-2 px-6 py-4 rounded-xl text-primary-foreground/70 hover:text-primary-foreground font-medium transition-colors duration-300 text-sm"
-                >
-                  ← Torna alla home
-                </Link>
               </div>
             </AnimatedSection>
           </div>
