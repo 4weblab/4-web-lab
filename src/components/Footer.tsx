@@ -31,13 +31,13 @@ const Footer = () => {
         <div className="flex flex-col items-center text-center gap-8 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center justify-center gap-2.5 mb-6">
+            <Link to="/" className="flex items-center justify-center gap-2.5 mb-6 hover:opacity-80 transition-opacity duration-300">
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
                 src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png" />
               <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
-            </div>
+            </Link>
             <p className="text-primary-foreground/60 max-w-md leading-relaxed">
               Studio di produzione web per negozi, professionisti ed aziende. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione.
             </p>
