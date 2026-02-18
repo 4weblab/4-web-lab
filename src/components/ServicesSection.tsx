@@ -88,7 +88,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="servizi" className="section-padding bg-background" style={{ scrollMarginTop: 'var(--header-height)' }}>
+    <section id="servizi" className="section-padding" style={{ background: 'hsl(210 25% 98%)', scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
         <AnimatedSection className="text-center mb-12 md:mb-16">
           <div className="section-divider" />

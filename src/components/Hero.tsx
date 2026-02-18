@@ -28,15 +28,23 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroBg})` }}
         aria-hidden="true" />
 
-      {/* Decorative glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-80 h-80 rounded-full bg-accent/8 blur-[100px]" aria-hidden="true" />
-      <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full bg-accent/5 blur-[120px]" aria-hidden="true" />
+      {/* Directional overlay: dark on left, transparent on right */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background: 'linear-gradient(to right, hsl(210 73% 10% / 0.68) 0%, hsl(210 73% 10% / 0.42) 45%, hsl(210 73% 10% / 0.10) 75%, transparent 100%)'
+        }}
+        aria-hidden="true" />
 
       <div className="container-section relative z-10 py-24">
         <div className="max-w-xl text-left">
           <motion.h1
             className="heading-1 text-primary-foreground mb-8 text-balance"
-            style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}
+            style={{
+              textShadow: '0 2px 8px rgba(0,0,0,0.55), 0 0 20px rgba(0,0,0,0.25)',
+              fontWeight: 800,
+              letterSpacing: '-0.03em'
+            }}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
@@ -45,8 +53,8 @@ const Hero = () => {
           </motion.h1>
 
           <motion.p
-            className="body-large text-primary-foreground/90 mb-14 text-balance"
-            style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}
+            className="body-large text-primary-foreground mb-14 text-balance"
+            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
@@ -62,7 +70,7 @@ const Hero = () => {
 
             <button
               onClick={handleScrollToContact}
-              className="btn-primary text-lg px-10 py-4"
+              className="btn-primary text-lg px-12 py-5"
               aria-label="Richiedi un preventivo gratuito">
 
               Richiedi preventivo gratuito
