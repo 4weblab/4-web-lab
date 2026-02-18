@@ -84,6 +84,10 @@ const Footer = () => {
               Realizzazione siti web a Padova
             </Link>
             <span className="hidden sm:inline text-primary-foreground/15">|</span>
+            <Link to="/faq-realizzazione-siti-web" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
+              FAQ Siti Web
+            </Link>
+            <span className="hidden sm:inline text-primary-foreground/15">|</span>
             <Link to="/privacy" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300">
               Privacy Policy
             </Link>
