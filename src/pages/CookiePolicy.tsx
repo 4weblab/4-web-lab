@@ -1,6 +1,7 @@
 import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { AnimatedSection } from '@/components/AnimatedSection';
 
 const CookiePolicy = () => {
@@ -10,6 +11,15 @@ const CookiePolicy = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Cookie Policy | 4 Web Lab</title>
+        <meta name="description" content="Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.4weblab.it/cookie" />
+        <meta property="og:title" content="Cookie Policy | 4 Web Lab" />
+        <meta property="og:url" content="https://www.4weblab.it/cookie" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       {/* Header */}
       <header className="relative overflow-hidden py-10" style={{ background: 'var(--gradient-hero)' }}>
         <div className="absolute inset-0 bg-accent/5 blur-[100px]" aria-hidden="true" />
@@ -21,7 +31,7 @@ const CookiePolicy = () => {
             <ArrowLeft className="w-4 h-4" />
             Torna alla home
           </Link>
-          <h1 className="heading-2 text-primary-foreground">Cookie Policy</h1>
+          <h1 className="heading-1 text-primary-foreground">Cookie Policy</h1>
         </div>
       </header>
 
