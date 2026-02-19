@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import AboutSection from '@/components/AboutSection';
@@ -8,7 +9,6 @@ import PricingSection from '@/components/PricingSection';
 import HomeFaqPreview from '@/components/HomeFaqPreview';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-
 import CookieBanner from '@/components/CookieBanner';
 
 // TODO: Sostituire con dati reali dell'attività per Schema.org
@@ -47,6 +47,19 @@ const businessSchema = {
 const Index = () => {
   return (
     <>
+      <Helmet>
+        <title>Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab</title>
+        <meta name="description" content="Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti." />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.4weblab.it/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.4weblab.it/" />
+        <meta property="og:title" content="Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab" />
+        <meta property="og:description" content="Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti." />
+        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:locale" content="it_IT" />
+      </Helmet>
+
       {/* Schema.org JSON-LD */}
       <script
         type="application/ld+json"
@@ -67,8 +80,7 @@ const Index = () => {
       </main>
 
       <Footer />
-      
-      
+
       {/* Cookie banner */}
       <CookieBanner />
     </>

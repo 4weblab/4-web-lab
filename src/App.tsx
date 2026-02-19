@@ -26,12 +26,11 @@ const siteMetadata = {
 const App = () => (
   <HelmetProvider>
     <Helmet>
-      {/* Primary Meta Tags */}
+      {/* Primary Meta Tags - fallback globale, ogni pagina sovrascrive con il proprio Helmet */}
       <title>{siteMetadata.title}</title>
       <meta name="title" content={siteMetadata.title} />
       <meta name="description" content={siteMetadata.description} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={siteMetadata.url} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
@@ -50,8 +49,6 @@ const App = () => (
       
       {/* Additional SEO */}
       <meta name="author" content="4 Web Lab" />
-      <meta name="geo.region" content="IT-MI" />
-      <meta name="geo.placename" content="Milano" />
       <html lang="it" />
     </Helmet>
     
