@@ -59,7 +59,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
 
-            Progettiamo e realizziamo siti web moderni, veloci e ottimizzati SEO, lavorando da remoto con un metodo chiaro, strutturato e orientato ai risultati.
+            Realizziamo siti web professionali per attività locali e PMI, curati nei dettagli e progettati per essere veloci, performanti e accessibili nel prezzo.
           </motion.p>
 
           <motion.div
