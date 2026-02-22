@@ -35,7 +35,7 @@ const faqs = [
   id: 'dominio-e-hosting',
   question: 'Il sito web include dominio e hosting?',
   answer:
-  'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione.'
+  'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.'
 },
 {
   id: 'social-o-sito-web',
