@@ -1,20 +1,29 @@
 
 
-## Piano: Inserimento file BIMI SVG nella root pubblica
+## Aggiunta icona WhatsApp accanto all'icona telefono
 
-### Cosa fare
+### Modifica
 
-Copiare il file `4wl-bimi.svg` caricato nella cartella `public/` del progetto (root pubblica), senza modifiche.
+Nel file `src/components/Footer.tsx`, nella voce di contatto del numero di telefono (riga 49), aggiungere l'icona WhatsApp (componente `MessageCircle` di Lucide, gia importato) accanto all'icona `Phone` esistente, separati da uno slash `/`.
+
+### Risultato visivo
+
+Il link del telefono passera da:
+
+```text
+[icona telefono] +39 351 682 6560
+```
+
+a:
+
+```text
+[icona telefono] / [icona whatsapp] +39 351 682 6560
+```
 
 ### Dettagli tecnici
 
-- **Origine**: `user-uploads://4wl-bimi.svg`
-- **Destinazione**: `public/4wl-bimi.svg`
-- Il file verra copiato cosi com'e, senza alcuna trasformazione o ottimizzazione
-- Vite serve i file nella cartella `public/` direttamente alla root, quindi sara raggiungibile a `https://4weblab.it/4wl-bimi.svg` dopo il deploy con dominio personalizzato
-- Il server restituira automaticamente `Content-Type: image/svg+xml` per i file `.svg`, con risposta HTTP 200 diretta senza redirect
-
-### Nessuna altra modifica
-
-Non verra modificato alcun componente, nessun import, nessun inline SVG. Il file resta un asset statico indipendente.
+- File: `src/components/Footer.tsx`, riga ~52
+- Aggiungere uno span con `/` e l'icona `MessageCircle` (gia importata nel file) subito dopo l'icona `Phone` esistente
+- Stesse dimensioni (`w-5 h-5`) e stile delle altre icone nel footer
+- Nessun altro file modificato
 
