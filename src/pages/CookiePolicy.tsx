@@ -82,23 +82,6 @@ const CookiePolicy = () => {
               </div>
             </section>
 
-            <section className="mb-10">
-              <h2 className="heading-3 mb-4">Cookie di terze parti</h2>
-              <p className="text-muted-foreground mb-4 leading-relaxed">
-                Il sito incorpora una mappa di Google Maps. Quando la mappa viene visualizzata,
-                Google potrebbe installare cookie tecnici necessari al funzionamento del servizio.
-                Per maggiori informazioni sui cookie utilizzati da Google, si rimanda alla relativa
-                informativa:{' '}
-                <a
-                  href="https://policies.google.com/privacy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline font-medium"
-                >
-                  Google Privacy Policy
-                </a>
-              </p>
-            </section>
 
             <section className="mb-10">
               <h2 className="heading-3 mb-4">Gestione dei cookie</h2>
