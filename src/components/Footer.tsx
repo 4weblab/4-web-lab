@@ -63,16 +63,6 @@ const Footer = () => {
                 info@4weblab.it
               </a>
             </li>
-            <li>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
-                <MessageCircle className="w-5 h-5" aria-hidden="true" />
-                WhatsApp
-              </a>
-            </li>
           </ul>
         </div>
 
