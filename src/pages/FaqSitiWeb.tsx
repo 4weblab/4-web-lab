@@ -59,7 +59,7 @@ const faqs = [
   id: 'aggiornamento-autonomo',
   question: 'Posso aggiornare il sito web in autonomia?',
   answer:
-  'È possibile predisporre il sito in modo che alcune sezioni siano aggiornabili in autonomia. In alternativa è disponibile un servizio di gestione tecnica per garantire aggiornamenti corretti e sicuri.'
+  'È possibile predisporre il sito in modo che alcune sezioni siano aggiornabili in autonomia. In alternativa è disponibile un servizio di gestione tecnica per garantire aggiornamenti corretti e sicuri ( consigliato ).'
 },
 {
   id: 'sito-web-trova-clienti',
