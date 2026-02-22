@@ -50,6 +50,8 @@ const Footer = () => {
                 href="tel:+393516826560"
                 className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
                 <Phone className="w-5 h-5" aria-hidden="true" />
+                <span className="text-primary-foreground/45">/</span>
+                <MessageCircle className="w-5 h-5" aria-hidden="true" />
                 +39 351 682 6560
               </a>
             </li>
