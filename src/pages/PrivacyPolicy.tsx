@@ -52,11 +52,11 @@ const PrivacyPolicy = () => {
                 Il Titolare del trattamento dei dati personali è:
               </p>
               <address className="not-italic text-muted-foreground p-5 rounded-2xl border border-border/40 leading-relaxed" style={{ background: 'var(--glass-bg)', backdropFilter: 'blur(8px)' }}>
-                <strong>4 Web Lab S.r.l.</strong><br />
-                Via Roma 123<br />
-                20100 Milano (MI)<br />
-                P.IVA: 00000000000<br />
-                Email: privacy@4weblab.it
+                <strong>4 Web Lab di Fullin Carlo</strong><br />
+                Via Belluno 44<br />
+                35020 Legnaro (PD)<br />
+                P.IVA: 05765760284<br />
+                Email: info@4weblab.it
               </address>
             </section>
 
