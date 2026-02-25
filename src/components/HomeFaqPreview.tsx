@@ -54,7 +54,7 @@ const HomeFaqPreview = () => {
             to="/faq-realizzazione-siti-web"
             className="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-300 group"
           >
-            Leggi tutte le domande frequenti
+            Leggi tutte le domande frequenti (FAQ)
             <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
           </Link>
         </AnimatedSection>
