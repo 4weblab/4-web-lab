@@ -2,21 +2,15 @@
 
 ## Piano
 
-Aggiungere `text-center` al div della bottom bar (riga 70) per centrare anche il testo interno, oltre al già presente `justify-center`.
+Creare il file `public/_redirects` con la regola di rewrite per Netlify SPA routing.
 
-### Modifica in `src/components/Footer.tsx`
+### Nuovo file: `public/_redirects`
 
-Riga 70: aggiungere `text-center` alle classi del div.
+Contenuto esatto (una sola riga, nessuno spazio extra):
 
-```tsx
-// Da:
-<div className="border-t border-primary-foreground/12 pt-8 flex flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2">
-
-// A:
-<div className="border-t border-primary-foreground/12 pt-8 flex flex-col items-center text-center gap-x-6 gap-y-2">
+```
+/*    /index.html   200
 ```
 
-Cambio da `flex-row flex-wrap justify-center` a `flex-col items-center text-center` per impilare gli elementi verticalmente e centrare tutto il testo.
-
-Un solo file modificato: `src/components/Footer.tsx`.
+Un solo file creato. Vite copierà automaticamente i file dalla cartella `public/` nella root della build, quindi `_redirects` sarà presente nella directory di deploy.
 
