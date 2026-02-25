@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const businessInfo = {
   name: '4 Web Lab',
-  fullName: '4 Web Lab S.r.l.',
-  vatNumber: 'P.IVA: 00000000000',
-  address: 'Via Roma 123',
-  city: 'Milano',
-  postalCode: '20100',
+  fullName: '4 Web Lab di Fullin Carlo',
+  vatNumber: 'P.IVA: 05765760284',
+  address: 'Via Belluno 44',
+  city: 'Legnaro (PD)',
+  postalCode: '35020',
   country: 'Italia',
   phone: '+39 351 682 6560',
   whatsapp: '393516826560',

@@ -19,6 +19,9 @@ const PrivacyPolicy = () => {
         <meta property="og:title" content="Privacy Policy | 4 Web Lab" />
         <meta property="og:url" content="https://www.4weblab.it/privacy" />
         <meta property="og:type" content="website" />
+        <meta property="og:description" content="Informativa sul trattamento dei dati personali di 4 Web Lab, ai sensi del GDPR. Scopri come raccogliamo e utilizziamo i tuoi dati." />
+        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:locale" content="it_IT" />
       </Helmet>
       {/* Header */}
       <header className="relative overflow-hidden py-10" style={{ background: 'var(--gradient-hero)' }}>

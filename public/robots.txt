@@ -1,17 +1,4 @@
-# Blocca indicizzazione del dominio di staging/preview
 User-agent: *
-Disallow: /
-
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Twitterbot
-Allow: /
-
-User-agent: facebookexternalhit
 Allow: /
 
 Sitemap: https://www.4weblab.it/sitemap.xml

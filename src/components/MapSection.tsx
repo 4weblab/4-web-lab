@@ -3,14 +3,14 @@ import { AnimatedSection } from './AnimatedSection';
 
 const businessData = {
   name: '4 Web Lab',
-  address: 'Via Roma 123',
-  city: 'Milano',
-  postalCode: '20100',
+  address: 'Via Belluno 44',
+  city: 'Legnaro (PD)',
+  postalCode: '35020',
   country: 'Italia',
-  phone: '+39 02 1234567',
-  lat: 45.4642,
-  lng: 9.1900,
-  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Via+Roma+123,+Milano,+Italia',
+  phone: '+39 351 682 6560',
+  lat: 45.3461,
+  lng: 11.9536,
+  mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Via+Belluno+44,+Legnaro,+PD,+Italia',
 };
 
 const MapSection = () => {

@@ -22,6 +22,12 @@ const SitiWebProfessionisti = () => {
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <meta property="og:title" content="Realizzazione siti web per professionisti | 4weblab" />
+        <meta property="og:description" content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti." />
+        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:locale" content="it_IT" />
       </Helmet>
 
       <Header satelliteMode />
