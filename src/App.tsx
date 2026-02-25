@@ -50,6 +50,32 @@ const App = () => (
       {/* Additional SEO */}
       <meta name="author" content="4 Web Lab" />
       <html lang="it" />
+      
+      {/* Global JSON-LD */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "4 Web Lab di Fullin Carlo",
+          "url": "https://www.4weblab.it/",
+          "logo": "https://www.4weblab.it/logo.png",
+          "image": "https://www.4weblab.it/logo.png",
+          "telephone": "+393516826560",
+          "email": "info@4weblab.it",
+          "vatID": "05765760284",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via Belluno 44",
+            "addressLocality": "Legnaro",
+            "addressRegion": "PD",
+            "postalCode": "35020",
+            "addressCountry": "IT"
+          },
+          "areaServed": ["IT", "Veneto", "Padova (PD)", "Venezia (VE)", "Treviso (TV)", "Vicenza (VI)", "Verona (VR)", "Rovigo (RO)", "Belluno (BL)"],
+          "sameAs": ["https://share.google/oGOMV0sHAaV8JlqnZ"],
+          "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "byAppointmentOnly": true }]
+        })}
+      </script>
     </Helmet>
     
     <QueryClientProvider client={queryClient}>
