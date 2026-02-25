@@ -93,8 +93,8 @@ const RentalSection = () => {
         {/* Content */}
         <AnimatedSection className="max-w-3xl mx-auto mb-16" delay={0.1}>
           <p className="text-foreground mb-8 leading-relaxed text-lg">
-            Con il nostro servizio, lei paga un <strong>canone mensile</strong> per avere
-            un sito web professionale sempre operativo, senza preoccuparsi di nulla.
+            Con il nostro servizio a <strong>canone mensile</strong> puoi avere
+            un sito web professionale sempre operativo, senza preoccuparti di nulla.
             Nessuna spesa iniziale importante, nessuna competenza tecnica richiesta.
           </p>
 
