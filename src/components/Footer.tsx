@@ -71,6 +71,9 @@ const Footer = () => {
           <p className="text-primary-foreground/45 text-sm whitespace-nowrap">
             © {currentYear} {businessInfo.name}. Tutti i diritti riservati.
           </p>
+          <p className="text-primary-foreground/45 text-sm">
+            {businessInfo.fullName} — {businessInfo.vatNumber}
+          </p>
           <div className="flex flex-row flex-wrap items-center gap-x-4 gap-y-2 text-sm">
             <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 whitespace-nowrap">
               Realizzazione siti web a Padova
