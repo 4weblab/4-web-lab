@@ -6,10 +6,6 @@ import { motion } from 'framer-motion';
 const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso'];
 
 const PricingSection = () => {
-  const whatsappNumber = '391234567890';
-  const message = encodeURIComponent('Ciao! Vorrei richiedere un preventivo per il sito web.');
-  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${message}`;
-
   return (
     <section id="prezzi" className="section-padding" style={{ background: 'hsl(210 25% 98%)', scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
@@ -64,7 +60,7 @@ const PricingSection = () => {
             {/* CTA */}
             <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
               <Button asChild size="lg" className="w-full rounded-2xl h-13 text-base font-semibold">
-                <a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Richiedi preventivo su WhatsApp">
+                <a href="#contatti" aria-label="Richiedi preventivo">
                   Richiedi preventivo
                 </a>
               </Button>
