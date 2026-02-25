@@ -93,8 +93,8 @@ const RentalSection = () => {
         {/* Content */}
         <AnimatedSection className="max-w-3xl mx-auto mb-16" delay={0.1}>
           <p className="text-foreground mb-8 leading-relaxed text-lg">
-            Con il nostro servizio a <strong>canone mensile</strong> puoi avere
-            un sito web professionale sempre operativo, senza preoccuparti di nulla.
+            Con il nostro servizio, lei paga un <strong>canone mensile</strong> per avere
+            un sito web professionale sempre operativo, senza preoccuparsi di nulla.
             Nessuna spesa iniziale importante, nessuna competenza tecnica richiesta.
           </p>
 
@@ -125,7 +125,7 @@ const RentalSection = () => {
 
           {/* Key phrase */}
           <blockquote className="text-center text-lg md:text-xl font-serif italic text-foreground border-l-4 border-accent pl-6 py-3 my-10 bg-accent/5 rounded-r-2xl">
-            "Lei pensa alla sua attività, al sito pensiamo noi."
+            "Concentrati sulla tua attività, al sito pensiamo noi."
           </blockquote>
         </AnimatedSection>
 
