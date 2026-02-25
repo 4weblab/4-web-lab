@@ -2,15 +2,25 @@
 
 ## Piano
 
-Creare il file `public/_redirects` con la regola di rewrite per Netlify SPA routing.
+Modificare il pulsante "Richiedi preventivo" in `src/components/PricingSection.tsx` per rimuovere il link WhatsApp e sostituirlo con un'ancora che scorre alla sezione contatti (`#contatti`), dove si trova il form.
 
-### Nuovo file: `public/_redirects`
+### Modifica in `src/components/PricingSection.tsx`
 
-Contenuto esatto (una sola riga, nessuno spazio extra):
+**Riga 67**: Sostituire il tag `<a>` con link WhatsApp con un'ancora interna alla sezione contatti.
 
+```tsx
+// Da:
+<a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Richiedi preventivo su WhatsApp">
+  Richiedi preventivo
+</a>
+
+// A:
+<a href="#contatti" aria-label="Richiedi preventivo">
+  Richiedi preventivo
+</a>
 ```
-/*    /index.html   200
-```
 
-Un solo file creato. Vite copierà automaticamente i file dalla cartella `public/` nella root della build, quindi `_redirects` sarà presente nella directory di deploy.
+Si possono anche rimuovere le variabili `whatsappNumber`, `message` e `whatsappLink` (righe 11-13) poiché non più utilizzate.
+
+Un solo file modificato.
 
