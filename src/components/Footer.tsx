@@ -74,23 +74,6 @@ const Footer = () => {
           <p className="text-primary-foreground/45 text-sm">
             {businessInfo.fullName} — {businessInfo.vatNumber}
           </p>
-          <div className="flex flex-row flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 whitespace-nowrap">
-              Realizzazione siti web a Padova
-            </Link>
-            <span className="text-primary-foreground/15">|</span>
-            <Link to="/faq-realizzazione-siti-web" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 whitespace-nowrap">
-              FAQ Siti Web
-            </Link>
-            <span className="text-primary-foreground/15">|</span>
-            <Link to="/privacy" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 whitespace-nowrap">
-              Privacy Policy
-            </Link>
-            <span className="text-primary-foreground/15">|</span>
-            <Link to="/cookie" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 whitespace-nowrap">
-              Cookie Policy
-            </Link>
-          </div>
         </div>
       </div>
     </footer>);
