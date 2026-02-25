@@ -2,25 +2,13 @@
 
 ## Piano
 
-Modificare il pulsante "Richiedi preventivo" in `src/components/PricingSection.tsx` per rimuovere il link WhatsApp e sostituirlo con un'ancora che scorre alla sezione contatti (`#contatti`), dove si trova il form.
+Copiare il file XML DMARC caricato nella cartella `public/` senza alcuna modifica.
 
-### Modifica in `src/components/PricingSection.tsx`
+### Operazione
 
-**Riga 67**: Sostituire il tag `<a>` con link WhatsApp con un'ancora interna alla sezione contatti.
+- **Copia**: `user-uploads://google.com!4weblab.it!1771891200!1771977599.xml` → `public/google.com!4weblab.it!1771891200!1771977599.xml`
 
-```tsx
-// Da:
-<a href={whatsappLink} target="_blank" rel="noopener noreferrer" aria-label="Richiedi preventivo su WhatsApp">
-  Richiedi preventivo
-</a>
+Vite servirà il file direttamente dalla root del deploy. Dopo il deploy con dominio personalizzato sarà raggiungibile a `https://4weblab.it/google.com!4weblab.it!1771891200!1771977599.xml` con Content-Type XML e HTTP 200, senza redirect né route React.
 
-// A:
-<a href="#contatti" aria-label="Richiedi preventivo">
-  Richiedi preventivo
-</a>
-```
-
-Si possono anche rimuovere le variabili `whatsappNumber`, `message` e `whatsappLink` (righe 11-13) poiché non più utilizzate.
-
-Un solo file modificato.
+Un solo file copiato, nessuna modifica al codice.
 
