@@ -2,22 +2,19 @@
 
 ## Piano
 
-Aggiungere sotto la riga copyright `© 2026 4 Web Lab. Tutti i diritti riservati.` una seconda riga con il nome completo e la partita IVA.
+Centrare il blocco dei link nel footer aggiungendo `justify-center` al contenitore flex della bottom bar.
 
-### Modifica in `src/components/Footer.tsx` (riga 71)
+### Modifica in `src/components/Footer.tsx`
 
-Dopo il `<p>` del copyright, aggiungere un nuovo `<p>` con:
+Riga 69: cambiare `justify-between` in `justify-center` nel div della bottom bar, così tutti gli elementi (copyright, P.IVA, link) saranno centrati.
 
 ```tsx
-<p className="text-primary-foreground/45 text-sm whitespace-nowrap">
-  © {currentYear} {businessInfo.name}. Tutti i diritti riservati.
-</p>
-<p className="text-primary-foreground/45 text-sm">
-  {businessInfo.fullName} — {businessInfo.vatNumber}
-</p>
-```
+// Da:
+<div className="border-t border-primary-foreground/12 pt-8 flex flex-row flex-wrap justify-between items-center gap-x-6 gap-y-2">
 
-Questo produrrà: **4 Web Lab di Fullin Carlo — P.IVA: 05765760284**
+// A:
+<div className="border-t border-primary-foreground/12 pt-8 flex flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2">
+```
 
 Un solo file modificato: `src/components/Footer.tsx`.
 
