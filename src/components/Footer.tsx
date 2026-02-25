@@ -67,7 +67,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-primary-foreground/12 pt-8 flex flex-row flex-wrap justify-center items-center gap-x-6 gap-y-2">
+        <div className="border-t border-primary-foreground/12 pt-8 flex flex-col items-center text-center gap-x-6 gap-y-2">
           <p className="text-primary-foreground/45 text-sm whitespace-nowrap">
             © {currentYear} {businessInfo.name}. Tutti i diritti riservati.
           </p>
