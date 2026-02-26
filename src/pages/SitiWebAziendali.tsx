@@ -26,12 +26,12 @@ const SitiWebAziendali = () => {
           content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
 
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/siti-web-aziendali" />
+        <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.4weblab.it/siti-web-aziendali" />
+        <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:title" content="Siti web aziendali strutturati e multipagina | 4weblab" />
         <meta property="og:description" content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
-        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
 

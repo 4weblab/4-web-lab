@@ -136,14 +136,14 @@ const FaqSitiWeb = () => {
           content="Domande frequenti sulla realizzazione di siti web professionali: costi, tempi di sviluppo, differenze tra sito vetrina e landing page. Risposte chiare e professionali." />
 
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/faq-realizzazione-siti-web" />
+        <link rel="canonical" href="https://4weblab.it/faq-realizzazione-siti-web" />
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.4weblab.it/faq-realizzazione-siti-web" />
+        <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
         <meta property="og:title" content="FAQ Realizzazione Siti Web | Costi, Tempi e Scelte Strategiche – 4 Web Lab" />
         <meta property="og:description" content="Domande frequenti sulla realizzazione di siti web professionali: costi, tempi di sviluppo, differenze tra sito vetrina e landing page. Risposte chiare e professionali." />
-        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
 
         {/* JSON-LD FAQPage */}

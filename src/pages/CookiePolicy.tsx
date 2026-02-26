@@ -15,12 +15,12 @@ const CookiePolicy = () => {
         <title>Cookie Policy | 4 Web Lab</title>
         <meta name="description" content="Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/cookie" />
+        <link rel="canonical" href="https://4weblab.it/cookie" />
         <meta property="og:title" content="Cookie Policy | 4 Web Lab" />
-        <meta property="og:url" content="https://www.4weblab.it/cookie" />
+        <meta property="og:url" content="https://4weblab.it/cookie" />
         <meta property="og:type" content="website" />
         <meta property="og:description" content="Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento." />
-        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
       {/* Header */}

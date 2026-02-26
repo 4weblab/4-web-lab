@@ -21,12 +21,12 @@ const SitiWebPadova = () => {
           content="Realizzazione siti web professionali a Padova per professionisti, negozi e aziende. Sede operativa a Padova, operativi in tutta Italia." />
 
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/realizzazione-siti-web-padova" />
+        <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.4weblab.it/realizzazione-siti-web-padova" />
+        <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:title" content="Realizzazione siti web professionali a Padova | 4weblab" />
         <meta property="og:description" content="Realizzazione siti web professionali a Padova per professionisti, negozi e aziende. Sede operativa a Padova, operativi in tutta Italia." />
-        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
 
