@@ -15,9 +15,9 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": "4 Web Lab di Fullin Carlo",
-  "url": "https://www.4weblab.it/",
-  "logo": "https://www.4weblab.it/logo.png",
-  "image": "https://www.4weblab.it/logo.png",
+  "url": "https://4weblab.it/",
+  "logo": "https://4weblab.it/logo.png",
+  "image": "https://4weblab.it/logo.png",
   "telephone": "+393516826560",
   "email": "info@4weblab.it",
   "vatID": "05765760284",
@@ -58,12 +58,12 @@ const Index = () => {
         <title>Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab</title>
         <meta name="description" content="Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/" />
+        <link rel="canonical" href="https://4weblab.it/" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.4weblab.it/" />
+        <meta property="og:url" content="https://4weblab.it/" />
         <meta property="og:title" content="Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab" />
         <meta property="og:description" content="Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti." />
-        <meta property="og:image" content="https://www.4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <script type="application/ld+json">
           {JSON.stringify(businessSchema)}
