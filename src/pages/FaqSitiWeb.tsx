@@ -11,7 +11,7 @@ const faqs = [
   id: 'costo-sito-web',
   question: 'Quanto costa realizzare un sito web?',
   answer:
-  'Il costo di un sito web professionale parte generalmente da circa 550€ + IVA per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.'
+  'Il costo di un sito web professionale parte generalmente da circa 400€ + IVA per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.'
 },
 {
   id: 'prezzo-sito-professionista',
