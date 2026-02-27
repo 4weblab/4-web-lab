@@ -56,12 +56,6 @@ const faqs = [
   'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.'
 },
 {
-  id: 'aggiornamento-autonomo',
-  question: 'Posso aggiornare il sito web in autonomia?',
-  answer:
-  'È possibile predisporre il sito in modo che alcune sezioni siano aggiornabili in autonomia. In alternativa è disponibile un servizio di gestione tecnica per garantire aggiornamenti corretti e sicuri ( consigliato ).'
-},
-{
   id: 'sito-web-trova-clienti',
   question: 'Un sito web aiuta davvero a trovare clienti?',
   answer:
