@@ -68,22 +68,6 @@ const PricingSection = () => {
           </div>
 
           {/* Renewal info card */}
-          <div className="mt-8 card-glass">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-muted flex items-center justify-center">
-                <RefreshCw className="w-5 h-5 text-muted-foreground" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="font-bold text-foreground mb-1.5">Dal secondo anno</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Rinnovo hosting e assistenza
-                </p>
-                <p className="text-lg font-bold text-foreground">
-                  €99<span className="text-sm font-normal text-muted-foreground">/anno · IVA esclusa</span>
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* Trust note */}
           <p className="text-center text-sm text-muted-foreground mt-8">
