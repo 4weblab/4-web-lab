@@ -10,7 +10,7 @@ const services = [
   {
     icon: Globe,
     title: 'Siti web professionali',
-    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e aziende che operano in tutta Italia.',
+    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. ',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
   },
   {
