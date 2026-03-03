@@ -28,7 +28,7 @@ const services = [
   {
     icon: Wrench,
     title: 'Manutenzione e assistenza',
-    description: 'Aggiornamenti, backup e supporto tecnico per mantenere il tuo sito sempre efficiente. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Aggiornamenti, backup e supporto tecnico per mantenere il tuo sito sempre efficiente. ',
     features: ['Aggiornamenti periodici', 'Backup automatici', 'Supporto prioritario'],
   },
   {
