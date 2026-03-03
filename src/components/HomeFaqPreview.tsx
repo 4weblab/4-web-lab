@@ -1,28 +1,28 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, HelpCircle } from 'lucide-react';
-import { AnimatedSection } from '@/components/AnimatedSection';
+import { Link } from "react-router-dom";
+import { ArrowRight, HelpCircle } from "lucide-react";
+import { AnimatedSection } from "@/components/AnimatedSection";
 
 const previewFaqs = [
   {
-    question: 'Quanto costa realizzare un sito web?',
+    question: "Quanto costa realizzare un sito web?",
     answer:
-      'Il costo parte generalmente da circa 550€ + IVA per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.',
+      "Il costo parte generalmente da circa 400€ + IVA per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.",
   },
   {
-    question: 'In quanto tempo viene realizzato un sito web?',
+    question: "In quanto tempo viene realizzato un sito web?",
     answer:
-      'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali.',
+      "Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali.",
   },
   {
-    question: 'È meglio avere solo i social o anche un sito web?',
+    question: "È meglio avere solo i social o anche un sito web?",
     answer:
-      'Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.',
+      "Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.",
   },
 ];
 
 const HomeFaqPreview = () => {
   return (
-    <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
+    <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
       <div className="container-section">
         <AnimatedSection className="max-w-3xl mx-auto">
           {/* Header */}
@@ -55,7 +55,10 @@ const HomeFaqPreview = () => {
             className="inline-flex items-center gap-2 font-semibold text-accent hover:text-accent/80 transition-colors duration-300 group"
           >
             Leggi tutte le domande frequenti (FAQ)
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true" />
+            <ArrowRight
+              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
+              aria-hidden="true"
+            />
           </Link>
         </AnimatedSection>
       </div>
