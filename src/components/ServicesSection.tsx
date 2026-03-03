@@ -10,37 +10,37 @@ const services = [
   {
     icon: Globe,
     title: 'Siti web professionali',
-    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. Servizio pensato per negozi e aziende che operano in tutta Italia.',
+    description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. ',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
   },
   {
     icon: Palette,
     title: 'Restyling e rebranding',
-    description: 'Rinnoviamo il tuo sito esistente con un design moderno e funzionalità aggiornate. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Rinnoviamo il tuo sito esistente con un design moderno e funzionalità aggiornate. ',
     features: ['Analisi del sito attuale', 'Nuovo design su misura', 'Migrazione contenuti'],
   },
   {
     icon: BarChart3,
     title: 'SEO e visibilità',
-    description: 'Strategie di ottimizzazione per posizionarti su Google e farti trovare dai clienti. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Strategie di ottimizzazione per posizionarti su Google e farti trovare dai clienti.',
     features: ['Ricerca parole chiave', 'Ottimizzazione on-page', 'Google Business Profile'],
   },
   {
     icon: Wrench,
     title: 'Manutenzione e assistenza',
-    description: 'Aggiornamenti, backup e supporto tecnico per mantenere il tuo sito sempre efficiente. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Aggiornamenti, backup e supporto tecnico per mantenere il tuo sito sempre efficiente. ',
     features: ['Aggiornamenti periodici', 'Backup automatici', 'Supporto prioritario'],
   },
   {
     icon: RefreshCw,
     title: 'Gestione contenuti',
-    description: 'Aggiornamento testi, immagini e contenuti del tuo sito in modo rapido e professionale. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Aggiornamento testi, immagini e contenuti del tuo sito in modo rapido e professionale. ',
     features: ['Modifiche rapide', 'Caricamento media', 'Nuove sezioni'],
   },
   {
     icon: MessageSquare,
     title: 'Consulenza web',
-    description: 'Analisi e consigli strategici per migliorare la tua presenza digitale. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Analisi e consigli strategici per migliorare la tua presenza digitale. ',
     features: ['Audit del sito', 'Strategia digitale', 'Report e analisi'],
   },
 ];

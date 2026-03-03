@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 
-const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO locale', '1 anno di hosting incluso'];
+const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO'];
 
 const PricingSection = () => {
   return (
@@ -34,7 +34,7 @@ const PricingSection = () => {
               <div className="mb-3">
                 <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
                 <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">
-                  €599
+                  €399
                 </span>
               </div>
               <p className="text-muted-foreground text-sm">
@@ -68,22 +68,6 @@ const PricingSection = () => {
           </div>
 
           {/* Renewal info card */}
-          <div className="mt-8 card-glass">
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-muted flex items-center justify-center">
-                <RefreshCw className="w-5 h-5 text-muted-foreground" aria-hidden="true" />
-              </div>
-              <div>
-                <h3 className="font-bold text-foreground mb-1.5">Dal secondo anno</h3>
-                <p className="text-muted-foreground text-sm mb-2">
-                  Rinnovo hosting e assistenza
-                </p>
-                <p className="text-lg font-bold text-foreground">
-                  €99<span className="text-sm font-normal text-muted-foreground">/anno · IVA esclusa</span>
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* Trust note */}
           <p className="text-center text-sm text-muted-foreground mt-8">
