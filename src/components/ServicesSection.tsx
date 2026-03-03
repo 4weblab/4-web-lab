@@ -22,7 +22,7 @@ const services = [
   {
     icon: BarChart3,
     title: 'SEO e visibilità',
-    description: 'Strategie di ottimizzazione per posizionarti su Google e farti trovare dai clienti. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Strategie di ottimizzazione per posizionarti su Google e farti trovare dai clienti.',
     features: ['Ricerca parole chiave', 'Ottimizzazione on-page', 'Google Business Profile'],
   },
   {
