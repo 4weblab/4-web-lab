@@ -40,7 +40,7 @@ const services = [
   {
     icon: MessageSquare,
     title: 'Consulenza web',
-    description: 'Analisi e consigli strategici per migliorare la tua presenza digitale. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Analisi e consigli strategici per migliorare la tua presenza digitale. ',
     features: ['Audit del sito', 'Strategia digitale', 'Report e analisi'],
   },
 ];
