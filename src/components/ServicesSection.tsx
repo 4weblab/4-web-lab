@@ -16,7 +16,7 @@ const services = [
   {
     icon: Palette,
     title: 'Restyling e rebranding',
-    description: 'Rinnoviamo il tuo sito esistente con un design moderno e funzionalità aggiornate. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Rinnoviamo il tuo sito esistente con un design moderno e funzionalità aggiornate. ',
     features: ['Analisi del sito attuale', 'Nuovo design su misura', 'Migrazione contenuti'],
   },
   {
