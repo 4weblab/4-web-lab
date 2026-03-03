@@ -1,24 +1,26 @@
 
 
-## Analisi `robots.txt`
+## Piano
 
-Il file `public/robots.txt` contiene ancora il dominio con `www`:
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
 
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+
+### Modifica
+
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
+
+Sostituire:
+```tsx
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
 ```
-Sitemap: https://www.4weblab.it/sitemap.xml
+
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
 ```
 
-Deve essere corretto in:
+E chiudere con `</a>` invece di `</button>` (riga 345).
 
-```
-Sitemap: https://4weblab.it/sitemap.xml
-```
-
-### Piano
-
-**Un solo file da modificare:**
-
-- **`public/robots.txt`** (riga 4): Sostituire `https://www.4weblab.it/sitemap.xml` con `https://4weblab.it/sitemap.xml`
-
-Nessun'altra modifica necessaria.
+Nessun altro file modificato.
 
