@@ -34,7 +34,7 @@ const services = [
   {
     icon: RefreshCw,
     title: 'Gestione contenuti',
-    description: 'Aggiornamento testi, immagini e contenuti del tuo sito in modo rapido e professionale. Servizio pensato per professionisti, negozi e aziende che operano in tutta Italia.',
+    description: 'Aggiornamento testi, immagini e contenuti del tuo sito in modo rapido e professionale. ',
     features: ['Modifiche rapide', 'Caricamento media', 'Nuove sezioni'],
   },
   {
