@@ -200,12 +200,12 @@ const RentalSection = () => {
             Richieda una proposta personalizzata
           </button>
           <p className="text-sm text-muted-foreground mt-6">
-            IVA esclusa · Durata minima 12 mesi   
+            * IVA esclusa · Durata minima 12 mesi<b
+* Offerta esclusiva per attività commerciali e professionisti di settore         
+   
           </p>
         </AnimatedSection>
       </div>
-    </section>);
-
-};
+    </section>);};
 
 export default RentalSection;
