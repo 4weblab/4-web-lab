@@ -1,22 +1,26 @@
 
 
-## Piano: Inserire script Chatbase in index.html
+## Piano
 
-Inserirò lo script Chatbase fornito subito prima della chiusura del tag `</body>` in `index.html`, dopo lo script principale dell'app.
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
 
 ### Modifica
 
-**File: `index.html`** — Aggiungere lo script Chatbase prima di `</body>`:
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
 
-```html
-    <script type="module" src="/src/main.tsx"></script>
-    
-    <!-- Chatbase chatbot -->
-    <script>
-    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="lniGLa4RQRQ3XaohU3LUp";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-    </script>
-  </body>
+Sostituire:
+```tsx
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
 ```
 
-Nessun'altra modifica a routing, componenti o struttura.
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+```
+
+E chiudere con `</a>` invece di `</button>` (riga 345).
+
+Nessun altro file modificato.
 
