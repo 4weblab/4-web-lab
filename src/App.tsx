@@ -61,7 +61,7 @@ const App = () => (
           "url": "https://4weblab.it/",
           "logo": "https://4weblab.it/logo.png",
           "image": "https://4weblab.it/logo.png",
-          "telephone": "+393516826560",
+          "telephone": "+393514656042",
           "email": "info@4weblab.it",
           "vatID": "05765760284",
           "address": {

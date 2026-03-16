@@ -7,7 +7,7 @@ const businessData = {
   city: 'Legnaro (PD)',
   postalCode: '35020',
   country: 'Italia',
-  phone: '+39 351 682 6560',
+  phone: '+39 351 465 6042',
   lat: 45.3461,
   lng: 11.9536,
   mapsUrl: 'https://www.google.com/maps/dir/?api=1&destination=Via+Belluno+44,+Legnaro,+PD,+Italia',
