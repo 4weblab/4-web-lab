@@ -52,7 +52,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5" aria-hidden="true" />
                 <span className="text-primary-foreground/45">/</span>
                 <MessageCircle className="w-5 h-5" aria-hidden="true" />
-                +39 351 682 6560
+                +39 351 465 6042
               </a>
             </li>
             <li>

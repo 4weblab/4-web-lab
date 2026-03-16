@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const whatsappNumber = '393516826560';
+const whatsappNumber = '393514656042';
 const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi.');
 
 const WhatsAppButton = () => {
