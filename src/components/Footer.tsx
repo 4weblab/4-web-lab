@@ -9,8 +9,8 @@ const businessInfo = {
   city: 'Legnaro (PD)',
   postalCode: '35020',
   country: 'Italia',
-  phone: '+39 351 682 6560',
-  whatsapp: '393516826560',
+  phone: '+39 351 465 6042',
+  whatsapp: '393514656042',
   email: 'info@4weblab.it'
 };
 
