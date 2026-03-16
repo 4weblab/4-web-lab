@@ -1,26 +1,23 @@
 
 
-## Piano
+## Piano: Sostituzione numero telefono in tutto il sito
 
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+Sostituire `3516826560` con `3514656042` in tutti i file dove compare, mantenendo il prefisso `+39` dove presente e aggiornando anche il formato con spazi.
 
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+### File da modificare (9 file, sostituzione globale)
 
-### Modifica
+| File | Occorrenze |
+|------|-----------|
+| `src/components/Footer.tsx` | `+39 351 682 6560` → `+39 351 465 6042`, `393516826560` → `393514656042`, `tel:+393516826560` → `tel:+393514656042` |
+| `src/components/ContactSection.tsx` | `393516826560` → `393514656042` |
+| `src/components/WhatsAppButton.tsx` | `393516826560` → `393514656042` |
+| `src/components/MapSection.tsx` | `+39 351 682 6560` → `+39 351 465 6042` |
+| `src/App.tsx` | `+393516826560` → `+393514656042` |
+| `src/pages/Index.tsx` | `+393516826560` → `+393514656042` |
+| `src/pages/SitiWebAziendali.tsx` | `393516826560` → `393514656042` |
+| `src/pages/SitiWebPadova.tsx` | `393516826560` → `393514656042` |
+| `src/pages/SitiWebProfessionisti.tsx` | `393516826560` → `393514656042` |
+| `src/pages/CreareSitoConAI.tsx` | `393516826560` → `393514656042` |
 
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
-
-Sostituire:
-```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
-```
-
-Con:
-```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
-```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
+In ogni file verrà effettuato un find-and-replace di `6826560` → `4656042` e di `682 6560` → `465 6042`, coprendo tutte le varianti di formattazione.
 
