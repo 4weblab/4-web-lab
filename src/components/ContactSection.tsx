@@ -3,7 +3,7 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSectio
 import { motion } from 'framer-motion';
 import ContactFormWeb3Forms from './ContactFormWeb3Forms';
 
-const whatsappNumber = '393516826560';
+const whatsappNumber = '393514656042';
 const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.');
 
 const features = [

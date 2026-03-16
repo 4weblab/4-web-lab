@@ -83,7 +83,7 @@ const RentalSection = () => {
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
           <h2 id="rental-heading" className="heading-2 mb-5">
-            Il sito web a noleggio, senza pensieri
+            Il sito web a noleggio, senza pensieri * 
           </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Un sito professionale sempre online, con assistenza inclusa e costi chiari.
@@ -200,12 +200,12 @@ const RentalSection = () => {
             Richieda una proposta personalizzata
           </button>
           <p className="text-sm text-muted-foreground mt-6">
-            IVA esclusa · Durata minima 12 mesi   
+            * IVA esclusa · Durata minima 12 mesi<br/>
+* Offerta esclusiva per attività commerciali e professionisti di settore         
+   
           </p>
         </AnimatedSection>
       </div>
-    </section>);
-
-};
+    </section>);};
 
 export default RentalSection;
