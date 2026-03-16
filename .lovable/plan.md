@@ -1,26 +1,17 @@
 
 
-## Piano
+## Piano: Rimuovere lo script Chatbase da index.html
 
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
-
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+Rimuoverò il blocco dello script Chatbase (righe 31-34) lasciando intatta la struttura base del file.
 
 ### Modifica
 
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
+**File: `index.html`** — Rimuovere le righe 31-34 (commento + script Chatbase):
 
-Sostituire:
-```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
+```html
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 ```
 
-Con:
-```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
-```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
+Lo script principale dell'app rimane, il chatbot viene rimosso.
 
