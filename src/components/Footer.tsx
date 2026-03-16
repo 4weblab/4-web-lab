@@ -47,7 +47,7 @@ const Footer = () => {
           <ul className="flex flex-col sm:flex-row sm:flex-nowrap gap-x-8 gap-y-3 mt-4 items-center">
             <li>
               <a
-                href="tel:+393516826560"
+                href="href="tel:+393514656042""
                 className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
                 <Phone className="w-5 h-5" aria-hidden="true" />
                 <span className="text-primary-foreground/45">/</span>
