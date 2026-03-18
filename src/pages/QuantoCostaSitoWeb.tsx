@@ -104,19 +104,23 @@ const QuantoCostaSitoWeb = () => {
                   <table className="w-full text-left" style={{ minWidth: '600px' }}>
                     <thead>
                       <tr style={{ background: 'hsl(210 73% 15%)' }}>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm tracking-wide">[Tipologia sito]</th>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">[Fascia di prezzo]</th>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">[Tempistica]</th>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">[Ideale per]</th>
+                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm tracking-wide">Tipologia sito</th>
+                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">Fascia di prezzo</th>
+                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">Ideale per</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {[1, 2, 3, 4, 5].map((row, idx) => (
-                        <tr key={row} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'}`}>
-                          <td className="py-5 px-6 text-foreground font-semibold text-sm">[Tipo sito {row}]</td>
-                          <td className="py-5 px-6 text-center font-bold text-base" style={{ color: 'hsl(207 90% 44%)' }}>[€XXX – €XXX]</td>
-                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">[X settimane]</td>
-                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">[Target {row}]</td>
+                      {[
+                        { tipo: 'Sito one page essenziale', prezzo: 'da 400€', target: 'Professionisti e attività locali' },
+                        { tipo: 'Sito vetrina', prezzo: '900€ – 1.500€', target: 'Aziende che vogliono presentarsi online' },
+                        { tipo: 'Sito aziendale completo', prezzo: '1.500€ – 2.500€+', target: 'PMI con più servizi' },
+                        { tipo: 'E-commerce', prezzo: '3.000€ – 10.000€+', target: 'Vendita online' },
+                        { tipo: 'Noleggio sito web', prezzo: 'da 99€/mese', target: 'Chi vuole evitare investimento iniziale' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'}`}>
+                          <td className="py-5 px-6 text-foreground font-semibold text-sm">{row.tipo}</td>
+                          <td className="py-5 px-6 text-center font-bold text-base" style={{ color: 'hsl(207 90% 44%)' }}>{row.prezzo}</td>
+                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">{row.target}</td>
                         </tr>
                       ))}
                     </tbody>
