@@ -5,8 +5,15 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 const previewFaqs = [
   {
     question: "Quanto costa realizzare un sito web?",
-    answer:
-      "Il costo parte generalmente da circa 400€ + IVA per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.",
+    answer: (
+      <>
+        Il costo parte generalmente da circa 400€ + IVA per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.
+        <br />
+        <Link to="/quanto-costa-sito-web" className="text-sm text-accent hover:underline inline-block mt-2">
+          Leggi "Quanto costa un sito web nel 2026?"
+        </Link>
+      </>
+    ),
   },
   {
     question: "In quanto tempo viene realizzato un sito web?",
