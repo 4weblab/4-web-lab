@@ -347,18 +347,18 @@ const QuantoCostaSitoWeb = () => {
               <h2
                 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-primary-foreground mb-8"
                 style={{ textShadow: '0 2px 8px rgba(0,0,0,0.55)', letterSpacing: '-0.03em' }}>
-                [Titolo CTA finale]
+                Vuoi sapere quanto costerebbe il tuo sito?
               </h2>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 text-balance leading-relaxed" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
-                [Testo CTA finale]
+                Raccontaci il tuo progetto e ricevi un preventivo chiaro, senza impegno.
               </p>
               <a
                 href="/#contatti"
                 className="btn-primary text-lg px-12 py-5 inline-flex items-center gap-3 shadow-lg"
                 style={{ boxShadow: '0 4px 24px hsl(207 90% 54% / 0.45)' }}>
-                [CTA Primaria] <ArrowRight className="w-5 h-5" />
+                Richiedi un preventivo gratuito <ArrowRight className="w-5 h-5" />
               </a>
-              <p className="text-primary-foreground/50 text-sm mt-8">[Nota sotto CTA]</p>
+              <p className="text-primary-foreground/50 text-sm mt-8">Nessun impegno. Risposta entro 24 ore.</p>
             </AnimatedSection>
           </div>
         </section>
