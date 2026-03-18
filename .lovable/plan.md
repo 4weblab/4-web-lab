@@ -1,26 +1,29 @@
 
 
-## Piano
+## Piano: Evidenziare la riga "Noleggio sito web" nella tabella
 
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+**File**: `src/pages/QuantoCostaSitoWeb.tsx` (riga 122)
 
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+Modificare la classe della riga "Noleggio sito web" (ultimo elemento, idx=4) per applicare uno sfondo accent distinguibile. Aggiungere una condizione: se `row.tipo === 'Noleggio sito web'`, applicare sfondo `bg-accent/10` con bordo sinistro accent, altrimenti mantenere lo stile alternato esistente. Aggiungere anche un badge "Più scelto" accanto al nome.
 
-### Modifica
-
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
-
-Sostituire:
+**Modifica concreta** (riga 122):
 ```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
+<tr key={idx} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${
+  row.tipo === 'Noleggio sito web' 
+    ? 'bg-accent/10 border-l-4 border-l-accent' 
+    : idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'
+}`}>
 ```
 
-Con:
+E nella cella del tipo (riga 123), aggiungere un badge per la riga noleggio:
 ```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+<td className="py-5 px-6 text-foreground font-semibold text-sm">
+  {row.tipo}
+  {row.tipo === 'Noleggio sito web' && (
+    <span className="ml-2 text-xs font-bold text-accent bg-accent/15 px-2 py-0.5 rounded-full">
+      Più scelto
+    </span>
+  )}
+</td>
 ```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
 
