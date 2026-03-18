@@ -150,14 +150,14 @@ const QuantoCostaSitoWeb = () => {
                 { icon: HelpCircle, title: 'Contenuti e testi', text: 'Testi scritti per convincere fanno la differenza tra un sito che viene letto e uno che viene chiuso.' },
                 { icon: HelpCircle, title: 'Design e chiarezza', text: 'Un design pulito e ordinato aumenta fiducia e contatti.' },
                 { icon: HelpCircle, title: 'Ottimizzazione SEO', text: 'Un sito visibile su Google nel tempo ha un valore molto più alto rispetto a uno invisibile.' },
-              ].map(({ icon: Icon, num }) => (
-                <StaggerItem key={num}>
+              ].map(({ icon: Icon, title, text }, idx) => (
+                <StaggerItem key={idx}>
                   <div className="card-glass p-8 h-full" style={{ border: '1px solid hsl(210 30% 88%)' }}>
                     <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-5">
                       <Icon className="w-6 h-6 text-accent" aria-hidden="true" />
                     </div>
-                    <h3 className="text-xl font-bold text-foreground mb-3">[Fattore {num}]</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">[Descrizione fattore {num}]</p>
+                    <h3 className="text-xl font-bold text-foreground mb-3">{title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{text}</p>
                   </div>
                 </StaggerItem>
               ))}
