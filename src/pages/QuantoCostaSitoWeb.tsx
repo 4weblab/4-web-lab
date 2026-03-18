@@ -16,8 +16,8 @@ const QuantoCostaSitoWeb = () => {
         <link rel="canonical" href="https://4weblab.it/quanto-costa-un-sito-web" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/quanto-costa-un-sito-web" />
-        <meta property="og:title" content="Quanto costa un sito web | 4weblab" />
-        <meta property="og:description" content="Placeholder descrizione pagina costo sito web." />
+        <meta property="og:title" content="Quanto costa un sito web nel 2026 | Prezzi reali | 4weblab" />
+        <meta property="og:description" content="Quanto costa un sito web nel 2026? Prezzi reali, confronto tra soluzioni e consigli per scegliere il sito giusto per la tua attività." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
