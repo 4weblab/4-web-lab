@@ -119,8 +119,19 @@ const QuantoCostaSitoWeb = () => {
                         { tipo: 'E-commerce', prezzo: '3.000€ – 10.000€+', target: 'Vendita online' },
                         { tipo: 'Noleggio sito web', prezzo: 'da 99€/mese', target: 'Chi vuole evitare investimento iniziale' },
                       ].map((row, idx) => (
-                        <tr key={idx} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'}`}>
-                          <td className="py-5 px-6 text-foreground font-semibold text-sm">{row.tipo}</td>
+                        <tr key={idx} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${
+                          row.tipo === 'Noleggio sito web' 
+                            ? 'bg-accent/10 border-l-4 border-l-accent' 
+                            : idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'
+                        }`}>
+                          <td className="py-5 px-6 text-foreground font-semibold text-sm">
+                            {row.tipo}
+                            {row.tipo === 'Noleggio sito web' && (
+                              <span className="ml-2 text-xs font-bold text-accent bg-accent/15 px-2 py-0.5 rounded-full">
+                                Più scelto
+                              </span>
+                            )}
+                          </td>
                           <td className="py-5 px-6 text-center font-bold text-base" style={{ color: 'hsl(207 90% 44%)' }}>{row.prezzo}</td>
                           <td className="py-5 px-6 text-center text-muted-foreground text-sm">{row.target}</td>
                         </tr>
