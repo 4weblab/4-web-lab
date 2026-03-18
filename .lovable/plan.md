@@ -1,26 +1,13 @@
 
 
-## Piano
+## Piano: Aggiungere link nella prima FAQ preview in homepage
 
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+**File**: `src/components/HomeFaqPreview.tsx`
 
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+**Modifica**: Nella prima FAQ preview (riga ~32), aggiungere dopo il testo della risposta un link "Leggi 'Quanto costa un sito web nel 2026?'" che punta a `/quanto-costa-sito-web`, con stile più piccolo e coerente con il resto del sito.
 
-### Modifica
-
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
-
-Sostituire:
-```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
-```
-
-Con:
-```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
-```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
+**Dettaglio tecnico**:
+- Importare `Link` da `react-router-dom` (già disponibile nel file)
+- Modificare il campo `answer` del primo elemento dell'array `previewFaqs` trasformandolo in JSX, aggiungendo un `<Link>` su una nuova riga con classi `text-sm text-accent hover:underline`
+- Aggiornare il rendering nel componente per supportare JSX nell'answer (attualmente usa `<p>{faq.answer}</p>`)
 
