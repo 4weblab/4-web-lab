@@ -56,8 +56,8 @@ const QuantoCostaSitoWeb = () => {
                 onClick={() => document.getElementById('cta-finale')?.scrollIntoView({ behavior: 'smooth' })}
                 className="btn-primary text-lg px-12 py-5 shadow-lg"
                 style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}
-                aria-label="CTA hero">
-                [CTA Hero]
+                aria-label="Richiedi un preventivo gratuito">
+                Richiedi un preventivo gratuito
               </button>
             </AnimatedSection>
           </div>
