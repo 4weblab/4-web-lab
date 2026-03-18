@@ -12,16 +12,50 @@ const QuantoCostaSitoWeb = () => {
   return (
     <>
       <Helmet>
-        <title>Quanto costa un sito web nel 2026 | Prezzi reali | 4weblab</title>
-        <meta name="description" content="Quanto costa un sito web nel 2026? Prezzi reali, confronto tra soluzioni e consigli per scegliere il sito giusto per la tua attività." />
+        <title>Quanto costa un sito web nel 2026? Prezzi reali e guida completa | 4 Web Lab</title>
+        <meta name="description" content="Quanto costa davvero un sito web nel 2026? Scopri prezzi reali per aziende e professionisti, differenze tra soluzioni economiche e professionali e come evitare errori. Preventivo gratuito." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/quanto-costa-un-sito-web" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://4weblab.it/quanto-costa-un-sito-web" />
-        <meta property="og:title" content="Quanto costa un sito web nel 2026 | Prezzi reali | 4weblab" />
-        <meta property="og:description" content="Quanto costa un sito web nel 2026? Prezzi reali, confronto tra soluzioni e consigli per scegliere il sito giusto per la tua attività." />
+        <link rel="canonical" href="https://4weblab.it/quanto-costa-sito-web" />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://4weblab.it/quanto-costa-sito-web" />
+        <meta property="og:title" content="Quanto costa un sito web nel 2026? Prezzi reali e guida completa" />
+        <meta property="og:description" content="Guida chiara ai prezzi dei siti web nel 2026: differenze tra soluzioni economiche e professionali e quanto investire davvero." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Quanto costa un sito web nel 2026?" />
+        <meta name="twitter:description" content="Prezzi reali per realizzare un sito web professionale nel 2026." />
+
+        {/* JSON-LD FAQPage */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              { "@type": "Question", "name": "Quanto costa un sito vetrina?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dal numero di pagine e dalla struttura, ma mediamente tra 900€ e 1500€." } },
+              { "@type": "Question", "name": "Quanto costa rifare un sito esistente?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende da quanto è recuperabile. In molti casi conviene ripartire da zero." } },
+              { "@type": "Question", "name": "Quanto tempo serve per realizzare un sito web?", "acceptedAnswer": { "@type": "Answer", "text": "Da pochi giorni per una soluzione semplice a diverse settimane per progetti più strutturati." } },
+              { "@type": "Question", "name": "È meglio acquistare o noleggiare un sito?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dal budget e dagli obiettivi. Il noleggio permette di partire subito senza investimento iniziale." } },
+              { "@type": "Question", "name": "Perché alcuni siti costano così poco?", "acceptedAnswer": { "@type": "Answer", "text": "Perché spesso sono template standard senza strategia, contenuti o ottimizzazione." } }
+            ]
+          })}
+        </script>
+
+        {/* JSON-LD Organization */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "4 Web Lab",
+            "url": "https://4weblab.it",
+            "logo": "https://4weblab.it/logo.png"
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
