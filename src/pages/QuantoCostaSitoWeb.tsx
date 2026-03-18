@@ -146,10 +146,10 @@ const QuantoCostaSitoWeb = () => {
 
             <StaggerContainer className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {[
-                { icon: HelpCircle, num: 1 },
-                { icon: HelpCircle, num: 2 },
-                { icon: HelpCircle, num: 3 },
-                { icon: HelpCircle, num: 4 },
+                { icon: HelpCircle, title: 'Struttura del sito', text: 'Un sito costruito per guidare il cliente è diverso da una semplice pagina informativa.' },
+                { icon: HelpCircle, title: 'Contenuti e testi', text: 'Testi scritti per convincere fanno la differenza tra un sito che viene letto e uno che viene chiuso.' },
+                { icon: HelpCircle, title: 'Design e chiarezza', text: 'Un design pulito e ordinato aumenta fiducia e contatti.' },
+                { icon: HelpCircle, title: 'Ottimizzazione SEO', text: 'Un sito visibile su Google nel tempo ha un valore molto più alto rispetto a uno invisibile.' },
               ].map(({ icon: Icon, num }) => (
                 <StaggerItem key={num}>
                   <div className="card-glass p-8 h-full" style={{ border: '1px solid hsl(210 30% 88%)' }}>
