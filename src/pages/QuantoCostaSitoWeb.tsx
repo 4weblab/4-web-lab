@@ -69,13 +69,18 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
-                [Titolo sezione introduttiva]
+                Quanto costa davvero realizzare un sito web oggi
               </h2>
               <p className="text-lg text-muted-foreground text-balance mb-6 leading-relaxed">
-                [Paragrafo introduttivo 1]
+                Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì.
+                Online trovi offerte da 300€, builder automatici con AI e piattaforme "fai da te" che promettono risultati immediati. Ma nella maggior parte dei casi il risultato è sempre lo stesso: un sito che esiste, ma non serve.
+              </p>
+              <p className="text-base text-muted-foreground text-balance mb-6 leading-relaxed">
+                Il prezzo di un sito web non dipende solo da quante pagine ha, ma da come è progettato: struttura, contenuti, chiarezza, capacità di guidare l'utente a contattarti.
+                Per questo motivo due siti apparentemente simili possono avere costi completamente diversi.
               </p>
               <p className="text-base text-muted-foreground text-balance leading-relaxed">
-                [Paragrafo introduttivo 2]
+                Qui sotto trovi i prezzi reali che si vedono oggi sul mercato, senza numeri gonfiati e senza promesse inutili.
               </p>
             </AnimatedSection>
           </div>
