@@ -44,7 +44,7 @@ const CreareSitoConAI = () => {
         <title>Creare un Sito con l'Intelligenza Artificiale Conviene Davvero? Guida 2026</title>
         <meta name="description" content="Scopri se creare un sito con l'intelligenza artificiale è davvero conveniente per la tua attività. Pro e contro spiegati in modo semplice e concreto." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <link rel="canonical" href="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
 
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.4weblab.it/creare-sito-con-intelligenza-artificiale" />
