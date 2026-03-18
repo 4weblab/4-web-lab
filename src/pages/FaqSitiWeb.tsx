@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import Header from '@/components/Header';
@@ -11,7 +12,7 @@ const faqs = [
   id: 'costo-sito-web',
   question: 'Quanto costa realizzare un sito web?',
   answer:
-  <>Il costo di un sito web professionale parte <strong>generalmente</strong> da circa 400€ + IVA per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.</>
+  <>Il costo di un sito web professionale parte <strong>generalmente</strong> da circa 400€ + IVA per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/quanto-costa-sito-web" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
 },
 {
   id: 'prezzo-sito-professionista',
