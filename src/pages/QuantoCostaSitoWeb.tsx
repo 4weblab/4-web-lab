@@ -127,7 +127,7 @@ const QuantoCostaSitoWeb = () => {
                   </table>
                 </div>
               </div>
-              <p className="text-center text-sm text-muted-foreground mt-8">[Nota prezzi]</p>
+              <p className="text-center text-sm text-muted-foreground mt-8">I prezzi possono variare in base alla complessità del progetto, ai contenuti e al livello di personalizzazione.</p>
             </AnimatedSection>
           </div>
         </section>
