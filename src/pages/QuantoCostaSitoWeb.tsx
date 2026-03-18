@@ -287,7 +287,7 @@ const QuantoCostaSitoWeb = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
                 <a
-                  href="/noleggio-sito-web"
+                  href="/#noleggio"
                   className="btn-primary inline-flex items-center gap-2 px-8 py-4"
                   style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}>
                   Scopri la soluzione a noleggio <ArrowRight className="w-4 h-4" />

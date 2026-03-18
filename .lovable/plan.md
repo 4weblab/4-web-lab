@@ -1,12 +1,26 @@
 
 
-## Piano: Collegare il bottone alla sezione noleggio in homepage
+## Piano
+
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
 
 ### Modifica
 
-**File**: `src/pages/QuantoCostaSitoWeb.tsx` (riga 289-294)
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
 
-Cambiare l'`href` del link da `/noleggio-sito-web` a `/#noleggio`. Trasformarlo in un `Link` di react-router-dom con `to="/#noleggio"` oppure semplicemente usare `href="/#noleggio"` — che navigherà alla homepage e scrollerà alla sezione con `id="noleggio"` (già presente in `RentalSection.tsx`).
+Sostituire:
+```tsx
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
+```
 
-Dato che siamo su una pagina satellite, serve navigare alla home e poi scrollare. Userò un tag `<a>` con `href="/#noleggio"` che è il modo più semplice e affidabile.
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+```
+
+E chiudere con `</a>` invece di `</button>` (riga 345).
+
+Nessun altro file modificato.
 
