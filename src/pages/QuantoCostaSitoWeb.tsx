@@ -256,29 +256,40 @@ const QuantoCostaSitoWeb = () => {
                 <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
                   <RefreshCw className="w-5 h-5 text-accent" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">[Titolo card noleggio]</h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">[Descrizione noleggio]</p>
+                <h3 className="text-xl font-bold text-foreground mb-3">Sito web a noleggio</h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">Parti subito senza investimento iniziale.</p>
                 <div className="mb-5">
-                  <span className="text-3xl font-serif font-bold text-foreground">[€XX]</span>
-                  <span className="text-sm text-muted-foreground ml-1">[/mese]</span>
+                  <span className="text-3xl font-serif font-bold text-foreground">99€</span>
+                  <span className="text-sm text-muted-foreground ml-1">/mese</span>
                 </div>
                 <ul className="space-y-3" role="list">
-                  {[1, 2, 3].map((i) => (
+                  {[
+                    'Nessun investimento iniziale elevato',
+                    'Sito sempre aggiornato',
+                    'Assistenza inclusa',
+                    'Costo prevedibile',
+                  ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
                         <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                       </span>
-                      <span className="text-foreground text-sm">[Incluso {i}]</span>
+                      <span className="text-foreground text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
-                  [Titolo sezione noleggio]
+                  Il sito web a noleggio: alternativa all'investimento iniziale
                 </h2>
-                <p className="text-muted-foreground mb-4 leading-relaxed">[Paragrafo noleggio 1]</p>
-                <p className="text-muted-foreground leading-relaxed">[Paragrafo noleggio 2]</p>
+                <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
+                <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
+                <a
+                  href="/noleggio-sito-web"
+                  className="btn-primary inline-flex items-center gap-2 px-8 py-4"
+                  style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}>
+                  Scopri la soluzione a noleggio <ArrowRight className="w-4 h-4" />
+                </a>
               </div>
             </AnimatedSection>
           </div>
