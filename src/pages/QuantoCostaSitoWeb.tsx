@@ -183,25 +183,31 @@ const QuantoCostaSitoWeb = () => {
                   <table className="w-full" style={{ minWidth: '550px' }}>
                     <thead>
                       <tr style={{ background: 'hsl(210 73% 15%)' }}>
-                        <th className="py-5 px-6 text-left text-primary-foreground font-bold text-sm tracking-wide">[Caratteristica]</th>
-                        <th className="py-5 px-6 text-center text-primary-foreground/80 font-bold text-sm">[Soluzione A]</th>
-                        <th className="py-5 px-6 text-center font-bold text-sm" style={{ background: 'hsl(207 90% 48%)', color: 'white' }}>[Soluzione B]</th>
-                        <th className="py-5 px-6 text-center text-primary-foreground/80 font-bold text-sm">[Soluzione C]</th>
+                        <th className="py-5 px-6 text-left text-primary-foreground font-bold text-sm tracking-wide">Soluzione</th>
+                        <th className="py-5 px-6 text-center text-primary-foreground font-bold text-sm">Costo</th>
+                        <th className="py-5 px-6 text-center text-primary-foreground font-bold text-sm">Risultato</th>
                       </tr>
                     </thead>
                     <tbody>
-                      {[1, 2, 3, 4, 5].map((row, idx) => (
-                        <tr key={row} className={`border-b border-border/40 ${idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'}`}>
-                          <td className="py-5 px-6 text-foreground text-sm font-semibold">[Riga {row}]</td>
-                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">[Valore]</td>
-                          <td className="py-5 px-6 text-center text-foreground text-sm font-semibold" style={{ background: 'hsl(207 90% 54% / 0.08)' }}>[Valore]</td>
-                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">[Valore]</td>
+                      {[
+                        { soluzione: 'AI / fai da te', costo: 'Costo basso', risultato: 'Spesso non porta risultati' },
+                        { soluzione: 'Freelance economico', costo: 'Prezzo accessibile', risultato: 'Qualità variabile' },
+                        { soluzione: 'Agenzia strutturata', costo: 'Investimento maggiore', risultato: 'Strategia e supporto' },
+                      ].map((row, idx) => (
+                        <tr key={idx} className={`border-b border-border/40 ${idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'}`}>
+                          <td className="py-5 px-6 text-foreground text-sm font-semibold">{row.soluzione}</td>
+                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">{row.costo}</td>
+                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">{row.risultato}</td>
                         </tr>
                       ))}
                     </tbody>
                   </table>
                 </div>
               </div>
+              <p className="text-center text-sm text-muted-foreground mt-8">
+                Il punto non è quanto spendi, ma cosa ottieni.<br />
+                Un sito economico che non porta contatti è sempre una spesa, non un investimento.
+              </p>
             </AnimatedSection>
           </div>
         </section>
