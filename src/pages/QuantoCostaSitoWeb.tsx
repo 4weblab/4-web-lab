@@ -309,13 +309,19 @@ const QuantoCostaSitoWeb = () => {
 
             <AnimatedSection className="max-w-3xl mx-auto" delay={0.15}>
               <Accordion type="single" collapsible className="w-full">
-                {[1, 2, 3, 4, 5].map((i) => (
+                {[
+                  { domanda: 'Quanto costa un sito vetrina?', risposta: 'Dipende dal numero di pagine e dalla struttura, ma mediamente tra 900€ e 1.500€.' },
+                  { domanda: 'Quanto costa rifare un sito esistente?', risposta: 'Dipende da quanto è recuperabile. In molti casi conviene ripartire da zero.' },
+                  { domanda: 'Quanto tempo serve per realizzare un sito web?', risposta: 'Da pochi giorni per una soluzione semplice a diverse settimane per progetti più strutturati.' },
+                  { domanda: 'È meglio acquistare o noleggiare un sito?', risposta: 'Dipende dal budget e dagli obiettivi. Il noleggio permette di partire subito senza investimento iniziale.' },
+                  { domanda: 'Perché alcuni siti costano così poco?', risposta: 'Perché spesso sono template standard senza strategia, contenuti o ottimizzazione.' },
+                ].map((faq, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="border-b border-border/60">
                     <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
-                      [Domanda FAQ {i}]
+                      {faq.domanda}
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
-                      [Risposta FAQ {i}]
+                      {faq.risposta}
                     </AccordionContent>
                   </AccordionItem>
                 ))}
