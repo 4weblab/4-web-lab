@@ -54,7 +54,7 @@ const CreareSitoConAI = () => {
         <meta property="og:locale" content="it_IT" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <meta name="twitter:url" content="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
         <meta name="twitter:title" content="Creare un Sito con l'Intelligenza Artificiale Conviene Davvero?" />
         <meta name="twitter:description" content="Un sito creato con l'AI è davvero la scelta migliore per la tua attività? Scopri differenze, costi reali e alternative professionali spiegate in modo semplice." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
