@@ -13,6 +13,7 @@ import SitiWebAziendali from "./pages/SitiWebAziendali";
 import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
+import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
