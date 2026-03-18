@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
