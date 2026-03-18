@@ -13,6 +13,7 @@ import SitiWebAziendali from "./pages/SitiWebAziendali";
 import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
+import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -92,6 +93,7 @@ const App = () => (
              <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
+             <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

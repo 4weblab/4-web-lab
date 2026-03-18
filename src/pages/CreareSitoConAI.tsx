@@ -44,17 +44,17 @@ const CreareSitoConAI = () => {
         <title>Creare un Sito con l'Intelligenza Artificiale Conviene Davvero? Guida 2026</title>
         <meta name="description" content="Scopri se creare un sito con l'intelligenza artificiale è davvero conveniente per la tua attività. Pro e contro spiegati in modo semplice e concreto." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <link rel="canonical" href="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
 
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <meta property="og:url" content="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
         <meta property="og:title" content="Creare un Sito con l'Intelligenza Artificiale Conviene Davvero?" />
         <meta property="og:description" content="Un sito creato con l'AI è davvero la scelta migliore per la tua attività? Scopri differenze, costi reali e alternative professionali spiegate in modo semplice." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://www.4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <meta name="twitter:url" content="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
         <meta name="twitter:title" content="Creare un Sito con l'Intelligenza Artificiale Conviene Davvero?" />
         <meta name="twitter:description" content="Un sito creato con l'AI è davvero la scelta migliore per la tua attività? Scopri differenze, costi reali e alternative professionali spiegate in modo semplice." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
