@@ -1,26 +1,8 @@
 
 
-## Piano
+## Piano: Aggiungere link "Leggi l'articolo completo"
 
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+**File**: `src/pages/QuantoCostaSitoWeb.tsx` (dopo riga 229)
 
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
-
-### Modifica
-
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
-
-Sostituire:
-```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
-```
-
-Con:
-```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
-```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
+Aggiungere un tag `<Link>` di react-router-dom sotto il paragrafo selezionato, con testo "Leggi l'articolo completo", font più piccolo (`text-sm`), colore accent e freccia decorativa. Link a `/creare-sito-con-intelligenza-artificiale`.
 
