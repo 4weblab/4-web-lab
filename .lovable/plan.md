@@ -1,18 +1,26 @@
 
 
-## Problema: il prezzo nella tabella è ancora "da 99€/mese"
-
-Il file `src/pages/QuantoCostaSitoWeb.tsx` alla riga 120 contiene ancora il valore hardcoded `'da 99€/mese'` nell'array dati della tabella. La modalità edit potrebbe aver mostrato un'anteprima della modifica senza salvarla effettivamente nel codice.
-
 ## Piano
 
-**File**: `src/pages/QuantoCostaSitoWeb.tsx`, riga 120
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
 
-Cambiare il valore `prezzo` da `'da 99€/mese'` a `'da 49€/mese'` nell'oggetto della riga "Noleggio sito web":
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
 
+### Modifica
+
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
+
+Sostituire:
 ```tsx
-{ tipo: 'Noleggio sito web', prezzo: 'da 49€/mese', target: 'Chi vuole evitare investimento iniziale' },
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
 ```
 
-Modifica singola, una riga.
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+```
+
+E chiudere con `</a>` invece di `</button>` (riga 345).
+
+Nessun altro file modificato.
 
