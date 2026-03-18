@@ -1,26 +1,18 @@
 
 
-## Piano
-
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
-
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+## Piano: Sostituire contenuto card noleggio con piano PRO
 
 ### Modifica
 
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
+**File**: `src/pages/QuantoCostaSitoWeb.tsx` (righe 255-280)
 
-Sostituire:
-```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
-```
+Sostituire il contenuto della card con i dati del piano PRO dalla homepage:
 
-Con:
-```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
-```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
+- **Icona**: `Zap` al posto di `RefreshCw` (aggiungere import)
+- **Badge**: Aggiungere "Il più scelto" in alto a destra
+- **Titolo**: "PRO" 
+- **Descrizione**: "Il pacchetto completo per una presenza online solida."
+- **Prezzo**: "69€/mese"
+- **Nota**: "Pacchetto START più:"
+- **Features**: Grafica più curata, SEO base locale, Più sezioni e modifiche incluse, Report mensile
 
