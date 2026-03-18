@@ -73,7 +73,8 @@ const RentalSection = () => {
 
   return (
     <section
-      id="noleggio"
+      id="noleggio">
+      <div id="ancora_noleggio" className="absolute -top-20" aria-hidden="true" />
       className="section-padding"
       style={{ background: 'hsl(210 22% 96%)', scrollMarginTop: 'var(--header-height)' }}
       aria-labelledby="rental-heading">
