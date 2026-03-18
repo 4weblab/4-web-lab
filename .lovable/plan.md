@@ -1,23 +1,26 @@
 
 
-## Verifica modifiche SEO — Risultato
+## Piano
 
-Le modifiche alla pagina `QuantoCostaSitoWeb.tsx` sono corrette: tutti gli URL usano `https://4weblab.it` senza www.
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
 
-Tuttavia ho trovato un problema in un altro file:
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
 
-### Problema: `src/pages/CreareSitoConAI.tsx` contiene URL con www
+### Modifica
 
-3 URL usano `www.4weblab.it` invece di `4weblab.it`:
-- **Riga 47**: canonical → `https://www.4weblab.it/creare-sito-con-intelligenza-artificiale`
-- **Riga 50**: og:url → `https://www.4weblab.it/creare-sito-con-intelligenza-artificiale`
-- **Riga 57**: twitter:url → `https://www.4weblab.it/creare-sito-con-intelligenza-artificiale`
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
 
-### Piano
+Sostituire:
+```tsx
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
+```
 
-**File**: `src/pages/CreareSitoConAI.tsx`
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+```
 
-Sostituire tutte e 3 le occorrenze di `https://www.4weblab.it` con `https://4weblab.it` alle righe 47, 50 e 57.
+E chiudere con `</a>` invece di `</button>` (riga 345).
 
-Nessun altro file nel progetto contiene URL con www.
+Nessun altro file modificato.
 
