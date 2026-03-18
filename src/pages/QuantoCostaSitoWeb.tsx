@@ -139,7 +139,7 @@ const QuantoCostaSitoWeb = () => {
           </div>
         </section>
 
-        {/* 5 — Confronto tra soluzioni */}
+        {/* 5 — Confronto tra soluzioni (tabella 3 colonne) */}
         <section className="section-padding" style={{ background: 'hsl(210 22% 96%)' }}>
           <div className="container-section">
             <AnimatedSection className="text-center mb-16">
@@ -150,27 +150,32 @@ const QuantoCostaSitoWeb = () => {
               </p>
             </AnimatedSection>
 
-            <AnimatedSection className="max-w-4xl mx-auto overflow-x-auto" delay={0.15}>
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="py-4 px-4 text-foreground font-bold">[Caratteristica]</th>
-                    <th className="py-4 px-4 text-center text-foreground font-bold">[Soluzione A]</th>
-                    <th className="py-4 px-4 text-center text-foreground font-bold">[Soluzione B]</th>
-                    <th className="py-4 px-4 text-center text-foreground font-bold">[Soluzione C]</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[1, 2, 3, 4, 5].map((row) => (
-                    <tr key={row} className="border-b border-border/50">
-                      <td className="py-3 px-4 text-foreground text-sm">[Riga {row}]</td>
-                      <td className="py-3 px-4 text-center text-muted-foreground text-sm">[Valore]</td>
-                      <td className="py-3 px-4 text-center text-muted-foreground text-sm">[Valore]</td>
-                      <td className="py-3 px-4 text-center text-muted-foreground text-sm">[Valore]</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <AnimatedSection className="max-w-4xl mx-auto" delay={0.15}>
+              <div className="card-glass overflow-hidden" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    {/* Header con colonne evidenziate */}
+                    <thead>
+                      <tr className="border-b-2 border-border">
+                        <th className="py-5 px-6 text-left text-foreground font-bold">[Caratteristica]</th>
+                        <th className="py-5 px-6 text-center text-muted-foreground font-bold">[Soluzione A]</th>
+                        <th className="py-5 px-6 text-center font-bold text-accent" style={{ background: 'hsl(207 90% 54% / 0.06)' }}>[Soluzione B]</th>
+                        <th className="py-5 px-6 text-center text-muted-foreground font-bold">[Soluzione C]</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[1, 2, 3, 4, 5].map((row, idx) => (
+                        <tr key={row} className={`border-b border-border/40 ${idx % 2 === 0 ? '' : 'bg-muted/30'}`}>
+                          <td className="py-4 px-6 text-foreground text-sm font-medium">[Riga {row}]</td>
+                          <td className="py-4 px-6 text-center text-muted-foreground text-sm">[Valore]</td>
+                          <td className="py-4 px-6 text-center text-foreground text-sm font-medium" style={{ background: 'hsl(207 90% 54% / 0.06)' }}>[Valore]</td>
+                          <td className="py-4 px-6 text-center text-muted-foreground text-sm">[Valore]</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </AnimatedSection>
           </div>
         </section>
