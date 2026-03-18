@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
@@ -354,13 +355,9 @@ const QuantoCostaSitoWeb = () => {
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 text-balance leading-relaxed" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
                 Raccontaci il tuo progetto e ricevi un preventivo chiaro, senza impegno.
               </p>
-              <a
-                href="/#contatti"
-                className="btn-primary text-lg px-12 py-5 inline-flex items-center gap-3 shadow-lg"
-                style={{ boxShadow: '0 4px 24px hsl(207 90% 54% / 0.45)' }}>
-                Richiedi un preventivo gratuito <ArrowRight className="w-5 h-5" />
-              </a>
-              <p className="text-primary-foreground/50 text-sm mt-8">Nessun impegno. Risposta entro 24 ore.</p>
+              <div className="max-w-xl mx-auto text-left">
+                <ContactFormWeb3Forms />
+              </div>
             </AnimatedSection>
           </div>
         </section>

@@ -1,12 +1,26 @@
 
 
-## Piano: Inserire il form di contatto nella sezione CTA finale
+## Piano
+
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
 
 ### Modifica
 
-**File**: `src/pages/QuantoCostaSitoWeb.tsx`
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
 
-- Aggiungere l'import di `ContactFormWeb3Forms`
-- Nella sezione CTA finale (righe 336-366), sostituire il bottone "Richiedi un preventivo gratuito" e il testo sotto con il componente `<ContactFormWeb3Forms />` integrato nel layout, mantenendo titolo e sottotitolo
-- Il form apparirà centrato sotto il testo introduttivo, con larghezza massima coerente (`max-w-xl`)
+Sostituire:
+```tsx
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
+```
+
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+```
+
+E chiudere con `</a>` invece di `</button>` (riga 345).
+
+Nessun altro file modificato.
 
