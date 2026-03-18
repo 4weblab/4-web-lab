@@ -117,7 +117,7 @@ const QuantoCostaSitoWeb = () => {
                         { tipo: 'Sito vetrina', prezzo: '900€ – 1.500€', target: 'Aziende che vogliono presentarsi online' },
                         { tipo: 'Sito aziendale completo', prezzo: '1.500€ – 2.500€+', target: 'PMI con più servizi' },
                         { tipo: 'E-commerce', prezzo: '3.000€ – 10.000€+', target: 'Vendita online' },
-                        { tipo: 'Noleggio sito web', prezzo: 'da 99€/mese', target: 'Chi vuole evitare investimento iniziale' },
+                        { tipo: 'Noleggio sito web', prezzo: 'da 49€/mese', target: 'Chi vuole evitare investimento iniziale' },
                       ].map((row, idx) => (
                         <tr key={idx} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${
                           row.tipo === 'Noleggio sito web' 
