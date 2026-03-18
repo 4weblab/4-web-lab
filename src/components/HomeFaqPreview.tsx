@@ -51,7 +51,7 @@ const HomeFaqPreview = () => {
                 className="p-5 rounded-2xl border border-border bg-background hover:border-accent/20 hover:bg-accent/2 transition-all duration-300"
               >
                 <p className="font-semibold text-foreground mb-1.5 text-base">{faq.question}</p>
-                <p className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</p>
+                <div className="text-muted-foreground text-sm leading-relaxed">{faq.answer}</div>
               </div>
             ))}
           </div>
