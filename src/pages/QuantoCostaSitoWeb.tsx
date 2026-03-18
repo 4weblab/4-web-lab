@@ -73,7 +73,7 @@ const QuantoCostaSitoWeb = () => {
           </div>
         </section>
 
-        {/* 3 — Sezione Prezzi */}
+        {/* 3 — Sezione Prezzi (tabella responsive) */}
         <section className="section-padding" style={{ background: 'hsl(210 25% 98%)' }}>
           <div className="container-section">
             <AnimatedSection className="text-center mb-16">
@@ -84,35 +84,37 @@ const QuantoCostaSitoWeb = () => {
               </p>
             </AnimatedSection>
 
-            <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[1, 2, 3].map((i) => (
-                <StaggerItem key={i}>
-                  <div className="card-glass p-8 h-full flex flex-col" style={{ border: '1px solid hsl(210 30% 88%)' }}>
-                    <h3 className="text-xl font-bold text-foreground mb-2">[Piano {i}]</h3>
-                    <p className="text-muted-foreground text-sm mb-6">[Descrizione piano {i}]</p>
-                    <div className="mb-6">
-                      <span className="text-4xl font-serif font-bold text-foreground">[€XXX]</span>
-                      <span className="text-sm text-muted-foreground ml-1">[dettaglio]</span>
-                    </div>
-                    <ul className="space-y-3 mb-8 flex-1" role="list">
-                      {[1, 2, 3, 4].map((f) => (
-                        <li key={f} className="flex items-start gap-3">
-                          <Check className="w-4 h-4 text-accent mt-0.5 shrink-0" aria-hidden="true" />
-                          <span className="text-foreground text-sm">[Feature {f}]</span>
-                        </li>
+            <AnimatedSection className="max-w-4xl mx-auto" delay={0.15}>
+              <div className="card-glass overflow-hidden" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr style={{ background: 'hsl(210 73% 15%)' }}>
+                        <th className="py-4 px-6 text-primary-foreground font-bold text-sm">[Tipologia sito]</th>
+                        <th className="py-4 px-6 text-primary-foreground font-bold text-sm text-center">[Fascia di prezzo]</th>
+                        <th className="py-4 px-6 text-primary-foreground font-bold text-sm text-center hidden sm:table-cell">[Tempistica]</th>
+                        <th className="py-4 px-6 text-primary-foreground font-bold text-sm text-center hidden md:table-cell">[Ideale per]</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[1, 2, 3, 4, 5].map((row, idx) => (
+                        <tr key={row} className={`border-b border-border/50 ${idx % 2 === 0 ? 'bg-background' : ''}`}>
+                          <td className="py-4 px-6 text-foreground font-medium text-sm">[Tipo sito {row}]</td>
+                          <td className="py-4 px-6 text-center text-accent font-bold text-sm">[€XXX – €XXX]</td>
+                          <td className="py-4 px-6 text-center text-muted-foreground text-sm hidden sm:table-cell">[X settimane]</td>
+                          <td className="py-4 px-6 text-center text-muted-foreground text-sm hidden md:table-cell">[Target {row}]</td>
+                        </tr>
                       ))}
-                    </ul>
-                    <Button asChild className="w-full rounded-xl">
-                      <a href="#cta-finale">[CTA Piano {i}]</a>
-                    </Button>
-                  </div>
-                </StaggerItem>
-              ))}
-            </StaggerContainer>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <p className="text-center text-sm text-muted-foreground mt-6">[Nota prezzi]</p>
+            </AnimatedSection>
           </div>
         </section>
 
-        {/* 4 — Da cosa dipende il costo */}
+        {/* 4 — Da cosa dipende il costo (4 card) */}
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="text-center mb-16">
@@ -123,15 +125,20 @@ const QuantoCostaSitoWeb = () => {
               </p>
             </AnimatedSection>
 
-            <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {[1, 2, 3, 4, 5, 6].map((i) => (
-                <StaggerItem key={i}>
-                  <div className="card-glass p-6" style={{ border: '1px solid hsl(210 30% 88%)' }}>
-                    <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                      <HelpCircle className="w-5 h-5 text-accent" aria-hidden="true" />
+            <StaggerContainer className="grid sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
+              {[
+                { icon: HelpCircle, num: 1 },
+                { icon: HelpCircle, num: 2 },
+                { icon: HelpCircle, num: 3 },
+                { icon: HelpCircle, num: 4 },
+              ].map(({ icon: Icon, num }) => (
+                <StaggerItem key={num}>
+                  <div className="card-glass p-8 h-full" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+                    <div className="w-12 h-12 rounded-2xl bg-accent/10 flex items-center justify-center mb-5">
+                      <Icon className="w-6 h-6 text-accent" aria-hidden="true" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">[Fattore {i}]</h3>
-                    <p className="text-muted-foreground text-sm">[Descrizione fattore {i}]</p>
+                    <h3 className="text-lg font-bold text-foreground mb-3">[Fattore {num}]</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">[Descrizione fattore {num}]</p>
                   </div>
                 </StaggerItem>
               ))}
@@ -139,7 +146,7 @@ const QuantoCostaSitoWeb = () => {
           </div>
         </section>
 
-        {/* 5 — Confronto tra soluzioni */}
+        {/* 5 — Confronto tra soluzioni (tabella 3 colonne) */}
         <section className="section-padding" style={{ background: 'hsl(210 22% 96%)' }}>
           <div className="container-section">
             <AnimatedSection className="text-center mb-16">
@@ -150,27 +157,32 @@ const QuantoCostaSitoWeb = () => {
               </p>
             </AnimatedSection>
 
-            <AnimatedSection className="max-w-4xl mx-auto overflow-x-auto" delay={0.15}>
-              <table className="w-full text-left border-collapse">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="py-4 px-4 text-foreground font-bold">[Caratteristica]</th>
-                    <th className="py-4 px-4 text-center text-foreground font-bold">[Soluzione A]</th>
-                    <th className="py-4 px-4 text-center text-foreground font-bold">[Soluzione B]</th>
-                    <th className="py-4 px-4 text-center text-foreground font-bold">[Soluzione C]</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[1, 2, 3, 4, 5].map((row) => (
-                    <tr key={row} className="border-b border-border/50">
-                      <td className="py-3 px-4 text-foreground text-sm">[Riga {row}]</td>
-                      <td className="py-3 px-4 text-center text-muted-foreground text-sm">[Valore]</td>
-                      <td className="py-3 px-4 text-center text-muted-foreground text-sm">[Valore]</td>
-                      <td className="py-3 px-4 text-center text-muted-foreground text-sm">[Valore]</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <AnimatedSection className="max-w-4xl mx-auto" delay={0.15}>
+              <div className="card-glass overflow-hidden" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    {/* Header con colonne evidenziate */}
+                    <thead>
+                      <tr className="border-b-2 border-border">
+                        <th className="py-5 px-6 text-left text-foreground font-bold">[Caratteristica]</th>
+                        <th className="py-5 px-6 text-center text-muted-foreground font-bold">[Soluzione A]</th>
+                        <th className="py-5 px-6 text-center font-bold text-accent" style={{ background: 'hsl(207 90% 54% / 0.06)' }}>[Soluzione B]</th>
+                        <th className="py-5 px-6 text-center text-muted-foreground font-bold">[Soluzione C]</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[1, 2, 3, 4, 5].map((row, idx) => (
+                        <tr key={row} className={`border-b border-border/40 ${idx % 2 === 0 ? '' : 'bg-muted/30'}`}>
+                          <td className="py-4 px-6 text-foreground text-sm font-medium">[Riga {row}]</td>
+                          <td className="py-4 px-6 text-center text-muted-foreground text-sm">[Valore]</td>
+                          <td className="py-4 px-6 text-center text-foreground text-sm font-medium" style={{ background: 'hsl(207 90% 54% / 0.06)' }}>[Valore]</td>
+                          <td className="py-4 px-6 text-center text-muted-foreground text-sm">[Valore]</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </AnimatedSection>
           </div>
         </section>
