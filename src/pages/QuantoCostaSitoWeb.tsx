@@ -221,19 +221,25 @@ const QuantoCostaSitoWeb = () => {
                   <Cpu className="w-6 h-6 text-accent" aria-hidden="true" />
                 </div>
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
-                  [Titolo sezione AI]
+                  I siti creati con l'AI funzionano davvero?
                 </h2>
-                <p className="text-muted-foreground mb-4 leading-relaxed">[Paragrafo AI 1]</p>
-                <p className="text-muted-foreground leading-relaxed">[Paragrafo AI 2]</p>
+                <p className="text-muted-foreground mb-4 leading-relaxed">Gli strumenti AI sono utili per creare una base veloce, ma non sostituiscono la progettazione.</p>
+                <p className="text-muted-foreground mb-4 leading-relaxed">Risultato: un sito "presente", ma che non porta risultati concreti.</p>
+                <p className="text-muted-foreground leading-relaxed font-semibold">L'AI è uno strumento. Non è una strategia.</p>
               </div>
               <div className="card-glass p-8" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+                <p className="text-foreground font-semibold mb-5">Un sito generato automaticamente:</p>
                 <ul className="space-y-5" role="list">
-                  {[1, 2, 3, 4].map((i) => (
+                  {[
+                    'Non conosce il tuo cliente',
+                    'Non struttura i contenuti per vendere',
+                    'Non è pensato per convertire',
+                  ].map((punto, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
                         <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                       </span>
-                      <span className="text-foreground text-sm">[Punto AI {i}]</span>
+                      <span className="text-foreground text-sm">{punto}</span>
                     </li>
                   ))}
                 </ul>
