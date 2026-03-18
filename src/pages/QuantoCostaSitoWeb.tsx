@@ -252,22 +252,24 @@ const QuantoCostaSitoWeb = () => {
         <section className="py-20 md:py-28" style={{ background: 'hsl(210 25% 98%)' }}>
           <div className="container-section">
             <AnimatedSection className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="card-glass p-8 order-2 md:order-1" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+              <div className="card-glass p-8 order-2 md:order-1 relative" style={{ border: '2px solid hsl(207 90% 54%)' }}>
+                <span className="absolute -top-3 right-6 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Il più scelto</span>
                 <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <RefreshCw className="w-5 h-5 text-accent" aria-hidden="true" />
+                  <Zap className="w-5 h-5 text-accent" aria-hidden="true" />
                 </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">Sito web a noleggio</h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">Parti subito senza investimento iniziale.</p>
+                <h3 className="text-xl font-bold text-foreground mb-3">PRO</h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">Il pacchetto completo per una presenza online solida.</p>
                 <div className="mb-5">
-                  <span className="text-3xl font-serif font-bold text-foreground">99€</span>
+                  <span className="text-3xl font-serif font-bold text-foreground">69€</span>
                   <span className="text-sm text-muted-foreground ml-1">/mese</span>
                 </div>
+                <p className="text-xs font-semibold text-muted-foreground mb-3">Pacchetto START più:</p>
                 <ul className="space-y-3" role="list">
                   {[
-                    'Nessun investimento iniziale elevato',
-                    'Sito sempre aggiornato',
-                    'Assistenza inclusa',
-                    'Costo prevedibile',
+                    'Grafica più curata',
+                    'SEO base locale',
+                    'Più sezioni e modifiche incluse',
+                    'Report mensile',
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2">
                       <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
