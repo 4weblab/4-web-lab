@@ -1,22 +1,26 @@
 
 
-## Piano: Fix navigazione cross-page con hash (#noleggio)
+## Piano
 
-**Problema**: Il componente `ScrollToTop` ascolta i cambiamenti di `pathname` e forza `window.scrollTo(0, 0)`. Quando si clicca il link `/#noleggio` dalla pagina `/quanto-costa-sito-web`, il pathname cambia a `/`, ScrollToTop scatta e riporta la pagina in cima, annullando lo scroll verso `#noleggio`.
+Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
 
-**File da modificare**: `src/components/ScrollToTop.tsx`
+Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
 
-**Soluzione**: Modificare `ScrollToTop` per ignorare la navigazione quando c'è un hash nell'URL. Se `location.hash` è presente, lasciare che il browser gestisca lo scroll nativo verso l'ancora.
+### Modifica
 
+**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
+
+Sostituire:
 ```tsx
-const { pathname, hash } = useLocation();
-
-useEffect(() => {
-  if (!hash) {
-    window.scrollTo(0, 0);
-  }
-}, [pathname, hash]);
+<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
 ```
 
-Modifica minima, un solo file, risolve il conflitto senza effetti collaterali.
+Con:
+```tsx
+<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
+```
+
+E chiudere con `</a>` invece di `</button>` (riga 345).
+
+Nessun altro file modificato.
 
