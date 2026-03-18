@@ -44,10 +44,13 @@ const QuantoCostaSitoWeb = () => {
               <h1
                 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-primary-foreground mb-8 text-balance"
                 style={{ textShadow: '0 2px 8px rgba(0,0,0,0.55)', letterSpacing: '-0.03em' }}>
-                [Titolo Hero]
+                Quanto costa un sito web nel 2026?
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto text-balance leading-relaxed" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
-                [Testo breve introduttivo hero]
+                I prezzi dei siti web possono variare da poche centinaia a diverse migliaia di euro.
+                La differenza? Non è il sito. È quello che quel sito riesce (o non riesce) a fare per la tua attività.
+                <br /><br />
+                In questa guida trovi prezzi reali, differenze concrete e come evitare soluzioni economiche che non portano risultati.
               </p>
               <button
                 onClick={() => document.getElementById('cta-finale')?.scrollIntoView({ behavior: 'smooth' })}
