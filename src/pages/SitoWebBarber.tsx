@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Scissors, MessageCircle, Phone, MapPin, Clock, Check, X, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
