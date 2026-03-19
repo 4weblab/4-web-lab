@@ -86,7 +86,7 @@ const SitoWebBarber = () => {
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-[-0.03em] max-w-4xl mb-8 text-white"
+              className="text-[3.25rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[0.9] tracking-[-0.03em] max-w-4xl mb-8 text-white"
               style={{ ...headingStyle, textShadow: '0px 2px 12px rgba(0,0,0,0.7), 0px 0px 4px rgba(245,230,200,0.4)' }}
             >
               Sito Web per Barber Shop che porta nuovi clienti
