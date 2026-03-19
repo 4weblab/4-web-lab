@@ -476,7 +476,7 @@ const SitoWebBarber = () => {
         <div className="py-10 bg-[#0B0B0B] text-center">
           <p className="text-[hsl(0,0%,35%)] text-sm">
             Vuoi conoscere meglio 4 Web Lab?{' '}
-            <a href="https://4weblab.it" className="text-[#C8A96A]/70 hover:text-[#C8A96A] transition-colors underline underline-offset-4 decoration-[#C8A96A]/30 hover:decoration-[#C8A96A]/60">
+            <a href="/" className="text-[#C8A96A]/70 hover:text-[#C8A96A] transition-colors underline underline-offset-4 decoration-[#C8A96A]/30 hover:decoration-[#C8A96A]/60">
               Scopri di più sul nostro studio
             </a>
           </p>
