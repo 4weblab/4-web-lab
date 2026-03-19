@@ -165,11 +165,34 @@ const SitoWebBarber = () => {
                 Quando il lavoro è fatto bene, si vede. Il sito serve anche a questo: mostrare quello che sai fare.
               </p>
             </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <img src={barberGallery} alt="Galleria tagli barber shop" loading="lazy" className="rounded-2xl w-full object-cover" />
-            </AnimatedSection>
+            <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" staggerDelay={0.08}>
+              {galleryImages.map((img, i) => (
+                <StaggerItem key={i}>
+                  <button
+                    onClick={() => openLightbox(i)}
+                    className="block w-full overflow-hidden rounded-xl md:rounded-2xl group focus:outline-none focus:ring-2 focus:ring-[hsl(35,60%,60%)] focus:ring-offset-2 focus:ring-offset-[hsl(0,0%,8%)]"
+                    aria-label={`Apri ${img.alt}`}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </button>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </section>
+
+        <BarberLightbox
+          images={galleryImages}
+          currentIndex={lightboxIndex}
+          isOpen={lightboxOpen}
+          onClose={closeLightbox}
+          onNavigate={setLightboxIndex}
+        />
 
         {/* ─── BREAK COMMERCIALE (GIGA FONT) ─── */}
         <section className="py-28 md:py-40 bg-[hsl(0,0%,5%)] relative overflow-hidden">
