@@ -14,6 +14,7 @@ import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
+import SitoWebBarber from "./pages/SitoWebBarber";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
