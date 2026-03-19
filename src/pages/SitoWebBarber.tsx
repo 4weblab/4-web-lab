@@ -434,14 +434,14 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── FORM CONTATTI ─── */}
-        <section id="contatti-barber" className="py-28 md:py-36 bg-[hsl(0,0%,8%)]">
+        <section id="contatti-barber" className="py-28 md:py-36 bg-[#0B0B0B]">
           <div className="max-w-3xl mx-auto px-6">
             <AnimatedSection>
-              <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Contattaci</p>
+              <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Contattaci</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Iniziamo a parlarne
               </h2>
-              <p className="text-center text-[hsl(0,0%,55%)] mb-12 max-w-md mx-auto">
+              <p className="text-center text-[#BFBFBF] mb-12 max-w-md mx-auto">
                 Compila il form e ti ricontattiamo noi, senza impegno.
               </p>
             </AnimatedSection>
