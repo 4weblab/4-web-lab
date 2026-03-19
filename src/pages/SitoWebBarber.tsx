@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Scissors, MessageCircle, Phone, MapPin, Clock, Check, X, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
@@ -476,9 +477,9 @@ const SitoWebBarber = () => {
         <div className="py-10 bg-[#0B0B0B] text-center">
           <p className="text-[hsl(0,0%,35%)] text-sm">
             Vuoi conoscere meglio 4 Web Lab?{' '}
-            <a href="https://4weblab.it" className="text-[#C8A96A]/70 hover:text-[#C8A96A] transition-colors underline underline-offset-4 decoration-[#C8A96A]/30 hover:decoration-[#C8A96A]/60">
+            <Link to="/" className="text-[#C8A96A]/70 hover:text-[#C8A96A] transition-colors underline underline-offset-4 decoration-[#C8A96A]/30 hover:decoration-[#C8A96A]/60">
               Scopri di più sul nostro studio
-            </a>
+            </Link>
           </p>
         </div>
 
