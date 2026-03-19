@@ -137,10 +137,10 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── SERVIZI ─── */}
-        <section className="py-28 md:py-36 bg-[hsl(0,0%,6%)]">
+        <section className="py-28 md:py-36 bg-[#0B0B0B]">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
-              <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Servizi</p>
+              <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Servizi</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Cosa offri ai tuoi clienti
               </h2>
@@ -152,20 +152,20 @@ const SitoWebBarber = () => {
                 { img: barberStyling, title: 'Styling', desc: 'Prodotti e consigli per mantenere il look anche fuori dal negozio.' },
               ].map((s) => (
                 <StaggerItem key={s.title}>
-                  <div className="group rounded-2xl overflow-hidden bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] hover:border-[hsl(35,60%,45%)] transition-all duration-300 hover:shadow-[0_8px_40px_hsl(35,60%,40%/0.18)] hover:-translate-y-1">
+                  <div className="group rounded-2xl overflow-hidden bg-[#121212] border border-[hsl(0,0%,15%)] hover:border-[#C8A96A] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(200,169,106,0.18)] hover:-translate-y-1">
                     <div className="overflow-hidden aspect-[4/3]">
                       <img src={s.img} alt={s.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2 text-white" style={headingStyle}>{s.title}</h3>
-                      <p className="text-[hsl(0,0%,60%)] leading-relaxed">{s.desc}</p>
+                      <p className="text-[#BFBFBF] leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
             <AnimatedSection delay={0.4}>
-              <p className="text-center text-[hsl(0,0%,55%)] mt-12 max-w-xl mx-auto">
+              <p className="text-center text-[#BFBFBF] mt-12 max-w-xl mx-auto">
                 Una presentazione semplice e ordinata aiuta il cliente a scegliere più velocemente.
               </p>
             </AnimatedSection>
