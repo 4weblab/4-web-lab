@@ -454,6 +454,7 @@ const SitoWebBarber = () => {
                   Richiedi informazioni <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
+              <p className="text-sm text-[#BFBFBF]/60 mt-5">Rispondiamo entro poche ore, senza impegno</p>
             </AnimatedSection>
           </div>
         </section>
