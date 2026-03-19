@@ -11,6 +11,7 @@ import barberBeard from '@/assets/barber-beard.jpg';
 import barberStyling from '@/assets/barber-styling.jpg';
 import barberGallery from '@/assets/barber-gallery.jpg';
 import barberIdentity from '@/assets/barber-identity.jpg';
+import barberSolutionBg from '@/assets/barber-solution-bg.jpg';
 
 const whatsappUrl = 'https://wa.me/393514656042?text=' + encodeURIComponent('Ciao! Vorrei informazioni per un sito web per il mio barber shop.');
 
