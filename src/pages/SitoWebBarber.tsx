@@ -410,13 +410,13 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── CTA FINALE ─── */}
-        <section className="py-28 md:py-40 bg-[hsl(0,0%,5%)]">
+        <section className="py-28 md:py-40 bg-[#121212]">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <AnimatedSection>
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1] tracking-[-0.03em] text-white" style={headingStyle}>
                 Vuoi un sito così anche per il tuo barber shop?
               </h2>
-              <p className="text-[hsl(0,0%,65%)] text-lg max-w-xl mx-auto mb-10">
+              <p className="text-[#BFBFBF] text-lg max-w-xl mx-auto mb-10">
                 Scrivici e vediamo insieme la soluzione più adatta al tuo barber shop.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -425,7 +425,7 @@ const SitoWebBarber = () => {
                   <MessageCircle className="w-5 h-5" /> WhatsApp
                 </a>
                 <a href="#contatti-barber" onClick={scrollToContatti}
-                  className="inline-flex items-center justify-center gap-3 border-2 border-[hsl(0,0%,40%)] hover:border-[hsl(35,60%,60%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg backdrop-blur-sm bg-white/5">
+                  className="inline-flex items-center justify-center gap-3 border-2 border-[hsl(0,0%,30%)] hover:border-[#C8A96A] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg backdrop-blur-sm bg-white/5">
                   Richiedi informazioni <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
