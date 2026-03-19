@@ -73,7 +73,7 @@ const SitoWebBarber = () => {
         <section className="relative min-h-screen flex items-center overflow-hidden">
           <div className="absolute inset-0">
             <img src={barberHero} alt="Interno di un barber shop moderno" loading="eager" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/45" />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
             <motion.p
@@ -86,7 +86,7 @@ const SitoWebBarber = () => {
             <motion.h1
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-[-0.03em] max-w-4xl mb-8 text-white"
-              style={headingStyle}
+              style={{ ...headingStyle, textShadow: '0px 2px 12px rgba(0,0,0,0.7), 0px 0px 4px rgba(245,230,200,0.4)' }}
             >
               Sito Web per Barber Shop che porta nuovi clienti
             </motion.h1>
@@ -112,8 +112,12 @@ const SitoWebBarber = () => {
           </div>
         </section>
 
+        {/* Transition fade dark→light */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #141414 0%, #F5E6C8 100%)' }} />
+
         {/* ─── IDENTITÀ ─── */}
-        <section className="py-28 md:py-36" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+        <section className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection direction="left">
@@ -136,8 +140,11 @@ const SitoWebBarber = () => {
           </div>
         </section>
 
+        {/* Transition fade light→dark */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+
         {/* ─── SERVIZI ─── */}
-        <section className="py-28 md:py-36 bg-[#0B0B0B]">
+        <section className="py-24 md:py-32 bg-[#0B0B0B]">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Servizi</p>
@@ -213,18 +220,22 @@ const SitoWebBarber = () => {
           onNavigate={setLightboxIndex}
         />
 
+        {/* Transition fade dark→light */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #121212 0%, #F5E6C8 100%)' }} />
+
         {/* ─── BREAK COMMERCIALE (GIGA FONT) ─── */}
-        <section className="py-28 md:py-40 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+        <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
           <div className="absolute inset-0 opacity-[0.04]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] md:text-[30rem] font-bold leading-none select-none pointer-events-none text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>✂</div>
           </div>
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <AnimatedSection>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-16 leading-[0.95] tracking-[-0.03em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-10 leading-[0.92] tracking-[-0.03em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
                 Vuoi un sito così per il tuo barber shop?
               </h2>
             </AnimatedSection>
-            <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 text-left" staggerDelay={0.1}>
+            <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10 text-left" staggerDelay={0.1}>
               {[
                 'Design pulito e moderno',
                 'Struttura pensata per essere trovata su Google',
@@ -248,8 +259,11 @@ const SitoWebBarber = () => {
           </div>
         </section>
 
+        {/* Transition fade light→dark */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+
         {/* ─── PROBLEMA ─── */}
-        <section className="py-28 md:py-36 bg-[#0B0B0B]">
+        <section className="py-24 md:py-32 bg-[#0B0B0B]">
           <div className="max-w-4xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Il problema</p>
@@ -332,8 +346,12 @@ const SitoWebBarber = () => {
           </div>
         </section>
 
+        {/* Transition fade dark→light */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #0B0B0B 0%, #F5E6C8 100%)' }} />
+
         {/* ─── OFFERTE ─── */}
-        <section className="py-28 md:py-36" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+        <section className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.4\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")' }} />
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Prezzi</p>
@@ -341,25 +359,25 @@ const SitoWebBarber = () => {
                 Soluzioni per il tuo sito barber
               </h2>
             </AnimatedSection>
-            <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.12}>
+            <StaggerContainer className="grid md:grid-cols-3 gap-8 items-start" staggerDelay={0.12}>
               {[
                 { title: 'Sito Base', desc: 'Sito professionale one page, completo e ottimizzato per mobile e contatti diretti.', price: 'Da 400€', highlight: false },
                 { title: 'Sito Completo', desc: 'Più sezioni, struttura più ampia per presentare al meglio servizi e attività.', price: 'Da 700€', highlight: false },
                 { title: 'Noleggio Operativo', desc: 'Sito completo senza investimento iniziale, con gestione inclusa.', price: '69€ al mese', highlight: true },
               ].map((o) => (
                 <StaggerItem key={o.title}>
-                  <div className={`rounded-2xl p-8 border transition-all duration-300 hover:scale-[1.02] relative ${o.highlight
-                    ? 'bg-[#1A1A1A] border-[#C8A96A] shadow-[0_0_40px_rgba(200,169,106,0.2)] ring-1 ring-[rgba(200,169,106,0.3)]'
-                    : 'bg-white/60 border-[#D6B97B]/30 hover:border-[#C8A96A] backdrop-blur-sm'
+                  <div className={`rounded-2xl border transition-all duration-300 hover:scale-[1.02] relative ${o.highlight
+                    ? 'bg-[#1A1A1A] border-[#C8A96A] shadow-[0_0_50px_rgba(200,169,106,0.25),0_8px_32px_rgba(0,0,0,0.3)] ring-2 ring-[#C8A96A]/40 p-10 md:-mt-4 md:mb-4'
+                    : 'bg-white/60 border-[#D6B97B]/30 hover:border-[#C8A96A] backdrop-blur-sm p-8'
                     }`}>
                     {o.highlight && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-wider font-bold text-[#1A1A1A] bg-[#C8A96A] px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(200,169,106,0.4)]">
+                      <span className="absolute -top-4 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-[0.15em] font-bold text-[#1A1A1A] bg-gradient-to-r from-[#D6B97B] to-[#C8A96A] px-5 py-2 rounded-full shadow-[0_4px_16px_rgba(200,169,106,0.5)]">
                         ⭐ Più scelto
                       </span>
                     )}
-                    <h3 className={`text-2xl font-bold mb-3 ${o.highlight ? 'text-white' : 'text-[#1A1A1A]'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
+                    <h3 className={`font-bold mb-3 ${o.highlight ? 'text-white text-3xl' : 'text-[#1A1A1A] text-2xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
                     <p className={`leading-relaxed mb-6 ${o.highlight ? 'text-[#BFBFBF]' : 'text-[#4A4A4A]'}`}>{o.desc}</p>
-                    <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-4xl md:text-5xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
+                    <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-5xl md:text-6xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
                   </div>
                 </StaggerItem>
               ))}
@@ -378,8 +396,11 @@ const SitoWebBarber = () => {
           </div>
         </section>
 
+        {/* Transition fade light→dark */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+
         {/* ─── FAQ ─── */}
-        <section className="py-28 md:py-36 bg-[#0B0B0B]">
+        <section className="py-24 md:py-32 bg-[#0B0B0B]">
           <div className="max-w-3xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>FAQ</p>
@@ -450,6 +471,16 @@ const SitoWebBarber = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        {/* ─── LINK AL SITO PRINCIPALE ─── */}
+        <div className="py-10 bg-[#0B0B0B] text-center">
+          <p className="text-[hsl(0,0%,35%)] text-sm">
+            Vuoi conoscere meglio 4 Web Lab?{' '}
+            <a href="https://4weblab.it" className="text-[#C8A96A]/70 hover:text-[#C8A96A] transition-colors underline underline-offset-4 decoration-[#C8A96A]/30 hover:decoration-[#C8A96A]/60">
+              Scopri di più sul nostro studio
+            </a>
+          </p>
+        </div>
 
         {/* ─── FOOTER MINI ─── */}
         <footer className="py-8 border-t border-[hsl(0,0%,12%)]">
