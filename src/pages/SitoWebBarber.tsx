@@ -379,10 +379,10 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── FAQ ─── */}
-        <section className="py-28 md:py-36">
+        <section className="py-28 md:py-36 bg-[#0B0B0B]">
           <div className="max-w-3xl mx-auto px-6">
             <AnimatedSection>
-              <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>FAQ</p>
+              <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>FAQ</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Domande frequenti
               </h2>
@@ -395,11 +395,11 @@ const SitoWebBarber = () => {
                   { q: 'Lavorate solo nella vostra zona?', a: 'No, lavoriamo con barber shop in tutta Italia e gestiamo tutto anche a distanza.' },
                   { q: 'Quanto tempo serve?', a: 'In pochi giorni il sito può essere online e già utilizzabile.' },
                 ].map((f, i) => (
-                  <AccordionItem key={i} value={`faq-${i}`} className="border border-[hsl(0,0%,15%)] rounded-xl px-6 bg-[hsl(0,0%,10%)]">
+                  <AccordionItem key={i} value={`faq-${i}`} className="border border-[hsl(0,0%,15%)] rounded-xl px-6 bg-[#121212]">
                     <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline text-[hsl(0,0%,88%)]">
                       {f.q}
                     </AccordionTrigger>
-                    <AccordionContent className="text-[hsl(0,0%,60%)] text-base leading-relaxed">
+                    <AccordionContent className="text-[#BFBFBF] text-base leading-relaxed">
                       {f.a}
                     </AccordionContent>
                   </AccordionItem>
