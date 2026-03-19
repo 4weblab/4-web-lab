@@ -249,10 +249,10 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── PROBLEMA ─── */}
-        <section className="py-28 md:py-36">
+        <section className="py-28 md:py-36 bg-[#0B0B0B]">
           <div className="max-w-4xl mx-auto px-6">
             <AnimatedSection>
-              <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Il problema</p>
+              <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Il problema</p>
               <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Perché molti barber faticano a trovare clienti online
               </h2>
@@ -265,9 +265,9 @@ const SitoWebBarber = () => {
                 'Perdono opportunità ogni giorno',
               ].map((p) => (
                 <StaggerItem key={p}>
-                  <div className="flex items-start gap-4 bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-xl p-6">
+                  <div className="flex items-start gap-4 bg-[#121212] border border-[hsl(0,0%,15%)] rounded-xl p-6">
                     <X className="w-5 h-5 text-red-400 mt-0.5 shrink-0" />
-                    <span className="text-lg text-[hsl(0,0%,75%)]">{p}</span>
+                    <span className="text-lg text-[#BFBFBF]">{p}</span>
                   </div>
                 </StaggerItem>
               ))}
