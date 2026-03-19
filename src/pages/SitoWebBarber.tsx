@@ -231,11 +231,11 @@ const SitoWebBarber = () => {
           </div>
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <AnimatedSection>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-16 leading-[0.95] tracking-[-0.03em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold mb-10 leading-[0.92] tracking-[-0.03em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
                 Vuoi un sito così per il tuo barber shop?
               </h2>
             </AnimatedSection>
-            <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 text-left" staggerDelay={0.1}>
+            <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-10 text-left" staggerDelay={0.1}>
               {[
                 'Design pulito e moderno',
                 'Struttura pensata per essere trovata su Google',
