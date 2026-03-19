@@ -333,11 +333,11 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── OFFERTE ─── */}
-        <section className="py-28 md:py-36 bg-[hsl(0,0%,6%)]">
+        <section className="py-28 md:py-36" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
-              <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Prezzi</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em] text-white" style={headingStyle}>
+              <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Prezzi</p>
+              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
                 Soluzioni per il tuo sito barber
               </h2>
             </AnimatedSection>
@@ -349,28 +349,28 @@ const SitoWebBarber = () => {
               ].map((o) => (
                 <StaggerItem key={o.title}>
                   <div className={`rounded-2xl p-8 border transition-all duration-300 hover:scale-[1.02] relative ${o.highlight
-                    ? 'bg-[hsl(35,60%,50%/0.1)] border-[hsl(35,60%,50%)] shadow-[0_0_40px_hsl(35,60%,50%/0.15)] ring-1 ring-[hsl(35,60%,50%/0.3)]'
-                    : 'bg-[hsl(0,0%,10%)] border-[hsl(0,0%,15%)] hover:border-[hsl(35,60%,40%)]'
+                    ? 'bg-[#1A1A1A] border-[#C8A96A] shadow-[0_0_40px_rgba(200,169,106,0.2)] ring-1 ring-[rgba(200,169,106,0.3)]'
+                    : 'bg-white/60 border-[#D6B97B]/30 hover:border-[#C8A96A] backdrop-blur-sm'
                     }`}>
                     {o.highlight && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-wider font-bold text-[hsl(0,0%,5%)] bg-[hsl(35,60%,50%)] px-4 py-1.5 rounded-full shadow-[0_2px_12px_hsl(35,60%,50%/0.4)]">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-wider font-bold text-[#1A1A1A] bg-[#C8A96A] px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(200,169,106,0.4)]">
                         ⭐ Più scelto
                       </span>
                     )}
-                    <h3 className="text-2xl font-bold mb-3 text-white" style={headingStyle}>{o.title}</h3>
-                    <p className="text-[hsl(0,0%,60%)] leading-relaxed mb-6">{o.desc}</p>
-                    <p className={`font-bold text-[hsl(35,60%,60%)] ${o.highlight ? 'text-4xl md:text-5xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
+                    <h3 className={`text-2xl font-bold mb-3 ${o.highlight ? 'text-white' : 'text-[#1A1A1A]'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
+                    <p className={`leading-relaxed mb-6 ${o.highlight ? 'text-[#BFBFBF]' : 'text-[#4A4A4A]'}`}>{o.desc}</p>
+                    <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-4xl md:text-5xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
                   </div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
             <AnimatedSection delay={0.4}>
-              <p className="text-center text-[hsl(0,0%,55%)] mt-10 max-w-xl mx-auto mb-10">
+              <p className="text-center text-[#4A4A4A] mt-10 max-w-xl mx-auto mb-10">
                 Scegliamo insieme la soluzione più adatta, in base a come lavori e a cosa ti serve davvero.
               </p>
               <div className="text-center">
                 <a href="#contatti-barber" onClick={scrollToContatti}
-                  className="inline-flex items-center justify-center gap-3 bg-[hsl(35,60%,50%)] hover:bg-[hsl(35,60%,45%)] text-[hsl(0,0%,5%)] font-bold px-10 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
+                  className="inline-flex items-center justify-center gap-3 bg-[#1A1A1A] hover:bg-[#0B0B0B] text-[#F5E6C8] font-bold px-10 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
                   Richiedi il tuo sito <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
