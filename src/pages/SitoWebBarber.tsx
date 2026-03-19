@@ -113,22 +113,22 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── IDENTITÀ ─── */}
-        <section className="py-28 md:py-36">
+        <section className="py-28 md:py-36" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection direction="left">
                 <img src={barberIdentity} alt="Identità barber shop online" loading="lazy" className="rounded-2xl w-full object-cover aspect-[4/3]" />
               </AnimatedSection>
               <AnimatedSection direction="right" delay={0.15}>
-                <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>Identità</p>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-[-0.02em] text-white" style={headingStyle}>
+                <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>Identità</p>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-[-0.02em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
                   Un'identità forte, anche online
                 </h2>
-                <p className="text-[hsl(0,0%,70%)] text-lg leading-relaxed mb-6">
+                <p className="text-[#4A4A4A] text-lg leading-relaxed mb-6">
                   Un barber non vende solo un servizio. Vende immagine.<br />
                   Il sito deve trasmetterlo subito, senza spiegazioni inutili.
                 </p>
-                <p className="text-[hsl(35,60%,55%)] italic text-base">
+                <p className="text-[#C8A96A] italic text-base">
                   Una struttura pensata per presentarti al meglio e far capire subito chi sei.
                 </p>
               </AnimatedSection>
