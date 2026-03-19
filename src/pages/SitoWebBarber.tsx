@@ -114,7 +114,7 @@ const SitoWebBarber = () => {
         </section>
 
         {/* Transition fade dark→light */}
-        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #141414 0%, #F5E6C8 100%)' }} />
+        <div className="h-4 md:h-6" style={{ background: 'linear-gradient(180deg, #141414 0%, #F5E6C8 100%)' }} />
 
         {/* ─── IDENTITÀ ─── */}
         <section className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
@@ -142,7 +142,7 @@ const SitoWebBarber = () => {
         </section>
 
         {/* Transition fade light→dark */}
-        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+        <div className="h-4 md:h-6" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
 
         {/* ─── SERVIZI ─── */}
         <section className="py-24 md:py-32 bg-[#0B0B0B]">
@@ -222,7 +222,7 @@ const SitoWebBarber = () => {
         />
 
         {/* Transition fade dark→light */}
-        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #121212 0%, #F5E6C8 100%)' }} />
+        <div className="h-4 md:h-6" style={{ background: 'linear-gradient(180deg, #121212 0%, #F5E6C8 100%)' }} />
 
         {/* ─── BREAK COMMERCIALE (GIGA FONT) ─── */}
         <section className="py-20 md:py-28 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
@@ -261,7 +261,7 @@ const SitoWebBarber = () => {
         </section>
 
         {/* Transition fade light→dark */}
-        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+        <div className="h-4 md:h-6" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
 
         {/* ─── PROBLEMA ─── */}
         <section className="py-24 md:py-32 bg-[#0B0B0B]">
@@ -348,7 +348,7 @@ const SitoWebBarber = () => {
         </section>
 
         {/* Transition fade dark→light */}
-        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #0B0B0B 0%, #F5E6C8 100%)' }} />
+        <div className="h-4 md:h-6" style={{ background: 'linear-gradient(180deg, #0B0B0B 0%, #F5E6C8 100%)' }} />
 
         {/* ─── OFFERTE ─── */}
         <section className="py-24 md:py-32 relative" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
@@ -398,7 +398,7 @@ const SitoWebBarber = () => {
         </section>
 
         {/* Transition fade light→dark */}
-        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+        <div className="h-4 md:h-6" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
 
         {/* ─── FAQ ─── */}
         <section className="py-24 md:py-32 bg-[#0B0B0B]">
