@@ -1,26 +1,13 @@
 
 
-## Piano
+## Riduzione gradienti di transizione nella pagina Barber
 
-Modificare la riga 339 di `src/pages/CreareSitoConAI.tsx`: sostituire il `<button>` con un `<a>` che punta a `https://wa.me/393516826560`, con `target="_blank"` e `rel="noopener noreferrer"`.
+### Problema
+I div di transizione tra sezioni chiare e scure sono troppo alti (`h-16 md:h-24`) e risultano visivamente brutti.
 
-Attualmente il bottone usa `onClick` con `window.location.href = '/#contatti'` — va convertito in un link diretto WhatsApp.
+### Intervento
+Ridurre l'altezza di tutti i 6 div di transizione gradient da `h-16 md:h-24` a `h-4 md:h-6` — transizioni sottili e discrete che segnano il passaggio senza occupare troppo spazio.
 
-### Modifica
-
-**File:** `src/pages/CreareSitoConAI.tsx` (riga 339)
-
-Sostituire:
-```tsx
-<button onClick={() => { window.location.href = '/#contatti'; }} className="inline-flex ...">
-```
-
-Con:
-```tsx
-<a href="https://wa.me/393516826560" target="_blank" rel="noopener noreferrer" className="inline-flex ...">
-```
-
-E chiudere con `</a>` invece di `</button>` (riga 345).
-
-Nessun altro file modificato.
+### File modificato
+- `src/pages/SitoWebBarber.tsx` — 6 occorrenze di `h-16 md:h-24` → `h-4 md:h-6`
 
