@@ -19,6 +19,10 @@ const scrollToContatti = (e: React.MouseEvent) => {
   document.getElementById('contatti-barber')?.scrollIntoView({ behavior: 'smooth' });
 };
 
+/* Text shadow for improved readability on dark backgrounds */
+const textShadowSubtle = { textShadow: '0px 0px 2px rgba(245, 230, 200, 0.5), 0px 0px 6px rgba(245, 230, 200, 0.3)' };
+const headingStyle = { fontFamily: "'Oswald', sans-serif", ...textShadowSubtle };
+
 const SitoWebBarber = () => {
   return (
     <>
@@ -47,7 +51,7 @@ const SitoWebBarber = () => {
         <section className="relative min-h-screen flex items-center overflow-hidden">
           <div className="absolute inset-0">
             <img src={barberHero} alt="Interno di un barber shop moderno" loading="eager" className="w-full h-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-black/40" />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
             <motion.p
@@ -59,14 +63,14 @@ const SitoWebBarber = () => {
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-[-0.03em] max-w-4xl mb-8"
-              style={{ fontFamily: "'Oswald', sans-serif" }}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-[-0.03em] max-w-4xl mb-8 text-white"
+              style={headingStyle}
             >
               Sito Web per Barber Shop che porta nuovi clienti
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
-              className="text-lg md:text-xl text-[hsl(0,0%,75%)] max-w-xl mb-10 leading-relaxed"
+              className="text-lg md:text-xl text-[hsl(0,0%,78%)] max-w-xl mb-10 leading-relaxed"
             >
               Se gestisci un barber shop e vuoi farti trovare su Google, un sito fatto bene fa la differenza. Realizziamo siti pensati per trasformare le visite in appuntamenti, senza complicazioni.
             </motion.p>
@@ -75,11 +79,11 @@ const SitoWebBarber = () => {
               className="flex flex-col sm:flex-row gap-4"
             >
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-3 bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
+                className="inline-flex items-center justify-center gap-3 bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg shadow-[0_4px_16px_hsl(142,70%,30%/0.4)]">
                 <MessageCircle className="w-5 h-5" /> WhatsApp
               </a>
               <a href="#contatti-barber" onClick={scrollToContatti}
-                className="inline-flex items-center justify-center gap-3 border-2 border-[hsl(0,0%,30%)] hover:border-[hsl(35,60%,60%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
+                className="inline-flex items-center justify-center gap-3 border-2 border-[hsl(0,0%,40%)] hover:border-[hsl(35,60%,60%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg backdrop-blur-sm bg-white/5">
                 Richiedi informazioni <ArrowRight className="w-5 h-5" />
               </a>
             </motion.div>
@@ -95,11 +99,12 @@ const SitoWebBarber = () => {
               </AnimatedSection>
               <AnimatedSection direction="right" delay={0.15}>
                 <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>Identità</p>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-[-0.02em] text-white" style={headingStyle}>
                   Un'identità forte, anche online
                 </h2>
                 <p className="text-[hsl(0,0%,70%)] text-lg leading-relaxed mb-6">
-                  Un barber non vende solo un servizio. Vende stile, precisione, esperienza. Il sito deve riflettere tutto questo in pochi secondi, con immagini curate e una struttura chiara che trasmetta fiducia.
+                  Un barber non vende solo un servizio. Vende immagine.<br />
+                  Il sito deve trasmetterlo subito, senza spiegazioni inutili.
                 </p>
                 <p className="text-[hsl(35,60%,55%)] italic text-base">
                   Una struttura pensata per presentarti al meglio e far capire subito chi sei.
@@ -114,23 +119,23 @@ const SitoWebBarber = () => {
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Servizi</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Cosa offri ai tuoi clienti
               </h2>
             </AnimatedSection>
-            <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.12}>
+            <StaggerContainer className="grid md:grid-cols-3 gap-10" staggerDelay={0.12}>
               {[
                 { img: barberCut, title: 'Taglio Uomo', desc: 'Linee pulite, stile classico o moderno, attenzione al dettaglio.' },
                 { img: barberBeard, title: 'Barba e Rasatura', desc: 'Trattamenti curati, per un risultato preciso e professionale.' },
                 { img: barberStyling, title: 'Styling', desc: 'Prodotti e consigli per mantenere il look anche fuori dal negozio.' },
               ].map((s) => (
                 <StaggerItem key={s.title}>
-                  <div className="group rounded-2xl overflow-hidden bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] hover:border-[hsl(35,60%,40%)] transition-all duration-300 hover:shadow-[0_8px_32px_hsl(35,60%,30%/0.15)]">
+                  <div className="group rounded-2xl overflow-hidden bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] hover:border-[hsl(35,60%,45%)] transition-all duration-300 hover:shadow-[0_8px_40px_hsl(35,60%,40%/0.18)] hover:-translate-y-1">
                     <div className="overflow-hidden aspect-[4/3]">
                       <img src={s.img} alt={s.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>{s.title}</h3>
+                      <h3 className="text-xl font-bold mb-2 text-white" style={headingStyle}>{s.title}</h3>
                       <p className="text-[hsl(0,0%,60%)] leading-relaxed">{s.desc}</p>
                     </div>
                   </div>
@@ -150,7 +155,7 @@ const SitoWebBarber = () => {
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Portfolio</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 I risultati parlano
               </h2>
               <p className="text-center text-[hsl(0,0%,65%)] text-lg max-w-2xl mx-auto mb-12">
@@ -170,8 +175,8 @@ const SitoWebBarber = () => {
           </div>
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <AnimatedSection>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-16 leading-[1] tracking-[-0.03em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
-                Questo è il tipo di sito che possiamo realizzare per il tuo barber shop
+              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-16 leading-[0.95] tracking-[-0.03em] text-white" style={headingStyle}>
+                Vuoi un sito così per il tuo barber shop?
               </h2>
             </AnimatedSection>
             <StaggerContainer className="grid sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16 text-left" staggerDelay={0.1}>
@@ -203,7 +208,7 @@ const SitoWebBarber = () => {
           <div className="max-w-4xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Il problema</p>
-              <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Perché molti barber faticano a trovare clienti online
               </h2>
             </AnimatedSection>
@@ -230,7 +235,7 @@ const SitoWebBarber = () => {
           <div className="max-w-3xl mx-auto px-6 text-center">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>La soluzione</p>
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-[-0.02em] text-white" style={headingStyle}>
                 Un sito fatto bene cambia davvero le cose
               </h2>
               <p className="text-[hsl(0,0%,65%)] text-lg leading-relaxed">
@@ -247,21 +252,21 @@ const SitoWebBarber = () => {
               <AnimatedSection delay={0}>
                 <div className="bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[hsl(35,60%,40%)] transition-all duration-300">
                   <MapPin className="w-8 h-8 text-[hsl(35,60%,60%)] mx-auto mb-4" />
-                  <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Dove siamo</h3>
+                  <h3 className="text-lg font-bold mb-2 text-white" style={headingStyle}>Dove siamo</h3>
                   <p className="text-[hsl(0,0%,55%)]">Via Roma 42, Milano</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[hsl(35,60%,40%)] transition-all duration-300">
                   <Clock className="w-8 h-8 text-[hsl(35,60%,60%)] mx-auto mb-4" />
-                  <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Orari</h3>
+                  <h3 className="text-lg font-bold mb-2 text-white" style={headingStyle}>Orari</h3>
                   <p className="text-[hsl(0,0%,55%)]">Mar – Sab: 9:00 – 19:00</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>
                 <div className="bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[hsl(35,60%,40%)] transition-all duration-300">
                   <Phone className="w-8 h-8 text-[hsl(35,60%,60%)] mx-auto mb-4" />
-                  <h3 className="text-lg font-bold mb-2" style={{ fontFamily: "'Oswald', sans-serif" }}>Contatti</h3>
+                  <h3 className="text-lg font-bold mb-2 text-white" style={headingStyle}>Contatti</h3>
                   <p className="text-[hsl(0,0%,55%)]">+39 351 465 6042</p>
                 </div>
               </AnimatedSection>
@@ -279,7 +284,7 @@ const SitoWebBarber = () => {
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Prezzi</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Soluzioni per il tuo sito barber
               </h2>
             </AnimatedSection>
@@ -290,18 +295,18 @@ const SitoWebBarber = () => {
                 { title: 'Noleggio Operativo', desc: 'Sito completo senza investimento iniziale, con gestione inclusa.', price: '69€ al mese', highlight: true },
               ].map((o) => (
                 <StaggerItem key={o.title}>
-                  <div className={`rounded-2xl p-8 border transition-all duration-300 hover:scale-[1.02] ${o.highlight
-                    ? 'bg-[hsl(35,60%,50%/0.08)] border-[hsl(35,60%,50%)] shadow-[0_0_32px_hsl(35,60%,50%/0.12)]'
+                  <div className={`rounded-2xl p-8 border transition-all duration-300 hover:scale-[1.02] relative ${o.highlight
+                    ? 'bg-[hsl(35,60%,50%/0.1)] border-[hsl(35,60%,50%)] shadow-[0_0_40px_hsl(35,60%,50%/0.15)] ring-1 ring-[hsl(35,60%,50%/0.3)]'
                     : 'bg-[hsl(0,0%,10%)] border-[hsl(0,0%,15%)] hover:border-[hsl(35,60%,40%)]'
                     }`}>
                     {o.highlight && (
-                      <span className="inline-block text-xs uppercase tracking-wider font-semibold text-[hsl(35,60%,50%)] bg-[hsl(35,60%,50%/0.15)] px-3 py-1 rounded-full mb-4">
-                        Più scelto
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-wider font-bold text-[hsl(0,0%,5%)] bg-[hsl(35,60%,50%)] px-4 py-1.5 rounded-full shadow-[0_2px_12px_hsl(35,60%,50%/0.4)]">
+                        ⭐ Più scelto
                       </span>
                     )}
-                    <h3 className="text-2xl font-bold mb-3" style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
+                    <h3 className="text-2xl font-bold mb-3 text-white" style={headingStyle}>{o.title}</h3>
                     <p className="text-[hsl(0,0%,60%)] leading-relaxed mb-6">{o.desc}</p>
-                    <p className="text-3xl font-bold text-[hsl(35,60%,60%)]" style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
+                    <p className={`font-bold text-[hsl(35,60%,60%)] ${o.highlight ? 'text-4xl md:text-5xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
                   </div>
                 </StaggerItem>
               ))}
@@ -325,7 +330,7 @@ const SitoWebBarber = () => {
           <div className="max-w-3xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>FAQ</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Domande frequenti
               </h2>
             </AnimatedSection>
@@ -355,19 +360,19 @@ const SitoWebBarber = () => {
         <section className="py-28 md:py-40 bg-[hsl(0,0%,5%)]">
           <div className="max-w-4xl mx-auto px-6 text-center">
             <AnimatedSection>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1] tracking-[-0.03em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-[1] tracking-[-0.03em] text-white" style={headingStyle}>
                 Vuoi un sito così anche per il tuo barber shop?
               </h2>
               <p className="text-[hsl(0,0%,65%)] text-lg max-w-xl mx-auto mb-10">
-                Se vuoi migliorare la tua presenza online e iniziare a ricevere più richieste, possiamo partire da qui.
+                Scrivici e vediamo insieme la soluzione più adatta al tuo barber shop.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-3 bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
+                  className="inline-flex items-center justify-center gap-3 bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,35%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg shadow-[0_4px_16px_hsl(142,70%,30%/0.4)]">
                   <MessageCircle className="w-5 h-5" /> WhatsApp
                 </a>
                 <a href="#contatti-barber" onClick={scrollToContatti}
-                  className="inline-flex items-center justify-center gap-3 border-2 border-[hsl(0,0%,30%)] hover:border-[hsl(35,60%,60%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
+                  className="inline-flex items-center justify-center gap-3 border-2 border-[hsl(0,0%,40%)] hover:border-[hsl(35,60%,60%)] text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg backdrop-blur-sm bg-white/5">
                   Richiedi informazioni <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
@@ -380,7 +385,7 @@ const SitoWebBarber = () => {
           <div className="max-w-3xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Contattaci</p>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center tracking-[-0.02em]" style={{ fontFamily: "'Oswald', sans-serif" }}>
+              <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 Iniziamo a parlarne
               </h2>
               <p className="text-center text-[hsl(0,0%,55%)] mb-12 max-w-md mx-auto">
