@@ -214,13 +214,13 @@ const SitoWebBarber = () => {
         />
 
         {/* ─── BREAK COMMERCIALE (GIGA FONT) ─── */}
-        <section className="py-28 md:py-40 bg-[hsl(0,0%,5%)] relative overflow-hidden">
-          <div className="absolute inset-0 opacity-5">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] md:text-[30rem] font-bold leading-none select-none pointer-events-none" style={{ fontFamily: "'Oswald', sans-serif" }}>✂</div>
+        <section className="py-28 md:py-40 relative overflow-hidden" style={{ background: 'linear-gradient(180deg, #F5E6C8 0%, #EFE3C7 100%)' }}>
+          <div className="absolute inset-0 opacity-[0.04]">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20rem] md:text-[30rem] font-bold leading-none select-none pointer-events-none text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>✂</div>
           </div>
           <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
             <AnimatedSection>
-              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-16 leading-[0.95] tracking-[-0.03em] text-white" style={headingStyle}>
+              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-16 leading-[0.95] tracking-[-0.03em] text-[#1A1A1A]" style={{ fontFamily: "'Oswald', sans-serif" }}>
                 Vuoi un sito così per il tuo barber shop?
               </h2>
             </AnimatedSection>
@@ -233,15 +233,15 @@ const SitoWebBarber = () => {
               ].map((p) => (
                 <StaggerItem key={p}>
                   <div className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-[hsl(35,60%,60%)] mt-0.5 shrink-0" />
-                    <span className="text-lg text-[hsl(0,0%,80%)]">{p}</span>
+                    <Check className="w-5 h-5 text-[#C8A96A] mt-0.5 shrink-0" />
+                    <span className="text-lg text-[#4A4A4A]">{p}</span>
                   </div>
                 </StaggerItem>
               ))}
             </StaggerContainer>
             <AnimatedSection delay={0.5}>
               <a href="#contatti-barber" onClick={scrollToContatti}
-                className="inline-flex items-center justify-center gap-3 bg-[hsl(35,60%,50%)] hover:bg-[hsl(35,60%,45%)] text-[hsl(0,0%,5%)] font-bold px-10 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
+                className="inline-flex items-center justify-center gap-3 bg-[#1A1A1A] hover:bg-[#0B0B0B] text-[#F5E6C8] font-bold px-10 py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] text-lg">
                 Parliamone senza impegno <ArrowRight className="w-5 h-5" />
               </a>
             </AnimatedSection>
