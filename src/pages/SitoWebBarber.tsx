@@ -379,6 +379,9 @@ const SitoWebBarber = () => {
                     <h3 className={`font-bold mb-3 ${o.highlight ? 'text-white text-3xl' : 'text-[#1A1A1A] text-2xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
                     <p className={`leading-relaxed mb-6 ${o.highlight ? 'text-[#BFBFBF]' : 'text-[#4A4A4A]'}`}>{o.desc}</p>
                     <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-5xl md:text-6xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
+                    {o.highlight && (
+                      <p className="text-sm text-[#BFBFBF]/80 mt-2 font-medium">Senza investimento iniziale</p>
+                    )}
                   </div>
                 </StaggerItem>
               ))}
