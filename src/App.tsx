@@ -94,7 +94,8 @@ const App = () => (
              <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
-             <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
+              <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
+             <Route path="/sito-web-barber" element={<SitoWebBarber />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
