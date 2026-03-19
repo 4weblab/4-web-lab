@@ -173,14 +173,14 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── GALLERIA ─── */}
-        <section className="py-28 md:py-36">
+        <section className="py-28 md:py-36 bg-[#121212]">
           <div className="max-w-7xl mx-auto px-6">
             <AnimatedSection>
-              <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Portfolio</p>
+              <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Portfolio</p>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center tracking-[-0.02em] text-white" style={headingStyle}>
                 I risultati parlano
               </h2>
-              <p className="text-center text-[hsl(0,0%,65%)] text-lg max-w-2xl mx-auto mb-12">
+              <p className="text-center text-[#BFBFBF] text-lg max-w-2xl mx-auto mb-12">
                 Quando il lavoro è fatto bene, si vede. Il sito serve anche a questo: mostrare quello che sai fare.
               </p>
             </AnimatedSection>
@@ -189,7 +189,7 @@ const SitoWebBarber = () => {
                 <StaggerItem key={i}>
                   <button
                     onClick={() => openLightbox(i)}
-                    className="block w-full overflow-hidden rounded-xl md:rounded-2xl group focus:outline-none focus:ring-2 focus:ring-[hsl(35,60%,60%)] focus:ring-offset-2 focus:ring-offset-[hsl(0,0%,8%)]"
+                    className="block w-full overflow-hidden rounded-xl md:rounded-2xl group focus:outline-none focus:ring-2 focus:ring-[#C8A96A] focus:ring-offset-2 focus:ring-offset-[#121212]"
                     aria-label={`Apri ${img.alt}`}
                   >
                     <img
