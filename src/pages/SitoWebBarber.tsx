@@ -299,33 +299,33 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── CONTATTI DEMO ─── */}
-        <section className="py-28 md:py-36">
+        <section className="py-28 md:py-36 bg-[#0B0B0B]">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8">
               <AnimatedSection delay={0}>
-                <div className="bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[hsl(35,60%,40%)] transition-all duration-300">
-                  <MapPin className="w-8 h-8 text-[hsl(35,60%,60%)] mx-auto mb-4" />
+                <div className="bg-[#121212] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[#C8A96A] transition-all duration-300">
+                  <MapPin className="w-8 h-8 text-[#C8A96A] mx-auto mb-4" />
                   <h3 className="text-lg font-bold mb-2 text-white" style={headingStyle}>Dove siamo</h3>
-                  <p className="text-[hsl(0,0%,55%)]">Via Roma 42, Milano</p>
+                  <p className="text-[#BFBFBF]">Via Roma 42, Milano</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
-                <div className="bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[hsl(35,60%,40%)] transition-all duration-300">
-                  <Clock className="w-8 h-8 text-[hsl(35,60%,60%)] mx-auto mb-4" />
+                <div className="bg-[#121212] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[#C8A96A] transition-all duration-300">
+                  <Clock className="w-8 h-8 text-[#C8A96A] mx-auto mb-4" />
                   <h3 className="text-lg font-bold mb-2 text-white" style={headingStyle}>Orari</h3>
-                  <p className="text-[hsl(0,0%,55%)]">Mar – Sab: 9:00 – 19:00</p>
+                  <p className="text-[#BFBFBF]">Mar – Sab: 9:00 – 19:00</p>
                 </div>
               </AnimatedSection>
               <AnimatedSection delay={0.2}>
-                <div className="bg-[hsl(0,0%,10%)] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[hsl(35,60%,40%)] transition-all duration-300">
-                  <Phone className="w-8 h-8 text-[hsl(35,60%,60%)] mx-auto mb-4" />
+                <div className="bg-[#121212] border border-[hsl(0,0%,15%)] rounded-2xl p-8 text-center hover:border-[#C8A96A] transition-all duration-300">
+                  <Phone className="w-8 h-8 text-[#C8A96A] mx-auto mb-4" />
                   <h3 className="text-lg font-bold mb-2 text-white" style={headingStyle}>Contatti</h3>
-                  <p className="text-[hsl(0,0%,55%)]">+39 351 465 6042</p>
+                  <p className="text-[#BFBFBF]">+39 351 465 6042</p>
                 </div>
               </AnimatedSection>
             </div>
             <AnimatedSection delay={0.3}>
-              <p className="text-center text-[hsl(0,0%,55%)] mt-10 max-w-xl mx-auto">
+              <p className="text-center text-[#BFBFBF] mt-10 max-w-xl mx-auto">
                 Tutto deve essere semplice: trovare il negozio, vedere gli orari, contattarti in un attimo.
               </p>
             </AnimatedSection>
