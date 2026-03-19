@@ -1,9 +1,11 @@
+import { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Scissors, MessageCircle, Phone, MapPin, Clock, Check, X, ChevronRight, ArrowRight } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import BarberLightbox from '@/components/BarberLightbox';
 
 import barberHero from '@/assets/barber-hero.jpg';
 import barberCut from '@/assets/barber-cut.jpg';
@@ -24,7 +26,26 @@ const scrollToContatti = (e: React.MouseEvent) => {
 const textShadowSubtle = { textShadow: '0px 0px 2px rgba(245, 230, 200, 0.5), 0px 0px 6px rgba(245, 230, 200, 0.3)' };
 const headingStyle = { fontFamily: "'Oswald', sans-serif", ...textShadowSubtle };
 
+const galleryImages = [
+  { src: barberCut, alt: 'Taglio uomo professionale' },
+  { src: barberBeard, alt: 'Barba e rasatura' },
+  { src: barberStyling, alt: 'Styling capelli' },
+  { src: barberGallery, alt: 'Galleria lavori barber' },
+  { src: barberIdentity, alt: 'Interno barber shop' },
+  { src: barberHero, alt: 'Barber shop moderno' },
+];
+
 const SitoWebBarber = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = useCallback((i: number) => {
+    setLightboxIndex(i);
+    setLightboxOpen(true);
+  }, []);
+
+  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+
   return (
     <>
       <Helmet>
@@ -163,11 +184,34 @@ const SitoWebBarber = () => {
                 Quando il lavoro è fatto bene, si vede. Il sito serve anche a questo: mostrare quello che sai fare.
               </p>
             </AnimatedSection>
-            <AnimatedSection delay={0.2}>
-              <img src={barberGallery} alt="Galleria tagli barber shop" loading="lazy" className="rounded-2xl w-full object-cover" />
-            </AnimatedSection>
+            <StaggerContainer className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4" staggerDelay={0.08}>
+              {galleryImages.map((img, i) => (
+                <StaggerItem key={i}>
+                  <button
+                    onClick={() => openLightbox(i)}
+                    className="block w-full overflow-hidden rounded-xl md:rounded-2xl group focus:outline-none focus:ring-2 focus:ring-[hsl(35,60%,60%)] focus:ring-offset-2 focus:ring-offset-[hsl(0,0%,8%)]"
+                    aria-label={`Apri ${img.alt}`}
+                  >
+                    <img
+                      src={img.src}
+                      alt={img.alt}
+                      loading="lazy"
+                      className="w-full aspect-[4/3] object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </button>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
           </div>
         </section>
+
+        <BarberLightbox
+          images={galleryImages}
+          currentIndex={lightboxIndex}
+          isOpen={lightboxOpen}
+          onClose={closeLightbox}
+          onNavigate={setLightboxIndex}
+        />
 
         {/* ─── BREAK COMMERCIALE (GIGA FONT) ─── */}
         <section className="py-28 md:py-40 bg-[hsl(0,0%,5%)] relative overflow-hidden">
