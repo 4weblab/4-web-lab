@@ -359,25 +359,25 @@ const SitoWebBarber = () => {
                 Soluzioni per il tuo sito barber
               </h2>
             </AnimatedSection>
-            <StaggerContainer className="grid md:grid-cols-3 gap-8" staggerDelay={0.12}>
+            <StaggerContainer className="grid md:grid-cols-3 gap-8 items-start" staggerDelay={0.12}>
               {[
                 { title: 'Sito Base', desc: 'Sito professionale one page, completo e ottimizzato per mobile e contatti diretti.', price: 'Da 400€', highlight: false },
                 { title: 'Sito Completo', desc: 'Più sezioni, struttura più ampia per presentare al meglio servizi e attività.', price: 'Da 700€', highlight: false },
                 { title: 'Noleggio Operativo', desc: 'Sito completo senza investimento iniziale, con gestione inclusa.', price: '69€ al mese', highlight: true },
               ].map((o) => (
                 <StaggerItem key={o.title}>
-                  <div className={`rounded-2xl p-8 border transition-all duration-300 hover:scale-[1.02] relative ${o.highlight
-                    ? 'bg-[#1A1A1A] border-[#C8A96A] shadow-[0_0_40px_rgba(200,169,106,0.2)] ring-1 ring-[rgba(200,169,106,0.3)]'
-                    : 'bg-white/60 border-[#D6B97B]/30 hover:border-[#C8A96A] backdrop-blur-sm'
+                  <div className={`rounded-2xl border transition-all duration-300 hover:scale-[1.02] relative ${o.highlight
+                    ? 'bg-[#1A1A1A] border-[#C8A96A] shadow-[0_0_50px_rgba(200,169,106,0.25),0_8px_32px_rgba(0,0,0,0.3)] ring-2 ring-[#C8A96A]/40 p-10 md:-mt-4 md:mb-4'
+                    : 'bg-white/60 border-[#D6B97B]/30 hover:border-[#C8A96A] backdrop-blur-sm p-8'
                     }`}>
                     {o.highlight && (
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-wider font-bold text-[#1A1A1A] bg-[#C8A96A] px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(200,169,106,0.4)]">
+                      <span className="absolute -top-4 left-1/2 -translate-x-1/2 inline-block text-xs uppercase tracking-[0.15em] font-bold text-[#1A1A1A] bg-gradient-to-r from-[#D6B97B] to-[#C8A96A] px-5 py-2 rounded-full shadow-[0_4px_16px_rgba(200,169,106,0.5)]">
                         ⭐ Più scelto
                       </span>
                     )}
-                    <h3 className={`text-2xl font-bold mb-3 ${o.highlight ? 'text-white' : 'text-[#1A1A1A]'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
+                    <h3 className={`font-bold mb-3 ${o.highlight ? 'text-white text-3xl' : 'text-[#1A1A1A] text-2xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
                     <p className={`leading-relaxed mb-6 ${o.highlight ? 'text-[#BFBFBF]' : 'text-[#4A4A4A]'}`}>{o.desc}</p>
-                    <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-4xl md:text-5xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
+                    <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-5xl md:text-6xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
                   </div>
                 </StaggerItem>
               ))}
