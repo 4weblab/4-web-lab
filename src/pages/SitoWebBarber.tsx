@@ -86,7 +86,7 @@ const SitoWebBarber = () => {
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.15 }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[0.95] tracking-[-0.03em] max-w-4xl mb-8 text-white"
+              className="text-[3.25rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[0.9] tracking-[-0.03em] max-w-4xl mb-8 text-white"
               style={{ ...headingStyle, textShadow: '0px 2px 12px rgba(0,0,0,0.7), 0px 0px 4px rgba(245,230,200,0.4)' }}
             >
               Sito Web per Barber Shop che porta nuovi clienti
@@ -379,6 +379,9 @@ const SitoWebBarber = () => {
                     <h3 className={`font-bold mb-3 ${o.highlight ? 'text-white text-3xl' : 'text-[#1A1A1A] text-2xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.title}</h3>
                     <p className={`leading-relaxed mb-6 ${o.highlight ? 'text-[#BFBFBF]' : 'text-[#4A4A4A]'}`}>{o.desc}</p>
                     <p className={`font-bold text-[#C8A96A] ${o.highlight ? 'text-5xl md:text-6xl' : 'text-3xl'}`} style={{ fontFamily: "'Oswald', sans-serif" }}>{o.price}</p>
+                    {o.highlight && (
+                      <p className="text-sm text-[#BFBFBF]/80 mt-2 font-medium">Senza investimento iniziale</p>
+                    )}
                   </div>
                 </StaggerItem>
               ))}
@@ -451,6 +454,7 @@ const SitoWebBarber = () => {
                   Richiedi informazioni <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
+              <p className="text-sm text-[#BFBFBF]/60 mt-5">Rispondiamo entro poche ore, senza impegno</p>
             </AnimatedSection>
           </div>
         </section>
