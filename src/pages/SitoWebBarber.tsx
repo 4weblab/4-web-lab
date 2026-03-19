@@ -1,9 +1,11 @@
+import { useState, useCallback } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { Scissors, MessageCircle, Phone, MapPin, Clock, Check, X, ChevronRight, ArrowRight } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import BarberLightbox from '@/components/BarberLightbox';
 
 import barberHero from '@/assets/barber-hero.jpg';
 import barberCut from '@/assets/barber-cut.jpg';
