@@ -26,7 +26,26 @@ const scrollToContatti = (e: React.MouseEvent) => {
 const textShadowSubtle = { textShadow: '0px 0px 2px rgba(245, 230, 200, 0.5), 0px 0px 6px rgba(245, 230, 200, 0.3)' };
 const headingStyle = { fontFamily: "'Oswald', sans-serif", ...textShadowSubtle };
 
+const galleryImages = [
+  { src: barberCut, alt: 'Taglio uomo professionale' },
+  { src: barberBeard, alt: 'Barba e rasatura' },
+  { src: barberStyling, alt: 'Styling capelli' },
+  { src: barberGallery, alt: 'Galleria lavori barber' },
+  { src: barberIdentity, alt: 'Interno barber shop' },
+  { src: barberHero, alt: 'Barber shop moderno' },
+];
+
 const SitoWebBarber = () => {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = useCallback((i: number) => {
+    setLightboxIndex(i);
+    setLightboxOpen(true);
+  }, []);
+
+  const closeLightbox = useCallback(() => setLightboxOpen(false), []);
+
   return (
     <>
       <Helmet>
