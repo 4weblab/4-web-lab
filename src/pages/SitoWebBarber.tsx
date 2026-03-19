@@ -259,8 +259,11 @@ const SitoWebBarber = () => {
           </div>
         </section>
 
+        {/* Transition fade light→dark */}
+        <div className="h-16 md:h-24" style={{ background: 'linear-gradient(180deg, #EFE3C7 0%, #0B0B0B 100%)' }} />
+
         {/* ─── PROBLEMA ─── */}
-        <section className="py-28 md:py-36 bg-[#0B0B0B]">
+        <section className="py-24 md:py-32 bg-[#0B0B0B]">
           <div className="max-w-4xl mx-auto px-6">
             <AnimatedSection>
               <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4 text-center" style={{ fontFamily: "'Oswald', sans-serif" }}>Il problema</p>
