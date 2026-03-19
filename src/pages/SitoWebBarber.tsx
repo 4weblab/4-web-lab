@@ -232,14 +232,22 @@ const SitoWebBarber = () => {
         </section>
 
         {/* ─── SOLUZIONE ─── */}
-        <section className="py-28 md:py-36 bg-[hsl(0,0%,6%)]">
-          <div className="max-w-3xl mx-auto px-6 text-center">
+        <section className="relative py-36 md:py-48 overflow-hidden">
+          {/* Parallax background */}
+          <div
+            className="absolute inset-0 bg-fixed bg-cover bg-center md:bg-fixed bg-scroll"
+            style={{ backgroundImage: `url(${barberSolutionBg})` }}
+            aria-hidden="true"
+          />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-black/70" aria-hidden="true" />
+          <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
             <AnimatedSection>
               <p className="text-[hsl(35,60%,60%)] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>La soluzione</p>
-              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-[-0.02em] text-white" style={headingStyle}>
+              <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-[-0.02em] text-white" style={{ ...headingStyle, textShadow: '0px 2px 8px rgba(0,0,0,0.6), 0px 0px 2px rgba(245,230,200,0.5)' }}>
                 Un sito fatto bene cambia davvero le cose
               </h2>
-              <p className="text-[hsl(0,0%,65%)] text-lg leading-relaxed">
+              <p className="text-[hsl(0,0%,85%)] text-lg leading-relaxed" style={{ textShadow: '0px 1px 4px rgba(0,0,0,0.5)' }}>
                 Un sito costruito con criterio ti permette di essere trovato, presentarti in modo professionale e ricevere contatti diretti.
               </p>
             </AnimatedSection>
