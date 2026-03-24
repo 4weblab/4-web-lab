@@ -3,9 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-import { Building2, TrendingUp, Layers, Settings, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Building2, TrendingUp, Layers, Settings, Award, ArrowRight, CheckCircle2, Globe, LayoutTemplate, Wrench, ChevronDown } from 'lucide-react';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import mockupImg from '@/assets/aziendali-mockup.jpg';
 import teamImg from '@/assets/aziendali-team.jpg';
 
