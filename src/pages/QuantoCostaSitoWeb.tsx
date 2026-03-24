@@ -93,7 +93,7 @@ const QuantoCostaSitoWeb = () => {
                 className="btn-primary text-lg px-12 py-5 shadow-lg"
                 style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}
                 aria-label="Richiedi un preventivo gratuito">
-                Richiedi un preventivo gratuito
+                Richiedi una valutazione gratuita
               </button>
             </AnimatedSection>
           </div>
@@ -117,6 +117,12 @@ const QuantoCostaSitoWeb = () => {
               </p>
               <p className="text-base text-muted-foreground text-balance leading-relaxed">
                 Qui sotto trovi i prezzi reali che si vedono oggi sul mercato, senza numeri gonfiati e senza promesse inutili.
+              </p>
+              <p className="text-base text-muted-foreground text-balance leading-relaxed mt-6">
+                Se cerchi una soluzione completa, puoi approfondire anche i nostri{' '}
+                <Link to="/siti-web-aziendali" className="text-accent font-semibold link-underline">
+                  siti web aziendali professionali
+                </Link>.
               </p>
             </AnimatedSection>
           </div>
@@ -175,6 +181,29 @@ const QuantoCostaSitoWeb = () => {
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground mt-8">I prezzi possono variare in base alla complessità del progetto, ai contenuti e al livello di personalizzazione.</p>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Esempio reale */}
+        <section className="py-20 md:py-28 bg-background">
+          <div className="container-section">
+            <AnimatedSection className="max-w-2xl mx-auto">
+              <div className="card-glass p-10 md:p-14" style={{ border: '1px solid hsl(210 30% 88%)' }}>
+                <span className="text-xs font-bold tracking-widest text-accent uppercase mb-4 block">Esempio reale</span>
+                <h2 className="text-2xl md:text-3xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
+                  Quanto può costare davvero un sito aziendale
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Per fare un esempio concreto, un sito aziendale con più pagine, struttura chiara e contenuti ben organizzati può richiedere un investimento nell'ordine delle migliaia di euro.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Questo perché non si tratta solo di "avere un sito", ma di progettare uno strumento che rappresenti l'azienda e lavori nel tempo.
+                </p>
+                <p className="text-lg md:text-xl font-bold text-foreground text-center">
+                  La differenza non è nel prezzo, ma nel risultato che ottieni.
+                </p>
+              </div>
             </AnimatedSection>
           </div>
         </section>
