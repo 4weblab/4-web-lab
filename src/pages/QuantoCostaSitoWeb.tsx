@@ -41,7 +41,11 @@ const QuantoCostaSitoWeb = () => {
               { "@type": "Question", "name": "Quanto costa rifare un sito esistente?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende da quanto è recuperabile. In molti casi conviene ripartire da zero." } },
               { "@type": "Question", "name": "Quanto tempo serve per realizzare un sito web?", "acceptedAnswer": { "@type": "Answer", "text": "Da pochi giorni per una soluzione semplice a diverse settimane per progetti più strutturati." } },
               { "@type": "Question", "name": "È meglio acquistare o noleggiare un sito?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dal budget e dagli obiettivi. Il noleggio permette di partire subito senza investimento iniziale." } },
-              { "@type": "Question", "name": "Perché alcuni siti costano così poco?", "acceptedAnswer": { "@type": "Answer", "text": "Perché spesso sono template standard senza strategia, contenuti o ottimizzazione." } }
+              { "@type": "Question", "name": "Perché alcuni siti costano così poco?", "acceptedAnswer": { "@type": "Answer", "text": "Perché spesso sono template standard senza strategia, contenuti o ottimizzazione." } },
+              { "@type": "Question", "name": "Quanto costa mantenere un sito web aziendale?", "acceptedAnswer": { "@type": "Answer", "text": "Il costo di mantenimento dipende da hosting, dominio ed eventuali aggiornamenti. In molti casi si tratta di cifre contenute, ma è importante garantire che il sito resti aggiornato e funzionante nel tempo." } },
+              { "@type": "Question", "name": "Ci sono costi nascosti nella realizzazione di un sito?", "acceptedAnswer": { "@type": "Answer", "text": "Un progetto serio è sempre chiaro fin dall'inizio. I costi possono variare solo in base a richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente." } },
+              { "@type": "Question", "name": "Quanto dura un sito web aziendale?", "acceptedAnswer": { "@type": "Answer", "text": "Un sito ben realizzato può durare diversi anni. Tuttavia, è normale aggiornarlo nel tempo per mantenerlo efficace e al passo con le esigenze dell'azienda." } },
+              { "@type": "Question", "name": "Meglio spendere poco o investire di più?", "acceptedAnswer": { "@type": "Answer", "text": "Un sito economico può sembrare conveniente all'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l'azienda." } }
             ]
           })}
         </script>
@@ -400,6 +404,38 @@ const QuantoCostaSitoWeb = () => {
                   <AccordionItem key={i} value={`faq-${i}`} className="border-b border-border/60">
                     <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
                       {faq.domanda}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                      {faq.risposta}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* FAQ costo mantenimento */}
+        <section className="py-20 md:py-28" style={{ background: 'hsl(210 22% 96%)' }}>
+          <div className="container-section">
+            <AnimatedSection className="text-center mb-14">
+              <div className="section-divider" />
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
+                Domande frequenti sul costo di un sito web
+              </h2>
+            </AnimatedSection>
+
+            <AnimatedSection className="max-w-3xl mx-auto" delay={0.15}>
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  { domanda: 'Quanto costa mantenere un sito web aziendale?', risposta: 'Il costo di mantenimento dipende da hosting, dominio ed eventuali aggiornamenti. In molti casi si tratta di cifre contenute, ma è importante garantire che il sito resti aggiornato e funzionante nel tempo.' },
+                  { domanda: 'Ci sono costi nascosti nella realizzazione di un sito?', risposta: 'Un progetto serio è sempre chiaro fin dall\'inizio. I costi possono variare solo in base a richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente.' },
+                  { domanda: 'Quanto dura un sito web aziendale?', risposta: 'Un sito ben realizzato può durare diversi anni. Tuttavia, è normale aggiornarlo nel tempo per mantenerlo efficace e al passo con le esigenze dell\'azienda.' },
+                  { domanda: 'Meglio spendere poco o investire di più?', risposta: 'Un sito economico può sembrare conveniente all\'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l\'azienda.' },
+                ].map((faq, i) => (
+                  <AccordionItem key={i} value={`faq-costo-${i}`} className="border-b border-border/60">
+                    <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
+                      <h3 className="text-base font-semibold">{faq.domanda}</h3>
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
                       {faq.risposta}
