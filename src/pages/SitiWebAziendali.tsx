@@ -3,9 +3,10 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-import { Building2, TrendingUp, Layers, Settings, Award, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Building2, TrendingUp, Layers, Settings, Award, ArrowRight, CheckCircle2, Globe, LayoutTemplate, Wrench, ChevronDown } from 'lucide-react';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import mockupImg from '@/assets/aziendali-mockup.jpg';
 import teamImg from '@/assets/aziendali-team.jpg';
 
@@ -20,19 +21,59 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web aziendali strutturati e multipagina | 4weblab</title>
+        <title>Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
+          content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti web aziendali strutturati e multipagina | 4weblab" />
-        <meta property="og:description" content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
+        <meta property="og:title" content="Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab" />
+        <meta property="og:description" content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quanto tempo serve per realizzare un sito web aziendale?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere sviluppato e ottimizzato correttamente."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Serve davvero un sito web per un'azienda oggi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare un'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual è la differenza tra sito vetrina e sito aziendale?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Un sito vetrina è più semplice e ha poche pagine, mentre un sito aziendale è strutturato per presentare in modo completo servizi, competenze e valore dell'azienda."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso aggiornare il sito in autonomia?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sì, il sito può essere progettato in modo da permettere aggiornamenti semplici senza dover intervenire sul codice."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -43,12 +84,12 @@ const SitiWebAziendali = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti web aziendali strutturati e multipagina
+                Siti web aziendali professionali, strutturati e multipagina
               </h1>
-              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Realizziamo siti web per aziende in tutta Italia, con architetture strutturate, scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo per consolidare la presenza online della tua impresa.
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
-                Contattaci ora
+                Richiedi una valutazione gratuita
                 <ArrowRight className="w-4 h-4" />
               </button>
             </AnimatedSection>
@@ -173,12 +214,130 @@ const SitiWebAziendali = () => {
                     sui motori di ricerca, migliorano l'esperienza utente e permettono di aggiungere nuove sezioni
                     senza compromettere la coerenza complessiva.
                   </p>
-                  <p>
+                  <p className="mb-6">
                     La scalabilità è al centro del nostro approccio: ogni sito è pensato per accompagnare
                     la crescita dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
                   </p>
+                  <p>
+                    Se la tua attività opera sul territorio, scopri anche il nostro servizio di{' '}
+                    <Link to="/realizzazione-siti-web-padova" className="text-accent font-semibold link-underline">
+                      realizzazione siti web a Padova
+                    </Link>.
+                  </p>
                 </AnimatedSection>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Quanto costa un sito web aziendale */}
+        <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <TrendingUp className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Quanto costa un sito web aziendale</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
+                <p>
+                  Il costo di un sito web aziendale dipende da struttura, contenuti e obiettivi. Ogni progetto di realizzazione siti web aziendali viene sviluppato su misura per creare uno strumento utile e concreto per l'azienda.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-10" staggerDelay={0.1}>
+                {[
+                  {
+                    icon: Globe,
+                    label: 'Base',
+                    title: 'Sito base',
+                    description: 'Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.',
+                  },
+                  {
+                    icon: LayoutTemplate,
+                    label: 'Intermedio',
+                    title: 'Sito aziendale strutturato',
+                    description: 'Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.',
+                  },
+                  {
+                    icon: Wrench,
+                    label: 'Avanzato',
+                    title: 'Progetto su misura',
+                    description: 'Soluzione personalizzata in base agli obiettivi dell\'azienda, con funzionalità specifiche e sviluppo dedicato.',
+                  },
+                ].map((item, index) => (
+                  <StaggerItem key={index}>
+                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-10 border border-border/50 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-card-hover)]">
+                      <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">{item.label}</span>
+                      <div className="icon-box w-16 h-16 mx-auto mb-5">
+                        <item.icon className="w-7 h-7 text-accent-foreground" />
+                      </div>
+                      <h3 className="font-bold text-lg text-foreground mb-3">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <AnimatedSection className="text-center" delay={0.3}>
+                <p className="text-muted-foreground mb-6">
+                  Se desideri capire quale soluzione è più adatta alla tua attività, puoi richiedere una valutazione senza impegno.
+                </p>
+                <button
+                  onClick={handleContactClick}
+                  className="btn-primary inline-flex items-center gap-2.5 px-10 py-5 text-base"
+                >
+                  Richiedi una valutazione gratuita
+                  <ArrowRight className="w-5 h-5" />
+                </button>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Domande frequenti sui siti web aziendali */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-3xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sui siti web aziendali</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-8">Risposte rapide alle domande più comuni sui siti web aziendali</p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      question: 'Quanto tempo serve per realizzare un sito web aziendale?',
+                      answer: 'Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere sviluppato e ottimizzato correttamente.',
+                    },
+                    {
+                      question: 'Serve davvero un sito web per un\'azienda oggi?',
+                      answer: 'Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare un\'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità.',
+                    },
+                    {
+                      question: 'Qual è la differenza tra sito vetrina e sito aziendale?',
+                      answer: 'Un sito vetrina è più semplice e ha poche pagine, mentre un sito aziendale è strutturato per presentare in modo completo servizi, competenze e valore dell\'azienda.',
+                    },
+                    {
+                      question: 'Posso aggiornare il sito in autonomia?',
+                      answer: 'Sì, il sito può essere progettato in modo da permettere aggiornamenti semplici senza dover intervenire sul codice.',
+                    },
+                  ].map((faq, index) => (
+                    <AccordionItem key={index} value={`faq-${index}`} className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6">
+                      <AccordionTrigger className="text-left py-5 hover:no-underline">
+                        <h3 className="font-semibold text-foreground text-base pr-4">{faq.question}</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
             </div>
           </div>
         </section>

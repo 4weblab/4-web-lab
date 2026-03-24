@@ -37,11 +37,12 @@ const QuantoCostaSitoWeb = () => {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             "mainEntity": [
-              { "@type": "Question", "name": "Quanto costa un sito vetrina?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dal numero di pagine e dalla struttura, ma mediamente tra 900€ e 1500€." } },
-              { "@type": "Question", "name": "Quanto costa rifare un sito esistente?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende da quanto è recuperabile. In molti casi conviene ripartire da zero." } },
-              { "@type": "Question", "name": "Quanto tempo serve per realizzare un sito web?", "acceptedAnswer": { "@type": "Answer", "text": "Da pochi giorni per una soluzione semplice a diverse settimane per progetti più strutturati." } },
-              { "@type": "Question", "name": "È meglio acquistare o noleggiare un sito?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dal budget e dagli obiettivi. Il noleggio permette di partire subito senza investimento iniziale." } },
-              { "@type": "Question", "name": "Perché alcuni siti costano così poco?", "acceptedAnswer": { "@type": "Answer", "text": "Perché spesso sono template standard senza strategia, contenuti o ottimizzazione." } }
+              { "@type": "Question", "name": "Quanto costa un sito web aziendale in Italia?", "acceptedAnswer": { "@type": "Answer", "text": "Il costo di un sito web aziendale in Italia varia in base a struttura, contenuti e obiettivi. Un sito semplice può partire da alcune centinaia di euro, mentre un sito aziendale strutturato richiede un investimento più alto per garantire qualità e risultati." } },
+              { "@type": "Question", "name": "Quanto costa mantenere un sito web aziendale?", "acceptedAnswer": { "@type": "Answer", "text": "I costi di mantenimento includono hosting, dominio ed eventuali aggiornamenti. In molti casi sono contenuti, ma è fondamentale mantenere il sito aggiornato e funzionante nel tempo." } },
+              { "@type": "Question", "name": "Ci sono costi nascosti nella realizzazione di un sito web?", "acceptedAnswer": { "@type": "Answer", "text": "Un progetto professionale è sempre chiaro fin dall'inizio. I costi possono variare solo in caso di richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente." } },
+              { "@type": "Question", "name": "Quanto tempo serve per realizzare un sito web aziendale?", "acceptedAnswer": { "@type": "Answer", "text": "Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere progettato e sviluppato in modo efficace." } },
+              { "@type": "Question", "name": "Quanto dura un sito web aziendale nel tempo?", "acceptedAnswer": { "@type": "Answer", "text": "Un sito ben realizzato può durare diversi anni. È comunque importante aggiornarlo periodicamente per mantenerlo efficace e in linea con le esigenze dell'azienda." } },
+              { "@type": "Question", "name": "Conviene spendere poco o investire in un sito web?", "acceptedAnswer": { "@type": "Answer", "text": "Un sito economico può sembrare conveniente all'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l'azienda nel tempo." } }
             ]
           })}
         </script>
@@ -93,7 +94,7 @@ const QuantoCostaSitoWeb = () => {
                 className="btn-primary text-lg px-12 py-5 shadow-lg"
                 style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}
                 aria-label="Richiedi un preventivo gratuito">
-                Richiedi un preventivo gratuito
+                Richiedi una valutazione gratuita
               </button>
             </AnimatedSection>
           </div>
@@ -117,6 +118,12 @@ const QuantoCostaSitoWeb = () => {
               </p>
               <p className="text-base text-muted-foreground text-balance leading-relaxed">
                 Qui sotto trovi i prezzi reali che si vedono oggi sul mercato, senza numeri gonfiati e senza promesse inutili.
+              </p>
+              <p className="text-base text-muted-foreground text-balance leading-relaxed mt-6">
+                Se cerchi una soluzione completa, puoi approfondire anche i nostri{' '}
+                <Link to="/siti-web-aziendali" className="text-accent font-semibold link-underline">
+                  siti web aziendali professionali
+                </Link>.
               </p>
             </AnimatedSection>
           </div>
@@ -175,6 +182,29 @@ const QuantoCostaSitoWeb = () => {
                 </div>
               </div>
               <p className="text-center text-sm text-muted-foreground mt-8">I prezzi possono variare in base alla complessità del progetto, ai contenuti e al livello di personalizzazione.</p>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Esempio reale */}
+        <section className="py-24 md:py-32" style={{ background: 'hsl(210 22% 94%)' }}>
+          <div className="container-section">
+            <AnimatedSection className="max-w-2xl mx-auto">
+              <div className="rounded-2xl p-10 md:p-16 bg-card" style={{ border: '1px solid hsl(210 30% 85%)', boxShadow: '0 12px 40px -8px hsl(210 73% 15% / 0.12), 0 4px 12px -4px hsl(207 90% 54% / 0.08)' }}>
+                <span className="inline-block text-xs font-extrabold tracking-[0.2em] uppercase mb-6 px-4 py-1.5 rounded-full bg-accent/15 text-accent">Esempio reale</span>
+                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
+                  Quanto può costare davvero un sito aziendale
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Per fare un esempio concreto, un sito aziendale con più pagine, struttura chiara e contenuti ben organizzati può richiedere un investimento nell'ordine delle migliaia di euro.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-12">
+                  Questo perché non si tratta solo di "avere un sito", ma di progettare uno strumento che rappresenti l'azienda e lavori nel tempo.
+                </p>
+                <p className="text-xl md:text-2xl font-bold text-foreground text-center leading-snug">
+                  La differenza non è nel prezzo, ma nel risultato che ottieni.
+                </p>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -353,24 +383,23 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Domande frequenti sul costo dei siti web
+                Domande frequenti sul costo di un sito web aziendale
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              </p>
             </AnimatedSection>
 
             <AnimatedSection className="max-w-3xl mx-auto" delay={0.15}>
               <Accordion type="single" collapsible className="w-full">
                 {[
-                  { domanda: 'Quanto costa un sito vetrina?', risposta: 'Dipende dal numero di pagine e dalla struttura, ma mediamente tra 900€ e 1.500€.' },
-                  { domanda: 'Quanto costa rifare un sito esistente?', risposta: 'Dipende da quanto è recuperabile. In molti casi conviene ripartire da zero.' },
-                  { domanda: 'Quanto tempo serve per realizzare un sito web?', risposta: 'Da pochi giorni per una soluzione semplice a diverse settimane per progetti più strutturati.' },
-                  { domanda: 'È meglio acquistare o noleggiare un sito?', risposta: 'Dipende dal budget e dagli obiettivi. Il noleggio permette di partire subito senza investimento iniziale.' },
-                  { domanda: 'Perché alcuni siti costano così poco?', risposta: 'Perché spesso sono template standard senza strategia, contenuti o ottimizzazione.' },
+                  { domanda: 'Quanto costa un sito web aziendale in Italia?', risposta: 'Il costo di un sito web aziendale in Italia varia in base a struttura, contenuti e obiettivi. Un sito semplice può partire da alcune centinaia di euro, mentre un sito aziendale strutturato richiede un investimento più alto per garantire qualità e risultati.' },
+                  { domanda: 'Quanto costa mantenere un sito web aziendale?', risposta: 'I costi di mantenimento includono hosting, dominio ed eventuali aggiornamenti. In molti casi sono contenuti, ma è fondamentale mantenere il sito aggiornato e funzionante nel tempo.' },
+                  { domanda: 'Ci sono costi nascosti nella realizzazione di un sito web?', risposta: 'Un progetto professionale è sempre chiaro fin dall\'inizio. I costi possono variare solo in caso di richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente.' },
+                  { domanda: 'Quanto tempo serve per realizzare un sito web aziendale?', risposta: 'Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere progettato e sviluppato in modo efficace.' },
+                  { domanda: 'Quanto dura un sito web aziendale nel tempo?', risposta: 'Un sito ben realizzato può durare diversi anni. È comunque importante aggiornarlo periodicamente per mantenerlo efficace e in linea con le esigenze dell\'azienda.' },
+                  { domanda: 'Conviene spendere poco o investire in un sito web?', risposta: 'Un sito economico può sembrare conveniente all\'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l\'azienda nel tempo.' },
                 ].map((faq, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="border-b border-border/60">
                     <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
-                      {faq.domanda}
+                      <h3 className="text-base font-semibold">{faq.domanda}</h3>
                     </AccordionTrigger>
                     <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
                       {faq.risposta}
