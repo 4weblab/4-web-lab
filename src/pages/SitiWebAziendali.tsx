@@ -86,10 +86,10 @@ const SitiWebAziendali = () => {
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti web aziendali professionali, strutturati e multipagina
               </h1>
-              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Realizziamo siti web per aziende in tutta Italia, con architetture strutturate, scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo per consolidare la presenza online della tua impresa.
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
-                Contattaci ora
+                Richiedi una valutazione gratuita
                 <ArrowRight className="w-4 h-4" />
               </button>
             </AnimatedSection>
