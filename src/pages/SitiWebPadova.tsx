@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -8,6 +8,7 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/Ani
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 
 const SitiWebPadova = () => {
+  const navigate = useNavigate();
   const handleContactClick = () => {
     window.location.href = '/#contatti';
   };
@@ -145,7 +146,7 @@ const SitiWebPadova = () => {
                 }].
                 map((card, index) =>
                 <StaggerItem key={index}>
-                    <div className="card-elevated h-full flex flex-col">
+                    <div className={`card-elevated h-full flex flex-col ${card.link ? 'cursor-pointer' : ''}`} onClick={card.link ? () => navigate(card.link!) : undefined}>
                       <h3 className="heading-3 mb-3">{card.title}</h3>
                       <p className="text-muted-foreground body-base mb-6 flex-1">{card.description}</p>
                       {card.link &&
