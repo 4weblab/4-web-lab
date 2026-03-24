@@ -214,9 +214,15 @@ const SitiWebAziendali = () => {
                     sui motori di ricerca, migliorano l'esperienza utente e permettono di aggiungere nuove sezioni
                     senza compromettere la coerenza complessiva.
                   </p>
-                  <p>
+                  <p className="mb-6">
                     La scalabilità è al centro del nostro approccio: ogni sito è pensato per accompagnare
                     la crescita dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
+                  </p>
+                  <p>
+                    Se la tua attività opera sul territorio, scopri anche il nostro servizio di{' '}
+                    <Link to="/realizzazione-siti-web-padova" className="text-accent font-semibold link-underline">
+                      realizzazione siti web a Padova
+                    </Link>.
                   </p>
                 </AnimatedSection>
               </div>
