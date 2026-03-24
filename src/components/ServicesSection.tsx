@@ -49,6 +49,7 @@ const services = [
 
 const ServicesSection = () => {
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
