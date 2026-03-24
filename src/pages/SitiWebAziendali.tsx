@@ -34,6 +34,46 @@ const SitiWebAziendali = () => {
         <meta property="og:description" content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Quanto tempo serve per realizzare un sito web aziendale?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere sviluppato e ottimizzato correttamente."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Serve davvero un sito web per un'azienda oggi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare un'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Qual è la differenza tra sito vetrina e sito aziendale?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Un sito vetrina è più semplice e ha poche pagine, mentre un sito aziendale è strutturato per presentare in modo completo servizi, competenze e valore dell'azienda."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Posso aggiornare il sito in autonomia?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Sì, il sito può essere progettato in modo da permettere aggiornamenti semplici senza dover intervenire sul codice."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
