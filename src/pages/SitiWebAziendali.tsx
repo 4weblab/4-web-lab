@@ -20,10 +20,10 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web aziendali strutturati e multipagina | 4weblab</title>
+        <title>Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
+          content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
