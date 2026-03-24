@@ -1,4 +1,5 @@
 import { Globe, Palette, BarChart3, Wrench, RefreshCw, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useIsMobile } from '@/hooks/use-mobile';
@@ -9,9 +10,10 @@ import { motion } from 'framer-motion';
 const services = [
   {
     icon: Globe,
-    title: 'Siti web professionali',
+    title: 'Siti web aziendali professionali',
     description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. ',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
+    link: '/siti-web-aziendali',
   },
   {
     icon: Palette,
@@ -47,6 +49,7 @@ const services = [
 
 const ServicesSection = () => {
   const isMobile = useIsMobile();
+  const navigate = useNavigate();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
@@ -136,7 +139,10 @@ const ServicesSection = () => {
                     key={index}
                     className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 pl-4 first:pl-0 md:first:pl-4"
                   >
-                    <article className="card-glass flex flex-col h-full group hover:-translate-y-2 transition-all duration-400 mx-2">
+                    <article
+                      className={`card-glass flex flex-col h-full group hover:-translate-y-2 transition-all duration-400 mx-2${service.link ? ' cursor-pointer' : ''}`}
+                      onClick={service.link ? () => navigate(service.link!) : undefined}
+                    >
                       <div className="icon-box w-13 h-13 rounded-xl mb-6 transition-all duration-300 group-hover:scale-110">
                         <service.icon className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
                       </div>
