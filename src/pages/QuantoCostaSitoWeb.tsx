@@ -383,54 +383,21 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Domande frequenti sul costo dei siti web
+                Domande frequenti sul costo di un sito web aziendale
               </h2>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
-              </p>
             </AnimatedSection>
 
             <AnimatedSection className="max-w-3xl mx-auto" delay={0.15}>
               <Accordion type="single" collapsible className="w-full">
                 {[
-                  { domanda: 'Quanto costa un sito vetrina?', risposta: 'Dipende dal numero di pagine e dalla struttura, ma mediamente tra 900€ e 1.500€.' },
-                  { domanda: 'Quanto costa rifare un sito esistente?', risposta: 'Dipende da quanto è recuperabile. In molti casi conviene ripartire da zero.' },
-                  { domanda: 'Quanto tempo serve per realizzare un sito web?', risposta: 'Da pochi giorni per una soluzione semplice a diverse settimane per progetti più strutturati.' },
-                  { domanda: 'È meglio acquistare o noleggiare un sito?', risposta: 'Dipende dal budget e dagli obiettivi. Il noleggio permette di partire subito senza investimento iniziale.' },
-                  { domanda: 'Perché alcuni siti costano così poco?', risposta: 'Perché spesso sono template standard senza strategia, contenuti o ottimizzazione.' },
+                  { domanda: 'Quanto costa un sito web aziendale in Italia?', risposta: 'Il costo di un sito web aziendale in Italia varia in base a struttura, contenuti e obiettivi. Un sito semplice può partire da alcune centinaia di euro, mentre un sito aziendale strutturato richiede un investimento più alto per garantire qualità e risultati.' },
+                  { domanda: 'Quanto costa mantenere un sito web aziendale?', risposta: 'I costi di mantenimento includono hosting, dominio ed eventuali aggiornamenti. In molti casi sono contenuti, ma è fondamentale mantenere il sito aggiornato e funzionante nel tempo.' },
+                  { domanda: 'Ci sono costi nascosti nella realizzazione di un sito web?', risposta: 'Un progetto professionale è sempre chiaro fin dall\'inizio. I costi possono variare solo in caso di richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente.' },
+                  { domanda: 'Quanto tempo serve per realizzare un sito web aziendale?', risposta: 'Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere progettato e sviluppato in modo efficace.' },
+                  { domanda: 'Quanto dura un sito web aziendale nel tempo?', risposta: 'Un sito ben realizzato può durare diversi anni. È comunque importante aggiornarlo periodicamente per mantenerlo efficace e in linea con le esigenze dell\'azienda.' },
+                  { domanda: 'Conviene spendere poco o investire in un sito web?', risposta: 'Un sito economico può sembrare conveniente all\'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l\'azienda nel tempo.' },
                 ].map((faq, i) => (
                   <AccordionItem key={i} value={`faq-${i}`} className="border-b border-border/60">
-                    <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
-                      {faq.domanda}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
-                      {faq.risposta}
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
-            </AnimatedSection>
-          </div>
-        </section>
-
-        {/* FAQ costo mantenimento */}
-        <section className="py-20 md:py-28" style={{ background: 'hsl(210 22% 96%)' }}>
-          <div className="container-section">
-            <AnimatedSection className="text-center mb-14">
-              <div className="section-divider" />
-              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Domande frequenti sul costo di un sito web
-              </h2>
-            </AnimatedSection>
-
-            <AnimatedSection className="max-w-3xl mx-auto" delay={0.15}>
-              <Accordion type="single" collapsible className="w-full">
-                {[
-                  { domanda: 'Quanto costa mantenere un sito web aziendale?', risposta: 'Il costo di mantenimento dipende da hosting, dominio ed eventuali aggiornamenti. In molti casi si tratta di cifre contenute, ma è importante garantire che il sito resti aggiornato e funzionante nel tempo.' },
-                  { domanda: 'Ci sono costi nascosti nella realizzazione di un sito?', risposta: 'Un progetto serio è sempre chiaro fin dall\'inizio. I costi possono variare solo in base a richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente.' },
-                  { domanda: 'Quanto dura un sito web aziendale?', risposta: 'Un sito ben realizzato può durare diversi anni. Tuttavia, è normale aggiornarlo nel tempo per mantenerlo efficace e al passo con le esigenze dell\'azienda.' },
-                  { domanda: 'Meglio spendere poco o investire di più?', risposta: 'Un sito economico può sembrare conveniente all\'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l\'azienda.' },
-                ].map((faq, i) => (
-                  <AccordionItem key={i} value={`faq-costo-${i}`} className="border-b border-border/60">
                     <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
                       <h3 className="text-base font-semibold">{faq.domanda}</h3>
                     </AccordionTrigger>
