@@ -239,31 +239,35 @@ const SitiWebAziendali = () => {
                   Il costo di un sito web aziendale dipende da struttura, contenuti e obiettivi. Ogni progetto di realizzazione siti web aziendali viene sviluppato su misura per creare uno strumento utile e concreto per l'azienda.
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-10" staggerDelay={0.1}>
                 {[
                   {
                     icon: Globe,
+                    label: 'Base',
                     title: 'Sito base',
                     description: 'Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.',
                   },
                   {
                     icon: LayoutTemplate,
+                    label: 'Intermedio',
                     title: 'Sito aziendale strutturato',
                     description: 'Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.',
                   },
                   {
                     icon: Wrench,
+                    label: 'Avanzato',
                     title: 'Progetto su misura',
                     description: 'Soluzione personalizzata in base agli obiettivi dell\'azienda, con funzionalità specifiche e sviluppo dedicato.',
                   },
                 ].map((item, index) => (
                   <StaggerItem key={index}>
-                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-8">
-                      <div className="icon-box w-12 h-12 mx-auto mb-4">
-                        <item.icon className="w-5 h-5 text-accent-foreground" />
+                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-10 border border-border/50 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-card-hover)]">
+                      <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">{item.label}</span>
+                      <div className="icon-box w-16 h-16 mx-auto mb-5">
+                        <item.icon className="w-7 h-7 text-accent-foreground" />
                       </div>
-                      <h3 className="font-bold text-foreground mb-3">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h3 className="font-bold text-lg text-foreground mb-3">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                     </div>
                   </StaggerItem>
                 ))}
