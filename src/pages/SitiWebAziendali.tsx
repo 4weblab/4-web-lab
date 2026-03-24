@@ -20,17 +20,17 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web aziendali strutturati e multipagina | 4weblab</title>
+        <title>Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
+          content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti web aziendali strutturati e multipagina | 4weblab" />
-        <meta property="og:description" content="Realizziamo siti web aziendali strutturati e multipagina per aziende e PMI in tutta Italia. Architetture scalabili, design professionale e ottimizzazione SEO." />
+        <meta property="og:title" content="Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab" />
+        <meta property="og:description" content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
@@ -43,7 +43,7 @@ const SitiWebAziendali = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti web aziendali strutturati e multipagina
+                Siti web aziendali professionali, strutturati e multipagina
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Realizziamo siti web per aziende in tutta Italia, con architetture strutturate, scalabili e orientate alla crescita. Un sito web aziendale ben progettato è il primo passo per consolidare la presenza online della tua impresa.
               </p>
