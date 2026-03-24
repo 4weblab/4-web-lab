@@ -298,6 +298,9 @@ const SitiWebAziendali = () => {
                 </div>
                 <h2 className="heading-2">Domande frequenti sui siti web aziendali</h2>
               </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-8">Risposte rapide alle domande più comuni sui siti web aziendali</p>
+              </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <Accordion type="single" collapsible className="space-y-3">
                   {[
