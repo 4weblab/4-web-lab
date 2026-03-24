@@ -118,6 +118,12 @@ const QuantoCostaSitoWeb = () => {
               <p className="text-base text-muted-foreground text-balance leading-relaxed">
                 Qui sotto trovi i prezzi reali che si vedono oggi sul mercato, senza numeri gonfiati e senza promesse inutili.
               </p>
+              <p className="text-base text-muted-foreground text-balance leading-relaxed mt-6">
+                Se cerchi una soluzione completa, puoi approfondire anche i nostri{' '}
+                <Link to="/siti-web-aziendali" className="text-accent font-semibold link-underline">
+                  siti web aziendali professionali
+                </Link>.
+              </p>
             </AnimatedSection>
           </div>
         </section>
