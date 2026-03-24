@@ -224,6 +224,111 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
+        {/* Quanto costa un sito web aziendale */}
+        <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <TrendingUp className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Quanto costa un sito web aziendale</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
+                <p>
+                  Il costo di un sito web aziendale dipende da struttura, contenuti e obiettivi. Ogni progetto di realizzazione siti web aziendali viene sviluppato su misura per creare uno strumento utile e concreto per l'azienda.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10" staggerDelay={0.1}>
+                {[
+                  {
+                    icon: Globe,
+                    title: 'Sito base',
+                    description: 'Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.',
+                  },
+                  {
+                    icon: LayoutTemplate,
+                    title: 'Sito aziendale strutturato',
+                    description: 'Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.',
+                  },
+                  {
+                    icon: Wrench,
+                    title: 'Progetto su misura',
+                    description: 'Soluzione personalizzata in base agli obiettivi dell\'azienda, con funzionalità specifiche e sviluppo dedicato.',
+                  },
+                ].map((item, index) => (
+                  <StaggerItem key={index}>
+                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-8">
+                      <div className="icon-box w-12 h-12 mx-auto mb-4">
+                        <item.icon className="w-5 h-5 text-accent-foreground" />
+                      </div>
+                      <h3 className="font-bold text-foreground mb-3">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </div>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <AnimatedSection className="text-center" delay={0.3}>
+                <p className="text-muted-foreground mb-6">
+                  Se desideri capire quale soluzione è più adatta alla tua attività, puoi richiedere una valutazione senza impegno.
+                </p>
+                <button
+                  onClick={handleContactClick}
+                  className="btn-primary inline-flex items-center gap-2 px-8 py-4"
+                >
+                  Richiedi una valutazione
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Domande frequenti sui siti web aziendali */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-3xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sui siti web aziendali</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      question: 'Quanto tempo serve per realizzare un sito web aziendale?',
+                      answer: 'Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere sviluppato e ottimizzato correttamente.',
+                    },
+                    {
+                      question: 'Serve davvero un sito web per un\'azienda oggi?',
+                      answer: 'Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare un\'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità.',
+                    },
+                    {
+                      question: 'Qual è la differenza tra sito vetrina e sito aziendale?',
+                      answer: 'Un sito vetrina è più semplice e ha poche pagine, mentre un sito aziendale è strutturato per presentare in modo completo servizi, competenze e valore dell\'azienda.',
+                    },
+                    {
+                      question: 'Posso aggiornare il sito in autonomia?',
+                      answer: 'Sì, il sito può essere progettato in modo da permettere aggiornamenti semplici senza dover intervenire sul codice.',
+                    },
+                  ].map((faq, index) => (
+                    <AccordionItem key={index} value={`faq-${index}`} className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6">
+                      <AccordionTrigger className="text-left py-5 hover:no-underline">
+                        <h3 className="font-semibold text-foreground text-base pr-4">{faq.question}</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* Il nostro metodo */}
         <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
           <div className="container-section">
