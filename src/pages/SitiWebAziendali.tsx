@@ -239,31 +239,35 @@ const SitiWebAziendali = () => {
                   Il costo di un sito web aziendale dipende da struttura, contenuti e obiettivi. Ogni progetto di realizzazione siti web aziendali viene sviluppato su misura per creare uno strumento utile e concreto per l'azienda.
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-6 mb-10" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-10" staggerDelay={0.1}>
                 {[
                   {
                     icon: Globe,
+                    label: 'Base',
                     title: 'Sito base',
                     description: 'Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.',
                   },
                   {
                     icon: LayoutTemplate,
+                    label: 'Intermedio',
                     title: 'Sito aziendale strutturato',
                     description: 'Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.',
                   },
                   {
                     icon: Wrench,
+                    label: 'Avanzato',
                     title: 'Progetto su misura',
                     description: 'Soluzione personalizzata in base agli obiettivi dell\'azienda, con funzionalità specifiche e sviluppo dedicato.',
                   },
                 ].map((item, index) => (
                   <StaggerItem key={index}>
-                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-8">
-                      <div className="icon-box w-12 h-12 mx-auto mb-4">
-                        <item.icon className="w-5 h-5 text-accent-foreground" />
+                    <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-10 border border-border/50 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-card-hover)]">
+                      <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">{item.label}</span>
+                      <div className="icon-box w-16 h-16 mx-auto mb-5">
+                        <item.icon className="w-7 h-7 text-accent-foreground" />
                       </div>
-                      <h3 className="font-bold text-foreground mb-3">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                      <h3 className="font-bold text-lg text-foreground mb-3">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                     </div>
                   </StaggerItem>
                 ))}
@@ -274,10 +278,10 @@ const SitiWebAziendali = () => {
                 </p>
                 <button
                   onClick={handleContactClick}
-                  className="btn-primary inline-flex items-center gap-2 px-8 py-4"
+                  className="btn-primary inline-flex items-center gap-2.5 px-10 py-5 text-base"
                 >
-                  Richiedi una valutazione
-                  <ArrowRight className="w-4 h-4" />
+                  Richiedi una valutazione gratuita
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </AnimatedSection>
             </div>
@@ -293,6 +297,9 @@ const SitiWebAziendali = () => {
                   <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h2 className="heading-2">Domande frequenti sui siti web aziendali</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-8">Risposte rapide alle domande più comuni sui siti web aziendali</p>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <Accordion type="single" collapsible className="space-y-3">
