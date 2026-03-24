@@ -415,6 +415,38 @@ const QuantoCostaSitoWeb = () => {
           </div>
         </section>
 
+        {/* FAQ costo mantenimento */}
+        <section className="py-20 md:py-28" style={{ background: 'hsl(210 22% 96%)' }}>
+          <div className="container-section">
+            <AnimatedSection className="text-center mb-14">
+              <div className="section-divider" />
+              <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
+                Domande frequenti sul costo di un sito web
+              </h2>
+            </AnimatedSection>
+
+            <AnimatedSection className="max-w-3xl mx-auto" delay={0.15}>
+              <Accordion type="single" collapsible className="w-full">
+                {[
+                  { domanda: 'Quanto costa mantenere un sito web aziendale?', risposta: 'Il costo di mantenimento dipende da hosting, dominio ed eventuali aggiornamenti. In molti casi si tratta di cifre contenute, ma è importante garantire che il sito resti aggiornato e funzionante nel tempo.' },
+                  { domanda: 'Ci sono costi nascosti nella realizzazione di un sito?', risposta: 'Un progetto serio è sempre chiaro fin dall\'inizio. I costi possono variare solo in base a richieste aggiuntive, ma non dovrebbero esserci sorprese se il lavoro è impostato correttamente.' },
+                  { domanda: 'Quanto dura un sito web aziendale?', risposta: 'Un sito ben realizzato può durare diversi anni. Tuttavia, è normale aggiornarlo nel tempo per mantenerlo efficace e al passo con le esigenze dell\'azienda.' },
+                  { domanda: 'Meglio spendere poco o investire di più?', risposta: 'Un sito economico può sembrare conveniente all\'inizio, ma spesso porta a risultati limitati. Un investimento corretto permette invece di avere uno strumento che lavora davvero per l\'azienda.' },
+                ].map((faq, i) => (
+                  <AccordionItem key={i} value={`faq-costo-${i}`} className="border-b border-border/60">
+                    <AccordionTrigger className="text-left text-foreground text-base py-5 font-semibold">
+                      <h3 className="text-base font-semibold">{faq.domanda}</h3>
+                    </AccordionTrigger>
+                    <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                      {faq.risposta}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* 9 — CTA Finale */}
         <section id="cta-finale" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="noise-overlay" aria-hidden="true">
