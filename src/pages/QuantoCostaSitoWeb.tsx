@@ -93,7 +93,7 @@ const QuantoCostaSitoWeb = () => {
                 className="btn-primary text-lg px-12 py-5 shadow-lg"
                 style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}
                 aria-label="Richiedi un preventivo gratuito">
-                Richiedi un preventivo gratuito
+                Richiedi una valutazione gratuita
               </button>
             </AnimatedSection>
           </div>
