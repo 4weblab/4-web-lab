@@ -1,4 +1,5 @@
 import { Globe, Palette, BarChart3, Wrench, RefreshCw, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
 import { useIsMobile } from '@/hooks/use-mobile';
