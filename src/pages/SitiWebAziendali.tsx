@@ -278,10 +278,10 @@ const SitiWebAziendali = () => {
                 </p>
                 <button
                   onClick={handleContactClick}
-                  className="btn-primary inline-flex items-center gap-2 px-8 py-4"
+                  className="btn-primary inline-flex items-center gap-2.5 px-10 py-5 text-base"
                 >
-                  Richiedi una valutazione
-                  <ArrowRight className="w-4 h-4" />
+                  Richiedi una valutazione gratuita
+                  <ArrowRight className="w-5 h-5" />
                 </button>
               </AnimatedSection>
             </div>
