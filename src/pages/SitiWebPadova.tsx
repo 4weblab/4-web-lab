@@ -8,6 +8,7 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/Ani
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 
 const SitiWebPadova = () => {
+  const navigate = useNavigate();
   const handleContactClick = () => {
     window.location.href = '/#contatti';
   };
