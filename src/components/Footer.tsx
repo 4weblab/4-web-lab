@@ -74,6 +74,15 @@ const Footer = () => {
           <p className="text-primary-foreground/45 text-sm">
             {businessInfo.fullName} — {businessInfo.vatNumber}
           </p>
+          <div className="flex items-center gap-4 mt-1">
+            <Link to="/privacy" className="text-primary-foreground/45 text-sm hover:text-primary-foreground transition-colors duration-300">
+              Privacy Policy
+            </Link>
+            <span className="text-primary-foreground/25">​</span>
+            <Link to="/cookie" className="text-primary-foreground/45 text-sm hover:text-primary-foreground transition-colors duration-300">
+              Cookie Policy
+            </Link>
+          </div>
         </div>
       </div>
     </footer>);

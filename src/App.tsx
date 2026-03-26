@@ -16,6 +16,7 @@ import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import SitoWebBarber from "./pages/SitoWebBarber";
 import ScrollToTop from "./components/ScrollToTop";
+import CookieBanner from "./components/CookieBanner";
 
 const queryClient = new QueryClient();
 
@@ -101,6 +102,7 @@ const App = () => (
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <CookieBanner />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
