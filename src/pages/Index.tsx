@@ -9,7 +9,7 @@ import PricingSection from '@/components/PricingSection';
 import HomeFaqPreview from '@/components/HomeFaqPreview';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
-import CookieBanner from '@/components/CookieBanner';
+
 
 const businessSchema = {
   "@context": "https://schema.org",
