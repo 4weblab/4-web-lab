@@ -319,7 +319,7 @@ export default function ContactFormWeb3Forms() {
 
       <p className="text-xs font-bold text-primary-foreground/50 mt-4 leading-relaxed">
         I dati inseriti verranno trattati e usati unicamente per rispondere alla tua richiesta di contatto (base giuridica: esecuzione di misure precontrattuali – art. 6.1.b GDPR). Titolare del trattamento: 4 Web Lab di Fullin Carlo – P.IVA 05765760284. Maggiori informazioni nella nostra{" "}
-        <Link to="/privacy-policy" className="underline hover:text-primary-foreground/70 transition-colors">Privacy Policy</Link>.
+        <Link to="/privacy" className="underline hover:text-primary-foreground/70 transition-colors">Privacy Policy</Link>.
       </p>
     </form>
   );
