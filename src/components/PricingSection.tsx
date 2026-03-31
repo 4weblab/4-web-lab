@@ -7,7 +7,7 @@ const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione 
 
 const PricingSection = () => {
   return (
-    <section id="prezzi" className="section-padding" style={{ background: 'hsl(210 25% 98%)', scrollMarginTop: 'var(--header-height)' }}>
+    <section id="prezzi" className="section-padding bg-surface-alt" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />

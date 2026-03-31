@@ -14,8 +14,7 @@ const cards = [{
   description: 'Niente template generici: ogni progetto è costruito sulle tue reali necessità.'
 }];
 const AboutSection = () => {
-  return <section id="chi-siamo" className="section-padding" style={{
-    background: 'hsl(210 25% 98%)',
+  return <section id="chi-siamo" className="section-padding bg-surface-alt" style={{
     scrollMarginTop: 'var(--header-height)'
   }}>
       <div className="container-section">
@@ -45,7 +44,7 @@ const AboutSection = () => {
             {cards.map((card, index) => <StaggerItem key={index}>
                 <div className="card-glass flex items-start gap-5 group hover:-translate-y-1.5 transition-all duration-400">
                   <div className="icon-box w-13 h-13 flex-shrink-0">
-                    <card.icon className="w-6 h-6 text-accent-foreground" />
+                    <card.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
                     <h3 className="font-sans font-bold text-lg mb-1.5">{card.title}</h3>

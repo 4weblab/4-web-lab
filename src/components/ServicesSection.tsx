@@ -91,7 +91,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="servizi" className="section-padding" style={{ background: 'hsl(210 25% 98%)', scrollMarginTop: 'var(--header-height)' }}>
+    <section id="servizi" className="section-padding bg-surface-alt" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
         <AnimatedSection className="text-center mb-12 md:mb-16">
           <div className="section-divider" />
@@ -144,7 +144,7 @@ const ServicesSection = () => {
                       onClick={service.link ? () => navigate(service.link!) : undefined}
                     >
                       <div className="icon-box w-13 h-13 rounded-xl mb-6 transition-all duration-300 group-hover:scale-110">
-                        <service.icon className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                        <service.icon className="w-6 h-6 text-white" aria-hidden="true" />
                       </div>
 
                       <h3 className="font-sans font-bold text-xl mb-3">{service.title}</h3>
