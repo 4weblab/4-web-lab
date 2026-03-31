@@ -29,6 +29,16 @@ const SitiWebPadova = () => {
         <meta property="og:description" content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "4weblab – Realizzazione Siti Web Padova",
+          "description": "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
+          "url": "https://4weblab.it/realizzazione-siti-web-padova",
+          "provider": { "@type": "Organization", "name": "4weblab", "url": "https://4weblab.it" },
+          "areaServed": { "@type": "City", "name": "Padova", "containedInPlace": { "@type": "Country", "name": "IT" } },
+          "serviceType": "Web Design"
+        })}</script>
       </Helmet>
 
       <Header satelliteMode />
