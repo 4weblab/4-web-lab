@@ -75,9 +75,8 @@ const RentalSection = () => {
   return (
     <section
       id="noleggio"
-      className="section-padding relative"
-      style={{ scrollMarginTop: 'var(--header-height)' }}
       className="section-padding relative bg-surface-alt-2"
+      style={{ scrollMarginTop: 'var(--header-height)' }}
       aria-labelledby="rental-heading">
       <div id="ancora_noleggio" className="absolute top-0" aria-hidden="true" />
 
