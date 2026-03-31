@@ -409,6 +409,9 @@ const QuantoCostaSitoWeb = () => {
               </Accordion>
             </AnimatedSection>
           </div>
+          <p className="text-center text-muted-foreground text-sm mt-10">
+            <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline">Creare un sito con intelligenza artificiale: conviene davvero nel 2026?</Link> · <Link to="/sito-web-barber" className="text-accent hover:underline">Soluzioni dedicate per barber shop e parrucchieri</Link>
+          </p>
         </section>
 
         {/* 9 — CTA Finale */}

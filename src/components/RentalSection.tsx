@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Check, Monitor, Zap, Briefcase } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -204,6 +205,9 @@ const RentalSection = () => {
             * IVA esclusa · Durata minima 12 mesi<br/>
 * Offerta esclusiva per attività commerciali e professionisti di settore         
    
+          </p>
+          <p className="text-sm text-muted-foreground mt-8 text-center">
+            <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline">Scopri come creare un sito con intelligenza artificiale</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link> · <Link to="/sito-web-barber" className="text-accent hover:underline">Sito web dedicato per barber shop</Link>
           </p>
         </AnimatedSection>
       </div>

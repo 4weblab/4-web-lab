@@ -396,6 +396,9 @@ const SitoWebBarber = () => {
                   Richiedi il tuo sito <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
+              <p className="text-center text-[#4A4A4A] mt-4 text-sm">
+                <Link to="/quanto-costa-sito-web" className="text-[#C8A96A] hover:underline">Scopri tutti i prezzi e pacchetti aggiornati 2026</Link>
+              </p>
             </AnimatedSection>
           </div>
         </section>
@@ -430,6 +433,9 @@ const SitoWebBarber = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+              <p className="text-center text-[#BFBFBF] mt-8 text-sm">
+                <Link to="/creare-sito-con-intelligenza-artificiale" className="text-[#C8A96A] hover:underline">Confronta pro e contro dei siti creati con intelligenza artificiale</Link>
+              </p>
             </AnimatedSection>
           </div>
         </section>
