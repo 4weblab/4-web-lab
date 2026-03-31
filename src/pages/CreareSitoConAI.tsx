@@ -83,7 +83,7 @@ const CreareSitoConAI = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Creare un Sito con l'Intelligenza Artificiale Conviene Davvero?
+                Creare Sito Web con IA 2026: Conviene Davvero?
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
                 Oggi puoi generare un sito in pochi minuti con l'AI. Ma sarà davvero utile per la tua attività?
