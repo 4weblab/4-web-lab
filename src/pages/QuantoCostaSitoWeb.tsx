@@ -81,7 +81,7 @@ const QuantoCostaSitoWeb = () => {
               <h1
                 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-primary-foreground mb-8 text-balance"
                 style={{ textShadow: '0 2px 8px rgba(0,0,0,0.55)', letterSpacing: '-0.03em' }}>
-                Quanto costa un sito web nel 2026?
+                Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida Completa
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto text-balance leading-relaxed" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
                 I prezzi dei siti web possono variare da poche centinaia a diverse migliaia di euro.
