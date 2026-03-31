@@ -322,7 +322,7 @@ const CreareSitoConAI = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center mb-12">
               <h2 className="heading-2 text-primary-foreground mb-6">
-                Vuoi solo una pagina online o uno strumento per lavorare meglio?
+                Vuoi un sito che converte davvero? Ecco la soluzione
               </h2>
               <p className="body-large text-primary-foreground/70 max-w-2xl mx-auto">
                 Se il tuo obiettivo è semplicemente essere online, qualsiasi generatore automatico può creare una pagina.
