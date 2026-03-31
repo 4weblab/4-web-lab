@@ -82,7 +82,7 @@ const SitiWebPadova = () => {
                     <div className="icon-box w-13 h-13">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <h2 className="heading-2">Perché scegliere una realtà con sede a Padova</h2>
+                    <h2 className="heading-2">Perché affidarsi a un’agenzia web con sede a Padova</h2>
                   </div>
                   <p className="body-base text-muted-foreground">
                     Avere un punto di riferimento locale significa poter contare su una comunicazione più diretta, una comprensione profonda del territorio e la possibilità di un confronto anche dal vivo.
