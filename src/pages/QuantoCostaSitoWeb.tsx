@@ -106,7 +106,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
-                Quanto costa davvero realizzare un sito web oggi
+                Quanto costa davvero un sito web nel 2026 (prezzi aggiornati)
               </h2>
               <p className="text-lg text-muted-foreground text-balance mb-6 leading-relaxed">
                 Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì.
@@ -135,7 +135,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Prezzi medi per realizzare un sito web in Italia
+                Prezzi medi in Italia: confronto una tantum vs noleggio
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               </p>
@@ -248,7 +248,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Quale soluzione scegliere davvero
+                I siti creati solo con AI: costi reali e limiti
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               </p>
@@ -362,7 +362,7 @@ const QuantoCostaSitoWeb = () => {
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
-                  Il sito web a noleggio: alternativa all'investimento iniziale
+                  Il nostro modello a noleggio: da 49€/mese tutto incluso
                 </h2>
                 <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
@@ -383,7 +383,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Domande frequenti sul costo di un sito web aziendale
+                Domande frequenti sul costo di un sito web
               </h2>
             </AnimatedSection>
 
