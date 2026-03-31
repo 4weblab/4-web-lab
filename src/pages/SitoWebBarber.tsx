@@ -73,7 +73,7 @@ const SitoWebBarber = () => {
         {/* ─── HERO ─── */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            <img src={barberHero} alt="Interno di un barber shop moderno" loading="eager" className="w-full h-full object-cover" />
+            <img src={barberHero} alt="Sito web per barber shop realizzato da 4weblab – esempio hero" loading="eager" fetchPriority="high" decoding="async" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/45" />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
