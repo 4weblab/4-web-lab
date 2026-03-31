@@ -173,8 +173,7 @@ const FaqSitiWeb = () => {
               <h1
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}>
-
-                Domande Frequenti sulla Realizzazione di Siti Web
+                FAQ Siti Web 2026: Costi, Noleggio, AI e Tempi di Consegna
               </h1>
               <p
                 className="body-large text-primary-foreground/85 max-w-3xl mx-auto text-balance"
