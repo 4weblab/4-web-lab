@@ -38,7 +38,7 @@ const SitiWebProfessionisti = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Realizzazione siti web per professionisti
+                Siti Web per Professionisti e Studi su misura
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">In 4weblab realizziamo siti web per professionisti e studi professionali in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
               </p>
