@@ -49,7 +49,11 @@
     /* Gradients – deep brand */
     --gradient-hero: linear-gradient(145deg, hsl(210 73% 10%) 0%, hsl(210 65% 17%) 50%, hsl(207 55% 24%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(207 90% 54%) 0%, hsl(210 75% 42%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(210 25% 97%) 0%, hsl(210 22% 94%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(210 33% 98%) 0%, hsl(210 28% 95%) 100%);
+
+    /* Section alternating backgrounds */
+    --surface-alt: 210 33% 97%;
+    --surface-alt-2: 213 27% 96%;
     --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.8) 0%, hsla(0, 0%, 100%, 0.4) 100%);
 
     /* Premium Shadows */
