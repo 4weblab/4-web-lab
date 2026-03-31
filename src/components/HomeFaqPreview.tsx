@@ -37,7 +37,7 @@ const HomeFaqPreview = () => {
             <div className="icon-box w-11 h-11">
               <HelpCircle className="w-5 h-5 text-accent-foreground" aria-hidden="true" />
             </div>
-            <h2 className="heading-2">Domande Frequenti</h2>
+            <h2 className="heading-2">Domande frequenti sulla realizzazione siti web</h2>
           </div>
           <p className="body-base text-muted-foreground mb-10 max-w-xl">
             Le domande più comuni su costi, tempi e scelte strategiche per la realizzazione di un sito web.
