@@ -84,7 +84,7 @@ const SitiWebAziendali = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti web aziendali professionali, strutturati e multipagina
+                Siti Web Aziendali Professionali e Multipagina
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
