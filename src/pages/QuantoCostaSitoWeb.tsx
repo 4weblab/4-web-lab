@@ -106,7 +106,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
-                Quanto costa davvero realizzare un sito web oggi
+                Quanto costa davvero un sito web nel 2026 (prezzi aggiornati)
               </h2>
               <p className="text-lg text-muted-foreground text-balance mb-6 leading-relaxed">
                 Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì.
