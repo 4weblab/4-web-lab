@@ -122,7 +122,7 @@ const SitoWebBarber = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection direction="left">
-                <img src={barberIdentity} alt="Identità barber shop online" loading="lazy" className="rounded-2xl w-full object-cover aspect-[4/3]" />
+                <img src={barberIdentity} alt="Esempio sito web barber shop con identità visiva personalizzata da 4weblab" loading="lazy" decoding="async" className="rounded-2xl w-full object-cover aspect-[4/3]" />
               </AnimatedSection>
               <AnimatedSection direction="right" delay={0.15}>
                 <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>Identità</p>
