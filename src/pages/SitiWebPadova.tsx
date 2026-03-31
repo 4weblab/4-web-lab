@@ -16,17 +16,17 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione siti web professionali a Padova | 4weblab</title>
+        <title>Realizzazione Siti Web Padova: Agenzia Locale e Nazionale | 4weblab</title>
         <meta
           name="description"
-          content="Realizzazione siti web professionali a Padova per professionisti, negozi e aziende. Sede operativa a Padova, operativi in tutta Italia." />
+          content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione siti web professionali a Padova | 4weblab" />
-        <meta property="og:description" content="Realizzazione siti web professionali a Padova per professionisti, negozi e aziende. Sede operativa a Padova, operativi in tutta Italia." />
+        <meta property="og:title" content="Realizzazione Siti Web Padova: Agenzia Locale e Nazionale | 4weblab" />
+        <meta property="og:description" content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
