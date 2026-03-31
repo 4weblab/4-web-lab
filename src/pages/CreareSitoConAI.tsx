@@ -110,7 +110,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <Lightbulb className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Cosa fa davvero un sito creato con l'AI</h2>
+                <h2 className="heading-2">Cosa può fare davvero l’intelligenza artificiale nella creazione di un sito</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
