@@ -14,8 +14,7 @@ const cards = [{
   description: 'Niente template generici: ogni progetto è costruito sulle tue reali necessità.'
 }];
 const AboutSection = () => {
-  return <section id="chi-siamo" className="section-padding" style={{
-    background: 'hsl(210 25% 98%)',
+  return <section id="chi-siamo" className="section-padding bg-surface-alt" style={{
     scrollMarginTop: 'var(--header-height)'
   }}>
       <div className="container-section">

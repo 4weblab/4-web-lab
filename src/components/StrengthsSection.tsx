@@ -37,7 +37,7 @@ const strengths = [
 
 const StrengthsSection = () => {
   return (
-    <section id="punti-di-forza" className="section-padding" style={{ background: 'hsl(210 22% 96%)', scrollMarginTop: 'var(--header-height)' }}>
+    <section id="punti-di-forza" className="section-padding bg-surface-alt-2" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
