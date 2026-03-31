@@ -174,9 +174,10 @@ const SitiWebAziendali = () => {
                 <AnimatedSection direction="right">
                   <img
                     src={mockupImg}
-                    alt="Mockup di sito web aziendale multipagina su monitor in ambiente ufficio moderno"
-                    className="rounded-2xl shadow-lg w-full"
-                    loading="lazy" />
+                    alt="Esempio sito web aziendale multipagina realizzato da 4weblab"
+                    className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    decoding="async" />
 
                 </AnimatedSection>
               </div>
