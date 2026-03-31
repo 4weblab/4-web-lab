@@ -15,17 +15,17 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione siti web per professionisti | 4weblab</title>
+        <title>Siti Web per Professionisti e Studi: Realizzazione su Misura | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti." />
+          content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
-        <meta property="og:title" content="Realizzazione siti web per professionisti | 4weblab" />
-        <meta property="og:description" content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti." />
+        <meta property="og:title" content="Siti Web per Professionisti e Studi: Realizzazione su Misura | 4weblab" />
+        <meta property="og:description" content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
       </Helmet>
