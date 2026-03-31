@@ -396,6 +396,9 @@ const SitoWebBarber = () => {
                   Richiedi il tuo sito <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
+              <p className="text-center text-[#4A4A4A] mt-4 text-sm">
+                <Link to="/quanto-costa-sito-web" className="text-[#C8A96A] hover:underline">Scopri tutti i prezzi e pacchetti aggiornati 2026</Link>
+              </p>
             </AnimatedSection>
           </div>
         </section>
