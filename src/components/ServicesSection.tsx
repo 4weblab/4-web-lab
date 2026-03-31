@@ -144,7 +144,7 @@ const ServicesSection = () => {
                       onClick={service.link ? () => navigate(service.link!) : undefined}
                     >
                       <div className="icon-box w-13 h-13 rounded-xl mb-6 transition-all duration-300 group-hover:scale-110">
-                        <service.icon className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                        <service.icon className="w-6 h-6 text-white" aria-hidden="true" />
                       </div>
 
                       <h3 className="font-sans font-bold text-xl mb-3">{service.title}</h3>

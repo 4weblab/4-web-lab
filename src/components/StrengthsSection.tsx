@@ -52,7 +52,7 @@ const StrengthsSection = () => {
             <StaggerItem key={index}>
               <article className="card-glass text-center group hover:-translate-y-2 transition-all duration-400 h-full">
                 <div className="icon-box w-14 h-14 rounded-2xl mx-auto mb-6 transition-all duration-300 group-hover:scale-110">
-                  <strength.icon className="w-7 h-7 text-accent-foreground" aria-hidden="true" />
+                  <strength.icon className="w-7 h-7 text-white" aria-hidden="true" />
                 </div>
                 <h3 className="font-sans font-bold text-lg mb-3">{strength.title}</h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">{strength.description}</p>
