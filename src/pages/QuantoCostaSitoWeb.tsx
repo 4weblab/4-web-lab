@@ -12,16 +12,16 @@ const QuantoCostaSitoWeb = () => {
   return (
     <>
       <Helmet>
-        <title>Quanto costa un sito web nel 2026? Prezzi reali e guida completa | 4 Web Lab</title>
-        <meta name="description" content="Quanto costa davvero un sito web nel 2026? Scopri prezzi reali per aziende e professionisti, differenze tra soluzioni economiche e professionali e come evitare errori. Preventivo gratuito." />
+        <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab</title>
+        <meta name="description" content="Scopri i prezzi reali 2026: da 399€ one-time o 49€/mese noleggio. Fattori che influenzano il costo e perché evitare soluzioni low-cost o solo AI. Preventivo personalizzato gratuito." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/quanto-costa-sito-web" />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/quanto-costa-sito-web" />
-        <meta property="og:title" content="Quanto costa un sito web nel 2026? Prezzi reali e guida completa" />
-        <meta property="og:description" content="Guida chiara ai prezzi dei siti web nel 2026: differenze tra soluzioni economiche e professionali e quanto investire davvero." />
+        <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab" />
+        <meta property="og:description" content="Scopri i prezzi reali 2026: da 399€ one-time o 49€/mese noleggio. Fattori che influenzano il costo e perché evitare soluzioni low-cost o solo AI. Preventivo personalizzato gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
