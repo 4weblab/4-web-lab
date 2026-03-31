@@ -50,8 +50,8 @@ const SitoWebBarber = () => {
   return (
     <>
       <Helmet>
-        <title>Sito Web Barber Shop | Realizzazione Siti per Parrucchieri Uomo</title>
-        <meta name="description" content="Realizziamo siti web per barber shop progettati per portare nuovi clienti. Lavoriamo con barber in tutta Italia." />
+        <title>Siti Web per Barber Shop e Parrucchieri: Realizzazione Professionale | 4weblab</title>
+        <meta name="description" content="Siti web moderni per barberia, parrucchieri e saloni: booking online, galleria foto, SEO locale Padova e Italia. Da 49€/mese con assistenza continua." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/sito-web-barber" />
         <script type="application/ld+json">
