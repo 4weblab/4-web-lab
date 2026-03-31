@@ -302,7 +302,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Domande frequenti sui siti web aziendali</h2>
+                <h2 className="heading-2">Domande frequenti sui siti per imprese</h2>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <p className="text-muted-foreground mb-8">Risposte rapide alle domande più comuni sui siti web aziendali</p>
