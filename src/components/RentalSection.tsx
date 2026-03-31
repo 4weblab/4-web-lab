@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Check, Monitor, Zap, Briefcase } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
