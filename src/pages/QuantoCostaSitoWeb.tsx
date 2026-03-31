@@ -12,16 +12,16 @@ const QuantoCostaSitoWeb = () => {
   return (
     <>
       <Helmet>
-        <title>Quanto costa un sito web nel 2026? Prezzi reali e guida completa | 4 Web Lab</title>
-        <meta name="description" content="Quanto costa davvero un sito web nel 2026? Scopri prezzi reali per aziende e professionisti, differenze tra soluzioni economiche e professionali e come evitare errori. Preventivo gratuito." />
+        <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab</title>
+        <meta name="description" content="Scopri i prezzi reali 2026: da 399€ one-time o 49€/mese noleggio. Fattori che influenzano il costo e perché evitare soluzioni low-cost o solo AI. Preventivo personalizzato gratuito." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/quanto-costa-sito-web" />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/quanto-costa-sito-web" />
-        <meta property="og:title" content="Quanto costa un sito web nel 2026? Prezzi reali e guida completa" />
-        <meta property="og:description" content="Guida chiara ai prezzi dei siti web nel 2026: differenze tra soluzioni economiche e professionali e quanto investire davvero." />
+        <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab" />
+        <meta property="og:description" content="Scopri i prezzi reali 2026: da 399€ one-time o 49€/mese noleggio. Fattori che influenzano il costo e perché evitare soluzioni low-cost o solo AI. Preventivo personalizzato gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -81,7 +81,7 @@ const QuantoCostaSitoWeb = () => {
               <h1
                 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-primary-foreground mb-8 text-balance"
                 style={{ textShadow: '0 2px 8px rgba(0,0,0,0.55)', letterSpacing: '-0.03em' }}>
-                Quanto costa un sito web nel 2026?
+                Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida Completa
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-12 max-w-3xl mx-auto text-balance leading-relaxed" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
                 I prezzi dei siti web possono variare da poche centinaia a diverse migliaia di euro.
@@ -106,7 +106,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
-                Quanto costa davvero realizzare un sito web oggi
+                Quanto costa davvero un sito web nel 2026 (prezzi aggiornati)
               </h2>
               <p className="text-lg text-muted-foreground text-balance mb-6 leading-relaxed">
                 Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì.
@@ -135,7 +135,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Prezzi medi per realizzare un sito web in Italia
+                Prezzi medi in Italia: confronto una tantum vs noleggio
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               </p>
@@ -248,7 +248,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Quale soluzione scegliere davvero
+                I siti creati solo con AI: costi reali e limiti
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               </p>
@@ -362,7 +362,7 @@ const QuantoCostaSitoWeb = () => {
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
-                  Il sito web a noleggio: alternativa all'investimento iniziale
+                  Il nostro modello a noleggio: da 49€/mese tutto incluso
                 </h2>
                 <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
@@ -383,7 +383,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Domande frequenti sul costo di un sito web aziendale
+                Domande frequenti sul costo di un sito web
               </h2>
             </AnimatedSection>
 
@@ -409,6 +409,9 @@ const QuantoCostaSitoWeb = () => {
               </Accordion>
             </AnimatedSection>
           </div>
+          <p className="text-center text-muted-foreground text-sm mt-10">
+            <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline">Creare un sito con intelligenza artificiale: conviene davvero nel 2026?</Link> · <Link to="/sito-web-barber" className="text-accent hover:underline">Soluzioni dedicate per barber shop e parrucchieri</Link>
+          </p>
         </section>
 
         {/* 9 — CTA Finale */}

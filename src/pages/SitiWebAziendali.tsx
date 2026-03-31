@@ -21,17 +21,17 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab</title>
+        <title>Siti Web Aziendali Professionali: Multipagina e Scalabili | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
+          content="Realizziamo siti web aziendali moderni, veloci e ottimizzati per lead generation. Credibilità online garantita per PMI italiane. Pacchetti da 79€/mese o acquisto diretto. Preventivo in 24h." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti web aziendali professionali | Realizzazione siti per imprese | 4weblab" />
-        <meta property="og:description" content="Realizziamo siti web aziendali professionali, strutturati e multipagina per imprese che vogliono presentarsi al meglio online, acquisire contatti e crescere su Google." />
+        <meta property="og:title" content="Siti Web Aziendali Professionali: Multipagina e Scalabili | 4weblab" />
+        <meta property="og:description" content="Realizziamo siti web aziendali moderni, veloci e ottimizzati per lead generation. Credibilità online garantita per PMI italiane. Pacchetti da 79€/mese o acquisto diretto. Preventivo in 24h." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <script type="application/ld+json">
@@ -84,7 +84,7 @@ const SitiWebAziendali = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti web aziendali professionali, strutturati e multipagina
+                Siti Web Aziendali Professionali e Multipagina
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
@@ -174,9 +174,10 @@ const SitiWebAziendali = () => {
                 <AnimatedSection direction="right">
                   <img
                     src={mockupImg}
-                    alt="Mockup di sito web aziendale multipagina su monitor in ambiente ufficio moderno"
-                    className="rounded-2xl shadow-lg w-full"
-                    loading="lazy" />
+                    alt="Esempio sito web aziendale multipagina realizzato da 4weblab"
+                    className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    decoding="async" />
 
                 </AnimatedSection>
               </div>
@@ -198,9 +199,10 @@ const SitiWebAziendali = () => {
                 <AnimatedSection direction="left" className="order-2 md:order-1">
                   <img
                     src={teamImg}
-                    alt="Team che pianifica l'architettura di un sito web aziendale strutturato"
-                    className="rounded-2xl shadow-lg w-full"
-                    loading="lazy" />
+                    alt="Team 4weblab che progetta l'architettura di un sito web aziendale"
+                    className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    decoding="async" />
 
                 </AnimatedSection>
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground order-1 md:order-2" direction="right">
@@ -302,7 +304,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <CheckCircle2 className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Domande frequenti sui siti web aziendali</h2>
+                <h2 className="heading-2">Domande frequenti sui siti per imprese</h2>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <p className="text-muted-foreground mb-8">Risposte rapide alle domande più comuni sui siti web aziendali</p>

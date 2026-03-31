@@ -22,11 +22,16 @@ const Hero = () => {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ background: 'var(--gradient-hero)' }}>
 
-      {/* Background image */}
-      <div
-        className="absolute inset-0 bg-cover bg-left sm:bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-        aria-hidden="true" />
+      {/* Background image — now an <img> for LCP discoverability */}
+      <img
+        src={heroBg}
+        alt="Sito web professionale realizzato da 4weblab per PMI e professionisti"
+        width={1920}
+        height={1080}
+        fetchPriority="high"
+        decoding="async"
+        className="absolute inset-0 w-full h-full object-cover object-left sm:object-center"
+      />
 
       {/* Directional overlay: dark on left, transparent on right */}
       <div
@@ -49,7 +54,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
 
-            Siti web professionali per commercianti, professionisti e piccole medie imprese in tutta Italia
+            Siti Web Professionali su Misura per PMI e Professionisti Da 49€/mese
           </motion.h1>
 
           <motion.p

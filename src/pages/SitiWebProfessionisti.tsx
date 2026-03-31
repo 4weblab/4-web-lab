@@ -15,19 +15,29 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione siti web per professionisti | 4weblab</title>
+        <title>Siti Web per Professionisti e Studi: Realizzazione su Misura | 4weblab</title>
         <meta
           name="description"
-          content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti." />
+          content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
-        <meta property="og:title" content="Realizzazione siti web per professionisti | 4weblab" />
-        <meta property="og:description" content="Realizziamo siti web professionali per professionisti e studi professionali in tutta Italia. Metodo strutturato, lavoro da remoto, risultati concreti." />
+        <meta property="og:title" content="Siti Web per Professionisti e Studi: Realizzazione su Misura | 4weblab" />
+        <meta property="og:description" content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "4weblab – Siti Web per Professionisti",
+          "description": "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
+          "url": "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+          "provider": { "@type": "Organization", "name": "4weblab", "url": "https://4weblab.it" },
+          "areaServed": { "@type": "Country", "name": "IT" },
+          "serviceType": "Web Design for Professionals"
+        })}</script>
       </Helmet>
 
       <Header satelliteMode />
@@ -38,7 +48,7 @@ const SitiWebProfessionisti = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Realizzazione siti web per professionisti
+                Siti Web per Professionisti e Studi su misura
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">In 4weblab realizziamo siti web per professionisti e studi professionali in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
               </p>

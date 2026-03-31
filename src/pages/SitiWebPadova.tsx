@@ -16,19 +16,29 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione siti web professionali a Padova | 4weblab</title>
+        <title>Realizzazione Siti Web Padova: Agenzia Locale e Nazionale | 4weblab</title>
         <meta
           name="description"
-          content="Realizzazione siti web professionali a Padova per professionisti, negozi e aziende. Sede operativa a Padova, operativi in tutta Italia." />
+          content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione siti web professionali a Padova | 4weblab" />
-        <meta property="og:description" content="Realizzazione siti web professionali a Padova per professionisti, negozi e aziende. Sede operativa a Padova, operativi in tutta Italia." />
+        <meta property="og:title" content="Realizzazione Siti Web Padova: Agenzia Locale e Nazionale | 4weblab" />
+        <meta property="og:description" content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "4weblab – Realizzazione Siti Web Padova",
+          "description": "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
+          "url": "https://4weblab.it/realizzazione-siti-web-padova",
+          "provider": { "@type": "Organization", "name": "4weblab", "url": "https://4weblab.it" },
+          "areaServed": { "@type": "City", "name": "Padova", "containedInPlace": { "@type": "Country", "name": "IT" } },
+          "serviceType": "Web Design"
+        })}</script>
       </Helmet>
 
       <Header satelliteMode />
@@ -52,7 +62,7 @@ const SitiWebPadova = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 text-primary-foreground mb-8 text-balance" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}>
-                Realizzazione siti web professionali a Padova
+                Realizzazione Siti Web a Padova – Agenzia Locale e Nazionale
               </h1>
               <p className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
                 Progettiamo e realizziamo siti web per professionisti, negozi e aziende di Padova e provincia, con un metodo strutturato e orientato ai risultati.
@@ -82,7 +92,7 @@ const SitiWebPadova = () => {
                     <div className="icon-box w-13 h-13">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <h2 className="heading-2">Perché scegliere una realtà con sede a Padova</h2>
+                    <h2 className="heading-2">Perché affidarsi a un’agenzia web con sede a Padova</h2>
                   </div>
                   <p className="body-base text-muted-foreground">
                     Avere un punto di riferimento locale significa poter contare su una comunicazione più diretta, una comprensione profonda del territorio e la possibilità di un confronto anche dal vivo.
@@ -121,7 +131,7 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2">Cosa realizziamo per attività e aziende di Padova</h2>
+                <h2 className="heading-2">Servizi web per attività locali, negozi e professionisti di Padova</h2>
               </AnimatedSection>
 
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
@@ -237,7 +247,9 @@ const SitiWebPadova = () => {
                   La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del territorio. Lavoriamo con professionisti, commercianti e aziende della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la solidità di un metodo collaudato a livello nazionale.
                 </p>
                 <p>Che lei operi nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
-
+                </p>
+                <p className="mt-6">
+                  Offriamo anche soluzioni specifiche come la realizzazione di <Link to="/sito-web-barber" className="text-accent hover:underline font-medium">sito web per barber shop a Padova</Link>. Per approfondire i costi, consulta la nostra guida su <Link to="/quanto-costa-sito-web" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, oppure scopri se conviene <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">creare un sito con intelligenza artificiale</Link>.
                 </p>
               </AnimatedSection>
             </div>

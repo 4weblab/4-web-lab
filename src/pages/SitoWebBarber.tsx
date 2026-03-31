@@ -28,12 +28,12 @@ const textShadowSubtle = { textShadow: '0px 0px 2px rgba(245, 230, 200, 0.5), 0p
 const headingStyle = { fontFamily: "'Oswald', sans-serif", ...textShadowSubtle };
 
 const galleryImages = [
-  { src: barberCut, alt: 'Taglio uomo professionale' },
-  { src: barberBeard, alt: 'Barba e rasatura' },
-  { src: barberStyling, alt: 'Styling capelli' },
-  { src: barberGallery, alt: 'Galleria lavori barber' },
-  { src: barberIdentity, alt: 'Interno barber shop' },
-  { src: barberHero, alt: 'Barber shop moderno' },
+  { src: barberCut, alt: 'Esempio taglio uomo professionale su sito web barber shop 4weblab' },
+  { src: barberBeard, alt: 'Servizio barba e rasatura mostrato nel sito web per barberia' },
+  { src: barberStyling, alt: 'Styling capelli nel portfolio sito web barber shop' },
+  { src: barberGallery, alt: 'Galleria lavori barber shop realizzata da 4weblab' },
+  { src: barberIdentity, alt: 'Esempio sito web barber shop con identità visiva personalizzata da 4weblab' },
+  { src: barberHero, alt: 'Sito web per barber shop realizzato da 4weblab – esempio hero' },
 ];
 
 const SitoWebBarber = () => {
@@ -50,8 +50,8 @@ const SitoWebBarber = () => {
   return (
     <>
       <Helmet>
-        <title>Sito Web Barber Shop | Realizzazione Siti per Parrucchieri Uomo</title>
-        <meta name="description" content="Realizziamo siti web per barber shop progettati per portare nuovi clienti. Lavoriamo con barber in tutta Italia." />
+        <title>Siti Web per Barber Shop e Parrucchieri: Realizzazione Professionale | 4weblab</title>
+        <meta name="description" content="Siti web moderni per barberia, parrucchieri e saloni: booking online, galleria foto, SEO locale Padova e Italia. Da 49€/mese con assistenza continua." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/sito-web-barber" />
         <script type="application/ld+json">
@@ -73,7 +73,7 @@ const SitoWebBarber = () => {
         {/* ─── HERO ─── */}
         <section className="relative min-h-screen flex items-center overflow-hidden">
           <div className="absolute inset-0">
-            <img src={barberHero} alt="Interno di un barber shop moderno" loading="eager" className="w-full h-full object-cover" />
+            <img src={barberHero} alt="Sito web per barber shop realizzato da 4weblab – esempio hero" loading="eager" fetchPriority="high" decoding="async" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/75 to-black/45" />
           </div>
           <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 md:py-40 w-full">
@@ -89,7 +89,7 @@ const SitoWebBarber = () => {
               className="text-[3.25rem] sm:text-[4rem] md:text-[5rem] lg:text-[5.5rem] font-bold leading-[0.9] tracking-[-0.03em] max-w-4xl mb-8 text-white"
               style={{ ...headingStyle, textShadow: '0px 2px 12px rgba(0,0,0,0.7), 0px 0px 4px rgba(245,230,200,0.4)' }}
             >
-              Sito Web per Barber Shop che porta nuovi clienti
+              Sito Web per Barber Shop: Porta Nuovi Clienti in Agenda
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.35 }}
@@ -122,7 +122,7 @@ const SitoWebBarber = () => {
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid md:grid-cols-2 gap-16 items-center">
               <AnimatedSection direction="left">
-                <img src={barberIdentity} alt="Identità barber shop online" loading="lazy" className="rounded-2xl w-full object-cover aspect-[4/3]" />
+                <img src={barberIdentity} alt="Esempio sito web barber shop con identità visiva personalizzata da 4weblab" loading="lazy" decoding="async" className="rounded-2xl w-full object-cover aspect-[4/3]" />
               </AnimatedSection>
               <AnimatedSection direction="right" delay={0.15}>
                 <p className="text-[#C8A96A] uppercase tracking-[0.2em] text-sm font-semibold mb-4" style={{ fontFamily: "'Oswald', sans-serif" }}>Identità</p>
@@ -162,7 +162,7 @@ const SitoWebBarber = () => {
                 <StaggerItem key={s.title}>
                   <div className="group rounded-2xl overflow-hidden bg-[#121212] border border-[hsl(0,0%,15%)] hover:border-[#C8A96A] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(200,169,106,0.18)] hover:-translate-y-1">
                     <div className="overflow-hidden aspect-[4/3]">
-                      <img src={s.img} alt={s.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <img src={s.img} alt={s.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2 text-white" style={headingStyle}>{s.title}</h3>
@@ -396,6 +396,9 @@ const SitoWebBarber = () => {
                   Richiedi il tuo sito <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
+              <p className="text-center text-[#4A4A4A] mt-4 text-sm">
+                <Link to="/quanto-costa-sito-web" className="text-[#C8A96A] hover:underline">Scopri tutti i prezzi e pacchetti aggiornati 2026</Link>
+              </p>
             </AnimatedSection>
           </div>
         </section>
@@ -430,6 +433,9 @@ const SitoWebBarber = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+              <p className="text-center text-[#BFBFBF] mt-8 text-sm">
+                <Link to="/creare-sito-con-intelligenza-artificiale" className="text-[#C8A96A] hover:underline">Confronta pro e contro dei siti creati con intelligenza artificiale</Link>
+              </p>
             </AnimatedSection>
           </div>
         </section>

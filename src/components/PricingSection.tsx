@@ -11,7 +11,7 @@ const PricingSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">La nostra soluzione ad acquisto diretto</h2>
+          <h2 className="heading-2 mb-5">Acquisto one-time: sito completo da 399€ con tutto incluso</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Nessun costo nascosto, nessuna sorpresa. Tutto ciò che serve per il tuo sito web professionale in un'unica soluzione. Per chi preferisce acquistare il sito in un'unica soluzione, senza canone mensile
           </p>
