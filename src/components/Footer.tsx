@@ -35,7 +35,11 @@ const Footer = () => {
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
-                src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png" />
+                src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png"
+                width={40}
+                height={40}
+                loading="lazy"
+                decoding="async" />
               <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
             </Link>
             <p className="text-primary-foreground/60 max-w-md leading-relaxed">

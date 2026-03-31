@@ -162,7 +162,7 @@ const SitoWebBarber = () => {
                 <StaggerItem key={s.title}>
                   <div className="group rounded-2xl overflow-hidden bg-[#121212] border border-[hsl(0,0%,15%)] hover:border-[#C8A96A] transition-all duration-300 hover:shadow-[0_8px_40px_rgba(200,169,106,0.18)] hover:-translate-y-1">
                     <div className="overflow-hidden aspect-[4/3]">
-                      <img src={s.img} alt={s.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <img src={s.img} alt={s.title} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold mb-2 text-white" style={headingStyle}>{s.title}</h3>

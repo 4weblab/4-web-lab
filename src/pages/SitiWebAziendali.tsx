@@ -199,9 +199,10 @@ const SitiWebAziendali = () => {
                 <AnimatedSection direction="left" className="order-2 md:order-1">
                   <img
                     src={teamImg}
-                    alt="Team che pianifica l'architettura di un sito web aziendale strutturato"
-                    className="rounded-2xl shadow-lg w-full"
-                    loading="lazy" />
+                    alt="Team 4weblab che progetta l'architettura di un sito web aziendale"
+                    className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover"
+                    loading="lazy"
+                    decoding="async" />
 
                 </AnimatedSection>
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground order-1 md:order-2" direction="right">
