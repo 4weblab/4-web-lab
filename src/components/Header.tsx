@@ -74,6 +74,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
             alt="4 Web Lab logo"
             className="w-9 h-9 rounded-lg object-contain"
             src="/lovable-uploads/04336b0d-9434-4cc5-92bf-9fead391fd27.png"
+            width={36}
+            height={36}
+            decoding="async"
           />
           <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground md:text-foreground'}`}>
             4 Web Lab
