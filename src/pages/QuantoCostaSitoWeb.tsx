@@ -248,7 +248,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Quale soluzione scegliere davvero
+                I siti creati solo con AI: costi reali e limiti
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
               </p>
