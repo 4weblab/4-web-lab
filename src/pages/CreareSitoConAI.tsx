@@ -288,7 +288,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <HelpCircle className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Domande frequenti</h2>
+                <h2 className="heading-2">Domande frequenti sui siti web con IA</h2>
               </AnimatedSection>
               <StaggerContainer className="space-y-6" staggerDelay={0.1}>
                 {faqData.map((faq, index) => (
