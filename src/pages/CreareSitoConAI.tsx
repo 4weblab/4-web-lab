@@ -110,7 +110,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <Lightbulb className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Cosa fa davvero un sito creato con l'AI</h2>
+                <h2 className="heading-2">Cosa può fare davvero l’intelligenza artificiale nella creazione di un sito</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
@@ -136,7 +136,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <AlertTriangle className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="heading-2">Confronto diretto</h3>
+                <h3 className="heading-2">Pro e contro dei siti creati con AI nel 2026</h3>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
                 <p>
@@ -225,7 +225,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <MessageCircle className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Un esempio reale</h2>
+                <h2 className="heading-2">Esempio reale: confronto tra sito AI e sito professionale</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
@@ -249,7 +249,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <Euro className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">E dal punto di vista dei costi?</h2>
+                <h2 className="heading-2">Quanto costa un sito web creato con intelligenza artificiale</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
@@ -288,7 +288,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <HelpCircle className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Domande frequenti</h2>
+                <h2 className="heading-2">Domande frequenti sui siti web con IA</h2>
               </AnimatedSection>
               <StaggerContainer className="space-y-6" staggerDelay={0.1}>
                 {faqData.map((faq, index) => (
@@ -322,7 +322,7 @@ const CreareSitoConAI = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center mb-12">
               <h2 className="heading-2 text-primary-foreground mb-6">
-                Vuoi solo una pagina online o uno strumento per lavorare meglio?
+                Vuoi un sito che converte davvero? Ecco la soluzione
               </h2>
               <p className="body-large text-primary-foreground/70 max-w-2xl mx-auto">
                 Se il tuo obiettivo è semplicemente essere online, qualsiasi generatore automatico può creare una pagina.
