@@ -225,7 +225,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <MessageCircle className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Un esempio reale</h2>
+                <h2 className="heading-2">Esempio reale: confronto tra sito AI e sito professionale</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
