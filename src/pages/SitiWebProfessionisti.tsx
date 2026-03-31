@@ -28,6 +28,16 @@ const SitiWebProfessionisti = () => {
         <meta property="og:description" content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          "name": "4weblab – Siti Web per Professionisti",
+          "description": "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
+          "url": "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+          "provider": { "@type": "Organization", "name": "4weblab", "url": "https://4weblab.it" },
+          "areaServed": { "@type": "Country", "name": "IT" },
+          "serviceType": "Web Design for Professionals"
+        })}</script>
       </Helmet>
 
       <Header satelliteMode />
