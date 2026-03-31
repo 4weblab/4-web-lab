@@ -383,7 +383,7 @@ const QuantoCostaSitoWeb = () => {
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Domande frequenti sul costo di un sito web aziendale
+                Domande frequenti sul costo di un sito web
               </h2>
             </AnimatedSection>
 
