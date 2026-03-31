@@ -28,12 +28,12 @@ const textShadowSubtle = { textShadow: '0px 0px 2px rgba(245, 230, 200, 0.5), 0p
 const headingStyle = { fontFamily: "'Oswald', sans-serif", ...textShadowSubtle };
 
 const galleryImages = [
-  { src: barberCut, alt: 'Taglio uomo professionale' },
-  { src: barberBeard, alt: 'Barba e rasatura' },
-  { src: barberStyling, alt: 'Styling capelli' },
-  { src: barberGallery, alt: 'Galleria lavori barber' },
-  { src: barberIdentity, alt: 'Interno barber shop' },
-  { src: barberHero, alt: 'Barber shop moderno' },
+  { src: barberCut, alt: 'Esempio taglio uomo professionale su sito web barber shop 4weblab' },
+  { src: barberBeard, alt: 'Servizio barba e rasatura mostrato nel sito web per barberia' },
+  { src: barberStyling, alt: 'Styling capelli nel portfolio sito web barber shop' },
+  { src: barberGallery, alt: 'Galleria lavori barber shop realizzata da 4weblab' },
+  { src: barberIdentity, alt: 'Esempio sito web barber shop con identità visiva personalizzata da 4weblab' },
+  { src: barberHero, alt: 'Sito web per barber shop realizzato da 4weblab – esempio hero' },
 ];
 
 const SitoWebBarber = () => {
