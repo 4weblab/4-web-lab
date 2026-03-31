@@ -136,7 +136,7 @@ const CreareSitoConAI = () => {
                 <div className="icon-box w-13 h-13">
                   <AlertTriangle className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="heading-2">Confronto diretto</h3>
+                <h3 className="heading-2">Pro e contro dei siti creati con AI nel 2026</h3>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
                 <p>
