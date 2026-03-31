@@ -47,7 +47,7 @@ const ContactSection = () => {
         <div className="max-w-2xl mx-auto text-center">
           <AnimatedSection>
             <div className="w-16 h-1 rounded-full mx-auto mb-8 bg-accent" />
-            <h2 className="heading-2 text-primary-foreground mb-5">Parliamo del tuo progetto</h2>
+            <h2 className="heading-2 text-primary-foreground mb-5">Pronto a far crescere la tua attività online? Contattaci</h2>
             <p className="body-large text-primary-foreground/70 mb-4 text-balance">
               Lavoriamo con clienti in tutta Italia: puoi contattarci ovunque ti trovi.
             </p>
