@@ -49,7 +49,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
 
-            Siti web professionali per commercianti, professionisti e piccole medie imprese in tutta Italia
+            Siti Web Professionali su Misura per PMI e Professionisti Da 49€/mese
           </motion.h1>
 
           <motion.p
