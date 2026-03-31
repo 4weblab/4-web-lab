@@ -125,10 +125,10 @@ const FaqSitiWeb = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ Realizzazione Siti Web | Costi, Tempi e Scelte Strategiche – 4 Web Lab</title>
+        <title>FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4weblab</title>
         <meta
           name="description"
-          content="Domande frequenti sulla realizzazione di siti web professionali: costi, tempi di sviluppo, differenze tra sito vetrina e landing page. Risposte chiare e professionali." />
+          content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/faq-realizzazione-siti-web" />
@@ -136,8 +136,8 @@ const FaqSitiWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta property="og:title" content="FAQ Realizzazione Siti Web | Costi, Tempi e Scelte Strategiche – 4 Web Lab" />
-        <meta property="og:description" content="Domande frequenti sulla realizzazione di siti web professionali: costi, tempi di sviluppo, differenze tra sito vetrina e landing page. Risposte chiare e professionali." />
+        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4weblab" />
+        <meta property="og:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
 
