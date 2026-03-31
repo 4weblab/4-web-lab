@@ -237,7 +237,9 @@ const SitiWebPadova = () => {
                   La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del territorio. Lavoriamo con professionisti, commercianti e aziende della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la solidità di un metodo collaudato a livello nazionale.
                 </p>
                 <p>Che lei operi nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
-
+                </p>
+                <p className="mt-6">
+                  Offriamo anche soluzioni specifiche come la realizzazione di <Link to="/sito-web-barber" className="text-accent hover:underline font-medium">sito web per barber shop a Padova</Link>. Per approfondire i costi, consulta la nostra guida su <Link to="/quanto-costa-sito-web" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, oppure scopri se conviene <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">creare un sito con intelligenza artificiale</Link>.
                 </p>
               </AnimatedSection>
             </div>

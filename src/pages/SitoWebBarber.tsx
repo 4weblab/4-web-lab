@@ -433,6 +433,9 @@ const SitoWebBarber = () => {
                   </AccordionItem>
                 ))}
               </Accordion>
+              <p className="text-center text-[#BFBFBF] mt-8 text-sm">
+                <Link to="/creare-sito-con-intelligenza-artificiale" className="text-[#C8A96A] hover:underline">Confronta pro e contro dei siti creati con intelligenza artificiale</Link>
+              </p>
             </AnimatedSection>
           </div>
         </section>
