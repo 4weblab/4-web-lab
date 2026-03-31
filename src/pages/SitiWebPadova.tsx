@@ -52,7 +52,7 @@ const SitiWebPadova = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 text-primary-foreground mb-8 text-balance" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}>
-                Realizzazione siti web professionali a Padova
+                Realizzazione Siti Web a Padova – Agenzia Locale e Nazionale
               </h1>
               <p className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance" style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
                 Progettiamo e realizziamo siti web per professionisti, negozi e aziende di Padova e provincia, con un metodo strutturato e orientato ai risultati.
