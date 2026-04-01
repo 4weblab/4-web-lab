@@ -43,7 +43,7 @@ const Hero = () => {
         aria-hidden="true" />
 
       <div className="container-section relative z-10 py-24">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
           {/* Left: main content */}
           <div className="max-w-xl text-left">
             <motion.h1
