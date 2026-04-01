@@ -94,7 +94,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}>
 
-            <div className="rounded-2xl border-2 border-accent bg-primary-foreground/5 backdrop-blur-md p-7 shadow-lg">
+            <div className="rounded-2xl border-2 border-accent bg-[hsl(210_73%_10%/0.75)] backdrop-blur-md p-7 shadow-lg">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3">🌸 Promozione</span>
               <h2 className="text-xl font-bold text-primary-foreground mb-2 leading-snug">Offerta di Primavera</h2>
               <p className="text-primary-foreground/75 text-sm leading-relaxed mb-5">
