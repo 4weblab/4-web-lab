@@ -8,7 +8,7 @@ import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import mockupImg from '@/assets/aziendali-mockup.jpg';
-import teamImg from '@/assets/aziendali-team.jpg';
+import teamImg from '@/assets/aziendali-team.png';
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
