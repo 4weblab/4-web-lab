@@ -8,7 +8,7 @@ import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import mockupImg from '@/assets/aziendali-mockup.jpg';
-import teamImg from '@/assets/aziendali-team.jpg';
+import teamImg from '@/assets/aziendali-team.png';
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
@@ -86,7 +86,7 @@ const SitiWebAziendali = () => {
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti Web Aziendali Professionali e Multipagina
               </h1>
-              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese in tutta l' Italia che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
@@ -199,7 +199,7 @@ const SitiWebAziendali = () => {
                 <AnimatedSection direction="left" className="order-2 md:order-1">
                   <img
                     src={teamImg}
-                    alt="Team 4weblab che progetta l'architettura di un sito web aziendale"
+                    alt="Illustrazione della struttura di un sito web multipagina con pagine collegate e ottimizzazione SEO"
                     className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover"
                     loading="lazy"
                     decoding="async" />

@@ -43,6 +43,8 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+        "surface-alt": "hsl(var(--surface-alt))",
+        "surface-alt-2": "hsl(var(--surface-alt-2))",
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",

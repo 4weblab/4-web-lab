@@ -29,7 +29,7 @@
     --accent-foreground: 0 0% 100%;
 
     --muted: 210 20% 96%;
-    --muted-foreground: 210 15% 42%;
+    --muted-foreground: 215 16% 34%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -49,7 +49,11 @@
     /* Gradients – deep brand */
     --gradient-hero: linear-gradient(145deg, hsl(210 73% 10%) 0%, hsl(210 65% 17%) 50%, hsl(207 55% 24%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(207 90% 54%) 0%, hsl(210 75% 42%) 100%);
-    --gradient-surface: linear-gradient(180deg, hsl(210 25% 97%) 0%, hsl(210 22% 94%) 100%);
+    --gradient-surface: linear-gradient(180deg, hsl(210 33% 98%) 0%, hsl(210 28% 95%) 100%);
+
+    /* Section alternating backgrounds */
+    --surface-alt: 210 33% 97%;
+    --surface-alt-2: 213 27% 96%;
     --gradient-glass: linear-gradient(135deg, hsla(0, 0%, 100%, 0.8) 0%, hsla(0, 0%, 100%, 0.4) 100%);
 
     /* Premium Shadows */
@@ -200,19 +204,20 @@
 
   /* Premium Button variants */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-accent-foreground transition-all duration-200;
-    background: linear-gradient(135deg, hsl(207 95% 42%) 0%, hsl(210 85% 32%) 100%);
-    box-shadow: var(--shadow-accent), 0 2px 8px 0 hsl(207 90% 30% / 0.25);
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-white transition-all duration-300;
+    background: linear-gradient(145deg, hsl(24 95% 53%) 0%, hsl(18 90% 45%) 100%);
+    box-shadow: 0 4px 14px 0 hsl(24 95% 50% / 0.35), 0 2px 6px 0 hsl(24 95% 40% / 0.2);
   }
 
   .btn-primary:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-accent-lg), 0 6px 20px 0 hsl(207 90% 30% / 0.35);
-    filter: brightness(1.1);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px 0 hsl(24 95% 50% / 0.45), 0 4px 12px 0 hsl(24 95% 40% / 0.3);
+    filter: brightness(1.08);
   }
 
   .btn-primary:active {
-    transform: scale(0.97);
+    transform: translateY(0) scale(0.98);
+    box-shadow: 0 2px 8px 0 hsl(24 95% 50% / 0.3);
   }
 
   .btn-secondary {
@@ -251,28 +256,29 @@
 
   /* Premium Card styles */
   .card-elevated {
-    @apply bg-card rounded-2xl p-8 border border-border/40 transition-all duration-400;
-    box-shadow: var(--shadow-md);
+    @apply bg-card rounded-2xl p-8 transition-all duration-400;
+    border: 1px solid hsl(210 20% 88%);
+    box-shadow: 0 2px 12px -2px hsl(210 73% 15% / 0.06), 0 0 0 0 hsl(207 90% 54% / 0);
   }
 
   .card-elevated:hover {
-    box-shadow: var(--shadow-card-hover);
-    border-color: hsl(var(--accent) / 0.2);
-    @apply -translate-y-1;
+    box-shadow: 0 12px 32px -6px hsl(210 73% 15% / 0.1), 0 0 0 1px hsl(207 90% 54% / 0.08);
+    border-color: hsl(var(--accent) / 0.25);
+    @apply -translate-y-1.5;
   }
 
   /* Glassmorphism card */
   .card-glass {
-    @apply rounded-2xl p-8 border transition-all duration-400;
+    @apply rounded-2xl p-8 transition-all duration-400;
     background: var(--glass-bg);
-    border-color: var(--glass-border);
+    border: 1px solid hsl(210 20% 88%);
     backdrop-filter: blur(var(--glass-blur));
-    box-shadow: var(--shadow-glass);
+    box-shadow: 0 2px 12px -2px hsl(210 73% 15% / 0.06);
   }
 
   .card-glass:hover {
-    box-shadow: var(--shadow-card-hover);
-    border-color: hsl(var(--accent) / 0.2);
+    box-shadow: 0 12px 32px -6px hsl(210 73% 15% / 0.1), 0 0 0 1px hsl(207 90% 54% / 0.08);
+    border-color: hsl(var(--accent) / 0.25);
   }
 
   /* Horizontal scroll gallery */
@@ -333,16 +339,16 @@
     @apply origin-bottom-left scale-x-100;
   }
 
-  /* Icon container – premium gradient with glow */
+  /* Icon container – navy base with orange accent ring */
   .icon-box {
     @apply flex items-center justify-center rounded-xl transition-all duration-300;
-    background: var(--gradient-accent);
-    box-shadow: 0 2px 8px 0 hsl(207 90% 54% / 0.2);
+    background: linear-gradient(145deg, hsl(210 73% 15%) 0%, hsl(207 60% 28%) 100%);
+    box-shadow: 0 2px 8px 0 hsl(210 73% 15% / 0.2), inset 0 0 0 1px hsl(24 95% 53% / 0.15);
   }
 
   .icon-box:hover,
   .group:hover .icon-box {
-    box-shadow: 0 4px 16px 0 hsl(207 90% 54% / 0.35);
+    box-shadow: 0 4px 16px 0 hsl(210 73% 15% / 0.3), inset 0 0 0 1.5px hsl(24 95% 53% / 0.4);
     @apply scale-110;
   }
 
