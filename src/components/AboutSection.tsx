@@ -79,7 +79,7 @@ const AboutSection = () => {
         {/* Testimonials */}
         <AnimatedSection className="text-center mt-20 mb-10">
           <div className="section-divider" />
-          <h3 className="heading-3 mb-2">Le parole di chi ci ha scelto</h3>
+          <h3 className="heading-3 mb-2">«Cosa dicono i nostri clienti»</h3>
         </AnimatedSection>
 
         <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.12}>
