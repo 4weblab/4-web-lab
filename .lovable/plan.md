@@ -1,10 +1,15 @@
 
 
-## Update Google Maps Link
+## Update Testimonials Heading
 
-One file to change: `src/components/AboutSection.tsx` line 111.
+**File**: `src/components/AboutSection.tsx`, line 82
 
-Replace the placeholder `https://maps.app.goo.gl/YourGoogleMapsLink` with the real URL `https://maps.app.goo.gl/FQ8UkcNRm8YHWq8LA`.
+Change the `<h3>` text from `Le parole di chi ci ha scelto` to `«Cosa dicono i nostri clienti»` using guillemets (« ») as "big quotes".
 
-No other files reference a Google Maps link.
+### Technical detail
+
+Replace line 82:
+```tsx
+<h3 className="heading-3 mb-2">«Cosa dicono i nostri clienti»</h3>
+```
 
