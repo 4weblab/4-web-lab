@@ -108,7 +108,7 @@ const AboutSection = () => {
 
         <AnimatedSection className="text-center mt-8">
           <a
-            href="https://maps.app.goo.gl/YourGoogleMapsLink"
+            href="https://maps.app.goo.gl/FQ8UkcNRm8YHWq8LA"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm text-accent hover:text-accent/80 font-medium transition-colors"
