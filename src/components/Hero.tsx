@@ -43,7 +43,7 @@ const Hero = () => {
         aria-hidden="true" />
 
       <div className="container-section relative z-10 py-24">
-        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-between gap-10 lg:gap-16">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
           {/* Left: main content */}
           <div className="max-w-xl text-left">
             <motion.h1
@@ -94,7 +94,7 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}>
 
-            <div className="rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 backdrop-blur-md p-7 shadow-lg">
+            <div className="rounded-2xl border-2 border-accent bg-primary-foreground/5 backdrop-blur-md p-7 shadow-lg">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3">🌸 Promozione</span>
               <h2 className="text-xl font-bold text-primary-foreground mb-2 leading-snug">Offerta di Primavera</h2>
               <p className="text-primary-foreground/75 text-sm leading-relaxed mb-5">
