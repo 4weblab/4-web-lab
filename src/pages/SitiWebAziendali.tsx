@@ -92,6 +92,13 @@ const SitiWebAziendali = () => {
                 Richiedi una valutazione gratuita
                 <ArrowRight className="w-4 h-4" />
               </button>
+
+              <div className="mt-8 max-w-xl mx-auto p-5 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 backdrop-blur-sm">
+                <p className="text-sm text-primary-foreground/80 leading-relaxed">
+                  <strong className="text-primary-foreground">Offerta di primavera:</strong> Sconto del 20% per la creazione di un sito web aziendale + creazione logo o brand identity completa. Per maggiori informazioni{' '}
+                  <button onClick={handleContactClick} className="underline underline-offset-2 text-primary-foreground hover:text-accent transition-colors font-semibold">clicca qui</button>
+                </p>
+              </div>
             </AnimatedSection>
           </div>
         </section>
