@@ -1,5 +1,24 @@
-import { Users, Target, Lightbulb } from 'lucide-react';
+import { Users, Target, Lightbulb, Star, Quote } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
+
+const testimonials = [
+  {
+    name: 'Mattia Loreggian',
+    initial: 'M',
+    text: '4 Web Lab si è occupata di crearci il sito, un logo e un\'identità di brand molto precisa che adesso usiamo ovunque.',
+  },
+  {
+    name: 'Jessica Trovò',
+    initial: 'J',
+    text: 'Adesso ho un sito nuovo, a norma e al prezzo giusto, e sto già vedendo i primi risultati di clientela nuova.',
+  },
+  {
+    name: 'Lisa Bogana',
+    initial: 'L',
+    text: 'Carlo è riuscito a guidarmi senza complicare le cose. Il sito che abbiamo realizzato insieme mi rappresenta davvero.',
+  },
+];
+
 const cards = [{
   icon: Users,
   title: 'Approccio personale',
