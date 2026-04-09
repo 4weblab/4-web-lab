@@ -100,6 +100,7 @@ const App = () => (
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
              <Route path="/sito-web-barber" element={<SitoWebBarber />} />
              <Route path="/demo-dv" element={<DemoDV />} />
+             <Route path="/demo-rbt" element={<DemoRBT />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
