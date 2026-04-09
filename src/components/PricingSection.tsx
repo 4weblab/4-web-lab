@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 import { AnimatedSection } from './AnimatedSection';
 import { motion } from 'framer-motion';
 
-const includedFeatures = ['Sviluppo sito web professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO'];
+const includedFeatures = ['Sviluppo sito One page professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO'];
 
 const PricingSection = () => {
   return (
