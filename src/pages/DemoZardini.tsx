@@ -331,7 +331,7 @@ const DemoZardini = () => {
             {[
               { title: 'Trasporto energia', desc: 'Accessori per tralicci, sostegni e infrastrutture delle reti elettriche ad alta e media tensione.', icon: Zap },
               { title: 'Telecomunicazioni', desc: 'Componenti per pali, torri e strutture di supporto per antenne e apparati di rete.', icon: Radio },
-              { title: 'Carpenteria metallica', desc: 'Elementi di ancoraggio e collegamento per strutture in acciaio destinate all'edilizia civile e industriale.', icon: Building2 },
+              { title: 'Carpenteria metallica', desc: 'Elementi di ancoraggio e collegamento per strutture in acciaio destinate all\'edilizia civile e industriale.', icon: Building2 },
               { title: 'Strutture tecniche e infrastrutturali', desc: 'Soluzioni su specifica per opere infrastrutturali, impianti e installazioni tecniche particolari.', icon: Construction },
             ].map((item, i) => (
               <motion.div
