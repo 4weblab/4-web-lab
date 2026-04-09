@@ -104,6 +104,7 @@ const App = () => (
              <Route path="/demo-dv" element={<DemoDV />} />
              <Route path="/demo-rbt" element={<DemoRBT />} />
              <Route path="/demo-zardini" element={<DemoZardini />} />
+             <Route path="/demo-comit" element={<DemoComit />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
