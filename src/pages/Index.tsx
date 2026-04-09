@@ -76,13 +76,15 @@ const Index = () => {
       
       <main id="main-content">
         <Hero />
-        <AboutSection />
-        <StrengthsSection />
-        <ServicesSection />
-        <RentalSection />
-        <PricingSection />
-        <HomeFaqPreview />
-        <ContactSection />
+        <Suspense fallback={null}>
+          <AboutSection />
+          <StrengthsSection />
+          <ServicesSection />
+          <RentalSection />
+          <PricingSection />
+          <HomeFaqPreview />
+          <ContactSection />
+        </Suspense>
       </main>
 
       <Footer />
