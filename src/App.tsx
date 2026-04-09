@@ -18,6 +18,7 @@ import SitoWebBarber from "./pages/SitoWebBarber";
 import DemoDV from "./pages/DemoDV";
 import DemoRBT from "./pages/DemoRBT";
 import DemoZardini from "./pages/DemoZardini";
+import DemoComit from "./pages/DemoComit";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
