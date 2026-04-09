@@ -236,7 +236,7 @@ const DemoRBT = () => {
         <motion.div className="relative max-w-7xl mx-auto px-6" initial="hidden" whileInView="visible" viewport={{ once: true, margin: '-80px' }} variants={stagger}>
           <motion.div variants={fadeUp} className="text-center mb-16">
             <div className="w-12 h-1 bg-[#2563EB] mx-auto mb-8 rounded-full" />
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#E5E7EB]" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               Competenze e tecnologie integrate
             </h2>
           </motion.div>
@@ -321,7 +321,7 @@ const DemoRBT = () => {
           className="relative max-w-2xl mx-auto px-6 text-center">
           <motion.div variants={fadeUp}>
             <div className="w-12 h-1 bg-[#2563EB] mx-auto mb-8 rounded-full" />
-            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-6 text-[#E5E7EB]" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>
               Hai bisogno di una soluzione<br />elettronica su misura?
             </h2>
             <p className="text-[#E5E7EB]/60 text-lg leading-relaxed mb-10">
