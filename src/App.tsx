@@ -16,6 +16,7 @@ import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import SitoWebBarber from "./pages/SitoWebBarber";
 import DemoDV from "./pages/DemoDV";
+import DemoRBT from "./pages/DemoRBT";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
