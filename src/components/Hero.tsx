@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import heroBg from '@/assets/hero-bg.png';
+import heroBg from '@/assets/hero-bg.webp';
 
 const Hero = () => {
   const handleScrollToContact = () => {
@@ -46,19 +46,15 @@ const Hero = () => {
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
           {/* Left: main content */}
           <div className="max-w-xl text-left">
-            <motion.h1
+            <h1
               className="heading-1 text-primary-foreground mb-8 text-balance"
               style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.55), 0 0 20px rgba(0,0,0,0.25)',
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
-              }}
-              initial={{ opacity: 0, y: 40 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}>
-
+              }}>
               Siti Web Professionali su Misura per PMI e Professionisti Da 49€/mese
-            </motion.h1>
+            </h1>
 
             <motion.p
               className="body-large text-primary-foreground mb-14 text-balance"

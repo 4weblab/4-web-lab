@@ -15,6 +15,7 @@ import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import SitoWebBarber from "./pages/SitoWebBarber";
+import DemoDV from "./pages/DemoDV";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
@@ -62,8 +63,8 @@ const App = () => (
           "@type": "ProfessionalService",
           "name": "4 Web Lab di Fullin Carlo",
           "url": "https://4weblab.it/",
-          "logo": "https://4weblab.it/logo.png",
-          "image": "https://4weblab.it/logo.png",
+          "logo": "https://4weblab.it/logo.webp",
+          "image": "https://4weblab.it/logo.webp",
           "telephone": "+393514656042",
           "email": "info@4weblab.it",
           "vatID": "05765760284",
@@ -97,6 +98,7 @@ const App = () => (
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
              <Route path="/sito-web-barber" element={<SitoWebBarber />} />
+             <Route path="/demo-dv" element={<DemoDV />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

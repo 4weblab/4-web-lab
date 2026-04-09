@@ -54,7 +54,7 @@ const QuantoCostaSitoWeb = () => {
             "@type": "Organization",
             "name": "4 Web Lab",
             "url": "https://4weblab.it",
-            "logo": "https://4weblab.it/logo.png"
+            "logo": "https://4weblab.it/logo.webp"
           })}
         </script>
       </Helmet>
