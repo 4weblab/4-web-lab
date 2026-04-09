@@ -17,6 +17,7 @@ import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import SitoWebBarber from "./pages/SitoWebBarber";
 import DemoDV from "./pages/DemoDV";
 import DemoRBT from "./pages/DemoRBT";
+import DemoZardini from "./pages/DemoZardini";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
@@ -101,6 +102,7 @@ const App = () => (
              <Route path="/sito-web-barber" element={<SitoWebBarber />} />
              <Route path="/demo-dv" element={<DemoDV />} />
              <Route path="/demo-rbt" element={<DemoRBT />} />
+             <Route path="/demo-zardini" element={<DemoZardini />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
