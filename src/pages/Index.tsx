@@ -1,14 +1,16 @@
+import { lazy, Suspense } from 'react';
 import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import AboutSection from '@/components/AboutSection';
-import StrengthsSection from '@/components/StrengthsSection';
-import ServicesSection from '@/components/ServicesSection';
-import RentalSection from '@/components/RentalSection';
-import PricingSection from '@/components/PricingSection';
-import HomeFaqPreview from '@/components/HomeFaqPreview';
-import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
+
+const AboutSection = lazy(() => import('@/components/AboutSection'));
+const StrengthsSection = lazy(() => import('@/components/StrengthsSection'));
+const ServicesSection = lazy(() => import('@/components/ServicesSection'));
+const RentalSection = lazy(() => import('@/components/RentalSection'));
+const PricingSection = lazy(() => import('@/components/PricingSection'));
+const HomeFaqPreview = lazy(() => import('@/components/HomeFaqPreview'));
+const ContactSection = lazy(() => import('@/components/ContactSection'));
 
 
 const businessSchema = {
