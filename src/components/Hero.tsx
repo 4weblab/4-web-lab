@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import heroBg from '@/assets/hero-bg.png';
+import heroBg from '@/assets/hero-bg.webp';
 
 const Hero = () => {
   const handleScrollToContact = () => {
