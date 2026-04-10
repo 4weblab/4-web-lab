@@ -112,6 +112,7 @@ const App = () => (
              <Route path="/demo-si2000" element={<DemoSI2000 />} />
               <Route path="/demo-ies" element={<DemoIES />} />
               <Route path="/demo-sovem" element={<DemoSovem />} />
+              <Route path="/demo-platiumed" element={<DemoPlatiumed />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
