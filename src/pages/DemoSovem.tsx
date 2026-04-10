@@ -80,7 +80,7 @@ const DemoSovem = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F14] text-white font-sans antialiased">
+    <div className="min-h-screen bg-[#0B0F14] text-white font-sans antialiased [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white [&_h1]:font-sans [&_h2]:font-sans [&_h3]:font-sans [&_h4]:font-sans">
       {/* ─── HEADER ─── */}
       <header
         className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
