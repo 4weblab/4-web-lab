@@ -89,7 +89,7 @@ const DemoPlatiumed = () => {
     {
       icon: Heart,
       title: 'Uso Domestico',
-      desc: 'Dispositivi per magnetoterapia e benessere progettati per un utilizzo semplice e sicuro nell'ambiente domestico.',
+      desc: "Dispositivi per magnetoterapia e benessere progettati per un utilizzo semplice e sicuro nell'ambiente domestico.",
     },
     {
       icon: Stethoscope,
@@ -111,7 +111,7 @@ const DemoPlatiumed = () => {
   const certifications = [
     { icon: Shield, title: 'Standard di Qualità', desc: 'Produzione conforme ai più elevati standard qualitativi del settore.' },
     { icon: Award, title: 'Dispositivi Certificati', desc: 'Ogni dispositivo è sottoposto a verifiche rigorose prima della commercializzazione.' },
-    { icon: CheckCircle2, title: 'Sicurezza e Affidabilità', desc: 'Focus sulla sicurezza dell'utilizzatore e sulla durabilità dei prodotti.' },
+    { icon: CheckCircle2, title: 'Sicurezza e Affidabilità', desc: "Focus sulla sicurezza dell'utilizzatore e sulla durabilità dei prodotti." },
     { icon: Factory, title: 'Made in Italy', desc: 'Intera filiera produttiva italiana, dalla ricerca alla realizzazione finale.' },
   ];
 
