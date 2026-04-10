@@ -37,7 +37,7 @@ const navItems = [
 /* ── animation helpers ── */
 const fadeUp = {
   hidden: { opacity: 0, y: 32 },
-  visible: (d = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, delay: d, ease: [.25,.46,.45,.94] } }),
+  visible: (d = 0) => ({ opacity: 1, y: 0, transition: { duration: 0.7, delay: d, ease: [.25,.46,.45,.94] as [number,number,number,number] } }),
 };
 
 const DemoSI2000 = () => {
