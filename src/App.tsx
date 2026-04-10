@@ -21,6 +21,7 @@ import DemoZardini from "./pages/DemoZardini";
 import DemoComit from "./pages/DemoComit";
 import DemoSI2000 from "./pages/DemoSI2000";
 import DemoIES from "./pages/DemoIES";
+import DemoSovem from "./pages/DemoSovem";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
@@ -108,7 +109,8 @@ const App = () => (
              <Route path="/demo-zardini" element={<DemoZardini />} />
              <Route path="/demo-comit" element={<DemoComit />} />
              <Route path="/demo-si2000" element={<DemoSI2000 />} />
-             <Route path="/demo-ies" element={<DemoIES />} />
+              <Route path="/demo-ies" element={<DemoIES />} />
+              <Route path="/demo-sovem" element={<DemoSovem />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/cookie" element={<CookiePolicy />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
