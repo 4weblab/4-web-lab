@@ -415,7 +415,7 @@ const QuantoCostaSitoWeb = () => {
         </section>
 
         {/* 9 — CTA Finale */}
-        <section id="cta-finale" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <section id="contatti" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <filter id="costo-cta-noise">
