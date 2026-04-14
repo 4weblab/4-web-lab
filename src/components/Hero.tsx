@@ -53,7 +53,7 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              Siti Web Professionali su Misura per PMI e Professionisti Da 49€/mese
+              Agenzia Web Padova – Siti professionali per negozi, professionisti e PMI
             </h1>
 
             <motion.p
