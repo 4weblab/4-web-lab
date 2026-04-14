@@ -4,7 +4,12 @@ import { Link } from 'react-router-dom';
 
 import heroBg from '@/assets/hero-bg.webp';
 
+const whatsappNumber = '393514656042';
+const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.');
+
 const Hero = () => {
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
   const handleScrollToContact = () => {
     const element = document.getElementById('contatti');
     if (element) {
