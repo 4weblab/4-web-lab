@@ -228,10 +228,11 @@ const SitiWebAziendali = () => {
                     la crescita dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
                   </p>
                   <p>
-                    Se la tua attività opera sul territorio, scopri anche il nostro servizio di{' '}
+                    Sia che la tua azienda sia a{' '}
                     <Link to="/realizzazione-siti-web-padova" className="text-accent font-semibold link-underline">
-                      realizzazione siti web a Padova
-                    </Link>.
+                      Padova
+                    </Link>{' '}
+                    che in qualsiasi altra parte d'Italia, 4 Web Lab porta online il tuo business.
                   </p>
                 </AnimatedSection>
               </div>
