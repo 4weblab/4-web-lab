@@ -86,7 +86,7 @@ const SitiWebAziendali = () => {
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti Web Aziendali Professionali e Multipagina
               </h1>
-              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese in tutta l' Italia che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per aziende della provincia di Padova che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
