@@ -362,7 +362,7 @@ const QuantoCostaSitoWeb = () => {
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
-                  Il nostro modello a noleggio: da 49€/mese tutto incluso
+                  Il nostro modello a noleggio: da 49€/mese tutto incluso per negozi e professionisti:
                 </h2>
                 <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
