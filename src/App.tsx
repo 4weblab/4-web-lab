@@ -29,7 +29,7 @@ import CookieBanner from "./components/CookieBanner";
 const queryClient = new QueryClient();
 
 const siteMetadata = {
-  title: "Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab",
+  title: "Agenzia Web Padova | Siti Professionali da 49€/mese o 400€ | 4weblab",
   description: "Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti.",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
