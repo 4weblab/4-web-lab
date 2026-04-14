@@ -90,7 +90,8 @@ const Hero = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-5 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 px-12 py-5 rounded-xl bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-lg transition-all duration-300 hover:-translate-y-0.5"
+                style={{ boxShadow: '0 4px 14px 0 rgba(37,211,102,0.35)' }}
                 aria-label="Scrivici su WhatsApp"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WhatsApp" className="w-6 h-6">
