@@ -14,7 +14,7 @@ import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
-import SitoWebBarber from "./pages/SitoWebBarber";
+
 import DemoDV from "./pages/DemoDV";
 import DemoRBT from "./pages/DemoRBT";
 import DemoZardini from "./pages/DemoZardini";
@@ -104,7 +104,7 @@ const App = () => (
              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
-             <Route path="/sito-web-barber" element={<SitoWebBarber />} />
+             
              <Route path="/demo-dv" element={<DemoDV />} />
              <Route path="/demo-rbt" element={<DemoRBT />} />
              <Route path="/demo-zardini" element={<DemoZardini />} />
