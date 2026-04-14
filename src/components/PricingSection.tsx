@@ -13,7 +13,7 @@ const PricingSection = () => {
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Sito web aziendale per la tua impresa a partire da 399€</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Nessun costo nascosto, nessuna sorpresa. Tutto ciò che serve per il tuo sito web professionale in un'unica soluzione. Per chi preferisce acquistare il sito in un'unica soluzione, senza canone mensile
+            Nessun costo nascosto, nessuna sorpresa. Tutto ciò che serve per il tuo sito web professionale in un'unica soluzione.
           </p>
         </AnimatedSection>
 
@@ -41,7 +41,7 @@ const PricingSection = () => {
                 una tantum · IVA esclusa
               </p>
               <p className="text-muted-foreground text-sm mt-4">
-                Una soluzione ideale per chi cerca la realizzazione di un sito web professionale completo, ovunque si trovi in Italia.
+                Una soluzione ideale per chi cerca la realizzazione di un sito web aziendale completo, ovunque si trovi in Italia.
               </p>
             </div>
 
