@@ -367,10 +367,10 @@ const QuantoCostaSitoWeb = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
                 <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
                 <a
-                  href="/#noleggio"
+                  href="#contatti"
                   className="btn-primary inline-flex items-center gap-2 px-8 py-4"
                   style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}>
-                  Scopri la soluzione a noleggio <ArrowRight className="w-4 h-4" />
+                  Richiedi una consulenza <ArrowRight className="w-4 h-4" />
                 </a>
               </div>
             </AnimatedSection>
@@ -415,7 +415,7 @@ const QuantoCostaSitoWeb = () => {
         </section>
 
         {/* 9 — CTA Finale */}
-        <section id="cta-finale" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <section id="contatti" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <filter id="costo-cta-noise">
