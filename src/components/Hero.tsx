@@ -57,13 +57,15 @@ const Hero = () => {
             </h1>
 
             <motion.p
-              className="body-large text-primary-foreground mb-14 text-balance"
+              className="body-large text-primary-foreground mb-14 text-balance whitespace-pre-line"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
 
-              Realizziamo siti web professionali per attività locali e PMI, curati nei dettagli e progettati per essere veloci, performanti e accessibili nel prezzo.
+              Noleggio tutto incluso da 49€/mese per negozi e professionisti.{"\n"}
+              O 400€ una tantum per la landing page della tua azienda.{"\n"}
+              Zero investimenti iniziali da migliaia di euro.
             </motion.p>
 
             <motion.div
