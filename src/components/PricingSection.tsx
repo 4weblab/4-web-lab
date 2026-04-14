@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { Check, Gift, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AnimatedSection } from './AnimatedSection';
