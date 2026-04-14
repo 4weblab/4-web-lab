@@ -193,7 +193,7 @@ const QuantoCostaSitoWeb = () => {
               <div className="rounded-2xl p-10 md:p-16 bg-card" style={{ border: '1px solid hsl(210 30% 85%)', boxShadow: '0 12px 40px -8px hsl(210 73% 15% / 0.12), 0 4px 12px -4px hsl(207 90% 54% / 0.08)' }}>
                 <span className="inline-block text-xs font-extrabold tracking-[0.2em] uppercase mb-6 px-4 py-1.5 rounded-full bg-accent/15 text-accent">Esempio reale</span>
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
-                  Quanto può costare davvero un sito aziendale
+                  Quanto può costare davvero un <Link to="/siti-web-aziendali" className="text-accent underline underline-offset-4 hover:text-accent/80 transition-colors">sito aziendale</Link>
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Per fare un esempio concreto, un sito aziendale con più pagine, struttura chiara e contenuti ben organizzati può richiedere un investimento nell'ordine delle migliaia di euro.
