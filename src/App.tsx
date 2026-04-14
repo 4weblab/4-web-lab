@@ -30,7 +30,7 @@ const queryClient = new QueryClient();
 
 const siteMetadata = {
   title: "Agenzia Web Padova | Siti Professionali da 49€/mese o 400€ | 4weblab",
-  description: "Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti.",
+  description: "Agenzia Web Padova per negozi, professionisti e PMI. Siti web professionali con noleggio tutto incluso da 49€/mese (negozi e professionisti) o da 400€ one-time per landing page PMI. Qualità agenzia, zero rischio, supporto locale a Padova.",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
 };
