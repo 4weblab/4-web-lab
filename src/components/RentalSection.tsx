@@ -85,7 +85,7 @@ const RentalSection = () => {
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
           <h2 id="rental-heading" className="heading-2 mb-5">
-            Il sito web a noleggio, senza pensieri * 
+            Il sito web a noleggio pensato per negozi e <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline">professionisti</Link> ( geometra, notaio, elettricista etc. ) *
           </h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Un sito professionale sempre online, con assistenza inclusa e costi chiari.
@@ -207,7 +207,7 @@ const RentalSection = () => {
    
           </p>
           <p className="text-sm text-muted-foreground mt-8 text-center">
-            <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline">Scopri come creare un sito con intelligenza artificiale</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link> · <Link to="/sito-web-barber" className="text-accent hover:underline">Sito web dedicato per barber shop</Link>
+            <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline">Scopri come creare un sito con intelligenza artificiale</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link>
           </p>
         </AnimatedSection>
       </div>

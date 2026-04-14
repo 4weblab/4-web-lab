@@ -14,7 +14,7 @@ import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
-import SitoWebBarber from "./pages/SitoWebBarber";
+
 import DemoDV from "./pages/DemoDV";
 import DemoRBT from "./pages/DemoRBT";
 import DemoZardini from "./pages/DemoZardini";
@@ -29,8 +29,8 @@ import CookieBanner from "./components/CookieBanner";
 const queryClient = new QueryClient();
 
 const siteMetadata = {
-  title: "Realizzazione siti web professionali per aziende, negozi e professionisti in tutta Italia | 4weblab",
-  description: "Realizziamo siti web moderni, veloci e ottimizzati SEO per aziende, negozi e professionisti in tutta Italia. Metodo strutturato, costi chiari, risultati concreti.",
+  title: "Agenzia Web Padova | Siti Professionali da 49€/mese o 400€ | 4weblab",
+  description: "Agenzia Web Padova per negozi, professionisti e PMI. Siti web professionali con noleggio tutto incluso da 49€/mese (negozi e professionisti) o da 400€ one-time per landing page PMI. Qualità agenzia, zero rischio, supporto locale a Padova.",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
 };
@@ -104,7 +104,7 @@ const App = () => (
              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
-             <Route path="/sito-web-barber" element={<SitoWebBarber />} />
+             
              <Route path="/demo-dv" element={<DemoDV />} />
              <Route path="/demo-rbt" element={<DemoRBT />} />
              <Route path="/demo-zardini" element={<DemoZardini />} />
