@@ -39,7 +39,7 @@ const AboutSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Chi siamo</h2>
+          <h2 className="heading-2 mb-5">Chi siamo: la tua Agenzia Web a Padova di fiducia</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Siamo uno studio di produzione web specializzato nella creazione di siti internet per attività commerciali, professionisti e piccole media imprese.
           </p>
