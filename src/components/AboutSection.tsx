@@ -40,8 +40,10 @@ const AboutSection = () => {
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Chi siamo: la tua Agenzia Web a Padova di fiducia</h2>
-          <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Siamo uno studio di produzione web specializzato nella creazione di siti internet per attività commerciali, professionisti e piccole media imprese.
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance whitespace-pre-line">
+            4weblab è un’agenzia web con sede a Padova specializzata nella realizzazione di siti professionali per chi vuole presenza online seria senza spendere cifre da studio strutturato.{"\n"}
+            Qualità da agenzia, prezzi accessibili e supporto continuo.{"\n"}
+            Lavoriamo principalmente con negozi, professionisti e PMI del Veneto, realizzando siti veloci, convertenti e sempre aggiornati.
           </p>
         </AnimatedSection>
 
