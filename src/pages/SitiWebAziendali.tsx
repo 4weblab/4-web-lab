@@ -228,11 +228,7 @@ const SitiWebAziendali = () => {
                     la crescita dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
                   </p>
                   <p>
-                    Sia che la tua azienda sia a{' '}
-                    <Link to="/realizzazione-siti-web-padova" className="text-accent font-semibold link-underline">
-                      Padova
-                    </Link>{' '}
-                    che in qualsiasi altra parte d'Italia, 4 Web Lab porta online il tuo business.
+                    Sia che la tua azienda sia a Padova che in qualsiasi altra parte d'Italia, 4 Web Lab porta online il tuo business.
                   </p>
                 </AnimatedSection>
               </div>
