@@ -95,7 +95,7 @@ const ServicesSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-12 md:mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">I nostri servizi per professionisti, negozi e aziende</h2>
+          <h2 className="heading-2 mb-5">I nostri servizi per promuovere il vostro business</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Soluzioni complete per la tua presenza online, dalla creazione alla gestione quotidiana.
           </p>
