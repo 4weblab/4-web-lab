@@ -445,11 +445,11 @@ const SitiWebAziendali = () => {
                   che rappresenti al meglio la tua impresa e ne accompagni la crescita.
                 </p>
                 <div className="mt-8 space-y-4">
-                  <Link to="/realizzazione-siti-web-per-professionisti" className="block text-lg font-semibold text-accent hover:text-accent/80 transition-colors duration-300 underline underline-offset-4">
-                    Sito web per partita iva li fate? →
+                  <Link to="/realizzazione-siti-web-per-professionisti" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+                    <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Sito web per partita iva li fate? →</span>
                   </Link>
-                  <Link to="/siti-web-per-negozi" className="block text-lg font-semibold text-accent hover:text-accent/80 transition-colors duration-300 underline underline-offset-4">
-                    Vorrei fare il sito del mio negozio →
+                  <Link to="/siti-web-per-negozi" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+                    <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Vorrei fare il sito del mio negozio →</span>
                   </Link>
                 </div>
               </AnimatedSection>
