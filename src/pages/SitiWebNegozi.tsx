@@ -321,7 +321,7 @@ const SitiWebNegozi = () => {
                   </div>
                   <ul className="space-y-4 mb-10 max-w-md mx-auto" role="list">
                     {[
-                      'Sito completo',
+                      'Sito vetrina completo',
                       'Design professionale',
                       'Ottimizzazione base Google',
                       'Versione mobile',
