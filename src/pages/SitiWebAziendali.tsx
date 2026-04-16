@@ -86,7 +86,7 @@ const SitiWebAziendali = () => {
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti Web Aziendali Professionali e Multipagina
               </h1>
-              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per imprese in tutta l' Italia che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">Progettiamo siti web aziendali professionali per aziende della provincia di Padova che vogliono presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
@@ -228,10 +228,7 @@ const SitiWebAziendali = () => {
                     la crescita dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
                   </p>
                   <p>
-                    Se la tua attività opera sul territorio, scopri anche il nostro servizio di{' '}
-                    <Link to="/realizzazione-siti-web-padova" className="text-accent font-semibold link-underline">
-                      realizzazione siti web a Padova
-                    </Link>.
+                    Sia che la tua azienda sia a Padova che in qualsiasi altra parte d'Italia, 4 Web Lab porta online il tuo business.
                   </p>
                 </AnimatedSection>
               </div>
@@ -363,7 +360,7 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-8">
-                  In 4weblab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
+                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
                   pensato per collaborazioni da remoto con aziende in tutta Italia. Il nostro processo
                   garantisce trasparenza, tempi certi e qualità in ogni fase della realizzazione del sito web aziendale.
                 </p>
@@ -420,7 +417,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <Award className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Perché scegliere 4weblab</h2>
+                <h2 className="heading-2">Perché scegliere 4 Web Lab</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
@@ -447,6 +444,14 @@ const SitiWebAziendali = () => {
                   Scegliere 4weblab significa affidarsi a un partner affidabile per la realizzazione di un sito web aziendale
                   che rappresenti al meglio la tua impresa e ne accompagni la crescita.
                 </p>
+                <div className="mt-8 space-y-4">
+                  <Link to="/realizzazione-siti-web-per-professionisti" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+                    <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Sito web per partita iva li fate? →</span>
+                  </Link>
+                  <Link to="/siti-web-per-negozi" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+                    <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Vorrei fare il sito del mio negozio →</span>
+                  </Link>
+                </div>
               </AnimatedSection>
             </div>
           </div>
@@ -483,6 +488,8 @@ const SitiWebAziendali = () => {
                   <p className="text-xs text-primary-foreground/50 mt-2 text-center"><strong>Richiede WhatsApp Web su PC</strong></p>
                 </div>
               </div>
+
+
 
               {/* Box destra - Form */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">

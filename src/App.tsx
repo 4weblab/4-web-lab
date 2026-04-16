@@ -9,6 +9,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 import SitiWebProfessionisti from "./pages/SitiWebProfessionisti";
+import SitiWebNegozi from "./pages/SitiWebNegozi";
 import SitiWebAziendali from "./pages/SitiWebAziendali";
 import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
@@ -101,6 +102,7 @@ const App = () => (
              <Route path="/realizzazione-siti-web-per-professionisti" element={<SitiWebProfessionisti />} />
              <Route path="/siti-web-aziendali" element={<SitiWebAziendali />} />
              <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
+             <Route path="/siti-web-per-negozi" element={<SitiWebNegozi />} />
              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />

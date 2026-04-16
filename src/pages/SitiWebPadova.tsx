@@ -131,7 +131,7 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2">Servizi web per attività locali, negozi e professionisti di Padova</h2>
+                <h2 className="heading-2">Servizi web per negozi, professionisti e aziende di Padova ( e in tutta Italia )</h2>
               </AnimatedSection>
 
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
@@ -145,8 +145,8 @@ const SitiWebPadova = () => {
                 {
                   title: 'Siti web per negozi',
                   description: 'Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.',
-                  link: null,
-                  linkLabel: null
+                  link: '/siti-web-per-negozi',
+                  linkLabel: 'Scopri il servizio'
                 },
                 {
                   title: 'Siti web aziendali strutturati',
@@ -246,7 +246,7 @@ const SitiWebPadova = () => {
                 <p className="mb-6">
                   La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del territorio. Lavoriamo con professionisti, commercianti e aziende della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la solidità di un metodo collaudato a livello nazionale.
                 </p>
-                <p>Che lei operi nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
+                <p>Che la tua attività sia nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
                 </p>
                 <p className="mt-6">
                   Offriamo anche soluzioni specifiche per ogni settore. Per approfondire i costi, consulta la nostra guida su <Link to="/quanto-costa-sito-web" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, oppure scopri se conviene <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">creare un sito con intelligenza artificiale</Link>.

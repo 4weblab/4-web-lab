@@ -4,7 +4,7 @@ import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
-import { Check, HelpCircle, ArrowRight, Cpu, Zap } from 'lucide-react';
+import { Check, HelpCircle, ArrowRight, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -13,7 +13,7 @@ const QuantoCostaSitoWeb = () => {
     <>
       <Helmet>
         <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab</title>
-        <meta name="description" content="Scopri i prezzi reali 2026: da 399€ one-time o 49€/mese noleggio. Fattori che influenzano il costo e perché evitare soluzioni low-cost o solo AI. Preventivo personalizzato gratuito." />
+        <meta name="description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/quanto-costa-sito-web" />
 
@@ -21,7 +21,7 @@ const QuantoCostaSitoWeb = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/quanto-costa-sito-web" />
         <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab" />
-        <meta property="og:description" content="Scopri i prezzi reali 2026: da 399€ one-time o 49€/mese noleggio. Fattori che influenzano il costo e perché evitare soluzioni low-cost o solo AI. Preventivo personalizzato gratuito." />
+        <meta property="og:description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -109,8 +109,7 @@ const QuantoCostaSitoWeb = () => {
                 Quanto costa davvero un sito web nel 2026 (prezzi aggiornati)
               </h2>
               <p className="text-lg text-muted-foreground text-balance mb-6 leading-relaxed">
-                Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì.
-                Online trovi offerte da 300€, builder automatici con AI e piattaforme "fai da te" che promettono risultati immediati. Ma nella maggior parte dei casi il risultato è sempre lo stesso: un sito che esiste, ma non serve.
+                Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì. Online trovi builder automatici con AI e piattaforme "fai da te" che promettono risultati immediati. Ma nella maggior parte dei casi il risultato è sempre lo stesso: un sito che esiste, ma non serve e non fa il suo lavoro.
               </p>
               <p className="text-base text-muted-foreground text-balance mb-6 leading-relaxed">
                 Il prezzo di un sito web non dipende solo da quante pagine ha, ma da come è progettato: struttura, contenuti, chiarezza, capacità di guidare l'utente a contattarti.
@@ -119,70 +118,119 @@ const QuantoCostaSitoWeb = () => {
               <p className="text-base text-muted-foreground text-balance leading-relaxed">
                 Qui sotto trovi i prezzi reali che si vedono oggi sul mercato, senza numeri gonfiati e senza promesse inutili.
               </p>
-              <p className="text-base text-muted-foreground text-balance leading-relaxed mt-6">
-                Se cerchi una soluzione completa, puoi approfondire anche i nostri{' '}
-                <Link to="/siti-web-aziendali" className="text-accent font-semibold link-underline">
-                  siti web aziendali professionali
-                </Link>.
-              </p>
             </AnimatedSection>
           </div>
         </section>
 
-        {/* 3 — Sezione Prezzi (tabella responsive) */}
+        {/* 3 — Sezione Prezzi: card confronto */}
         <section className="py-20 md:py-28" style={{ background: 'hsl(210 25% 98%)' }}>
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
               <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-5" style={{ letterSpacing: '-0.02em' }}>
-                Prezzi medi in Italia: confronto una tantum vs noleggio
+                Prezzi reali dei siti web in Italia: confronto
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-balance">
+                Quanto costa davvero un sito web e quanto puoi risparmiare
               </p>
             </AnimatedSection>
 
-            <AnimatedSection className="max-w-4xl mx-auto" delay={0.15}>
-              <div className="rounded-2xl overflow-hidden shadow-lg" style={{ border: '1px solid hsl(210 30% 88%)' }}>
-                <div className="overflow-x-auto">
-                  <table className="w-full text-left" style={{ minWidth: '600px' }}>
-                    <thead>
-                      <tr style={{ background: 'hsl(210 73% 15%)' }}>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm tracking-wide">Tipologia sito</th>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">Fascia di prezzo</th>
-                        <th className="py-5 px-6 text-primary-foreground font-bold text-sm text-center tracking-wide">Ideale per</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {[
-                        { tipo: 'Sito one page essenziale', prezzo: 'da 400€', target: 'Professionisti e attività locali' },
-                        { tipo: 'Sito vetrina', prezzo: '900€ – 1.500€', target: 'Aziende che vogliono presentarsi online' },
-                        { tipo: 'Sito aziendale completo', prezzo: '1.500€ – 2.500€+', target: 'PMI con più servizi' },
-                        { tipo: 'E-commerce', prezzo: '3.000€ – 10.000€+', target: 'Vendita online' },
-                        { tipo: 'Noleggio sito web', prezzo: 'da 49€/mese', target: 'Chi vuole evitare investimento iniziale' },
-                      ].map((row, idx) => (
-                        <tr key={idx} className={`border-b border-border/40 transition-colors hover:bg-accent/5 ${
-                          row.tipo === 'Noleggio sito web' 
-                            ? 'bg-accent/10 border-l-4 border-l-accent' 
-                            : idx % 2 === 1 ? 'bg-muted/40' : 'bg-background'
-                        }`}>
-                          <td className="py-5 px-6 text-foreground font-semibold text-sm">
-                            {row.tipo}
-                            {row.tipo === 'Noleggio sito web' && (
-                              <span className="ml-2 text-xs font-bold text-accent bg-accent/15 px-2 py-0.5 rounded-full">
-                                Più scelto
-                              </span>
-                            )}
-                          </td>
-                          <td className="py-5 px-6 text-center font-bold text-base" style={{ color: 'hsl(207 90% 44%)' }}>{row.prezzo}</td>
-                          <td className="py-5 px-6 text-center text-muted-foreground text-sm">{row.target}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+            <StaggerContainer className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto" staggerDelay={0.12}>
+              {[
+                {
+                  title: 'Sito web per negozi',
+                  description: 'Ideale per negozi fisici e attività locali che vogliono farsi trovare su Google e portare clienti in negozio.',
+                  prezzoMedio: '1200€ – 2500€',
+                  tuoPrezzo: '299€',
+                  highlighted: false,
+                  link: '/siti-web-per-negozi',
+                },
+                {
+                  title: 'Sito web per professionisti',
+                  description: 'Perfetto per liberi professionisti e studi che vogliono presentarsi online in modo professionale e acquisire nuovi contatti.',
+                  prezzoMedio: '800€ – 1800€',
+                  tuoPrezzo: '249€',
+                  highlighted: false,
+                  link: '/realizzazione-siti-web-per-professionisti',
+                },
+                {
+                  title: 'Sito web aziendale',
+                  description: 'Pensato per aziende strutturate che hanno bisogno di un sito completo, credibile e scalabile nel tempo.',
+                  prezzoMedio: '1500€ – 4000€',
+                  tuoPrezzo: '799€',
+                  highlighted: true,
+                  badge: 'Soluzione più scelta',
+                  link: '/siti-web-aziendali',
+                },
+              ].map((card, idx) => (
+                <StaggerItem key={idx}>
+                  <div
+                    className={`relative rounded-2xl p-8 h-full flex flex-col transition-all duration-300 hover:-translate-y-2 bg-card ${
+                      card.highlighted
+                        ? 'ring-2 ring-accent/40 scale-[1.02] md:scale-105'
+                        : 'hover:shadow-xl'
+                    }`}
+                    style={{
+                      border: card.highlighted ? '2px solid hsl(207 90% 54%)' : '1px solid hsl(210 30% 88%)',
+                      boxShadow: card.highlighted
+                        ? '0 12px 40px -8px hsl(207 90% 54% / 0.18), 0 4px 12px -4px hsl(207 90% 54% / 0.1)'
+                        : '0 4px 20px -4px hsl(210 73% 15% / 0.08)',
+                    }}
+                  >
+                    {card.highlighted && card.badge && (
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-white text-xs font-bold px-4 py-1 rounded-full whitespace-nowrap">
+                        {card.badge}
+                      </span>
+                    )}
+
+                    <h3 className="text-xl font-bold text-foreground mb-3">{card.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-6 flex-grow">{card.description}</p>
+
+                    {/* Prezzo medio */}
+                    <div className="mb-4 pb-4 border-b border-border/50">
+                      <p className="text-xs uppercase tracking-widest text-muted-foreground font-semibold mb-1">Prezzo medio in Italia</p>
+                      <p className="text-lg font-bold text-muted-foreground/70 line-through">{card.prezzoMedio}</p>
+                    </div>
+
+                    {/* Tuo prezzo */}
+                    <div className="text-center py-3 rounded-xl bg-accent/8">
+                      <p className="text-xs uppercase tracking-widest text-accent font-bold mb-1">A partire da</p>
+                      <p className="text-3xl font-serif font-bold text-accent">{card.tuoPrezzo}</p>
+                    </div>
+
+                    <Link
+                      to={card.link}
+                      className="mt-6 text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1 justify-center"
+                    >
+                      Scopri di più <ArrowRight className="w-3 h-3" />
+                    </Link>
+                  </div>
+                </StaggerItem>
+              ))}
+            </StaggerContainer>
+
+            {/* Blocco rinforzo */}
+            <AnimatedSection className="max-w-3xl mx-auto mt-16" delay={0.3}>
+              <div className="card-glass p-8 md:p-10" style={{ border: '1px solid hsl(210 30% 85%)', boxShadow: '0 8px 32px -4px hsl(210 73% 15% / 0.1)' }}>
+                <h3 className="text-xl md:text-2xl font-extrabold text-foreground mb-4" style={{ letterSpacing: '-0.02em' }}>
+                  Perché c'è questa differenza di prezzo?
+                </h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Molte agenzie applicano prezzi elevati per coprire strutture interne complesse, costi di gestione e processi poco ottimizzati.
+                  Noi lavoriamo in modo più diretto e snello, eliminando passaggi inutili e concentrandoci solo su ciò che serve davvero al cliente.
+                </p>
+                <p className="text-foreground font-bold">
+                  Risultato: un sito professionale, senza costi gonfiati.
+                </p>
               </div>
-              <p className="text-center text-sm text-muted-foreground mt-8">I prezzi possono variare in base alla complessità del progetto, ai contenuti e al livello di personalizzazione.</p>
             </AnimatedSection>
+
+            {/* Micro copy */}
+            <p className="text-center text-lg md:text-xl font-serif italic text-foreground mt-10 max-w-2xl mx-auto">
+              La differenza non è nel prezzo, ma in come viene costruito il progetto.
+            </p>
+
+            <p className="text-center text-sm text-muted-foreground mt-6">I prezzi possono variare in base alla complessità del progetto, ai contenuti e al livello di personalizzazione.</p>
           </div>
         </section>
 
@@ -193,7 +241,7 @@ const QuantoCostaSitoWeb = () => {
               <div className="rounded-2xl p-10 md:p-16 bg-card" style={{ border: '1px solid hsl(210 30% 85%)', boxShadow: '0 12px 40px -8px hsl(210 73% 15% / 0.12), 0 4px 12px -4px hsl(207 90% 54% / 0.08)' }}>
                 <span className="inline-block text-xs font-extrabold tracking-[0.2em] uppercase mb-6 px-4 py-1.5 rounded-full bg-accent/15 text-accent">Esempio reale</span>
                 <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-8" style={{ letterSpacing: '-0.02em' }}>
-                  Quanto può costare davvero un sito aziendale
+                  Quanto può costare davvero un <Link to="/siti-web-aziendali" className="text-accent underline underline-offset-4 hover:text-accent/80 transition-colors">sito aziendale</Link>
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Per fare un esempio concreto, un sito aziendale con più pagine, struttura chiara e contenuti ben organizzati può richiedere un investimento nell'ordine delle migliaia di euro.
@@ -328,54 +376,6 @@ const QuantoCostaSitoWeb = () => {
           </div>
         </section>
 
-        {/* 7 — Sezione Noleggio */}
-        <section className="py-20 md:py-28" style={{ background: 'hsl(210 25% 98%)' }}>
-          <div className="container-section">
-            <AnimatedSection className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
-              <div className="card-glass p-8 order-2 md:order-1 relative" style={{ border: '2px solid hsl(207 90% 54%)' }}>
-                <span className="absolute -top-3 right-6 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">Il più scelto</span>
-                <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
-                  <Zap className="w-5 h-5 text-accent" aria-hidden="true" />
-                </div>
-                <h3 className="text-xl font-bold text-foreground mb-3">PRO</h3>
-                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">Il pacchetto completo per una presenza online solida.</p>
-                <div className="mb-5">
-                  <span className="text-3xl font-serif font-bold text-foreground">69€</span>
-                  <span className="text-sm text-muted-foreground ml-1">/mese</span>
-                </div>
-                <p className="text-xs font-semibold text-muted-foreground mb-3">Pacchetto START più:</p>
-                <ul className="space-y-3" role="list">
-                  {[
-                    'Grafica più curata',
-                    'SEO base locale',
-                    'Più sezioni e modifiche incluse',
-                    'Report mensile',
-                  ].map((item, i) => (
-                    <li key={i} className="flex items-start gap-2">
-                      <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
-                        <Check className="w-3 h-3 text-accent" aria-hidden="true" />
-                      </span>
-                      <span className="text-foreground text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="order-1 md:order-2">
-                <h2 className="text-3xl md:text-4xl font-extrabold tracking-tight text-foreground mb-6" style={{ letterSpacing: '-0.02em' }}>
-                  Il nostro modello a noleggio: da 49€/mese tutto incluso
-                </h2>
-                <p className="text-muted-foreground mb-4 leading-relaxed">Molte attività oggi scelgono una soluzione più semplice: invece di investire subito cifre importanti, partono con un costo mensile.</p>
-                <p className="text-muted-foreground mb-6 leading-relaxed">È una soluzione ideale per chi vuole iniziare senza bloccare budget.</p>
-                <a
-                  href="/#noleggio"
-                  className="btn-primary inline-flex items-center gap-2 px-8 py-4"
-                  style={{ boxShadow: '0 4px 20px hsl(207 90% 54% / 0.4)' }}>
-                  Scopri la soluzione a noleggio <ArrowRight className="w-4 h-4" />
-                </a>
-              </div>
-            </AnimatedSection>
-          </div>
-        </section>
 
         {/* 8 — FAQ */}
         <section className="py-20 md:py-28 bg-background">
@@ -409,13 +409,10 @@ const QuantoCostaSitoWeb = () => {
               </Accordion>
             </AnimatedSection>
           </div>
-          <p className="text-center text-muted-foreground text-sm mt-10">
-            <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline">Creare un sito con intelligenza artificiale: conviene davvero nel 2026?</Link>
-          </p>
         </section>
 
         {/* 9 — CTA Finale */}
-        <section id="cta-finale" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <section id="contatti" className="py-24 md:py-32 relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
               <filter id="costo-cta-noise">

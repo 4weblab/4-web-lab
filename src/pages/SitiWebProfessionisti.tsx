@@ -3,7 +3,9 @@ import { Helmet } from 'react-helmet-async';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
-import { ArrowRight, CheckCircle2, Users, Target, Settings, Award, MessageCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Users, Target, Settings, Award, MessageCircle, Euro, Check, Gift } from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Button } from '@/components/ui/button';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 
@@ -48,9 +50,9 @@ const SitiWebProfessionisti = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti Web per Professionisti e Studi su misura
+                Siti Web per Professionisti
               </h1>
-              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">In 4weblab realizziamo siti web per professionisti e studi professionali in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
+              <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">In 4 Web Lab realizziamo siti web per professionisti o studi professionali a Padova e in tutta Italia. Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette collaborazioni efficaci ovunque ti trovi.
               </p>
               <button
                 onClick={() => document.getElementById('contatti-professionisti')?.scrollIntoView({ behavior: 'smooth' })}
@@ -82,7 +84,7 @@ const SitiWebProfessionisti = () => {
                   'Consulenti e liberi professionisti che desiderano presentarsi online in modo autorevole',
                   'Studi professionali (legali, commercialisti, architetti, ingegneri, notai) che necessitano di un sito web professionale',
                   'Tecnici e periti che vogliono ampliare la propria visibilità sul territorio nazionale',
-                  'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile'].
+                  'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile ( elettricista, idraulico, pittore etc. ) '].
                   map((item, index) =>
                   <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
@@ -164,8 +166,8 @@ const SitiWebProfessionisti = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-8">
-                  In 4weblab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
-                  ideale per collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo
+                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
+                  ideale anche per collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo
                   garantisce trasparenza in ogni fase:
                 </p>
                 <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
@@ -221,7 +223,7 @@ const SitiWebProfessionisti = () => {
                 <div className="icon-box w-13 h-13">
                   <Award className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Perché scegliere 4weblab</h2>
+                <h2 className="heading-2">Perché scegliere 4 Web Lab</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
@@ -251,6 +253,105 @@ const SitiWebProfessionisti = () => {
               </AnimatedSection>
             </div>
           </div>
+        </section>
+
+        {/* Quanto costa */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Euro className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Quanto costa un sito web per professionisti</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-12" delay={0.1}>
+                <p>
+                  Ottimizziamo il costo di realizzazione dei nostri servizi cucendo il sito su misura del cliente,
+                  in base alle sue reali necessità e in base agli obiettivi che vuole raggiungere.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                  {/* Card pricing - replica da home */}
+                  <div className="card-glass p-10 relative overflow-hidden" style={{ border: '1px solid hsl(210 30% 88%)', boxShadow: '0 8px 32px -4px hsl(210 73% 15% / 0.12), 0 2px 8px -2px hsl(210 73% 15% / 0.07)' }}>
+                    <div className="absolute top-0 right-0 px-5 py-1.5 rounded-bl-2xl text-xs font-bold tracking-wide" style={{ background: 'var(--gradient-accent)', color: 'white' }}>
+                      TUTTO INCLUSO
+                    </div>
+                    <div className="text-center mb-10">
+                      <div className="inline-flex items-center gap-2 text-accent font-semibold mb-6 bg-accent/10 px-5 py-2.5 rounded-full">
+                        <Gift className="w-5 h-5" aria-hidden="true" />
+                        <span>Offerta Completa</span>
+                      </div>
+                      <div className="mb-3">
+                        <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
+                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€249</span>
+                      </div>
+                      <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
+                      <p className="text-muted-foreground text-sm mt-4">
+                        Una soluzione ideale per chi cerca la realizzazione di un sito web professionale completo, ovunque si trovi in Italia.
+                      </p>
+                    </div>
+                    <ul className="space-y-4 mb-10" role="list">
+                      {['Sviluppo sito One page professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO'].map((feature, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
+                            <Check className="w-3 h-3 text-accent" aria-hidden="true" />
+                          </span>
+                          <span className="text-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                      <Button size="lg" className="w-full rounded-2xl h-13 text-base font-semibold" onClick={() => document.getElementById('contatti-professionisti')?.scrollIntoView({ behavior: 'smooth' })}>
+                        Richiedi preventivo
+                      </Button>
+                    </motion.div>
+                  </div>
+
+                  {/* Bullet points */}
+                  <div className="flex flex-col justify-center h-full space-y-6">
+                    <StaggerContainer className="space-y-5" staggerDelay={0.1}>
+                      {[
+                        {
+                          title: 'Struttura pensata per il tuo settore',
+                          description: 'Ogni sito viene progettato tenendo conto delle specificità della tua professione e del tuo target di riferimento.'
+                        },
+                        {
+                          title: 'Nessun vincolo contrattuale',
+                          description: '4 Web Lab resta al fianco delle tue necessità di sviluppo online ma senza firme o vincoli di nessun tipo.'
+                        },
+                        {
+                          title: 'Gestione dell\' hosting e dell\'assistenza',
+                          description: '​4 Web Lab può gestire l\'hosting del tuo spazio, noi ci assicuriamo che tutto funzioni sempre al meglio e tu pensi alla tua attività.'
+                        }
+                      ].map((item, index) => (
+                        <StaggerItem key={index}>
+                          <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                            <div>
+                              <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
+                              <p className="text-sm text-muted-foreground">{item.description}</p>
+                            </div>
+                          </div>
+                        </StaggerItem>
+                      ))}
+                    </StaggerContainer>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+          {/* Internal links */}
+          <AnimatedSection className="max-w-2xl mx-auto mt-12 space-y-4 text-center">
+            <Link to="/siti-web-aziendali" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+              <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Ho bisogno di un sito web per la mia azienda →</span>
+            </Link>
+            <Link to="/siti-web-per-negozi" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+              <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Vorrei fare il sito del mio negozio →</span>
+            </Link>
+          </AnimatedSection>
         </section>
 
         {/* CTA Section */}
