@@ -53,19 +53,19 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Agenzia Web Padova | Siti Professionali da 49€/mese o 400€ una tantum | 4weblab</title>
+        <title>Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | 4weblab</title>
         <meta
           name="description"
-          content="Agenzia Web Padova per negozi, professionisti e PMI. Siti web professionali con noleggio tutto incluso da 49€/mese (negozi e professionisti) o da 400€ one-time per landing page PMI. Qualità agenzia, zero rischio, supporto locale a Padova."
+          content="Agenzia Web Padova per negozi, professionisti e aziende. Siti web professionali su misura con supporto locale a Padova. Qualità agenzia, zero rischio."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/" />
-        <meta property="og:title" content="Agenzia Web Padova | Siti Professionali da 49€/mese o 400€ | 4weblab" />
+        <meta property="og:title" content="Agenzia Web Padova | Siti per Negozi, Professionisti e Aziende | 4weblab" />
         <meta
           property="og:description"
-          content="Agenzia Web Padova per negozi, professionisti e PMI. Siti web professionali con noleggio tutto incluso da 49€/mese (negozi e professionisti) o da 400€ one-time per landing page PMI. Qualità agenzia, zero rischio, supporto locale a Padova."
+          content="Agenzia Web Padova per negozi, professionisti e aziende. Siti web professionali su misura con supporto locale a Padova. Qualità agenzia, zero rischio."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
