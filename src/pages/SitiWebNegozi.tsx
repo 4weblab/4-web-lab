@@ -46,22 +46,22 @@ const SitiWebNegozi = () => {
               {
                 "@type": "Question",
                 "name": "Quanto tempo serve per realizzare un sito web per negozi?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Tra 7 e 15 giorni lavorativi." }
+                "acceptedAnswer": { "@type": "Answer", "text": "I tempi di realizzazione variano in base alla complessità del sito, ma per la maggior parte dei negozi riusciamo a consegnare il progetto completo in 7-15 giorni lavorativi. In questo tempo includiamo progettazione, sviluppo e inserimento dei contenuti iniziali." }
               },
               {
                 "@type": "Question",
                 "name": "Posso modificare il sito del mio negozio?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sì, oppure lo gestiamo noi." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Sì, il sito può essere progettato per essere aggiornato in autonomia in modo semplice. In alternativa, puoi affidare a noi la gestione e gli aggiornamenti, così non devi preoccuparti di nulla e hai sempre un sito aggiornato e funzionante." }
               },
               {
                 "@type": "Question",
                 "name": "Il sito del negozio sarà su Google?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sì, il sito è strutturato per essere indicizzato." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Il sito viene strutturato per essere correttamente indicizzato su Google, con una base SEO solida pensata per le ricerche locali. Questo significa che il tuo negozio può comparire quando qualcuno cerca i tuoi prodotti o servizi nella tua zona." }
               },
               {
                 "@type": "Question",
                 "name": "È adatto ai piccoli negozi?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Sì, è pensato per attività locali di qualsiasi dimensione." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Assolutamente sì. Questo tipo di sito è pensato proprio per negozi locali, attività indipendenti e piccole realtà che vogliono migliorare la propria presenza online senza investimenti complessi o soluzioni inutilmente complicate." }
               }
             ]
           })}
@@ -364,10 +364,10 @@ const SitiWebNegozi = () => {
               <AnimatedSection delay={0.1}>
                 <Accordion type="single" collapsible className="space-y-3">
                   {[
-                    { question: 'Quanto tempo serve?', answer: 'Tra 7 e 15 giorni lavorativi.' },
-                    { question: 'Posso modificarlo?', answer: 'Sì, oppure lo gestiamo noi.' },
-                    { question: 'Sarò su Google?', answer: 'Sì, il sito è strutturato per essere indicizzato.' },
-                    { question: 'È adatto ai piccoli negozi?', answer: 'Sì, è pensato per attività locali di qualsiasi dimensione.' },
+                    { question: 'Quanto tempo serve?', answer: 'I tempi di realizzazione variano in base alla complessità del sito, ma per la maggior parte dei negozi riusciamo a consegnare il progetto completo in 7-15 giorni lavorativi. In questo tempo includiamo progettazione, sviluppo e inserimento dei contenuti iniziali.' },
+                    { question: 'Posso modificarlo?', answer: 'Sì, il sito può essere progettato per essere aggiornato in autonomia in modo semplice. In alternativa, puoi affidare a noi la gestione e gli aggiornamenti, così non devi preoccuparti di nulla e hai sempre un sito aggiornato e funzionante.' },
+                    { question: 'Sarò su Google?', answer: 'Il sito viene strutturato per essere correttamente indicizzato su Google, con una base SEO solida pensata per le ricerche locali. Questo significa che il tuo negozio può comparire quando qualcuno cerca i tuoi prodotti o servizi nella tua zona.' },
+                    { question: 'È adatto ai piccoli negozi?', answer: 'Assolutamente sì. Questo tipo di sito è pensato proprio per negozi locali, attività indipendenti e piccole realtà che vogliono migliorare la propria presenza online senza investimenti complessi o soluzioni inutilmente complicate.' },
                   ].map((faq, index) => (
                     <AccordionItem key={index} value={`faq-${index}`} className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6">
                       <AccordionTrigger className="text-left py-5 hover:no-underline">
