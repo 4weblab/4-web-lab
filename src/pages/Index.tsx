@@ -7,8 +7,7 @@ import Footer from "@/components/Footer";
 const AboutSection = lazy(() => import("@/components/AboutSection"));
 const StrengthsSection = lazy(() => import("@/components/StrengthsSection"));
 const ServicesSection = lazy(() => import("@/components/ServicesSection"));
-const RentalSection = lazy(() => import("@/components/RentalSection"));
-const PricingSection = lazy(() => import("@/components/PricingSection"));
+const UserRoutingSection = lazy(() => import("@/components/UserRoutingSection"));
 const HomeFaqPreview = lazy(() => import("@/components/HomeFaqPreview"));
 const ContactSection = lazy(() => import("@/components/ContactSection"));
 
