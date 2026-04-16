@@ -13,8 +13,8 @@ import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
-import storefrontImg from '@/assets/negozi-storefront.jpg';
-import mobileSearchImg from '@/assets/negozi-mobile-search.jpg';
+import storefrontImg from '@/assets/negozi-storefront.webp';
+import mobileSearchImg from '@/assets/negozi-mobile-search.webp';
 
 const SitiWebNegozi = () => {
   const handleContactClick = () => {
