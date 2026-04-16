@@ -286,7 +286,7 @@ const SitiWebProfessionisti = () => {
                       </div>
                       <div className="mb-3">
                         <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
-                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€399</span>
+                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€249</span>
                       </div>
                       <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
                       <p className="text-muted-foreground text-sm mt-4">
@@ -320,11 +320,11 @@ const SitiWebProfessionisti = () => {
                         },
                         {
                           title: 'Nessun vincolo contrattuale',
-                          description: 'Puoi scegliere la formula una tantum oppure il noleggio mensile, senza obblighi a lungo termine.'
+                          description: '4 Web Lab resta al fianco delle tue necessità di sviluppo online ma senza firme o vincoli di nessun tipo.'
                         },
                         {
-                          title: 'Assistenza e aggiornamenti inclusi',
-                          description: 'Dopo il lancio, il tuo sito è sempre seguito: aggiornamenti tecnici, modifiche e supporto continuo.'
+                          title: 'Gestione dell\' hosting e dell\'assistenza',
+                          description: '​4 Web Lab può gestire l\'hosting del tuo spazio, noi ci assicuriamo che tutto funzioni sempre al meglio e tu pensi alla tua attività.'
                         }
                       ].map((item, index) => (
                         <StaggerItem key={index}>
