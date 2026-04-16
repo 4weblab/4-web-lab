@@ -4,7 +4,7 @@ import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
-import { Check, HelpCircle, ArrowRight, Cpu, Zap } from 'lucide-react';
+import { Check, HelpCircle, ArrowRight, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
