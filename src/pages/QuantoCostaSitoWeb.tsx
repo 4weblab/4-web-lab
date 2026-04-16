@@ -109,8 +109,7 @@ const QuantoCostaSitoWeb = () => {
                 Quanto costa davvero un sito web nel 2026 (prezzi aggiornati)
               </h2>
               <p className="text-lg text-muted-foreground text-balance mb-6 leading-relaxed">
-                Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì.
-                Online trovi offerte da 300€, builder automatici con AI e piattaforme "fai da te" che promettono risultati immediati. Ma nella maggior parte dei casi il risultato è sempre lo stesso: un sito che esiste, ma non serve.
+                Nel 2026 creare un sito web non è difficile. Farne uno che porta clienti, sì. Online trovi builder automatici con AI e piattaforme "fai da te" che promettono risultati immediati. Ma nella maggior parte dei casi il risultato è sempre lo stesso: un sito che esiste, ma non serve e non fa il suo lavoro.
               </p>
               <p className="text-base text-muted-foreground text-balance mb-6 leading-relaxed">
                 Il prezzo di un sito web non dipende solo da quante pagine ha, ma da come è progettato: struttura, contenuti, chiarezza, capacità di guidare l'utente a contattarti.
