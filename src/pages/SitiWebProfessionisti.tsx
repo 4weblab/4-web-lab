@@ -84,7 +84,7 @@ const SitiWebProfessionisti = () => {
                   'Consulenti e liberi professionisti che desiderano presentarsi online in modo autorevole',
                   'Studi professionali (legali, commercialisti, architetti, ingegneri, notai) che necessitano di un sito web professionale',
                   'Tecnici e periti che vogliono ampliare la propria visibilità sul territorio nazionale',
-                  'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile'].
+                  'Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile ( elettricista, idraulico, pittore etc. ) '].
                   map((item, index) =>
                   <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
