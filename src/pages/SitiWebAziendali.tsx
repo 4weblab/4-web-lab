@@ -481,6 +481,16 @@ const SitiWebAziendali = () => {
                 </div>
               </div>
 
+              {/* Link interni */}
+              <AnimatedSection className="col-span-full max-w-2xl mx-auto space-y-4 text-center">
+                <Link to="/realizzazione-siti-web-per-professionisti" className="block text-lg font-semibold text-accent hover:text-accent/80 transition-colors duration-300 underline underline-offset-4">
+                  Sito web per partita iva li fate? →
+                </Link>
+                <Link to="/siti-web-per-negozi" className="block text-lg font-semibold text-accent hover:text-accent/80 transition-colors duration-300 underline underline-offset-4">
+                  Vorrei fare il sito del mio negozio →
+                </Link>
+              </AnimatedSection>
+
               {/* Box destra - Form */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">
                 <ContactFormWeb3Forms />
