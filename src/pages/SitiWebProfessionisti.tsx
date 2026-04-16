@@ -343,6 +343,15 @@ const SitiWebProfessionisti = () => {
               </AnimatedSection>
             </div>
           </div>
+          {/* Internal links */}
+          <AnimatedSection className="max-w-2xl mx-auto mt-12 space-y-4 text-center">
+            <Link to="/siti-web-aziendali" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+              <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Ho bisogno di un sito web per la mia azienda →</span>
+            </Link>
+            <Link to="/siti-web-per-negozi" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+              <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Vorrei fare il sito del mio negozio →</span>
+            </Link>
+          </AnimatedSection>
         </section>
 
         {/* CTA Section */}
