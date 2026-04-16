@@ -58,7 +58,7 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              Agenzia Web Padova – Siti professionali per negozi, professionisti e PMI
+              Agenzia Web Padova – Siti web per negozi, professionisti e aziende 
             </h1>
 
             <motion.p
@@ -68,9 +68,8 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
 
-              Noleggio tutto incluso da 49€/mese per negozi e professionisti.{"\n"}
-              O 400€ una tantum per la landing page della tua azienda.{"\n"}
-              Zero investimenti iniziali da migliaia di euro.
+              Nessun investimento iniziale da migliaia di Euro.{"\n"}
+              Scopri le soluzioni 4 Web Lab per il sito del tuo negozio, della tua professione ( elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
             </motion.p>
 
             <motion.div
