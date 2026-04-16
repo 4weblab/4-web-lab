@@ -145,8 +145,8 @@ const SitiWebPadova = () => {
                 {
                   title: 'Siti web per negozi',
                   description: 'Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.',
-                  link: null,
-                  linkLabel: null
+                  link: '/siti-web-per-negozi',
+                  linkLabel: 'Scopri il servizio'
                 },
                 {
                   title: 'Siti web aziendali strutturati',
