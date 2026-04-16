@@ -360,7 +360,7 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-8">
-                  In 4weblab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
+                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
                   pensato per collaborazioni da remoto con aziende in tutta Italia. Il nostro processo
                   garantisce trasparenza, tempi certi e qualità in ogni fase della realizzazione del sito web aziendale.
                 </p>
