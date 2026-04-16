@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 const services = [
   {
     icon: Globe,
-    title: 'Siti web aziendali professionali',
+    title: 'Siti web professionali',
     description: 'Creazione di siti vetrina, one-page e multi-pagina per presentare al meglio la tua attività. ',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
     link: '/siti-web-aziendali',
