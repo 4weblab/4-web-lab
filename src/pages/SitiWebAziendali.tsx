@@ -417,7 +417,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <Award className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Perché scegliere 4weblab</h2>
+                <h2 className="heading-2">Perché scegliere 4 Web Lab</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
