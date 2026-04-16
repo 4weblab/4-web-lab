@@ -81,14 +81,14 @@ const UserRoutingSection = () => {
 
                   {/* Content */}
                   <div className="relative h-full flex flex-col justify-end p-8 md:p-9">
-                    {/* Icon badge */}
-                    <div className="absolute top-6 left-7 w-12 h-12 rounded-2xl bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-accent/80 transition-colors duration-500">
-                      <Icon className="w-6 h-6 text-white" aria-hidden="true" />
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-accent/80 transition-colors duration-500 shrink-0">
+                        <Icon className="w-5 h-5 text-white" aria-hidden="true" />
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-serif font-bold text-white">
+                        {card.title}
+                      </h3>
                     </div>
-
-                    <h3 className="text-2xl md:text-3xl font-serif font-bold text-white mb-3">
-                      {card.title}
-                    </h3>
                     <p className="text-white/85 text-base leading-relaxed mb-6 max-w-sm">
                       {card.text}
                     </p>
