@@ -164,8 +164,8 @@ const SitiWebProfessionisti = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-8">
-                  In 4weblab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
-                  ideale per collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo
+                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato,
+                  ideale anche per collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo
                   garantisce trasparenza in ogni fase:
                 </p>
                 <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
