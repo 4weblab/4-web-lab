@@ -131,7 +131,7 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2">Servizi web per attività locali, negozi e professionisti di Padova</h2>
+                <h2 className="heading-2">Servizi web per negozi, professionisti e aziende di Padova ( e in tutta Italia )</h2>
               </AnimatedSection>
 
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
