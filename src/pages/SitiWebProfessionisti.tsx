@@ -255,6 +255,96 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
+        {/* Quanto costa */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Euro className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Quanto costa un sito web per professionisti</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-12" delay={0.1}>
+                <p>
+                  Ottimizziamo il costo di realizzazione dei nostri servizi cucendo il sito su misura del cliente,
+                  in base alle sue reali necessità e in base agli obiettivi che vuole raggiungere.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                  {/* Card pricing - replica da home */}
+                  <div className="card-glass p-10 relative overflow-hidden" style={{ border: '1px solid hsl(210 30% 88%)', boxShadow: '0 8px 32px -4px hsl(210 73% 15% / 0.12), 0 2px 8px -2px hsl(210 73% 15% / 0.07)' }}>
+                    <div className="absolute top-0 right-0 px-5 py-1.5 rounded-bl-2xl text-xs font-bold tracking-wide" style={{ background: 'var(--gradient-accent)', color: 'white' }}>
+                      TUTTO INCLUSO
+                    </div>
+                    <div className="text-center mb-10">
+                      <div className="inline-flex items-center gap-2 text-accent font-semibold mb-6 bg-accent/10 px-5 py-2.5 rounded-full">
+                        <Gift className="w-5 h-5" aria-hidden="true" />
+                        <span>Offerta Completa</span>
+                      </div>
+                      <div className="mb-3">
+                        <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
+                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€399</span>
+                      </div>
+                      <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
+                      <p className="text-muted-foreground text-sm mt-4">
+                        Una soluzione ideale per chi cerca la realizzazione di un sito web professionale completo, ovunque si trovi in Italia.
+                      </p>
+                    </div>
+                    <ul className="space-y-4 mb-10" role="list">
+                      {['Sviluppo sito One page professionale', 'Personalizzazione contenuti', 'Scelta font e tipografia', 'Palette colori su misura', 'Ottimizzazione SEO'].map((feature, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
+                            <Check className="w-3 h-3 text-accent" aria-hidden="true" />
+                          </span>
+                          <span className="text-foreground">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                      <Button size="lg" className="w-full rounded-2xl h-13 text-base font-semibold" onClick={() => document.getElementById('contatti-professionisti')?.scrollIntoView({ behavior: 'smooth' })}>
+                        Richiedi preventivo
+                      </Button>
+                    </motion.div>
+                  </div>
+
+                  {/* Bullet points */}
+                  <div className="flex flex-col justify-center h-full space-y-6">
+                    <StaggerContainer className="space-y-5" staggerDelay={0.1}>
+                      {[
+                        {
+                          title: 'Struttura pensata per il tuo settore',
+                          description: 'Ogni sito viene progettato tenendo conto delle specificità della tua professione e del tuo target di riferimento.'
+                        },
+                        {
+                          title: 'Nessun vincolo contrattuale',
+                          description: 'Puoi scegliere la formula una tantum oppure il noleggio mensile, senza obblighi a lungo termine.'
+                        },
+                        {
+                          title: 'Assistenza e aggiornamenti inclusi',
+                          description: 'Dopo il lancio, il tuo sito è sempre seguito: aggiornamenti tecnici, modifiche e supporto continuo.'
+                        }
+                      ].map((item, index) => (
+                        <StaggerItem key={index}>
+                          <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
+                            <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                            <div>
+                              <h3 className="font-bold text-foreground mb-1">{item.title}</h3>
+                              <p className="text-sm text-muted-foreground">{item.description}</p>
+                            </div>
+                          </div>
+                        </StaggerItem>
+                      ))}
+                    </StaggerContainer>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section id="contatti-professionisti" className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
           {/* Noise texture */}
