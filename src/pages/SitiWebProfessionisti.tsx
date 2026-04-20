@@ -28,7 +28,7 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web per Professionisti di settore, SEO locale e personalizzati | 4weblab</title>
+        <title>Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab</title>
         <meta
           name="description"
           content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
@@ -38,7 +38,7 @@ const SitiWebProfessionisti = () => {
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
-        <meta property="og:title" content="Siti Web per Professionisti e Studi: Realizzazione su Misura | 4weblab" />
+        <meta property="og:title" content="Siti Web per Professionisti e Studi: Realizzazione su Misura | 4 Web Lab" />
         <meta
           property="og:description"
           content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
@@ -49,11 +49,11 @@ const SitiWebProfessionisti = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ProfessionalService",
-            name: "4weblab – Siti Web per Professionisti",
+            name: "4 Web Lab – Siti Web per Professionisti",
             description:
               "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
             url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
-            provider: { "@type": "Organization", name: "4weblab", url: "https://4weblab.it" },
+            provider: { "@type": "Organization", name: "4 Web Lab", url: "https://4weblab.it" },
             areaServed: { "@type": "Country", name: "IT" },
             serviceType: "Web Design for Professionals",
           })}
@@ -248,7 +248,7 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
-        {/* Perché scegliere 4weblab */}
+        {/* Perché scegliere 4 Web Lab */}
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
@@ -280,7 +280,7 @@ const SitiWebProfessionisti = () => {
                   ))}
                 </StaggerContainer>
                 <p>
-                  Scegliere 4weblab significa affidarsi a un partner affidabile per la realizzazione di un sito web
+                  Scegliere 4 Web Lab significa affidarsi a un partner affidabile per la realizzazione di un sito web
                   professionale che rappresenti al meglio la tua attività professionale.
                 </p>
               </AnimatedSection>

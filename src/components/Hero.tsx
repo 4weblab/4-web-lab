@@ -31,7 +31,7 @@ const Hero = () => {
       {/* Background image */}
       <img
         src={heroBg}
-        alt="Sito web professionale realizzato da 4weblab per PMI e professionisti"
+        alt="Sito web professionale realizzato da 4 Web Lab per PMI e professionisti"
         width={1920}
         height={1080}
         fetchPriority="high"

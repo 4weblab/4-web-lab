@@ -125,7 +125,7 @@ const FaqSitiWeb = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4weblab</title>
+        <title>FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab</title>
         <meta
           name="description"
           content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
@@ -136,7 +136,7 @@ const FaqSitiWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4weblab" />
+        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab" />
         <meta property="og:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />

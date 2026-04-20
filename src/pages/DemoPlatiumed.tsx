@@ -125,7 +125,7 @@ const DemoPlatiumed = () => {
   return (
     <div className="min-h-screen bg-[#040714] text-white font-sans [&_h1]:text-white [&_h2]:text-white [&_h3]:text-white [&_h4]:text-white [&_h1]:font-sans [&_h2]:font-sans [&_h3]:font-sans [&_h4]:font-sans">
       <Helmet>
-        <title>Platiumed – Dispositivi Elettromedicali | Demo 4weblab</title>
+        <title>Platiumed – Dispositivi Elettromedicali | Demo 4 Web Lab</title>
         <meta name="description" content="Demo landing page per Platiumed, azienda italiana leader nella magnetoterapia e dispositivi elettromedicali." />
       </Helmet>
 
