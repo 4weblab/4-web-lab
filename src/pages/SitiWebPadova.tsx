@@ -19,7 +19,7 @@ const SitiWebPadova = () => {
         <title>Realizzazione Siti Web Padova | Agenzia Locale da 249€ | 4 Web Lab</title>
         <meta
           name="description"
-          content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
+          content="Realizzazione siti web Padova: agenzia locale specializzata in siti professionali per aziende, negozi e professionisti. Da 249€ tutto incluso. SEO locale, design moderno e assistenza dedicata. Preventivo gratuito in 24h!" />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
