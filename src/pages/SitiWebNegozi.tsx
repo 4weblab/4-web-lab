@@ -84,7 +84,6 @@ const SitiWebNegozi = () => {
               </p>
 
               <div className="inline-flex items-center gap-2 text-accent font-semibold bg-accent/10 px-6 py-3 rounded-full mb-8">
-                <Euro className="w-5 h-5" aria-hidden="true" />
                 <span>Siti web per negozi a partire da 299€</span>
               </div>
 
