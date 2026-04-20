@@ -1,39 +1,42 @@
 
 
-## Obiettivo
-Sostituire tutte le occorrenze testuali del brand "4weblab" con "4 Web Lab" in tutto il sito, **preservando** URL, email e dati strutturati che usano il dominio `4weblab.it` o l'indirizzo `info@4weblab.it`.
+L'utente fornisce la meta description ufficiale per la home. La applico identica nei 3 file (Index.tsx, App.tsx, index.html), allineando anche title, og:* e twitter:* per eliminare le incoerenze rilevate.
 
-## Regola di sostituzione
-- ✅ Sostituire: `4weblab` quando appare come brand text (in title, og:title, descrizioni, alt text, JSON-LD `name`, link visibili, copy)
-- ❌ NON toccare:
-  - `4weblab.it` (dominio negli URL canonical, og:url, sitemap, link interni, JSON-LD `url`)
-  - `info@4weblab.it` (email)
-  - `393514656042` (numero WhatsApp)
+## Description ufficiale Home (155 char)
+> Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!
 
-## File da modificare (12 file, ~ separate occorrenze brand)
+## Title ufficiale Home (confermo quello già attivo a runtime in Index.tsx)
+> Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | 4 Web Lab
 
-| File | Occorrenze brand "4weblab" → "4 Web Lab" |
-|---|---|
-| `index.html` | title, og:title, twitter:title (3x) |
-| `src/App.tsx` | `siteMetadata.title` |
-| `src/pages/SitiWebAziendali.tsx` | og:title, alt mockup, sezione "Perché scegliere 4weblab" (heading + copy) |
-| `src/pages/SitiWebProfessionisti.tsx` | title, og:title, JSON-LD `name`, `provider.name` |
-| `src/pages/SitiWebNegozi.tsx` | eventuali title/og:title (da verificare) |
-| `src/pages/SitiWebPadova.tsx` | eventuali occorrenze brand testuali |
-| `src/pages/CreareSitoConAI.tsx` | title, og:title |
-| `src/pages/FaqSitiWeb.tsx` | title, og:title |
-| `src/pages/QuantoCostaSitoWeb.tsx` | eventuali title/og:title |
-| `src/pages/DemoPlatiumed.tsx` | title "Demo 4weblab" |
-| `src/pages/DemoSI2000.tsx` | title + 2x link "Home 4weblab" |
-| Eventuali altri file Demo* con riferimenti brand | da scansionare e correggere |
+## Modifiche
 
-## Approccio operativo
-1. Leggere ogni file della lista per identificare con precisione tutte le occorrenze testuali (escludendo URL/email).
-2. Eseguire le sostituzioni mirate con `code--line_replace`.
-3. Re-eseguire la ricerca `4weblab` per verificare che le residue siano tutte e sole quelle dei domini/email (whitelist).
+### 1. `src/pages/Index.tsx` (Helmet runtime, vince su `/`)
+- `<title>`: invariato (già corretto)
+- `meta name="description"`: sostituire la frase troncata con la description ufficiale
+- `og:title`: allineare al `<title>`
+- `og:description`: allineare alla description ufficiale
 
-## Note
-- Coerenza con la memoria progetto: il brand corretto è "4 Web Lab" (vedi Footer, già conforme).
-- Nessuna modifica a logica, layout o styling. Solo testo brand.
-- Nessun impatto SEO negativo: title/description restano coerenti, cambia solo la grafia del brand (più leggibile e allineata al logo).
+### 2. `src/App.tsx` (`siteMetadata` fallback globale)
+- `title` → title ufficiale
+- `description` → description ufficiale
+- (twitter:* e og:* leggono da `siteMetadata` → si aggiornano automaticamente)
+
+### 3. `index.html` (meta statici nel sorgente HTML)
+- `<title>` → title ufficiale
+- `meta name="description"` → description ufficiale
+- `og:title` + `og:description` → idem
+- `twitter:title` + `twitter:description` → idem
+
+## Cosa NON tocco
+- JSON-LD businessSchema (non contiene title/description testuali della home)
+- canonical, og:url, og:image, og:locale
+- Tutti gli altri file
+
+## Risultato atteso
+Title + description identici e coerenti su:
+- HTML statico (index.html → utile per crawler che non eseguono JS)
+- Fallback Helmet globale (App.tsx → tutte le pagine senza Helmet proprio)
+- Helmet della Home (Index.tsx → vince a runtime su `/`)
+
+Pricing aggiornato da "400€" (vecchio) a "249€" (attuale) ovunque.
 
