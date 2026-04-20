@@ -12,7 +12,7 @@ const QuantoCostaSitoWeb = () => {
   return (
     <>
       <Helmet>
-        <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab</title>
+        <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4 Web Lab</title>
         <meta name="description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/quanto-costa-sito-web" />
@@ -20,7 +20,7 @@ const QuantoCostaSitoWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/quanto-costa-sito-web" />
-        <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4weblab" />
+        <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4 Web Lab" />
         <meta property="og:description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />

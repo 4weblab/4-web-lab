@@ -28,14 +28,14 @@ const SitiWebNegozi = () => {
         <title>Siti Web per Negozi a Padova e in Italia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizziamo siti web professionali per negozi fisici e attività locali a Padova e in tutta Italia. Porta nuovi clienti da Google al tuo punto vendita. Da 299€."
+          content="Siti web per negozi Padova: realizziamo siti professionali per attività locali e punti vendita da 299€ una tantum. Attira nuovi clienti da Google e aumenta le visite in negozio. Preventivo gratuito in 24h!"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-per-negozi" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-per-negozi" />
         <meta property="og:title" content="Siti Web per Negozi a Padova e in Italia | 4 Web Lab" />
-        <meta property="og:description" content="Realizziamo siti web professionali per negozi fisici e attività locali. Porta nuovi clienti da Google al tuo punto vendita. Da 299€." />
+        <meta property="og:description" content="Siti web per negozi Padova: realizziamo siti professionali per attività locali e punti vendita da 299€ una tantum. Attira nuovi clienti da Google e aumenta le visite in negozio. Preventivo gratuito in 24h!" />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <script type="application/ld+json">
@@ -84,7 +84,6 @@ const SitiWebNegozi = () => {
               </p>
 
               <div className="inline-flex items-center gap-2 text-accent font-semibold bg-accent/10 px-6 py-3 rounded-full mb-8">
-                <Euro className="w-5 h-5" aria-hidden="true" />
                 <span>Siti web per negozi a partire da 299€</span>
               </div>
 
