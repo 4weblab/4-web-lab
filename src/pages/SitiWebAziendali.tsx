@@ -36,7 +36,7 @@ const SitiWebAziendali = () => {
         <title>Siti Web Aziendali Professionali: Multipagina e Scalabili | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizziamo siti web aziendali moderni, veloci e ottimizzati per lead generation. Credibilità online garantita per PMI italiane. Pacchetti da 79€/mese o acquisto diretto. Preventivo in 24h."
+          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
         />
 
         <meta name="robots" content="index, follow" />
@@ -46,7 +46,7 @@ const SitiWebAziendali = () => {
         <meta property="og:title" content="Siti Web Aziendali Professionali: Multipagina e Scalabili | 4weblab" />
         <meta
           property="og:description"
-          content="Realizziamo siti web aziendali moderni, veloci e ottimizzati per lead generation. Credibilità online garantita per PMI italiane. Pacchetti da 79€/mese o acquisto diretto. Preventivo in 24h."
+          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
