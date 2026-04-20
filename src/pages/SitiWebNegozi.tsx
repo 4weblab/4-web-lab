@@ -28,7 +28,7 @@ const SitiWebNegozi = () => {
         <title>Siti Web per Negozi a Padova e in Italia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizziamo siti web professionali per negozi fisici e attività locali a Padova e in tutta Italia. Porta nuovi clienti da Google al tuo punto vendita. Da 299€."
+          content="Siti web per negozi Padova: realizziamo siti professionali per attività locali e punti vendita da 299€ una tantum. Attira nuovi clienti da Google e aumenta le visite in negozio. Preventivo gratuito in 24h!"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-per-negozi" />
