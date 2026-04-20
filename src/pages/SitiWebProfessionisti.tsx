@@ -38,7 +38,7 @@ const SitiWebProfessionisti = () => {
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
-        <meta property="og:title" content="Siti Web per Professionisti e Studi: Realizzazione su Misura | 4 Web Lab" />
+        <meta property="og:title" content="Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab" />
         <meta
           property="og:description"
           content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
