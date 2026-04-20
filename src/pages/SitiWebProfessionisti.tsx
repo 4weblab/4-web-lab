@@ -28,13 +28,10 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>
-          Siti web per professionisti di settore: notaio, avvocato, geometra, architetto, elettricista, idraulico. SEO
-          locale, sito su misura | 4 Web Lab | 4weblab
-        </title>
+        <title>Siti web per Professionisti di settore, SEO locale e personalizzati | 4weblab</title>
         <meta
           name="description"
-          content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito."
+          content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Richiedi preventivo gratuito."
         />
 
         <meta name="robots" content="index, follow" />
