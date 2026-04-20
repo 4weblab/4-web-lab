@@ -41,7 +41,7 @@ const SitiWebProfessionisti = () => {
         <meta property="og:title" content="Siti Web per Professionisti e Studi: Realizzazione su Misura | 4weblab" />
         <meta
           property="og:description"
-          content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Da 49€/mese. Richiedi preventivo gratuito."
+          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
