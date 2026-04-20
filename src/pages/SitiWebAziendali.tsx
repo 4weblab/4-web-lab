@@ -43,7 +43,7 @@ const SitiWebAziendali = () => {
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti Web Aziendali Professionali: Multipagina e Scalabili | 4weblab" />
+        <meta property="og:title" content="Siti Web Aziendali Professionali: Multipagina e Scalabili | 4 Web Lab" />
         <meta
           property="og:description"
           content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
@@ -210,7 +210,7 @@ const SitiWebAziendali = () => {
                 <AnimatedSection direction="right">
                   <img
                     src={mockupImg}
-                    alt="Esempio sito web aziendale multipagina realizzato da 4weblab"
+                    alt="Esempio sito web aziendale multipagina realizzato da 4 Web Lab"
                     className="rounded-2xl shadow-lg w-full aspect-[4/3] object-cover"
                     loading="lazy"
                     decoding="async"
@@ -464,7 +464,7 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
-        {/* Perché scegliere 4weblab */}
+        {/* Perché scegliere 4 Web Lab */}
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
@@ -496,7 +496,7 @@ const SitiWebAziendali = () => {
                   ))}
                 </StaggerContainer>
                 <p>
-                  Scegliere 4weblab significa affidarsi a un partner affidabile per la realizzazione di un sito web
+                  Scegliere 4 Web Lab significa affidarsi a un partner affidabile per la realizzazione di un sito web
                   aziendale che rappresenti al meglio la tua impresa e ne accompagni la crescita.
                 </p>
                 <div className="mt-8 space-y-4">

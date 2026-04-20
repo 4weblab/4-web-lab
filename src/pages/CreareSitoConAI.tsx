@@ -41,14 +41,14 @@ const CreareSitoConAI = () => {
   return (
     <>
       <Helmet>
-        <title>Creare Sito Web con IA 2026: Conviene Davvero? Guida Completa | 4weblab</title>
+        <title>Creare Sito Web con IA 2026: Conviene Davvero? Guida Completa | 4 Web Lab</title>
         <meta name="description" content="Scopri se conviene creare un sito con intelligenza artificiale o affidarsi a professionisti. Confronto costi, pro/contro e perché un sito &quot;umano&quot; converte di più nel 2026." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
 
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
-        <meta property="og:title" content="Creare Sito Web con IA 2026: Conviene Davvero? Guida Completa | 4weblab" />
+        <meta property="og:title" content="Creare Sito Web con IA 2026: Conviene Davvero? Guida Completa | 4 Web Lab" />
         <meta property="og:description" content="Scopri se conviene creare un sito con intelligenza artificiale o affidarsi a professionisti. Confronto costi, pro/contro e perché un sito &quot;umano&quot; converte di più nel 2026." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />

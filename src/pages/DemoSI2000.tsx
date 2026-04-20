@@ -62,7 +62,7 @@ const DemoSI2000 = () => {
   return (
     <>
       <Helmet>
-        <title>Servizi Impresa 2000 – Demo | 4weblab</title>
+        <title>Servizi Impresa 2000 – Demo | 4 Web Lab</title>
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
 
@@ -101,7 +101,7 @@ const DemoSI2000 = () => {
 
             <div className="hidden lg:flex items-center gap-3">
               <Link to="/" className="text-sm font-medium flex items-center gap-1.5 transition-colors" style={{ color: scrolled ? c.grey500 : 'rgba(255,255,255,.7)' }}>
-                <ArrowLeft className="w-4 h-4" /> Home 4weblab
+                <ArrowLeft className="w-4 h-4" /> Home 4 Web Lab
               </Link>
               <button
                 onClick={() => scrollTo('#contatti')}
@@ -130,7 +130,7 @@ const DemoSI2000 = () => {
                   {n.label}
                 </button>
               ))}
-              <Link to="/" className="block py-3 text-sm" style={{ color: c.grey500 }}>← Home 4weblab</Link>
+              <Link to="/" className="block py-3 text-sm" style={{ color: c.grey500 }}>← Home 4 Web Lab</Link>
               <button onClick={() => scrollTo('#contatti')} className="mt-2 w-full py-3 rounded-lg text-sm font-semibold text-white" style={{ background: c.teal }}>
                 Contatta lo studio
               </button>
