@@ -30,8 +30,8 @@ import CookieBanner from "./components/CookieBanner";
 const queryClient = new QueryClient();
 
 const siteMetadata = {
-  title: "Agenzia Web Padova | Siti Professionali da 49€/mese o 400€ | 4 Web Lab",
-  description: "Agenzia Web Padova per negozi, professionisti e PMI. Siti web professionali con noleggio tutto incluso da 49€/mese (negozi e professionisti) o da 400€ one-time per landing page PMI. Qualità agenzia, zero rischio, supporto locale a Padova.",
+  title: "Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | 4 Web Lab",
+  description: "Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
 };
