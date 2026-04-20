@@ -26,7 +26,7 @@ const SitiWebPadova = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:title" content="Realizzazione Siti Web Padova | Agenzia Locale da 249€ | 4 Web Lab" />
-        <meta property="og:description" content="Cerchi un'agenzia web a Padova? Realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata. Da 399€ o noleggio mensile. Preventivo gratuito." />
+        <meta property="og:description" content="Realizzazione siti web Padova: agenzia locale specializzata in siti professionali per aziende, negozi e professionisti. Da 249€ tutto incluso. SEO locale, design moderno e assistenza dedicata. Preventivo gratuito in 24h!" />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <script type="application/ld+json">{JSON.stringify({
