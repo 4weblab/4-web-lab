@@ -43,7 +43,7 @@ const SitiWebAziendali = () => {
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti Web Aziendali Professionali: Multipagina e Scalabili | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
         <meta
           property="og:description"
           content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
