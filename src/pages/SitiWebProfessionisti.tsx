@@ -31,7 +31,7 @@ const SitiWebProfessionisti = () => {
         <title>Siti web per Professionisti di settore, SEO locale e personalizzati | 4weblab</title>
         <meta
           name="description"
-          content="Siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua. Richiedi preventivo gratuito."
+          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
         />
 
         <meta name="robots" content="index, follow" />
