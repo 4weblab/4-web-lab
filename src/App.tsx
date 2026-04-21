@@ -25,6 +25,7 @@ import DemoSI2000 from "./pages/DemoSI2000";
 import DemoIES from "./pages/DemoIES";
 import DemoSovem from "./pages/DemoSovem";
 import DemoPlatiumed from "./pages/DemoPlatiumed";
+import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
