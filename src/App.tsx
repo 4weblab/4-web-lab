@@ -25,6 +25,7 @@ import DemoSI2000 from "./pages/DemoSI2000";
 import DemoIES from "./pages/DemoIES";
 import DemoSovem from "./pages/DemoSovem";
 import DemoPlatiumed from "./pages/DemoPlatiumed";
+import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
 
@@ -108,7 +109,8 @@ const App = () => (
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
              <Route path="/blog" element={<Blog />} />
-             
+             <Route path="/contatti" element={<Contact />} />
+              
              <Route path="/demo-dv" element={<DemoDV />} />
              <Route path="/demo-rbt" element={<DemoRBT />} />
              <Route path="/demo-zardini" element={<DemoZardini />} />
