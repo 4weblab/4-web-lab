@@ -109,7 +109,8 @@ const App = () => (
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
              <Route path="/blog" element={<Blog />} />
-             
+             <Route path="/contatti" element={<Contact />} />
+              
              <Route path="/demo-dv" element={<DemoDV />} />
              <Route path="/demo-rbt" element={<DemoRBT />} />
              <Route path="/demo-zardini" element={<DemoZardini />} />
