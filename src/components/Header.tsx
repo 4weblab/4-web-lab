@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Punti di forza', href: '#punti-di-forza' },
   { label: 'Servizi', href: '#servizi' },
   { label: 'Domande Frequenti', href: '#faq' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contatti', href: '#contatti' },
 ];
 interface HeaderProps {
@@ -92,32 +93,42 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           </Link>
         ) : (
           <ul className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
-              <li key={item.href}>
-                <a
-                  href={item.href}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    handleNavClick(item.href);
-                  }}
-                  className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
-                    activeSection === item.href.substring(1)
-                      ? 'text-accent-foreground'
-                      : isScrolled
-                      ? 'text-foreground hover:bg-muted/60'
-                      : 'text-primary-foreground hover:bg-primary-foreground/10'
-                  }`}
-                  style={
-                    activeSection === item.href.substring(1)
-                      ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
-                      : {}
-                  }
-                  aria-current={activeSection === item.href.substring(1) ? 'page' : undefined}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
+            {navItems.map((item) => {
+              const isRoute = item.href.startsWith('/');
+              const isActive = !isRoute && activeSection === item.href.substring(1);
+              const baseClass = `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
+                isActive
+                  ? 'text-accent-foreground'
+                  : isScrolled
+                  ? 'text-foreground hover:bg-muted/60'
+                  : 'text-primary-foreground hover:bg-primary-foreground/10'
+              }`;
+              const activeStyle = isActive
+                ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
+                : {};
+              return (
+                <li key={item.href}>
+                  {isRoute ? (
+                    <Link to={item.href} className={baseClass} style={activeStyle}>
+                      {item.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        handleNavClick(item.href);
+                      }}
+                      className={baseClass}
+                      style={activeStyle}
+                      aria-current={isActive ? 'page' : undefined}
+                    >
+                      {item.label}
+                    </a>
+                  )}
+                </li>
+              );
+            })}
           </ul>
         )}
 
@@ -164,25 +175,34 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               transition={{ duration: 0.2, ease: 'easeOut' }}
             >
               <ul className="container-section py-4 flex flex-col gap-1">
-                {navItems.map((item) => (
-                  <li key={item.href}>
-                    <a
-                      href={item.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavClick(item.href);
-                      }}
-                      className={`block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
-                        activeSection === item.href.substring(1)
-                          ? 'bg-accent text-accent-foreground'
-                          : 'text-foreground hover:bg-muted/60'
-                      }`}
-                      aria-current={activeSection === item.href.substring(1) ? 'page' : undefined}
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
+                {navItems.map((item) => {
+                  const isRoute = item.href.startsWith('/');
+                  const isActive = !isRoute && activeSection === item.href.substring(1);
+                  const cls = `block px-4 py-3 rounded-xl text-base font-medium transition-all duration-300 ${
+                    isActive ? 'bg-accent text-accent-foreground' : 'text-foreground hover:bg-muted/60'
+                  }`;
+                  return (
+                    <li key={item.href}>
+                      {isRoute ? (
+                        <Link to={item.href} className={cls} onClick={() => setIsOpen(false)}>
+                          {item.label}
+                        </Link>
+                      ) : (
+                        <a
+                          href={item.href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            handleNavClick(item.href);
+                          }}
+                          className={cls}
+                          aria-current={isActive ? 'page' : undefined}
+                        >
+                          {item.label}
+                        </a>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </motion.div>
           )}
