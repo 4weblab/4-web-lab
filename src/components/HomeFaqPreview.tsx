@@ -29,7 +29,7 @@ const previewFaqs = [
 
 const HomeFaqPreview = () => {
   return (
-    <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+    <section id="faq" className="section-padding" style={{ background: "var(--gradient-surface)" }}>
       <div className="container-section">
         <AnimatedSection className="max-w-3xl mx-auto">
           {/* Header */}
