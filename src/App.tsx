@@ -16,6 +16,7 @@ import FaqSitiWeb from "./pages/FaqSitiWeb";
 import CreareSitoConAI from "./pages/CreareSitoConAI";
 import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import Blog from "./pages/Blog";
+import BlogAiWebsiteArticle from "./pages/BlogAiWebsiteArticle";
 
 import DemoDV from "./pages/DemoDV";
 import DemoRBT from "./pages/DemoRBT";
@@ -109,6 +110,7 @@ const App = () => (
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<CreareSitoConAI />} />
               <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
              <Route path="/blog" element={<Blog />} />
+             <Route path="/blog/siti-web-creati-con-intelligenza-artificiale" element={<BlogAiWebsiteArticle />} />
              <Route path="/contatti" element={<Contact />} />
               
              <Route path="/demo-dv" element={<DemoDV />} />
