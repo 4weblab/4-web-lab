@@ -17,7 +17,7 @@ const articles = [
     alt: "Interfaccia digitale per la creazione di siti web con intelligenza artificiale",
   },
   {
-    slug: "#",
+    slug: "/blog/quanto-costa-un-sito-web-nel-2026",
     title: "Quanto costa un sito web nel 2026?",
     description:
       "Una guida chiara ai costi reali di un sito web: cosa incide sul prezzo e cosa aspettarsi davvero.",
