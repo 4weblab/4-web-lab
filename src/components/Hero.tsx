@@ -69,7 +69,7 @@ const Hero = () => {
               transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
 
               Nessun investimento iniziale da migliaia di Euro.{"\n"}
-              Scopri le soluzioni 4 Web Lab per il sito del tuo negozio, della tua professione ( elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
+              Scopri le soluzioni 4 Web Lab per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
             </motion.p>
 
             <motion.div
