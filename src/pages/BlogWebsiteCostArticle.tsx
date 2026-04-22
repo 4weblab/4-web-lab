@@ -136,19 +136,19 @@ const BlogWebsiteCostArticle = () => {
   return (
     <>
       <Helmet>
-        <title>Quanto costa un sito web nel 2026? | 4 Web Lab</title>
+        <title>Quanto costa un sito web nel 2026? Prezzi reali in Italia</title>
         <meta
           name="description"
-          content="Guida reale ai costi di un sito web nel 2026 per aziende, professionisti e negozi: prezzi medi in Italia, fattori che incidono e investimenti sensati."
+          content="Scopri quanto costa davvero un sito web nel 2026 per aziende, professionisti e negozi. Prezzi chiari e cosa aspettarti davvero."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
-        <meta property="og:title" content="Quanto costa un sito web nel 2026? | 4 Web Lab" />
+        <meta property="og:title" content="Quanto costa un sito web nel 2026? Prezzi reali in Italia" />
         <meta
           property="og:description"
-          content="Scopri quanto costa davvero un sito web nel 2026, cosa incide sul prezzo e quali investimenti hanno senso per la tua attività."
+          content="Scopri quanto costa davvero un sito web nel 2026 per aziende, professionisti e negozi. Prezzi chiari e cosa aspettarti davvero."
         />
         <script type="application/ld+json">
           {JSON.stringify({
