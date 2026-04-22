@@ -102,19 +102,19 @@ const BlogAiWebsiteArticle = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web creati con IA: opportunità o rischio? | 4 Web Lab</title>
+        <title>Siti web con intelligenza artificiale: pro e contro per aziende</title>
         <meta
           name="description"
-          content="Scopri vantaggi, limiti e casi d’uso dei siti web creati con intelligenza artificiale per capire se sono davvero adatti alla tua azienda."
+          content="I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
-        <meta property="og:title" content="Siti web creati con IA: opportunità o rischio? | 4 Web Lab" />
+        <meta property="og:title" content="Siti web con intelligenza artificiale: pro e contro per aziende" />
         <meta
           property="og:description"
-          content="Un’analisi chiara su opportunità, limiti e rischi dei siti creati con intelligenza artificiale per aziende e professionisti."
+          content="I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività."
         />
       </Helmet>
 
