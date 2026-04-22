@@ -108,7 +108,7 @@ const App = () => (
              <Route path="/siti-web-per-negozi" element={<SitiWebNegozi />} />
              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
              <Route path="/creare-sito-con-intelligenza-artificiale" element={<Navigate to="/blog/siti-web-creati-con-intelligenza-artificiale" replace />} />
-              <Route path="/quanto-costa-sito-web" element={<QuantoCostaSitoWeb />} />
+             <Route path="/quanto-costa-sito-web" element={<Navigate to="/blog/quanto-costa-un-sito-web-nel-2026" replace />} />
              <Route path="/blog" element={<Blog />} />
              <Route path="/blog/siti-web-creati-con-intelligenza-artificiale" element={<BlogAiWebsiteArticle />} />
              <Route path="/blog/quanto-costa-un-sito-web-nel-2026" element={<BlogWebsiteCostArticle />} />
