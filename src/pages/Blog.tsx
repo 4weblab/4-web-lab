@@ -6,8 +6,17 @@ import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import blogAiWebsite from "@/assets/blog-ai-website.jpg";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
+import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 
 const articles = [
+  {
+    slug: "/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026",
+    title: "Sito web o social network: cosa conviene davvero per un’attività nel 2026?",
+    description:
+      "Meglio un sito web o i social per la tua attività? Differenze, vantaggi e la scelta più solida per portare clienti nel 2026.",
+    image: blogSiteVsSocial,
+    alt: "Confronto tra sito web aziendale e presenza social per un'attività locale",
+  },
   {
     slug: "/blog/siti-web-creati-con-intelligenza-artificiale",
     title: "Siti web fatti con intelligenza artificiale: opportunità o rischio?",
