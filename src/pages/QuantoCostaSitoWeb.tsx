@@ -28,8 +28,10 @@ const QuantoCostaSitoWeb = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
         <meta name="twitter:title" content="Quanto costa un sito web nel 2026?" />
         <meta name="twitter:description" content="Prezzi reali per realizzare un sito web professionale nel 2026." />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
 
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">
