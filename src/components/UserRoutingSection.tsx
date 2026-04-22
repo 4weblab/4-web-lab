@@ -12,6 +12,7 @@ const cards = [
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
+    imageAlt: 'Vetrina di un negozio locale con prodotti esposti',
     icon: Store,
   },
   {
@@ -20,6 +21,7 @@ const cards = [
     cta: 'Scopri i siti per professionisti',
     link: '/realizzazione-siti-web-per-professionisti',
     image: cardProfessionista,
+    imageAlt: 'Professionista al lavoro in uno studio mentre consulta il computer',
     icon: Briefcase,
   },
   {
@@ -28,6 +30,7 @@ const cards = [
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
+    imageAlt: 'Team aziendale in riunione in un ambiente di lavoro moderno',
     icon: Building2,
   },
 ];
@@ -69,7 +72,7 @@ const UserRoutingSection = () => {
                   {/* Background image */}
                   <img
                     src={card.image}
-                    alt=""
+                    alt={card.imageAlt}
                     loading="lazy"
                     width={800}
                     height={512}
