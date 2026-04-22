@@ -311,7 +311,7 @@ const CreareSitoConAI = () => {
         {/* Internal links */}
         <div className="container-section pb-8">
           <p className="text-muted-foreground text-center text-sm">
-            <Link to="/quanto-costa-sito-web" className="text-accent hover:underline">Scopri i prezzi reali 2026</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link>
+            <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline">Scopri i prezzi reali 2026</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link>
           </p>
         </div>
 
