@@ -105,7 +105,7 @@ const Blog = () => {
           <div className="container-section">
             <AnimatedSection className="max-w-2xl mb-12 md:mb-16">
               <div className="section-divider !mx-0" />
-              <h2 className="heading-2 text-foreground">Ultimi articoli</h2>
+               <h2 className="heading-2 text-foreground">I nostri articoli</h2>
               <p className="body-base text-muted-foreground mt-4">
                 Approfondimenti pensati per aiutarti a fare scelte consapevoli sul tuo sito web.
               </p>
