@@ -1,3 +1,4 @@
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -5,30 +6,30 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { HelmetProvider, Helmet } from "react-helmet-async";
 import Index from "./pages/Index";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CookiePolicy from "./pages/CookiePolicy";
-import NotFound from "./pages/NotFound";
-import SitiWebProfessionisti from "./pages/SitiWebProfessionisti";
-import SitiWebNegozi from "./pages/SitiWebNegozi";
-import SitiWebAziendali from "./pages/SitiWebAziendali";
-import SitiWebPadova from "./pages/SitiWebPadova";
-import FaqSitiWeb from "./pages/FaqSitiWeb";
-import Blog from "./pages/Blog";
-import BlogAiWebsiteArticle from "./pages/BlogAiWebsiteArticle";
-import BlogWebsiteCostArticle from "./pages/BlogWebsiteCostArticle";
-import BlogSiteVsSocialArticle from "./pages/BlogSiteVsSocialArticle";
-
-import DemoDV from "./pages/DemoDV";
-import DemoRBT from "./pages/DemoRBT";
-import DemoZardini from "./pages/DemoZardini";
-import DemoComit from "./pages/DemoComit";
-import DemoSI2000 from "./pages/DemoSI2000";
-import DemoIES from "./pages/DemoIES";
-import DemoSovem from "./pages/DemoSovem";
-import DemoPlatiumed from "./pages/DemoPlatiumed";
-import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const SitiWebProfessionisti = lazy(() => import("./pages/SitiWebProfessionisti"));
+const SitiWebNegozi = lazy(() => import("./pages/SitiWebNegozi"));
+const SitiWebAziendali = lazy(() => import("./pages/SitiWebAziendali"));
+const SitiWebPadova = lazy(() => import("./pages/SitiWebPadova"));
+const FaqSitiWeb = lazy(() => import("./pages/FaqSitiWeb"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogAiWebsiteArticle = lazy(() => import("./pages/BlogAiWebsiteArticle"));
+const BlogWebsiteCostArticle = lazy(() => import("./pages/BlogWebsiteCostArticle"));
+const BlogSiteVsSocialArticle = lazy(() => import("./pages/BlogSiteVsSocialArticle"));
+const DemoDV = lazy(() => import("./pages/DemoDV"));
+const DemoRBT = lazy(() => import("./pages/DemoRBT"));
+const DemoZardini = lazy(() => import("./pages/DemoZardini"));
+const DemoComit = lazy(() => import("./pages/DemoComit"));
+const DemoSI2000 = lazy(() => import("./pages/DemoSI2000"));
+const DemoIES = lazy(() => import("./pages/DemoIES"));
+const DemoSovem = lazy(() => import("./pages/DemoSovem"));
+const DemoPlatiumed = lazy(() => import("./pages/DemoPlatiumed"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 const queryClient = new QueryClient();
 
@@ -103,34 +104,34 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
-          <Routes>
-            <Route path="/" element={<Index />} />
-             <Route path="/realizzazione-siti-web-per-professionisti" element={<SitiWebProfessionisti />} />
-             <Route path="/siti-web-aziendali" element={<SitiWebAziendali />} />
-             <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
-             <Route path="/siti-web-per-negozi" element={<SitiWebNegozi />} />
-             <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
-             <Route path="/creare-sito-con-intelligenza-artificiale" element={<Navigate to="/blog/siti-web-creati-con-intelligenza-artificiale" replace />} />
-             <Route path="/quanto-costa-sito-web" element={<Navigate to="/blog/quanto-costa-un-sito-web-nel-2026" replace />} />
-             <Route path="/blog" element={<Blog />} />
-             <Route path="/blog/siti-web-creati-con-intelligenza-artificiale" element={<BlogAiWebsiteArticle />} />
-             <Route path="/blog/quanto-costa-un-sito-web-nel-2026" element={<BlogWebsiteCostArticle />} />
-             <Route path="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" element={<BlogSiteVsSocialArticle />} />
-             <Route path="/contatti" element={<Contact />} />
-              
-             <Route path="/demo-dv" element={<DemoDV />} />
-             <Route path="/demo-rbt" element={<DemoRBT />} />
-             <Route path="/demo-zardini" element={<DemoZardini />} />
-             <Route path="/demo-comit" element={<DemoComit />} />
-             <Route path="/demo-si2000" element={<DemoSI2000 />} />
+          <Suspense fallback={null}>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/realizzazione-siti-web-per-professionisti" element={<SitiWebProfessionisti />} />
+              <Route path="/siti-web-aziendali" element={<SitiWebAziendali />} />
+              <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
+              <Route path="/siti-web-per-negozi" element={<SitiWebNegozi />} />
+              <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
+              <Route path="/creare-sito-con-intelligenza-artificiale" element={<Navigate to="/blog/siti-web-creati-con-intelligenza-artificiale" replace />} />
+              <Route path="/quanto-costa-sito-web" element={<Navigate to="/blog/quanto-costa-un-sito-web-nel-2026" replace />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/blog/siti-web-creati-con-intelligenza-artificiale" element={<BlogAiWebsiteArticle />} />
+              <Route path="/blog/quanto-costa-un-sito-web-nel-2026" element={<BlogWebsiteCostArticle />} />
+              <Route path="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" element={<BlogSiteVsSocialArticle />} />
+              <Route path="/contatti" element={<Contact />} />
+              <Route path="/demo-dv" element={<DemoDV />} />
+              <Route path="/demo-rbt" element={<DemoRBT />} />
+              <Route path="/demo-zardini" element={<DemoZardini />} />
+              <Route path="/demo-comit" element={<DemoComit />} />
+              <Route path="/demo-si2000" element={<DemoSI2000 />} />
               <Route path="/demo-ies" element={<DemoIES />} />
               <Route path="/demo-sovem" element={<DemoSovem />} />
               <Route path="/demo-platiumed" element={<DemoPlatiumed />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/cookie" element={<CookiePolicy />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/cookie" element={<CookiePolicy />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
           <CookieBanner />
         </BrowserRouter>
       </TooltipProvider>
