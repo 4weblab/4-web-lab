@@ -13,7 +13,6 @@ import SitiWebNegozi from "./pages/SitiWebNegozi";
 import SitiWebAziendali from "./pages/SitiWebAziendali";
 import SitiWebPadova from "./pages/SitiWebPadova";
 import FaqSitiWeb from "./pages/FaqSitiWeb";
-import QuantoCostaSitoWeb from "./pages/QuantoCostaSitoWeb";
 import Blog from "./pages/Blog";
 import BlogAiWebsiteArticle from "./pages/BlogAiWebsiteArticle";
 import BlogWebsiteCostArticle from "./pages/BlogWebsiteCostArticle";
@@ -47,6 +46,7 @@ const App = () => (
       <meta name="title" content={siteMetadata.title} />
       <meta name="description" content={siteMetadata.description} />
       <meta name="robots" content="index, follow" />
+      <link rel="canonical" href={siteMetadata.url} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
@@ -55,6 +55,7 @@ const App = () => (
       <meta property="og:description" content={siteMetadata.description} />
       <meta property="og:image" content={siteMetadata.image} />
       <meta property="og:locale" content="it_IT" />
+      <meta property="og:site_name" content="4 Web Lab" />
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -62,6 +63,7 @@ const App = () => (
       <meta name="twitter:title" content={siteMetadata.title} />
       <meta name="twitter:description" content={siteMetadata.description} />
       <meta name="twitter:image" content={siteMetadata.image} />
+      <meta name="twitter:site" content="@4weblab" />
       
       {/* Additional SEO */}
       <meta name="author" content="4 Web Lab" />

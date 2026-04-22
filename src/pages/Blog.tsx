@@ -27,23 +27,50 @@ const articles = [
 ];
 
 const Blog = () => {
+  const pageTitle = "Blog siti web e SEO | 4 Web Lab";
+  const pageDescription =
+    "Guide pratiche su siti web, SEO e costi reali per aziende, professionisti e negozi firmate 4 Web Lab.";
+  const pageUrl = "https://4weblab.it/blog";
+  const pageImage = "https://4weblab.it/og-image.jpg";
+
   return (
     <>
       <Helmet>
-        <title>Blog | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Blog di 4 Web Lab: articoli, guide e approfondimenti su realizzazione siti web, SEO e digital marketing."
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/blog" />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://4weblab.it/blog" />
-        <meta property="og:title" content="Blog | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Blog di 4 Web Lab: articoli, guide e approfondimenti su realizzazione siti web, SEO e digital marketing."
-        />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: pageTitle,
+            description: pageDescription,
+            url: pageUrl,
+            mainEntity: {
+              "@type": "Blog",
+              name: "Blog 4 Web Lab",
+              blogPost: articles.map((article) => ({
+                "@type": "BlogPosting",
+                headline: article.title,
+                description: article.description,
+                url: `https://4weblab.it${article.slug}`,
+              })),
+            },
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
