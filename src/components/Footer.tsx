@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
+import { Phone, MessageCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const businessInfo = {
@@ -16,14 +16,6 @@ const businessInfo = {
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappUrl = `https://wa.me/${businessInfo.whatsapp}`;
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-primary text-primary-foreground py-16 md:pb-16 pb-[calc(var(--mobile-cta-height)+1rem)]">
