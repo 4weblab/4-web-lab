@@ -9,7 +9,7 @@ import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 
 const articles = [
   {
-    slug: "#",
+    slug: "/blog/siti-web-creati-con-intelligenza-artificiale",
     title: "Siti web fatti con intelligenza artificiale: opportunità o rischio?",
     description:
       "Sempre più aziende usano l'IA per creare siti web. Ma è davvero la scelta giusta o ci sono limiti da conoscere?",
