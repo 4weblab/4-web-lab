@@ -11,6 +11,11 @@ const whatsappMessage = encodeURIComponent("Ciao! Vorrei informazioni sui vostri
 
 const Contact = () => {
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+  const pageTitle = "Contattaci | 4 Web Lab";
+  const pageDescription =
+    "Contatta 4 Web Lab per una consulenza gratuita. Raccontaci la tua attività e ti diremo come possiamo aiutarti a creare un sito web che porta risultati.";
+  const pageUrl = "https://4weblab.it/contatti";
+  const pageImage = "https://4weblab.it/og-image.jpg";
 
   const steps = [
     {
@@ -39,20 +44,38 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contattaci | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Contatta 4 Web Lab per una consulenza gratuita. Raccontaci la tua attività e ti diremo come possiamo aiutarti a creare un sito web che porta risultati."
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/contatti" />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://4weblab.it/contatti" />
-        <meta property="og:title" content="Contattaci | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Contatta 4 Web Lab per una consulenza gratuita. Raccontaci la tua attività e ti diremo come possiamo aiutarti a creare un sito web che porta risultati."
-        />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: pageTitle,
+            description: pageDescription,
+            url: pageUrl,
+            mainEntity: {
+              "@type": "Organization",
+              name: "4 Web Lab",
+              url: "https://4weblab.it/",
+              email: "info@4weblab.it",
+              telephone: "+393514656042",
+            },
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />

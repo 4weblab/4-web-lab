@@ -99,23 +99,60 @@ const sections = [
 ];
 
 const BlogAiWebsiteArticle = () => {
+  const pageTitle = "Siti web con intelligenza artificiale: pro e contro per aziende";
+  const pageDescription =
+    "I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività.";
+  const pageUrl = "https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale";
+  const pageImage = "https://4weblab.it/og-image.jpg";
+
   return (
     <>
       <Helmet>
-        <title>Siti web con intelligenza artificiale: pro e contro per aziende</title>
-        <meta
-          name="description"
-          content="I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività."
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
+        <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
-        <meta property="og:title" content="Siti web con intelligenza artificiale: pro e contro per aziende" />
-        <meta
-          property="og:description"
-          content="I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività."
-        />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline:
+              "Siti web creati con intelligenza artificiale: opportunità reale o rischio per le aziende?",
+            description: pageDescription,
+            image: [pageImage],
+            author: {
+              "@type": "Organization",
+              name: "4 Web Lab",
+            },
+            publisher: {
+              "@type": "Organization",
+              name: "4 Web Lab",
+              logo: {
+                "@type": "ImageObject",
+                url: "https://4weblab.it/logo.webp",
+              },
+            },
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": pageUrl,
+            },
+            url: pageUrl,
+            datePublished: "2026-04-22",
+            dateModified: "2026-04-22",
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
