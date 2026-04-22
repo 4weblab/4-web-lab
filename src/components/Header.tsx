@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowLeft } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import logo from '@/assets/logo.webp';
 
 const navItems = [
   { label: 'Chi siamo', href: '#chi-siamo' },
@@ -84,7 +83,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
     >
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <div className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5">
-          <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src={logo} width={36} height={36} decoding="async" />
+          <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo.webp" width={36} height={36} decoding="async" />
           <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground md:text-foreground'}`}>
             4 Web Lab
           </span>
