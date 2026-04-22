@@ -1,5 +1,6 @@
 import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import logo from '@/assets/logo.webp';
 
 const businessInfo = {
   name: '4 Web Lab',
@@ -35,7 +36,7 @@ const Footer = () => {
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
-                src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png"
+                src={logo}
                 width={40}
                 height={40}
                 loading="lazy"
