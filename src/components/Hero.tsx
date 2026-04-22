@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -61,22 +60,16 @@ const Hero = () => {
               Agenzia Web Padova – Siti web per negozi, professionisti e aziende 
             </h1>
 
-            <motion.p
+            <p
               className="body-large text-primary-foreground mb-14 text-balance whitespace-pre-line"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}>
+            >
 
               Nessun investimento iniziale da migliaia di Euro.{"\n"}
               Scopri le soluzioni 4 Web Lab per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-col sm:flex-row items-start gap-5"
-              initial={{ opacity: 0, y: 25 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}>
+            <div className="flex flex-col sm:flex-row items-start gap-5">
 
               <button
                 onClick={handleScrollToContact}
@@ -100,15 +93,11 @@ const Hero = () => {
                 Scrivi su WhatsApp
               </a>
 
-            </motion.div>
+            </div>
           </div>
 
           {/* Right: promo box */}
-          <motion.div
-            className="w-full max-w-sm lg:mt-8"
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}>
+          <div className="w-full max-w-sm lg:mt-8">
 
             <div className="rounded-2xl border-2 border-accent bg-[hsl(210_73%_10%/0.75)] backdrop-blur-md p-7 shadow-lg">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3">🌸 Promozione</span>
@@ -124,19 +113,18 @@ const Hero = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
-        <motion.button
+        <button
           onClick={handleScrollToAbout}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors"
           aria-label="Scorri verso il basso"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}>
+        >
 
           <ArrowDown className="w-6 h-6" />
-        </motion.button>
+        </button>
       </div>
     </section>);
 

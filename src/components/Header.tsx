@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowLeft } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import logo from '@/assets/logo.webp';
 
 const navItems = [
   { label: 'Chi siamo', href: '#chi-siamo' },
@@ -84,14 +84,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
     >
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <div className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5">
-          <img
-            alt="4 Web Lab logo"
-            className="w-9 h-9 rounded-lg object-contain"
-            src="/lovable-uploads/04336b0d-9434-4cc5-92bf-9fead391fd27.png"
-            width={36}
-            height={36}
-            decoding="async"
-          />
+          <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src={logo} width={36} height={36} decoding="async" />
           <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground md:text-foreground'}`}>
             4 Web Lab
           </span>
@@ -182,9 +175,8 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
         )}
 
         {/* Mobile Menu */}
-        <AnimatePresence>
-          {isOpen && !satelliteMode && (
-            <motion.div
+        {isOpen && !satelliteMode && (
+            <div
               id="mobile-menu"
               className="absolute top-full left-0 right-0 md:hidden border-b border-border/30"
               style={{
@@ -193,10 +185,6 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                 WebkitBackdropFilter: 'blur(20px)',
                 boxShadow: 'var(--shadow-lg)',
               }}
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.2, ease: 'easeOut' }}
             >
               <ul className="container-section py-4 flex flex-col gap-1">
                 {navItems.map((item) => {
@@ -228,9 +216,8 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                   );
                 })}
               </ul>
-            </motion.div>
+            </div>
           )}
-        </AnimatePresence>
       </nav>
     </header>
   );
