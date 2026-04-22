@@ -131,7 +131,7 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2">Servizi web per negozi, professionisti e aziende di Padova ( e in tutta Italia )</h2>
+                <h2 className="heading-2">Servizi web per negozi, professionisti e aziende di Padova <br /> ( e in tutta Italia )</h2>
               </AnimatedSection>
 
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
@@ -249,7 +249,7 @@ const SitiWebPadova = () => {
                 <p>Che la tua attività sia nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
                 </p>
                 <p className="mt-6">
-                  Offriamo anche soluzioni specifiche per ogni settore. Per approfondire i costi, consulta la nostra guida su <Link to="/quanto-costa-sito-web" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, oppure scopri se conviene <Link to="/creare-sito-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">creare un sito con intelligenza artificiale</Link>.
+                  Offriamo anche soluzioni specifiche per ogni settore. Per approfondire i costi, consulta la nostra guida su <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, oppure scopri se conviene <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">creare un sito con intelligenza artificiale</Link>.
                 </p>
               </AnimatedSection>
             </div>

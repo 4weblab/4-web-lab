@@ -9,19 +9,30 @@ const CookiePolicy = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  const pageTitle = 'Cookie Policy | 4 Web Lab';
+  const pageDescription = "Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento.";
+  const pageUrl = 'https://4weblab.it/cookie';
+  const pageImage = 'https://4weblab.it/og-image.jpg';
+
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Cookie Policy | 4 Web Lab</title>
-        <meta name="description" content="Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/cookie" />
-        <meta property="og:title" content="Cookie Policy | 4 Web Lab" />
-        <meta property="og:url" content="https://4weblab.it/cookie" />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:url" content={pageUrl} />
         <meta property="og:type" content="website" />
-        <meta property="og:description" content="Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento." />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content={pageUrl} />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
       </Helmet>
       {/* Header */}
       <header className="relative overflow-hidden py-10" style={{ background: 'var(--gradient-hero)' }}>

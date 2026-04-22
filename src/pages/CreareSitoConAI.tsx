@@ -43,18 +43,18 @@ const CreareSitoConAI = () => {
       <Helmet>
         <title>Creare Sito Web con IA 2026: Conviene Davvero? Guida Completa | 4 Web Lab</title>
         <meta name="description" content="Scopri se conviene creare un sito con intelligenza artificiale o affidarsi a professionisti. Confronto costi, pro/contro e perché un sito &quot;umano&quot; converte di più nel 2026." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
 
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <meta property="og:url" content="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
         <meta property="og:title" content="Creare Sito Web con IA 2026: Conviene Davvero? Guida Completa | 4 Web Lab" />
         <meta property="og:description" content="Scopri se conviene creare un sito con intelligenza artificiale o affidarsi a professionisti. Confronto costi, pro/contro e perché un sito &quot;umano&quot; converte di più nel 2026." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://4weblab.it/creare-sito-con-intelligenza-artificiale" />
+        <meta name="twitter:url" content="https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale" />
         <meta name="twitter:title" content="Creare un Sito con l'Intelligenza Artificiale Conviene Davvero?" />
         <meta name="twitter:description" content="Un sito creato con l'AI è davvero la scelta migliore per la tua attività? Scopri differenze, costi reali e alternative professionali spiegate in modo semplice." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
@@ -311,7 +311,7 @@ const CreareSitoConAI = () => {
         {/* Internal links */}
         <div className="container-section pb-8">
           <p className="text-muted-foreground text-center text-sm">
-            <Link to="/quanto-costa-sito-web" className="text-accent hover:underline">Scopri i prezzi reali 2026</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link>
+            <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline">Scopri i prezzi reali 2026</Link> · <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline">Realizzazione siti web a Padova</Link>
           </p>
         </div>
 

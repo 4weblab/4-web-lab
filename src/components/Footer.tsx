@@ -1,4 +1,4 @@
-import { MapPin, Phone, MessageCircle, Mail } from 'lucide-react';
+import { Phone, MessageCircle, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const businessInfo = {
@@ -16,14 +16,6 @@ const businessInfo = {
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  const whatsappUrl = `https://wa.me/${businessInfo.whatsapp}`;
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <footer className="bg-primary text-primary-foreground py-16 md:pb-16 pb-[calc(var(--mobile-cta-height)+1rem)]">
@@ -35,7 +27,7 @@ const Footer = () => {
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
-                src="/lovable-uploads/e01ad118-da3a-4298-8af4-f22d7bc20878.png"
+                src="/logo.webp"
                 width={40}
                 height={40}
                 loading="lazy"

@@ -14,12 +14,12 @@ const QuantoCostaSitoWeb = () => {
       <Helmet>
         <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4 Web Lab</title>
         <meta name="description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/quanto-costa-sito-web" />
+        <meta name="robots" content="noindex, follow" />
+        <link rel="canonical" href="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://4weblab.it/quanto-costa-sito-web" />
+        <meta property="og:url" content="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
         <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4 Web Lab" />
         <meta property="og:description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
@@ -28,8 +28,10 @@ const QuantoCostaSitoWeb = () => {
 
         {/* Twitter Card */}
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
         <meta name="twitter:title" content="Quanto costa un sito web nel 2026?" />
         <meta name="twitter:description" content="Prezzi reali per realizzare un sito web professionale nel 2026." />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
 
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">
@@ -351,7 +353,7 @@ const QuantoCostaSitoWeb = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">Gli strumenti AI sono utili per creare una base veloce, ma non sostituiscono la progettazione.</p>
                 <p className="text-muted-foreground mb-4 leading-relaxed">Risultato: un sito "presente", ma che non porta risultati concreti.</p>
                 <p className="text-muted-foreground leading-relaxed font-semibold">L'AI è uno strumento. Non è una strategia.</p>
-                <Link to="/creare-sito-con-intelligenza-artificiale" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1 mt-3">
+                <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1 mt-3">
                   Leggi l'articolo completo <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>

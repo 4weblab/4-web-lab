@@ -9,7 +9,7 @@ const previewFaqs = [
       <>
         Il costo parte generalmente da circa 400€ + IVA per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.
         <br />
-        <Link to="/quanto-costa-sito-web" className="text-sm text-accent hover:underline inline-block mt-2">
+        <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">
           Leggi "Quanto costa un sito web nel 2026?"
         </Link>
       </>
@@ -29,7 +29,7 @@ const previewFaqs = [
 
 const HomeFaqPreview = () => {
   return (
-    <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+    <section id="faq" className="section-padding" style={{ background: "var(--gradient-surface)" }}>
       <div className="container-section">
         <AnimatedSection className="max-w-3xl mx-auto">
           {/* Header */}
