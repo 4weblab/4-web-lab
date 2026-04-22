@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Menu, X, ArrowLeft } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
@@ -19,6 +19,20 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
+
+  const backLinkClass = `inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+    isScrolled
+      ? 'text-foreground hover:bg-muted/60'
+      : 'text-primary-foreground hover:bg-primary-foreground/10'
+  }`;
+
+  const mobileBackLinkClass = `inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+    isScrolled
+      ? 'text-foreground hover:bg-muted/60'
+      : 'text-primary-foreground hover:bg-primary-foreground/10'
+  }`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,17 +98,18 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
         </div>
 
         {satelliteMode ? (
-          <Link
-            to="/"
-            className={`hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-              isScrolled
-                ? 'text-foreground hover:bg-muted/60'
-                : 'text-primary-foreground hover:bg-primary-foreground/10'
-            }`}
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Torna alla Home
-          </Link>
+          <div className="hidden md:flex items-center gap-2">
+            {isBlogArticle && (
+              <Link to="/blog" className={backLinkClass}>
+                <ArrowLeft className="w-4 h-4" />
+                Torna agli articoli
+              </Link>
+            )}
+            <Link to="/" className={backLinkClass}>
+              <ArrowLeft className="w-4 h-4" />
+              Torna alla Home
+            </Link>
+          </div>
         ) : (
           <ul className="hidden md:flex items-center gap-1">
             {navItems.map((item) => {
@@ -138,17 +153,18 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
 
         {/* Mobile Menu Button */}
         {satelliteMode ? (
-          <Link
-            to="/"
-            className={`md:hidden inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-              isScrolled
-                ? 'text-foreground hover:bg-muted/60'
-                : 'text-primary-foreground hover:bg-primary-foreground/10'
-            }`}
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Torna alla Home
-          </Link>
+          <div className="md:hidden flex items-center gap-2">
+            {isBlogArticle && (
+              <Link to="/blog" className={mobileBackLinkClass}>
+                <ArrowLeft className="w-4 h-4" />
+                Torna agli articoli
+              </Link>
+            )}
+            <Link to="/" className={mobileBackLinkClass}>
+              <ArrowLeft className="w-4 h-4" />
+              Torna alla Home
+            </Link>
+          </div>
         ) : (
           <button
             className="md:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
