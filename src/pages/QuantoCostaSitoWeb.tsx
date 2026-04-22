@@ -351,7 +351,7 @@ const QuantoCostaSitoWeb = () => {
                 <p className="text-muted-foreground mb-4 leading-relaxed">Gli strumenti AI sono utili per creare una base veloce, ma non sostituiscono la progettazione.</p>
                 <p className="text-muted-foreground mb-4 leading-relaxed">Risultato: un sito "presente", ma che non porta risultati concreti.</p>
                 <p className="text-muted-foreground leading-relaxed font-semibold">L'AI è uno strumento. Non è una strategia.</p>
-                <Link to="/creare-sito-con-intelligenza-artificiale" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1 mt-3">
+                <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1 mt-3">
                   Leggi l'articolo completo <ArrowRight className="w-3 h-3" />
                 </Link>
               </div>
