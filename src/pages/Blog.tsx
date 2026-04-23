@@ -5,10 +5,28 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import blogAiWebsite from "@/assets/blog-ai-website.jpg";
+import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
+import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 
 const articles = [
+  {
+    slug: "/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026",
+    title: "Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026",
+    description:
+      "Il tuo sito web è vecchio o inefficace? Scopri 5 segnali che fanno perdere clienti e come capire se è il momento di rifarlo.",
+    image: blogOutdatedWebsite,
+    alt: "Monitor e smartphone con un sito aziendale obsoleto e prestazioni in calo",
+  },
+  {
+    slug: "/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy",
+    title: "GDPR siti web 2026: obblighi, cookie e privacy",
+    description:
+      "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.",
+    image: blogGdprPrivacy,
+    alt: "Cookie banner e privacy policy su un sito web aziendale conforme al GDPR",
+  },
   {
     slug: "/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026",
     title: "Sito web o social network: cosa conviene davvero per un’attività nel 2026?",

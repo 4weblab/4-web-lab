@@ -177,6 +177,14 @@
     @apply py-28 md:py-36;
   }
 
+  .article-intro-section {
+    @apply bg-background pt-20 pb-10 md:pt-24 md:pb-14;
+  }
+
+  .article-body-section {
+    @apply pt-10 pb-28 md:pt-14 md:pb-36;
+  }
+
   /* Typography scale – larger, bolder */
   .heading-1 {
     @apply text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.08] font-bold;

@@ -1,96 +1,81 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
 const introParagraphs = [
-  "Molte attività oggi si fanno sempre la stessa domanda: serve davvero un sito web o bastano i social?",
-  "Facebook, Instagram e le altre piattaforme hanno reso molto più semplice essere presenti online. In pochi minuti è possibile creare una pagina, pubblicare contenuti e iniziare a farsi vedere.",
-  "Per questo motivo, sempre più aziende decidono di fermarsi lì. Nessun sito, nessuna struttura, solo social.",
-  "La logica sembra funzionare: se i clienti sono sui social, perché complicarsi la vita?",
-  "Il punto è che questa scelta, nel lungo periodo, può diventare un limite molto più grande di quanto sembri.",
+  "Molte aziende sottovalutano ancora un aspetto fondamentale del proprio sito web: la conformità a GDPR, privacy e gestione dei cookie.",
+  "Spesso il sito è online, funziona ed è anche curato dal punto di vista grafico. Ma sotto la superficie mancano elementi obbligatori che possono trasformarsi in un problema concreto.",
+  "Nel 2026 non si tratta più solo di inserire un banner. La gestione dei dati degli utenti è diventata un tema centrale, sia per la normativa sia per la fiducia di chi visita il sito.",
+  "E ignorarlo non è più una scelta neutra.",
 ];
 
 const sections = [
   {
-    title: "Perché i social sembrano sufficienti",
+    title: "GDPR siti web: quando è obbligatorio e perché devi adeguarti",
     paragraphs: [
-      "All’inizio, i social danno una sensazione di controllo e immediatezza. Pubblichi un contenuto e qualcuno lo vede. Ricevi like, commenti, magari qualche messaggio.",
-      "Sembra che tutto funzioni.",
-      "In realtà, quello che stai vedendo è solo una parte del quadro.",
-      "La visibilità sui social non è mai completamente tua. Dipende da algoritmi, da dinamiche che cambiano continuamente e da una competizione sempre più alta.",
-      "Questo significa che anche se lavori bene, non hai la certezza di essere visto.",
+      "Negli ultimi anni la normativa sulla protezione dei dati è diventata sempre più chiara e applicata.",
+      "Un sito web, anche molto semplice, raccoglie informazioni: dati di contatto, comportamenti di navigazione, statistiche.",
+      "Questo significa che ogni attività online ha una responsabilità diretta nella gestione dei dati degli utenti.",
+      "Non è più una questione tecnica, ma una parte integrante della presenza online.",
     ],
   },
   {
-    title: "Il limite principale dei social: non sono tuoi",
+    title: "Cookie banner obbligatorio: cosa deve avere un sito nel 2026",
     paragraphs: [
-      "C’è un aspetto che spesso viene sottovalutato.",
-      "Un profilo social non è una proprietà. È uno spazio che utilizzi, ma che non controlli davvero.",
-      "Se una piattaforma cambia le regole, riduce la visibilità o semplicemente evolve, sei costretto ad adattarti.",
-      "Non puoi decidere come verranno mostrati i tuoi contenuti. Non puoi costruire un percorso preciso per chi visita la tua pagina.",
-      "Puoi solo pubblicare e sperare che venga visto.",
+      "Uno degli aspetti più sottovalutati riguarda proprio i cookie.",
+      "Molti siti mostrano ancora banner generici, spesso non conformi.",
+      "Nel 2026, un banner corretto deve permettere all’utente di scegliere davvero.",
+      "Non basta informare: bisogna dare un consenso reale e bloccare i cookie non necessari finché l’utente non accetta.",
+      "Questo è uno dei punti più controllati e anche uno dei più facili da sbagliare.",
     ],
   },
   {
-    title: "Il problema della visibilità su Google",
+    title: "Errori GDPR siti web: cosa NON deve mancare per essere a norma",
     paragraphs: [
-      "Un altro limite importante riguarda la ricerca.",
-      "Quando una persona cerca su Google un servizio, un prodotto o una soluzione, raramente trova un profilo social tra i primi risultati.",
-      "Trova siti web.",
-      "Questo significa che, senza un sito, stai rinunciando a una parte enorme di visibilità. Non intercetti chi sta cercando attivamente quello che fai.",
-      "E questa è una differenza sostanziale.",
+      "La maggior parte dei siti non è fuori norma per scelta, ma per superficialità.",
+      "Spesso si trovano informative incomplete, testi copiati o sistemi di tracciamento attivi senza consenso.",
+      "Sono dettagli che possono sembrare secondari, ma che fanno la differenza tra un sito corretto e uno potenzialmente problematico.",
+      "Il punto è che questi errori sono molto più comuni di quanto si pensi.",
     ],
   },
   {
-    title: "Cosa cambia davvero con un sito web",
+    title: "GDPR sanzioni siti web: cosa rischi davvero",
     paragraphs: [
-      "Un sito web funziona in modo completamente diverso.",
-      "Non è una sequenza di contenuti come un social, ma una struttura pensata per guidare l’utente.",
-      "Puoi spiegare chi sei, cosa fai, come lavori. Puoi organizzare le informazioni, costruire fiducia e accompagnare chi visita verso un’azione concreta.",
-      "E soprattutto, è tuo.",
-      "Non dipende da algoritmi esterni. Non cambia da un giorno all’altro senza il tuo controllo.",
+      "Il rischio non è solo teorico.",
+      "Le sanzioni esistono e, in alcuni casi, possono essere significative.",
+      "Ma il problema più immediato è un altro: la fiducia.",
+      "Un utente che non percepisce attenzione alla privacy difficilmente lascerà i propri dati.",
+      "E senza fiducia, un sito smette di funzionare davvero.",
     ],
   },
   {
-    title: "Attenzione: non è una scelta tra sito e social",
+    title: "Privacy sito web: cosa deve avere per essere conforme al GDPR",
     paragraphs: [
-      "Qui nasce uno degli errori più comuni.",
-      "Non si tratta di scegliere tra sito web e social. Non sono alternative.",
-      "Sono strumenti diversi, con funzioni diverse.",
-      "I social servono per attirare attenzione, creare relazione, rimanere presenti.",
-      "Il sito serve per trasformare quell’attenzione in qualcosa di concreto: un contatto, una richiesta, un cliente.",
-      "Quando usi solo i social, stai facendo metà del lavoro.",
-    ],
-  },
-  {
-    title: "Quando i social iniziano a non bastare",
-    paragraphs: [
-      "All’inizio possono sembrare più che sufficienti. Ma c’è un momento in cui iniziano a mostrare i loro limiti.",
-      "Succede quando vuoi crescere davvero.",
-      "Quando vuoi acquisire clienti in modo più costante. Quando vuoi essere percepito come professionale. Quando inizi a competere con altre attività che hanno una presenza online più strutturata.",
-      "In quel momento, il sito web non è più un optional. Diventa uno strumento necessario.",
+      "Un sito web nel 2026 dovrebbe includere elementi chiari e ben configurati.",
+      "Non si tratta di aggiungere documenti a caso, ma di costruire una struttura corretta.",
+      "Una privacy policy aggiornata, una cookie policy coerente e un sistema di gestione del consenso funzionante sono ormai lo standard minimo.",
+      "Quando questi elementi sono implementati correttamente, il sito risulta più affidabile anche agli occhi dell’utente.",
     ],
   },
   {
     title: "Conclusione",
     paragraphs: [
-      "I social network sono strumenti potenti, ma non possono sostituire un sito web.",
-      "Affidarsi solo ai social significa costruire la propria presenza online su qualcosa che non controlli completamente.",
-      "Un sito web, invece, è una base solida. Ti permette di essere trovato, di spiegarti meglio e di guidare chi arriva verso una decisione.",
-      "Se vuoi ottenere risultati concreti, non è una questione di scegliere tra sito e social.",
-      "È capire come usarli insieme nel modo giusto.",
+      "Molti vedono GDPR, cookie e privacy come un obbligo tecnico da risolvere velocemente.",
+      "In realtà fanno parte di un sito web fatto bene.",
+      "Ignorarli significa esporsi a rischi e trasmettere poca attenzione ai dettagli.",
+      "Gestirli correttamente, invece, significa costruire una presenza online più solida, più credibile e più professionale.",
     ],
   },
 ];
 
-const BlogSiteVsSocialArticle = () => {
-  const pageTitle = "Sito web o social? Cosa conviene davvero nel 2026";
+const BlogGdprArticle = () => {
+  const pageTitle = "GDPR siti web 2026: obblighi, cookie e privacy";
   const pageDescription =
-    "Meglio un sito web o i social per la tua attività? Scopri differenze, vantaggi e quale scelta porta davvero clienti nel 2026.";
-  const pageUrl = "https://4weblab.it/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026";
+    "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.";
+  const pageUrl = "https://4weblab.it/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy";
   const pageImage = "https://4weblab.it/og-image.jpg";
 
   return (
@@ -116,7 +101,7 @@ const BlogSiteVsSocialArticle = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            headline: "Sito web o social network: cosa conviene davvero per un’attività nel 2026?",
+            headline: "GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)",
             description: pageDescription,
             image: [pageImage],
             author: {
@@ -136,8 +121,8 @@ const BlogSiteVsSocialArticle = () => {
               "@id": pageUrl,
             },
             url: pageUrl,
-            datePublished: "2026-04-22",
-            dateModified: "2026-04-22",
+            datePublished: "2026-04-23",
+            dateModified: "2026-04-23",
           })}
         </script>
       </Helmet>
@@ -159,17 +144,11 @@ const BlogSiteVsSocialArticle = () => {
           />
           <div className="container-section relative z-10">
             <AnimatedSection className="mx-auto max-w-4xl text-center">
-              <div className="flex flex-wrap items-center justify-center gap-3">
-                <Link to="/blog" className="btn-outline inline-flex items-center gap-2 px-5 py-3">
-                  <ArrowLeft className="h-4 w-4" />
-                  Torna agli articoli
-                </Link>
-              </div>
-              <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
+              <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 Blog 4 Web Lab
               </span>
               <h1 className="heading-1 mt-6 text-primary-foreground text-balance">
-                Sito web o social network: cosa conviene davvero per un’attività nel 2026?
+                GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)
               </h1>
             </AnimatedSection>
           </div>
@@ -218,9 +197,9 @@ const BlogSiteVsSocialArticle = () => {
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl rounded-[2rem] border border-border/60 bg-card px-6 py-8 text-center shadow-sm md:px-10 md:py-12">
               <div className="mx-auto mb-6 h-1 w-14 rounded-full bg-accent" />
-              <h2 className="heading-2 text-foreground">Vuoi capire cosa serve davvero alla tua attività?</h2>
+              <h2 className="heading-2 text-foreground">Il tuo sito è davvero a norma GDPR?</h2>
               <p className="body-large mt-5 text-muted-foreground">
-                Raccontaci cosa fai e ti aiutiamo a capire come strutturare la tua presenza online in modo efficace, senza perdere tempo e senza complicazioni inutili.
+                Se hai dubbi su privacy, cookie o gestione dei dati, possiamo aiutarti a capire cosa manca e come sistemarlo in modo semplice e corretto.
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
@@ -238,4 +217,4 @@ const BlogSiteVsSocialArticle = () => {
   );
 };
 
-export default BlogSiteVsSocialArticle;
+export default BlogGdprArticle;
