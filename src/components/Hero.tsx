@@ -73,7 +73,7 @@ const Hero = () => {
 
               <button
                 onClick={handleScrollToContact}
-                className="btn-primary text-lg px-12 py-5"
+                className="hero-cta hero-cta-primary"
                 aria-label="Richiedi un preventivo gratuito">
                 Richiedi preventivo gratuito
               </button>
@@ -82,8 +82,7 @@ const Hero = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-12 py-5 rounded-xl bg-[#25D366] hover:bg-[#1ebe57] text-white font-semibold text-lg transition-all duration-300 hover:-translate-y-0.5"
-                style={{ boxShadow: '0 4px 14px 0 rgba(37,211,102,0.35)' }}
+                className="hero-cta hero-cta-whatsapp"
                 aria-label="Scrivici su WhatsApp"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="WhatsApp" className="w-6 h-6">

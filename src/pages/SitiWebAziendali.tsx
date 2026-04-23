@@ -50,6 +50,15 @@ const SitiWebAziendali = () => {
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://4weblab.it/siti-web-aziendali" />
+        <meta name="twitter:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
+        <meta
+          name="twitter:description"
+          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+        />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
