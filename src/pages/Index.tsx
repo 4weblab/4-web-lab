@@ -53,7 +53,7 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | 4 Web Lab</title>
+        <title>Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | Soluzioni web per la tua impresa | 4 Web Lab</title>
         <meta
           name="description"
           content="Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!"
@@ -62,7 +62,7 @@ const Index = () => {
         <link rel="canonical" href="https://4weblab.it/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/" />
-        <meta property="og:title" content="Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | 4 Web Lab" />
+        <meta property="og:title" content="Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | Soluzioni web per la tua impresa | 4 Web Lab" />
         <meta
           property="og:description"
           content="Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!"
