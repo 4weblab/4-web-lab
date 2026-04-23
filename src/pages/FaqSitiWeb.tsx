@@ -140,6 +140,12 @@ const FaqSitiWeb = () => {
         <meta property="og:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
+        <meta name="twitter:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab" />
+        <meta name="twitter:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
 
         {/* JSON-LD FAQPage */}
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
