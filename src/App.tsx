@@ -34,7 +34,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const queryClient = new QueryClient();
 
 const siteMetadata = {
-  title: "Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | 4 Web Lab",
+  title: "Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | Soluzioni web per la tua impresa | 4 Web Lab",
   description: "Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
