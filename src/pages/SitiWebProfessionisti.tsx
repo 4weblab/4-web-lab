@@ -45,6 +45,15 @@ const SitiWebProfessionisti = () => {
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <meta name="twitter:title" content="Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab" />
+        <meta
+          name="twitter:description"
+          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
+        />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
