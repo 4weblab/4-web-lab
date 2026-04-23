@@ -21,6 +21,7 @@ const Blog = lazy(() => import("./pages/Blog"));
 const BlogAiWebsiteArticle = lazy(() => import("./pages/BlogAiWebsiteArticle"));
 const BlogWebsiteCostArticle = lazy(() => import("./pages/BlogWebsiteCostArticle"));
 const BlogSiteVsSocialArticle = lazy(() => import("./pages/BlogSiteVsSocialArticle"));
+const BlogGdprArticle = lazy(() => import("./pages/BlogGdprArticle"));
 const DemoDV = lazy(() => import("./pages/DemoDV"));
 const DemoRBT = lazy(() => import("./pages/DemoRBT"));
 const DemoZardini = lazy(() => import("./pages/DemoZardini"));
@@ -118,6 +119,7 @@ const App = () => (
               <Route path="/blog/siti-web-creati-con-intelligenza-artificiale" element={<BlogAiWebsiteArticle />} />
               <Route path="/blog/quanto-costa-un-sito-web-nel-2026" element={<BlogWebsiteCostArticle />} />
               <Route path="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" element={<BlogSiteVsSocialArticle />} />
+              <Route path="/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy" element={<BlogGdprArticle />} />
               <Route path="/contatti" element={<Contact />} />
               <Route path="/demo-dv" element={<DemoDV />} />
               <Route path="/demo-rbt" element={<DemoRBT />} />
