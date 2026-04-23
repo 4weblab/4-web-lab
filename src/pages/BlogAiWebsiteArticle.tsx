@@ -182,7 +182,7 @@ const BlogAiWebsiteArticle = () => {
           </div>
         </section>
 
-        <section className="section-padding bg-background">
+        <section className="article-intro-section">
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl">
               <div className="rounded-[2rem] border border-border/60 bg-card px-6 py-8 shadow-sm md:px-10 md:py-12">
@@ -201,7 +201,7 @@ const BlogAiWebsiteArticle = () => {
           </div>
         </section>
 
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="article-body-section" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="mx-auto flex max-w-3xl flex-col gap-6 md:gap-8">
               {sections.map((section, index) => (
