@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 
 const introParagraphs = [
@@ -139,9 +142,11 @@ const BlogWebsiteCostArticle = () => {
     "Scopri quanto costa davvero un sito web nel 2026 per aziende, professionisti e negozi. Prezzi chiari e cosa aspettarti davvero.";
   const pageUrl = "https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026";
   const pageImage = `https://4weblab.it${blogWebsiteCost}`;
-  const datePublished = "2026-04-22";
-  const dateModified = "2026-04-22";
-  const articleSection = "Guide & Costi";
+  const articleData = getArticleBySlug("quanto-costa-un-sito-web-nel-2026");
+  const datePublished = articleData?.datePublished ?? "2026-03-04";
+  const dateModified = articleData?.dateModified ?? "2026-03-04";
+  const articleSection = articleData?.category ?? "Guide & Costi";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 620);
   const headline = "Quanto costa un sito web nel 2026? Guida reale per aziende, professionisti e negozi";
 
   return (

@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogAiWebsite from "@/assets/blog-ai-website.jpg";
 
 const introParagraphs = [
@@ -105,9 +108,11 @@ const BlogAiWebsiteArticle = () => {
     "I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività.";
   const pageUrl = "https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale";
   const pageImage = `https://4weblab.it${blogAiWebsite}`;
-  const datePublished = "2026-04-22";
-  const dateModified = "2026-04-22";
-  const articleSection = "Tecnologia & AI";
+  const articleData = getArticleBySlug("siti-web-creati-con-intelligenza-artificiale");
+  const datePublished = articleData?.datePublished ?? "2026-04-08";
+  const dateModified = articleData?.dateModified ?? "2026-04-08";
+  const articleSection = articleData?.category ?? "Tecnologia & AI";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 720);
   const headline =
     "Siti web creati con intelligenza artificiale: opportunità reale o rischio per le aziende?";
 

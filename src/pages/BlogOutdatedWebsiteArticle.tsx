@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 
 const introParagraphs = [
@@ -86,9 +89,11 @@ const BlogOutdatedWebsiteArticle = () => {
     "Il tuo sito web è vecchio o inefficace? Scopri 5 segnali che fanno perdere clienti e come capire se è il momento di rifarlo.";
   const pageUrl = "https://4weblab.it/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026";
   const pageImage = `https://4weblab.it${blogOutdatedWebsite}`;
-  const datePublished = "2026-04-23";
-  const dateModified = "2026-04-23";
-  const articleSection = "Strategia digitale";
+  const articleData = getArticleBySlug("sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026");
+  const datePublished = articleData?.datePublished ?? "2026-03-26";
+  const dateModified = articleData?.dateModified ?? "2026-03-26";
+  const articleSection = articleData?.category ?? "Strategia digitale";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 560);
   const headline = "Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026";
 
   return (

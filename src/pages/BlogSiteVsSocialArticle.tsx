@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 
 const introParagraphs = [
@@ -93,9 +96,11 @@ const BlogSiteVsSocialArticle = () => {
     "Meglio un sito web o i social per la tua attività? Scopri differenze, vantaggi e quale scelta porta davvero clienti nel 2026.";
   const pageUrl = "https://4weblab.it/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026";
   const pageImage = `https://4weblab.it${blogSiteVsSocial}`;
-  const datePublished = "2026-04-22";
-  const dateModified = "2026-04-22";
-  const articleSection = "Strategia digitale";
+  const articleData = getArticleBySlug("sito-web-o-social-cosa-conviene-davvero-nel-2026");
+  const datePublished = articleData?.datePublished ?? "2026-03-15";
+  const dateModified = articleData?.dateModified ?? "2026-03-15";
+  const articleSection = articleData?.category ?? "Strategia digitale";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 580);
   const headline = "Sito web o social network: cosa conviene davvero per un’attività nel 2026?";
 
   return (
