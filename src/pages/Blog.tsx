@@ -188,7 +188,7 @@ const Blog = () => {
         </section>
 
         {/* INTRO SEO */}
-        <section className="section-padding bg-background">
+        <section className="pt-16 md:pt-20 pb-20 md:pb-24 bg-background">
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto">
               <div className="section-divider !mx-0" />
