@@ -317,7 +317,15 @@ const SitiWebProfessionisti = () => {
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-12" delay={0.1}>
                 <p>
                   Ottimizziamo il costo di realizzazione dei nostri servizi cucendo il sito su misura del cliente, in
-                  base alle sue reali necessità e in base agli obiettivi che vuole raggiungere.
+                  base alle sue reali necessità e in base agli obiettivi che vuole raggiungere. Se vuoi un confronto
+                  più ampio, abbiamo riassunto{" "}
+                  <Link
+                    to="/blog/quanto-costa-un-sito-web-nel-2026"
+                    className="text-accent hover:underline font-medium"
+                  >
+                    cosa incide davvero sul prezzo di un sito web nel 2026
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
 
