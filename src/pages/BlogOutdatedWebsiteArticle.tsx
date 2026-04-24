@@ -34,7 +34,13 @@ const sections: Section[] = [
       "Se una pagina impiega più di qualche secondo per caricarsi, l’utente semplicemente se ne va. Non aspetta, non torna indietro, non ci pensa due volte.",
       "Questo succede ancora più spesso da smartphone, dove la connessione e la pazienza sono ancora più limitate.",
       "Un sito lento non è solo fastidioso: trasmette anche una sensazione di scarsa professionalità.",
-      "E nel frattempo, Google lo penalizza.",
+      <>
+        E nel frattempo, Google lo penalizza: uno dei motivi principali per cui{" "}
+        <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className={linkClass}>
+          molti siti finiscono per non comparire mai nei risultati di ricerca
+        </Link>
+        .
+      </>,
     ],
   },
   {
@@ -86,7 +92,14 @@ const sections: Section[] = [
       "Un sito web non è obsoleto perché è vecchio, ma perché non è più efficace.",
       "Può essere online, funzionare tecnicamente e avere anche un buon design.",
       "Ma se è lento, invisibile, difficile da usare o poco credibile, sta già facendo perdere opportunità.",
-      "E nel digitale, le opportunità perse finiscono sempre a qualcun altro.",
+      <>
+        E nel digitale, le opportunità perse finiscono sempre a qualcun altro. Se stai pensando di
+        rifarlo, vale la pena partire da{" "}
+        <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className={linkClass}>
+          una panoramica chiara dei costi reali nel 2026
+        </Link>
+        .
+      </>,
     ],
   },
 ];

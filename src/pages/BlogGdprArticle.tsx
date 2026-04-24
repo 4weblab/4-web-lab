@@ -69,7 +69,14 @@ const sections: Section[] = [
       "Un sito web nel 2026 dovrebbe includere elementi chiari e ben configurati.",
       "Non si tratta di aggiungere documenti a caso, ma di costruire una struttura corretta.",
       "Una privacy policy aggiornata, una cookie policy coerente e un sistema di gestione del consenso funzionante sono ormai lo standard minimo.",
-      "Quando questi elementi sono implementati correttamente, il sito risulta più affidabile anche agli occhi dell’utente.",
+      <>
+        Quando questi elementi sono implementati correttamente, il sito risulta più affidabile
+        anche agli occhi dell’utente — un dettaglio che fa la differenza soprattutto su un{" "}
+        <Link to="/siti-web-aziendali" className={linkClass}>
+          sito aziendale strutturato
+        </Link>
+        , dove ogni segnale di serietà conta.
+      </>,
     ],
   },
   {
@@ -77,7 +84,17 @@ const sections: Section[] = [
     paragraphs: [
       "Molti vedono GDPR, cookie e privacy come un obbligo tecnico da risolvere velocemente.",
       "In realtà fanno parte di un sito web fatto bene.",
-      "Ignorarli significa esporsi a rischi e trasmettere poca attenzione ai dettagli.",
+      <>
+        Ignorarli significa esporsi a rischi e trasmettere poca attenzione ai dettagli, lo stesso
+        problema che si vede su tanti{" "}
+        <Link
+          to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
+          className={linkClass}
+        >
+          siti ormai datati che fanno perdere clienti ogni giorno
+        </Link>
+        .
+      </>,
       "Gestirli correttamente, invece, significa costruire una presenza online più solida, più credibile e più professionale.",
     ],
   },
