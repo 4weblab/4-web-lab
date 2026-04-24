@@ -1,74 +1,74 @@
 
 
-# Ottimizzazione SEO Blog: Schema, Meta e Sitemap
+# Punto 4: SEO on-page indice blog `/blog`
 
-Implementazione dei punti 1, 2 e 5 per migliorare l'indicizzazione e la presentazione del blog nei risultati di ricerca.
+Ottimizzazione della pagina indice del blog per migliorarne il posizionamento organico e renderla competitiva su query informazionali.
 
-## 1. Schema.org BlogPosting sui singoli articoli
+## Cosa cambia
 
-Aggiornamento dello JSON-LD in tutti i 5 articoli del blog:
-- `src/pages/BlogAiWebsiteArticle.tsx`
-- `src/pages/BlogGdprArticle.tsx`
-- `src/pages/BlogOutdatedWebsiteArticle.tsx`
-- `src/pages/BlogSiteVsSocialArticle.tsx`
-- `src/pages/BlogWebsiteCostArticle.tsx`
+### 1. Meta tag ottimizzati
+- **Title**: da `Blog siti web e SEO | 4 Web Lab` → `Blog siti web 2026: guide, costi e SEO | 4 Web Lab`
+  - Include l'anno (freshness signal) e le query principali.
+- **Meta description**: riscrittura più ricca di keyword e con call-to-action implicita.
+  - Esempio: *"Guide pratiche 2026 su siti web, costi reali, GDPR, SEO e intelligenza artificiale. Consigli per aziende, professionisti e negozi firmati 4 Web Lab, agenzia web di Padova."*
+- **Keywords meta** (opzionale, basso peso SEO ma innocuo).
 
-Modifiche per ciascun articolo:
-- `@type`: da `Article` → `BlogPosting`
-- `author`: passa a `Person` ("Carlo Fullin") con `url` verso la home `https://4weblab.it/`
-- `publisher`: resta `Organization` "4 Web Lab" con logo
-- `image`: usa l'immagine di copertina specifica dell'articolo (URL assoluto verso l'asset importato)
-- `mainEntityOfPage`: aggiunto con URL canonico dell'articolo
-- `inLanguage`: `"it-IT"`
-- `articleSection`: categoria (es. "Guide siti web", "Privacy & GDPR", "Costi", "AI", "Strategia digitale")
-- `datePublished` e `dateModified`: già presenti, verifica/uniformazione
+### 2. Testo SEO sotto l'H1 (200-300 parole)
+Aggiunta di un breve paragrafo introduttivo subito sotto l'H1 nell'hero, oppure (preferibile) come **sezione dedicata tra hero e griglia articoli**, con sfondo bianco/neutro per non spezzare il ritmo visivo.
 
-Inoltre, su ogni articolo viene aggiunto un secondo blocco JSON-LD `BreadcrumbList`:
-```text
-Home → Blog → Titolo articolo
-```
+Contenuto del testo:
+- Cosa trovi nel blog (guide, casi pratici, costi, scelte tecniche).
+- A chi si rivolge (aziende, professionisti, negozi, attività locali a Padova e in tutta Italia).
+- Argomenti principali coperti (siti web, SEO locale, GDPR, AI, costi, noleggio).
+- Tono coerente con il resto del sito: chiaro, diretto, professionale, no markettese.
+- Include in modo naturale keyword: "siti web", "agenzia web Padova", "guide SEO", "costi sito web", "GDPR", "intelligenza artificiale".
+- Chiusura con micro-CTA testuale verso `/contatti` (link inline, non bottone).
 
-## 2. Schema.org indice blog + Open Graph specifici
+### 3. H2 della sezione articoli
+- Da `I nostri articoli` → `Ultime guide e approfondimenti` (più keyword-rich).
+- Sottotitolo arricchito con keyword secondarie.
 
-**Indice `/blog` (`src/pages/Blog.tsx`)**
-- Arricchimento di ogni voce di `blogPost` con: `image` (immagine specifica), `datePublished`, `author` (Person)
-- Aggiunta blocco `BreadcrumbList` (Home → Blog)
+### 4. Interlinking interno (in fondo alla pagina)
+Aggiunta di una piccola sezione **"Esplora i nostri servizi"** sotto la griglia articoli, con 3-4 link testuali alle landing principali:
+- Siti web aziendali
+- Siti web per professionisti
+- Quanto costa un sito web
+- Realizzazione siti web Padova
 
-**Open Graph e meta articolo per ogni articolo**
-- `og:image`: sostituire `og-image.jpg` generica con l'immagine di copertina specifica dell'articolo (URL assoluto)
-- `og:type`: da `website` → `article`
-- Nuovi meta: `article:published_time`, `article:modified_time`, `article:author`, `article:section`
-- `twitter:image`: allineato all'immagine specifica
-- Verifica `canonical` su ogni articolo (già presenti, controllo correttezza)
+Questo rinforza l'interlinking SEO e distribuisce link equity dalle pagine blog (che ricevono traffico informazionale) verso le landing transazionali.
 
-## 3. Sitemap aggiornata
+### 5. Schema.org integrazione
+- Aggiunta di `WebSite` con `SearchAction` (sitelinks searchbox) **solo se** vogliamo abilitare la searchbox nei risultati Google. Da valutare — di norma utile su siti con search interna, che non abbiamo. **Proposta: skip.**
+- Aggiunta `description` arricchita nel `CollectionPage` esistente, allineata alla nuova meta description.
 
-`public/sitemap.xml`:
-- Aggiunta voce mancante: `/blog/sito-web-obsoleto-...` (già presente, verificare)
-- Aggiunta voci pagine satellite mancanti se necessarie
-- Verifica che tutte le 5 URL articoli + `/blog` abbiano `lastmod` aggiornato e `priority` 0.7-0.8 (già impostati, controllo)
-- Allineamento `lastmod` alla data di pubblicazione/aggiornamento dichiarata negli schema
+## File coinvolti
 
-## Dettagli tecnici
+- `src/pages/Blog.tsx` — unico file modificato:
+  - `<Helmet>`: aggiornamento title, description, keywords, JSON-LD.
+  - Hero: H1 invariato, sottotitolo leggermente arricchito.
+  - Nuova sezione SEO text tra hero e griglia articoli.
+  - H2 sezione articoli aggiornato.
+  - Nuova sezione interlinking finale prima del Footer.
 
-**Pattern condiviso:** ogni articolo importa già la propria immagine come modulo Vite (es. `import blogGdprPrivacy from "@/assets/..."`). Per JSON-LD e OG serve un URL assoluto: si concatena l'asset importato con il dominio (es. `https://4weblab.it${blogGdprPrivacy}`) — Vite restituisce un path con hash, valido in produzione.
+## Cosa NON cambia
 
-**Autore:** "Carlo Fullin" come `Person`, con `url: "https://4weblab.it/"` (in assenza di pagina autore dedicata, fuori scope per ora).
-
-**Articoli e categorie suggerite:**
-- AI Website → "Tecnologia & AI"
-- GDPR → "Privacy & Compliance"
-- Outdated Website → "Strategia digitale"
-- Site vs Social → "Strategia digitale"
-- Website Cost → "Guide & Costi"
-
-**Nessuna modifica visiva**: tutto l'intervento è su `<Helmet>` e JSON-LD, l'aspetto del blog rimane invariato. UX (breadcrumb visibile, related articles, reading time) e testo SEO sull'indice restano fuori scope e verranno discussi nei punti 3 e 4 successivamente.
+- Layout generale, spaziature, colori, animazioni: invariati.
+- Le 5 card articolo: invariate.
+- Header/Footer: invariati.
+- Sitemap: già aggiornata al punto 5.
 
 ## Esito atteso
 
-- Rich results idonei come `BlogPosting` (eligibilità per Google Discover e card articolo).
-- Anteprime social con immagine corretta per ogni articolo (LinkedIn, Facebook, X, WhatsApp).
-- Migliore E-E-A-T grazie ad autore Persona dichiarato.
-- Breadcrumb nei risultati Google.
-- Sitemap pulita e coerente con i metadati.
+- Migliore ranking dell'indice `/blog` su query come "blog siti web 2026", "guide siti web aziendali", "blog SEO Padova".
+- Più contesto semantico per Google → maggiore probabilità di passaggio di authority dagli articoli alla pagina indice e viceversa.
+- Interlinking che porta traffico dal blog alle pagine commerciali.
+- Nessun impatto su performance (testo statico, no nuovi asset).
+
+## Domanda aperta
+
+Vuoi che il **testo SEO introduttivo** sia:
+- **A)** Una sezione dedicata visibile tra hero e griglia (consigliato — più impatto SEO e UX).
+- **B)** Inserito direttamente nell'hero, espandendo il sottotitolo attuale (più compatto, meno spazio per keyword).
+
+Se non specifichi, procedo con l'opzione **A**.
 
