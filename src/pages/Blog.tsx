@@ -59,9 +59,11 @@ const articles = [
 ];
 
 const Blog = () => {
-  const pageTitle = "Blog siti web e SEO | 4 Web Lab";
+  const pageTitle = "Blog siti web 2026: guide, costi e SEO | 4 Web Lab";
   const pageDescription =
-    "Guide pratiche su siti web, SEO e costi reali per aziende, professionisti e negozi firmate 4 Web Lab.";
+    "Guide pratiche 2026 su siti web, costi reali, GDPR, SEO e intelligenza artificiale. Consigli per aziende, professionisti e negozi firmati 4 Web Lab, agenzia web di Padova.";
+  const pageKeywords =
+    "blog siti web, guide SEO, costi sito web, GDPR siti web, intelligenza artificiale siti web, agenzia web Padova, siti web aziendali, siti web professionisti";
   const pageUrl = "https://4weblab.it/blog";
   const pageImage = "https://4weblab.it/og-image.jpg";
 
@@ -70,6 +72,7 @@ const Blog = () => {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={pageDescription} />
+        <meta name="keywords" content={pageKeywords} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="website" />
@@ -171,14 +174,52 @@ const Blog = () => {
                 Guide e consigli per creare un sito web che porta clienti
               </h1>
               <p className="body-large mt-6 text-primary-foreground/80 max-w-2xl">
-                Articoli pratici su costi, strategie e scelte tecniche per aziende,
-                professionisti e attività locali.
+                Articoli pratici su costi, SEO, GDPR e intelligenza artificiale per
+                aziende, professionisti e attività locali a Padova e in tutta Italia.
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
                   Richiedi una consulenza
                   <ArrowRight className="h-4 w-4" />
                 </Link>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* INTRO SEO */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto">
+              <div className="section-divider !mx-0" />
+              <h2 className="heading-2 text-foreground">
+                Il blog di 4 Web Lab: contenuti utili per scegliere bene
+              </h2>
+              <div className="mt-6 space-y-4 body-base text-muted-foreground">
+                <p>
+                  Nel blog di <strong>4 Web Lab</strong> raccogliamo guide pratiche,
+                  casi reali e approfondimenti tecnici pensati per chi sta valutando di{" "}
+                  <strong>realizzare un sito web</strong> o rifare quello esistente. Niente
+                  teoria astratta: solo consigli operativi nati dal lavoro quotidiano della
+                  nostra <Link to="/realizzazione-siti-web-padova" className="text-accent font-medium hover:underline">agenzia web di Padova</Link>.
+                </p>
+                <p>
+                  Trovi articoli dedicati a <strong>costi reali di un sito web</strong>,
+                  scelte tecniche, <strong>SEO locale</strong>, conformità{" "}
+                  <strong>GDPR</strong>, cookie e privacy, oltre a guide sull'uso
+                  dell'<strong>intelligenza artificiale</strong> nella creazione di siti.
+                  Ogni contenuto è pensato per aziende, <strong>professionisti</strong>{" "}
+                  (avvocati, commercialisti, medici), negozi e attività locali che vogliono
+                  capire come ottenere risultati concreti dal proprio sito.
+                </p>
+                <p>
+                  Se preferisci parlarne direttamente con noi,{" "}
+                  <Link to="/contatti" className="text-accent font-medium hover:underline">
+                    richiedi una valutazione gratuita
+                  </Link>
+                  : analizziamo insieme la tua situazione e ti diciamo, senza giri di
+                  parole, cosa conviene fare.
+                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -192,9 +233,10 @@ const Blog = () => {
           <div className="container-section">
             <AnimatedSection className="max-w-2xl mb-12 md:mb-16">
               <div className="section-divider !mx-0" />
-               <h2 className="heading-2 text-foreground">I nostri articoli</h2>
+              <h2 className="heading-2 text-foreground">Ultime guide e approfondimenti</h2>
               <p className="body-base text-muted-foreground mt-4">
-                Approfondimenti pensati per aiutarti a fare scelte consapevoli sul tuo sito web.
+                Articoli aggiornati su siti web, SEO, costi, GDPR e intelligenza
+                artificiale per aiutarti a fare scelte consapevoli.
               </p>
             </AnimatedSection>
 
@@ -233,6 +275,58 @@ const Blog = () => {
                 </StaggerItem>
               ))}
             </StaggerContainer>
+          </div>
+        </section>
+
+        {/* INTERLINKING */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto text-center">
+              <div className="section-divider mx-auto" />
+              <h2 className="heading-2 text-foreground">Esplora i nostri servizi</h2>
+              <p className="body-base text-muted-foreground mt-4">
+                Hai trovato utile il blog? Scopri le soluzioni che proponiamo per
+                aziende, professionisti e attività locali.
+              </p>
+              <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+                <li>
+                  <Link
+                    to="/siti-web-aziendali"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Siti web aziendali</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/siti-web-per-professionisti"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Siti web per professionisti</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/quanto-costa-sito-web"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Quanto costa un sito web</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/realizzazione-siti-web-padova"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Realizzazione siti web Padova</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+              </ul>
+            </AnimatedSection>
           </div>
         </section>
       </main>
