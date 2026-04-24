@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
 
 const introParagraphs = [
   "Molte aziende sottovalutano ancora un aspetto fondamentale del proprio sito web: la conformità a GDPR, privacy e gestione dei cookie.",
@@ -76,7 +77,11 @@ const BlogGdprArticle = () => {
   const pageDescription =
     "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.";
   const pageUrl = "https://4weblab.it/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy";
-  const pageImage = "https://4weblab.it/og-image.jpg";
+  const pageImage = `https://4weblab.it${blogGdprPrivacy}`;
+  const datePublished = "2026-04-23";
+  const dateModified = "2026-04-23";
+  const articleSection = "Privacy & Compliance";
+  const headline = "GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)";
 
   return (
     <>
@@ -92,6 +97,10 @@ const BlogGdprArticle = () => {
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="article:published_time" content={datePublished} />
+        <meta property="article:modified_time" content={dateModified} />
+        <meta property="article:author" content="Carlo Fullin" />
+        <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
@@ -100,13 +109,16 @@ const BlogGdprArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)",
+            "@type": "BlogPosting",
+            headline,
             description: pageDescription,
             image: [pageImage],
+            inLanguage: "it-IT",
+            articleSection,
             author: {
-              "@type": "Organization",
-              name: "4 Web Lab",
+              "@type": "Person",
+              name: "Carlo Fullin",
+              url: "https://4weblab.it/",
             },
             publisher: {
               "@type": "Organization",
@@ -121,8 +133,19 @@ const BlogGdprArticle = () => {
               "@id": pageUrl,
             },
             url: pageUrl,
-            datePublished: "2026-04-23",
-            dateModified: "2026-04-23",
+            datePublished,
+            dateModified,
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
+              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
+            ],
           })}
         </script>
       </Helmet>

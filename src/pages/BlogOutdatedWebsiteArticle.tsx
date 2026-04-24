@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 
 const introParagraphs = [
   "Nel 2026 la differenza tra un sito web che porta clienti e uno che resta fermo a fare da semplice vetrina è diventata molto evidente.",
@@ -84,7 +85,11 @@ const BlogOutdatedWebsiteArticle = () => {
   const pageDescription =
     "Il tuo sito web è vecchio o inefficace? Scopri 5 segnali che fanno perdere clienti e come capire se è il momento di rifarlo.";
   const pageUrl = "https://4weblab.it/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026";
-  const pageImage = "https://4weblab.it/og-image.jpg";
+  const pageImage = `https://4weblab.it${blogOutdatedWebsite}`;
+  const datePublished = "2026-04-23";
+  const dateModified = "2026-04-23";
+  const articleSection = "Strategia digitale";
+  const headline = "Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026";
 
   return (
     <>
@@ -100,6 +105,10 @@ const BlogOutdatedWebsiteArticle = () => {
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="article:published_time" content={datePublished} />
+        <meta property="article:modified_time" content={dateModified} />
+        <meta property="article:author" content="Carlo Fullin" />
+        <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
@@ -108,13 +117,16 @@ const BlogOutdatedWebsiteArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026",
+            "@type": "BlogPosting",
+            headline,
             description: pageDescription,
             image: [pageImage],
+            inLanguage: "it-IT",
+            articleSection,
             author: {
-              "@type": "Organization",
-              name: "4 Web Lab",
+              "@type": "Person",
+              name: "Carlo Fullin",
+              url: "https://4weblab.it/",
             },
             publisher: {
               "@type": "Organization",
@@ -129,8 +141,19 @@ const BlogOutdatedWebsiteArticle = () => {
               "@id": pageUrl,
             },
             url: pageUrl,
-            datePublished: "2026-04-23",
-            dateModified: "2026-04-23",
+            datePublished,
+            dateModified,
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
+              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
+            ],
           })}
         </script>
       </Helmet>
