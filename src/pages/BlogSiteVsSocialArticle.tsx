@@ -52,7 +52,15 @@ const sections: Section[] = [
       "Un altro limite importante riguarda la ricerca.",
       "Quando una persona cerca su Google un servizio, un prodotto o una soluzione, raramente trova un profilo social tra i primi risultati.",
       "Trova siti web.",
-      "Questo significa che, senza un sito, stai rinunciando a una parte enorme di visibilità. Non intercetti chi sta cercando attivamente quello che fai.",
+      <>
+        Questo significa che, senza un sito, stai rinunciando a una parte enorme di visibilità. Non
+        intercetti chi sta cercando attivamente quello che fai. Se vuoi capire meglio il
+        fenomeno,{" "}
+        <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className={linkClass}>
+          abbiamo dedicato una guida intera a perché un sito non compare su Google
+        </Link>
+        .
+      </>,
       "E questa è una differenza sostanziale.",
     ],
   },
@@ -83,7 +91,14 @@ const sections: Section[] = [
       "All’inizio possono sembrare più che sufficienti. Ma c’è un momento in cui iniziano a mostrare i loro limiti.",
       "Succede quando vuoi crescere davvero.",
       "Quando vuoi acquisire clienti in modo più costante. Quando vuoi essere percepito come professionale. Quando inizi a competere con altre attività che hanno una presenza online più strutturata.",
-      "In quel momento, il sito web non è più un optional. Diventa uno strumento necessario.",
+      <>
+        In quel momento, il sito web non è più un optional. Diventa uno strumento necessario — e la
+        domanda diventa solo una:{" "}
+        <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className={linkClass}>
+          quanto costa davvero un sito web fatto bene
+        </Link>
+        ?
+      </>,
     ],
   },
   {
