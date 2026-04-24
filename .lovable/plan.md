@@ -1,48 +1,74 @@
 
-Obiettivo: ridurre e uniformare lo spazio verticale eccessivo tra il primo blocco testo introduttivo e il secondo blocco contenuti in tutti gli articoli del blog, mantenendo il design coerente con il sito.
 
-1. Individuare il punto esatto che genera lo spazio
-- I quattro articoli blog usano due sezioni consecutive:
-  - sezione intro con card testuale
-  - sezione successiva con i blocchi H2/contenuto
-- Entrambe usano `section-padding`, che applica molto spazio sopra e sotto (`py-28 md:py-36`), quindi la somma tra `padding-bottom` della prima sezione e `padding-top` della seconda crea il “vuoto” percepito.
+# Ottimizzazione SEO Blog: Schema, Meta e Sitemap
 
-2. Normalizzare lo spacing tra intro e corpo articolo
-- Sostituire nei file articolo la coppia di sezioni consecutive con una spaziatura dedicata e più compatta tra questi due blocchi.
-- Mantenere ampio il respiro generale della pagina, ma ridurre in modo controllato il tratto specifico tra:
-  - card introduttiva
-  - primo blocco con H2
-- Applicare una soluzione uniforme su tutti gli articoli, ad esempio:
-  - prima sezione con padding inferiore ridotto
-  - seconda sezione con padding superiore ridotto
-  - oppure una utility/class condivisa dedicata al layout articolo blog
+Implementazione dei punti 1, 2 e 5 per migliorare l'indicizzazione e la presentazione del blog nei risultati di ricerca.
 
-3. Allineare tutti gli articoli esistenti
-- Aggiornare in modo coerente:
-  - `src/pages/BlogGdprArticle.tsx`
-  - `src/pages/BlogSiteVsSocialArticle.tsx`
-  - `src/pages/BlogAiWebsiteArticle.tsx`
-  - `src/pages/BlogWebsiteCostArticle.tsx`
-- Verificare che il ritmo verticale resti uniforme anche dove ci sono sottosezioni, card extra o CTA finali.
+## 1. Schema.org BlogPosting sui singoli articoli
 
-4. Preferire una convenzione riusabile
-- Se il pattern è identico in tutti gli articoli, introdurre una classe semantica condivisa per il layout editoriale blog invece di correggere lo spacing in modo isolato file per file.
-- Questo evita nuove discrepanze quando verranno aggiunti altri articoli.
+Aggiornamento dello JSON-LD in tutti i 5 articoli del blog:
+- `src/pages/BlogAiWebsiteArticle.tsx`
+- `src/pages/BlogGdprArticle.tsx`
+- `src/pages/BlogOutdatedWebsiteArticle.tsx`
+- `src/pages/BlogSiteVsSocialArticle.tsx`
+- `src/pages/BlogWebsiteCostArticle.tsx`
 
-5. Verifica responsive
-- Controllare il risultato in ottica mobile-first:
-  - spazio più compatto su mobile
-  - proporzione corretta su tablet/desktop
-- Assicurare che non si crei un effetto troppo “schiacciato” tra introduzione e contenuto.
+Modifiche per ciascun articolo:
+- `@type`: da `Article` → `BlogPosting`
+- `author`: passa a `Person` ("Carlo Fullin") con `url` verso la home `https://4weblab.it/`
+- `publisher`: resta `Organization` "4 Web Lab" con logo
+- `image`: usa l'immagine di copertina specifica dell'articolo (URL assoluto verso l'asset importato)
+- `mainEntityOfPage`: aggiunto con URL canonico dell'articolo
+- `inLanguage`: `"it-IT"`
+- `articleSection`: categoria (es. "Guide siti web", "Privacy & GDPR", "Costi", "AI", "Strategia digitale")
+- `datePublished` e `dateModified`: già presenti, verifica/uniformazione
 
-Dettagli tecnici
-- Il problema nasce dall’uso consecutivo di `section-padding` su due sezioni adiacenti.
-- La utility globale attuale è in `src/index.css`:
-  - `.section-padding { @apply py-28 md:py-36; }`
-- Gli articoli blog interessati stanno in `src/pages/Blog*Article.tsx`.
-- Intervento consigliato: introdurre una variante di spacing per le sezioni editoriali del blog, invece di modificare globalmente `section-padding`, così non si alterano altre pagine del sito.
+Inoltre, su ogni articolo viene aggiunto un secondo blocco JSON-LD `BreadcrumbList`:
+```text
+Home → Blog → Titolo articolo
+```
 
-Esito atteso
-- Spazio tra primo e secondo blocco testo visibilmente più equilibrato.
-- Stesso comportamento su tutti gli articoli del blog.
-- Nessuna regressione visiva sul resto del sito.
+## 2. Schema.org indice blog + Open Graph specifici
+
+**Indice `/blog` (`src/pages/Blog.tsx`)**
+- Arricchimento di ogni voce di `blogPost` con: `image` (immagine specifica), `datePublished`, `author` (Person)
+- Aggiunta blocco `BreadcrumbList` (Home → Blog)
+
+**Open Graph e meta articolo per ogni articolo**
+- `og:image`: sostituire `og-image.jpg` generica con l'immagine di copertina specifica dell'articolo (URL assoluto)
+- `og:type`: da `website` → `article`
+- Nuovi meta: `article:published_time`, `article:modified_time`, `article:author`, `article:section`
+- `twitter:image`: allineato all'immagine specifica
+- Verifica `canonical` su ogni articolo (già presenti, controllo correttezza)
+
+## 3. Sitemap aggiornata
+
+`public/sitemap.xml`:
+- Aggiunta voce mancante: `/blog/sito-web-obsoleto-...` (già presente, verificare)
+- Aggiunta voci pagine satellite mancanti se necessarie
+- Verifica che tutte le 5 URL articoli + `/blog` abbiano `lastmod` aggiornato e `priority` 0.7-0.8 (già impostati, controllo)
+- Allineamento `lastmod` alla data di pubblicazione/aggiornamento dichiarata negli schema
+
+## Dettagli tecnici
+
+**Pattern condiviso:** ogni articolo importa già la propria immagine come modulo Vite (es. `import blogGdprPrivacy from "@/assets/..."`). Per JSON-LD e OG serve un URL assoluto: si concatena l'asset importato con il dominio (es. `https://4weblab.it${blogGdprPrivacy}`) — Vite restituisce un path con hash, valido in produzione.
+
+**Autore:** "Carlo Fullin" come `Person`, con `url: "https://4weblab.it/"` (in assenza di pagina autore dedicata, fuori scope per ora).
+
+**Articoli e categorie suggerite:**
+- AI Website → "Tecnologia & AI"
+- GDPR → "Privacy & Compliance"
+- Outdated Website → "Strategia digitale"
+- Site vs Social → "Strategia digitale"
+- Website Cost → "Guide & Costi"
+
+**Nessuna modifica visiva**: tutto l'intervento è su `<Helmet>` e JSON-LD, l'aspetto del blog rimane invariato. UX (breadcrumb visibile, related articles, reading time) e testo SEO sull'indice restano fuori scope e verranno discussi nei punti 3 e 4 successivamente.
+
+## Esito atteso
+
+- Rich results idonei come `BlogPosting` (eligibilità per Google Discover e card articolo).
+- Anteprime social con immagine corretta per ogni articolo (LinkedIn, Facebook, X, WhatsApp).
+- Migliore E-E-A-T grazie ad autore Persona dichiarato.
+- Breadcrumb nei risultati Google.
+- Sitemap pulita e coerente con i metadati.
+
