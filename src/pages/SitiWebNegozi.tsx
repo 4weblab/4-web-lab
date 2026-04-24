@@ -119,7 +119,11 @@ const SitiWebNegozi = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Sempre più persone cercano prodotti e negozi su Google prima di uscire di casa. Se il tuo negozio non ha un sito web professionale, semplicemente non esisti per chi sta cercando proprio quello che vendi.
+                  Sempre più persone cercano prodotti e negozi su Google prima di uscire di casa. Se il tuo negozio non ha un sito web professionale, semplicemente non esisti per chi sta cercando proprio quello che vendi — è esattamente il problema che approfondiamo nell'articolo{" "}
+                  <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-accent hover:underline font-medium">
+                    perché il tuo sito non si trova su Google
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
