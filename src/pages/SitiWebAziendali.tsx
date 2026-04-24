@@ -299,7 +299,14 @@ const SitiWebAziendali = () => {
                 <p>
                   Il costo di un sito web aziendale dipende da struttura, contenuti e obiettivi. Ogni progetto di
                   realizzazione siti web aziendali viene sviluppato su misura per creare uno strumento utile e concreto
-                  per l'azienda.
+                  per l'azienda. Per un quadro più ampio puoi anche leggere la nostra{" "}
+                  <Link
+                    to="/blog/quanto-costa-un-sito-web-nel-2026"
+                    className="text-accent hover:underline font-medium"
+                  >
+                    guida ai costi reali di un sito web nel 2026
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-10" staggerDelay={0.1}>
@@ -383,7 +390,18 @@ const SitiWebAziendali = () => {
                     {
                       question: "Serve davvero un sito web per un'azienda oggi?",
                       answer:
-                        "Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare un'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità.",
+                        <>
+                          Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare
+                          un'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità —
+                          ed è esattamente il problema che spieghiamo nell'articolo{" "}
+                          <Link
+                            to="/blog/perche-il-tuo-sito-non-si-trova-su-google"
+                            className="text-accent hover:underline font-medium"
+                          >
+                            perché il tuo sito non si trova su Google
+                          </Link>
+                          .
+                        </>,
                     },
                     {
                       question: "Qual è la differenza tra sito vetrina e sito aziendale?",
