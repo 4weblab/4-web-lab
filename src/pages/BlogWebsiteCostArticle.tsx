@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -18,7 +19,17 @@ const introParagraphs = [
   "In questa guida vediamo i costi reali, cosa li influenza e quanto ha senso investire in base al tipo di attività.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs?: ReactNode[];
+  bullets?: string[];
+  closing?: ReactNode[];
+  subSections?: { title: string; price: string; paragraphs: string[] }[];
+};
+
+const sections: Section[] = [
   {
     title: "Da cosa dipende il costo di un sito web",
     paragraphs: [
@@ -115,7 +126,14 @@ const sections = [
       "scarsa efficacia nel generare contatti",
     ],
     closing: [
-      "Un sito economico che non porta risultati è, di fatto, un costo inutile.",
+      <>
+        Un sito economico che non porta risultati è, di fatto, un costo inutile. È lo stesso rischio
+        che si corre con i{" "}
+        <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className={linkClass}>
+          siti generati con intelligenza artificiale
+        </Link>
+        : sembrano un affare, ma spesso restano una vetrina vuota.
+      </>,
     ],
   },
   {
@@ -131,7 +149,18 @@ const sections = [
       "utile per la tua attività",
     ],
     closing: [
-      "Senza spendere più del necessario, ma senza nemmeno scendere a compromessi che ti fanno perdere opportunità.",
+      <>
+        Senza spendere più del necessario, ma senza nemmeno scendere a compromessi che ti fanno
+        perdere opportunità — gli stessi compromessi che, col tempo, trasformano un sito nuovo in
+        uno di quei{" "}
+        <Link
+          to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
+          className={linkClass}
+        >
+          siti ormai obsoleti che fanno perdere clienti
+        </Link>
+        .
+      </>,
     ],
   },
 ];
@@ -294,8 +323,15 @@ const BlogWebsiteCostArticle = () => {
                     <h2 className="heading-3 text-foreground">{section.title}</h2>
 
                     <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                      {section.paragraphs?.map((paragraph) => (
-                        <p key={paragraph} className={paragraph.endsWith("?") ? "font-semibold text-foreground" : undefined}>
+                      {section.paragraphs?.map((paragraph, pIndex) => (
+                        <p
+                          key={pIndex}
+                          className={
+                            typeof paragraph === "string" && paragraph.endsWith("?")
+                              ? "font-semibold text-foreground"
+                              : undefined
+                          }
+                        >
                           {paragraph}
                         </p>
                       ))}
@@ -313,8 +349,8 @@ const BlogWebsiteCostArticle = () => {
 
                     {section.closing ? (
                       <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                        {section.closing.map((paragraph) => (
-                          <p key={paragraph}>{paragraph}</p>
+                        {section.closing.map((paragraph, cIndex) => (
+                          <p key={cIndex}>{paragraph}</p>
                         ))}
                       </div>
                     ) : null}

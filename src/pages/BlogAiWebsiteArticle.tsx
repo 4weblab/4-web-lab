@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -17,7 +18,15 @@ const introParagraphs = [
   "La risposta, come spesso accade, non è né un sì né un no netto.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs: ReactNode[];
+  subSections?: { title: string; paragraphs: string[] }[];
+};
+
+const sections: Section[] = [
   {
     title: "Perché i siti creati con IA stanno diventando così popolari",
     paragraphs: [
@@ -33,7 +42,15 @@ const sections = [
     paragraphs: [
       "Sarebbe un errore liquidare questi strumenti come inutili. In realtà, in alcuni contesti sono estremamente efficaci.",
       "Ad esempio, sono perfetti per creare una prima versione del sito. Un prototipo veloce permette di “mettere online qualcosa” e iniziare a esistere digitalmente senza lunghi tempi di attesa.",
-      "Sono anche una soluzione valida per attività appena nate, con budget molto limitato. In questi casi, avere un sito semplice è comunque meglio che non averne uno.",
+      <>
+        Sono anche una soluzione valida per attività appena nate, con budget molto limitato. In
+        questi casi, avere un sito semplice è comunque meglio che non averne uno — anche se vale
+        la pena confrontarli con{" "}
+        <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className={linkClass}>
+          i prezzi reali di un sito professionale nel 2026
+        </Link>
+        , che spesso non sono così distanti come si pensa.
+      </>,
       "Un altro utilizzo interessante è il test di nuove idee. Se vuoi validare un servizio o una nicchia, l’IA ti permette di farlo rapidamente, senza investimenti importanti.",
     ],
   },
@@ -79,7 +96,14 @@ const sections = [
     title: "Quando invece diventa un limite",
     paragraphs: [
       "Se vuoi trovare clienti online, un sito generato automaticamente difficilmente basta.",
-      "Se hai già un’attività avviata, un sito generico rischia di danneggiare la percezione del tuo brand.",
+      <>
+        Se hai già un’attività avviata, un sito generico rischia di danneggiare la percezione del
+        tuo brand. È anche uno dei motivi per cui{" "}
+        <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className={linkClass}>
+          molti siti non riescono a comparire su Google
+        </Link>
+        : contenuti standard, struttura uguale a mille altri.
+      </>,
       "Se operi in un mercato competitivo, avere un sito simile a molti altri è un problema concreto.",
     ],
   },
@@ -256,7 +280,9 @@ const BlogAiWebsiteArticle = () => {
                     <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                     <h2 className="heading-3 text-foreground">{section.title}</h2>
                     <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                      {section.paragraphs?.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+                      {section.paragraphs?.map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
+                      ))}
                     </div>
 
                     {section.subSections ? (

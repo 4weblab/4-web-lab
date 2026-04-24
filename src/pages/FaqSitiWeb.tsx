@@ -42,13 +42,13 @@ const faqs = [
   id: 'social-o-sito-web',
   question: 'È meglio avere solo i social o anche un sito web?',
   answer:
-  'I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.'
+  <>I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.<br /><Link to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Sito web o social: cosa conviene davvero nel 2026?</Link></>
 },
 {
   id: 'google-business-basta',
   question: 'Google Business basta per trovare clienti?',
   answer:
-  'Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.'
+  <>Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.<br /><Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-sm text-accent hover:underline inline-block mt-2">Perché il tuo sito non si trova su Google</Link></>
 },
 {
   id: 'vetrina-vs-landing',
@@ -60,7 +60,7 @@ const faqs = [
   id: 'sito-web-trova-clienti',
   question: 'Un sito web aiuta davvero a trovare clienti?',
   answer:
-  'Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online.'
+  <>Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
 }];
 
 
