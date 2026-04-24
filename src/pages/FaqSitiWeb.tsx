@@ -60,7 +60,7 @@ const faqs = [
   id: 'sito-web-trova-clienti',
   question: 'Un sito web aiuta davvero a trovare clienti?',
   answer:
-  'Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online.'
+  <>Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
 }];
 
 
