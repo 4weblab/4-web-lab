@@ -250,7 +250,13 @@ const SitiWebPadova = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del territorio. Lavoriamo con professionisti, commercianti e aziende della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la solidità di un metodo collaudato a livello nazionale.
+                  La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del territorio. Lavoriamo con{" "}
+                  <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>
+                  ,{" "}
+                  <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">commercianti</Link>
+                  {" "}e{" "}
+                  <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">aziende</Link>
+                  {" "}della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la solidità di un metodo collaudato a livello nazionale.
                 </p>
                 <p>Che la tua attività sia nel centro di Padova o in uno dei comuni della provincia, il nostro approccio resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni realmente efficaci, senza formule standardizzate.
                 </p>
