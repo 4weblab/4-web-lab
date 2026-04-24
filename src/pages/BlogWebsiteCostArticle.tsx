@@ -126,7 +126,14 @@ const sections: Section[] = [
       "scarsa efficacia nel generare contatti",
     ],
     closing: [
-      "Un sito economico che non porta risultati è, di fatto, un costo inutile.",
+      <>
+        Un sito economico che non porta risultati è, di fatto, un costo inutile. È lo stesso rischio
+        che si corre con i{" "}
+        <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className={linkClass}>
+          siti generati con intelligenza artificiale
+        </Link>
+        : sembrano un affare, ma spesso restano una vetrina vuota.
+      </>,
     ],
   },
   {
@@ -142,7 +149,18 @@ const sections: Section[] = [
       "utile per la tua attività",
     ],
     closing: [
-      "Senza spendere più del necessario, ma senza nemmeno scendere a compromessi che ti fanno perdere opportunità.",
+      <>
+        Senza spendere più del necessario, ma senza nemmeno scendere a compromessi che ti fanno
+        perdere opportunità — gli stessi compromessi che, col tempo, trasformano un sito nuovo in
+        uno di quei{" "}
+        <Link
+          to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
+          className={linkClass}
+        >
+          siti ormai obsoleti che fanno perdere clienti
+        </Link>
+        .
+      </>,
     ],
   },
 ];
