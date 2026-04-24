@@ -305,8 +305,15 @@ const BlogWebsiteCostArticle = () => {
                     <h2 className="heading-3 text-foreground">{section.title}</h2>
 
                     <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                      {section.paragraphs?.map((paragraph) => (
-                        <p key={paragraph} className={paragraph.endsWith("?") ? "font-semibold text-foreground" : undefined}>
+                      {section.paragraphs?.map((paragraph, pIndex) => (
+                        <p
+                          key={pIndex}
+                          className={
+                            typeof paragraph === "string" && paragraph.endsWith("?")
+                              ? "font-semibold text-foreground"
+                              : undefined
+                          }
+                        >
                           {paragraph}
                         </p>
                       ))}
@@ -324,8 +331,8 @@ const BlogWebsiteCostArticle = () => {
 
                     {section.closing ? (
                       <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                        {section.closing.map((paragraph) => (
-                          <p key={paragraph}>{paragraph}</p>
+                        {section.closing.map((paragraph, cIndex) => (
+                          <p key={cIndex}>{paragraph}</p>
                         ))}
                       </div>
                     ) : null}
