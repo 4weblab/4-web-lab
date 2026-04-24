@@ -119,7 +119,11 @@ const SitiWebNegozi = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Sempre più persone cercano prodotti e negozi su Google prima di uscire di casa. Se il tuo negozio non ha un sito web professionale, semplicemente non esisti per chi sta cercando proprio quello che vendi.
+                  Sempre più persone cercano prodotti e negozi su Google prima di uscire di casa. Se il tuo negozio non ha un sito web professionale, semplicemente non esisti per chi sta cercando proprio quello che vendi — è esattamente il problema che approfondiamo nell'articolo{" "}
+                  <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-accent hover:underline font-medium">
+                    perché il tuo sito non si trova su Google
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
@@ -225,7 +229,11 @@ const SitiWebNegozi = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground order-2 md:order-1" direction="left">
                   <p className="mb-8">
-                    Un sito per negozio deve essere semplice, veloce e immediato. L'obiettivo è portare il cliente in negozio nel minor tempo possibile.
+                    Un sito per negozio deve essere semplice, veloce e immediato. L'obiettivo è portare il cliente in negozio nel minor tempo possibile, soprattutto per i{" "}
+                    <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
+                      negozi della provincia di Padova
+                    </Link>
+                    {" "}che lavorano su un bacino fortemente locale.
                   </p>
                   <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                     {[
@@ -340,7 +348,13 @@ const SitiWebNegozi = () => {
                       </li>
                     ))}
                   </ul>
-                  <p className="text-xs text-muted-foreground text-center mb-6">Il prezzo varia in base alle esigenze.</p>
+                  <p className="text-xs text-muted-foreground text-center mb-6">
+                    Il prezzo varia in base alle esigenze.{" "}
+                    <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">
+                      Scopri come si calcola il costo di un sito nel 2026
+                    </Link>
+                    .
+                  </p>
                   <div className="text-center">
                     <button
                       onClick={handleContactClick}

@@ -185,7 +185,14 @@ const SitiWebProfessionisti = () => {
                 </StaggerContainer>
                 <p>
                   Un sito web per professionisti ben progettato diventa uno strumento di lavoro essenziale, capace di
-                  attrarre nuovi clienti e consolidare la reputazione professionale.
+                  attrarre nuovi clienti e consolidare la reputazione professionale, molto più di quanto possa fare{" "}
+                  <Link
+                    to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026"
+                    className="text-accent hover:underline font-medium"
+                  >
+                    una semplice presenza sui social network
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
             </div>
@@ -310,7 +317,15 @@ const SitiWebProfessionisti = () => {
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-12" delay={0.1}>
                 <p>
                   Ottimizziamo il costo di realizzazione dei nostri servizi cucendo il sito su misura del cliente, in
-                  base alle sue reali necessità e in base agli obiettivi che vuole raggiungere.
+                  base alle sue reali necessità e in base agli obiettivi che vuole raggiungere. Se vuoi un confronto
+                  più ampio, abbiamo riassunto{" "}
+                  <Link
+                    to="/blog/quanto-costa-un-sito-web-nel-2026"
+                    className="text-accent hover:underline font-medium"
+                  >
+                    cosa incide davvero sul prezzo di un sito web nel 2026
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
 

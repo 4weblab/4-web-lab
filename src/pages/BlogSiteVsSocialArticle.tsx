@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -17,7 +18,14 @@ const introParagraphs = [
   "Il punto è che questa scelta, nel lungo periodo, può diventare un limite molto più grande di quanto sembri.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs: ReactNode[];
+};
+
+const sections: Section[] = [
   {
     title: "Perché i social sembrano sufficienti",
     paragraphs: [
@@ -44,7 +52,15 @@ const sections = [
       "Un altro limite importante riguarda la ricerca.",
       "Quando una persona cerca su Google un servizio, un prodotto o una soluzione, raramente trova un profilo social tra i primi risultati.",
       "Trova siti web.",
-      "Questo significa che, senza un sito, stai rinunciando a una parte enorme di visibilità. Non intercetti chi sta cercando attivamente quello che fai.",
+      <>
+        Questo significa che, senza un sito, stai rinunciando a una parte enorme di visibilità. Non
+        intercetti chi sta cercando attivamente quello che fai. Se vuoi capire meglio il
+        fenomeno,{" "}
+        <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className={linkClass}>
+          abbiamo dedicato una guida intera a perché un sito non compare su Google
+        </Link>
+        .
+      </>,
       "E questa è una differenza sostanziale.",
     ],
   },
@@ -75,7 +91,14 @@ const sections = [
       "All’inizio possono sembrare più che sufficienti. Ma c’è un momento in cui iniziano a mostrare i loro limiti.",
       "Succede quando vuoi crescere davvero.",
       "Quando vuoi acquisire clienti in modo più costante. Quando vuoi essere percepito come professionale. Quando inizi a competere con altre attività che hanno una presenza online più strutturata.",
-      "In quel momento, il sito web non è più un optional. Diventa uno strumento necessario.",
+      <>
+        In quel momento, il sito web non è più un optional. Diventa uno strumento necessario — e la
+        domanda diventa solo una:{" "}
+        <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className={linkClass}>
+          quanto costa davvero un sito web fatto bene
+        </Link>
+        ?
+      </>,
     ],
   },
   {
@@ -243,8 +266,8 @@ const BlogSiteVsSocialArticle = () => {
                     <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                     <h2 className="heading-3 text-foreground">{section.title}</h2>
                     <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                      {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
+                      {section.paragraphs.map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
                       ))}
                     </div>
                   </article>
