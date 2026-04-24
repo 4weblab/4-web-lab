@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
 
 const introParagraphs = [
@@ -78,9 +81,11 @@ const BlogGdprArticle = () => {
     "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.";
   const pageUrl = "https://4weblab.it/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy";
   const pageImage = `https://4weblab.it${blogGdprPrivacy}`;
-  const datePublished = "2026-04-23";
-  const dateModified = "2026-04-23";
-  const articleSection = "Privacy & Compliance";
+  const articleData = getArticleBySlug("gdpr-siti-web-2026-obblighi-cookie-e-privacy");
+  const datePublished = articleData?.datePublished ?? "2026-04-20";
+  const dateModified = articleData?.dateModified ?? "2026-04-20";
+  const articleSection = articleData?.category ?? "Privacy & Compliance";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 540);
   const headline = "GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)";
 
   return (
