@@ -277,6 +277,58 @@ const Blog = () => {
             </StaggerContainer>
           </div>
         </section>
+
+        {/* INTERLINKING */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto text-center">
+              <div className="section-divider mx-auto" />
+              <h2 className="heading-2 text-foreground">Esplora i nostri servizi</h2>
+              <p className="body-base text-muted-foreground mt-4">
+                Hai trovato utile il blog? Scopri le soluzioni che proponiamo per
+                aziende, professionisti e attività locali.
+              </p>
+              <ul className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left">
+                <li>
+                  <Link
+                    to="/siti-web-aziendali"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Siti web aziendali</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/siti-web-per-professionisti"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Siti web per professionisti</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/quanto-costa-sito-web"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Quanto costa un sito web</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/realizzazione-siti-web-padova"
+                    className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
+                  >
+                    <span className="font-medium text-foreground">Realizzazione siti web Padova</span>
+                    <ArrowRight className="h-4 w-4 text-accent transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </li>
+              </ul>
+            </AnimatedSection>
+          </div>
+        </section>
       </main>
 
       <Footer />
