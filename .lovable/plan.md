@@ -1,110 +1,82 @@
+# IndexNow: notifica automatica a Bing/Yandex al deploy
 
-# Interlinking sito-wide: juice link contestuali su tutte le pagine
+Implementazione del protocollo IndexNow per far indicizzare istantaneamente le pagine del sito su Bing, Yandex, Seznam e Naver ogni volta che viene effettuato un deploy su Netlify. Google **non** supporta IndexNow, quindi continuerà a basarsi su sitemap + crawling naturale (nessun impatto negativo).
 
-Obiettivo: distribuire link interni naturali tra le pagine del sito per rafforzare la SEO topica, aumentare il tempo sul sito e guidare l'utente verso landing/articoli pertinenti. Inserimento esclusivamente nei paragrafi di testo, in punti dove il link è coerente con la frase. Nessuna modifica a layout, struttura o tono.
+## Logica di funzionamento
 
-## Stato attuale
+1. **Primo deploy con IndexNow attivo** → notifica **tutti** gli URL della sitemap (16 URL).
+2. **Deploy successivi** → confronta `sitemap.xml` corrente con uno snapshot della versione precedente e notifica **solo** gli URL con `lastmod` nuovo o modificato. Se nessun URL è cambiato, nessuna chiamata viene effettuata.
+3. Lo snapshot della sitemap precedente viene salvato nella cache di build di Netlify, così persiste tra un deploy e l'altro senza finire nel repo.
 
-- **Pagine ben linkate**: `SitiWebPadova` (2 link a articoli), `SitiWebNegozi` (2 box "altri profili"), `BlogNotFoundOnGoogleArticle` (4 juice link contestuali), `HomeFaqPreview` (1 link costi), `FaqSitiWeb` (1 link costi).
-- **Pagine senza link contestuali nel body**: `SitiWebAziendali`, `SitiWebProfessionisti`, `BlogWebsiteCostArticle`, `BlogSiteVsSocialArticle`, `BlogOutdatedWebsiteArticle`, `BlogGdprArticle`, `BlogAiWebsiteArticle`, `Contact`.
+## Componenti da creare
 
-Quasi tutti gli articoli del blog hanno solo la CTA finale "Richiedi una valutazione gratuita". È il buco più importante.
+### 1. File chiave IndexNow (verifica proprietà)
+- `public/{KEY}.txt` — file di testo che contiene **solo** la chiave (32+ caratteri esadecimali). Serve a Bing/Yandex per verificare che siamo i proprietari del dominio.
+- La chiave viene generata una sola volta (es. `a1b2c3d4e5f6...`) e usata sia come nome del file sia come contenuto.
+- Diventa accessibile a `https://4weblab.it/{KEY}.txt`.
 
-## Principi di inserimento
+### 2. Netlify Build Plugin locale
+Cartella `netlify/plugins/indexnow/`:
+- `manifest.yml` — dichiara il plugin.
+- `index.js` — script Node che gira nello stage **`onSuccess`** del build (= solo se il build va a buon fine):
+  1. Legge `public/sitemap.xml` (parsing XML semplice con regex, niente dipendenze).
+  2. Legge lo snapshot precedente da `netlify/cache/sitemap-prev.xml` (se esiste).
+  3. Calcola il diff: URL nuovi + URL con `lastmod` cambiato.
+  4. Se è il primo run (snapshot mancante) → invia tutti gli URL.
+  5. POST a `https://api.indexnow.org/indexnow` con il payload JSON standard:
+     ```json
+     {
+       "host": "4weblab.it",
+       "key": "{KEY}",
+       "keyLocation": "https://4weblab.it/{KEY}.txt",
+       "urlList": ["https://4weblab.it/...", "..."]
+     }
+     ```
+  6. Salva la sitemap corrente come nuovo snapshot in cache.
+  7. Logga in console di Netlify: numero URL inviati, status code della risposta.
+- Gestione errori soft: se la chiamata fallisce, il deploy **non** viene bloccato (semplice `console.warn`).
 
-1. **Naturalezza prima di tutto**: il link deve sembrare un riferimento utile, mai forzato. Anchor text descrittivo (3–6 parole), mai "clicca qui".
-2. **Massimo 2–3 link contestuali per pagina** (oltre a CTA, header, footer e RelatedArticles esistenti).
-3. **Anchor text variato**: evitare ripetizioni esatte tra pagine diverse.
-4. **Nessuna nuova sezione, nessun nuovo paragrafo**: si modifica solo il testo già presente integrando il link.
-5. **Niente link a pagina corrente** né link reciproci ridondanti se già presenti via `RelatedArticles`.
+### 3. `netlify.toml` (root del progetto)
+Crea il file (non esiste ancora) con:
+- Dichiarazione del plugin locale `[[plugins]] package = "./netlify/plugins/indexnow"`.
+- Configurazione cache directory per persistere lo snapshot tra build.
 
-## Mappa interlinking (cosa va dove)
+### 4. Aggiornamento `mem://index.md`
+Aggiungo una riga in Core: "IndexNow attivo via Netlify plugin: notifica Bing/Yandex su ogni deploy con diff sitemap" → così nelle sessioni future ricordo che esiste e non lo reimplemento.
 
-### Landing principali
+## File coinvolti
 
-**`SitiWebAziendali.tsx`**
-- Sezione "Quanto costa un sito web aziendale" → link su "valutazione senza impegno" o riferimento a guida costi: linka frase tipo "il costo dipende da struttura, contenuti e obiettivi" alla guida → `/blog/quanto-costa-un-sito-web-nel-2026` (anchor: "una panoramica dei costi reali").
-- Sezione "Cosa realizziamo per le aziende" → frase su crescita nel tempo → `/realizzazione-siti-web-padova` se si parla di territorio, oppure link al rinnovo sito → `/blog/sito-web-obsoleto-5-segnali-...` (anchor: "rinnovare un sito ormai datato").
-- FAQ "Serve davvero un sito web per un'azienda oggi?" → la risposta cita Google: linkare a `/blog/perche-il-tuo-sito-non-si-trova-su-google` (anchor: "essere trovati su Google").
+**Nuovi:**
+- `public/{generata-runtime}.txt` — file chiave (generato durante l'implementazione)
+- `netlify/plugins/indexnow/manifest.yml`
+- `netlify/plugins/indexnow/index.js`
+- `netlify.toml`
 
-**`SitiWebProfessionisti.tsx`**
-- Sezione "Cosa deve comunicare un sito web per professionisti" → frase su credibilità online → link a `/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026` (anchor: "presenza professionale rispetto ai soli social").
-- Sezione "Quanto costa un sito web per professionisti" → naturalmente verso `/blog/quanto-costa-un-sito-web-nel-2026` (anchor: "cosa incide davvero sul prezzo di un sito").
-- Sezione "Perché scegliere 4 Web Lab" → in chiusura, link a `/realizzazione-siti-web-padova` se cita Padova/territorio (anchor: "studio professionale con sede a Padova").
+**Modificati:**
+- `mem://index.md` (annotazione nelle Core memory)
 
-**`SitiWebNegozi.tsx`**
-- Sezione "Perché oggi un negozio senza sito web perde clienti" → riferimento a Google → `/blog/perche-il-tuo-sito-non-si-trova-su-google` (anchor: "non comparire nelle ricerche dei clienti").
-- Sezione "Siti web progettati per negozi locali" → link a `/realizzazione-siti-web-padova` (anchor: "negozi della provincia di Padova").
-- Sezione "Quanto costa un sito web per negozi" → link a `/blog/quanto-costa-un-sito-web-nel-2026` (anchor: "guida completa ai costi di un sito").
+**Non toccati:**
+- Sitemap, robots.txt, codice React, sistema blog: **nessuna modifica**. Il plugin lavora solo a livello build, non runtime.
 
-**`SitiWebPadova.tsx`** — già ben linkata, aggiungo solo:
-- Sezione "Operativi a Padova e provincia" → 1 nuovo link a `/blog/perche-il-tuo-sito-non-si-trova-su-google` o a una landing categoria, dove parla di tessuto imprenditoriale.
+## Dettagli tecnici
 
-**`FaqSitiWeb.tsx`** — già ha 1 link contestuale. Aggiungo 2–3 link nelle risposte FAQ esistenti dove pertinente:
-- FAQ su AI → link a `/blog/siti-web-creati-con-intelligenza-artificiale`.
-- FAQ su tempistiche/qualità → link a `/blog/sito-web-obsoleto-...`.
-- FAQ su Google/SEO (se presente) → link a `/blog/perche-il-tuo-sito-non-si-trova-su-google`.
+- **Nessuna nuova dipendenza npm**: il plugin usa solo `node:fs`, `node:path` e `fetch` (già disponibile in Node 18+ usato da Netlify).
+- **Chiave**: genero una stringa hex casuale di 64 caratteri (raccomandato dal protocollo, max 128).
+- **Endpoint usato**: `https://api.indexnow.org/indexnow` (endpoint generico che propaga a tutti i motori partecipanti — non serve chiamare Bing/Yandex separatamente).
+- **Rate limit**: IndexNow accetta fino a 10.000 URL per richiesta, ampiamente sufficiente.
+- **Idempotenza**: ri-notificare lo stesso URL non causa penalizzazioni, ma il diff evita rumore inutile nei log.
+- **Cache Netlify**: la directory `netlify/cache/` è gestita automaticamente da Netlify Build via `utils.cache.save()` / `utils.cache.restore()` esposti dal runtime del plugin.
 
-**`Contact.tsx`** — pagina conversione: 1–2 link discreti nelle sezioni informative (non nel form):
-- Eventuale frase introduttiva o sezione contatti laterale → link a `/blog` o a una landing categoria pertinente. Massimo 1 link, se già non c'è.
+## Workflow futuro (cosa succederà automaticamente)
 
-### Articoli del blog (priorità alta — oggi sono "vicoli ciechi")
+1. Pubblichi un nuovo articolo blog → io aggiorno `sitemap.xml` come faccio già adesso.
+2. Tu clicchi **Publish** su Lovable → Netlify ribuilda.
+3. Plugin parte a fine build, vede che `/blog/nuovo-articolo` ha `lastmod` nuovo, fa POST a IndexNow.
+4. Bing/Yandex crawlano la pagina entro pochi minuti/ore.
+5. Nei log di deploy Netlify vedrai una riga tipo: `[IndexNow] Notified 1 URL(s), response: 200`.
 
-Per ciascuno aggiungo **2 juice link contestuali** in punti naturali del body, mantenendo lo stile già usato in `BlogNotFoundOnGoogleArticle` (`text-accent font-medium hover:underline`).
+## Limitazioni note
 
-**`BlogWebsiteCostArticle.tsx`** (Quanto costa un sito web)
-- Quando parla di siti AI/economici → link a `/blog/siti-web-creati-con-intelligenza-artificiale`.
-- Quando parla di siti che invecchiano o vanno rifatti → link a `/blog/sito-web-obsoleto-...`.
-- Eventualmente link a `/realizzazione-siti-web-padova` se cita zona/territorio.
-
-**`BlogSiteVsSocialArticle.tsx`** (Sito vs Social)
-- Quando parla di farsi trovare → link a `/blog/perche-il-tuo-sito-non-si-trova-su-google`.
-- Quando parla di asset di proprietà o investimento → link a `/blog/quanto-costa-un-sito-web-nel-2026`.
-
-**`BlogOutdatedWebsiteArticle.tsx`** (Sito obsoleto)
-- Quando parla di velocità/Google → link a `/blog/perche-il-tuo-sito-non-si-trova-su-google`.
-- Quando parla di rifacimento/budget → link a `/blog/quanto-costa-un-sito-web-nel-2026`.
-
-**`BlogGdprArticle.tsx`** (GDPR)
-- Quando parla di sito strutturato/professionale → link a `/siti-web-aziendali`.
-- Quando parla di siti vecchi non a norma → link a `/blog/sito-web-obsoleto-...`.
-
-**`BlogAiWebsiteArticle.tsx`** (Siti con AI)
-- Quando parla di costi → link a `/blog/quanto-costa-un-sito-web-nel-2026`.
-- Quando parla di siti che non si posizionano → link a `/blog/perche-il-tuo-sito-non-si-trova-su-google`.
-
-### Pagine NON modificate
-
-- `Index.tsx` (Home) e suoi componenti: già ricca di link via `UserRoutingSection`, `ServicesSection`, `HomeFaqPreview`. Lascio intatta.
-- `Blog.tsx`: indice articoli, già è un hub di link.
-- Pagine `Demo*`, `PrivacyPolicy`, `CookiePolicy`, `NotFound`: irrilevanti per interlinking SEO.
-- `Header.tsx` e `Footer.tsx`: navigazione globale, già linkano verso le aree principali.
-
-## File modificati
-
-- `src/pages/SitiWebAziendali.tsx`
-- `src/pages/SitiWebProfessionisti.tsx`
-- `src/pages/SitiWebNegozi.tsx`
-- `src/pages/SitiWebPadova.tsx`
-- `src/pages/FaqSitiWeb.tsx`
-- `src/pages/Contact.tsx` (solo se trovo punto naturale)
-- `src/pages/BlogWebsiteCostArticle.tsx`
-- `src/pages/BlogSiteVsSocialArticle.tsx`
-- `src/pages/BlogOutdatedWebsiteArticle.tsx`
-- `src/pages/BlogGdprArticle.tsx`
-- `src/pages/BlogAiWebsiteArticle.tsx`
-
-Totale stimato: **~22–26 nuovi link contestuali** distribuiti in modo equilibrato. Nessun file nuovo, nessuna modifica a `RelatedArticles`, schema, sitemap, routing o data file.
-
-## Stile dei link
-
-- Articoli blog: `className="text-accent font-medium hover:underline"` (coerente con `BlogNotFoundOnGoogleArticle`).
-- Landing: `className="text-accent hover:underline font-medium"` (coerente con `SitiWebPadova`).
-- Tutti i link aprono nella stessa scheda (navigazione interna SPA).
-
-## Esito atteso
-
-- Ogni articolo del blog smette di essere un vicolo cieco: 2 link contestuali + RelatedArticles + CTA + Header.
-- Ogni landing principale rinforza il legame con le altre landing e con il blog.
-- Distribuzione di "link juice" più equa verso le pagine commerciali strategiche (`/realizzazione-siti-web-padova`, `/siti-web-aziendali`) e verso gli articoli più SEO-rilevanti.
-- Nessuna percezione di "spam interno": ogni link è dentro una frase che lo giustifica.
+- **Google non partecipa a IndexNow** (al 2026). Per Google continua a valere: sitemap + Search Console + qualità dei contenuti.
+- Funziona solo **dopo** che il sito è stato pubblicato su Netlify e il file chiave è raggiungibile pubblicamente.
+- Al primissimo deploy verranno notificati tutti i 16 URL (comportamento corretto e desiderato).
