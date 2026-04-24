@@ -60,7 +60,7 @@ export const blogArticles: BlogArticle[] = [
     dateModified: "2026-03-04",
     category: "Guide & Costi",
     related: [
-      "siti-web-creati-con-intelligenza-artificiale",
+      "perche-il-tuo-sito-non-si-trova-su-google",
       "sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026",
     ],
     wordCount: 620,
@@ -100,8 +100,8 @@ export const blogArticles: BlogArticle[] = [
     dateModified: "2026-03-26",
     category: "Strategia digitale",
     related: [
+      "perche-il-tuo-sito-non-si-trova-su-google",
       "siti-web-creati-con-intelligenza-artificiale",
-      "sito-web-o-social-cosa-conviene-davvero-nel-2026",
     ],
     wordCount: 560,
   },
