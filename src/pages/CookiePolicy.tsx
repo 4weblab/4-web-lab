@@ -140,9 +140,10 @@ const CookiePolicy = () => {
             <section className="mb-10">
               <h2 className="heading-3 mb-4">Base giuridica</h2>
               <p className="text-muted-foreground leading-relaxed">
-                L'utilizzo dei cookie tecnici non richiede il consenso dell'utente ai sensi dell'art. 122,
-                comma 1, del Codice Privacy e del Provvedimento del Garante dell'8 maggio 2014,
-                in quanto strettamente necessari all'erogazione del servizio richiesto.
+                “L’utilizzo dei cookie tecnici non richiede il consenso dell’utente ai sensi dell’art. 122,
+                comma 1, del Codice Privacy e delle Linee guida del Garante per la protezione dei dati
+                personali in materia di cookie e altri strumenti di tracciamento (10 giugno 2021), in
+                quanto strettamente necessario all’erogazione del servizio richiesto.”
               </p>
             </section>
 
