@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -18,7 +19,17 @@ const introParagraphs = [
   "In questa guida vediamo i costi reali, cosa li influenza e quanto ha senso investire in base al tipo di attività.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs?: ReactNode[];
+  bullets?: string[];
+  closing?: ReactNode[];
+  subSections?: { title: string; price: string; paragraphs: string[] }[];
+};
+
+const sections: Section[] = [
   {
     title: "Da cosa dipende il costo di un sito web",
     paragraphs: [
