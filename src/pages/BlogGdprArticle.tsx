@@ -249,13 +249,15 @@ const BlogGdprArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una consulenza
+                  Richiedi una valutazione gratuita
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedArticles currentSlug="gdpr-siti-web-2026-obblighi-cookie-e-privacy" />
       </main>
 
       <Footer />
