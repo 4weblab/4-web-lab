@@ -3,6 +3,7 @@ import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
 import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
+import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
 
 export type BlogArticle = {
   slug: string;
