@@ -236,8 +236,8 @@ const BlogGdprArticle = () => {
                     <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                     <h2 className="heading-3 text-foreground">{section.title}</h2>
                     <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                      {section.paragraphs.map((paragraph) => (
-                        <p key={paragraph}>{paragraph}</p>
+                      {section.paragraphs.map((paragraph, pIndex) => (
+                        <p key={pIndex}>{paragraph}</p>
                       ))}
                     </div>
                   </article>
