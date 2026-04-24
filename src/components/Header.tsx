@@ -8,7 +8,7 @@ const navItems = [
   { label: 'Servizi', href: '#servizi' },
   { label: 'Domande Frequenti', href: '#faq' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Contatti', href: '#contatti' },
+  { label: 'Contatti', href: '/contatti' },
 ];
 interface HeaderProps {
   satelliteMode?: boolean;
