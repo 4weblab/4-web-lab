@@ -23,6 +23,7 @@ const BlogWebsiteCostArticle = lazy(() => import("./pages/BlogWebsiteCostArticle
 const BlogSiteVsSocialArticle = lazy(() => import("./pages/BlogSiteVsSocialArticle"));
 const BlogGdprArticle = lazy(() => import("./pages/BlogGdprArticle"));
 const BlogOutdatedWebsiteArticle = lazy(() => import("./pages/BlogOutdatedWebsiteArticle"));
+const BlogNotFoundOnGoogleArticle = lazy(() => import("./pages/BlogNotFoundOnGoogleArticle"));
 const DemoDV = lazy(() => import("./pages/DemoDV"));
 const DemoRBT = lazy(() => import("./pages/DemoRBT"));
 const DemoZardini = lazy(() => import("./pages/DemoZardini"));
@@ -122,6 +123,7 @@ const App = () => (
               <Route path="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" element={<BlogSiteVsSocialArticle />} />
               <Route path="/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy" element={<BlogGdprArticle />} />
               <Route path="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026" element={<BlogOutdatedWebsiteArticle />} />
+              <Route path="/blog/perche-il-tuo-sito-non-si-trova-su-google" element={<BlogNotFoundOnGoogleArticle />} />
               <Route path="/contatti" element={<Contact />} />
               <Route path="/demo-dv" element={<DemoDV />} />
               <Route path="/demo-rbt" element={<DemoRBT />} />

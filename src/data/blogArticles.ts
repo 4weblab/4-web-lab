@@ -145,6 +145,26 @@ export const blogArticles: BlogArticle[] = [
     ],
     wordCount: 540,
   },
+  {
+    slug: "perche-il-tuo-sito-non-si-trova-su-google",
+    path: "/blog/perche-il-tuo-sito-non-si-trova-su-google",
+    title: "Perché il tuo sito non si trova su Google (e come iniziare a comparire davvero)",
+    shortTitle: "Perché il tuo sito non si trova su Google",
+    description:
+      "Il tuo sito non compare su Google? Scopri perché succede e cosa fare per iniziare a farti trovare dai clienti nel 2026.",
+    excerpt:
+      "Sito invisibile sui motori di ricerca? Le cause più comuni e cosa fare per iniziare a farti trovare davvero.",
+    image: blogNotFoundOnGoogle,
+    alt: "Laptop con risultati di ricerca Google e lente di ingrandimento, sito web non posizionato",
+    datePublished: "2026-04-24",
+    dateModified: "2026-04-24",
+    category: "SEO & Visibilità",
+    related: [
+      "sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026",
+      "quanto-costa-un-sito-web-nel-2026",
+    ],
+    wordCount: 600,
+  },
 ];
 
 export const getArticleBySlug = (slug: string): BlogArticle | undefined =>
