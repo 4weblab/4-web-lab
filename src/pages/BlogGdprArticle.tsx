@@ -172,12 +172,30 @@ const BlogGdprArticle = () => {
           />
           <div className="container-section relative z-10">
             <AnimatedSection className="mx-auto max-w-4xl text-center">
+              <BlogBreadcrumb currentTitle="GDPR siti web 2026" />
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 Blog 4 Web Lab
               </span>
               <h1 className="heading-1 mt-6 text-primary-foreground text-balance">
                 GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)
               </h1>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-primary-foreground/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                  Pubblicato il {formatItalianDate(datePublished)}
+                </span>
+                {dateModified !== datePublished ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    <span aria-hidden="true">·</span>
+                    Aggiornato il {formatItalianDate(dateModified)}
+                  </span>
+                ) : null}
+                <span aria-hidden="true">·</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                  {readingTime} min di lettura
+                </span>
+              </div>
             </AnimatedSection>
           </div>
         </section>
