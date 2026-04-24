@@ -1,48 +1,39 @@
+# Riduzione del 50% delle card "Continua a leggere" negli articoli del blog
 
-Obiettivo: ridurre e uniformare lo spazio verticale eccessivo tra il primo blocco testo introduttivo e il secondo blocco contenuti in tutti gli articoli del blog, mantenendo il design coerente con il sito.
+Le card della sezione "Continua a leggere" (componente `RelatedArticles`) usate alla fine di ogni articolo verranno rimpicciolite di circa il 50% in dimensione visiva. La pagina `/blog` non è interessata: usa una griglia diversa, definita direttamente in `Blog.tsx`, completamente separata da questo componente.
 
-1. Individuare il punto esatto che genera lo spazio
-- I quattro articoli blog usano due sezioni consecutive:
-  - sezione intro con card testuale
-  - sezione successiva con i blocchi H2/contenuto
-- Entrambe usano `section-padding`, che applica molto spazio sopra e sotto (`py-28 md:py-36`), quindi la somma tra `padding-bottom` della prima sezione e `padding-top` della seconda crea il “vuoto” percepito.
+## Cosa cambia
 
-2. Normalizzare lo spacing tra intro e corpo articolo
-- Sostituire nei file articolo la coppia di sezioni consecutive con una spaziatura dedicata e più compatta tra questi due blocchi.
-- Mantenere ampio il respiro generale della pagina, ma ridurre in modo controllato il tratto specifico tra:
-  - card introduttiva
-  - primo blocco con H2
-- Applicare una soluzione uniforme su tutti gli articoli, ad esempio:
-  - prima sezione con padding inferiore ridotto
-  - seconda sezione con padding superiore ridotto
-  - oppure una utility/class condivisa dedicata al layout articolo blog
+Modifica unica al file `src/components/RelatedArticles.tsx`. Essendo un componente condiviso, l'effetto si propaga automaticamente a tutti gli articoli esistenti **e a quelli futuri**, senza bisogno di toccare le singole pagine.
 
-3. Allineare tutti gli articoli esistenti
-- Aggiornare in modo coerente:
-  - `src/pages/BlogGdprArticle.tsx`
-  - `src/pages/BlogSiteVsSocialArticle.tsx`
-  - `src/pages/BlogAiWebsiteArticle.tsx`
-  - `src/pages/BlogWebsiteCostArticle.tsx`
-- Verificare che il ritmo verticale resti uniforme anche dove ci sono sottosezioni, card extra o CTA finali.
+### Riduzioni applicate
 
-4. Preferire una convenzione riusabile
-- Se il pattern è identico in tutti gli articoli, introdurre una classe semantica condivisa per il layout editoriale blog invece di correggere lo spacing in modo isolato file per file.
-- Questo evita nuove discrepanze quando verranno aggiunti altri articoli.
+- **Larghezza massima del blocco**: da `max-w-5xl` (1024px) a `max-w-2xl` (672px) → blocco compatto e centrato.
+- **Padding interno card**: da `p-6 md:p-7` a `p-4 md:p-5`.
+- **Immagine**: aspect ratio invariato (`16/10`), ma riduzione visiva proporzionale alla card più stretta. `width/height` degli attributi `<img>` aggiornati a `512×320` (mantengono il rapporto).
+- **Titolo card (h3)**: da `text-lg md:text-xl` a `text-sm md:text-base`.
+- **Excerpt**: da `body-base` a `text-xs`, `line-clamp-2` invariato.
+- **Categoria pill**: da `text-xs` a `text-[10px]`.
+- **Link "Leggi l'articolo"**: da `text-sm` a `text-xs`, icona da `h-4 w-4` a `h-3 w-3`.
+- **Gap tra card**: da `gap-6 md:gap-8` a `gap-4 md:gap-5`.
+- **Margine separatore interno**: da `mt-5 pt-4` a `mt-3 pt-3`.
+- **Bordo arrotondato**: `rounded-2xl` → `rounded-xl` per coerenza visiva con la nuova scala.
 
-5. Verifica responsive
-- Controllare il risultato in ottica mobile-first:
-  - spazio più compatto su mobile
-  - proporzione corretta su tablet/desktop
-- Assicurare che non si crei un effetto troppo “schiacciato” tra introduzione e contenuto.
+### Cosa resta invariato
 
-Dettagli tecnici
-- Il problema nasce dall’uso consecutivo di `section-padding` su due sezioni adiacenti.
-- La utility globale attuale è in `src/index.css`:
-  - `.section-padding { @apply py-28 md:py-36; }`
-- Gli articoli blog interessati stanno in `src/pages/Blog*Article.tsx`.
-- Intervento consigliato: introdurre una variante di spacing per le sezioni editoriali del blog, invece di modificare globalmente `section-padding`, così non si alterano altre pagine del sito.
+- Heading "Continua a leggere" e sottotitolo della sezione (immutati per leggibilità).
+- Layout responsive: 1 colonna mobile, 2 colonne desktop.
+- Animazioni hover (translate, ombra, scale immagine).
+- `section-padding` esterno della sezione.
+- Pagina `/blog`: nessuna modifica, usa un proprio layout interno in `src/pages/Blog.tsx`.
 
-Esito atteso
-- Spazio tra primo e secondo blocco testo visibilmente più equilibrato.
-- Stesso comportamento su tutti gli articoli del blog.
-- Nessuna regressione visiva sul resto del sito.
+## File coinvolti
+
+**Modificati:**
+- `src/components/RelatedArticles.tsx` (unica modifica necessaria)
+
+**Non toccati:** nessun file articolo, nessuna pagina, nessun dato. La propagazione è automatica per articoli esistenti e futuri.
+
+## Esito atteso
+
+Le card consigliate a fine articolo diventano circa il 50% più piccole, lasciando più peso visivo alla CTA finale. La pagina indice `/blog` continua a mostrare le card grandi originali. Nessuna regressione su layout, link o accessibilità.

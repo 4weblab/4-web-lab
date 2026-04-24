@@ -70,15 +70,17 @@ const CookiePolicy = () => {
             <section className="mb-10">
               <h2 className="heading-3 mb-4">Cookie utilizzati da questo sito</h2>
               <p className="text-muted-foreground mb-5 leading-relaxed">
-                Il presente sito web utilizza <strong>esclusivamente cookie tecnici</strong>,
-                necessari al corretto funzionamento del sito. Non vengono utilizzati cookie di profilazione
-                o di terze parti per finalità di marketing.
+                Il presente sito web <strong>non utilizza cookie HTTP di profilazione, di marketing o di terze parti</strong>.
+                Vengono impiegati esclusivamente strumenti di archiviazione locale (<em>localStorage</em>) di natura
+                tecnica, strettamente necessari al corretto funzionamento del sito e all'erogazione dei servizi richiesti
+                dall'utente (es. memorizzazione del consenso e protezione anti-spam del modulo di contatto).
+                Non sono presenti Google Analytics, Meta Pixel o altri sistemi di tracciamento.
               </p>
               <div className="overflow-x-auto rounded-2xl border border-border/40" style={{ boxShadow: 'var(--shadow-sm)' }}>
                 <table className="w-full border-collapse text-sm">
                   <thead>
                     <tr className="bg-muted/50">
-                      <th className="border-b border-border/40 p-4 text-left font-semibold">Cookie</th>
+                      <th className="border-b border-border/40 p-4 text-left font-semibold">Nome</th>
                       <th className="border-b border-border/40 p-4 text-left font-semibold">Tipo</th>
                       <th className="border-b border-border/40 p-4 text-left font-semibold">Finalità</th>
                       <th className="border-b border-border/40 p-4 text-left font-semibold">Durata</th>
@@ -87,13 +89,25 @@ const CookiePolicy = () => {
                   <tbody className="text-muted-foreground">
                     <tr>
                       <td className="p-4">cookie-consent-accepted</td>
-                      <td className="p-4">Tecnico</td>
+                      <td className="p-4">Tecnico (localStorage)</td>
                       <td className="p-4">Memorizza l'accettazione del banner cookie</td>
-                      <td className="p-4">1 anno</td>
+                      <td className="p-4">Persistente (fino a cancellazione manuale)</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">web3forms_last_send</td>
+                      <td className="p-4">Tecnico (localStorage)</td>
+                      <td className="p-4">Protezione anti-spam del modulo di contatto (limite di 1 invio al minuto)</td>
+                      <td className="p-4">Persistente (fino a cancellazione manuale)</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+              <p className="text-muted-foreground mt-5 text-sm leading-relaxed">
+                <strong>Servizi di terze parti:</strong> il sito carica i font tipografici da Google Fonts (solo CSS,
+                senza impostazione di cookie) e invia i dati del modulo di contatto al servizio Web3Forms al momento
+                dell'invio. L'hosting su Netlify potrebbe utilizzare cookie tecnici di bilanciamento del carico,
+                esenti da consenso ai sensi della normativa vigente.
+              </p>
             </section>
 
 
@@ -126,9 +140,10 @@ const CookiePolicy = () => {
             <section className="mb-10">
               <h2 className="heading-3 mb-4">Base giuridica</h2>
               <p className="text-muted-foreground leading-relaxed">
-                L'utilizzo dei cookie tecnici non richiede il consenso dell'utente ai sensi dell'art. 122,
-                comma 1, del Codice Privacy e del Provvedimento del Garante dell'8 maggio 2014,
-                in quanto strettamente necessari all'erogazione del servizio richiesto.
+                L’utilizzo dei cookie tecnici non richiede il consenso dell’utente ai sensi dell’art. 122,
+                comma 1, del Codice Privacy e delle Linee guida del Garante per la protezione dei dati
+                personali in materia di cookie e altri strumenti di tracciamento (10 giugno 2021), in
+                quanto strettamente necessario all’erogazione del servizio richiesto.
               </p>
             </section>
 

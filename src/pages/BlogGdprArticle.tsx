@@ -1,9 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
+import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
 
 const introParagraphs = [
   "Molte aziende sottovalutano ancora un aspetto fondamentale del proprio sito web: la conformità a GDPR, privacy e gestione dei cookie.",
@@ -76,7 +80,13 @@ const BlogGdprArticle = () => {
   const pageDescription =
     "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.";
   const pageUrl = "https://4weblab.it/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy";
-  const pageImage = "https://4weblab.it/og-image.jpg";
+  const pageImage = `https://4weblab.it${blogGdprPrivacy}`;
+  const articleData = getArticleBySlug("gdpr-siti-web-2026-obblighi-cookie-e-privacy");
+  const datePublished = articleData?.datePublished ?? "2026-04-20";
+  const dateModified = articleData?.dateModified ?? "2026-04-20";
+  const articleSection = articleData?.category ?? "Privacy & Compliance";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 540);
+  const headline = "GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)";
 
   return (
     <>
@@ -92,6 +102,10 @@ const BlogGdprArticle = () => {
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="article:published_time" content={datePublished} />
+        <meta property="article:modified_time" content={dateModified} />
+        <meta property="article:author" content="Carlo Fullin" />
+        <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
@@ -100,13 +114,16 @@ const BlogGdprArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)",
+            "@type": "BlogPosting",
+            headline,
             description: pageDescription,
             image: [pageImage],
+            inLanguage: "it-IT",
+            articleSection,
             author: {
-              "@type": "Organization",
-              name: "4 Web Lab",
+              "@type": "Person",
+              name: "Carlo Fullin",
+              url: "https://4weblab.it/",
             },
             publisher: {
               "@type": "Organization",
@@ -121,8 +138,19 @@ const BlogGdprArticle = () => {
               "@id": pageUrl,
             },
             url: pageUrl,
-            datePublished: "2026-04-23",
-            dateModified: "2026-04-23",
+            datePublished,
+            dateModified,
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
+              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
+            ],
           })}
         </script>
       </Helmet>
@@ -144,12 +172,30 @@ const BlogGdprArticle = () => {
           />
           <div className="container-section relative z-10">
             <AnimatedSection className="mx-auto max-w-4xl text-center">
+              <BlogBreadcrumb currentTitle="GDPR siti web 2026" />
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 Blog 4 Web Lab
               </span>
               <h1 className="heading-1 mt-6 text-primary-foreground text-balance">
                 GDPR siti web 2026: obblighi, cookie e privacy (cosa devi avere per essere a norma)
               </h1>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-primary-foreground/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                  Pubblicato il {formatItalianDate(datePublished)}
+                </span>
+                {dateModified !== datePublished ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    <span aria-hidden="true">·</span>
+                    Aggiornato il {formatItalianDate(dateModified)}
+                  </span>
+                ) : null}
+                <span aria-hidden="true">·</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                  {readingTime} min di lettura
+                </span>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -193,6 +239,8 @@ const BlogGdprArticle = () => {
           </div>
         </section>
 
+        <RelatedArticles currentSlug="gdpr-siti-web-2026-obblighi-cookie-e-privacy" />
+
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl rounded-[2rem] border border-border/60 bg-card px-6 py-8 text-center shadow-sm md:px-10 md:py-12">
@@ -203,7 +251,7 @@ const BlogGdprArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una consulenza
+                  Richiedi una valutazione gratuita
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
