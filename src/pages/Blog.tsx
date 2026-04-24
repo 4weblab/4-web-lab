@@ -174,14 +174,52 @@ const Blog = () => {
                 Guide e consigli per creare un sito web che porta clienti
               </h1>
               <p className="body-large mt-6 text-primary-foreground/80 max-w-2xl">
-                Articoli pratici su costi, strategie e scelte tecniche per aziende,
-                professionisti e attività locali.
+                Articoli pratici su costi, SEO, GDPR e intelligenza artificiale per
+                aziende, professionisti e attività locali a Padova e in tutta Italia.
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
                   Richiedi una consulenza
                   <ArrowRight className="h-4 w-4" />
                 </Link>
+              </div>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* INTRO SEO */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto">
+              <div className="section-divider !mx-0" />
+              <h2 className="heading-2 text-foreground">
+                Il blog di 4 Web Lab: contenuti utili per scegliere bene
+              </h2>
+              <div className="mt-6 space-y-4 body-base text-muted-foreground">
+                <p>
+                  Nel blog di <strong>4 Web Lab</strong> raccogliamo guide pratiche,
+                  casi reali e approfondimenti tecnici pensati per chi sta valutando di{" "}
+                  <strong>realizzare un sito web</strong> o rifare quello esistente. Niente
+                  teoria astratta: solo consigli operativi nati dal lavoro quotidiano della
+                  nostra <Link to="/realizzazione-siti-web-padova" className="text-accent font-medium hover:underline">agenzia web di Padova</Link>.
+                </p>
+                <p>
+                  Trovi articoli dedicati a <strong>costi reali di un sito web</strong>,
+                  scelte tecniche, <strong>SEO locale</strong>, conformità{" "}
+                  <strong>GDPR</strong>, cookie e privacy, oltre a guide sull'uso
+                  dell'<strong>intelligenza artificiale</strong> nella creazione di siti.
+                  Ogni contenuto è pensato per aziende, <strong>professionisti</strong>{" "}
+                  (avvocati, commercialisti, medici), negozi e attività locali che vogliono
+                  capire come ottenere risultati concreti dal proprio sito.
+                </p>
+                <p>
+                  Se preferisci parlarne direttamente con noi,{" "}
+                  <Link to="/contatti" className="text-accent font-medium hover:underline">
+                    richiedi una valutazione gratuita
+                  </Link>
+                  : analizziamo insieme la tua situazione e ti diciamo, senza giri di
+                  parole, cosa conviene fare.
+                </p>
               </div>
             </AnimatedSection>
           </div>
@@ -195,9 +233,10 @@ const Blog = () => {
           <div className="container-section">
             <AnimatedSection className="max-w-2xl mb-12 md:mb-16">
               <div className="section-divider !mx-0" />
-               <h2 className="heading-2 text-foreground">I nostri articoli</h2>
+              <h2 className="heading-2 text-foreground">Ultime guide e approfondimenti</h2>
               <p className="body-base text-muted-foreground mt-4">
-                Approfondimenti pensati per aiutarti a fare scelte consapevoli sul tuo sito web.
+                Articoli aggiornati su siti web, SEO, costi, GDPR e intelligenza
+                artificiale per aiutarti a fare scelte consapevoli.
               </p>
             </AnimatedSection>
 
