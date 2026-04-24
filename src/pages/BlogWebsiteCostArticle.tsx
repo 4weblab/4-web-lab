@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 
 const introParagraphs = [
   "Nel 2026 una delle domande più frequenti per chi vuole creare un sito web è sempre la stessa:",
@@ -137,7 +138,11 @@ const BlogWebsiteCostArticle = () => {
   const pageDescription =
     "Scopri quanto costa davvero un sito web nel 2026 per aziende, professionisti e negozi. Prezzi chiari e cosa aspettarti davvero.";
   const pageUrl = "https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026";
-  const pageImage = "https://4weblab.it/og-image.jpg";
+  const pageImage = `https://4weblab.it${blogWebsiteCost}`;
+  const datePublished = "2026-04-22";
+  const dateModified = "2026-04-22";
+  const articleSection = "Guide & Costi";
+  const headline = "Quanto costa un sito web nel 2026? Guida reale per aziende, professionisti e negozi";
 
   return (
     <>
@@ -153,6 +158,10 @@ const BlogWebsiteCostArticle = () => {
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="article:published_time" content={datePublished} />
+        <meta property="article:modified_time" content={dateModified} />
+        <meta property="article:author" content="Carlo Fullin" />
+        <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content={pageTitle} />
@@ -161,13 +170,16 @@ const BlogWebsiteCostArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "Quanto costa un sito web nel 2026? Guida reale per aziende, professionisti e negozi",
+            "@type": "BlogPosting",
+            headline,
             description: pageDescription,
             image: [pageImage],
+            inLanguage: "it-IT",
+            articleSection,
             author: {
-              "@type": "Organization",
-              name: "4 Web Lab",
+              "@type": "Person",
+              name: "Carlo Fullin",
+              url: "https://4weblab.it/",
             },
             publisher: {
               "@type": "Organization",
@@ -182,8 +194,19 @@ const BlogWebsiteCostArticle = () => {
               "@id": pageUrl,
             },
             url: pageUrl,
-            datePublished: "2026-04-22",
-            dateModified: "2026-04-22",
+            datePublished,
+            dateModified,
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
+              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
+            ],
           })}
         </script>
       </Helmet>
