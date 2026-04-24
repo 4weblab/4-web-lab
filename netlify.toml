@@ -1,0 +1,12 @@
+# Netlify configuration for 4 Web Lab
+# Build settings are inherited from the Netlify UI; this file only declares
+# local build plugins so they are picked up automatically at deploy time.
+
+[[plugins]]
+  package = "./netlify/plugins/indexnow"
+
+# IndexNow configuration (read by the plugin via process.env)
+# Override these in Netlify UI → Site settings → Environment variables if needed.
+[build.environment]
+  INDEXNOW_HOST = "4weblab.it"
+  INDEXNOW_KEY = "7bd98779449b860be4181e29d0505c6019212dea3bb187dec91ea79fdaa4b8cb"
