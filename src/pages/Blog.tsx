@@ -9,8 +9,18 @@ import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
 import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
+import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
 
 const articles = [
+  {
+    slug: "/blog/perche-il-tuo-sito-non-si-trova-su-google",
+    title: "Perché il tuo sito non si trova su Google (e come iniziare a comparire davvero)",
+    description:
+      "Il tuo sito non compare su Google? Scopri perché succede e cosa fare per iniziare a farti trovare dai clienti nel 2026.",
+    image: blogNotFoundOnGoogle,
+    alt: "Laptop con risultati di ricerca Google e lente di ingrandimento, sito web non posizionato",
+    datePublished: "2026-04-24",
+  },
   {
     slug: "/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026",
     title: "Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026",
