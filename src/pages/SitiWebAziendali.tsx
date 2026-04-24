@@ -213,7 +213,14 @@ const SitiWebAziendali = () => {
                   </p>
                   <p>
                     Ogni sito è sviluppato con tecnologie moderne che garantiscono velocità, sicurezza e un'esperienza
-                    utente ottimale su qualsiasi dispositivo.
+                    utente ottimale su qualsiasi dispositivo, evitando i limiti tipici di un{" "}
+                    <Link
+                      to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
+                      className="text-accent hover:underline font-medium"
+                    >
+                      sito ormai datato che fa perdere clienti
+                    </Link>
+                    .
                   </p>
                 </AnimatedSection>
                 <AnimatedSection direction="right">
