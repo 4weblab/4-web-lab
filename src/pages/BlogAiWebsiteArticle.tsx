@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -17,7 +18,15 @@ const introParagraphs = [
   "La risposta, come spesso accade, non è né un sì né un no netto.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs: ReactNode[];
+  subSections?: { title: string; paragraphs: string[] }[];
+};
+
+const sections: Section[] = [
   {
     title: "Perché i siti creati con IA stanno diventando così popolari",
     paragraphs: [

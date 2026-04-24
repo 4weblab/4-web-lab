@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -16,7 +17,14 @@ const introParagraphs = [
   "E ignorarlo non è più una scelta neutra.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs: ReactNode[];
+};
+
+const sections: Section[] = [
   {
     title: "GDPR siti web: quando è obbligatorio e perché devi adeguarti",
     paragraphs: [

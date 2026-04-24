@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Clock } from "lucide-react";
+import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
@@ -17,7 +18,14 @@ const introParagraphs = [
   "Il punto è che questa scelta, nel lungo periodo, può diventare un limite molto più grande di quanto sembri.",
 ];
 
-const sections = [
+const linkClass = "text-accent font-medium hover:underline";
+
+type Section = {
+  title: string;
+  paragraphs: ReactNode[];
+};
+
+const sections: Section[] = [
   {
     title: "Perché i social sembrano sufficienti",
     paragraphs: [
