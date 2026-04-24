@@ -239,6 +239,8 @@ const BlogGdprArticle = () => {
           </div>
         </section>
 
+        <RelatedArticles currentSlug="gdpr-siti-web-2026-obblighi-cookie-e-privacy" />
+
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl rounded-[2rem] border border-border/60 bg-card px-6 py-8 text-center shadow-sm md:px-10 md:py-12">
@@ -256,8 +258,6 @@ const BlogGdprArticle = () => {
             </AnimatedSection>
           </div>
         </section>
-
-        <RelatedArticles currentSlug="gdpr-siti-web-2026-obblighi-cookie-e-privacy" />
       </main>
 
       <Footer />
