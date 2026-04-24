@@ -185,7 +185,14 @@ const SitiWebProfessionisti = () => {
                 </StaggerContainer>
                 <p>
                   Un sito web per professionisti ben progettato diventa uno strumento di lavoro essenziale, capace di
-                  attrarre nuovi clienti e consolidare la reputazione professionale.
+                  attrarre nuovi clienti e consolidare la reputazione professionale, molto più di quanto possa fare{" "}
+                  <Link
+                    to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026"
+                    className="text-accent hover:underline font-medium"
+                  >
+                    una semplice presenza sui social network
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
             </div>
