@@ -18,7 +18,7 @@ const articles = [
       "Il tuo sito web è vecchio o inefficace? Scopri 5 segnali che fanno perdere clienti e come capire se è il momento di rifarlo.",
     image: blogOutdatedWebsite,
     alt: "Monitor e smartphone con un sito aziendale obsoleto e prestazioni in calo",
-    datePublished: "2026-04-23",
+    datePublished: "2026-03-26",
   },
   {
     slug: "/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy",
@@ -27,7 +27,7 @@ const articles = [
       "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.",
     image: blogGdprPrivacy,
     alt: "Cookie banner e privacy policy su un sito web aziendale conforme al GDPR",
-    datePublished: "2026-04-23",
+    datePublished: "2026-04-20",
   },
   {
     slug: "/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026",
@@ -36,7 +36,7 @@ const articles = [
       "Meglio un sito web o i social per la tua attività? Differenze, vantaggi e la scelta più solida per portare clienti nel 2026.",
     image: blogSiteVsSocial,
     alt: "Confronto tra sito web aziendale e presenza social per un'attività locale",
-    datePublished: "2026-04-22",
+    datePublished: "2026-03-15",
   },
   {
     slug: "/blog/siti-web-creati-con-intelligenza-artificiale",
@@ -45,7 +45,7 @@ const articles = [
       "Sempre più aziende usano l'IA per creare siti web. Ma è davvero la scelta giusta o ci sono limiti da conoscere?",
     image: blogAiWebsite,
     alt: "Interfaccia digitale per la creazione di siti web con intelligenza artificiale",
-    datePublished: "2026-04-22",
+    datePublished: "2026-04-08",
   },
   {
     slug: "/blog/quanto-costa-un-sito-web-nel-2026",
@@ -54,7 +54,7 @@ const articles = [
       "Una guida chiara ai costi reali di un sito web: cosa incide sul prezzo e cosa aspettarsi davvero.",
     image: blogWebsiteCost,
     alt: "Costo di realizzazione di un sito web professionale nel 2026",
-    datePublished: "2026-04-22",
+    datePublished: "2026-03-04",
   },
 ];
 

@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 
 const introParagraphs = [
@@ -93,9 +96,11 @@ const BlogSiteVsSocialArticle = () => {
     "Meglio un sito web o i social per la tua attività? Scopri differenze, vantaggi e quale scelta porta davvero clienti nel 2026.";
   const pageUrl = "https://4weblab.it/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026";
   const pageImage = `https://4weblab.it${blogSiteVsSocial}`;
-  const datePublished = "2026-04-22";
-  const dateModified = "2026-04-22";
-  const articleSection = "Strategia digitale";
+  const articleData = getArticleBySlug("sito-web-o-social-cosa-conviene-davvero-nel-2026");
+  const datePublished = articleData?.datePublished ?? "2026-03-15";
+  const dateModified = articleData?.dateModified ?? "2026-03-15";
+  const articleSection = articleData?.category ?? "Strategia digitale";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 580);
   const headline = "Sito web o social network: cosa conviene davvero per un’attività nel 2026?";
 
   return (
@@ -182,12 +187,30 @@ const BlogSiteVsSocialArticle = () => {
           />
           <div className="container-section relative z-10">
             <AnimatedSection className="mx-auto max-w-4xl text-center">
+              <BlogBreadcrumb currentTitle="Sito web o social: cosa conviene" />
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 Blog 4 Web Lab
               </span>
               <h1 className="heading-1 mt-6 text-primary-foreground text-balance">
                 Sito web o social network: cosa conviene davvero per un’attività nel 2026?
               </h1>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-primary-foreground/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                  Pubblicato il {formatItalianDate(datePublished)}
+                </span>
+                {dateModified !== datePublished ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    <span aria-hidden="true">·</span>
+                    Aggiornato il {formatItalianDate(dateModified)}
+                  </span>
+                ) : null}
+                <span aria-hidden="true">·</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                  {readingTime} min di lettura
+                </span>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -231,6 +254,8 @@ const BlogSiteVsSocialArticle = () => {
           </div>
         </section>
 
+        <RelatedArticles currentSlug="sito-web-o-social-cosa-conviene-davvero-nel-2026" />
+
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl rounded-[2rem] border border-border/60 bg-card px-6 py-8 text-center shadow-sm md:px-10 md:py-12">
@@ -241,7 +266,7 @@ const BlogSiteVsSocialArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una consulenza
+                  Richiedi una valutazione gratuita
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>

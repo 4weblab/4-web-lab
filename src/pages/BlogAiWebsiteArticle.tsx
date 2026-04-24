@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Calendar, Clock } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import RelatedArticles from "@/components/RelatedArticles";
+import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogAiWebsite from "@/assets/blog-ai-website.jpg";
 
 const introParagraphs = [
@@ -105,9 +108,11 @@ const BlogAiWebsiteArticle = () => {
     "I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività.";
   const pageUrl = "https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale";
   const pageImage = `https://4weblab.it${blogAiWebsite}`;
-  const datePublished = "2026-04-22";
-  const dateModified = "2026-04-22";
-  const articleSection = "Tecnologia & AI";
+  const articleData = getArticleBySlug("siti-web-creati-con-intelligenza-artificiale");
+  const datePublished = articleData?.datePublished ?? "2026-04-08";
+  const dateModified = articleData?.dateModified ?? "2026-04-08";
+  const articleSection = articleData?.category ?? "Tecnologia & AI";
+  const readingTime = calcReadingTime(articleData?.wordCount ?? 720);
   const headline =
     "Siti web creati con intelligenza artificiale: opportunità reale o rischio per le aziende?";
 
@@ -195,12 +200,30 @@ const BlogAiWebsiteArticle = () => {
           />
           <div className="container-section relative z-10">
             <AnimatedSection className="mx-auto max-w-4xl text-center">
+              <BlogBreadcrumb currentTitle="Siti web con intelligenza artificiale" />
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 Blog 4 Web Lab
               </span>
               <h1 className="heading-1 mt-6 text-primary-foreground text-balance">
                 Siti web creati con intelligenza artificiale: opportunità reale o rischio per le aziende?
               </h1>
+              <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-primary-foreground/70">
+                <span className="inline-flex items-center gap-1.5">
+                  <Calendar className="h-3.5 w-3.5" aria-hidden="true" />
+                  Pubblicato il {formatItalianDate(datePublished)}
+                </span>
+                {dateModified !== datePublished ? (
+                  <span className="inline-flex items-center gap-1.5">
+                    <span aria-hidden="true">·</span>
+                    Aggiornato il {formatItalianDate(dateModified)}
+                  </span>
+                ) : null}
+                <span aria-hidden="true">·</span>
+                <span className="inline-flex items-center gap-1.5">
+                  <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+                  {readingTime} min di lettura
+                </span>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -255,6 +278,8 @@ const BlogAiWebsiteArticle = () => {
           </div>
         </section>
 
+        <RelatedArticles currentSlug="siti-web-creati-con-intelligenza-artificiale" />
+
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl rounded-[2rem] border border-border/60 bg-card px-6 py-8 text-center shadow-sm md:px-10 md:py-12">
@@ -265,7 +290,7 @@ const BlogAiWebsiteArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una consulenza
+                  Richiedi una valutazione gratuita
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
