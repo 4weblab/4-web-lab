@@ -66,7 +66,7 @@ const Hero = () => {
             >
 
               Nessun investimento iniziale da migliaia di Euro.{"\n"}
-              Scopri le soluzioni 4 Web Lab per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
+              Scopri le soluzioni web per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
