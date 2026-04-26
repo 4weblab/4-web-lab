@@ -78,7 +78,8 @@ const App = () => (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
+          "@type": ["ProfessionalService", "WebDesignAgency"],
+          "@id": "https://4weblab.it/#business",
           "name": "4 Web Lab di Fullin Carlo",
           "url": "https://4weblab.it/",
           "logo": "https://4weblab.it/logo.webp",
@@ -86,6 +87,13 @@ const App = () => (
           "telephone": "+393514656042",
           "email": "info@4weblab.it",
           "vatID": "05765760284",
+          "founder": {
+            "@type": "Person",
+            "name": "Carlo Fullin",
+            "sameAs": "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
+          },
+          "foundingDate": "2026",
+          "priceRange": "249€ - 699€+",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Via Belluno 44",
@@ -94,9 +102,38 @@ const App = () => (
             "postalCode": "35020",
             "addressCountry": "IT"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.3461,
+            "longitude": 11.9536
+          },
           "areaServed": ["IT", "Veneto", "Padova (PD)", "Venezia (VE)", "Treviso (TV)", "Vicenza (VI)", "Verona (VR)", "Rovigo (RO)", "Belluno (BL)"],
-          "sameAs": ["https://share.google/oGOMV0sHAaV8JlqnZ"],
-          "openingHoursSpecification": [{ "@type": "OpeningHoursSpecification", "byAppointmentOnly": true }]
+          "sameAs": [
+            "https://share.google/oGOMV0sHAaV8JlqnZ",
+            "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
+          ],
+          "openingHoursSpecification": [{
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Servizi 4 Web Lab",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Realizzazione sito web professionale",
+                "priceSpecification": {
+                  "@type": "PriceSpecification",
+                  "minPrice": "249",
+                  "priceCurrency": "EUR"
+                },
+                "description": "Siti web professionali a partire da 249€ — pacchetti tutto incluso per negozi, professionisti e PMI."
+              }
+            ]
+          }
         })}
       </script>
     </Helmet>

@@ -1,7 +1,11 @@
 import { ArrowDown, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import heroBg from '@/assets/hero-bg.webp';
+// Hero background images are served from /public/hero so the path stays stable
+// in production and matches the <link rel="preload"> in index.html (critical for LCP).
+const heroBgMobile = '/hero/hero-bg-mobile.webp';
+const heroBgTablet = '/hero/hero-bg-tablet.webp';
+const heroBgDesktop = '/hero/hero-bg-desktop.webp';
 
 const whatsappNumber = '393514656042';
 const whatsappMessage = encodeURIComponent('Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.');
@@ -28,15 +32,19 @@ const Hero = () => {
       style={{ background: 'var(--gradient-hero)' }}>
 
       {/* Background image */}
-      <img
-        src={heroBg}
-        alt="Sito web professionale realizzato da 4 Web Lab per PMI e professionisti"
-        width={1920}
-        height={1080}
-        fetchPriority="high"
-        decoding="async"
-        className="absolute inset-0 w-full h-full object-cover object-left sm:object-center"
-      />
+      <picture>
+        <source media="(max-width: 640px)" srcSet={heroBgMobile} type="image/webp" />
+        <source media="(max-width: 1280px)" srcSet={heroBgTablet} type="image/webp" />
+        <img
+          src={heroBgDesktop}
+          alt="Sito web professionale realizzato da 4 Web Lab per PMI e professionisti"
+          width={1920}
+          height={1070}
+          fetchPriority="high"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover object-left sm:object-center"
+        />
+      </picture>
 
       {/* Directional overlay */}
       <div
@@ -66,7 +74,7 @@ const Hero = () => {
             >
 
               Nessun investimento iniziale da migliaia di Euro.{"\n"}
-              Scopri le soluzioni 4 Web Lab per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
+              Scopri le soluzioni web per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
