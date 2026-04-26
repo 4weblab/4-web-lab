@@ -124,13 +124,13 @@ const App = () => (
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Realizzazione sito web professionale",
+                "name": "Realizzazione siti web professionali a Padova",
                 "priceSpecification": {
                   "@type": "PriceSpecification",
                   "minPrice": "249",
                   "priceCurrency": "EUR"
                 },
-                "description": "Siti web professionali a partire da 249€ — pacchetti tutto incluso per negozi, professionisti e PMI."
+                "description": "Sviluppo siti web su misura per negozi, aziende e professionisti a Padova e provincia."
               }
             ]
           }

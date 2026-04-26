@@ -1,25 +1,22 @@
 ## Obiettivo
-Rendere valido il JSON-LD globale rimuovendo il tipo non riconosciuto `WebDesignAgency` da Schema.org, che causa errore nel validatore.
+Aggiornare il copy dell'unica `Offer` presente in `hasOfferCatalog` all'interno del JSON-LD globale in `src/App.tsx`, per rafforzare il posizionamento locale su Padova.
 
-## Modifica a `src/App.tsx` (riga 81)
+## Modifiche puntuali
 
-**Prima:**
-```ts
-"@type": ["ProfessionalService", "WebDesignAgency"],
-```
+**File**: `src/App.tsx` (blocco `<script type="application/ld+json">`, dentro `hasOfferCatalog.itemListElement[0]`)
 
-**Dopo:**
-```ts
-"@type": "ProfessionalService",
-```
+- `name`:
+  - **Prima**: `"Realizzazione sito web professionale"`
+  - **Dopo**: `"Realizzazione siti web professionali a Padova"`
+- `description`:
+  - **Prima**: `"Siti web professionali a partire da 249€ — pacchetti tutto incluso per negozi, professionisti e PMI."`
+  - **Dopo**: `"Sviluppo siti web su misura per negozi, aziende e professionisti a Padova e provincia."`
 
-### Motivazione
-`WebDesignAgency` non esiste nel vocabolario ufficiale di Schema.org, per cui i validatori (Google Rich Results Test, Schema.org Validator) lo segnalano come errore. `ProfessionalService` è il tipo canonico per agenzie di servizi professionali e mantiene la copertura semantica necessaria. L'array con un solo elemento viene convertito in stringa singola, che è il formato preferito quando il tipo è uno solo.
+Resto del JSON-LD (priceSpecification, minPrice 249 EUR, ProfessionalService, orari 09:00–19:00, ecc.) **invariato**.
 
-## File NON modificati
-Nessun'altra occorrenza di `WebDesignAgency` è prevista nel codebase. Verifica rapida con `rg WebDesignAgency` prima del commit per conferma.
+## Verifica
+- `tsc --noEmit` per confermare che il JSON resti sintatticamente valido.
+- Grep per assicurarsi che non esistano altre occorrenze del vecchio copy da allineare.
 
-## Verifica post-modifica
-- `tsc --noEmit` per assicurarsi che non ci siano regressioni TypeScript.
-- Rilettura del blocco JSON-LD in `App.tsx` per confermare la struttura corretta.
-- Suggerimento: rieseguire la validazione su https://validator.schema.org/ dopo il deploy.
+## Note
+Nessun impatto su UI o componenti React: la modifica è limitata ai metadati strutturati per i motori di ricerca.
