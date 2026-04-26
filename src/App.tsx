@@ -78,7 +78,7 @@ const App = () => (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": ["ProfessionalService", "WebDesignAgency"],
+          "@type": "ProfessionalService",
           "@id": "https://4weblab.it/#business",
           "name": "4 Web Lab di Fullin Carlo",
           "url": "https://4weblab.it/",
@@ -116,7 +116,7 @@ const App = () => (
             "@type": "OpeningHoursSpecification",
             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
             "opens": "09:00",
-            "closes": "18:00"
+            "closes": "19:00"
           }],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
@@ -124,13 +124,13 @@ const App = () => (
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Realizzazione sito web professionale",
+                "name": "Realizzazione siti web professionali a Padova",
                 "priceSpecification": {
                   "@type": "PriceSpecification",
                   "minPrice": "249",
                   "priceCurrency": "EUR"
                 },
-                "description": "Siti web professionali a partire da 249€ — pacchetti tutto incluso per negozi, professionisti e PMI."
+                "description": "Sviluppo siti web su misura per negozi, aziende e professionisti a Padova e provincia."
               }
             ]
           }
