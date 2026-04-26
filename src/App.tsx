@@ -78,7 +78,7 @@ const App = () => (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": ["ProfessionalService", "WebDesignAgency"],
+          "@type": "ProfessionalService",
           "@id": "https://4weblab.it/#business",
           "name": "4 Web Lab di Fullin Carlo",
           "url": "https://4weblab.it/",
