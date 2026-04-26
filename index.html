@@ -4,10 +4,28 @@
     <meta charset="UTF-8" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preload" as="image" href="/src/assets/hero-bg.webp" type="image/webp" fetchpriority="high" />
+    <!-- Responsive preload of the LCP hero image. The browser picks the best variant
+         based on imagesizes. Falls back to href on Firefox (no imagesrcset support). -->
+    <link
+      rel="preload"
+      as="image"
+      href="/hero/hero-bg-desktop.webp"
+      imagesrcset="/hero/hero-bg-mobile.webp 800w, /hero/hero-bg-tablet.webp 1280w, /hero/hero-bg-desktop.webp 1920w"
+      imagesizes="100vw"
+      type="image/webp"
+      fetchpriority="high"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preload Playfair Display 700 (used by the hero H1) to avoid FOUT on LCP -->
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      crossorigin
+      href="https://fonts.gstatic.com/s/playfairdisplay/v37/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDXbtY.woff2"
+    />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" /></noscript>
 
