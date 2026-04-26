@@ -67,13 +67,7 @@ const Contact = () => {
             name: pageTitle,
             description: pageDescription,
             url: pageUrl,
-            mainEntity: {
-              "@type": "Organization",
-              name: "4 Web Lab",
-              url: "https://4weblab.it/",
-              email: "info@4weblab.it",
-              telephone: "+393514656042",
-            },
+            mainEntity: { "@id": "https://4weblab.it/#business" },
           })}
         </script>
       </Helmet>

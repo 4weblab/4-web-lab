@@ -37,13 +37,13 @@ const SitiWebPadova = () => {
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "name": "4 Web Lab – Realizzazione Siti Web Padova",
+          "@type": "Service",
+          "name": "Realizzazione Siti Web a Padova",
           "description": "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
-          "url": "https://4weblab.it/realizzazione-siti-web-padova",
-          "provider": { "@type": "Organization", "name": "4 Web Lab", "url": "https://4weblab.it" },
+          "serviceType": "Web Design",
           "areaServed": { "@type": "City", "name": "Padova", "containedInPlace": { "@type": "Country", "name": "IT" } },
-          "serviceType": "Web Design"
+          "url": "https://4weblab.it/realizzazione-siti-web-padova",
+          "provider": { "@id": "https://4weblab.it/#business" }
         })}</script>
       </Helmet>
 

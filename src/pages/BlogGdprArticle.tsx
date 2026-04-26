@@ -150,14 +150,7 @@ const BlogGdprArticle = () => {
               name: "Carlo Fullin",
               url: "https://4weblab.it/",
             },
-            publisher: {
-              "@type": "Organization",
-              name: "4 Web Lab",
-              logo: {
-                "@type": "ImageObject",
-                url: "https://4weblab.it/logo.webp",
-              },
-            },
+            publisher: { "@id": "https://4weblab.it/#business" },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": pageUrl,

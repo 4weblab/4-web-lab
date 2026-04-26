@@ -57,14 +57,14 @@ const SitiWebProfessionisti = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProfessionalService",
-            name: "4 Web Lab – Siti Web per Professionisti",
+            "@type": "Service",
+            name: "Siti Web per Professionisti",
             description:
               "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
-            url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
-            provider: { "@type": "Organization", name: "4 Web Lab", url: "https://4weblab.it" },
-            areaServed: { "@type": "Country", name: "IT" },
             serviceType: "Web Design for Professionals",
+            areaServed: { "@type": "Country", name: "IT" },
+            url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+            provider: { "@id": "https://4weblab.it/#business" },
           })}
         </script>
       </Helmet>
