@@ -124,22 +124,13 @@ const App = () => (
             "itemListElement": [
               {
                 "@type": "Offer",
-                "name": "Sito web a noleggio - tutto incluso",
-                "price": "49",
-                "priceCurrency": "EUR",
+                "name": "Realizzazione sito web professionale",
                 "priceSpecification": {
-                  "@type": "UnitPriceSpecification",
-                  "price": "49",
-                  "priceCurrency": "EUR",
-                  "unitCode": "MON"
-                }
-              },
-              {
-                "@type": "Offer",
-                "name": "Sito web in acquisto",
-                "price": "249",
-                "priceCurrency": "EUR",
-                "description": "Soluzioni a partire da 249€ una tantum"
+                  "@type": "PriceSpecification",
+                  "minPrice": "249",
+                  "priceCurrency": "EUR"
+                },
+                "description": "Siti web professionali a partire da 249€ — pacchetti tutto incluso per negozi, professionisti e PMI."
               }
             ]
           }
