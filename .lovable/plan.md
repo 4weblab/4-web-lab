@@ -1,82 +1,96 @@
-# IndexNow: notifica automatica a Bing/Yandex al deploy
+## 🎯 Obiettivo
+Ridurre il LCP (Largest Contentful Paint) della homepage attualmente segnalato a ~3s da PageSpeed Insights, intervenendo principalmente sull'immagine Hero e sul preload.
 
-Implementazione del protocollo IndexNow per far indicizzare istantaneamente le pagine del sito su Bing, Yandex, Seznam e Naver ogni volta che viene effettuato un deploy su Netlify. Google **non** supporta IndexNow, quindi continuerà a basarsi su sitemap + crawling naturale (nessun impatto negativo).
+## 📊 Diagnosi attuale
 
-## Logica di funzionamento
+**Immagine Hero (`src/assets/hero-bg.webp`)**
+- Dimensioni: **1920×1070 px**, peso **55 KB**
+- Servita identica a TUTTI i device (mobile compreso, dove ne basterebbe ~750px di larghezza)
+- Su mobile (390px viewport) il browser scarica e decodifica un'immagine 5x più grande del necessario → ~150-300ms sprecati nella decodifica
 
-1. **Primo deploy con IndexNow attivo** → notifica **tutti** gli URL della sitemap (16 URL).
-2. **Deploy successivi** → confronta `sitemap.xml` corrente con uno snapshot della versione precedente e notifica **solo** gli URL con `lastmod` nuovo o modificato. Se nessun URL è cambiato, nessuna chiamata viene effettuata.
-3. Lo snapshot della sitemap precedente viene salvato nella cache di build di Netlify, così persiste tra un deploy e l'altro senza finire nel repo.
+**Preload sbagliato in `index.html`**
+```html
+<link rel="preload" as="image" href="/src/assets/hero-bg.webp" ...>
+```
+⚠️ Il path `/src/assets/...` **non esiste in produzione**: Vite rinomina il file in `/assets/hero-bg-[hash].webp`. Quindi **il preload attuale fallisce silenziosamente** in produzione e il browser scopre l'immagine solo quando React monta il componente Hero. Questo è probabilmente il fattore #1 del LCP a 3s.
 
-## Componenti da creare
+**Font Google bloccanti** (parziale)
+- Già caricati con `media="print" onload="this.media='all'"` (ok)
+- Ma `Playfair Display` viene usato negli H1 della Hero → senza preload del WOFF2, il testo Hero subisce un FOUT/swap che può ritardare il LCP
 
-### 1. File chiave IndexNow (verifica proprietà)
-- `public/{KEY}.txt` — file di testo che contiene **solo** la chiave (32+ caratteri esadecimali). Serve a Bing/Yandex per verificare che siamo i proprietari del dominio.
-- La chiave viene generata una sola volta (es. `a1b2c3d4e5f6...`) e usata sia come nome del file sia come contenuto.
-- Diventa accessibile a `https://4weblab.it/{KEY}.txt`.
+## 🛠️ Piano di intervento
 
-### 2. Netlify Build Plugin locale
-Cartella `netlify/plugins/indexnow/`:
-- `manifest.yml` — dichiara il plugin.
-- `index.js` — script Node che gira nello stage **`onSuccess`** del build (= solo se il build va a buon fine):
-  1. Legge `public/sitemap.xml` (parsing XML semplice con regex, niente dipendenze).
-  2. Legge lo snapshot precedente da `netlify/cache/sitemap-prev.xml` (se esiste).
-  3. Calcola il diff: URL nuovi + URL con `lastmod` cambiato.
-  4. Se è il primo run (snapshot mancante) → invia tutti gli URL.
-  5. POST a `https://api.indexnow.org/indexnow` con il payload JSON standard:
-     ```json
-     {
-       "host": "4weblab.it",
-       "key": "{KEY}",
-       "keyLocation": "https://4weblab.it/{KEY}.txt",
-       "urlList": ["https://4weblab.it/...", "..."]
-     }
-     ```
-  6. Salva la sitemap corrente come nuovo snapshot in cache.
-  7. Logga in console di Netlify: numero URL inviati, status code della risposta.
-- Gestione errori soft: se la chiamata fallisce, il deploy **non** viene bloccato (semplice `console.warn`).
+### 1. Generare varianti responsive dell'immagine Hero
+Creare 3 varianti WebP partendo dall'attuale:
+- `hero-bg-mobile.webp` → **800×446px** (~20-25 KB) per viewport ≤640px
+- `hero-bg-tablet.webp` → **1280×713px** (~35-40 KB) per viewport ≤1280px
+- `hero-bg.webp` (esistente, 1920×1070) → desktop
 
-### 3. `netlify.toml` (root del progetto)
-Crea il file (non esiste ancora) con:
-- Dichiarazione del plugin locale `[[plugins]] package = "./netlify/plugins/indexnow"`.
-- Configurazione cache directory per persistere lo snapshot tra build.
+Quality 75-78, metodo 6 (massima compressione).
 
-### 4. Aggiornamento `mem://index.md`
-Aggiungo una riga in Core: "IndexNow attivo via Netlify plugin: notifica Bing/Yandex su ogni deploy con diff sitemap" → così nelle sessioni future ricordo che esiste e non lo reimplemento.
+### 2. Sostituire `<img>` con `<picture>` in `src/components/Hero.tsx`
+```tsx
+<picture>
+  <source media="(max-width: 640px)" srcSet={heroBgMobile} type="image/webp" />
+  <source media="(max-width: 1280px)" srcSet={heroBgTablet} type="image/webp" />
+  <img src={heroBg} alt="..." width={1920} height={1070}
+       fetchPriority="high" decoding="async" ... />
+</picture>
+```
 
-## File coinvolti
+### 3. Correggere il preload in `index.html` (CRITICO)
+Rimuovere il preload con path `/src/assets/...` rotto. Sostituire con preload responsive dinamico che funziona in produzione. Due opzioni:
 
-**Nuovi:**
-- `public/{generata-runtime}.txt` — file chiave (generato durante l'implementazione)
-- `netlify/plugins/indexnow/manifest.yml`
-- `netlify/plugins/indexnow/index.js`
-- `netlify.toml`
+**Opzione A — `imagetools`/manifest** (complesso, richiede plugin Vite)
 
-**Modificati:**
-- `mem://index.md` (annotazione nelle Core memory)
+**Opzione B (consigliata)** — Spostare l'asset in `public/` così il path resta stabile:
+- Mettere le 3 varianti in `public/hero/hero-bg-{mobile,tablet,desktop}.webp`
+- Preload nell'`index.html` con `imagesrcset` + `imagesizes` (supportato da Chrome/Edge/Safari):
+```html
+<link rel="preload" as="image"
+      href="/hero/hero-bg-desktop.webp"
+      imagesrcset="/hero/hero-bg-mobile.webp 800w, /hero/hero-bg-tablet.webp 1280w, /hero/hero-bg-desktop.webp 1920w"
+      imagesizes="100vw"
+      fetchpriority="high" />
+```
+- In `Hero.tsx` referenziare i path assoluti `/hero/hero-bg-...webp` invece dell'import da `@/assets/`.
 
-**Non toccati:**
-- Sitemap, robots.txt, codice React, sistema blog: **nessuna modifica**. Il plugin lavora solo a livello build, non runtime.
+### 4. Preload font Playfair Display
+Il LCP element è l'H1 con Playfair Display. Aggiungere in `index.html`:
+```html
+<link rel="preload" as="font" type="font/woff2" crossorigin
+      href="https://fonts.gstatic.com/s/playfairdisplay/v37/...woff2" />
+```
+(va recuperato l'URL esatto del WOFF2 della variante 700/800 latin)
 
-## Dettagli tecnici
+In alternativa, più sicuro: self-hostare solo il subset latin di Playfair 700/800 nella cartella `public/fonts/` ed eliminare la dipendenza da fonts.googleapis (risparmio ulteriore di ~200ms su connessione mobile).
 
-- **Nessuna nuova dipendenza npm**: il plugin usa solo `node:fs`, `node:path` e `fetch` (già disponibile in Node 18+ usato da Netlify).
-- **Chiave**: genero una stringa hex casuale di 64 caratteri (raccomandato dal protocollo, max 128).
-- **Endpoint usato**: `https://api.indexnow.org/indexnow` (endpoint generico che propaga a tutti i motori partecipanti — non serve chiamare Bing/Yandex separatamente).
-- **Rate limit**: IndexNow accetta fino a 10.000 URL per richiesta, ampiamente sufficiente.
-- **Idempotenza**: ri-notificare lo stesso URL non causa penalizzazioni, ma il diff evita rumore inutile nei log.
-- **Cache Netlify**: la directory `netlify/cache/` è gestita automaticamente da Netlify Build via `utils.cache.save()` / `utils.cache.restore()` esposti dal runtime del plugin.
+### 5. Verifica e benchmark
+Dopo gli interventi:
+- `nix run nixpkgs#imagemagick` per verificare le dimensioni dei file generati
+- Test locale con `bun run build && bun run preview`
+- Suggerire all'utente di rilanciare PageSpeed Insights post-deploy
 
-## Workflow futuro (cosa succederà automaticamente)
+## 📁 File da modificare/creare
 
-1. Pubblichi un nuovo articolo blog → io aggiorno `sitemap.xml` come faccio già adesso.
-2. Tu clicchi **Publish** su Lovable → Netlify ribuilda.
-3. Plugin parte a fine build, vede che `/blog/nuovo-articolo` ha `lastmod` nuovo, fa POST a IndexNow.
-4. Bing/Yandex crawlano la pagina entro pochi minuti/ore.
-5. Nei log di deploy Netlify vedrai una riga tipo: `[IndexNow] Notified 1 URL(s), response: 200`.
+**Nuovi**
+- `public/hero/hero-bg-mobile.webp`
+- `public/hero/hero-bg-tablet.webp`
+- `public/hero/hero-bg-desktop.webp` (copia dell'attuale)
 
-## Limitazioni note
+**Modificati**
+- `index.html` — fix preload immagine + preload font Playfair
+- `src/components/Hero.tsx` — `<picture>` con sorgenti responsive
 
-- **Google non partecipa a IndexNow** (al 2026). Per Google continua a valere: sitemap + Search Console + qualità dei contenuti.
-- Funziona solo **dopo** che il sito è stato pubblicato su Netlify e il file chiave è raggiungibile pubblicamente.
-- Al primissimo deploy verranno notificati tutti i 16 URL (comportamento corretto e desiderato).
+**Da rimuovere (opzionale)**
+- `src/assets/hero-bg.webp` se non più referenziato altrove
+
+## 📈 Risultato atteso
+- Su mobile: peso immagine Hero **da 55 KB a ~20 KB** (-65%)
+- Preload effettivamente funzionante in produzione → **LCP -500/-1000ms**
+- Font Playfair preloaded → niente FOUT ritardato sull'H1
+- Target realistico PageSpeed mobile: **da 3s a ~1.2-1.5s** sul LCP
+
+## ⚠️ Rischi / note
+- Le immagini in `public/` non passano per il fingerprinting di Vite, quindi su update dell'immagine bisogna cambiare nome file (o accettare cache fino a invalidation CDN). Per la Hero, che cambia raramente, è accettabile.
+- Il preload con `imagesrcset` non è supportato da Firefox (~3% utenti IT mobile) — ma il fallback `href` desktop viene comunque scaricato, nessun degrado funzionale.
