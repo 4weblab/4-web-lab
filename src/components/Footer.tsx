@@ -35,7 +35,7 @@ const Footer = () => {
               <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
             </Link>
             <p className="text-primary-foreground/60 max-w-md leading-relaxed">
-              Studio di produzione web per negozi, professionisti ed aziende. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione.
+              Studio di soluzioni web per negozi, professionisti ed aziende con sede a Padova. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione per attività in tutta Italia.
             </p>
           </div>
 
