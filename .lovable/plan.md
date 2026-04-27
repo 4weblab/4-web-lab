@@ -1,76 +1,63 @@
-## Diagnosi del warning "URL duplicato"
+# Uniformare il sistema breadcrumb su tutto il sito
 
-Ho fatto l'audit di tutti i 16 file con JSON-LD. Il warning di Google **non** dipende da un duplicato all'interno del blocco globale di `App.tsx`, ma dal fatto che su **alcune pagine vengono iniettate due entità che descrivono lo stesso business** (ProfessionalService/Organization), ognuna con un `url` diverso. Google le interpreta come "stesso ente con URL discordanti".
+## Obiettivo
+Allineare la presenza del breadcrumb visivo (UI) con quella dello schema JSON-LD `BreadcrumbList` su **tutte le pagine** del sito, eliminando le incoerenze tra ciò che vede l'utente e ciò che vede Google. Oggi il sistema è completo solo sui 6 articoli del blog.
 
-### Pagine con conflitto
+## Stato attuale
+- **Blog (indice)**: ha JSON-LD ma NON ha UI → mismatch
+- **6 pagine articolo**: complete (UI + JSON-LD) → OK
+- **Tutte le altre pagine** (landing, FAQ, contatti, demo, legali): nessun breadcrumb, né UI né JSON-LD
 
-| Pagina | Problema |
+## Approccio
+Generalizzare il componente `BlogBreadcrumb` in un componente unico **`PageBreadcrumb`** che:
+- accetta una lista di segmenti (label + path opzionale)
+- renderizza la UI accessibile (già presente: `aria-label`, `aria-current`, `ChevronRight`)
+- emette automaticamente lo schema JSON-LD `BreadcrumbList` corrispondente, così la UI e i dati strutturati restano sempre sincronizzati per costruzione
+
+In questo modo basterà inserire `<PageBreadcrumb items={[...]} />` in ogni pagina e si ottengono entrambe le cose.
+
+## Pagine da aggiornare e gerarchia proposta
+
+| Pagina | Breadcrumb |
 |---|---|
-| `/realizzazione-siti-web-padova` | Global `ProfessionalService` (url `https://4weblab.it/`) + locale `ProfessionalService` (url `.../realizzazione-siti-web-padova`) + `provider.url: https://4weblab.it` (senza slash) |
-| `/realizzazione-siti-web-per-professionisti` | Stesso schema della Padova page, con url `.../realizzazione-siti-web-per-professionisti` |
-| `/quanto-costa-sito-web` | Global `ProfessionalService` + locale `Organization` (url `https://4weblab.it`) → due entità business diverse per la stessa azienda |
-| `/contatti` | Global `ProfessionalService` + `ContactPage.mainEntity` `Organization` (url `https://4weblab.it/`) → seconda entità business |
-| Articoli blog (×6) e `/blog` | `BlogPosting/CollectionPage` con `publisher: Organization` (senza url o con url home) → duplica l'entità business globale |
+| `/blog` (Blog.tsx) | Home › Blog |
+| `/realizzazione-siti-web-padova` | Home › **Realizzazione siti web Padova** |
+| `/realizzazione-siti-web-per-professionisti` | Home › Siti per professionisti |
+| `/siti-web-per-negozi` | Home › Siti per negozi |
+| `/siti-web-aziendali` | Home › Siti aziendali |
+| `/faq-realizzazione-siti-web` | Home › FAQ |
+| `/contatti` | Home › Contatti |
+| `/privacy` | Home › Privacy Policy |
+| `/cookie` | Home › Cookie Policy |
+| **6 articoli blog** | Home › Blog › [Titolo] (migrazione da `BlogBreadcrumb` a `PageBreadcrumb`) |
 
-Le pagine con solo `FAQPage` (Negozi, Aziendali, CreareSitoConAI, FaqSitiWeb) **non hanno conflitti**.
+**Esclusioni**:
+- **Pagine demo** (`/demo-*`): sono mockup commerciali per clienti, non parte della struttura di navigazione SEO → nessun breadcrumb
+- **`NotFound` (404)**: non ha senso indicizzarlo nei breadcrumb
+- **Home (`/`)**: per convenzione la pagina root non mostra breadcrumb
 
-## Strategia di fix
+## Dettagli tecnici
 
-Adotto il pattern raccomandato da schema.org: **una sola entità "business" canonica** definita in `App.tsx` con `@id: https://4weblab.it/#business`, e tutte le altre entità nelle pagine la **referenziano** invece di ridefinirla.
+### Nuovo componente `src/components/PageBreadcrumb.tsx`
+- Props: `items: { label: string; to?: string }[]` (l'ultimo item è la pagina corrente, senza `to`)
+- Render UI: stessa struttura visiva di `BlogBreadcrumb`, ma con due varianti di colore tramite prop `variant?: "light" | "dark"` (default `light`) per supportare sfondi hero scuri (blog/articoli) e sfondi chiari (pagine landing/legali)
+- Genera internamente il JSON-LD `BreadcrumbList` con `react-helmet-async` `<Helmet>` annidato, mappando ogni item con `position`, `name` e `item` (URL assoluto `https://4weblab.it{to}`); l'ultimo item usa l'URL corrente della pagina
 
-### Regola generale
+### Migrazione articoli blog
+- Sostituire `<BlogBreadcrumb currentTitle="..." />` con `<PageBreadcrumb items={[{label:"Home",to:"/"},{label:"Blog",to:"/blog"},{label:"..."}]} />` nei 6 file articolo
+- **Rimuovere** lo `<script type="application/ld+json">` con `BreadcrumbList` già presente nei 6 articoli + in `Blog.tsx`, perché ora viene emesso dal componente (evita duplicati)
+- Eliminare il file `src/components/BlogBreadcrumb.tsx` (sostituito)
 
-- Entità business globale (in `App.tsx`): unica fonte di verità, mantiene `@id` e `url`.
-- Ogni `provider`, `publisher`, `mainEntity` business nelle pagine → diventa `{ "@id": "https://4weblab.it/#business" }` (riferimento, non duplicato).
-- Le entità "pagina-specifiche" (`ProfessionalService` di Padova/Professionisti) → vengono **rimosse** perché il global già copre il business; al loro posto, se serve marcare il servizio specifico, useremo un `Service` con `provider: { "@id": "https://4weblab.it/#business" }` (entità diversa, no conflitto con ProfessionalService globale).
+### Inserimento nelle landing
+Posizionare `<PageBreadcrumb>` all'interno della sezione Hero di ciascuna landing, sopra l'H1, in linea con il pattern già usato negli articoli. Per le landing con hero scura usare `variant="light"`, per pagine legali (privacy/cookie/contatti se hanno hero chiara) usare `variant="dark"`.
 
-### Modifiche file per file
-
-**1. `src/pages/SitiWebPadova.tsx`** (righe 38-47)
-Sostituire l'attuale `ProfessionalService` con un `Service` che referenzia il business:
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Realizzazione Siti Web a Padova",
-  "description": "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
-  "serviceType": "Web Design",
-  "areaServed": { "@type": "City", "name": "Padova", "containedInPlace": { "@type": "Country", "name": "IT" } },
-  "url": "https://4weblab.it/realizzazione-siti-web-padova",
-  "provider": { "@id": "https://4weblab.it/#business" }
-}
-```
-
-**2. `src/pages/SitiWebProfessionisti.tsx`** (righe 57-69)
-Stesso pattern: `Service` invece di `ProfessionalService`, provider come riferimento `@id`.
-
-**3. `src/pages/QuantoCostaSitoWeb.tsx`** (righe 54-60)
-Rimuovere completamente il blocco `Organization` separato. Il `FAQPage` rimane invariato. Il business è già coperto dal global.
-
-**4. `src/pages/Contact.tsx`** (righe 63-78)
-Cambiare `mainEntity` in riferimento:
-```json
-"mainEntity": { "@id": "https://4weblab.it/#business" }
-```
-
-**5. Articoli blog (×6) + `Blog.tsx`**
-Sostituire ogni `publisher: { "@type": "Organization", "name": "4 Web Lab", "logo": {...} }` con:
-```json
-"publisher": { "@id": "https://4weblab.it/#business" }
-```
-File coinvolti: `BlogAiWebsiteArticle.tsx`, `BlogWebsiteCostArticle.tsx`, `BlogSiteVsSocialArticle.tsx`, `BlogGdprArticle.tsx`, `BlogOutdatedWebsiteArticle.tsx`, `BlogNotFoundOnGoogleArticle.tsx`, `Blog.tsx`.
-
-**6. `src/App.tsx`** — nessuna modifica
-L'entità globale resta esattamente com'è (con `@id` + `url` + `address` + `openingHours` + `hasOfferCatalog`). È la fonte canonica.
-
-## Validazione
-
-Dopo le modifiche:
-- Eseguo `tsc --noEmit` per verificare che i `JSON.stringify` restino validi.
-- Suggerisco di ripassare le pagine modificate sul Rich Results Test di Google (`https://search.google.com/test/rich-results`) per confermare che il warning scompaia.
+### Niente impatto su
+- `src/components/ui/breadcrumb.tsx` (shadcn primitive, resta intoccato)
+- Schema globale `ProfessionalService` in `App.tsx`
+- Altri JSON-LD esistenti (Article, FAQPage, CollectionPage, ecc.)
 
 ## Risultato atteso
-
-- Una sola entità business per pagina → warning "URL duplicato" risolto su tutte le pagine.
-- Articoli blog continuano a essere validi come `BlogPosting` con publisher correttamente collegato.
-- Le pagine landing (Padova, Professionisti) mantengono il loro schema di servizio specifico, ma come `Service` (compatibile e non in conflitto col business globale).
+- Coerenza UI ↔ dati strutturati su tutte le pagine indicizzabili
+- Migliore navigazione utente sulle landing satellite
+- Possibile miglioramento dei rich result Google (breadcrumb visibili in SERP) per le landing locali e di servizio, oltre che per il blog
+- Codice DRY: un solo componente sorgente per breadcrumb visivo + schema
