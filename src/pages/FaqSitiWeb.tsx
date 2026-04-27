@@ -22,12 +22,6 @@ const faqs = [
   'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.'
 },
 {
-  id: 'acquisto-o-noleggio',
-  question: 'È meglio acquistare un sito web o noleggiarlo?',
-  answer:
-  'L\'acquisto diretto prevede un investimento iniziale unico. Il noleggio operativo consente di distribuire il costo nel tempo, spesso includendo manutenzione tecnica e aggiornamenti. La scelta dipende dal budget disponibile e dalla strategia a medio termine.'
-},
-{
   id: 'tempi-realizzazione',
   question: 'In quanto tempo viene realizzato un sito web?',
   answer:
