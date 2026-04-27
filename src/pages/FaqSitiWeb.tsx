@@ -12,48 +12,64 @@ const faqs = [
 {
   id: 'costo-sito-web',
   question: 'Quanto costa realizzare un sito web?',
+  answerText:
+  'Il costo di un sito web professionale parte generalmente a partire da 249€ per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.',
   answer:
   <>Il costo di un sito web professionale parte <strong>generalmente</strong> a partire da 249€ per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/quanto-costa-sito-web" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
 },
 {
   id: 'prezzo-sito-professionista',
   question: 'Qual è il prezzo di un sito web per un professionista?',
+  answerText:
+  'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.',
   answer:
   'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.'
 },
 {
   id: 'tempi-realizzazione',
   question: 'In quanto tempo viene realizzato un sito web?',
+  answerText:
+  'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.',
   answer:
   'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.'
 },
 {
   id: 'dominio-e-hosting',
   question: 'Il sito web include dominio e hosting?',
+  answerText:
+  'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.',
   answer:
   'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.'
 },
 {
   id: 'social-o-sito-web',
   question: 'È meglio avere solo i social o anche un sito web?',
+  answerText:
+  'I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.',
   answer:
   <>I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.<br /><Link to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Sito web o social: cosa conviene davvero nel 2026?</Link></>
 },
 {
   id: 'google-business-basta',
   question: 'Google Business basta per trovare clienti?',
+  answerText:
+  'Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.',
   answer:
   <>Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.<br /><Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-sm text-accent hover:underline inline-block mt-2">Perché il tuo sito non si trova su Google</Link></>
 },
 {
   id: 'vetrina-vs-landing',
   question: 'Qual è la differenza tra sito vetrina e landing page?',
+  answerText:
+  'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.',
   answer:
   'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.'
 },
 {
   id: 'sito-web-trova-clienti',
   question: 'Un sito web aiuta davvero a trovare clienti?',
+  answerText:
+  'Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un sito generato automaticamente con l\'IA.',
   answer:
   <>Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
 }];
@@ -67,7 +83,7 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: faq.answer
+      text: faq.answerText
     }
   }))
 };
@@ -108,9 +124,9 @@ const FaqItem = ({ faq, index }: {faq: typeof faqs[0];index: number;}) => {
         open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`
         }>
 
-        <p className="px-6 pb-6 text-muted-foreground body-base leading-relaxed">
+        <div className="px-6 pb-6 text-muted-foreground body-base leading-relaxed">
           {faq.answer}
-        </p>
+        </div>
       </div>
     </div>);
 
