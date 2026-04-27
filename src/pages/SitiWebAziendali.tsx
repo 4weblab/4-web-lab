@@ -19,6 +19,7 @@ import {
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import mockupImg from "@/assets/aziendali-mockup.jpg";
 import teamImg from "@/assets/aziendali-team.png";
 
@@ -108,6 +109,12 @@ const SitiWebAziendali = () => {
         <section className="section-padding relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
+              <PageBreadcrumb
+                items={[
+                  { label: "Home", to: "/" },
+                  { label: "Siti aziendali" },
+                ]}
+              />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti Web Aziendali Professionali e Multipagina
               </h1>

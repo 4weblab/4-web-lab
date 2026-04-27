@@ -1,8 +1,8 @@
-import { ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatedSection } from '@/components/AnimatedSection';
+import PageBreadcrumb from '@/components/PageBreadcrumb';
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -38,13 +38,13 @@ const PrivacyPolicy = () => {
       <header className="relative overflow-hidden py-10" style={{ background: 'var(--gradient-hero)' }}>
         <div className="absolute inset-0 bg-accent/5 blur-[100px]" aria-hidden="true" />
         <div className="container-section relative z-10">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 mb-5"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Torna alla home
-          </Link>
+          <PageBreadcrumb
+            className="!mx-0 !justify-start !mb-5"
+            items={[
+              { label: 'Home', to: '/' },
+              { label: 'Privacy Policy' },
+            ]}
+          />
           <h1 className="heading-1 text-primary-foreground">Privacy Policy</h1>
         </div>
       </header>

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactSection from '@/components/ContactSection';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import PageBreadcrumb from '@/components/PageBreadcrumb';
 
 const faqs = [
 {
@@ -172,6 +173,12 @@ const FaqSitiWeb = () => {
 
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
+              <PageBreadcrumb
+                items={[
+                  { label: 'Home', to: '/' },
+                  { label: 'FAQ' },
+                ]}
+              />
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8">
                 <HelpCircle className="w-4 h-4" aria-hidden="true" />
                 Domande Frequenti

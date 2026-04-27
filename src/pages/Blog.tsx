@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import blogAiWebsite from "@/assets/blog-ai-website.jpg";
 import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
 import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
@@ -127,16 +128,6 @@ const Blog = () => {
             },
           })}
         </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: pageUrl },
-            ],
-          })}
-        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -169,6 +160,13 @@ const Blog = () => {
 
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-3xl">
+              <PageBreadcrumb
+                className="!mx-0 !justify-start"
+                items={[
+                  { label: "Home", to: "/" },
+                  { label: "Blog" },
+                ]}
+              />
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent" />
                 Blog 4 Web Lab

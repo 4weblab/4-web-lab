@@ -19,6 +19,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const SitiWebProfessionisti = () => {
   const handleContactClick = () => {
@@ -76,6 +77,12 @@ const SitiWebProfessionisti = () => {
         <section className="section-padding relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
+              <PageBreadcrumb
+                items={[
+                  { label: "Home", to: "/" },
+                  { label: "Siti per professionisti" },
+                ]}
+              />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
                 Siti Web per Professionisti
               </h1>
