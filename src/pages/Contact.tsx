@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 
 const whatsappNumber = "393514656042";
 const whatsappMessage = encodeURIComponent("Ciao! Vorrei informazioni sui vostri servizi di creazione siti web.");
@@ -92,6 +93,12 @@ const Contact = () => {
           <div className="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-primary-foreground/5 blur-[120px]" aria-hidden="true" />
 
           <div className="container-section relative z-10 text-center max-w-3xl mx-auto">
+            <PageBreadcrumb
+              items={[
+                { label: "Home", to: "/" },
+                { label: "Contatti" },
+              ]}
+            />
             <div className="w-16 h-1 rounded-full mx-auto mb-8 bg-accent" />
             <h1 className="heading-1 text-primary-foreground mb-6">Contattaci</h1>
             <p className="body-large text-primary-foreground/75 text-balance">

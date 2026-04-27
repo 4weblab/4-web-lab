@@ -6,59 +6,70 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ContactSection from '@/components/ContactSection';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
+import PageBreadcrumb from '@/components/PageBreadcrumb';
 
 const faqs = [
 {
   id: 'costo-sito-web',
   question: 'Quanto costa realizzare un sito web?',
+  answerText:
+  'Il costo di un sito web professionale parte generalmente a partire da 249€ per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.',
   answer:
   <>Il costo di un sito web professionale parte <strong>generalmente</strong> a partire da 249€ per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/quanto-costa-sito-web" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
 },
 {
   id: 'prezzo-sito-professionista',
   question: 'Qual è il prezzo di un sito web per un professionista?',
+  answerText:
+  'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.',
   answer:
   'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.'
 },
 {
-  id: 'acquisto-o-noleggio',
-  question: 'È meglio acquistare un sito web o noleggiarlo?',
-  answer:
-  'L\'acquisto diretto prevede un investimento iniziale unico. Il noleggio operativo consente di distribuire il costo nel tempo, spesso includendo manutenzione tecnica e aggiornamenti. La scelta dipende dal budget disponibile e dalla strategia a medio termine.'
-},
-{
   id: 'tempi-realizzazione',
   question: 'In quanto tempo viene realizzato un sito web?',
+  answerText:
+  'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.',
   answer:
   'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.'
 },
 {
   id: 'dominio-e-hosting',
   question: 'Il sito web include dominio e hosting?',
+  answerText:
+  'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.',
   answer:
   'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.'
 },
 {
   id: 'social-o-sito-web',
   question: 'È meglio avere solo i social o anche un sito web?',
+  answerText:
+  'I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.',
   answer:
   <>I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.<br /><Link to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Sito web o social: cosa conviene davvero nel 2026?</Link></>
 },
 {
   id: 'google-business-basta',
   question: 'Google Business basta per trovare clienti?',
+  answerText:
+  'Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.',
   answer:
   <>Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.<br /><Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-sm text-accent hover:underline inline-block mt-2">Perché il tuo sito non si trova su Google</Link></>
 },
 {
   id: 'vetrina-vs-landing',
   question: 'Qual è la differenza tra sito vetrina e landing page?',
+  answerText:
+  'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.',
   answer:
   'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.'
 },
 {
   id: 'sito-web-trova-clienti',
   question: 'Un sito web aiuta davvero a trovare clienti?',
+  answerText:
+  'Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un sito generato automaticamente con l\'IA.',
   answer:
   <>Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
 }];
@@ -72,7 +83,7 @@ const faqSchema = {
     name: faq.question,
     acceptedAnswer: {
       '@type': 'Answer',
-      text: faq.answer
+      text: faq.answerText
     }
   }))
 };
@@ -113,9 +124,9 @@ const FaqItem = ({ faq, index }: {faq: typeof faqs[0];index: number;}) => {
         open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`
         }>
 
-        <p className="px-6 pb-6 text-muted-foreground body-base leading-relaxed">
+        <div className="px-6 pb-6 text-muted-foreground body-base leading-relaxed">
           {faq.answer}
-        </p>
+        </div>
       </div>
     </div>);
 
@@ -125,10 +136,10 @@ const FaqSitiWeb = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab</title>
+        <title>FAQ Siti Web: Domande Frequenti su Costi, Utilità e AI | 4 Web Lab</title>
         <meta
           name="description"
-          content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+          content="Risposte alle domande su realizzazione siti web, costi 2026, utilità strategica, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/faq-realizzazione-siti-web" />
@@ -136,15 +147,15 @@ const FaqSitiWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab" />
-        <meta property="og:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Utilità e AI | 4 Web Lab" />
+        <meta property="og:description" content="Risposte alle domande su realizzazione siti web, costi 2026, utilità strategica, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta name="twitter:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab" />
-        <meta name="twitter:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+        <meta name="twitter:title" content="FAQ Siti Web: Domande Frequenti su Costi, Utilità e AI | 4 Web Lab" />
+        <meta name="twitter:description" content="Risposte alle domande su realizzazione siti web, costi 2026, utilità strategica, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
 
         {/* JSON-LD FAQPage */}
@@ -172,6 +183,12 @@ const FaqSitiWeb = () => {
 
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
+              <PageBreadcrumb
+                items={[
+                  { label: 'Home', to: '/' },
+                  { label: 'FAQ' },
+                ]}
+              />
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/15 border border-accent/25 text-accent text-sm font-medium mb-8">
                 <HelpCircle className="w-4 h-4" aria-hidden="true" />
                 Domande Frequenti
@@ -179,13 +196,13 @@ const FaqSitiWeb = () => {
               <h1
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}>
-                FAQ Siti Web 2026: Costi, Noleggio, AI e Tempi di Consegna
+                FAQ Siti Web 2026: Costi, Utilità, Intelligenza Artificiale e Tempi di Consegna
               </h1>
               <p
                 className="body-large text-primary-foreground/85 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
 
-                Quanto costa un sito web? Quanto tempo serve per realizzarlo? Conviene acquistarlo o noleggiarlo?
+                Quanto costa un sito web? Quanto tempo serve per realizzarlo? Serve davvero all'attività?
 In questa pagina trovi risposte sintetiche e concrete alle domande più frequenti sulla realizzazione di un sito web professionale, con indicazioni su costi, tempi e scelte strategiche.
               </p>
             </AnimatedSection>
