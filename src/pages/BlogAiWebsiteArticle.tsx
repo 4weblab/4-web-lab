@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
-import BlogBreadcrumb from "@/components/BlogBreadcrumb";
+import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogAiWebsite from "@/assets/blog-ai-website.jpg";
@@ -187,17 +187,6 @@ const BlogAiWebsiteArticle = () => {
             dateModified,
           })}
         </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -217,7 +206,13 @@ const BlogAiWebsiteArticle = () => {
           />
           <div className="container-section relative z-10">
             <AnimatedSection className="mx-auto max-w-4xl text-center">
-              <BlogBreadcrumb currentTitle="Siti web con intelligenza artificiale" />
+              <PageBreadcrumb
+                items={[
+                  { label: "Home", to: "/" },
+                  { label: "Blog", to: "/blog" },
+                  { label: "Siti web con intelligenza artificiale" },
+                ]}
+              />
               <span className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-foreground/80 backdrop-blur-sm">
                 Blog 4 Web Lab
               </span>
