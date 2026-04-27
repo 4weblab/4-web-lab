@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import { CheckCircle2, MapPin, Briefcase, Settings, Globe, MessageCircle } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
+import PageBreadcrumb from '@/components/PageBreadcrumb';
 
 const SitiWebPadova = () => {
   const navigate = useNavigate();
@@ -67,6 +68,12 @@ const SitiWebPadova = () => {
 
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
+              <PageBreadcrumb
+                items={[
+                  { label: 'Home', to: '/' },
+                  { label: 'Realizzazione siti web Padova' },
+                ]}
+              />
               <h1 className="heading-1 text-primary-foreground mb-8 text-balance" style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}>
                 Realizzazione Siti Web a Padova – Agenzia Locale e Nazionale
               </h1>
