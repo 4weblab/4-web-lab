@@ -136,10 +136,10 @@ const FaqSitiWeb = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab</title>
+        <title>FAQ Siti Web: Domande Frequenti su Costi, Utilità e AI | 4 Web Lab</title>
         <meta
           name="description"
-          content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+          content="Risposte alle domande su realizzazione siti web, costi 2026, utilità strategica, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/faq-realizzazione-siti-web" />
@@ -147,15 +147,15 @@ const FaqSitiWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab" />
-        <meta property="og:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+        <meta property="og:title" content="FAQ Siti Web: Domande Frequenti su Costi, Utilità e AI | 4 Web Lab" />
+        <meta property="og:description" content="Risposte alle domande su realizzazione siti web, costi 2026, utilità strategica, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta name="twitter:title" content="FAQ Siti Web: Domande Frequenti su Costi, Tempi e Noleggio | 4 Web Lab" />
-        <meta name="twitter:description" content="Risposte chiare a tutte le domande su realizzazione siti web, costi 2026, noleggio mensile, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
+        <meta name="twitter:title" content="FAQ Siti Web: Domande Frequenti su Costi, Utilità e AI | 4 Web Lab" />
+        <meta name="twitter:description" content="Risposte alle domande su realizzazione siti web, costi 2026, utilità strategica, AI e tempi di consegna. Tutto quello che devi sapere prima di partire." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
 
         {/* JSON-LD FAQPage */}
@@ -196,13 +196,13 @@ const FaqSitiWeb = () => {
               <h1
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: '0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)' }}>
-                FAQ Siti Web 2026: Costi, Noleggio, AI e Tempi di Consegna
+                FAQ Siti Web 2026: Costi, Utilità, Intelligenza Artificiale e Tempi di Consegna
               </h1>
               <p
                 className="body-large text-primary-foreground/85 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: '0 1px 2px rgba(0,0,0,0.4)' }}>
 
-                Quanto costa un sito web? Quanto tempo serve per realizzarlo? Conviene acquistarlo o noleggiarlo?
+                Quanto costa un sito web? Quanto tempo serve per realizzarlo? Serve davvero all'attività?
 In questa pagina trovi risposte sintetiche e concrete alle domande più frequenti sulla realizzazione di un sito web professionale, con indicazioni su costi, tempi e scelte strategiche.
               </p>
             </AnimatedSection>
