@@ -1,63 +1,43 @@
-# Uniformare il sistema breadcrumb su tutto il sito
-
 ## Obiettivo
-Allineare la presenza del breadcrumb visivo (UI) con quella dello schema JSON-LD `BreadcrumbList` su **tutte le pagine** del sito, eliminando le incoerenze tra ciò che vede l'utente e ciò che vede Google. Oggi il sistema è completo solo sui 6 articoli del blog.
 
-## Stato attuale
-- **Blog (indice)**: ha JSON-LD ma NON ha UI → mismatch
-- **6 pagine articolo**: complete (UI + JSON-LD) → OK
-- **Tutte le altre pagine** (landing, FAQ, contatti, demo, legali): nessun breadcrumb, né UI né JSON-LD
+Hai aggiornato titolo e descrizione del nuovo articolo in `src/data/blogArticles.ts`. Verificando il resto del codice, ci sono **due file** che contengono ancora versioni non perfettamente allineate e vanno sistemati per coerenza (SEO, social share, card del blog).
 
-## Approccio
-Generalizzare il componente `BlogBreadcrumb` in un componente unico **`PageBreadcrumb`** che:
-- accetta una lista di segmenti (label + path opzionale)
-- renderizza la UI accessibile (già presente: `aria-label`, `aria-current`, `ChevronRight`)
-- emette automaticamente lo schema JSON-LD `BreadcrumbList` corrispondente, così la UI e i dati strutturati restano sempre sincronizzati per costruzione
+## File da aggiornare
 
-In questo modo basterà inserire `<PageBreadcrumb items={[...]} />` in ogni pagina e si ottengono entrambe le cose.
+### 1. `src/pages/Blog.tsx` (card nella pagina /blog)
 
-## Pagine da aggiornare e gerarchia proposta
+Attualmente la card è hardcoded e duplica i testi di `blogArticles.ts`. La descrizione è già stata aggiornata, ma è meglio verificare che titolo e descrizione siano identici a quelli del data file. Stato attuale:
+- title: "Siti web su piattaforme di preventivi online: conviene davvero o è un errore costoso?" ✓
+- description: "Preventivi veloci e prezzi bassi: sembra la scelta giusta…" ✓
 
-| Pagina | Breadcrumb |
-|---|---|
-| `/blog` (Blog.tsx) | Home › Blog |
-| `/realizzazione-siti-web-padova` | Home › **Realizzazione siti web Padova** |
-| `/realizzazione-siti-web-per-professionisti` | Home › Siti per professionisti |
-| `/siti-web-per-negozi` | Home › Siti per negozi |
-| `/siti-web-aziendali` | Home › Siti aziendali |
-| `/faq-realizzazione-siti-web` | Home › FAQ |
-| `/contatti` | Home › Contatti |
-| `/privacy` | Home › Privacy Policy |
-| `/cookie` | Home › Cookie Policy |
-| **6 articoli blog** | Home › Blog › [Titolo] (migrazione da `BlogBreadcrumb` a `PageBreadcrumb`) |
+Risulta già allineato — nessuna modifica necessaria qui.
 
-**Esclusioni**:
-- **Pagine demo** (`/demo-*`): sono mockup commerciali per clienti, non parte della struttura di navigazione SEO → nessun breadcrumb
-- **`NotFound` (404)**: non ha senso indicizzarlo nei breadcrumb
-- **Home (`/`)**: per convenzione la pagina root non mostra breadcrumb
+### 2. `src/pages/BlogQuotePlatformsArticle.tsx` (pagina articolo)
 
-## Dettagli tecnici
+Qui c'è un disallineamento sul **meta title del browser/SEO**:
 
-### Nuovo componente `src/components/PageBreadcrumb.tsx`
-- Props: `items: { label: string; to?: string }[]` (l'ultimo item è la pagina corrente, senza `to`)
-- Render UI: stessa struttura visiva di `BlogBreadcrumb`, ma con due varianti di colore tramite prop `variant?: "light" | "dark"` (default `light`) per supportare sfondi hero scuri (blog/articoli) e sfondi chiari (pagine landing/legali)
-- Genera internamente il JSON-LD `BreadcrumbList` con `react-helmet-async` `<Helmet>` annidato, mappando ogni item con `position`, `name` e `item` (URL assoluto `https://4weblab.it{to}`); l'ultimo item usa l'URL corrente della pagina
+- riga 22: `pageTitle = "Siti web piattaforme preventivi: conviene davvero?"`
+  → è ancora la versione vecchia/short. Va aggiornato per riflettere il nuovo titolo. Proposta: usare lo `shortTitle` da `blogArticles.ts` ("Siti web piattaforme preventivi: conviene?") oppure una versione più aderente al nuovo H1, es:
+  - **"Siti web piattaforme preventivi: conviene o è un errore?"** (≈ 56 caratteri, ottimale per Google)
 
-### Migrazione articoli blog
-- Sostituire `<BlogBreadcrumb currentTitle="..." />` con `<PageBreadcrumb items={[{label:"Home",to:"/"},{label:"Blog",to:"/blog"},{label:"..."}]} />` nei 6 file articolo
-- **Rimuovere** lo `<script type="application/ld+json">` con `BreadcrumbList` già presente nei 6 articoli + in `Blog.tsx`, perché ora viene emesso dal componente (evita duplicati)
-- Eliminare il file `src/components/BlogBreadcrumb.tsx` (sostituito)
+- riga 32 (`headline`) e riga 24 (`pageDescription`): già allineati al nuovo testo ✓
 
-### Inserimento nelle landing
-Posizionare `<PageBreadcrumb>` all'interno della sezione Hero di ciascuna landing, sopra l'H1, in linea con il pattern già usato negli articoli. Per le landing con hero scura usare `variant="light"`, per pagine legali (privacy/cookie/contatti se hanno hero chiara) usare `variant="dark"`.
+## Modifica proposta
 
-### Niente impatto su
-- `src/components/ui/breadcrumb.tsx` (shadcn primitive, resta intoccato)
-- Schema globale `ProfessionalService` in `App.tsx`
-- Altri JSON-LD esistenti (Article, FAQPage, CollectionPage, ecc.)
+In `src/pages/BlogQuotePlatformsArticle.tsx` aggiornare solo il meta title:
 
-## Risultato atteso
-- Coerenza UI ↔ dati strutturati su tutte le pagine indicizzabili
-- Migliore navigazione utente sulle landing satellite
-- Possibile miglioramento dei rich result Google (breadcrumb visibili in SERP) per le landing locali e di servizio, oltre che per il blog
-- Codice DRY: un solo componente sorgente per breadcrumb visivo + schema
+```ts
+const pageTitle = "Siti web piattaforme preventivi: conviene o è un errore?";
+```
+
+Questo aggiorna:
+- `<title>` del browser
+- `og:title` per condivisioni social (Facebook/LinkedIn/WhatsApp)
+- `twitter:title`
+- `headline` nel JSON-LD `BlogPosting` (se collegato — da verificare in fase di applicazione)
+
+## Note
+
+- `public/sitemap.xml` non contiene il titolo, solo l'URL → nessuna modifica.
+- Nessun altro file fa riferimento al vecchio titolo "…per il tuo business" o alla vecchia descrizione "Conviene usare piattaforme…".
+- Conferma il meta title proposto oppure indicane uno alternativo (max ~60 caratteri consigliato per SERP).

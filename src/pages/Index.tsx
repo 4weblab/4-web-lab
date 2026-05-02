@@ -21,7 +21,7 @@ const Index = () => {
         </title>
         <meta
           name="description"
-          content="Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!"
+          content="Agenzia Web Padova - siti professionali per negozi, professionisti e aziende. A partire da 199€ | Siti veloci, ottimizzati SEO e assistenza. Preventivo gratuito in 24 ore!"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
