@@ -4,6 +4,7 @@ import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
+import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
 
 export type BlogArticle = {
   slug: string;
@@ -45,6 +46,26 @@ export const formatItalianDate = (iso: string): string => {
 };
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "siti-web-piattaforme-preventivi-online-conviene",
+    path: "/blog/siti-web-piattaforme-preventivi-online-conviene",
+    title: "Siti web su piattaforme di preventivi online: conviene davvero per il tuo business?",
+    shortTitle: "Siti web piattaforme preventivi: conviene?",
+    description:
+      "Conviene usare piattaforme di preventivi per creare un sito web? Scopri rischi, limiti e quando è meglio evitarle.",
+    excerpt:
+      "Preventivi rapidi e prezzi bassi: cosa si nasconde dietro le piattaforme online e quando conviene davvero usarle.",
+    image: blogQuotePlatforms,
+    alt: "Laptop con piattaforme di preventivi online per la realizzazione di siti web",
+    datePublished: "2026-05-02",
+    dateModified: "2026-05-02",
+    category: "Strategia digitale",
+    related: [
+      "quanto-costa-un-sito-web-nel-2026",
+      "siti-web-creati-con-intelligenza-artificiale",
+    ],
+    wordCount: 720,
+  },
   {
     slug: "quanto-costa-un-sito-web-nel-2026",
     path: "/blog/quanto-costa-un-sito-web-nel-2026",
