@@ -19,7 +19,7 @@ const introParagraphs = [
 
 const BlogQuotePlatformsArticle = () => {
   const slug = "siti-web-piattaforme-preventivi-online-conviene";
-  const pageTitle = "Siti web piattaforme preventivi: conviene davvero?";
+  const pageTitle = "Siti web piattaforme preventivi: conviene o è un errore?";
   const pageDescription =
     "Preventivi veloci e prezzi bassi: sembra la scelta giusta. Ma cosa succede davvero dietro piattaforme come ProntoPro e simili?";
   const pageUrl = `https://4weblab.it/blog/${slug}`;
