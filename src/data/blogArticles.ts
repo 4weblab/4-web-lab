@@ -49,7 +49,7 @@ export const blogArticles: BlogArticle[] = [
   {
     slug: "siti-web-piattaforme-preventivi-online-conviene",
     path: "/blog/siti-web-piattaforme-preventivi-online-conviene",
-    title: "Siti web su piattaforme di preventivi online: conviene davvero per il tuo business?",
+    title: "Siti web su piattaforme di preventivi online: conviene davvero o è un errore costoso?",
     shortTitle: "Siti web piattaforme preventivi: conviene?",
     description:
       "Conviene usare piattaforme di preventivi per creare un sito web? Scopri rischi, limiti e quando è meglio evitarle.",

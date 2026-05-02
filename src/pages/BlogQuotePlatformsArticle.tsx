@@ -29,7 +29,7 @@ const BlogQuotePlatformsArticle = () => {
   const dateModified = articleData?.dateModified ?? "2026-05-02";
   const articleSection = articleData?.category ?? "Strategia digitale";
   const readingTime = calcReadingTime(articleData?.wordCount ?? 720);
-  const headline = "Siti web su piattaforme di preventivi online: conviene davvero per il tuo business?";
+  const headline = "Siti web su piattaforme di preventivi online: conviene davvero o è un errore costoso?";
 
   return (
     <>
