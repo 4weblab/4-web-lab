@@ -65,7 +65,7 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              Agenzia Web Padova – Siti web per negozi, professionisti e aziende 
+              Agenzia Web Padova | Siti web per negozi, professionisti e aziende 
             </h1>
 
             <p
