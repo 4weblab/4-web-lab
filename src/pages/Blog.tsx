@@ -11,8 +11,18 @@ import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
 import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
+import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
 
 const articles = [
+  {
+    slug: "/blog/siti-web-piattaforme-preventivi-online-conviene",
+    title: "Siti web su piattaforme di preventivi online: conviene davvero per il tuo business?",
+    description:
+      "Conviene usare piattaforme di preventivi per creare un sito web? Scopri rischi, limiti e quando è meglio evitarle.",
+    image: blogQuotePlatforms,
+    alt: "Laptop con piattaforme di preventivi online per la realizzazione di siti web",
+    datePublished: "2026-05-02",
+  },
   {
     slug: "/blog/perche-il-tuo-sito-non-si-trova-su-google",
     title: "Perché il tuo sito non si trova su Google (e come iniziare a comparire davvero)",
