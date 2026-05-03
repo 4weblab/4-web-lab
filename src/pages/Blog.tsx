@@ -12,8 +12,18 @@ import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
 import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
 import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
+import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.jpg";
 
 const articles = [
+  {
+    slug: "/blog/creare-sito-web-da-soli-conviene",
+    title: "Creare un sito web da soli conviene davvero? Costi, rischi e cosa sapere nel 2026",
+    description:
+      "Vuoi creare un sito web da solo con WordPress o altri strumenti? Scopri rischi, costi reali e perché spesso non porta clienti.",
+    image: blogDiyWebsite,
+    alt: "Persona che crea un sito web da sola con laptop e builder visuale WordPress",
+    datePublished: "2026-05-03",
+  },
   {
     slug: "/blog/siti-web-piattaforme-preventivi-online-conviene",
     title: "Siti web su piattaforme di preventivi online: conviene davvero o è un errore costoso?",
