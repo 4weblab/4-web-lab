@@ -64,7 +64,7 @@ const sections: Section[] = [
     subSections: [
       {
         title: "Sito web per negozi",
-        price: "299€",
+        price: "199€",
         paragraphs: [
           "Un sito per negozi ha l’obiettivo principale di presentare prodotti, servizi e informazioni in modo chiaro e accessibile.",
           "È una soluzione pensata per avere una presenza online efficace, senza complicazioni inutili.",
@@ -72,7 +72,7 @@ const sections: Section[] = [
       },
       {
         title: "Sito web per professionisti",
-        price: "249€",
+        price: "549€",
         paragraphs: [
           "Per consulenti, liberi professionisti e attività individuali, il sito deve trasmettere fiducia e competenza.",
           "In questo caso, la struttura è orientata a valorizzare la persona e facilitare il contatto.",
@@ -80,7 +80,7 @@ const sections: Section[] = [
       },
       {
         title: "Sito web aziendale",
-        price: "699€",
+        price: "899€",
         paragraphs: [
           "Per aziende strutturate, il sito diventa uno strumento più completo: presentazione, servizi, posizionamento e acquisizione contatti.",
           "Il costo varia in base alla complessità del progetto e agli obiettivi.",

@@ -32,7 +32,7 @@ const SitiWebProfessionisti = () => {
         <title>Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab</title>
         <meta
           name="description"
-          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
+          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 549€."
         />
 
         <meta name="robots" content="index, follow" />
@@ -42,7 +42,7 @@ const SitiWebProfessionisti = () => {
         <meta property="og:title" content="Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
+          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 549€."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
@@ -52,7 +52,7 @@ const SitiWebProfessionisti = () => {
         <meta name="twitter:title" content="Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 249€."
+          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 549€."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">
@@ -359,7 +359,7 @@ const SitiWebProfessionisti = () => {
                       </div>
                       <div className="mb-3">
                         <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
-                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€249</span>
+                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€549</span>
                       </div>
                       <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
                       <p className="text-muted-foreground text-sm mt-4">
