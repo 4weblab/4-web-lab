@@ -80,7 +80,7 @@ const sections: Section[] = [
       },
       {
         title: "Sito web aziendale",
-        price: "699€",
+        price: "899€",
         paragraphs: [
           "Per aziende strutturate, il sito diventa uno strumento più completo: presentazione, servizi, posizionamento e acquisizione contatti.",
           "Il costo varia in base alla complessità del progetto e agli obiettivi.",
