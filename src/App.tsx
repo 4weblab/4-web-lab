@@ -94,7 +94,7 @@ const App = () => (
             "sameAs": "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
           },
           "foundingDate": "2026",
-          "priceRange": "249€ - 699€+",
+          "priceRange": "199€ - 549€+",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Via Belluno 44",
@@ -128,7 +128,8 @@ const App = () => (
                 "name": "Realizzazione siti web professionali a Padova",
                 "priceSpecification": {
                   "@type": "PriceSpecification",
-                  "minPrice": "249",
+                  "minPrice": "199",
+                  "maxPrice": "549",
                   "priceCurrency": "EUR"
                 },
                 "description": "Sviluppo siti web su misura per negozi, aziende e professionisti a Padova e provincia."
