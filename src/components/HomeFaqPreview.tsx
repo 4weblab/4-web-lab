@@ -7,7 +7,7 @@ const previewFaqs = [
     question: "Quanto costa realizzare un sito web?",
     answer: (
       <>
-        Il costo parte generalmente da circa 400€ + IVA per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.
+        Il costo parte generalmente a partire da 199€ per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.
         <br />
         <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">
           Leggi "Quanto costa un sito web nel 2026?"
