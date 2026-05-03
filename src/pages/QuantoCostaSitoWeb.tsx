@@ -13,7 +13,7 @@ const QuantoCostaSitoWeb = () => {
     <>
       <Helmet>
         <title>Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4 Web Lab</title>
-        <meta name="description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
+        <meta name="description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 199€. Guida completa e preventivo gratuito." />
         <meta name="robots" content="noindex, follow" />
         <link rel="canonical" href="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
 
@@ -21,7 +21,7 @@ const QuantoCostaSitoWeb = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026" />
         <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Prezzi Reali e Guida | 4 Web Lab" />
-        <meta property="og:description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 249€. Guida completa e preventivo gratuito." />
+        <meta property="og:description" content="Scopri i prezzi reali 2026 per un sito web professionale: confronto tra costi medi in Italia e i nostri prezzi a partire da 199€. Guida completa e preventivo gratuito." />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -132,7 +132,7 @@ const QuantoCostaSitoWeb = () => {
                   title: 'Sito web per negozi',
                   description: 'Ideale per negozi fisici e attività locali che vogliono farsi trovare su Google e portare clienti in negozio.',
                   prezzoMedio: '1200€ – 2500€',
-                  tuoPrezzo: '299€',
+                  tuoPrezzo: '199€',
                   highlighted: false,
                   link: '/siti-web-per-negozi',
                 },
@@ -140,7 +140,7 @@ const QuantoCostaSitoWeb = () => {
                   title: 'Sito web per professionisti',
                   description: 'Perfetto per liberi professionisti e studi che vogliono presentarsi online in modo professionale e acquisire nuovi contatti.',
                   prezzoMedio: '800€ – 1800€',
-                  tuoPrezzo: '249€',
+                  tuoPrezzo: '549€',
                   highlighted: false,
                   link: '/realizzazione-siti-web-per-professionisti',
                 },
