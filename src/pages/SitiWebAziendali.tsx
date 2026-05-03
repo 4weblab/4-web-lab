@@ -322,6 +322,8 @@ const SitiWebAziendali = () => {
                     icon: Globe,
                     label: "Base",
                     title: "Sito base",
+                    price: "A partire da 899€",
+                    priceNote: "IVA esclusa",
                     description:
                       "Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.",
                   },
@@ -329,6 +331,8 @@ const SitiWebAziendali = () => {
                     icon: LayoutTemplate,
                     label: "Intermedio",
                     title: "Sito aziendale strutturato",
+                    price: "A partire da 1.299€",
+                    priceNote: "IVA esclusa",
                     description:
                       "Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.",
                   },
@@ -336,6 +340,8 @@ const SitiWebAziendali = () => {
                     icon: Wrench,
                     label: "Avanzato",
                     title: "Progetto su misura",
+                    price: "Preventivo da definire",
+                    priceNote: "",
                     description:
                       "Soluzione personalizzata in base agli obiettivi dell'azienda, con funzionalità specifiche e sviluppo dedicato.",
                   },
@@ -350,6 +356,12 @@ const SitiWebAziendali = () => {
                       </div>
                       <h3 className="font-bold text-lg text-foreground mb-3">{item.title}</h3>
                       <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                      <div className="mt-5 pt-5 border-t border-border/50">
+                        <p className="text-base font-semibold text-foreground">{item.price}</p>
+                        {item.priceNote && (
+                          <p className="text-xs text-muted-foreground mt-1">{item.priceNote}</p>
+                        )}
+                      </div>
                     </div>
                   </StaggerItem>
                 ))}
