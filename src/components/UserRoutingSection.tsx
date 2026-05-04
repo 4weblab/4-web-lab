@@ -26,7 +26,7 @@ const cards = [
   },
   {
     title: 'Ho un\'azienda',
-    text: 'Se hai un\'azienda e hai bisogno di un sito strutturato, completo e pensato per crescere nel tempo.',
+    text: 'Siti web aziendali. Dalle imprese più piccole a quelle più strutturate. Realizziamo siti web nati per un solo scopo, aumentare visibilità, credibilità e nuovi clienti. A partire da 899€',
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
