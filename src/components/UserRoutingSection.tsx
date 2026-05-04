@@ -84,7 +84,7 @@ const UserRoutingSection = () => {
 
                   {/* Content */}
                   <div className="relative h-full flex flex-col justify-end p-8 md:p-9">
-                    <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center gap-3 mb-3 mt-auto">
                       <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-accent/80 transition-colors duration-500 shrink-0">
                         <Icon className="w-5 h-5 text-white" aria-hidden="true" />
                       </div>
@@ -92,7 +92,7 @@ const UserRoutingSection = () => {
                         {card.title}
                       </h3>
                     </div>
-                    <p className="text-white/85 text-base leading-relaxed mb-6 max-w-sm">
+                    <p className="text-white/85 text-base leading-relaxed mb-6 max-w-sm min-h-[8rem] md:min-h-[9rem]">
                       {card.text}
                     </p>
 
