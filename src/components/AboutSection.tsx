@@ -40,7 +40,7 @@ const AboutSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Chi siamo: la tua Agenzia Web a Padova di fiducia</h2>
+          <h2 className="heading-2 mb-5">Chi siamo: la tua Agenzia Web di fiducia</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance whitespace-pre-line">
             4 Web Lab è un’agenzia web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> specializzata nella realizzazione di siti professionali per chi vuole presenza online seria senza spendere cifre da studio strutturato.{"\n"}
             Qualità da agenzia, prezzi accessibili e supporto continuo.{"\n"}
