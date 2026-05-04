@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: 'Sono un professionista',
-    text: 'Se lavori come libero professionista e vuoi presentarti online in modo credibile e acquisire nuovi contatti.',
+    text: 'Siti web per i professionisti di qualsiasi settore. Una necessità nel 2026, dall\'elettricista all\'avvocato. La prima credibilità si costruisce sul web. A partire da 549€',
     cta: 'Scopri i siti per professionisti',
     link: '/realizzazione-siti-web-per-professionisti',
     image: cardProfessionista,
