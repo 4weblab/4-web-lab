@@ -57,7 +57,7 @@ const Hero = () => {
       <div className="container-section relative z-10 py-24">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
           {/* Left: main content */}
-          <div className="max-w-xl text-left">
+          <div className="max-w-3xl text-left">
             <h1
               className="heading-1 text-primary-foreground mb-8 text-balance"
               style={{
@@ -65,9 +65,9 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90">SCEGLI LA MIGLIORE</span>
-              <span className="block">WEB AGENCY PADOVA</span>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 mt-1">SITI WEB, SEO, CONSULENZA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 whitespace-nowrap">SCEGLI LA MIGLIORE</span>
+              <span className="block my-3 sm:my-4 whitespace-nowrap">WEB AGENCY PADOVA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 whitespace-nowrap">SITI WEB, SEO, CONSULENZA</span>
             </h1>
 
             <p
