@@ -44,7 +44,7 @@ const AboutSection = () => {
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance whitespace-pre-line">
             4 Web Lab è un’agenzia web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> specializzata nella realizzazione di siti professionali per chi vuole presenza online seria senza spendere cifre da studio strutturato.{"\n"}
             Qualità da agenzia, prezzi accessibili e supporto continuo.{"\n"}
-            Lavoriamo principalmente con negozi, professionisti e PMI del Veneto, realizzando siti veloci, convertenti e sempre aggiornati.
+            Lavoriamo con negozi, professionisti e PMI di Padova e in tutta Italia, realizzando siti veloci, su misura e orientati al tuo business.
           </p>
         </AnimatedSection>
 
