@@ -1,17 +1,19 @@
-## Modifiche prezzi: 199€ + range JSON-LD
+## Obiettivo
+Allineare il link "Scopri i siti..." in basso in tutte e tre le card della sezione "Dicci chi sei", indipendentemente dalla lunghezza del testo descrittivo (i nuovi testi hanno lunghezze diverse).
 
-### 1. FAQ homepage (`src/components/HomeFaqPreview.tsx`)
-Risposta "Quanto costa realizzare un sito web?":
-- Da: "Il costo parte generalmente da circa 400€ + IVA per una struttura one-page..."
-- A: "Il costo parte generalmente a partire da 199€ per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO."
+## Modifica
+**File:** `src/components/UserRoutingSection.tsx`
 
-### 2. Pagina FAQ (`src/pages/FaqSitiWeb.tsx`)
-Aggiornare sia `answerText` (usato nel JSON-LD FAQPage) che `answer` JSX della prima domanda: sostituire `249€` con `199€`.
+Nel layout interno della card (già `flex flex-col justify-end`), modificare:
 
-### 3. JSON-LD globale (`src/App.tsx`)
-- Riga 97: `"priceRange": "249€ - 699€+"` → `"priceRange": "199€ - 549€+"`
-- Riga 131: `"minPrice": "249"` → `"minPrice": "199"`
-- Aggiungere `"maxPrice": "549"` accanto al minPrice nel `priceSpecification` per coerenza con il range.
+1. Il container content da `justify-end` a `justify-end` invariato — ma rendere il blocco titolo+descrizione una struttura unica e spingere il CTA in fondo.
 
-### Note (non incluse, non richieste)
-Restano invariati gli altri riferimenti a `249€` (meta description Index/App, SitiWebProfessionisti, SitiWebPadova, QuantoCostaSitoWeb, ecc.) e il `699€` in `BlogWebsiteCostArticle.tsx`. Posso aggiornarli in un passaggio successivo se vuoi allineare tutto.
+Soluzione semplice e robusta:
+- Aggiungere `mt-auto` al `<span>` del CTA così viene ancorato al bordo inferiore della card.
+- Cambiare `justify-end` → `justify-between` sul container, così il blocco titolo+testo resta in alto-rispetto-alla-base e il CTA in basso.
+
+Approccio scelto (minimo impatto): aggiungere `mt-auto` al `<span>` del CTA. Questo sposta il CTA in fondo al flex column. La descrizione diventa quindi seguita da spazio elastico fino al CTA, garantendo che il link sia allineato in basso in tutte e tre le card.
+
+## Cosa NON cambio
+- Altezza minima della card, padding, immagine di sfondo, gradient, hover.
+- Testi.

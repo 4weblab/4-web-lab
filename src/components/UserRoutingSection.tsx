@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.jpg';
 const cards = [
   {
     title: 'Ho un negozio',
-    text: 'Se hai un negozio fisico e vuoi portare più clienti dal web al punto vendita, questa è la soluzione giusta per te.',
+    text: 'Il sito che ogni negozio dovrebbe avere, semplice, chiaro nei servizi offerti, bello da vedere e orientato a Google per la visibilità. A partire da 199€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: 'Sono un professionista',
-    text: 'Se lavori come libero professionista e vuoi presentarti online in modo credibile e acquisire nuovi contatti.',
+    text: 'Siti web per i professionisti di qualsiasi settore. Una necessità nel 2026, dall\'elettricista all\'avvocato. La prima credibilità si costruisce sul web. A partire da 549€',
     cta: 'Scopri i siti per professionisti',
     link: '/realizzazione-siti-web-per-professionisti',
     image: cardProfessionista,
@@ -26,7 +26,7 @@ const cards = [
   },
   {
     title: 'Ho un\'azienda',
-    text: 'Se hai un\'azienda e hai bisogno di un sito strutturato, completo e pensato per crescere nel tempo.',
+    text: 'Siti web aziendali. Dalle imprese più piccole a quelle più strutturate. Realizziamo siti web nati per un solo scopo, aumentare visibilità, credibilità e nuovi clienti. A partire da 899€',
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
@@ -84,7 +84,7 @@ const UserRoutingSection = () => {
 
                   {/* Content */}
                   <div className="relative h-full flex flex-col justify-end p-8 md:p-9">
-                    <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center gap-3 mb-3 mt-auto">
                       <div className="w-10 h-10 rounded-xl bg-white/15 backdrop-blur-md flex items-center justify-center border border-white/20 group-hover:bg-accent/80 transition-colors duration-500 shrink-0">
                         <Icon className="w-5 h-5 text-white" aria-hidden="true" />
                       </div>
@@ -92,7 +92,7 @@ const UserRoutingSection = () => {
                         {card.title}
                       </h3>
                     </div>
-                    <p className="text-white/85 text-base leading-relaxed mb-6 max-w-sm">
+                    <p className="text-white/85 text-base leading-relaxed mb-6 max-w-sm min-h-[8rem] md:min-h-[9rem]">
                       {card.text}
                     </p>
 

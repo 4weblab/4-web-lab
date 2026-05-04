@@ -57,7 +57,7 @@ const Hero = () => {
       <div className="container-section relative z-10 py-24">
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
           {/* Left: main content */}
-          <div className="max-w-xl text-left">
+          <div className="max-w-3xl text-left">
             <h1
               className="heading-1 text-primary-foreground mb-8 text-balance"
               style={{
@@ -65,16 +65,16 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              Agenzia Web Padova | Siti web per negozi, professionisti e aziende 
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SCEGLI LA MIGLIORE</span>
+              <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, CONSULENZA</span>
             </h1>
 
             <p
-              className="body-large text-primary-foreground mb-14 text-balance whitespace-pre-line"
+              className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-
-              Nessun investimento iniziale da migliaia di Euro.{"\n"}
-              Scopri le soluzioni web per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
+              4 Web Lab realizza il sito su misura del tuo business. SEO mirato, siti moderni e responsivi per cellulare, cose che l' IA ancora non sa fare.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
