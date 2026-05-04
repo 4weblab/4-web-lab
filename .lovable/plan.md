@@ -1,21 +1,29 @@
-# Pulizia residui pagine legacy (opzione B – soft)
+## Modifica H1 della Hero
 
-Mantengo i redirect 301 verso gli articoli del blog (buono per SEO) e rimuovo solo i residui orfani.
+Sostituire l'attuale H1 in `src/components/Hero.tsx` con un titolo a tre righe gerarchiche:
 
-## Modifiche
+```
+SCEGLI LA MIGLIORE
+WEB AGENCY PADOVA
+SITI WEB, SEO, CONSULENZA
+```
 
-1. **Eliminare i file componente orfani** (non più importati da nessuna parte):
-   - `src/pages/CreareSitoConAI.tsx`
-   - `src/pages/QuantoCostaSitoWeb.tsx`
+### Gerarchia visiva
+- **Riga 1** "SCEGLI LA MIGLIORE" → ~60-65% della dimensione della riga 2 (eyebrow/occhiello)
+- **Riga 2** "WEB AGENCY PADOVA" → dimensione principale (eredita `heading-1`, peso 800)
+- **Riga 3** "SITI WEB, SEO, CONSULENZA" → ~60-65% della dimensione della riga 2 (sottotitolo)
 
-2. **Pulire `public/_redirects`**:
-   - rimuovere la riga `/quanto-costa-un-sito-web  /quanto-costa-sito-web  301` (redirect a catena ridondante; chi arriva su `/quanto-costa-sito-web` viene già rediretto dal `<Navigate>` in App.tsx all'articolo del blog)
+In questo modo riga 1 e 3 risultano del 30-40% più piccole rispetto alla centrale, come richiesto.
 
-3. **Aggiornare la memoria del progetto** (`mem://index.md`):
-   - rimuovere le voci `Pricing Guide` e `AI Comparison` dall'elenco Memories (le pagine non esistono più come landing autonome)
-   - eliminare i relativi file di memoria `mem://features/landing-pages/pricing-guide` e `mem://features/landing-pages/ai-comparison-page`
+### Dettagli tecnici
+- Unico `<h1>` mantenuto (SEO): le tre righe sono `<span>` interni con `display:block`, separati da margini verticali ridotti.
+- Tutto in maiuscolo via testo statico (no CSS `uppercase`, così resta esattamente come scritto).
+- Conservati: `text-shadow`, `font-weight: 800`, `letter-spacing: -0.03em`, `text-balance`, classe `text-primary-foreground`.
+- Le righe più piccole useranno `text-[0.6em]` (≈ -40% rispetto al font principale) e `tracking-wide` per leggibilità in maiuscolo; la riga centrale resta sulla classe `heading-1`.
+- Nessuna modifica a sottotitolo, CTA, box promo, immagini Hero, meta tag o JSON-LD.
 
-## Cosa resta invariato
+### Nota SEO
+Il vecchio H1 conteneva "Siti web per negozi, professionisti e aziende". Il nuovo è più sintetico ma copre comunque le keyword principali (Web Agency Padova, Siti Web, SEO, Consulenza). Title/description in `Index.tsx` restano invariati e continuano a coprire i termini long-tail.
 
-- I due `<Route>` con `<Navigate replace>` in `src/App.tsx` rimangono → `/creare-sito-con-intelligenza-artificiale` e `/quanto-costa-sito-web` continuano a redirezionare 301 verso i rispettivi articoli del blog
-- Sitemap già pulita, nessun link interno coinvolto
+### File toccati
+- `src/components/Hero.tsx` (solo blocco `<h1>`)
