@@ -65,9 +65,9 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 whitespace-nowrap">SCEGLI LA MIGLIORE</span>
-              <span className="block my-3 sm:my-4 whitespace-nowrap">WEB AGENCY PADOVA</span>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 whitespace-nowrap">SITI WEB, SEO, CONSULENZA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SCEGLI LA MIGLIORE</span>
+              <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, CONSULENZA</span>
             </h1>
 
             <p
@@ -82,7 +82,6 @@ const Hero = () => {
               <button
                 onClick={handleScrollToContact}
                 className="hero-cta hero-cta-primary"
-                style={{ padding: '0.81rem 1.944rem', fontSize: '0.729rem' }}
                 aria-label="Richiedi un preventivo gratuito">
                 Richiedi preventivo gratuito
               </button>

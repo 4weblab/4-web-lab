@@ -1,29 +1,25 @@
-## Modifica H1 della Hero
+## Problemi rilevati su mobile (390×844)
 
-Sostituire l'attuale H1 in `src/components/Hero.tsx` con un titolo a tre righe gerarchiche:
+Verificati con screenshot del preview:
 
-```
-SCEGLI LA MIGLIORE
-WEB AGENCY PADOVA
-SITI WEB, SEO, CONSULENZA
-```
+1. **"WEB AGENCY PADOVA" sfora orizzontalmente** — il `whitespace-nowrap` aggiunto in precedenza per evitare gli a-capo su desktop forza il testo oltre il bordo viewport su mobile, causando scroll orizzontale e il taglio della "A" finale.
+2. **CTA molto sbilanciati** — il bottone arancione "Richiedi preventivo gratuito" è stato ridotto via `style` inline (padding/font), mentre "Scrivi su WhatsApp" è rimasto alle dimensioni originali. Risultato: due bottoni di taglie totalmente diverse uno sopra l'altro, con quello principale (la conversione primaria!) che appare quasi 1/3 del secondario. Pessima gerarchia visiva e pessimo per CRO.
+3. **"SCEGLI LA MIGLIORE" e "SITI WEB, SEO, CONSULENZA"** stanno comodi su mobile, ma per coerenza conviene applicare la stessa logica responsive a tutte e tre le righe.
 
-### Gerarchia visiva
-- **Riga 1** "SCEGLI LA MIGLIORE" → ~60-65% della dimensione della riga 2 (eyebrow/occhiello)
-- **Riga 2** "WEB AGENCY PADOVA" → dimensione principale (eredita `heading-1`, peso 800)
-- **Riga 3** "SITI WEB, SEO, CONSULENZA" → ~60-65% della dimensione della riga 2 (sottotitolo)
+## Modifiche proposte
 
-In questo modo riga 1 e 3 risultano del 30-40% più piccole rispetto alla centrale, come richiesto.
+**File:** `src/components/Hero.tsx`
 
-### Dettagli tecnici
-- Unico `<h1>` mantenuto (SEO): le tre righe sono `<span>` interni con `display:block`, separati da margini verticali ridotti.
-- Tutto in maiuscolo via testo statico (no CSS `uppercase`, così resta esattamente come scritto).
-- Conservati: `text-shadow`, `font-weight: 800`, `letter-spacing: -0.03em`, `text-balance`, classe `text-primary-foreground`.
-- Le righe più piccole useranno `text-[0.6em]` (≈ -40% rispetto al font principale) e `tracking-wide` per leggibilità in maiuscolo; la riga centrale resta sulla classe `heading-1`.
-- Nessuna modifica a sottotitolo, CTA, box promo, immagini Hero, meta tag o JSON-LD.
+### 1. H1 responsive nowrap
+Sostituire `whitespace-nowrap` con `sm:whitespace-nowrap` sui tre `<span>`. In questo modo:
+- Desktop/tablet (≥640px): le tre righe restano su una sola riga come voluto.
+- Mobile (<640px): il testo può andare a capo naturalmente, niente overflow.
 
-### Nota SEO
-Il vecchio H1 conteneva "Siti web per negozi, professionisti e aziende". Il nuovo è più sintetico ma copre comunque le keyword principali (Web Agency Padova, Siti Web, SEO, Consulenza). Title/description in `Index.tsx` restano invariati e continuano a coprire i termini long-tail.
+### 2. Riportare i due CTA a dimensione coerente
+Rimuovere lo `style={{ padding: '0.81rem 1.944rem', fontSize: '0.729rem' }}` dal bottone "Richiedi preventivo gratuito". Tornano entrambi alla classe `.hero-cta` standard, equilibrati e proporzionati come l'originale (e come il bottone WhatsApp).
 
-### File toccati
-- `src/components/Hero.tsx` (solo blocco `<h1>`)
+Se davvero si vuole un CTA primario "compatto", la strada giusta è creare una variante CSS (`.hero-cta-sm`) e applicarla a entrambi i bottoni, non solo a uno. Ma il consiglio è lasciare le dimensioni originali: il CTA primario di conversione dovrebbe essere ben visibile.
+
+## Cosa NON cambio
+- Layout della sezione, immagine di sfondo, gradient overlay, promo box.
+- Testo della headline e del paragrafo (già aggiornati nei messaggi precedenti).
