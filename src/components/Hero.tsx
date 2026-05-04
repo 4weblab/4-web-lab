@@ -82,7 +82,7 @@ const Hero = () => {
               <button
                 onClick={handleScrollToContact}
                 className="hero-cta hero-cta-primary"
-                style={{ padding: '0.675rem 1.62rem', fontSize: '0.6075rem' }}
+                style={{ padding: '0.81rem 1.944rem', fontSize: '0.729rem' }}
                 aria-label="Richiedi un preventivo gratuito">
                 Richiedi preventivo gratuito
               </button>
