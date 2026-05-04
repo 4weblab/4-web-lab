@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.jpg';
 const cards = [
   {
     title: 'Ho un negozio',
-    text: 'Se hai un negozio fisico e vuoi portare più clienti dal web al punto vendita, questa è la soluzione giusta per te.',
+    text: 'Il sito che ogni negozio dovrebbe avere, semplice, chiaro nei servizi offerti, bello da vedere e orientato a Google per la visibilità. A partire da 199€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
