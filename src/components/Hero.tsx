@@ -71,12 +71,10 @@ const Hero = () => {
             </h1>
 
             <p
-              className="body-large text-primary-foreground mb-14 text-balance whitespace-pre-line"
+              className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-
-              Nessun investimento iniziale da migliaia di Euro.{"\n"}
-              Scopri le soluzioni web per il sito del tuo negozio, della tua professione ( commercialista, elettricista, notaio, idraulico, avvocato etc. ) e per la tua azienda.
+              4 Web Lab realizza il sito su misura del tuo business. SEO mirato, siti moderni e responsivi per cellulare, cose che l' IA ancora non sa fare.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
