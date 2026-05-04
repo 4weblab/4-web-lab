@@ -1,17 +1,21 @@
-## Modifiche prezzi: 199€ + range JSON-LD
+# Pulizia residui pagine legacy (opzione B – soft)
 
-### 1. FAQ homepage (`src/components/HomeFaqPreview.tsx`)
-Risposta "Quanto costa realizzare un sito web?":
-- Da: "Il costo parte generalmente da circa 400€ + IVA per una struttura one-page..."
-- A: "Il costo parte generalmente a partire da 199€ per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO."
+Mantengo i redirect 301 verso gli articoli del blog (buono per SEO) e rimuovo solo i residui orfani.
 
-### 2. Pagina FAQ (`src/pages/FaqSitiWeb.tsx`)
-Aggiornare sia `answerText` (usato nel JSON-LD FAQPage) che `answer` JSX della prima domanda: sostituire `249€` con `199€`.
+## Modifiche
 
-### 3. JSON-LD globale (`src/App.tsx`)
-- Riga 97: `"priceRange": "249€ - 699€+"` → `"priceRange": "199€ - 549€+"`
-- Riga 131: `"minPrice": "249"` → `"minPrice": "199"`
-- Aggiungere `"maxPrice": "549"` accanto al minPrice nel `priceSpecification` per coerenza con il range.
+1. **Eliminare i file componente orfani** (non più importati da nessuna parte):
+   - `src/pages/CreareSitoConAI.tsx`
+   - `src/pages/QuantoCostaSitoWeb.tsx`
 
-### Note (non incluse, non richieste)
-Restano invariati gli altri riferimenti a `249€` (meta description Index/App, SitiWebProfessionisti, SitiWebPadova, QuantoCostaSitoWeb, ecc.) e il `699€` in `BlogWebsiteCostArticle.tsx`. Posso aggiornarli in un passaggio successivo se vuoi allineare tutto.
+2. **Pulire `public/_redirects`**:
+   - rimuovere la riga `/quanto-costa-un-sito-web  /quanto-costa-sito-web  301` (redirect a catena ridondante; chi arriva su `/quanto-costa-sito-web` viene già rediretto dal `<Navigate>` in App.tsx all'articolo del blog)
+
+3. **Aggiornare la memoria del progetto** (`mem://index.md`):
+   - rimuovere le voci `Pricing Guide` e `AI Comparison` dall'elenco Memories (le pagine non esistono più come landing autonome)
+   - eliminare i relativi file di memoria `mem://features/landing-pages/pricing-guide` e `mem://features/landing-pages/ai-comparison-page`
+
+## Cosa resta invariato
+
+- I due `<Route>` con `<Navigate replace>` in `src/App.tsx` rimangono → `/creare-sito-con-intelligenza-artificiale` e `/quanto-costa-sito-web` continuano a redirezionare 301 verso i rispettivi articoli del blog
+- Sitemap già pulita, nessun link interno coinvolto
