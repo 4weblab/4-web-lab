@@ -65,7 +65,9 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              Agenzia Web Padova | Siti web per negozi, professionisti e aziende 
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90">SCEGLI LA MIGLIORE</span>
+              <span className="block">WEB AGENCY PADOVA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 mt-1">SITI WEB, SEO, CONSULENZA</span>
             </h1>
 
             <p
