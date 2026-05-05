@@ -163,7 +163,7 @@ const SitiWebPadova = () => {
                   </div>
                 </div>
                 <h2 className="heading-2">
-                  Servizi web per negozi, professionisti e aziende di Padova <br /> ( e in tutta Italia )
+                  Servizi web per negozi, professionisti e aziende di Padova
                 </h2>
               </AnimatedSection>
 
