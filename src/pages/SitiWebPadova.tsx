@@ -95,8 +95,7 @@ const SitiWebPadova = () => {
                 className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Progettiamo e realizziamo siti web per professionisti, negozi e aziende di Padova e provincia, con un
-                metodo strutturato e orientato ai risultati.
+                Realizziamo siti professionali per negozi, professionisti e aziende di Padova e provincia. Da 199€, SEO locale e supporto continuativo.
               </p>
               <button
                 onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
