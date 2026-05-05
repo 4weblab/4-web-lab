@@ -17,7 +17,7 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Padova | Agenzia Locale da 249€ | 4 Web Lab</title>
+        <title>Realizzazione Siti Web Padova | Agenzia Locale da 199€ | 4 Web Lab</title>
         <meta
           name="description"
           content="Realizzazione siti web Padova: agenzia locale specializzata in siti professionali per aziende, negozi e professionisti. Da 249€ tutto incluso. SEO locale, design moderno e assistenza dedicata. Preventivo gratuito in 24h!" />
@@ -26,14 +26,14 @@ const SitiWebPadova = () => {
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione Siti Web Padova | Agenzia Locale da 249€ | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione Siti Web Padova | Agenzia Locale da 199€ | 4 Web Lab" />
         <meta property="og:description" content="Realizzazione siti web Padova: agenzia locale specializzata in siti professionali per aziende, negozi e professionisti. Da 249€ tutto incluso. SEO locale, design moderno e assistenza dedicata. Preventivo gratuito in 24h!" />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Padova | Agenzia Locale da 249€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Realizzazione Siti Web Padova | Agenzia Locale da 199€ | 4 Web Lab" />
         <meta name="twitter:description" content="Realizzazione siti web Padova: agenzia locale specializzata in siti professionali per aziende, negozi e professionisti. Da 249€ tutto incluso. SEO locale, design moderno e assistenza dedicata. Preventivo gratuito in 24h!" />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify({

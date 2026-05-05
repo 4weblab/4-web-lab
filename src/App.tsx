@@ -40,7 +40,7 @@ const queryClient = new QueryClient();
 
 const siteMetadata = {
   title: "Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | Soluzioni web per la tua impresa | 4 Web Lab",
-  description: "Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 249€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!",
+  description: "Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 199€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
 };
@@ -95,7 +95,7 @@ const App = () => (
             "sameAs": "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
           },
           "foundingDate": "2026",
-          "priceRange": "199€ - 549€+",
+          "priceRange": "199€ - 899€+",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Via Belluno 44",
@@ -130,7 +130,7 @@ const App = () => (
                 "priceSpecification": {
                   "@type": "PriceSpecification",
                   "minPrice": "199",
-                  "maxPrice": "549",
+                  "maxPrice": "899",
                   "priceCurrency": "EUR"
                 },
                 "description": "Sviluppo siti web su misura per negozi, aziende e professionisti a Padova e provincia."
