@@ -16,8 +16,7 @@ const Index = () => {
     <>
       <Helmet>
         <title>
-          Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | Soluzioni web Padova per la tua
-          impresa | 4 Web Lab
+          Agenzia Web Padova - Siti web, SEO, da 199€ | 4 Web Lab
         </title>
         <meta
           name="description"
