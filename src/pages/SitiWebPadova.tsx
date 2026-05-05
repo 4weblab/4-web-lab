@@ -89,7 +89,7 @@ const SitiWebPadova = () => {
                 className="heading-1 text-primary-foreground mb-8 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Realizzazione Siti Web a Padova – Agenzia Locale e Nazionale
+                Realizzazione Siti Web a Padova – la soluzione web per il tuo business
               </h1>
               <p
                 className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance"
