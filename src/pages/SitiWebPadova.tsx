@@ -222,7 +222,7 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Settings className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Un metodo chiaro, anche a livello locale</h2>
+                <h2 className="heading-2">Un metodo chiaro e rapido</h2>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
