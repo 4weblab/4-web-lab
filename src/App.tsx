@@ -35,6 +35,7 @@ const DemoIES = lazy(() => import("./pages/DemoIES"));
 const DemoSovem = lazy(() => import("./pages/DemoSovem"));
 const DemoPlatiumed = lazy(() => import("./pages/DemoPlatiumed"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Realizzazioni = lazy(() => import("./pages/Realizzazioni"));
 
 const queryClient = new QueryClient();
 
@@ -194,6 +195,7 @@ const App = () => (
               <Route path="/blog/siti-web-piattaforme-preventivi-online-conviene" element={<BlogQuotePlatformsArticle />} />
               <Route path="/blog/creare-sito-web-da-soli-conviene" element={<BlogDiyWebsiteArticle />} />
               <Route path="/contatti" element={<Contact />} />
+              <Route path="/realizzazioni" element={<Realizzazioni />} />
               <Route path="/demo-dv" element={<DemoDV />} />
               <Route path="/demo-rbt" element={<DemoRBT />} />
               <Route path="/demo-zardini" element={<DemoZardini />} />
