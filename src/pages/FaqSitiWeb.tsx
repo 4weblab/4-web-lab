@@ -13,65 +13,113 @@ const faqs = [
   id: 'costo-sito-web',
   question: 'Quanto costa realizzare un sito web?',
   answerText:
-  'Il costo di un sito web professionale parte generalmente a partire da 199€ per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.',
+  'Da 199€ una tantum per una one-page professionale. Il prezzo cresce in base a numero di pagine, funzionalità e ottimizzazione SEO: per un sito vetrina aziendale si parte da 899€, per un professionista da 549€. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.',
   answer:
-  <>Il costo di un sito web professionale parte <strong>generalmente</strong> a partire da 199€ per una struttura one-page e può aumentare in base a numero di pagine, funzionalità e livello di ottimizzazione SEO. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/quanto-costa-sito-web" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
+  <><strong>Da 199€</strong> una tantum per una one-page professionale. Il prezzo cresce in base a numero di pagine, funzionalità e ottimizzazione SEO: per un sito vetrina aziendale si parte da 899€, per un professionista da 549€. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
 },
 {
   id: 'prezzo-sito-professionista',
   question: 'Qual è il prezzo di un sito web per un professionista?',
   answerText:
-  'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.',
+  'Da 549€ una tantum per un sito professionale già ottimizzato. Per uno studio o un libero professionista il sito deve trasmettere autorevolezza e chiarezza, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.',
   answer:
-  'Per un professionista il sito deve trasmettere autorevolezza e chiarezza. Un sito essenziale ma ben strutturato può partire da una base contenuta, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.'
+  <><strong>Da 549€</strong> una tantum per un sito professionale già ottimizzato. Per uno studio o un libero professionista il sito deve trasmettere autorevolezza e chiarezza, con possibilità di espansione futura. L'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.<br /><Link to="/siti-web-per-professionisti" className="text-sm text-accent hover:underline inline-block mt-2">Siti web per professionisti</Link></>
 },
 {
   id: 'tempi-realizzazione',
   question: 'In quanto tempo viene realizzato un sito web?',
   answerText:
-  'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.',
+  '2–4 settimane per un sito standard, in base alla complessità e alla rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.',
   answer:
-  'Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.'
+  <><strong>2–4 settimane</strong> per un sito standard, in base alla complessità e alla rapidità nella consegna dei materiali. Una pianificazione chiara accelera il processo e riduce revisioni inutili.</>
 },
 {
   id: 'dominio-e-hosting',
   question: 'Il sito web include dominio e hosting?',
   answerText:
-  'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.',
+  'Sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il dominio è sempre di proprietà esclusiva del cliente.',
   answer:
-  'Generalmente sì. Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il Dominio invece è sempre di proprietà esclusiva del cliente.'
+  <><strong>Sì.</strong> Il servizio comprende configurazione tecnica, hosting professionale e certificato SSL. È fondamentale che il sito sia ospitato su server affidabili per garantire sicurezza e corretta indicizzazione. Il dominio è sempre di proprietà esclusiva del cliente.</>
 },
 {
   id: 'social-o-sito-web',
   question: 'È meglio avere solo i social o anche un sito web?',
   answerText:
-  'I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.',
+  'Servono entrambi, ma il sito viene prima. I social sono utili per visibilità, ma non sostituiscono un sito web: il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.',
   answer:
-  <>I social sono utili per visibilità, ma non sostituiscono un sito web. Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.<br /><Link to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Sito web o social: cosa conviene davvero nel 2026?</Link></>
+  <><strong>Servono entrambi, ma il sito viene prima.</strong> I social sono utili per visibilità, ma non sostituiscono un sito web: il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.<br /><Link to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Sito web o social: cosa conviene davvero nel 2026?</Link></>
 },
 {
   id: 'google-business-basta',
   question: 'Google Business basta per trovare clienti?',
   answerText:
-  'Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.',
+  'No, da solo non basta. Google Business è importante per la visibilità locale, ma un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento sia nei risultati classici di Google sia negli AI Overviews.',
   answer:
-  <>Google Business è importante per la visibilità locale, ma non è sufficiente da solo. Un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento nei risultati di ricerca.<br /><Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-sm text-accent hover:underline inline-block mt-2">Perché il tuo sito non si trova su Google</Link></>
+  <><strong>No, da solo non basta.</strong> Google Business è importante per la visibilità locale, ma un sito web permette di approfondire servizi, mostrare casi reali e migliorare il posizionamento sia nei risultati classici di Google sia negli AI Overviews.<br /><Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-sm text-accent hover:underline inline-block mt-2">Perché il tuo sito non si trova su Google</Link></>
 },
 {
   id: 'vetrina-vs-landing',
   question: 'Qual è la differenza tra sito vetrina e landing page?',
   answerText:
-  'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.',
+  'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è una pagina singola focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.',
   answer:
-  'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.'
+  'Il sito vetrina presenta l\'attività in modo completo con più sezioni informative. La landing page è una pagina singola focalizzata su un obiettivo specifico, come la generazione di contatti per un servizio mirato.'
 },
 {
   id: 'sito-web-trova-clienti',
   question: 'Un sito web aiuta davvero a trovare clienti?',
   answerText:
-  'Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un sito generato automaticamente con l\'IA.',
+  'Sì, se progettato e ottimizzato bene. Un sito professionale può generare richieste di contatto in modo costante: è uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un sito generato automaticamente con l\'IA.',
   answer:
-  <>Un sito ben progettato e ottimizzato può generare richieste di contatto in modo costante. È uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
+  <><strong>Sì, se progettato e ottimizzato bene.</strong> Un sito professionale può generare richieste di contatto in modo costante: è uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
+},
+{
+  id: 'siti-web-servono-ancora-2026-ai',
+  question: 'I siti web servono ancora nel 2026 con l\'arrivo dell\'AI?',
+  answerText:
+  'Sì, oggi più che mai. Gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano proprio sui contenuti dei siti web per generare le risposte: senza un sito autorevole l\'attività non viene citata né nei risultati classici né in quelli generativi. Il sito resta la fonte ufficiale del brand.',
+  answer:
+  <><strong>Sì, oggi più che mai.</strong> Gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano proprio sui contenuti dei siti web per generare le risposte: senza un sito autorevole l'attività non viene citata né nei risultati classici né in quelli generativi. Il sito resta la fonte ufficiale del brand.<br /><Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline inline-block mt-2">Siti web e intelligenza artificiale</Link></>
+},
+{
+  id: 'come-comparire-ai-overviews-google',
+  question: 'Come fa il mio sito a comparire negli AI Overviews di Google?',
+  answerText:
+  'Servono contenuti chiari, schema JSON-LD corretto e autorevolezza tematica. Google estrae le risposte dei suoi AI Overviews da pagine ben strutturate: titoli gerarchici, risposte sintetiche in apertura, dati concreti, FAQ con schema FAQPage e velocità di caricamento elevata. Un sito tecnico e disordinato viene ignorato dall\'AI.',
+  answer:
+  <><strong>Servono contenuti chiari, schema JSON-LD corretto e autorevolezza tematica.</strong> Google estrae le risposte dei suoi AI Overviews da pagine ben strutturate: titoli gerarchici, risposte sintetiche in apertura, dati concreti, FAQ con schema FAQPage e velocità di caricamento elevata. Un sito tecnico e disordinato viene ignorato dall'AI.<br /><Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className="text-sm text-accent hover:underline inline-block mt-2">Perché il tuo sito non si trova su Google</Link></>
+},
+{
+  id: 'cosa-e-sge-search-generative-experience',
+  question: 'Cos\'è la SGE (Search Generative Experience) e come cambia la SEO?',
+  answerText:
+  'La SGE è la modalità di ricerca generativa di Google che mostra una risposta sintetica creata dall\'AI sopra i risultati classici, con citazioni alle fonti. Cambia la SEO perché premia i siti capaci di rispondere in modo diretto e strutturato a una domanda specifica, non più solo quelli posizionati per parole chiave generiche.',
+  answer:
+  <><strong>La SGE è la modalità di ricerca generativa di Google</strong> che mostra una risposta sintetica creata dall'AI sopra i risultati classici, con citazioni alle fonti. Cambia la SEO perché premia i siti capaci di rispondere in modo diretto e strutturato a una domanda specifica, non più solo quelli posizionati per parole chiave generiche.</>
+},
+{
+  id: 'sito-generato-ai-funziona',
+  question: 'Un sito generato con ChatGPT, Wix AI o tool no-code è affidabile?',
+  answerText:
+  'Funziona come prototipo, non come strumento di business. I siti generati automaticamente dall\'AI hanno spesso codice ridondante, contenuti generici, scarsa ottimizzazione SEO e problemi di velocità. Possono andare bene per testare un\'idea, ma raramente generano contatti reali e quasi mai vengono citati dagli AI Overviews.',
+  answer:
+  <><strong>Funziona come prototipo, non come strumento di business.</strong> I siti generati automaticamente dall'AI hanno spesso codice ridondante, contenuti generici, scarsa ottimizzazione SEO e problemi di velocità. Possono andare bene per testare un'idea, ma raramente generano contatti reali e quasi mai vengono citati dagli AI Overviews.<br /><Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline inline-block mt-2">Siti web creati con intelligenza artificiale</Link></>
+},
+{
+  id: 'velocita-sito-google-ai',
+  question: 'Quanto è importante la velocità di un sito per Google e per gli AI?',
+  answerText:
+  'È un fattore decisivo. Google misura i Core Web Vitals (LCP, INP, CLS) e penalizza i siti lenti sia nei risultati classici sia negli AI Overviews. Un sito ottimizzato carica in meno di 2,5 secondi su mobile, riduce il bounce rate e ha più probabilità di essere selezionato dall\'AI come fonte attendibile.',
+  answer:
+  <><strong>È un fattore decisivo.</strong> Google misura i Core Web Vitals (LCP, INP, CLS) e penalizza i siti lenti sia nei risultati classici sia negli AI Overviews. Un sito ottimizzato carica in meno di 2,5 secondi su mobile, riduce il bounce rate e ha più probabilità di essere selezionato dall'AI come fonte attendibile.<br /><Link to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">5 segnali di un sito obsoleto</Link></>
+},
+{
+  id: 'serve-blog-con-ai',
+  question: 'Serve ancora avere un blog se l\'AI risponde direttamente agli utenti?',
+  answerText:
+  'Sì, perché l\'AI cita proprio i blog. Gli AI Overviews e gli assistenti come ChatGPT, Gemini e Perplexity costruiscono le risposte aggregando contenuti di blog autorevoli e ben strutturati. Senza articoli di qualità, l\'attività perde la possibilità di essere riconosciuta come fonte di settore e di intercettare nuovo traffico qualificato.',
+  answer:
+  <><strong>Sì, perché l'AI cita proprio i blog.</strong> Gli AI Overviews e gli assistenti come ChatGPT, Gemini e Perplexity costruiscono le risposte aggregando contenuti di blog autorevoli e ben strutturati. Senza articoli di qualità, l'attività perde la possibilità di essere riconosciuta come fonte di settore e di intercettare nuovo traffico qualificato.<br /><Link to="/blog" className="text-sm text-accent hover:underline inline-block mt-2">Vai al blog di 4 Web Lab</Link></>
 }];
 
 
