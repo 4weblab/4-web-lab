@@ -29,30 +29,30 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab</title>
+        <title>Siti web per Professionisti, SEO locale | 4 Web Lab</title>
         <meta
           name="description"
-          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 549€."
+          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
         />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
-        <meta property="og:title" content="Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab" />
+        <meta property="og:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 549€."
+          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
-        <meta name="twitter:title" content="Siti web per Professionisti di settore, SEO locale e personalizzati | 4 Web Lab" />
+        <meta name="twitter:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Sito web professionale per la tua attività o studio: avvocato, elettricista, notaio, idraulico, geometra, pittore, architetto. Sviluppo sito web personalizzato e mirato, da 549€."
+          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">
