@@ -162,51 +162,9 @@ const Realizzazioni = () => {
     <>
       <Helmet>
         <title>Realizzazioni siti web per aziende e professionisti | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Guarda esempi di siti web professionali realizzati da 4 Web Lab: demo, concept e restyling per aziende, professionisti, negozi e attività locali."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/realizzazioni" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://4weblab.it/realizzazioni" />
-        <meta property="og:title" content="Realizzazioni siti web per aziende e professionisti | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Guarda esempi di siti web professionali realizzati da 4 Web Lab: demo, concept e restyling per aziende, professionisti, negozi e attività locali."
-        />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
-        <meta property="og:locale" content="it_IT" />
-        <meta property="og:site_name" content="4 Web Lab" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Realizzazioni siti web per aziende e professionisti | 4 Web Lab" />
-        <meta
-          name="twitter:description"
-          content="Guarda esempi di siti web professionali realizzati da 4 Web Lab: demo, concept e restyling per aziende, professionisti, negozi e attività locali."
-        />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "Realizzazioni siti web 4 Web Lab",
-            description:
-              "Raccolta di realizzazioni, demo e concept di siti web sviluppati da 4 Web Lab per aziende, professionisti e attività locali.",
-            url: "https://4weblab.it/realizzazioni",
-            inLanguage: "it-IT",
-            isPartOf: { "@id": "https://4weblab.it/#business" },
-            about: { "@id": "https://4weblab.it/#business" },
-            mainEntity: {
-              "@type": "ItemList",
-              itemListElement: projects.map((p, i) => ({
-                "@type": "ListItem",
-                position: i + 1,
-                name: p.title,
-                url: `https://4weblab.it/realizzazioni/${p.slug}`,
-              })),
-            },
-          })}
-        </script>
+        <meta name="robots" content="noindex, nofollow" />
+        <meta name="googlebot" content="noindex, nofollow" />
+        <meta name="bingbot" content="noindex, nofollow" />
       </Helmet>
 
       <Header satelliteMode />
