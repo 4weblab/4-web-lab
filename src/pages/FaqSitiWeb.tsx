@@ -126,6 +126,20 @@ const faqs = [
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
+  '@id': 'https://4weblab.it/faq-realizzazione-siti-web#faqpage',
+  url: 'https://4weblab.it/faq-realizzazione-siti-web',
+  inLanguage: 'it-IT',
+  about: [
+    { '@type': 'Thing', name: 'Realizzazione siti web' },
+    { '@type': 'Thing', name: 'AI Overviews di Google' },
+    { '@type': 'Thing', name: 'Search Generative Experience (SGE)' },
+    { '@type': 'Thing', name: 'SEO 2026' },
+    { '@type': 'Place', name: 'Padova' },
+  ],
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['h1', '.faq-answer'],
+  },
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
@@ -134,6 +148,15 @@ const faqSchema = {
       text: faq.answerText
     }
   }))
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://4weblab.it/' },
+    { '@type': 'ListItem', position: 2, name: 'FAQ', item: 'https://4weblab.it/faq-realizzazione-siti-web' },
+  ],
 };
 
 const FaqItem = ({ faq, index }: {faq: typeof faqs[0];index: number;}) => {
@@ -169,10 +192,10 @@ const FaqItem = ({ faq, index }: {faq: typeof faqs[0];index: number;}) => {
         role="region"
         aria-labelledby={`faq-trigger-${index}`}
         className={`transition-all duration-300 ease-in-out ${
-        open ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`
+        open ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'} overflow-hidden`
         }>
 
-        <div className="px-6 pb-6 text-muted-foreground body-base leading-relaxed">
+        <div className="faq-answer px-6 pb-6 text-muted-foreground body-base leading-relaxed">
           {faq.answer}
         </div>
       </div>
