@@ -26,14 +26,6 @@ const BlogOutdatedWebsiteArticle = lazy(() => import("./pages/BlogOutdatedWebsit
 const BlogNotFoundOnGoogleArticle = lazy(() => import("./pages/BlogNotFoundOnGoogleArticle"));
 const BlogQuotePlatformsArticle = lazy(() => import("./pages/BlogQuotePlatformsArticle"));
 const BlogDiyWebsiteArticle = lazy(() => import("./pages/BlogDiyWebsiteArticle"));
-const DemoDV = lazy(() => import("./pages/DemoDV"));
-const DemoRBT = lazy(() => import("./pages/DemoRBT"));
-const DemoZardini = lazy(() => import("./pages/DemoZardini"));
-const DemoComit = lazy(() => import("./pages/DemoComit"));
-const DemoSI2000 = lazy(() => import("./pages/DemoSI2000"));
-const DemoIES = lazy(() => import("./pages/DemoIES"));
-const DemoSovem = lazy(() => import("./pages/DemoSovem"));
-const DemoPlatiumed = lazy(() => import("./pages/DemoPlatiumed"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Realizzazioni = lazy(() => import("./pages/Realizzazioni"));
 
@@ -196,14 +188,6 @@ const App = () => (
               <Route path="/blog/creare-sito-web-da-soli-conviene" element={<BlogDiyWebsiteArticle />} />
               <Route path="/contatti" element={<Contact />} />
               <Route path="/realizzazioni" element={<Realizzazioni />} />
-              <Route path="/demo-dv" element={<DemoDV />} />
-              <Route path="/demo-rbt" element={<DemoRBT />} />
-              <Route path="/demo-zardini" element={<DemoZardini />} />
-              <Route path="/demo-comit" element={<DemoComit />} />
-              <Route path="/demo-si2000" element={<DemoSI2000 />} />
-              <Route path="/demo-ies" element={<DemoIES />} />
-              <Route path="/demo-sovem" element={<DemoSovem />} />
-              <Route path="/demo-platiumed" element={<DemoPlatiumed />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/cookie" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />

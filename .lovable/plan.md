@@ -1,19 +1,35 @@
+# Rimozione pagine demo
+
 ## Obiettivo
-Allineare il link "Scopri i siti..." in basso in tutte e tre le card della sezione "Dicci chi sei", indipendentemente dalla lunghezza del testo descrittivo (i nuovi testi hanno lunghezze diverse).
+Eliminare completamente tutte le pagine `/demo-xxx` dal progetto e dalla sitemap.
 
-## Modifica
-**File:** `src/components/UserRoutingSection.tsx`
+## Cosa eliminare
 
-Nel layout interno della card (già `flex flex-col justify-end`), modificare:
+**File pagina (8):**
+- `src/pages/DemoDV.tsx`
+- `src/pages/DemoRBT.tsx`
+- `src/pages/DemoZardini.tsx`
+- `src/pages/DemoComit.tsx`
+- `src/pages/DemoSI2000.tsx`
+- `src/pages/DemoIES.tsx`
+- `src/pages/DemoSovem.tsx`
+- `src/pages/DemoPlatiumed.tsx`
 
-1. Il container content da `justify-end` a `justify-end` invariato — ma rendere il blocco titolo+descrizione una struttura unica e spingere il CTA in fondo.
+**Componente correlato:**
+- `src/components/BarberLightbox.tsx` (se usato solo dalle demo — verificare in fase di build)
 
-Soluzione semplice e robusta:
-- Aggiungere `mt-auto` al `<span>` del CTA così viene ancorato al bordo inferiore della card.
-- Cambiare `justify-end` → `justify-between` sul container, così il blocco titolo+testo resta in alto-rispetto-alla-base e il CTA in basso.
+## Modifiche file
 
-Approccio scelto (minimo impatto): aggiungere `mt-auto` al `<span>` del CTA. Questo sposta il CTA in fondo al flex column. La descrizione diventa quindi seguita da spazio elastico fino al CTA, garantendo che il link sia allineato in basso in tutte e tre le card.
+**`src/App.tsx`**
+- Rimuovere gli 8 import `lazy(() => import("./pages/DemoXxx"))`
+- Rimuovere le 8 `<Route path="/demo-xxx" ...>`
 
-## Cosa NON cambio
-- Altezza minima della card, padding, immagine di sfondo, gradient, hover.
-- Testi.
+**`public/sitemap.xml`**
+- Rimuovere le entry `/demo-dv` e `/demo-rbt` aggiunte di recente
+
+**`src/pages/Realizzazioni.tsx`**
+- Verificare e rimuovere eventuali link interni verso `/realizzazioni/demo-*` o `/demo-*` (la pagina Realizzazioni è stata creata con riferimenti a future route demo)
+
+## Note
+- Nessuna delle route `/demo-*` viene linkata dall'header/footer principali, quindi nessun impatto sulla navigazione globale.
+- Dopo la rimozione, controllare che non restino import orfani che rompano il build.
