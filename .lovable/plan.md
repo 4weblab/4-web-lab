@@ -1,56 +1,43 @@
 ## Obiettivo
-
-Rendere la pagina `/faq-realizzazione-siti-web` (e l'anteprima in home) ottimale per essere citata dagli **AI Overviews di Google, SGE, ChatGPT Search, Perplexity e Gemini**, mantenendo il tono attuale.
+Rendere `/realizzazioni` accessibile solo via link diretto, ma invisibile a motori di ricerca, AI crawler, sitemap e link interni — finché non sarà pronta per il pubblico.
 
 ## Cosa cambia
 
-### 1. Restyling delle 8 risposte esistenti (formato AI-snippet)
-Ogni risposta riscritta in struttura **TL;DR + dettaglio**:
-- Prima frase: risposta secca con dato/numero quando possibile (es. "Sì." / "Da 199€." / "2-4 settimane.")
-- Poi 1-2 frasi di contesto come oggi
-- Tono identico all'attuale (professionale-divulgativo)
-- `answerText` dello schema riallineato al nuovo testo
+### 1. Meta robots noindex sulla pagina
+In `src/pages/Realizzazioni.tsx` modifico l'`<Helmet>`:
+- `<meta name="robots" content="noindex, nofollow" />`
+- `<meta name="googlebot" content="noindex, nofollow" />`
+- Rimuovo `<link rel="canonical">` e i tag `og:*`/`twitter:*` (inutili e fuorvianti su pagina noindex)
+- Rimuovo lo schema JSON-LD `CollectionPage` (non vogliamo segnalarla)
 
-### 2. Nuove FAQ AI-focused (6 domande)
-Aggiunte alla pagina principale:
-- "I siti web servono ancora nel 2026 con l'arrivo dell'AI?"
-- "Come fa il mio sito a comparire negli AI Overviews di Google?"
-- "Cos'è la SGE (Search Generative Experience) e come cambia la SEO?"
-- "Un sito generato con ChatGPT, Wix AI o tool no-code è affidabile?"
-- "Quanto è importante la velocità di un sito per Google e per gli AI?"
-- "Serve ancora avere un blog se l'AI risponde direttamente agli utenti?"
+### 2. Rimozione dalla sitemap
+In `public/sitemap.xml` elimino l'entry `<url><loc>https://4weblab.it/realizzazioni</loc>...</url>`.
 
-Tutte con interlinking verso articoli esistenti del blog (AI website, DIY website, not-found-on-google, outdated-website).
+### 3. Esclusione esplicita in robots.txt
+In `public/robots.txt` aggiungo:
+```
+User-agent: *
+Disallow: /realizzazioni
+```
+(mantenendo `Allow: /` e la direttiva `Sitemap:` esistenti)
 
-### 3. Schema JSON-LD arricchito
-Sulla pagina FAQ:
-- `FAQPage` aggiornato con tutte le 14 Q&A
-- `BreadcrumbList` JSON-LD (oggi solo visivo)
-- `speakable` su FAQPage per voice search / AI assistant
-- Property `about` e `mentions` con entità chiave: Google, AI Overviews, SGE, GDPR, Padova, sito web
+### 4. Rimozione da llms.txt
+In `public/llms.txt` elimino la riga `- [Realizzazioni](/realizzazioni): ...` per non segnalarla agli AI crawler.
 
-### 4. Fix UX accordion mobile
-`max-h-96` → `max-h-[800px]` per evitare clip su risposte lunghe (specie le nuove FAQ AI).
-
-### 5. Interlinking rinforzato
-- Aggiungere link incrociati tra le FAQ AI e le landing `/siti-web-aziendali`, `/siti-web-per-professionisti`, `/realizzazione-siti-web-padova`
-- Aggiornare `HomeFaqPreview` per includere 1 nuova FAQ AI tra le 3 in anteprima (mantenendo il CTA "Leggi tutte")
-
-### 6. Meta tag pagina
-- `<title>` aggiornato: "FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab" (≤60 char)
-- `description` aggiornata per includere keyword "AI Overviews" e "SGE"
+### 5. Verifica link interni
+Controllo se `/realizzazioni` è linkata da Header, Footer, Hero, ServicesSection o altre pagine. Se sì, rimuovo i link visibili (la rotta resta attiva, raggiungibile solo digitando l'URL).
 
 ## Cosa NON cambia
-- Design, colori, layout della pagina
-- Componenti `FaqItem`, animazioni, breadcrumb visivo
-- Footer, header, ContactSection
-- Pricing, CTA principali
-- Nessuna nuova pagina (resta tutto su `/faq-realizzazione-siti-web`)
+- La rotta `/realizzazioni` in `src/App.tsx` resta attiva → la pagina è raggiungibile via link diretto
+- Il file `Realizzazioni.tsx` non viene cancellato, solo "smarcato" dai segnali SEO
+- Nessuna modifica al design o al contenuto della pagina
 
 ## File toccati
-- `src/pages/FaqSitiWeb.tsx` — riscrittura array `faqs`, nuovo schema JSON-LD, fix max-h, meta tag
-- `src/components/HomeFaqPreview.tsx` — sostituzione di 1 FAQ con una AI-focused
-- `mem://features/landing-pages/faq-page` — aggiornamento memoria con nuova struttura
+- `src/pages/Realizzazioni.tsx` — meta noindex, rimozione canonical/og/JSON-LD
+- `public/sitemap.xml` — rimozione entry
+- `public/robots.txt` — aggiunta Disallow
+- `public/llms.txt` — rimozione riga
+- Eventuali componenti con link a `/realizzazioni` (da verificare)
 
-## Risultato atteso
-La pagina diventa una delle prime fonti che gli AI generativi citano in italiano per query come *"quanto costa un sito web 2026"*, *"sito generato con AI funziona"*, *"cosa sono gli AI Overviews"*, aumentando autorevolezza e traffico qualificato verso 4 Web Lab.
+## Risultato
+Google, Bing, ChatGPT, Perplexity e gli altri crawler non indicizzeranno né scansioneranno `/realizzazioni`. Tu potrai continuare a sviluppare la pagina e visualizzarla aprendo direttamente l'URL nel browser. Quando sarà pronta basterà rifare il percorso al contrario.
