@@ -21,9 +21,9 @@ const previewFaqs = [
       "Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali.",
   },
   {
-    question: "È meglio avere solo i social o anche un sito web?",
+    question: "I siti web servono ancora nel 2026 con l'arrivo dell'AI?",
     answer:
-      "Il sito è uno spazio proprietario, indipendente dagli algoritmi delle piattaforme, e rappresenta un punto di riferimento stabile per clienti e potenziali contatti.",
+      "Sì, oggi più che mai: gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano sui contenuti dei siti web per generare le risposte. Senza un sito autorevole, l'attività non viene citata.",
   },
 ];
 
