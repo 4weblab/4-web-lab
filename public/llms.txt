@@ -1,0 +1,33 @@
+# 4 Web Lab
+
+> Agenzia web di Padova specializzata nella realizzazione di siti professionali per negozi, professionisti e aziende. Pacchetti una tantum da 199€, SEO locale e assistenza dedicata.
+
+4 Web Lab (Legnaro, Padova) progetta siti web veloci, ottimizzati SEO e conformi al GDPR. Telefono: +39 351 465 6042. Sito: https://4weblab.it.
+
+## Pages
+
+- [Home](/): chi siamo, servizi e contatti.
+- [Realizzazione siti web Padova](/realizzazione-siti-web-padova): landing locale per Padova e provincia.
+- [Siti web per negozi](/siti-web-per-negozi): pacchetto da 199€ per attività commerciali.
+- [Siti web per professionisti](/realizzazione-siti-web-per-professionisti): da 549€ per studi e liberi professionisti.
+- [Siti web aziendali](/siti-web-aziendali): da 899€ per PMI strutturate.
+- [Realizzazioni](/realizzazioni): demo, concept e progetti realizzati.
+- [FAQ siti web](/faq-realizzazione-siti-web): risposte su costi, tempi, AI e SEO.
+- [Blog](/blog): guide su siti web, costi, GDPR, SEO e intelligenza artificiale.
+- [Contatti](/contatti): preventivo gratuito in 24 ore.
+
+## Blog
+
+- [Quanto costa un sito web nel 2026](/blog/quanto-costa-un-sito-web-nel-2026): prezzi reali in Italia.
+- [Siti web creati con intelligenza artificiale](/blog/siti-web-creati-con-intelligenza-artificiale): opportunità e rischi.
+- [Sito web o social network](/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026): cosa conviene davvero.
+- [GDPR siti web 2026](/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy): obblighi cookie e privacy.
+- [Sito web obsoleto](/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026): 5 segnali che fanno perdere clienti.
+- [Perché il tuo sito non si trova su Google](/blog/perche-il-tuo-sito-non-si-trova-su-google): SEO di base.
+- [Siti web su piattaforme di preventivi](/blog/siti-web-piattaforme-preventivi-online-conviene): conviene davvero?
+- [Creare un sito da soli](/blog/creare-sito-web-da-soli-conviene): rischi e costi nascosti.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Cookie Policy](/cookie)

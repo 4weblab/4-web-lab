@@ -92,7 +92,7 @@ const articles = [
 const Blog = () => {
   const pageTitle = "Blog siti web 2026: guide, costi e SEO | 4 Web Lab";
   const pageDescription =
-    "Guide pratiche 2026 su siti web, costi reali, GDPR, SEO e intelligenza artificiale. Consigli per aziende, professionisti e negozi firmati 4 Web Lab, agenzia web di Padova.";
+    "Guide 2026 su siti web, costi, GDPR, SEO e AI. Consigli per aziende, professionisti e negozi da 4 Web Lab, agenzia web di Padova.";
   const pageKeywords =
     "blog siti web, guide SEO, costi sito web, GDPR siti web, intelligenza artificiale siti web, agenzia web Padova, siti web aziendali, siti web professionisti";
   const pageUrl = "https://4weblab.it/blog";
