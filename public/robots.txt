@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /realizzazioni/demo-metalmeccanica
 
 Sitemap: https://4weblab.it/sitemap.xml
