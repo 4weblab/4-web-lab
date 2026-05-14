@@ -49,7 +49,7 @@ const projects: Project[] = [
     categories: ["Concept", "Aziende"],
     features: ["Sezione prodotti", "Area B2B", "SEO tecnica"],
     gradient: "linear-gradient(135deg, hsl(210 73% 22%) 0%, hsl(207 60% 38%) 100%)",
-    initials: "MM",
+    initials: "AU",
   },
   {
     slug: "demo-dentista",
