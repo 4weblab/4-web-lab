@@ -26,21 +26,14 @@ const BlogOutdatedWebsiteArticle = lazy(() => import("./pages/BlogOutdatedWebsit
 const BlogNotFoundOnGoogleArticle = lazy(() => import("./pages/BlogNotFoundOnGoogleArticle"));
 const BlogQuotePlatformsArticle = lazy(() => import("./pages/BlogQuotePlatformsArticle"));
 const BlogDiyWebsiteArticle = lazy(() => import("./pages/BlogDiyWebsiteArticle"));
-const DemoDV = lazy(() => import("./pages/DemoDV"));
-const DemoRBT = lazy(() => import("./pages/DemoRBT"));
-const DemoZardini = lazy(() => import("./pages/DemoZardini"));
-const DemoComit = lazy(() => import("./pages/DemoComit"));
-const DemoSI2000 = lazy(() => import("./pages/DemoSI2000"));
-const DemoIES = lazy(() => import("./pages/DemoIES"));
-const DemoSovem = lazy(() => import("./pages/DemoSovem"));
-const DemoPlatiumed = lazy(() => import("./pages/DemoPlatiumed"));
 const Contact = lazy(() => import("./pages/Contact"));
+const Realizzazioni = lazy(() => import("./pages/Realizzazioni"));
 
 const queryClient = new QueryClient();
 
 const siteMetadata = {
-  title: "Agenzia Web Padova | Siti Professionali per Negozi, Professionisti e Aziende | Soluzioni web per la tua impresa | 4 Web Lab",
-  description: "Agenzia Web Padova specializzata in siti professionali per negozi, professionisti e PMI. Pacchetti da 199€ tutto incluso. Siti veloci, ottimizzati SEO e con assistenza locale. Preventivo gratuito in 24 ore!",
+  title: "4 Web Lab | Agenzia Web Padova - Siti da 199€",
+  description: "Agenzia web a Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza locale e preventivo gratuito in 24h.",
   url: "https://4weblab.it/",
   image: "https://4weblab.it/og-image.jpg",
 };
@@ -194,14 +187,7 @@ const App = () => (
               <Route path="/blog/siti-web-piattaforme-preventivi-online-conviene" element={<BlogQuotePlatformsArticle />} />
               <Route path="/blog/creare-sito-web-da-soli-conviene" element={<BlogDiyWebsiteArticle />} />
               <Route path="/contatti" element={<Contact />} />
-              <Route path="/demo-dv" element={<DemoDV />} />
-              <Route path="/demo-rbt" element={<DemoRBT />} />
-              <Route path="/demo-zardini" element={<DemoZardini />} />
-              <Route path="/demo-comit" element={<DemoComit />} />
-              <Route path="/demo-si2000" element={<DemoSI2000 />} />
-              <Route path="/demo-ies" element={<DemoIES />} />
-              <Route path="/demo-sovem" element={<DemoSovem />} />
-              <Route path="/demo-platiumed" element={<DemoPlatiumed />} />
+              <Route path="/realizzazioni" element={<Realizzazioni />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/cookie" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />
