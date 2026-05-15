@@ -21,6 +21,7 @@ import imgMetalmeccanica from "@/assets/aurum-cnc.webp";
 import imgDentistico from "@/assets/dental-room.webp";
 import imgFotovoltaico from "@/assets/solaris-industrial.webp";
 import imgBoutique from "@/assets/bb-room-deluxe.webp";
+import imgComingSoon from "@/assets/concept-coming-soon.webp";
 
 interface Project {
   slug: string;
@@ -285,6 +286,61 @@ const Realizzazioni = () => {
                   </Link>
                 </motion.div>
               ))}
+              {/* Coming soon — placeholder card */}
+              <motion.div
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.45, delay: Math.min(projects.length * 0.05, 0.3) }}
+              >
+                <div
+                  className="block h-full bg-card rounded-2xl overflow-hidden border border-dashed border-border"
+                  style={{ boxShadow: "var(--shadow-sm)" }}
+                  aria-label="Nuovi concept e realizzazioni in arrivo"
+                >
+                  <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                    <img
+                      src={imgComingSoon}
+                      alt="Schizzi e wireframe di nuovi concept di siti web in fase di realizzazione — 4 Web Lab"
+                      width={1280}
+                      height={800}
+                      loading="lazy"
+                      decoding="async"
+                      className="w-full h-full object-cover opacity-90"
+                    />
+                    <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+                    <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-card/95 text-accent backdrop-blur-sm shadow-sm">
+                      <Sparkles className="w-3 h-3" />
+                      In arrivo
+                    </span>
+                  </div>
+                  <div className="p-6 md:p-7 flex flex-col">
+                    <h3 className="text-xl font-semibold mb-2">
+                      Nuovi concept in fase di realizzazione
+                    </h3>
+                    <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
+                      Stiamo lavorando a nuove demo e progetti per altri settori: ristorazione,
+                      e-commerce, studi professionali e attività locali. Torna a trovarci o
+                      contattaci per proporre il tuo settore.
+                    </p>
+                    <ul className="space-y-1.5 mb-5">
+                      {["Nuovi settori", "Concept esclusivi", "Aggiornamenti periodici"].map((f) => (
+                        <li key={f} className="flex items-center gap-2 text-sm text-foreground/80">
+                          <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      to="/contatti"
+                      className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:underline"
+                    >
+                      Proponi il tuo settore
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </div>
         </section>
