@@ -30,6 +30,7 @@ const Contact = lazy(() => import("./pages/Contact"));
 const Realizzazioni = lazy(() => import("./pages/Realizzazioni"));
 const DemoMetalmeccanica = lazy(() => import("./pages/DemoMetalmeccanica"));
 const DemoStudioDentisticoPremium = lazy(() => import("./pages/DemoStudioDentisticoPremium"));
+const DemoFotovoltaico = lazy(() => import("./pages/DemoFotovoltaico"));
 
 const queryClient = new QueryClient();
 
@@ -192,6 +193,7 @@ const App = () => (
               <Route path="/realizzazioni" element={<Realizzazioni />} />
               <Route path="/realizzazioni/demo-metalmeccanica" element={<DemoMetalmeccanica />} />
               <Route path="/realizzazioni/demo-studio-dentistico-premium" element={<DemoStudioDentisticoPremium />} />
+              <Route path="/realizzazioni/demo-fotovoltaico" element={<DemoFotovoltaico />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/cookie" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />
