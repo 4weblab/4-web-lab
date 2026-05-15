@@ -93,7 +93,7 @@ const Realizzazioni = () => {
         <title>Realizzazioni siti web per aziende e professionisti | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizzazioni e concept di siti web professionali firmati 4 Web Lab: demo premium per aziende, professionisti e attività locali con focus su SEO, UX e conversione."
+          content="Realizzazioni e concept di siti web professionali firmati 4 Web Lab a Padova: demo premium per aziende, professionisti e attività locali con focus su SEO, UX e conversione."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -107,6 +107,58 @@ const Realizzazioni = () => {
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+
+        {/* CollectionPage + ItemList JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "@id": "https://4weblab.it/realizzazioni#collectionpage",
+            url: "https://4weblab.it/realizzazioni",
+            name: "Realizzazioni siti web per aziende e professionisti",
+            description:
+              "Raccolta di progetti, demo e concept di siti web realizzati da 4 Web Lab per aziende, professionisti e attività locali.",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
+            publisher: { "@id": "https://4weblab.it/#organization" },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListOrder: "https://schema.org/ItemListOrderAscending",
+              numberOfItems: projects.length,
+              itemListElement: projects.map((p, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `https://4weblab.it/realizzazioni/${p.slug}`,
+                name: p.title,
+              })),
+            },
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Realizzazioni", item: "https://4weblab.it/realizzazioni" },
+            ],
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://4weblab.it/#organization",
+            name: "4 Web Lab",
+            url: "https://4weblab.it/",
+            logo: "https://4weblab.it/logo.webp",
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -186,6 +238,7 @@ const Realizzazioni = () => {
                 >
                   <Link
                     to={`/realizzazioni/${p.slug}`}
+                    aria-label={`Apri demo: ${p.title}`}
                     className="group block h-full bg-card rounded-2xl overflow-hidden border border-border transition-all duration-400 hover:-translate-y-1.5"
                     style={{ boxShadow: "var(--shadow-md)" }}
                   >
@@ -193,6 +246,8 @@ const Realizzazioni = () => {
                     <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                       <img
                         src={p.image}
+                        srcSet={`${p.image} 800w`}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         alt={p.alt}
                         width={800}
                         height={500}

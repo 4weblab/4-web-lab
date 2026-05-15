@@ -12,7 +12,7 @@
  * - Il form contatti invia tramite Web3Forms direttamente a 4 Web Lab
  *   (subject "[Demo Velluto Rooms] ...") — è una richiesta concept, non una
  *   prenotazione reale.
- * - Robots: noindex/nofollow + Disallow nel /robots.txt.
+ * - Robots: indicizzabile (index, follow); inclusa in sitemap.xml.
  * -----------------------------------------------------------------------------
  */
 
@@ -1257,7 +1257,7 @@ const DemoBoutiqueBB = () => {
     "@type": "WebPage",
     "@id": `${canonical}#webpage`,
     url: canonical,
-    name: "4 Web Lab · Concept Web Design Premium per Boutique B&B (Tech Demo)",
+    name: "Concept Sito Web Premium per Boutique B&B | 4 Web Lab",
     isPartOf: { "@id": "https://4weblab.it/#website" },
     about: { "@id": `${canonical}#creativework` },
     mainEntity: { "@id": `${canonical}#creativework` },
@@ -1270,7 +1270,7 @@ const DemoBoutiqueBB = () => {
   return (
     <>
       <Helmet>
-        <title>4 Web Lab · Concept Web Design Premium per Boutique B&B (Tech Demo)</title>
+        <title>Concept Sito Web Premium per Boutique B&B | 4 Web Lab</title>
         <meta
           name="description"
           content="Tech demo realizzata da 4 Web Lab: concept di sito web premium per un boutique B&B / luxury rooms italiano. Design editoriale, UX cinematografica e struttura SEO orientata alle strutture ricettive di fascia alta."
@@ -1282,21 +1282,23 @@ const DemoBoutiqueBB = () => {
         {/* Open Graph */}
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content="4 Web Lab · Concept Web Design Premium per Boutique B&B" />
+        <meta property="og:title" content="Concept Sito Web Premium per Boutique B&B | 4 Web Lab" />
         <meta
           property="og:description"
           content="Concept project realizzato da 4 Web Lab: web design premium per boutique B&B e luxury rooms italiane."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="og:image" content="https://4weblab.it/og/boutique-bb-luxury-rooms.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="4 Web Lab · Concept Boutique B&B (Tech Demo)" />
+        <meta name="twitter:title" content="Concept Sito Web Premium per Boutique B&B | 4 Web Lab" />
         <meta
           name="twitter:description"
           content="Tech demo di 4 Web Lab: web design premium per boutique B&B / luxury rooms italiane."
         />
+        <meta name="twitter:image" content="https://4weblab.it/og/boutique-bb-luxury-rooms.webp" />
 
         {/* Preload hero */}
         <link rel="preload" as="image" href={heroImg} fetchPriority="high" />
