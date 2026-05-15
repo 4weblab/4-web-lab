@@ -1003,8 +1003,9 @@ const DemoMetalmeccanica = () => {
   return (
     <>
       <Helmet>
-        <title>Tech Demo Metalmeccanica | Concept Website per Carpenteria e CNC</title>
-        <meta name="description" content="Esempio realistico di sito web moderno per aziende metalmeccaniche e carpenteria industriale. Tech demo sviluppata da 4 Web Lab per mostrare UX premium, design industriale e ottimizzazione SEO." />
+        <title>4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche (Tech Demo)</title>
+        <meta name="description" content="4 Web Lab realizza siti web premium per aziende metalmeccaniche e carpenteria industriale. Tech demo concettuale che mostra il nostro approccio a UX industriale, schede macchina/processo e SEO B2B." />
+        <meta name="author" content="4 Web Lab" />
         {/* Pagina demo: NON crawlabile per ora (richiesta esplicita del cliente) */}
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
@@ -1012,11 +1013,122 @@ const DemoMetalmeccanica = () => {
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
-        <meta property="og:title" content="Tech Demo Metalmeccanica | 4 Web Lab" />
-        <meta property="og:description" content="Concept di sito web premium per il settore metalmeccanico e industriale, sviluppato da 4 Web Lab." />
+        <meta property="og:title" content="4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche" />
+        <meta property="og:description" content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per il settore metalmeccanico, carpenteria e manifatturiero B2B." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="theme-color" content="#1A1A1B" />
+
+        {/* Organization 4 Web Lab — EEAT signal principale della pagina */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://4weblab.it/#organization",
+            name: "4 Web Lab",
+            legalName: "4 Web Lab di Fullin Carlo",
+            url: "https://4weblab.it/",
+            logo: "https://4weblab.it/logo.webp",
+            vatID: "05765760284",
+            foundingDate: "2026",
+            founder: {
+              "@type": "Person",
+              name: "Carlo Fullin",
+              jobTitle: "Founder & Web Designer",
+              sameAs: "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
+            },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Via Belluno 44",
+              addressLocality: "Legnaro",
+              addressRegion: "PD",
+              postalCode: "35020",
+              addressCountry: "IT",
+            },
+            areaServed: ["IT", "Veneto"],
+            knowsAbout: [
+              "Web design per aziende metalmeccaniche",
+              "UX B2B industriale",
+              "SEO B2B manufacturing",
+              "Realizzazione siti web carpenteria e CNC",
+              "Schede tecniche di processo su web",
+              "Lead generation industriale",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+393514656042",
+              email: "info@4weblab.it",
+              contactType: "sales",
+              areaServed: "IT",
+              availableLanguage: ["Italian"],
+            },
+            sameAs: [
+              "https://share.google/oGOMV0sHAaV8JlqnZ",
+              "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
+            ],
+          })}
+        </script>
+
+        {/* CreativeWork — il concept, attribuito interamente a 4 Web Lab */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CreativeWork",
+            "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#concept",
+            name: "Concept di sito web premium per azienda metalmeccanica — by 4 Web Lab",
+            headline: "Tech demo: web design premium per aziende metalmeccaniche realizzata da 4 Web Lab",
+            url: "https://4weblab.it/realizzazioni/demo-metalmeccanica",
+            inLanguage: "it",
+            author: { "@id": "https://4weblab.it/#organization" },
+            creator: { "@id": "https://4weblab.it/#organization" },
+            producer: { "@id": "https://4weblab.it/#organization" },
+            publisher: { "@id": "https://4weblab.it/#organization" },
+            copyrightHolder: { "@id": "https://4weblab.it/#organization" },
+            about: "Web design, UX e SEO B2B per aziende metalmeccaniche realizzati da 4 Web Lab.",
+            keywords: [
+              "agenzia web design metalmeccanica",
+              "realizzazione siti web carpenteria",
+              "4 Web Lab industriale",
+              "web design B2B manufacturing",
+              "SEO aziende meccaniche",
+            ],
+            isAccessibleForFree: true,
+            isFamilyFriendly: true,
+          })}
+        </script>
+
+        {/* Breadcrumb */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "4 Web Lab — Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Realizzazioni 4 Web Lab", item: "https://4weblab.it/realizzazioni" },
+              { "@type": "ListItem", position: 3, name: "Concept metalmeccanico premium · 4 Web Lab", item: "https://4weblab.it/realizzazioni/demo-metalmeccanica" },
+            ],
+          })}
+        </script>
+
+        {/* WebPage — autore/publisher = 4 Web Lab */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#webpage",
+            name: "4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche",
+            url: "https://4weblab.it/realizzazioni/demo-metalmeccanica",
+            inLanguage: "it",
+            isPartOf: { "@type": "WebSite", name: "4 Web Lab", url: "https://4weblab.it/" },
+            about: { "@id": "https://4weblab.it/#organization" },
+            mainEntity: { "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#concept" },
+            author: { "@id": "https://4weblab.it/#organization" },
+            creator: { "@id": "https://4weblab.it/#organization" },
+            publisher: { "@id": "https://4weblab.it/#organization" },
+            description: "Tech demo concettuale realizzata da 4 Web Lab — agenzia italiana specializzata in web design premium per aziende metalmeccaniche, carpenteria e manifatturiero B2B.",
+          })}
+        </script>
+
         <style>{`
           @keyframes aurumFadeUp {
             from { opacity: 0; transform: translateY(12px); }
