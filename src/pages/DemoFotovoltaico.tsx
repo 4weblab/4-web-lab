@@ -1236,24 +1236,26 @@ const DemoFotovoltaico = () => {
   return (
     <>
       <Helmet>
-        <title>4 Web Lab · Concept Web Design Premium per Aziende Fotovoltaiche (Tech Demo)</title>
+        <title>Concept Sito Web Premium per Aziende Fotovoltaiche | 4 Web Lab</title>
         <meta
           name="description"
           content="4 Web Lab realizza siti web premium per aziende del settore fotovoltaico, energia rinnovabile e accumulo energetico. Tech demo concettuale con UX moderna, dashboard energetiche e SEO B2B."
         />
         <meta name="author" content="4 Web Lab" />
-        {/* Demo interna: noindex,nofollow */}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-fotovoltaico" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-fotovoltaico" />
-        <meta property="og:title" content="4 Web Lab · Concept Web Design Premium per Aziende Fotovoltaiche" />
+        <meta property="og:title" content="Concept Sito Web Premium per Aziende Fotovoltaiche | 4 Web Lab" />
         <meta
           property="og:description"
           content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per il settore energia, fotovoltaico e rinnovabili."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="og:image" content="https://4weblab.it/og/demo-fotovoltaico.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://4weblab.it/og/demo-fotovoltaico.webp" />
         <meta name="theme-color" content="#070B14" />
         <link rel="preload" as="image" href={heroImg} fetchPriority="high" />
 

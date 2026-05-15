@@ -1003,18 +1003,20 @@ const DemoMetalmeccanica = () => {
   return (
     <>
       <Helmet>
-        <title>4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche (Tech Demo)</title>
+        <title>Concept Sito Web Premium per Aziende Metalmeccaniche | 4 Web Lab</title>
         <meta name="description" content="4 Web Lab realizza siti web premium per aziende metalmeccaniche e carpenteria industriale. Tech demo concettuale che mostra il nostro approccio a UX industriale, schede macchina/processo e SEO B2B." />
         <meta name="author" content="4 Web Lab" />
-        {/* Pagina demo: NON crawlabile per ora (richiesta esplicita del cliente) */}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
-        <meta property="og:title" content="4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche" />
+        <meta property="og:title" content="Concept Sito Web Premium per Aziende Metalmeccaniche | 4 Web Lab" />
         <meta property="og:description" content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per il settore metalmeccanico, carpenteria e manifatturiero B2B." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="og:image" content="https://4weblab.it/og/demo-metalmeccanica.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://4weblab.it/og/demo-metalmeccanica.webp" />
         <meta name="theme-color" content="#1A1A1B" />
 
         {/* Organization 4 Web Lab — EEAT signal principale della pagina */}

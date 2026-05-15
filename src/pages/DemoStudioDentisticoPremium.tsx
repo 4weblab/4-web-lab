@@ -1474,20 +1474,22 @@ const DemoStudioDentisticoPremium = () => {
   return (
     <>
       <Helmet>
-        <title>4 Web Lab · Concept Web Design Premium per Studi Dentistici (Tech Demo)</title>
+        <title>Concept Sito Web Premium per Studi Dentistici | 4 Web Lab</title>
         <meta
           name="description"
           content="4 Web Lab realizza siti web premium per studi dentistici italiani. Tech demo concettuale che mostra il nostro approccio a UX healthcare, Digital Smile Design e prenotazione online."
         />
         <meta name="author" content="4 Web Lab" />
-        {/* NON crawlabile — richiesta esplicita */}
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="4 Web Lab" />
-        <meta property="og:title" content="4 Web Lab · Concept Web Design Premium per Studi Dentistici" />
+        <meta property="og:title" content="Concept Sito Web Premium per Studi Dentistici | 4 Web Lab" />
         <meta property="og:description" content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per studi dentistici e settore healthcare." />
         <meta property="og:url" content={canonical} />
+        <meta property="og:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
 
         {/* Organization 4 Web Lab — EEAT signal principale della pagina */}
         <script type="application/ld+json">
