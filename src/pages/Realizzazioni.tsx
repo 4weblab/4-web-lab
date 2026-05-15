@@ -91,9 +91,22 @@ const Realizzazioni = () => {
     <>
       <Helmet>
         <title>Realizzazioni siti web per aziende e professionisti | 4 Web Lab</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
+        <meta
+          name="description"
+          content="Realizzazioni e concept di siti web professionali firmati 4 Web Lab: demo premium per aziende, professionisti e attività locali con focus su SEO, UX e conversione."
+        />
+        <meta name="author" content="4 Web Lab" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://4weblab.it/realizzazioni" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://4weblab.it/realizzazioni" />
+        <meta property="og:title" content="Realizzazioni e concept siti web | 4 Web Lab" />
+        <meta
+          property="og:description"
+          content="Una raccolta di progetti, demo e concept creati da 4 Web Lab per mostrare come può evolvere la presenza online di aziende, professionisti e attività locali."
+        />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
       </Helmet>
 
       <Header satelliteMode />

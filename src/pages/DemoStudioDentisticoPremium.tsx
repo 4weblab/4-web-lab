@@ -1481,9 +1481,7 @@ const DemoStudioDentisticoPremium = () => {
         />
         <meta name="author" content="4 Web Lab" />
         {/* NON crawlabile — richiesta esplicita */}
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="4 Web Lab" />

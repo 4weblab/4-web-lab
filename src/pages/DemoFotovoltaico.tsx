@@ -1243,9 +1243,7 @@ const DemoFotovoltaico = () => {
         />
         <meta name="author" content="4 Web Lab" />
         {/* Demo interna: noindex,nofollow */}
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-fotovoltaico" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-fotovoltaico" />
