@@ -1007,9 +1007,7 @@ const DemoMetalmeccanica = () => {
         <meta name="description" content="4 Web Lab realizza siti web premium per aziende metalmeccaniche e carpenteria industriale. Tech demo concettuale che mostra il nostro approccio a UX industriale, schede macchina/processo e SEO B2B." />
         <meta name="author" content="4 Web Lab" />
         {/* Pagina demo: NON crawlabile per ora (richiesta esplicita del cliente) */}
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-metalmeccanica" />

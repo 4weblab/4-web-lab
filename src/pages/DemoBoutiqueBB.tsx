@@ -1276,9 +1276,7 @@ const DemoBoutiqueBB = () => {
           content="Tech demo realizzata da 4 Web Lab: concept di sito web premium per un boutique B&B / luxury rooms italiano. Design editoriale, UX cinematografica e struttura SEO orientata alle strutture ricettive di fascia alta."
         />
         <meta name="author" content="4 Web Lab" />
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
+        <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph */}
