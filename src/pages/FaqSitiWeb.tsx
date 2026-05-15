@@ -277,6 +277,9 @@ const FaqSitiWeb = () => {
                 Quanto costa un sito web? Quanto tempo serve per realizzarlo? Serve davvero all'attività?
 In questa pagina trovi risposte sintetiche e concrete alle domande più frequenti sulla realizzazione di un sito web professionale, con indicazioni su costi, tempi e scelte strategiche.
               </p>
+              <p className="text-primary-foreground/75 text-sm mt-4">
+                Vuoi vedere come traduciamo queste risposte in pratica? Dai un'occhiata alle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link>.
+              </p>
             </AnimatedSection>
           </div>
         </section>
