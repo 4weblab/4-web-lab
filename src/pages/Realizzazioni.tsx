@@ -83,12 +83,6 @@ const methodPoints = [
 ];
 
 const Realizzazioni = () => {
-  const [active, setActive] = useState<Category>("Tutti");
-
-  const filtered = active === "Tutti"
-    ? projects
-    : projects.filter((p) => p.categories.includes(active as Exclude<Category, "Tutti">));
-
   return (
     <>
       <Helmet>
