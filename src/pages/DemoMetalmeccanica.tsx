@@ -877,6 +877,15 @@ const Contacts = () => (
           </div>
         </div>
       </div>
+      <div className="mt-12 md:mt-16 text-center">
+        <Link
+          to="/realizzazioni"
+          className="inline-flex items-center gap-2 text-base font-semibold transition-colors hover:underline"
+          style={{ color: C.accent }}
+        >
+          Torna alla lista delle demo
+        </Link>
+      </div>
     </div>
   </section>
 );
