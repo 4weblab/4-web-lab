@@ -310,7 +310,7 @@ const SitiWebPadova = () => {
                 <p>
                   Che la tua attività sia nel centro di Padova o in uno dei comuni della provincia, il nostro approccio
                   resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua
-                  attività. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni
+                  attività. Puoi sfogliare alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link>. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni
                   realmente efficaci, senza formule standardizzate.
                 </p>
                 <p className="mt-6">
