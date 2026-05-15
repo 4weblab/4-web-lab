@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -18,25 +17,19 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { AnimatedSection } from "@/components/AnimatedSection";
-
-type Category =
-  | "Tutti"
-  | "Aziende"
-  | "Professionisti"
-  | "Negozi"
-  | "Attività locali"
-  | "Concept"
-  | "Restyling";
+import imgMetalmeccanica from "@/assets/aurum-cnc.webp";
+import imgDentistico from "@/assets/dental-room.webp";
+import imgFotovoltaico from "@/assets/solaris-industrial.webp";
+import imgBoutique from "@/assets/bb-room-deluxe.webp";
 
 interface Project {
   slug: string;
   title: string;
   description: string;
-  badge: Exclude<Category, "Tutti">;
-  categories: Exclude<Category, "Tutti">[];
+  badge: string;
   features: string[];
-  gradient: string;
-  initials: string;
+  image: string;
+  alt: string;
 }
 
 const projects: Project[] = [
@@ -46,98 +39,40 @@ const projects: Project[] = [
     description:
       "Demo pensata per una PMI del settore metalmeccanico: catalogo prodotti, area certificazioni e contatti commerciali ben strutturati.",
     badge: "Concept",
-    categories: ["Concept", "Aziende"],
     features: ["Sezione prodotti", "Area B2B", "SEO tecnica"],
-    gradient: "linear-gradient(135deg, hsl(210 73% 22%) 0%, hsl(207 60% 38%) 100%)",
-    initials: "MM",
+    image: imgMetalmeccanica,
+    alt: "Macchinario CNC in officina metalmeccanica — concept sito web 4 Web Lab",
   },
   {
-    slug: "demo-dentista",
+    slug: "demo-studio-dentistico-premium",
     title: "Concept sito per studio dentistico",
     description:
       "Demo progettata per uno studio odontoiatrico moderno, con struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
     badge: "Concept",
-    categories: ["Concept", "Professionisti"],
     features: ["SEO locale", "Mobile responsive", "CTA strategiche"],
-    gradient: "linear-gradient(135deg, hsl(190 70% 35%) 0%, hsl(207 80% 50%) 100%)",
-    initials: "DS",
+    image: imgDentistico,
+    alt: "Sala operativa di uno studio dentistico moderno — concept sito web 4 Web Lab",
   },
   {
-    slug: "demo-serramenti",
-    title: "Concept sito per azienda di serramenti",
+    slug: "demo-fotovoltaico",
+    title: "Concept sito per azienda fotovoltaica",
     description:
-      "Una vetrina digitale per un produttore di porte e finestre: focus su materiali, gallerie progetto e richiesta preventivo.",
-    badge: "Demo",
-    categories: ["Demo", "Aziende", "Attività locali"],
-    features: ["Galleria lavori", "Form preventivo", "Pagine prodotto"],
-    gradient: "linear-gradient(135deg, hsl(24 80% 45%) 0%, hsl(18 75% 35%) 100%)",
-    initials: "SR",
-  },
-  {
-    slug: "demo-impresa-edile",
-    title: "Concept sito per impresa edile",
-    description:
-      "Demo per un'impresa di costruzioni e ristrutturazioni, con sezione cantieri, servizi e area clienti chiara e professionale.",
+      "Demo premium per un'azienda di impianti fotovoltaici e accumulo energetico: dashboard energetiche, case studies industriali e form consulenza.",
     badge: "Concept",
-    categories: ["Concept", "Aziende"],
-    features: ["Portfolio cantieri", "SEO locale", "Lead generation"],
-    gradient: "linear-gradient(135deg, hsl(35 60% 35%) 0%, hsl(28 70% 28%) 100%)",
-    initials: "IE",
+    features: ["Dashboard energetiche", "UX dark premium", "Lead generation B2B"],
+    image: imgFotovoltaico,
+    alt: "Impianto fotovoltaico industriale su tetto — concept sito web 4 Web Lab",
   },
   {
-    slug: "demo-barber-shop",
-    title: "Restyling per barber shop urbano",
+    slug: "boutique-bb-luxury-rooms",
+    title: "Concept sito per boutique B&B / Luxury Rooms",
     description:
-      "Restyling premium per un barber shop: identità visiva forte, prenotazione online e integrazione social per fidelizzare i clienti.",
-    badge: "Restyling",
-    categories: ["Restyling", "Negozi", "Attività locali"],
-    features: ["Booking online", "Brand identity", "Mobile first"],
-    gradient: "linear-gradient(135deg, hsl(0 0% 12%) 0%, hsl(24 70% 40%) 100%)",
-    initials: "BS",
-  },
-  {
-    slug: "demo-avvocato",
-    title: "Concept sito per studio legale",
-    description:
-      "Demo per uno studio di avvocati: aree di competenza, presentazione del team e form contatto riservato e professionale.",
+      "Demo editoriale per un boutique B&B contemporaneo: hero cinematografica, camere premium, gallery immersiva e form prenotazione su misura.",
     badge: "Concept",
-    categories: ["Concept", "Professionisti"],
-    features: ["Aree di pratica", "GDPR ready", "Tono autorevole"],
-    gradient: "linear-gradient(135deg, hsl(210 73% 18%) 0%, hsl(215 40% 30%) 100%)",
-    initials: "AV",
+    features: ["Design editoriale", "Gallery immersiva", "UX boutique luxury"],
+    image: imgBoutique,
+    alt: "Camera deluxe di un boutique B&B luxury — concept sito web 4 Web Lab",
   },
-  {
-    slug: "demo-ristorante",
-    title: "Restyling per ristorante locale",
-    description:
-      "Restyling per un ristorante di quartiere: menu digitale, prenotazioni e galleria piatti con un'estetica calda e accogliente.",
-    badge: "Restyling",
-    categories: ["Restyling", "Attività locali", "Negozi"],
-    features: ["Menu digitale", "Prenotazioni", "Google Maps"],
-    gradient: "linear-gradient(135deg, hsl(15 70% 45%) 0%, hsl(35 80% 50%) 100%)",
-    initials: "RT",
-  },
-  {
-    slug: "demo-azienda-agricola",
-    title: "Sito aziendale per azienda agricola",
-    description:
-      "Sito istituzionale per un'azienda agricola: storia, prodotti a km zero, vendita diretta e sezione eventi in cantina.",
-    badge: "Sito aziendale",
-    categories: ["Aziende", "Attività locali"],
-    features: ["E-commerce light", "Storytelling", "Eventi"],
-    gradient: "linear-gradient(135deg, hsl(120 35% 30%) 0%, hsl(95 45% 40%) 100%)",
-    initials: "AA",
-  },
-] as unknown as Project[];
-
-const filters: Category[] = [
-  "Tutti",
-  "Aziende",
-  "Professionisti",
-  "Negozi",
-  "Attività locali",
-  "Concept",
-  "Restyling",
 ];
 
 const methodPoints = [
@@ -152,19 +87,78 @@ const methodPoints = [
 ];
 
 const Realizzazioni = () => {
-  const [active, setActive] = useState<Category>("Tutti");
-
-  const filtered = active === "Tutti"
-    ? projects
-    : projects.filter((p) => p.categories.includes(active as Exclude<Category, "Tutti">));
-
   return (
     <>
       <Helmet>
         <title>Realizzazioni siti web per aziende e professionisti | 4 Web Lab</title>
-        <meta name="robots" content="noindex, nofollow" />
-        <meta name="googlebot" content="noindex, nofollow" />
-        <meta name="bingbot" content="noindex, nofollow" />
+        <meta
+          name="description"
+          content="Realizzazioni e concept di siti web professionali firmati 4 Web Lab a Padova: demo premium per aziende, professionisti e attività locali con focus su SEO, UX e conversione."
+        />
+        <meta name="author" content="4 Web Lab" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://4weblab.it/realizzazioni" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://4weblab.it/realizzazioni" />
+        <meta property="og:title" content="Realizzazioni e concept siti web | 4 Web Lab" />
+        <meta
+          property="og:description"
+          content="Una raccolta di progetti, demo e concept creati da 4 Web Lab per mostrare come può evolvere la presenza online di aziende, professionisti e attività locali."
+        />
+        <meta property="og:locale" content="it_IT" />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+
+        {/* CollectionPage + ItemList JSON-LD */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            "@id": "https://4weblab.it/realizzazioni#collectionpage",
+            url: "https://4weblab.it/realizzazioni",
+            name: "Realizzazioni siti web per aziende e professionisti",
+            description:
+              "Raccolta di progetti, demo e concept di siti web realizzati da 4 Web Lab per aziende, professionisti e attività locali.",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
+            publisher: { "@id": "https://4weblab.it/#organization" },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListOrder: "https://schema.org/ItemListOrderAscending",
+              numberOfItems: projects.length,
+              itemListElement: projects.map((p, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `https://4weblab.it/realizzazioni/${p.slug}`,
+                name: p.title,
+              })),
+            },
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Realizzazioni", item: "https://4weblab.it/realizzazioni" },
+            ],
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://4weblab.it/#organization",
+            name: "4 Web Lab",
+            url: "https://4weblab.it/",
+            logo: "https://4weblab.it/logo.webp",
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -232,32 +226,9 @@ const Realizzazioni = () => {
         {/* GRID + FILTERS */}
         <section className="pb-24 md:pb-32" style={{ background: "hsl(var(--surface-alt))" }}>
           <div className="container-section pt-16 md:pt-20">
-            {/* Filters */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Filtra per categoria">
-              {filters.map((f) => {
-                const isActive = active === f;
-                return (
-                  <button
-                    key={f}
-                    role="tab"
-                    aria-selected={isActive}
-                    onClick={() => setActive(f)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
-                      isActive
-                        ? "text-accent-foreground border-transparent shadow-md"
-                        : "bg-card text-foreground border-border hover:border-accent/40 hover:-translate-y-0.5"
-                    }`}
-                    style={isActive ? { background: "var(--gradient-accent)" } : {}}
-                  >
-                    {f}
-                  </button>
-                );
-              })}
-            </div>
-
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {filtered.map((p, idx) => (
+              {projects.map((p, idx) => (
                 <motion.div
                   key={p.slug}
                   initial={{ opacity: 0, y: 24 }}
@@ -267,21 +238,23 @@ const Realizzazioni = () => {
                 >
                   <Link
                     to={`/realizzazioni/${p.slug}`}
+                    aria-label={`Apri demo: ${p.title}`}
                     className="group block h-full bg-card rounded-2xl overflow-hidden border border-border transition-all duration-400 hover:-translate-y-1.5"
                     style={{ boxShadow: "var(--shadow-md)" }}
                   >
                     {/* Preview */}
-                    <div className="relative aspect-[16/10] overflow-hidden" style={{ background: p.gradient }}>
-                      <div aria-hidden className="absolute inset-0 opacity-20" style={{
-                        backgroundImage:
-                          "linear-gradient(transparent 96%, hsl(0 0% 100% / 0.3) 96%), linear-gradient(90deg, transparent 96%, hsl(0 0% 100% / 0.3) 96%)",
-                        backgroundSize: "32px 32px",
-                      }} />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-primary-foreground/95 font-serif font-bold text-6xl md:text-7xl tracking-tight transition-transform duration-500 group-hover:scale-110">
-                          {p.initials}
-                        </span>
-                      </div>
+                    <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                      <img
+                        src={p.image}
+                        srcSet={`${p.image} 800w`}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                        alt={p.alt}
+                        width={800}
+                        height={500}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                       <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-card/95 text-foreground backdrop-blur-sm shadow-sm">
                         {p.badge}

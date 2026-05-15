@@ -55,7 +55,7 @@ const AboutSection = () => {
             </p>
             <p className="body-base text-muted-foreground">
               Ogni progetto nasce dall'ascolto delle esigenze del cliente e si sviluppa con un approccio orientato ai risultati:
-              design curato, ottimizzazione per i motori di ricerca e performance elevate.
+              design curato, ottimizzazione per i motori di ricerca e performance elevate. Puoi vedere alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link> già pubblicati.
             </p>
             <blockquote className="body-base text-muted-foreground italic border-l-4 border-accent pl-6 py-2 bg-accent/5 rounded-r-2xl">
               "Il nostro obiettivo è rendere il web accessibile a chi vuole crescere online, senza complicazioni e con un partner di fiducia al proprio fianco."

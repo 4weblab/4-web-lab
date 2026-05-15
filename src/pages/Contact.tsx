@@ -102,7 +102,7 @@ const Contact = () => {
             <div className="w-16 h-1 rounded-full mx-auto mb-8 bg-accent" />
             <h1 className="heading-1 text-primary-foreground mb-6">Contattaci</h1>
             <p className="body-large text-primary-foreground/75 text-balance">
-              Raccontaci la tua attività e ti diremo come possiamo aiutarti a creare un sito web che porta risultati.
+              Raccontaci la tua attività e ti diremo come possiamo aiutarti a creare un sito web che porta risultati. Nel frattempo puoi sfogliare le nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>.
             </p>
           </div>
         </section>

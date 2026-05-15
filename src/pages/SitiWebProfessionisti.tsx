@@ -220,7 +220,7 @@ const SitiWebProfessionisti = () => {
                 <p className="mb-8">
                   In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato, ideale anche per
                   collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo garantisce trasparenza
-                  in ogni fase:
+                  in ogni fase. Puoi vedere alcuni esempi nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>:
                 </p>
                 <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
                   {[

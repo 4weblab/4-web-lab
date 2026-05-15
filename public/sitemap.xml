@@ -37,6 +37,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://4weblab.it/realizzazioni</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://4weblab.it/realizzazioni/demo-metalmeccanica</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://4weblab.it/realizzazioni/demo-studio-dentistico-premium</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://4weblab.it/realizzazioni/demo-fotovoltaico</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://4weblab.it/realizzazioni/boutique-bb-luxury-rooms</loc>
+    <lastmod>2026-05-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://4weblab.it/blog</loc>
     <lastmod>2026-05-02</lastmod>
     <changefreq>monthly</changefreq>

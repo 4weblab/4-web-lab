@@ -28,6 +28,10 @@ const BlogQuotePlatformsArticle = lazy(() => import("./pages/BlogQuotePlatformsA
 const BlogDiyWebsiteArticle = lazy(() => import("./pages/BlogDiyWebsiteArticle"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Realizzazioni = lazy(() => import("./pages/Realizzazioni"));
+const DemoMetalmeccanica = lazy(() => import("./pages/DemoMetalmeccanica"));
+const DemoStudioDentisticoPremium = lazy(() => import("./pages/DemoStudioDentisticoPremium"));
+const DemoFotovoltaico = lazy(() => import("./pages/DemoFotovoltaico"));
+const DemoBoutiqueBB = lazy(() => import("./pages/DemoBoutiqueBB"));
 
 const queryClient = new QueryClient();
 
@@ -188,6 +192,10 @@ const App = () => (
               <Route path="/blog/creare-sito-web-da-soli-conviene" element={<BlogDiyWebsiteArticle />} />
               <Route path="/contatti" element={<Contact />} />
               <Route path="/realizzazioni" element={<Realizzazioni />} />
+              <Route path="/realizzazioni/demo-metalmeccanica" element={<DemoMetalmeccanica />} />
+              <Route path="/realizzazioni/demo-studio-dentistico-premium" element={<DemoStudioDentisticoPremium />} />
+              <Route path="/realizzazioni/demo-fotovoltaico" element={<DemoFotovoltaico />} />
+              <Route path="/realizzazioni/boutique-bb-luxury-rooms" element={<DemoBoutiqueBB />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/cookie" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />
