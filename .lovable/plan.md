@@ -1,60 +1,57 @@
 ## Obiettivo
 
-Su `/realizzazioni/demo-studio-dentistico-premium` il SEO e tutti i blocchi JSON-LD devono spingere l'EEAT di **4 Web Lab** (l'agenzia che ha realizzato il concept), non dello studio dentistico fittizio "Aurea". La pagina resta `noindex,nofollow` ma, se mai indicizzata da bot interni / shared via link, deve comunicare in modo univoco che l'autore/expert è 4 Web Lab.
+Allineare il SEO della demo `/realizzazioni/demo-metalmeccanica` alla stessa logica EEAT-first applicata alla demo dentistica: tutto il SEO e i blocchi JSON-LD devono spingere **4 Web Lab** come autore/creator/publisher; "AURUM Meccanica" resta solo come soggetto del concept fittizio. La pagina rimane `noindex,nofollow`.
 
-## Stato attuale (verificato in `src/pages/DemoStudioDentisticoPremium.tsx`)
+## Stato attuale (verificato in `src/pages/DemoMetalmeccanica.tsx`, righe 1005–1026)
 
-- `<title>` e `description` citano già 4 Web Lab ma mettono "Studio Dentistico Premium" davanti.
-- 3 blocchi JSON-LD presenti:
-  1. `CreativeWork` — `name: "Concept sito per studio dentistico premium"`, `creator: 4 Web Lab` (ok ma debole su EEAT).
-  2. `BreadcrumbList` — ok, già su `4weblab.it`.
-  3. `WebPage` — `isPartOf: WebSite 4 Web Lab` (ok), description neutra.
-- Nessun blocco `Organization` di 4 Web Lab con segnali EEAT (founder, areaServed, sameAs, expertise, contact).
-- Nessun `author` esplicito. Nessun `Person` (Carlo Fullin) per autorialità.
+- `<title>`: "Tech Demo Metalmeccanica | Concept Website per Carpenteria e CNC" — non cita 4 Web Lab.
+- `description`: cita 4 Web Lab ma soggetto secondario.
+- Meta robots `noindex, nofollow` già presenti (corretti, da mantenere).
+- og: title/description/site_name presenti ma title brand-second.
+- **Nessun blocco JSON-LD** nella pagina (assente del tutto).
+- Disclaimer e form già attribuiscono i lead a 4 Web Lab (ok).
 
-## Modifiche al file `src/pages/DemoStudioDentisticoPremium.tsx`
+## Modifiche al file `src/pages/DemoMetalmeccanica.tsx`
 
-### 1. Meta tag
-- `<title>` → `4 Web Lab · Concept Web Design Premium per Studi Dentistici (Tech Demo)` (4 Web Lab in posizione iniziale, brand-first).
-- `description` → riscritta mettendo 4 Web Lab come soggetto: «4 Web Lab realizza siti web premium per studi dentistici. Tech demo concettuale che mostra il nostro approccio a UX healthcare, Digital Smile Design e prenotazione online.»
-- `og:title` / `og:description` allineati allo stesso messaggio brand-first.
-- `og:site_name` = `4 Web Lab`.
+### 1. Meta tag (riscrittura del blocco `<Helmet>`)
+- `<title>` → `4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche (Tech Demo)`
+- `description` → brand-first: «4 Web Lab realizza siti web premium per aziende metalmeccaniche e carpenteria industriale. Tech demo concettuale che mostra il nostro approccio a UX industriale, schede macchina/processo e SEO B2B.»
+- `og:title` / `og:description` allineati brand-first.
 - Aggiungere `<meta name="author" content="4 Web Lab" />`.
+- Mantenere `noindex, nofollow`, canonical, og:site_name, theme-color.
 
-### 2. JSON-LD — sostituire i 3 blocchi con 4 blocchi tutti centrati su 4 Web Lab
+### 2. JSON-LD — aggiungere 4 blocchi tutti centrati su 4 Web Lab (stesso schema della demo dentistica)
 
-**a. `Organization` (4 Web Lab)** — nuovo, EEAT-first:
-- `name`, `legalName: "4 Web Lab di Fullin Carlo"`, `vatID: "05765760284"`
-- `url: https://4weblab.it/`
-- `founder: { @type: Person, name: "Carlo Fullin" }`
-- `areaServed: "IT"`, `knowsAbout: ["Web design per studi dentistici", "UX healthcare", "SEO locale", "Digital Smile Design web", ...]`
-- `contactPoint` con telefono `+39 351 465 6042`
-- `sameAs`: link social/Google Business già usati nel resto del sito (verifico in `index.html` o `Footer`).
+**a. `Organization` (4 Web Lab)** — `@id: https://4weblab.it/#organization`
+- name, legalName "4 Web Lab di Fullin Carlo", vatID 05765760284, foundingDate 2026
+- founder Carlo Fullin (jobTitle, sameAs LinkedIn)
+- address (Via Belluno 44, Legnaro, PD, 35020, IT)
+- areaServed `["IT", "Veneto"]`
+- `knowsAbout`: ["Web design per aziende metalmeccaniche", "UX B2B industriale", "SEO B2B manufacturing", "Realizzazione siti web carpenteria e CNC", "Schede tecniche di processo su web", "Lead generation industriale"]
+- contactPoint (telefono +393514656042, email info@4weblab.it)
+- sameAs (Google share + LinkedIn)
 
-**b. `CreativeWork`** — riscritto:
-- `name: "Concept di sito web premium per studio dentistico — by 4 Web Lab"`
-- `author` + `creator` + `producer` = riferimento `@id` all'Organization 4 Web Lab.
-- `publisher` = stessa Organization.
-- `about: "Web design e UX per studi dentistici"`.
-- Rimuovere keyword generiche "demo sito dentista" e privilegiare keyword 4 Web Lab-centric: «agenzia web design dentisti», «realizzazione siti studi dentistici», «web design healthcare Italia».
+**b. `CreativeWork`** — `@id: <canonical>#concept`
+- name: "Concept di sito web premium per azienda metalmeccanica — by 4 Web Lab"
+- author/creator/producer/publisher/copyrightHolder → tutti `@id` Organization
+- about: "Web design, UX e SEO B2B per aziende metalmeccaniche realizzati da 4 Web Lab"
+- keywords brand-first: «agenzia web design metalmeccanica», «realizzazione siti web carpenteria», «4 Web Lab industriale», «web design B2B manufacturing», «SEO aziende meccaniche»
 
-**c. `BreadcrumbList`** — invariato (già 4weblab.it).
+**c. `BreadcrumbList`**
+- Home → Realizzazioni → "Concept metalmeccanico premium · 4 Web Lab"
 
-**d. `WebPage`** — aggiungere:
-- `author` + `creator` = `@id` Organization 4 Web Lab
-- `publisher` = stessa Organization
-- `mainEntity` = `@id` del CreativeWork
-- description riscritta brand-first.
-
-Tutti i blocchi collegati tramite `@id` per dare un grafo coerente a Google (anche se la pagina è noindex, è buona prassi e rafforza il dominio 4weblab.it tramite i link interni dal resto del sito).
+**d. `WebPage`** — `@id: <canonical>#webpage`
+- name brand-first, isPartOf WebSite 4 Web Lab
+- about/author/creator/publisher → `@id` Organization
+- mainEntity → `@id` CreativeWork
 
 ### 3. Cosa NON cambia
 
-- `noindex, nofollow` resta (richiesta esplicita precedente).
+- `noindex, nofollow` resta.
 - Nessun cambiamento al contenuto visivo/UX della demo.
-- Nessuno schema `Dentist` / `LocalBusiness` / `MedicalBusiness` (mantenuta integrità semantica: lo studio è fittizio).
-- I disclaimer "brand fittizio" nel footer e nel form restano.
+- Nessuno schema `Organization` / `LocalBusiness` riferito ad AURUM (mantenuta integrità semantica: brand fittizio).
+- Disclaimer "brand fittizio" nel footer e nel form restano.
 
 ## Deliverable
 
-Un solo edit a `src/pages/DemoStudioDentisticoPremium.tsx` che riscrive il blocco `<Helmet>` (righe ~1476–1550).
+Un solo edit a `src/pages/DemoMetalmeccanica.tsx` che riscrive il blocco `<Helmet>` (righe ~1005–1026) aggiungendo i 4 blocchi JSON-LD.
