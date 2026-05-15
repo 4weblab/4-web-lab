@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
 Disallow: /realizzazioni/demo-metalmeccanica
+Disallow: /realizzazioni/demo-studio-dentistico-premium
 
 Sitemap: https://4weblab.it/sitemap.xml

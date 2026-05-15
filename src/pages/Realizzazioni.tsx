@@ -52,7 +52,7 @@ const projects: Project[] = [
     initials: "AU",
   },
   {
-    slug: "demo-dentista",
+    slug: "demo-studio-dentistico-premium",
     title: "Concept sito per studio dentistico",
     description:
       "Demo progettata per uno studio odontoiatrico moderno, con struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
