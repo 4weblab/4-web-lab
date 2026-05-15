@@ -17,6 +17,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { AnimatedSection } from "@/components/AnimatedSection";
+import imgMetalmeccanica from "@/assets/aurum-cnc.webp";
+import imgDentistico from "@/assets/dental-room.webp";
+import imgFotovoltaico from "@/assets/solaris-industrial.webp";
+import imgBoutique from "@/assets/bb-room-deluxe.webp";
 
 interface Project {
   slug: string;
@@ -24,8 +28,8 @@ interface Project {
   description: string;
   badge: string;
   features: string[];
-  gradient: string;
-  initials: string;
+  image: string;
+  alt: string;
 }
 
 const projects: Project[] = [
@@ -36,8 +40,8 @@ const projects: Project[] = [
       "Demo pensata per una PMI del settore metalmeccanico: catalogo prodotti, area certificazioni e contatti commerciali ben strutturati.",
     badge: "Concept",
     features: ["Sezione prodotti", "Area B2B", "SEO tecnica"],
-    gradient: "linear-gradient(135deg, hsl(210 73% 22%) 0%, hsl(207 60% 38%) 100%)",
-    initials: "AU",
+    image: imgMetalmeccanica,
+    alt: "Macchinario CNC in officina metalmeccanica — concept sito web 4 Web Lab",
   },
   {
     slug: "demo-studio-dentistico-premium",
@@ -46,8 +50,8 @@ const projects: Project[] = [
       "Demo progettata per uno studio odontoiatrico moderno, con struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
     badge: "Concept",
     features: ["SEO locale", "Mobile responsive", "CTA strategiche"],
-    gradient: "linear-gradient(135deg, hsl(190 70% 35%) 0%, hsl(207 80% 50%) 100%)",
-    initials: "DS",
+    image: imgDentistico,
+    alt: "Sala operativa di uno studio dentistico moderno — concept sito web 4 Web Lab",
   },
   {
     slug: "demo-fotovoltaico",
@@ -56,8 +60,8 @@ const projects: Project[] = [
       "Demo premium per un'azienda di impianti fotovoltaici e accumulo energetico: dashboard energetiche, case studies industriali e form consulenza.",
     badge: "Concept",
     features: ["Dashboard energetiche", "UX dark premium", "Lead generation B2B"],
-    gradient: "linear-gradient(135deg, hsl(220 60% 10%) 0%, hsl(150 80% 35%) 100%)",
-    initials: "SE",
+    image: imgFotovoltaico,
+    alt: "Impianto fotovoltaico industriale su tetto — concept sito web 4 Web Lab",
   },
   {
     slug: "boutique-bb-luxury-rooms",
@@ -66,8 +70,8 @@ const projects: Project[] = [
       "Demo editoriale per un boutique B&B contemporaneo: hero cinematografica, camere premium, gallery immersiva e form prenotazione su misura.",
     badge: "Concept",
     features: ["Design editoriale", "Gallery immersiva", "UX boutique luxury"],
-    gradient: "linear-gradient(135deg, hsl(28 25% 18%) 0%, hsl(35 35% 55%) 100%)",
-    initials: "VR",
+    image: imgBoutique,
+    alt: "Camera deluxe di un boutique B&B luxury — concept sito web 4 Web Lab",
   },
 ];
 
@@ -173,17 +177,16 @@ const Realizzazioni = () => {
                     style={{ boxShadow: "var(--shadow-md)" }}
                   >
                     {/* Preview */}
-                    <div className="relative aspect-[16/10] overflow-hidden" style={{ background: p.gradient }}>
-                      <div aria-hidden className="absolute inset-0 opacity-20" style={{
-                        backgroundImage:
-                          "linear-gradient(transparent 96%, hsl(0 0% 100% / 0.3) 96%), linear-gradient(90deg, transparent 96%, hsl(0 0% 100% / 0.3) 96%)",
-                        backgroundSize: "32px 32px",
-                      }} />
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <span className="text-primary-foreground/95 font-serif font-bold text-6xl md:text-7xl tracking-tight transition-transform duration-500 group-hover:scale-110">
-                          {p.initials}
-                        </span>
-                      </div>
+                    <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                      <img
+                        src={p.image}
+                        alt={p.alt}
+                        width={800}
+                        height={500}
+                        loading="lazy"
+                        decoding="async"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
                       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
                       <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-card/95 text-foreground backdrop-blur-sm shadow-sm">
                         {p.badge}
