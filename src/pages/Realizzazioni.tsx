@@ -238,6 +238,7 @@ const Realizzazioni = () => {
                 >
                   <Link
                     to={`/realizzazioni/${p.slug}`}
+                    aria-label={`Apri demo: ${p.title}`}
                     className="group block h-full bg-card rounded-2xl overflow-hidden border border-border transition-all duration-400 hover:-translate-y-1.5"
                     style={{ boxShadow: "var(--shadow-md)" }}
                   >
@@ -245,6 +246,8 @@ const Realizzazioni = () => {
                     <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                       <img
                         src={p.image}
+                        srcSet={`${p.image} 800w`}
+                        sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                         alt={p.alt}
                         width={800}
                         height={500}
