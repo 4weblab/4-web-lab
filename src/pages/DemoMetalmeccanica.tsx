@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
   ArrowRight,
-  ArrowLeft,
   Phone,
   Mail,
   MapPin,
@@ -878,44 +877,14 @@ const Contacts = () => (
           </div>
         </div>
       </div>
-    </div>
-  </section>
-);
-
-/* ---------------- Tech demo explainer ---------------- */
-const TechDemoSection = () => (
-  <section className="py-20 md:py-24" style={{ background: C.bg }}>
-    <div className="max-w-4xl mx-auto px-5 md:px-8">
-      <div className="relative p-8 md:p-12 rounded-2xl overflow-hidden"
-        style={{
-          background: `linear-gradient(165deg, ${C.bg2} 0%, ${C.bg} 100%)`,
-          border: `1px solid ${C.borderStrong}`,
-        }}>
-        <div aria-hidden className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-30"
-          style={{ background: `radial-gradient(circle, ${C.accent}55 0%, transparent 70%)`, filter: "blur(20px)" }} />
-        <div className="relative">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11px] font-semibold uppercase tracking-[0.2em] mb-5"
-            style={{ color: C.accent, background: `${C.accent}1A`, border: `1px solid ${C.accent}40` }}>
-            <span className="w-1.5 h-1.5 rounded-full" style={{ background: C.accent }} />
-            Demo Tecnica
-          </span>
-          <h2 className="text-2xl md:text-3xl font-bold leading-tight mb-4 tracking-tight" style={{ color: C.text }}>
-            Concept Project · Tech Demo
-          </h2>
-          <p className="text-[15px] md:text-base leading-relaxed mb-6" style={{ color: C.textDim }}>
-            Questa pagina è una <strong style={{ color: C.text }}>realizzazione tecnica dimostrativa</strong> sviluppata
-            da <strong style={{ color: C.text }}>4 Web Lab</strong> per mostrare le potenzialità di design moderno,
-            UX/UI ed ottimizzazione SEO applicate al settore metalmeccanico e industriale. Tutti i dati
-            aziendali, immagini e contenuti riferiti ad "AURUM Meccanica" sono fittizi e creati esclusivamente
-            a scopo dimostrativo.
-          </p>
-          <Link to="/realizzazioni"
-            className="inline-flex items-center gap-2 text-sm font-semibold transition-colors"
-            style={{ color: C.accent }}>
-            <ArrowLeft className="w-4 h-4" />
-            Torna al portfolio 4 Web Lab
-          </Link>
-        </div>
+      <div className="mt-12 md:mt-16 text-center">
+        <Link
+          to="/realizzazioni"
+          className="inline-flex items-center gap-2 text-base font-semibold transition-colors hover:underline"
+          style={{ color: C.accent }}
+        >
+          Torna alla lista delle demo
+        </Link>
       </div>
     </div>
   </section>
@@ -1148,7 +1117,6 @@ const DemoMetalmeccanica = () => {
           <Realizations />
           <CtaBanner />
           <Contacts />
-          <TechDemoSection />
         </main>
         <AurumFooter />
       </div>
