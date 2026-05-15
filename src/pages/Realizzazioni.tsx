@@ -63,6 +63,17 @@ const projects: Project[] = [
     initials: "DS",
   },
   {
+    slug: "demo-fotovoltaico",
+    title: "Concept sito per azienda fotovoltaica",
+    description:
+      "Demo premium per un'azienda di impianti fotovoltaici e accumulo energetico: dashboard energetiche, case studies industriali e form consulenza.",
+    badge: "Concept",
+    categories: ["Concept", "Aziende"],
+    features: ["Dashboard energetiche", "UX dark premium", "Lead generation B2B"],
+    gradient: "linear-gradient(135deg, hsl(220 60% 10%) 0%, hsl(150 80% 35%) 100%)",
+    initials: "SE",
+  },
+  {
     slug: "demo-serramenti",
     title: "Concept sito per azienda di serramenti",
     description:
