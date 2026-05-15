@@ -3,5 +3,6 @@ Allow: /
 Disallow: /realizzazioni/demo-metalmeccanica
 Disallow: /realizzazioni/demo-studio-dentistico-premium
 Disallow: /realizzazioni/demo-fotovoltaico
+Disallow: /realizzazioni/boutique-bb-luxury-rooms
 
 Sitemap: https://4weblab.it/sitemap.xml
