@@ -7,6 +7,7 @@ const navItems = [
   { label: 'Punti di forza', href: '#punti-di-forza' },
   { label: 'Servizi', href: '#servizi' },
   { label: 'Domande Frequenti', href: '#faq' },
+  { label: 'Realizzazioni', href: '/realizzazioni' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contatti', href: '/contatti' },
 ];
