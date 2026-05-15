@@ -74,6 +74,17 @@ const projects: Project[] = [
     initials: "SE",
   },
   {
+    slug: "boutique-bb-luxury-rooms",
+    title: "Concept sito per boutique B&B / Luxury Rooms",
+    description:
+      "Demo editoriale per un boutique B&B contemporaneo: hero cinematografica, camere premium, gallery immersiva e form prenotazione su misura.",
+    badge: "Concept",
+    categories: ["Concept", "Attività locali"],
+    features: ["Design editoriale", "Gallery immersiva", "UX boutique luxury"],
+    gradient: "linear-gradient(135deg, hsl(28 25% 18%) 0%, hsl(35 35% 55%) 100%)",
+    initials: "VR",
+  },
+  {
     slug: "demo-serramenti",
     title: "Concept sito per azienda di serramenti",
     description:
