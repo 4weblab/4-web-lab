@@ -240,7 +240,7 @@ const SitiWebNegozi = () => {
                     <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
                       negozi della provincia di Padova
                     </Link>
-                    {" "}che lavorano su un bacino fortemente locale.
+                    {" "}che lavorano su un bacino fortemente locale. Vedi alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link>.
                   </p>
                   <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                     {[

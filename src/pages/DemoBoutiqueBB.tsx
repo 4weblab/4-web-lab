@@ -994,7 +994,7 @@ const Contact = () => {
             "Velluto Rooms" è una demo concept realizzata da{" "}
             <Link to="/" className="underline" style={{ color: C.goldSoft }}>4 Web Lab</Link>.
             Le richieste inviate da questa pagina vengono ricevute direttamente da
-            4 Web Lab a scopo dimostrativo.
+            4 Web Lab a scopo dimostrativo. Vedi le altre <Link to="/realizzazioni" className="underline" style={{ color: C.goldSoft }}>realizzazioni</Link>.
           </div>
         </div>
 
