@@ -14,7 +14,6 @@ import {
   Smile,
   ShieldCheck,
   ScanLine,
-  Stethoscope,
   Award,
   Users,
   Star,
