@@ -1,43 +1,60 @@
 ## Obiettivo
-Rendere `/realizzazioni` accessibile solo via link diretto, ma invisibile a motori di ricerca, AI crawler, sitemap e link interni — finché non sarà pronta per il pubblico.
 
-## Cosa cambia
+Su `/realizzazioni/demo-studio-dentistico-premium` il SEO e tutti i blocchi JSON-LD devono spingere l'EEAT di **4 Web Lab** (l'agenzia che ha realizzato il concept), non dello studio dentistico fittizio "Aurea". La pagina resta `noindex,nofollow` ma, se mai indicizzata da bot interni / shared via link, deve comunicare in modo univoco che l'autore/expert è 4 Web Lab.
 
-### 1. Meta robots noindex sulla pagina
-In `src/pages/Realizzazioni.tsx` modifico l'`<Helmet>`:
-- `<meta name="robots" content="noindex, nofollow" />`
-- `<meta name="googlebot" content="noindex, nofollow" />`
-- Rimuovo `<link rel="canonical">` e i tag `og:*`/`twitter:*` (inutili e fuorvianti su pagina noindex)
-- Rimuovo lo schema JSON-LD `CollectionPage` (non vogliamo segnalarla)
+## Stato attuale (verificato in `src/pages/DemoStudioDentisticoPremium.tsx`)
 
-### 2. Rimozione dalla sitemap
-In `public/sitemap.xml` elimino l'entry `<url><loc>https://4weblab.it/realizzazioni</loc>...</url>`.
+- `<title>` e `description` citano già 4 Web Lab ma mettono "Studio Dentistico Premium" davanti.
+- 3 blocchi JSON-LD presenti:
+  1. `CreativeWork` — `name: "Concept sito per studio dentistico premium"`, `creator: 4 Web Lab` (ok ma debole su EEAT).
+  2. `BreadcrumbList` — ok, già su `4weblab.it`.
+  3. `WebPage` — `isPartOf: WebSite 4 Web Lab` (ok), description neutra.
+- Nessun blocco `Organization` di 4 Web Lab con segnali EEAT (founder, areaServed, sameAs, expertise, contact).
+- Nessun `author` esplicito. Nessun `Person` (Carlo Fullin) per autorialità.
 
-### 3. Esclusione esplicita in robots.txt
-In `public/robots.txt` aggiungo:
-```
-User-agent: *
-Disallow: /realizzazioni
-```
-(mantenendo `Allow: /` e la direttiva `Sitemap:` esistenti)
+## Modifiche al file `src/pages/DemoStudioDentisticoPremium.tsx`
 
-### 4. Rimozione da llms.txt
-In `public/llms.txt` elimino la riga `- [Realizzazioni](/realizzazioni): ...` per non segnalarla agli AI crawler.
+### 1. Meta tag
+- `<title>` → `4 Web Lab · Concept Web Design Premium per Studi Dentistici (Tech Demo)` (4 Web Lab in posizione iniziale, brand-first).
+- `description` → riscritta mettendo 4 Web Lab come soggetto: «4 Web Lab realizza siti web premium per studi dentistici. Tech demo concettuale che mostra il nostro approccio a UX healthcare, Digital Smile Design e prenotazione online.»
+- `og:title` / `og:description` allineati allo stesso messaggio brand-first.
+- `og:site_name` = `4 Web Lab`.
+- Aggiungere `<meta name="author" content="4 Web Lab" />`.
 
-### 5. Verifica link interni
-Controllo se `/realizzazioni` è linkata da Header, Footer, Hero, ServicesSection o altre pagine. Se sì, rimuovo i link visibili (la rotta resta attiva, raggiungibile solo digitando l'URL).
+### 2. JSON-LD — sostituire i 3 blocchi con 4 blocchi tutti centrati su 4 Web Lab
 
-## Cosa NON cambia
-- La rotta `/realizzazioni` in `src/App.tsx` resta attiva → la pagina è raggiungibile via link diretto
-- Il file `Realizzazioni.tsx` non viene cancellato, solo "smarcato" dai segnali SEO
-- Nessuna modifica al design o al contenuto della pagina
+**a. `Organization` (4 Web Lab)** — nuovo, EEAT-first:
+- `name`, `legalName: "4 Web Lab di Fullin Carlo"`, `vatID: "05765760284"`
+- `url: https://4weblab.it/`
+- `founder: { @type: Person, name: "Carlo Fullin" }`
+- `areaServed: "IT"`, `knowsAbout: ["Web design per studi dentistici", "UX healthcare", "SEO locale", "Digital Smile Design web", ...]`
+- `contactPoint` con telefono `+39 351 465 6042`
+- `sameAs`: link social/Google Business già usati nel resto del sito (verifico in `index.html` o `Footer`).
 
-## File toccati
-- `src/pages/Realizzazioni.tsx` — meta noindex, rimozione canonical/og/JSON-LD
-- `public/sitemap.xml` — rimozione entry
-- `public/robots.txt` — aggiunta Disallow
-- `public/llms.txt` — rimozione riga
-- Eventuali componenti con link a `/realizzazioni` (da verificare)
+**b. `CreativeWork`** — riscritto:
+- `name: "Concept di sito web premium per studio dentistico — by 4 Web Lab"`
+- `author` + `creator` + `producer` = riferimento `@id` all'Organization 4 Web Lab.
+- `publisher` = stessa Organization.
+- `about: "Web design e UX per studi dentistici"`.
+- Rimuovere keyword generiche "demo sito dentista" e privilegiare keyword 4 Web Lab-centric: «agenzia web design dentisti», «realizzazione siti studi dentistici», «web design healthcare Italia».
 
-## Risultato
-Google, Bing, ChatGPT, Perplexity e gli altri crawler non indicizzeranno né scansioneranno `/realizzazioni`. Tu potrai continuare a sviluppare la pagina e visualizzarla aprendo direttamente l'URL nel browser. Quando sarà pronta basterà rifare il percorso al contrario.
+**c. `BreadcrumbList`** — invariato (già 4weblab.it).
+
+**d. `WebPage`** — aggiungere:
+- `author` + `creator` = `@id` Organization 4 Web Lab
+- `publisher` = stessa Organization
+- `mainEntity` = `@id` del CreativeWork
+- description riscritta brand-first.
+
+Tutti i blocchi collegati tramite `@id` per dare un grafo coerente a Google (anche se la pagina è noindex, è buona prassi e rafforza il dominio 4weblab.it tramite i link interni dal resto del sito).
+
+### 3. Cosa NON cambia
+
+- `noindex, nofollow` resta (richiesta esplicita precedente).
+- Nessun cambiamento al contenuto visivo/UX della demo.
+- Nessuno schema `Dentist` / `LocalBusiness` / `MedicalBusiness` (mantenuta integrità semantica: lo studio è fittizio).
+- I disclaimer "brand fittizio" nel footer e nel form restano.
+
+## Deliverable
+
+Un solo edit a `src/pages/DemoStudioDentisticoPremium.tsx` che riscrive il blocco `<Helmet>` (righe ~1476–1550).
