@@ -1125,6 +1125,15 @@ const ContactSection = () => {
             </div>
           </div>
         </div>
+        <div className="relative max-w-7xl mx-auto px-5 md:px-8 mt-16 md:mt-20 text-center">
+          <Link
+            to="/realizzazioni"
+            className="inline-flex items-center gap-2 text-base font-semibold transition-colors hover:underline"
+            style={{ color: C.accent }}
+          >
+            Torna alla lista delle demo
+          </Link>
+        </div>
       </div>
     </section>
   );
