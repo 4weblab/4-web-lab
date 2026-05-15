@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
@@ -19,21 +18,11 @@ import Footer from "@/components/Footer";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { AnimatedSection } from "@/components/AnimatedSection";
 
-type Category =
-  | "Tutti"
-  | "Aziende"
-  | "Professionisti"
-  | "Negozi"
-  | "Attività locali"
-  | "Concept"
-  | "Restyling";
-
 interface Project {
   slug: string;
   title: string;
   description: string;
-  badge: Exclude<Category, "Tutti">;
-  categories: Exclude<Category, "Tutti">[];
+  badge: string;
   features: string[];
   gradient: string;
   initials: string;
@@ -46,7 +35,6 @@ const projects: Project[] = [
     description:
       "Demo pensata per una PMI del settore metalmeccanico: catalogo prodotti, area certificazioni e contatti commerciali ben strutturati.",
     badge: "Concept",
-    categories: ["Concept", "Aziende"],
     features: ["Sezione prodotti", "Area B2B", "SEO tecnica"],
     gradient: "linear-gradient(135deg, hsl(210 73% 22%) 0%, hsl(207 60% 38%) 100%)",
     initials: "AU",
@@ -57,7 +45,6 @@ const projects: Project[] = [
     description:
       "Demo progettata per uno studio odontoiatrico moderno, con struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
     badge: "Concept",
-    categories: ["Concept", "Professionisti"],
     features: ["SEO locale", "Mobile responsive", "CTA strategiche"],
     gradient: "linear-gradient(135deg, hsl(190 70% 35%) 0%, hsl(207 80% 50%) 100%)",
     initials: "DS",
@@ -68,7 +55,6 @@ const projects: Project[] = [
     description:
       "Demo premium per un'azienda di impianti fotovoltaici e accumulo energetico: dashboard energetiche, case studies industriali e form consulenza.",
     badge: "Concept",
-    categories: ["Concept", "Aziende"],
     features: ["Dashboard energetiche", "UX dark premium", "Lead generation B2B"],
     gradient: "linear-gradient(135deg, hsl(220 60% 10%) 0%, hsl(150 80% 35%) 100%)",
     initials: "SE",
@@ -79,87 +65,10 @@ const projects: Project[] = [
     description:
       "Demo editoriale per un boutique B&B contemporaneo: hero cinematografica, camere premium, gallery immersiva e form prenotazione su misura.",
     badge: "Concept",
-    categories: ["Concept", "Attività locali"],
     features: ["Design editoriale", "Gallery immersiva", "UX boutique luxury"],
     gradient: "linear-gradient(135deg, hsl(28 25% 18%) 0%, hsl(35 35% 55%) 100%)",
     initials: "VR",
   },
-  {
-    slug: "demo-serramenti",
-    title: "Concept sito per azienda di serramenti",
-    description:
-      "Una vetrina digitale per un produttore di porte e finestre: focus su materiali, gallerie progetto e richiesta preventivo.",
-    badge: "Demo",
-    categories: ["Demo", "Aziende", "Attività locali"],
-    features: ["Galleria lavori", "Form preventivo", "Pagine prodotto"],
-    gradient: "linear-gradient(135deg, hsl(24 80% 45%) 0%, hsl(18 75% 35%) 100%)",
-    initials: "SR",
-  },
-  {
-    slug: "demo-impresa-edile",
-    title: "Concept sito per impresa edile",
-    description:
-      "Demo per un'impresa di costruzioni e ristrutturazioni, con sezione cantieri, servizi e area clienti chiara e professionale.",
-    badge: "Concept",
-    categories: ["Concept", "Aziende"],
-    features: ["Portfolio cantieri", "SEO locale", "Lead generation"],
-    gradient: "linear-gradient(135deg, hsl(35 60% 35%) 0%, hsl(28 70% 28%) 100%)",
-    initials: "IE",
-  },
-  {
-    slug: "demo-barber-shop",
-    title: "Restyling per barber shop urbano",
-    description:
-      "Restyling premium per un barber shop: identità visiva forte, prenotazione online e integrazione social per fidelizzare i clienti.",
-    badge: "Restyling",
-    categories: ["Restyling", "Negozi", "Attività locali"],
-    features: ["Booking online", "Brand identity", "Mobile first"],
-    gradient: "linear-gradient(135deg, hsl(0 0% 12%) 0%, hsl(24 70% 40%) 100%)",
-    initials: "BS",
-  },
-  {
-    slug: "demo-avvocato",
-    title: "Concept sito per studio legale",
-    description:
-      "Demo per uno studio di avvocati: aree di competenza, presentazione del team e form contatto riservato e professionale.",
-    badge: "Concept",
-    categories: ["Concept", "Professionisti"],
-    features: ["Aree di pratica", "GDPR ready", "Tono autorevole"],
-    gradient: "linear-gradient(135deg, hsl(210 73% 18%) 0%, hsl(215 40% 30%) 100%)",
-    initials: "AV",
-  },
-  {
-    slug: "demo-ristorante",
-    title: "Restyling per ristorante locale",
-    description:
-      "Restyling per un ristorante di quartiere: menu digitale, prenotazioni e galleria piatti con un'estetica calda e accogliente.",
-    badge: "Restyling",
-    categories: ["Restyling", "Attività locali", "Negozi"],
-    features: ["Menu digitale", "Prenotazioni", "Google Maps"],
-    gradient: "linear-gradient(135deg, hsl(15 70% 45%) 0%, hsl(35 80% 50%) 100%)",
-    initials: "RT",
-  },
-  {
-    slug: "demo-azienda-agricola",
-    title: "Sito aziendale per azienda agricola",
-    description:
-      "Sito istituzionale per un'azienda agricola: storia, prodotti a km zero, vendita diretta e sezione eventi in cantina.",
-    badge: "Sito aziendale",
-    categories: ["Aziende", "Attività locali"],
-    features: ["E-commerce light", "Storytelling", "Eventi"],
-    gradient: "linear-gradient(135deg, hsl(120 35% 30%) 0%, hsl(95 45% 40%) 100%)",
-    initials: "AA",
-  },
-] as unknown as Project[];
-
-const filters: Category[] = [
-  "Tutti",
-  "Aziende",
-  "Professionisti",
-  "Negozi",
-  "Attività locali",
-  "Concept",
-  "Restyling",
 ];
 
 const methodPoints = [
@@ -174,12 +83,6 @@ const methodPoints = [
 ];
 
 const Realizzazioni = () => {
-  const [active, setActive] = useState<Category>("Tutti");
-
-  const filtered = active === "Tutti"
-    ? projects
-    : projects.filter((p) => p.categories.includes(active as Exclude<Category, "Tutti">));
-
   return (
     <>
       <Helmet>
@@ -254,32 +157,9 @@ const Realizzazioni = () => {
         {/* GRID + FILTERS */}
         <section className="pb-24 md:pb-32" style={{ background: "hsl(var(--surface-alt))" }}>
           <div className="container-section pt-16 md:pt-20">
-            {/* Filters */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Filtra per categoria">
-              {filters.map((f) => {
-                const isActive = active === f;
-                return (
-                  <button
-                    key={f}
-                    role="tab"
-                    aria-selected={isActive}
-                    onClick={() => setActive(f)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
-                      isActive
-                        ? "text-accent-foreground border-transparent shadow-md"
-                        : "bg-card text-foreground border-border hover:border-accent/40 hover:-translate-y-0.5"
-                    }`}
-                    style={isActive ? { background: "var(--gradient-accent)" } : {}}
-                  >
-                    {f}
-                  </button>
-                );
-              })}
-            </div>
-
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {filtered.map((p, idx) => (
+              {projects.map((p, idx) => (
                 <motion.div
                   key={p.slug}
                   initial={{ opacity: 0, y: 24 }}
