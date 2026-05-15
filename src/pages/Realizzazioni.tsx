@@ -157,32 +157,9 @@ const Realizzazioni = () => {
         {/* GRID + FILTERS */}
         <section className="pb-24 md:pb-32" style={{ background: "hsl(var(--surface-alt))" }}>
           <div className="container-section pt-16 md:pt-20">
-            {/* Filters */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12" role="tablist" aria-label="Filtra per categoria">
-              {filters.map((f) => {
-                const isActive = active === f;
-                return (
-                  <button
-                    key={f}
-                    role="tab"
-                    aria-selected={isActive}
-                    onClick={() => setActive(f)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium border transition-all duration-300 ${
-                      isActive
-                        ? "text-accent-foreground border-transparent shadow-md"
-                        : "bg-card text-foreground border-border hover:border-accent/40 hover:-translate-y-0.5"
-                    }`}
-                    style={isActive ? { background: "var(--gradient-accent)" } : {}}
-                  >
-                    {f}
-                  </button>
-                );
-              })}
-            </div>
-
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {filtered.map((p, idx) => (
+              {projects.map((p, idx) => (
                 <motion.div
                   key={p.slug}
                   initial={{ opacity: 0, y: 24 }}
