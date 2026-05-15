@@ -1474,47 +1474,98 @@ const DemoStudioDentisticoPremium = () => {
   return (
     <>
       <Helmet>
-        <title>Tech Demo Studio Dentistico Premium | Concept Website 4 Web Lab</title>
+        <title>4 Web Lab · Concept Web Design Premium per Studi Dentistici (Tech Demo)</title>
         <meta
           name="description"
-          content="Concept project di sito web premium per uno studio dentistico moderno. Tech demo realizzata da 4 Web Lab: UX healthcare, Digital Smile Design, prenotazione e SEO locale."
+          content="4 Web Lab realizza siti web premium per studi dentistici italiani. Tech demo concettuale che mostra il nostro approccio a UX healthcare, Digital Smile Design e prenotazione online."
         />
+        <meta name="author" content="4 Web Lab" />
         {/* NON crawlabile — richiesta esplicita */}
         <meta name="robots" content="noindex, nofollow" />
         <meta name="googlebot" content="noindex, nofollow" />
         <meta name="bingbot" content="noindex, nofollow" />
         <link rel="canonical" href={canonical} />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Tech Demo Studio Dentistico Premium · 4 Web Lab" />
-        <meta property="og:description" content="Concept di sito web premium per studi dentistici. Demo non commerciale realizzata da 4 Web Lab." />
+        <meta property="og:site_name" content="4 Web Lab" />
+        <meta property="og:title" content="4 Web Lab · Concept Web Design Premium per Studi Dentistici" />
+        <meta property="og:description" content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per studi dentistici e settore healthcare." />
         <meta property="og:url" content={canonical} />
 
-        {/* Schema: progetto creativo (NON LocalBusiness/Dentist) */}
+        {/* Organization 4 Web Lab — EEAT signal principale della pagina */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "@id": "https://4weblab.it/#organization",
+            name: "4 Web Lab",
+            legalName: "4 Web Lab di Fullin Carlo",
+            url: "https://4weblab.it/",
+            logo: "https://4weblab.it/logo.webp",
+            vatID: "05765760284",
+            foundingDate: "2026",
+            founder: {
+              "@type": "Person",
+              name: "Carlo Fullin",
+              jobTitle: "Founder & Web Designer",
+              sameAs: "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
+            },
+            address: {
+              "@type": "PostalAddress",
+              streetAddress: "Via Belluno 44",
+              addressLocality: "Legnaro",
+              addressRegion: "PD",
+              postalCode: "35020",
+              addressCountry: "IT",
+            },
+            areaServed: ["IT", "Veneto"],
+            knowsAbout: [
+              "Web design per studi dentistici",
+              "UX design healthcare",
+              "Realizzazione siti web professionisti sanitari",
+              "SEO locale per studi medici",
+              "Digital Smile Design su web",
+              "Prenotazione online per cliniche",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+393514656042",
+              email: "info@4weblab.it",
+              contactType: "sales",
+              areaServed: "IT",
+              availableLanguage: ["Italian"],
+            },
+            sameAs: [
+              "https://share.google/oGOMV0sHAaV8JlqnZ",
+              "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
+            ],
+          })}
+        </script>
+
+        {/* CreativeWork — il concept, attribuito interamente a 4 Web Lab */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "CreativeWork",
             "@id": canonical + "#concept",
-            name: "Concept sito per studio dentistico premium",
+            name: "Concept di sito web premium per studio dentistico — by 4 Web Lab",
+            headline: "Tech demo: web design premium per studi dentistici realizzata da 4 Web Lab",
             url: canonical,
             inLanguage: "it",
-            creator: {
-              "@type": "Organization",
-              name: "4 Web Lab",
-              url: "https://4weblab.it/",
-            },
-            about: "Web design e UX per studi dentistici, demo concettuale.",
+            author: { "@id": "https://4weblab.it/#organization" },
+            creator: { "@id": "https://4weblab.it/#organization" },
+            producer: { "@id": "https://4weblab.it/#organization" },
+            publisher: { "@id": "https://4weblab.it/#organization" },
+            copyrightHolder: { "@id": "https://4weblab.it/#organization" },
+            about: "Web design, UX e SEO locale per studi dentistici realizzati da 4 Web Lab.",
             keywords: [
-              "sito web studio dentistico",
-              "web design dentisti",
-              "demo sito dentista",
-              "concept studio dentistico",
-              "UX dental premium",
-              "realizzazione sito studio dentistico",
+              "agenzia web design studi dentistici",
+              "realizzazione siti web dentisti Italia",
+              "4 Web Lab healthcare",
+              "web design medicale premium",
+              "SEO locale studi dentistici",
             ],
             isAccessibleForFree: true,
             isFamilyFriendly: true,
-            license: "https://4weblab.it/",
           })}
         </script>
 
@@ -1524,23 +1575,29 @@ const DemoStudioDentisticoPremium = () => {
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Realizzazioni", item: "https://4weblab.it/realizzazioni" },
-              { "@type": "ListItem", position: 3, name: "Demo Studio Dentistico Premium", item: canonical },
+              { "@type": "ListItem", position: 1, name: "4 Web Lab — Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Realizzazioni 4 Web Lab", item: "https://4weblab.it/realizzazioni" },
+              { "@type": "ListItem", position: 3, name: "Concept dentistico premium · 4 Web Lab", item: canonical },
             ],
           })}
         </script>
 
-        {/* WebPage */}
+        {/* WebPage — autore/publisher = 4 Web Lab */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "Tech Demo Studio Dentistico Premium",
+            "@id": canonical + "#webpage",
+            name: "4 Web Lab · Concept Web Design Premium per Studi Dentistici",
             url: canonical,
+            inLanguage: "it",
             isPartOf: { "@type": "WebSite", name: "4 Web Lab", url: "https://4weblab.it/" },
-            primaryImageOfPage: { "@type": "ImageObject", url: "https://4weblab.it/og-image.jpg" },
-            description: "Concept project di sito web premium per studio dentistico, realizzato da 4 Web Lab a scopo dimostrativo.",
+            about: { "@id": "https://4weblab.it/#organization" },
+            mainEntity: { "@id": canonical + "#concept" },
+            author: { "@id": "https://4weblab.it/#organization" },
+            creator: { "@id": "https://4weblab.it/#organization" },
+            publisher: { "@id": "https://4weblab.it/#organization" },
+            description: "Tech demo concettuale realizzata da 4 Web Lab — agenzia italiana specializzata in web design premium per studi dentistici, healthcare e professionisti.",
           })}
         </script>
 
