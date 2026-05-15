@@ -198,6 +198,9 @@ const Blog = () => {
                 Articoli pratici su costi, SEO, GDPR e intelligenza artificiale per
                 aziende, professionisti e attività locali a Padova e in tutta Italia.
               </p>
+              <p className="mt-3 text-primary-foreground/65 text-sm max-w-2xl">
+                Vedi anche le nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept di siti web</Link>.
+              </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
                   Richiedi una consulenza
