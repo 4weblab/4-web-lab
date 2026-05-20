@@ -36,13 +36,6 @@ const DemoFlowerAtelier = lazy(() => import("./pages/DemoFlowerAtelier"));
 
 const queryClient = new QueryClient();
 
-const siteMetadata = {
-  title: "4 Web Lab | Agenzia Web Padova - Siti da 199€",
-  description: "Agenzia web a Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza locale e preventivo gratuito in 24h.",
-  url: "https://4weblab.it/",
-  image: "https://4weblab.it/og-image.jpg",
-};
-
 const App = () => (
   <HelmetProvider>
     <Helmet>
