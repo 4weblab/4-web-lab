@@ -1,32 +1,43 @@
-## Obiettivo
 
-Sostituire l'attuale "preview" delle 4 card (gradient + iniziali grandi tipo "AU", "DS", "SE", "VR") con immagini reali WebP che rappresentano visivamente il contesto di ogni demo, con ALT SEO-friendly e ottime performance.
+## Problema
 
-## Mappatura immagini → demo
+Sulla home (e potenzialmente su ogni route) vengono renderizzati più `<link rel="canonical">` perché provengono da tre fonti che non si deduplicano tra loro:
 
-Riutilizzo asset già esistenti in `src/assets/` per evitare nuove generazioni e ridurre peso bundle:
+1. **`index.html`** (riga 38): `<link rel="canonical" href="https://4weblab.it/" />` — statico, presente su OGNI pagina servita.
+2. **`src/App.tsx`** (Helmet globale): aggiunge un secondo canonical su ogni route.
+3. **`src/pages/Index.tsx`** (e tutte le altre pagine): ognuna ha il proprio canonical.
 
-| Demo | Sorgente JPG attuale | Output WebP | ALT |
-|---|---|---|---|
-| Metalmeccanica (AU) | `aurum-cnc.jpg` | `aurum-cnc.webp` | "Macchinario CNC in officina metalmeccanica — concept sito web 4 Web Lab" |
-| Studio dentistico (DS) | `dental-room.jpg` | `dental-room.webp` | "Sala operativa di uno studio dentistico moderno — concept sito web 4 Web Lab" |
-| Fotovoltaico (SE) | `solaris-industrial.jpg` | `solaris-industrial.webp` | "Impianto fotovoltaico industriale su tetto — concept sito web 4 Web Lab" |
-| Boutique B&B (VR) | `bb-room-deluxe.jpg` | `bb-room-deluxe.webp` | "Camera deluxe di un boutique B&B luxury — concept sito web 4 Web Lab" |
+`react-helmet-async` deduplica i `<meta>` per `name`/`property`, ma **non deduplica i `<link>` per `rel`**: vengono accodati. Quindi un crawler che esegue JS vede 2-3 canonical, un crawler che non esegue JS ne vede comunque 2 (statico + JS-injected resta nel DOM).
 
-## Implementazione tecnica
+Stessa logica si applica anche ad altri `<link>` eventualmente duplicati, ma al momento il canonical è l'unico `<link rel>` SEO-critico ripetuto.
 
-1. **Conversione WebP** — script `cwebp` (via `nix run nixpkgs#libwebp`) su 4 sorgenti, q=72, ridimensionati a max 800px lato lungo (le card sono ~400px su desktop, aspect 16/10). Target: ~25–45 KB ognuno.
-2. **Modifica `src/pages/Realizzazioni.tsx`**:
-   - Aggiungere campo `image: string` e `alt: string` all'interfaccia `Project` e ai 4 oggetti.
-   - Importare le 4 nuove WebP come ES module per hashing/cache busting Vite.
-   - Sostituire il blocco "Preview" (gradient + iniziali + griglia decorativa) con `<img>`:
-     - `loading="lazy"`, `decoding="async"`, `width="800" height="500"` espliciti.
-     - `className` con `w-full h-full object-cover transition-transform duration-500 group-hover:scale-105`.
-     - Mantenere il badge in alto a sinistra e l'overlay scuro hover.
-   - Rimuovere campi orfani: `gradient` e `initials` dall'interfaccia e dai dati (non più usati).
-3. **Performance** — nessun preload (sono below-the-fold), lazy loading nativo, dimensioni esplicite per evitare CLS.
+## Soluzione
 
-## Out of scope
+Regola: **un solo canonical per route, emesso dal Helmet della pagina**.
 
-- Nessuna modifica al resto della pagina (hero, sezione metodo, CTA, JSON-LD).
-- Nessuna nuova generazione AI di immagini: si riutilizza quanto già presente.
+### Modifiche
+
+1. **`index.html`** — rimuovere la riga `<link rel="canonical" href="https://4weblab.it/" />`.
+   - Anche `og:url`, `og:title`, `og:description`, `twitter:*`, `og:image` rimangono come fallback per i crawler social che non eseguono JS (LinkedIn, Slack, Facebook): vanno bene, sono dedupabili e servono come baseline.
+   - Lasciare solo `og:url` statico è ok perché viene sovrascritto da Helmet sui crawler JS.
+
+2. **`src/App.tsx`** — rimuovere dal `<Helmet>` globale:
+   - `<link rel="canonical" href={siteMetadata.url} />`
+   
+   Mantenere invece title/description/og/twitter di fallback (sono `<meta>`, vengono deduplicati correttamente dal Helmet di pagina).
+
+3. **Verifica per-route canonical** — controllare che ogni pagina abbia il proprio `<link rel="canonical">` nel proprio Helmet. Da una scansione veloce risulta che le pagine principali (`Index`, `Realizzazioni`, demo, satellite, blog, FAQ, Contact, Privacy, Cookie) lo hanno già. Eventuali pagine mancanti vanno aggiunte.
+   - Da verificare in particolare: `PrivacyPolicy`, `CookiePolicy`, `Blog`, articoli blog, `NotFound` (NotFound dovrebbe avere `noindex` invece di canonical).
+
+4. **Nessuna modifica al sitemap / robots / structured data**: il problema è solo nei tag `<link>` del `<head>`.
+
+## Verifica post-fix
+
+- Ispezionare `view-source` della home in preview: deve esserci **un solo** `<link rel="canonical">`.
+- Stessa verifica su `/realizzazioni`, una demo (`/realizzazioni/demo-flower-atelier`) e una pagina satellite (`/siti-web-per-negozi`).
+- Confermare che il canonical mostrato è quello corretto della route (non `https://4weblab.it/` su tutte).
+
+## Rischi
+
+- Bassissimi: rimuovere canonical da `index.html` e dall'Helmet globale non rompe nulla finché ogni route ha il proprio. Tutte le route già lo hanno.
+- I crawler social (no-JS) non vedranno canonical → comportamento neutro: in assenza, prendono l'URL della richiesta come canonical, che è ciò che vogliamo.
