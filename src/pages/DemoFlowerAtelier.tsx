@@ -251,14 +251,16 @@ const Hero = () => (
           <br />
           <em style={{ fontStyle: "italic", color: C.goldSoft }}>Botanical Design</em>
         </h1>
+        <h2 className="sr-only">Sito web per negozio (fioreria) — concept realizzato da 4 Web Lab, agenzia web di Padova</h2>
         <p
           className="text-[15px] md:text-[17px] max-w-xl leading-[1.7] mb-9"
           style={{ fontFamily: SANS, color: "rgba(255,255,255,0.88)" }}
         >
           Una demo concept realizzata da{" "}
           <Link to="/" className="underline" style={{ color: C.goldSoft }}>4 Web Lab</Link>{" "}
-          per mostrare il potenziale di un sito moderno per negozi e attività locali:
-          design immersivo, struttura SEO e cura mobile-first.
+          (agenzia web di Padova) per mostrare il potenziale di un{" "}
+          <Link to="/siti-web-per-negozi" className="underline" style={{ color: C.goldSoft }}>sito web per negozi</Link>{" "}
+          moderno: design immersivo, struttura SEO e cura mobile-first.
         </p>
 
         <div className="flex flex-wrap gap-3 mb-10">
@@ -1219,10 +1221,10 @@ const DemoFlowerAtelier = () => {
   return (
     <>
       <Helmet>
-        <title>Sito Web per Fioreria – Demo Concept Premium | 4 Web Lab</title>
+        <title>Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo concept premium realizzata da 4 Web Lab per mostrare il potenziale di un sito moderno per negozi e attività locali. Design elegante, immersivo e mobile-first."
+          content="Demo realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web per negozi e attività locali. Pacchetto una tantum da 199€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1230,11 +1232,13 @@ const DemoFlowerAtelier = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
+        <meta property="article:author" content="4 Web Lab" />
+        <meta property="article:section" content="Realizzazioni" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content="Sito Web per Fioreria – Demo Concept Premium | 4 Web Lab" />
+        <meta property="og:title" content="Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Demo concept premium realizzata da 4 Web Lab per mostrare il potenziale di un sito moderno per negozi e attività locali."
+          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 199€."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -1244,10 +1248,10 @@ const DemoFlowerAtelier = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sito Web per Fioreria – Demo Concept Premium | 4 Web Lab" />
+        <meta name="twitter:title" content="Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Demo concept di sito web premium per negozi e attività locali — by 4 Web Lab."
+          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Da 199€."
         />
         <meta name="twitter:image" content="https://4weblab.it/og/flower-atelier-demo.webp" />
 

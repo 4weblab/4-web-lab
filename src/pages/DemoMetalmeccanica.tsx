@@ -245,6 +245,7 @@ const Hero = () => (
             backgroundClip: "text",
           }}>d'Avanguardia</span>
         </h1>
+        <h2 className="sr-only">Sito web per azienda metalmeccanica — concept realizzato da 4 Web Lab, agenzia web di Padova</h2>
 
         <p className="text-lg md:text-xl max-w-2xl mb-10 leading-relaxed" style={{ color: C.textDim }}>
           Dal prototipo alla produzione in serie, trasformiamo il metallo in soluzioni ingegneristiche
@@ -972,19 +973,23 @@ const DemoMetalmeccanica = () => {
   return (
     <>
       <Helmet>
-        <title>Concept Sito Web Premium per Aziende Metalmeccaniche | 4 Web Lab</title>
-        <meta name="description" content="4 Web Lab realizza siti web premium per aziende metalmeccaniche e carpenteria industriale. Tech demo concettuale che mostra il nostro approccio a UX industriale, schede macchina/processo e SEO B2B." />
+        <title>Sito Web per Azienda Metalmeccanica · Demo | 4 Web Lab</title>
+        <meta name="description" content="Demo di sito web per aziende metalmeccaniche e carpenteria industriale realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web aziendali. Pacchetto una tantum da 899€." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="4 Web Lab" />
+        <meta property="article:section" content="Realizzazioni" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
-        <meta property="og:title" content="Concept Sito Web Premium per Aziende Metalmeccaniche | 4 Web Lab" />
-        <meta property="og:description" content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per il settore metalmeccanico, carpenteria e manifatturiero B2B." />
+        <meta property="og:title" content="Sito Web per Azienda Metalmeccanica · Demo | 4 Web Lab" />
+        <meta property="og:description" content="Demo di sito web per aziende metalmeccaniche e carpenteria industriale · 4 Web Lab, agenzia web di Padova. Da 899€." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og/demo-metalmeccanica.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sito Web per Azienda Metalmeccanica · Demo | 4 Web Lab" />
+        <meta name="twitter:description" content="Demo di sito web per aziende metalmeccaniche · 4 Web Lab, agenzia web di Padova. Da 899€." />
         <meta name="twitter:image" content="https://4weblab.it/og/demo-metalmeccanica.webp" />
         <meta name="theme-color" content="#1A1A1B" />
 
