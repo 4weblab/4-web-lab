@@ -46,32 +46,9 @@ const siteMetadata = {
 const App = () => (
   <HelmetProvider>
     <Helmet>
-      {/* Primary Meta Tags - fallback globale, ogni pagina sovrascrive con il proprio Helmet */}
-      <title>{siteMetadata.title}</title>
-      <meta name="title" content={siteMetadata.title} />
-      <meta name="description" content={siteMetadata.description} />
-      <meta name="robots" content="index, follow" />
-      
-      {/* Open Graph / Facebook */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={siteMetadata.url} />
-      <meta property="og:title" content={siteMetadata.title} />
-      <meta property="og:description" content={siteMetadata.description} />
-      <meta property="og:image" content={siteMetadata.image} />
-      <meta property="og:locale" content="it_IT" />
-      <meta property="og:site_name" content="4 Web Lab" />
-      
-      {/* Twitter */}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:url" content={siteMetadata.url} />
-      <meta name="twitter:title" content={siteMetadata.title} />
-      <meta name="twitter:description" content={siteMetadata.description} />
-      <meta name="twitter:image" content={siteMetadata.image} />
-      <meta name="twitter:site" content="@4weblab" />
-      
-      {/* Additional SEO */}
-      <meta name="author" content="4 Web Lab" />
+      {/* Solo defaults sitewide. Ogni pagina emette title/description/canonical/og/twitter via il proprio Helmet. */}
       <html lang="it" />
+      <meta name="robots" content="index, follow" />
       
       {/* Global JSON-LD */}
       <script type="application/ld+json">
