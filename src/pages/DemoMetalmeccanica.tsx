@@ -974,7 +974,7 @@ const DemoMetalmeccanica = () => {
     <>
       <Helmet>
         <title>Sito Web per Azienda Metalmeccanica · Demo | 4 Web Lab</title>
-        <meta name="description" content="Demo di sito web per aziende metalmeccaniche e carpenteria industriale realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web aziendali. Pacchetto una tantum da 899€." />
+        <meta name="description" content="Demo di sito web per aziende metalmeccaniche e carpenteria, realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 899€." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
