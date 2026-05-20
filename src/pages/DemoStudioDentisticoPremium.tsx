@@ -1487,7 +1487,7 @@ const DemoStudioDentisticoPremium = () => {
         <title>Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per studi dentistici realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Pacchetto una tantum da 549€."
+          content="Demo di sito web per studi dentistici, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 549€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
