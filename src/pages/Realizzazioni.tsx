@@ -105,7 +105,7 @@ const Realizzazioni = () => {
         <title>Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab</title>
         <meta
           name="description"
-          content="Portfolio di 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (da 199€), professionisti (da 549€) e aziende (da 899€) in tutta Italia."
+          content="Portfolio 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (199€), professionisti (549€) e aziende (899€)."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />

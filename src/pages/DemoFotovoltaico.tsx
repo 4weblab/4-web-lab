@@ -1249,7 +1249,7 @@ const DemoFotovoltaico = () => {
         <title>Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per aziende fotovoltaiche realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web aziendali. Pacchetto una tantum da 899€."
+          content="Demo di sito web per aziende fotovoltaiche, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti aziendali. Da 899€ una tantum."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />

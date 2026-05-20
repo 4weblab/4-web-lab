@@ -37,7 +37,7 @@ const SitiWebAziendali = () => {
         <title>Realizzazione Siti Web Aziendali Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
 
         <meta name="robots" content="index, follow" />
@@ -47,7 +47,7 @@ const SitiWebAziendali = () => {
         <meta property="og:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
@@ -57,7 +57,7 @@ const SitiWebAziendali = () => {
         <meta name="twitter:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">

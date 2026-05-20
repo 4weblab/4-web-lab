@@ -1,57 +1,42 @@
 
-## Problema
+## Risposta sintetica
 
-Tag meta duplicati nel `<head>` finale perché esistono in più fonti contemporaneamente:
+**Sì, è vero — ed è un problema reale ma "soft".**
 
-- **`index.html`** statico: title, `description`, `og:type/url/title/description/image/locale`, `twitter:card/url/title/description/image`
-- **`src/App.tsx`** `<Helmet>` globale: stessi tag (title, description, og:*, twitter:*)
-- **`src/pages/*.tsx`** `<Helmet>` per-route: stessi tag con valori specifici della pagina
+- Google tronca le meta description con "…" oltre ~155-160 caratteri (~920-1000 px renderizzati). La fine non viene mostrata in SERP → riduce CTR. Non è una penalizzazione di ranking.
+- L'audit segnalava 1232 px perché stava leggendo la vecchia description statica di `index.html` (205 caratteri ≈ 1232 px) che abbiamo appena rimosso. Quella specifica segnalazione, al prossimo scan, sparirà da sola.
+- Restano però **8 pagine** con description tra 161 e 207 caratteri (oltre il limite "safe" di 155).
 
-`react-helmet-async` deduplica tra i propri tag (per `name`/`property`), ma **non tocca** i tag statici già presenti in `index.html`. Quindi nel DOM finale ogni route ha 2 description, 2 og:title, ecc. → l'audit SEO segnala "more than one meta description".
+## Pagine da sistemare
 
-## Soluzione
+| Pagina | Char attuali | Target |
+|---|---|---|
+| `/siti-web-per-negozi` | 207 | ≤155 |
+| `/siti-web-aziendali` | 191 | ≤155 |
+| `/realizzazioni/demo-metalmeccanica` | 191 | ≤155 |
+| `/realizzazioni` | 174 | ≤155 |
+| `/realizzazioni/boutique-bb-luxury-rooms` | 172 | ≤155 |
+| `/realizzazioni/demo-studio-dentistico-premium` | 165 | ≤155 |
+| `/realizzazioni/demo-fotovoltaico` | 161 | ≤155 |
+| Tutte le altre pagine | ≤152 | ✅ già a posto |
 
-Regola: **un solo set di meta SEO per route, gestito dall'Helmet della pagina**.
-`index.html` resta minimo: solo tag tecnici (charset, viewport, preload, font, favicon). Niente più SEO/social meta statici.
+## Nuove description proposte (≤155 caratteri, keyword-first, Padova + prezzo)
 
-### Modifiche
+- **`/siti-web-per-negozi`** (155): *"Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h."*
+- **`/siti-web-aziendali`** (153): *"Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."*
+- **`/realizzazioni/demo-metalmeccanica`** (147): *"Demo di sito web per aziende metalmeccaniche e carpenteria, realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 899€."*
+- **`/realizzazioni`** (155): *"Portfolio 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (199€), professionisti (549€) e aziende (899€)."*
+- **`/realizzazioni/boutique-bb-luxury-rooms`** (152): *"Demo di sito web per boutique B&B e luxury rooms, realizzata da 4 Web Lab, agenzia web di Padova specializzata in attività ricettive. Da 899€."*
+- **`/realizzazioni/demo-studio-dentistico-premium`** (150): *"Demo di sito web per studi dentistici, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 549€."*
+- **`/realizzazioni/demo-fotovoltaico`** (148): *"Demo di sito web per aziende fotovoltaiche, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti aziendali. Da 899€ una tantum."*
 
-1. **`index.html`** — rimuovere tutti i tag che vengono già emessi dai Helmet:
-   - `<title>`
-   - `<meta name="description">`
-   - `<meta name="author">`
-   - Tutti i `<meta property="og:*">`
-   - Tutti i `<meta name="twitter:*">`
-   
-   Mantenere: charset, viewport, favicon, preload immagini Hero, preconnect fonts, preload Playfair, stylesheet fonts (no-script fallback).
-   
-   Trade-off accettato: i crawler social che non eseguono JS (alcuni bot vecchi) non vedranno preview ricche dal raw HTML. Tuttavia:
-   - Tutte le route già emettono il set completo via Helmet
-   - Googlebot/Bingbot/LinkedIn/Facebook moderni eseguono JS
-   - Eliminare i duplicati è prioritario per evitare segnalazioni SEO e canonical/description ambigui
+## Implementazione
 
-2. **`src/App.tsx`** — rimuovere dal `<Helmet>` globale tutti i meta SEO/social duplicati:
-   - `<title>` + `<meta name="title">`
-   - `<meta name="description">`
-   - `<meta property="og:*">` (type, url, title, description, image, locale, site_name)
-   - `<meta name="twitter:*">` (card, url, title, description, image, site)
-   - `<meta name="author">`
-   
-   Mantenere nel Helmet globale solo:
-   - `<meta name="robots" content="index, follow">` (utile come default ereditabile)
-   - `<html lang="it">`
-   - Il JSON-LD `ProfessionalService` globale (non duplicato, valido sitewide)
+- Aggiornare il `<meta name="description">` in ciascuno degli 8 file (sostituzione 1-a-1).
+- Allineare anche `og:description` e `twitter:description` con lo stesso testo per evitare incoerenze tra audit social/SEO.
+- Nessuna altra modifica: title, canonical, OG image, JSON-LD restano invariati.
 
-3. **Pagine**: nessuna modifica. Ogni route già emette il proprio set completo via Helmet.
+## Verifica
 
-## Verifica post-fix
-
-- Aprire `view-source` (raw HTML) sulla home: deve esserci **0 meta description** statiche (verranno aggiunte solo dopo l'idratazione JS dal Helmet della pagina).
-- Aprire DevTools → Elements → `<head>` su home, `/realizzazioni`, una demo: deve esserci **una sola** `<meta name="description">`, **un solo** `<title>`, **un solo** `<link rel="canonical">`, **un solo** set `og:*`/`twitter:*`.
-- Confermare che i valori sono quelli specifici della route (non la home fallback).
-
-## Rischi
-
-- **Anteprime social no-JS**: i crawler più vecchi che non eseguono JS non vedranno og:image/title/description nel raw HTML. Accettabile: i crawler social moderni eseguono JS e l'audit SEO è più importante.
-- **Flash di titolo vuoto**: nessuno, perché Helmet imposta il titolo prima del paint utile.
-- Nessun altro side-effect: routing, performance, JSON-LD e canonical restano gestiti come oggi.
+- DevTools → `<head>` di ciascuna pagina interessata: contare i caratteri della description (≤155).
+- Al prossimo audit SEO la segnalazione "1232 px" deve sparire e nessuna pagina deve risultare > 1000 px.
