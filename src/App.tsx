@@ -51,7 +51,6 @@ const App = () => (
       <meta name="title" content={siteMetadata.title} />
       <meta name="description" content={siteMetadata.description} />
       <meta name="robots" content="index, follow" />
-      <link rel="canonical" href={siteMetadata.url} />
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
