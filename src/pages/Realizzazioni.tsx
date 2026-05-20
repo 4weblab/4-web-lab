@@ -21,6 +21,7 @@ import imgMetalmeccanica from "@/assets/aurum-cnc.webp";
 import imgDentistico from "@/assets/dental-room.webp";
 import imgFotovoltaico from "@/assets/solaris-industrial.webp";
 import imgBoutique from "@/assets/bb-room-deluxe.webp";
+import imgFlowerAtelier from "@/assets/flower-atelier-card.jpg";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
 
 interface Project {
@@ -73,6 +74,16 @@ const projects: Project[] = [
     features: ["Design editoriale", "Gallery immersiva", "UX boutique luxury"],
     image: imgBoutique,
     alt: "Camera deluxe di un boutique B&B luxury — concept sito web 4 Web Lab",
+  },
+  {
+    slug: "demo-flower-atelier",
+    title: "Concept sito per negozio / fioreria premium",
+    description:
+      "Demo botanica e immersiva pensata per negozi e attività locali: hero cinematica, composizioni, eventi e CTA dirette per richiedere il sito a 4 Web Lab.",
+    badge: "Concept",
+    features: ["Web design per negozi", "Mobile-first", "EEAT 4 Web Lab"],
+    image: imgFlowerAtelier,
+    alt: "Concept di sito web premium per fioreria e negozio locale — demo realizzata da 4 Web Lab",
   },
 ];
 
