@@ -1,43 +1,57 @@
 
 ## Problema
 
-Sulla home (e potenzialmente su ogni route) vengono renderizzati più `<link rel="canonical">` perché provengono da tre fonti che non si deduplicano tra loro:
+Tag meta duplicati nel `<head>` finale perché esistono in più fonti contemporaneamente:
 
-1. **`index.html`** (riga 38): `<link rel="canonical" href="https://4weblab.it/" />` — statico, presente su OGNI pagina servita.
-2. **`src/App.tsx`** (Helmet globale): aggiunge un secondo canonical su ogni route.
-3. **`src/pages/Index.tsx`** (e tutte le altre pagine): ognuna ha il proprio canonical.
+- **`index.html`** statico: title, `description`, `og:type/url/title/description/image/locale`, `twitter:card/url/title/description/image`
+- **`src/App.tsx`** `<Helmet>` globale: stessi tag (title, description, og:*, twitter:*)
+- **`src/pages/*.tsx`** `<Helmet>` per-route: stessi tag con valori specifici della pagina
 
-`react-helmet-async` deduplica i `<meta>` per `name`/`property`, ma **non deduplica i `<link>` per `rel`**: vengono accodati. Quindi un crawler che esegue JS vede 2-3 canonical, un crawler che non esegue JS ne vede comunque 2 (statico + JS-injected resta nel DOM).
-
-Stessa logica si applica anche ad altri `<link>` eventualmente duplicati, ma al momento il canonical è l'unico `<link rel>` SEO-critico ripetuto.
+`react-helmet-async` deduplica tra i propri tag (per `name`/`property`), ma **non tocca** i tag statici già presenti in `index.html`. Quindi nel DOM finale ogni route ha 2 description, 2 og:title, ecc. → l'audit SEO segnala "more than one meta description".
 
 ## Soluzione
 
-Regola: **un solo canonical per route, emesso dal Helmet della pagina**.
+Regola: **un solo set di meta SEO per route, gestito dall'Helmet della pagina**.
+`index.html` resta minimo: solo tag tecnici (charset, viewport, preload, font, favicon). Niente più SEO/social meta statici.
 
 ### Modifiche
 
-1. **`index.html`** — rimuovere la riga `<link rel="canonical" href="https://4weblab.it/" />`.
-   - Anche `og:url`, `og:title`, `og:description`, `twitter:*`, `og:image` rimangono come fallback per i crawler social che non eseguono JS (LinkedIn, Slack, Facebook): vanno bene, sono dedupabili e servono come baseline.
-   - Lasciare solo `og:url` statico è ok perché viene sovrascritto da Helmet sui crawler JS.
-
-2. **`src/App.tsx`** — rimuovere dal `<Helmet>` globale:
-   - `<link rel="canonical" href={siteMetadata.url} />`
+1. **`index.html`** — rimuovere tutti i tag che vengono già emessi dai Helmet:
+   - `<title>`
+   - `<meta name="description">`
+   - `<meta name="author">`
+   - Tutti i `<meta property="og:*">`
+   - Tutti i `<meta name="twitter:*">`
    
-   Mantenere invece title/description/og/twitter di fallback (sono `<meta>`, vengono deduplicati correttamente dal Helmet di pagina).
+   Mantenere: charset, viewport, favicon, preload immagini Hero, preconnect fonts, preload Playfair, stylesheet fonts (no-script fallback).
+   
+   Trade-off accettato: i crawler social che non eseguono JS (alcuni bot vecchi) non vedranno preview ricche dal raw HTML. Tuttavia:
+   - Tutte le route già emettono il set completo via Helmet
+   - Googlebot/Bingbot/LinkedIn/Facebook moderni eseguono JS
+   - Eliminare i duplicati è prioritario per evitare segnalazioni SEO e canonical/description ambigui
 
-3. **Verifica per-route canonical** — controllare che ogni pagina abbia il proprio `<link rel="canonical">` nel proprio Helmet. Da una scansione veloce risulta che le pagine principali (`Index`, `Realizzazioni`, demo, satellite, blog, FAQ, Contact, Privacy, Cookie) lo hanno già. Eventuali pagine mancanti vanno aggiunte.
-   - Da verificare in particolare: `PrivacyPolicy`, `CookiePolicy`, `Blog`, articoli blog, `NotFound` (NotFound dovrebbe avere `noindex` invece di canonical).
+2. **`src/App.tsx`** — rimuovere dal `<Helmet>` globale tutti i meta SEO/social duplicati:
+   - `<title>` + `<meta name="title">`
+   - `<meta name="description">`
+   - `<meta property="og:*">` (type, url, title, description, image, locale, site_name)
+   - `<meta name="twitter:*">` (card, url, title, description, image, site)
+   - `<meta name="author">`
+   
+   Mantenere nel Helmet globale solo:
+   - `<meta name="robots" content="index, follow">` (utile come default ereditabile)
+   - `<html lang="it">`
+   - Il JSON-LD `ProfessionalService` globale (non duplicato, valido sitewide)
 
-4. **Nessuna modifica al sitemap / robots / structured data**: il problema è solo nei tag `<link>` del `<head>`.
+3. **Pagine**: nessuna modifica. Ogni route già emette il proprio set completo via Helmet.
 
 ## Verifica post-fix
 
-- Ispezionare `view-source` della home in preview: deve esserci **un solo** `<link rel="canonical">`.
-- Stessa verifica su `/realizzazioni`, una demo (`/realizzazioni/demo-flower-atelier`) e una pagina satellite (`/siti-web-per-negozi`).
-- Confermare che il canonical mostrato è quello corretto della route (non `https://4weblab.it/` su tutte).
+- Aprire `view-source` (raw HTML) sulla home: deve esserci **0 meta description** statiche (verranno aggiunte solo dopo l'idratazione JS dal Helmet della pagina).
+- Aprire DevTools → Elements → `<head>` su home, `/realizzazioni`, una demo: deve esserci **una sola** `<meta name="description">`, **un solo** `<title>`, **un solo** `<link rel="canonical">`, **un solo** set `og:*`/`twitter:*`.
+- Confermare che i valori sono quelli specifici della route (non la home fallback).
 
 ## Rischi
 
-- Bassissimi: rimuovere canonical da `index.html` e dall'Helmet globale non rompe nulla finché ogni route ha il proprio. Tutte le route già lo hanno.
-- I crawler social (no-JS) non vedranno canonical → comportamento neutro: in assenza, prendono l'URL della richiesta come canonical, che è ciò che vogliamo.
+- **Anteprime social no-JS**: i crawler più vecchi che non eseguono JS non vedranno og:image/title/description nel raw HTML. Accettabile: i crawler social moderni eseguono JS e l'audit SEO è più importante.
+- **Flash di titolo vuoto**: nessuno, perché Helmet imposta il titolo prima del paint utile.
+- Nessun altro side-effect: routing, performance, JSON-LD e canonical restano gestiti come oggi.
