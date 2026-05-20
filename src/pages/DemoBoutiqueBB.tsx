@@ -263,6 +263,7 @@ const Hero = () => {
             <br />
             <em style={{ fontStyle: "italic", color: C.goldSoft }}>nel cuore italiano</em>
           </h1>
+          <h2 className="sr-only">Sito web per boutique B&amp;B e strutture ricettive — concept realizzato da 4 Web Lab, agenzia web di Padova</h2>
           <p
             className="text-[15px] md:text-[17px] max-w-xl leading-[1.7] mb-9"
             style={{ fontFamily: SANS, color: "rgba(255,255,255,0.85)" }}
@@ -1279,10 +1280,10 @@ const DemoBoutiqueBB = () => {
   return (
     <>
       <Helmet>
-        <title>Concept Sito Web Premium per Boutique B&B | 4 Web Lab</title>
+        <title>Sito Web per Boutique B&B · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Tech demo realizzata da 4 Web Lab: concept di sito web premium per un boutique B&B / luxury rooms italiano. Design editoriale, UX cinematografica e struttura SEO orientata alle strutture ricettive di fascia alta."
+          content="Demo di sito web per boutique B&B e luxury rooms realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per aziende e attività ricettive. Da 899€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1290,11 +1291,13 @@ const DemoBoutiqueBB = () => {
 
         {/* Open Graph */}
         <meta property="og:type" content="article" />
+        <meta property="article:author" content="4 Web Lab" />
+        <meta property="article:section" content="Realizzazioni" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content="Concept Sito Web Premium per Boutique B&B | 4 Web Lab" />
+        <meta property="og:title" content="Sito Web per Boutique B&B · Demo Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Concept project realizzato da 4 Web Lab: web design premium per boutique B&B e luxury rooms italiane."
+          content="Demo di sito web per boutique B&B e luxury rooms · 4 Web Lab, agenzia web di Padova. Pacchetto aziendale da 899€."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -1302,10 +1305,10 @@ const DemoBoutiqueBB = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Concept Sito Web Premium per Boutique B&B | 4 Web Lab" />
+        <meta name="twitter:title" content="Sito Web per Boutique B&B · Demo Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Tech demo di 4 Web Lab: web design premium per boutique B&B / luxury rooms italiane."
+          content="Demo di sito web per boutique B&B e luxury rooms · 4 Web Lab, agenzia web di Padova."
         />
         <meta name="twitter:image" content="https://4weblab.it/og/boutique-bb-luxury-rooms.webp" />
 

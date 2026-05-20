@@ -263,6 +263,7 @@ const Hero = () => (
             sorriso
           </span>.
         </h1>
+        <h2 className="sr-only">Sito web per studio dentistico — concept realizzato da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti</h2>
 
         <p className="text-lg md:text-xl max-w-2xl mb-10 leading-relaxed" style={{ color: C.textDim }}>
           Odontoiatria di precisione e estetica dentale con tecnologia digitale 3D.
@@ -1483,21 +1484,25 @@ const DemoStudioDentisticoPremium = () => {
   return (
     <>
       <Helmet>
-        <title>Concept Sito Web Premium per Studi Dentistici | 4 Web Lab</title>
+        <title>Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="4 Web Lab realizza siti web premium per studi dentistici italiani. Tech demo concettuale che mostra il nostro approccio a UX healthcare, Digital Smile Design e prenotazione online."
+          content="Demo di sito web per studi dentistici realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Pacchetto una tantum da 549€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="4 Web Lab" />
+        <meta property="article:section" content="Realizzazioni" />
         <meta property="og:site_name" content="4 Web Lab" />
-        <meta property="og:title" content="Concept Sito Web Premium per Studi Dentistici | 4 Web Lab" />
-        <meta property="og:description" content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per studi dentistici e settore healthcare." />
+        <meta property="og:title" content="Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab" />
+        <meta property="og:description" content="Demo di sito web per studi dentistici e professionisti sanitari · 4 Web Lab, agenzia web di Padova. Da 549€." />
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab" />
+        <meta name="twitter:description" content="Demo di sito web per studi dentistici · 4 Web Lab, agenzia web di Padova. Da 549€." />
         <meta name="twitter:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
 
         {/* Organization 4 Web Lab — EEAT signal principale della pagina */}

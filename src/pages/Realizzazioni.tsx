@@ -37,7 +37,7 @@ interface Project {
 const projects: Project[] = [
   {
     slug: "demo-metalmeccanica",
-    title: "Concept sito per azienda metalmeccanica",
+    title: "Sito web per azienda metalmeccanica — concept",
     description:
       "Demo pensata per una PMI del settore metalmeccanico: catalogo prodotti, area certificazioni e contatti commerciali ben strutturati.",
     badge: "Concept",
@@ -47,7 +47,7 @@ const projects: Project[] = [
   },
   {
     slug: "demo-studio-dentistico-premium",
-    title: "Concept sito per studio dentistico",
+    title: "Sito web per studio dentistico — concept",
     description:
       "Demo progettata per uno studio odontoiatrico moderno, con struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
     badge: "Concept",
@@ -57,7 +57,7 @@ const projects: Project[] = [
   },
   {
     slug: "demo-fotovoltaico",
-    title: "Concept sito per azienda fotovoltaica",
+    title: "Sito web per azienda fotovoltaica — concept",
     description:
       "Demo premium per un'azienda di impianti fotovoltaici e accumulo energetico: dashboard energetiche, case studies industriali e form consulenza.",
     badge: "Concept",
@@ -67,7 +67,7 @@ const projects: Project[] = [
   },
   {
     slug: "boutique-bb-luxury-rooms",
-    title: "Concept sito per boutique B&B / Luxury Rooms",
+    title: "Sito web per boutique B&B e luxury rooms — concept",
     description:
       "Demo editoriale per un boutique B&B contemporaneo: hero cinematografica, camere premium, gallery immersiva e form prenotazione su misura.",
     badge: "Concept",
@@ -77,7 +77,7 @@ const projects: Project[] = [
   },
   {
     slug: "demo-flower-atelier",
-    title: "Concept sito per negozio / fioreria premium",
+    title: "Sito web per negozio (fioreria) — concept",
     description:
       "Demo botanica e immersiva pensata per negozi e attività locali: hero cinematica, composizioni, eventi e CTA dirette per richiedere il sito a 4 Web Lab.",
     badge: "Concept",
@@ -102,28 +102,31 @@ const Realizzazioni = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazioni siti web per aziende e professionisti | 4 Web Lab</title>
+        <title>Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizzazioni e concept di siti web professionali firmati 4 Web Lab a Padova: demo premium per aziende, professionisti e attività locali con focus su SEO, UX e conversione."
+          content="Portfolio di 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (da 199€), professionisti (da 549€) e aziende (da 899€) in tutta Italia."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni" />
-        <meta property="og:title" content="Realizzazioni e concept siti web | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Una raccolta di progetti, demo e concept creati da 4 Web Lab per mostrare come può evolvere la presenza online di aziende, professionisti e attività locali."
+          content="Portfolio 4 Web Lab: siti web per negozi, professionisti e aziende a Padova e in tutta Italia. Demo premium con SEO, UX e conversione."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og/realizzazioni-4weblab.webp" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Portfolio 4 Web Lab — realizzazioni e concept di siti web a Padova" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:title" content="Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab" />
+        <meta name="twitter:description" content="Demo e concept di siti web per negozi, professionisti e aziende. 4 Web Lab, agenzia web di Padova." />
+        <meta name="twitter:image" content="https://4weblab.it/og/realizzazioni-4weblab.webp" />
 
         {/* CollectionPage + ItemList JSON-LD */}
         <script type="application/ld+json">
@@ -132,9 +135,11 @@ const Realizzazioni = () => {
             "@type": "CollectionPage",
             "@id": "https://4weblab.it/realizzazioni#collectionpage",
             url: "https://4weblab.it/realizzazioni",
-            name: "Realizzazioni siti web per aziende e professionisti",
+            name: "Realizzazioni Siti Web Padova — Portfolio 4 Web Lab",
             description:
-              "Raccolta di progetti, demo e concept di siti web realizzati da 4 Web Lab per aziende, professionisti e attività locali.",
+              "Portfolio di 4 Web Lab, agenzia web di Padova: demo e concept di siti web per negozi, professionisti e aziende in tutta Italia.",
+            keywords:
+              "realizzazione siti web Padova, portfolio siti web, siti web per negozi, siti web per professionisti, siti web aziendali, 4 Web Lab",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
             publisher: { "@id": "https://4weblab.it/#organization" },
@@ -169,6 +174,25 @@ const Realizzazioni = () => {
             name: "4 Web Lab",
             url: "https://4weblab.it/",
             logo: "https://4weblab.it/logo.webp",
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://4weblab.it/realizzazioni#service",
+            serviceType: "Realizzazione siti web",
+            provider: { "@id": "https://4weblab.it/#organization" },
+            areaServed: [
+              { "@type": "City", name: "Padova" },
+              { "@type": "AdministrativeArea", name: "Veneto" },
+              { "@type": "Country", name: "Italia" },
+            ],
+            offers: [
+              { "@type": "Offer", name: "Siti web per negozi", price: "199", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-negozi" },
+              { "@type": "Offer", name: "Siti web per professionisti", price: "549", priceCurrency: "EUR", url: "https://4weblab.it/realizzazione-siti-web-per-professionisti" },
+              { "@type": "Offer", name: "Siti web aziendali", price: "899", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-aziendali" },
+            ],
           })}
         </script>
       </Helmet>
@@ -210,8 +234,11 @@ const Realizzazioni = () => {
                 Realizzazioni siti web e concept professionali
               </h1>
               <p className="body-large text-primary-foreground/80 max-w-2xl mx-auto mb-10 text-balance">
-                Una raccolta di progetti, demo e restyling creati da 4 Web Lab per mostrare come può
-                evolvere la presenza online di aziende, professionisti e attività locali.
+                Portfolio di <strong className="font-semibold">4 Web Lab</strong>, agenzia web di Padova: demo e concept di
+                siti web per <Link to="/siti-web-per-negozi" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">negozi</Link>,{" "}
+                <Link to="/realizzazione-siti-web-per-professionisti" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">professionisti</Link> e{" "}
+                <Link to="/siti-web-aziendali" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">aziende</Link>{" "}
+                a Padova e in tutta Italia.
               </p>
               <a href="#contatti-finale" className="hero-cta hero-cta-primary">
                 E adesso creiamo il TUO!
@@ -290,7 +317,7 @@ const Realizzazioni = () => {
                         ))}
                       </ul>
                       <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                        Apri demo
+                        Vedi il sito web demo
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
                     </div>

@@ -290,6 +290,7 @@ const Hero = () => (
           </span>
           .
         </h1>
+        <h2 className="sr-only">Sito web per azienda fotovoltaica — concept realizzato da 4 Web Lab, agenzia web di Padova</h2>
 
         <p className="text-lg md:text-xl leading-relaxed max-w-2xl mb-10" style={{ color: C.textDim }}>
           Riduci i costi energetici della tua casa o azienda con impianti fotovoltaici ad alte
@@ -1245,25 +1246,29 @@ const DemoFotovoltaico = () => {
   return (
     <>
       <Helmet>
-        <title>Concept Sito Web Premium per Aziende Fotovoltaiche | 4 Web Lab</title>
+        <title>Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab</title>
         <meta
           name="description"
-          content="4 Web Lab realizza siti web premium per aziende del settore fotovoltaico, energia rinnovabile e accumulo energetico. Tech demo concettuale con UX moderna, dashboard energetiche e SEO B2B."
+          content="Demo di sito web per aziende fotovoltaiche realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web aziendali. Pacchetto una tantum da 899€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-fotovoltaico" />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="article" />
+        <meta property="article:author" content="4 Web Lab" />
+        <meta property="article:section" content="Realizzazioni" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni/demo-fotovoltaico" />
-        <meta property="og:title" content="Concept Sito Web Premium per Aziende Fotovoltaiche | 4 Web Lab" />
+        <meta property="og:title" content="Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Tech demo realizzata da 4 Web Lab — agenzia italiana specializzata in siti web premium per il settore energia, fotovoltaico e rinnovabili."
+          content="Demo di sito web per aziende del settore fotovoltaico, realizzata da 4 Web Lab, agenzia web di Padova. Da 899€."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og/demo-fotovoltaico.webp" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab" />
+        <meta name="twitter:description" content="Demo di sito web per aziende fotovoltaiche · 4 Web Lab, agenzia web di Padova. Da 899€." />
         <meta name="twitter:image" content="https://4weblab.it/og/demo-fotovoltaico.webp" />
         <meta name="theme-color" content="#070B14" />
         <link rel="preload" as="image" href={heroImg} fetchPriority="high" />
