@@ -170,6 +170,10 @@ const PosizionamentoGoogleEAi = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", "h2", "[data-aeo-answer]"],
+            },
             mainEntity: faqItems.map((f) => ({
               "@type": "Question",
               name: f.question,
