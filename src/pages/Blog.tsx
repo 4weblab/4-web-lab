@@ -144,6 +144,10 @@ const Blog = () => {
                   url: "https://4weblab.it/",
                 },
                 publisher: { "@id": "https://4weblab.it/#business" },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": `https://4weblab.it${article.slug}`,
+                },
               })),
             },
           })}
