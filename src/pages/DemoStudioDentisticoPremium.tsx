@@ -1556,7 +1556,7 @@ const DemoStudioDentisticoPremium = () => {
             url: canonical,
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
-            about: { "@id": "https://4weblab.it/#business" },
+            about: { "@id": canonical + "#concept" },
             mainEntity: { "@id": canonical + "#concept" },
             author: { "@id": "https://4weblab.it/#business" },
             creator: { "@id": "https://4weblab.it/#business" },

@@ -1325,7 +1325,7 @@ const DemoFotovoltaico = () => {
             url: "https://4weblab.it/realizzazioni/demo-fotovoltaico",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
-            about: { "@id": "https://4weblab.it/#business" },
+            about: { "@id": "https://4weblab.it/realizzazioni/demo-fotovoltaico#concept" },
             mainEntity: { "@id": "https://4weblab.it/realizzazioni/demo-fotovoltaico#concept" },
             author: { "@id": "https://4weblab.it/#business" },
             creator: { "@id": "https://4weblab.it/#business" },
