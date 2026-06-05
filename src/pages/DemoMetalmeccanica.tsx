@@ -1044,7 +1044,7 @@ const DemoMetalmeccanica = () => {
             url: "https://4weblab.it/realizzazioni/demo-metalmeccanica",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
-            about: { "@id": "https://4weblab.it/#business" },
+            about: { "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#concept" },
             mainEntity: { "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#concept" },
             author: { "@id": "https://4weblab.it/#business" },
             creator: { "@id": "https://4weblab.it/#business" },
