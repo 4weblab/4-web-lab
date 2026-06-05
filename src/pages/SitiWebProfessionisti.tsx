@@ -66,6 +66,13 @@ const SitiWebProfessionisti = () => {
             areaServed: { "@type": "Country", name: "IT" },
             url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
             provider: { "@id": "https://4weblab.it/#business" },
+            offers: {
+              "@type": "Offer",
+              price: "549",
+              priceCurrency: "EUR",
+              url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+              availability: "https://schema.org/InStock",
+            },
           })}
         </script>
       </Helmet>
