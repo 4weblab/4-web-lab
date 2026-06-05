@@ -17,6 +17,7 @@ const SitiWebNegozi = lazy(() => import("./pages/SitiWebNegozi"));
 const SitiWebAziendali = lazy(() => import("./pages/SitiWebAziendali"));
 const SitiWebPadova = lazy(() => import("./pages/SitiWebPadova"));
 const FaqSitiWeb = lazy(() => import("./pages/FaqSitiWeb"));
+const PosizionamentoGoogleEAi = lazy(() => import("./pages/PosizionamentoGoogleEAi"));
 const Blog = lazy(() => import("./pages/Blog"));
 const BlogAiWebsiteArticle = lazy(() => import("./pages/BlogAiWebsiteArticle"));
 const BlogWebsiteCostArticle = lazy(() => import("./pages/BlogWebsiteCostArticle"));
@@ -138,6 +139,7 @@ const App = () => (
               <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
               <Route path="/siti-web-per-negozi" element={<SitiWebNegozi />} />
               <Route path="/faq-realizzazione-siti-web" element={<FaqSitiWeb />} />
+              <Route path="/posizionamento-google-e-ai" element={<PosizionamentoGoogleEAi />} />
               <Route path="/creare-sito-con-intelligenza-artificiale" element={<Navigate to="/blog/siti-web-creati-con-intelligenza-artificiale" replace />} />
               <Route path="/quanto-costa-sito-web" element={<Navigate to="/blog/quanto-costa-un-sito-web-nel-2026" replace />} />
               <Route path="/blog" element={<Blog />} />
