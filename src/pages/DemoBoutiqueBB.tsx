@@ -1193,37 +1193,7 @@ const StickyMobileCTA = () => (
 const DemoBoutiqueBB = () => {
   const canonical = "https://4weblab.it/realizzazioni/boutique-bb-luxury-rooms";
 
-  // JSON-LD: tutto riferito a 4 Web Lab (CreativeWork = la demo).
-  const orgLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://4weblab.it/#business",
-    name: "4 Web Lab",
-    legalName: "4 Web Lab di Fullin Carlo",
-    url: "https://4weblab.it/",
-    vatID: "05765760284",
-    founder: { "@type": "Person", name: "Carlo Fullin" },
-    areaServed: ["IT", "Veneto"],
-    knowsAbout: [
-      "Web design boutique hotel",
-      "Siti web per B&B e luxury rooms",
-      "UX strutture ricettive",
-      "SEO per hospitality",
-      "Lead generation turismo",
-    ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+393514656042",
-      contactType: "sales",
-      areaServed: "IT",
-      availableLanguage: ["Italian", "English"],
-    },
-    sameAs: [
-      "https://share.google/oGOMV0sHAaV8JlqnZ",
-      "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-    ],
-  };
-
+  // JSON-LD: 4 Web Lab è già emessa globalmente in App.tsx (#business).
   const creativeLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -1323,8 +1293,7 @@ const DemoBoutiqueBB = () => {
           rel="stylesheet"
         />
 
-        {/* JSON-LD (4 Web Lab EEAT) */}
-        <script type="application/ld+json">{JSON.stringify(orgLd)}</script>
+        {/* JSON-LD specifico della pagina (entità 4 Web Lab globale in App.tsx) */}
         <script type="application/ld+json">{JSON.stringify(creativeLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageLd)}</script>
