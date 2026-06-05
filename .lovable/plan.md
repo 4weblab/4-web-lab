@@ -1,43 +1,45 @@
-# Schema markup aggiuntivo per la home
+# Audit Schema Markup — esecuzione completa (esclusa areaServed Padova)
 
-Aggiungo 3 blocchi JSON-LD mancanti alla home, senza toccare design, copy o componenti esistenti. Solo `<script type="application/ld+json">` dentro l'`<Helmet>` di `src/pages/Index.tsx`.
+Eseguo gli step A, B, C, D del piano di audit. **Escludo** l'estensione `areaServed` per Padova (Legnaro/Abano/Vigonza/…) — lo affronteremo dopo come step separato.
 
-## Cosa aggiungo
+## Step A — Unificazione entità globale (`src/App.tsx` + `src/pages/Index.tsx`)
 
-### 1. `WebSite` con `SearchAction`
-Abilita potenzialmente il sitelinks search box di Google e definisce l'entità "sito" distinta dall'azienda.
+- Aggiungo `WebSite` globale (`@id: "https://4weblab.it/#website"`, `publisher: {@id: "#business"}`) dentro l'Helmet globale di `App.tsx`.
+- Rimuovo da `App.tsx` i campi `aggregateRating` + `review` (resta solo l'identità ProfessionalService pulita) → li **sposto in `Index.tsx`** come blocco aggiuntivo che estende `#business` (vincolo Google: review snippet visibili sulla pagina).
+- Rimuovo il blocco `WebSite` duplicato appena aggiunto in `Index.tsx` (ora vive globale).
+- Cambio `priceRange: "199€ - 899€+"` → `priceRange: "€€"`.
 
-```json
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "@id": "https://4weblab.it/#website",
-  "url": "https://4weblab.it/",
-  "name": "4 Web Lab",
-  "publisher": { "@id": "https://4weblab.it/#business" },
-  "inLanguage": "it-IT"
-}
-```
-(Niente `SearchAction` perché il sito non ha una pagina di ricerca interna — evito di dichiarare qualcosa che non esiste.)
+## Step B — Allineamento Demo + Realizzazioni (6 file)
 
-### 2. `FAQPage` dalle 3 Q&A già visibili in `HomeFaqPreview`
-Riuso testuale 1:1 delle domande/risposte già presenti in pagina (requisito Google: il contenuto FAQ schema deve essere visibile all'utente). Domande: "Quanto costa realizzare un sito web?", "In quanto tempo viene realizzato un sito web?", "I siti web servono ancora nel 2026 con l'arrivo dell'AI?".
+In `Realizzazioni.tsx`, `DemoMetalmeccanica.tsx`, `DemoBoutiqueBB.tsx`, `DemoFotovoltaico.tsx`, `DemoStudioDentisticoPremium.tsx`, `DemoFlowerAtelier.tsx`:
 
-### 3. `BreadcrumbList` minimale
-Una sola voce ("Home" → `/`), per coerenza con le altre pagine che già emettono breadcrumb via `PageBreadcrumb`.
+- **Rimuovo** il blocco `Organization` locale con `@id: "#organization"`.
+- Sostituisco ogni `{@id: "https://4weblab.it/#organization"}` con `{@id: "https://4weblab.it/#business"}`.
+- I riferimenti a `{@id: "#website"}` ora risolvono al WebSite globale di Step A.
+
+Risultato: una sola identità aziendale unificata in tutto il sito.
+
+## Step C — `Service` + `offers` mancanti (4 landing)
+
+- **`SitiWebNegozi.tsx`**: aggiungo blocco `Service` con `serviceType "Web Design for Local Shops"`, `provider: {@id: "#business"}`, `offers: {Offer, price: "199", priceCurrency: "EUR"}`. Lascio invariato il `FAQPage` esistente.
+- **`SitiWebAziendali.tsx`**: aggiungo `Service` analogo con `offers` 899€. Lascio `FAQPage` invariato.
+- **`SitiWebProfessionisti.tsx`**: aggiungo `offers: {price: "549", priceCurrency: "EUR"}` al `Service` esistente. Verifico se in pagina ci sono FAQ visibili: se sì aggiungo `FAQPage` (controllo durante esecuzione).
+- **`SitiWebPadova.tsx`**: aggiungo `offers` (PriceSpecification `minPrice: "199", maxPrice: "899"`) al `Service` esistente. **NON** tocco `areaServed` (rinviato).
+
+## Step D — Rifiniture
+
+- `Blog.tsx`: aggiungo `mainEntityOfPage: {"@type": "WebPage", "@id": <article url>}` a ogni `BlogPosting` nella collection.
+- `foundingDate`: lascio `"2026"` (plausibile, 4 Web Lab è giovane). Se vuoi una data precisa dimmela.
+
+## Verifica post-implementazione
+
+1. Rileggo i file modificati per confermare validità `@id` references.
+2. Build automatica Lovable verifica TS/sintassi.
+3. Suggerimento finale: avviare scan SEO Lovable per conferma esterna.
+
+## File toccati (totale: 11)
+
+App.tsx · Index.tsx · Realizzazioni.tsx · DemoMetalmeccanica.tsx · DemoBoutiqueBB.tsx · DemoFotovoltaico.tsx · DemoStudioDentisticoPremium.tsx · DemoFlowerAtelier.tsx · SitiWebNegozi.tsx · SitiWebAziendali.tsx · SitiWebProfessionisti.tsx · SitiWebPadova.tsx (Service offers, no areaServed) · Blog.tsx
 
 ## Cosa NON tocco
-
-- Il blocco `ProfessionalService` globale in `App.tsx` (resta invariato, già completo)
-- Hero, copy, componenti, layout
-- Nessun nuovo componente, solo Helmet inline nella home
-
-## File modificati
-
-- `src/pages/Index.tsx` — aggiunta di 3 `<script type="application/ld+json">` dentro l'`<Helmet>` esistente
-
-## Verifica
-
-- DevTools → `<head>` della home: verificare presenza dei 3 nuovi script JSON-LD
-- Validazione mentale: nessuna duplicazione con il `ProfessionalService` globale (entità collegata via `@id` reference)
-- Test Rich Results di Google (post-deploy) per FAQPage
+Copy, layout, componenti, design system, PageBreadcrumb, FaqSitiWeb, Contact, blog articles individuali, `areaServed` Padova (rinviato).
