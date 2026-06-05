@@ -1,42 +1,43 @@
+# Schema markup aggiuntivo per la home
 
-## Risposta sintetica
+Aggiungo 3 blocchi JSON-LD mancanti alla home, senza toccare design, copy o componenti esistenti. Solo `<script type="application/ld+json">` dentro l'`<Helmet>` di `src/pages/Index.tsx`.
 
-**Sì, è vero — ed è un problema reale ma "soft".**
+## Cosa aggiungo
 
-- Google tronca le meta description con "…" oltre ~155-160 caratteri (~920-1000 px renderizzati). La fine non viene mostrata in SERP → riduce CTR. Non è una penalizzazione di ranking.
-- L'audit segnalava 1232 px perché stava leggendo la vecchia description statica di `index.html` (205 caratteri ≈ 1232 px) che abbiamo appena rimosso. Quella specifica segnalazione, al prossimo scan, sparirà da sola.
-- Restano però **8 pagine** con description tra 161 e 207 caratteri (oltre il limite "safe" di 155).
+### 1. `WebSite` con `SearchAction`
+Abilita potenzialmente il sitelinks search box di Google e definisce l'entità "sito" distinta dall'azienda.
 
-## Pagine da sistemare
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://4weblab.it/#website",
+  "url": "https://4weblab.it/",
+  "name": "4 Web Lab",
+  "publisher": { "@id": "https://4weblab.it/#business" },
+  "inLanguage": "it-IT"
+}
+```
+(Niente `SearchAction` perché il sito non ha una pagina di ricerca interna — evito di dichiarare qualcosa che non esiste.)
 
-| Pagina | Char attuali | Target |
-|---|---|---|
-| `/siti-web-per-negozi` | 207 | ≤155 |
-| `/siti-web-aziendali` | 191 | ≤155 |
-| `/realizzazioni/demo-metalmeccanica` | 191 | ≤155 |
-| `/realizzazioni` | 174 | ≤155 |
-| `/realizzazioni/boutique-bb-luxury-rooms` | 172 | ≤155 |
-| `/realizzazioni/demo-studio-dentistico-premium` | 165 | ≤155 |
-| `/realizzazioni/demo-fotovoltaico` | 161 | ≤155 |
-| Tutte le altre pagine | ≤152 | ✅ già a posto |
+### 2. `FAQPage` dalle 3 Q&A già visibili in `HomeFaqPreview`
+Riuso testuale 1:1 delle domande/risposte già presenti in pagina (requisito Google: il contenuto FAQ schema deve essere visibile all'utente). Domande: "Quanto costa realizzare un sito web?", "In quanto tempo viene realizzato un sito web?", "I siti web servono ancora nel 2026 con l'arrivo dell'AI?".
 
-## Nuove description proposte (≤155 caratteri, keyword-first, Padova + prezzo)
+### 3. `BreadcrumbList` minimale
+Una sola voce ("Home" → `/`), per coerenza con le altre pagine che già emettono breadcrumb via `PageBreadcrumb`.
 
-- **`/siti-web-per-negozi`** (155): *"Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h."*
-- **`/siti-web-aziendali`** (153): *"Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."*
-- **`/realizzazioni/demo-metalmeccanica`** (147): *"Demo di sito web per aziende metalmeccaniche e carpenteria, realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 899€."*
-- **`/realizzazioni`** (155): *"Portfolio 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (199€), professionisti (549€) e aziende (899€)."*
-- **`/realizzazioni/boutique-bb-luxury-rooms`** (152): *"Demo di sito web per boutique B&B e luxury rooms, realizzata da 4 Web Lab, agenzia web di Padova specializzata in attività ricettive. Da 899€."*
-- **`/realizzazioni/demo-studio-dentistico-premium`** (150): *"Demo di sito web per studi dentistici, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 549€."*
-- **`/realizzazioni/demo-fotovoltaico`** (148): *"Demo di sito web per aziende fotovoltaiche, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti aziendali. Da 899€ una tantum."*
+## Cosa NON tocco
 
-## Implementazione
+- Il blocco `ProfessionalService` globale in `App.tsx` (resta invariato, già completo)
+- Hero, copy, componenti, layout
+- Nessun nuovo componente, solo Helmet inline nella home
 
-- Aggiornare il `<meta name="description">` in ciascuno degli 8 file (sostituzione 1-a-1).
-- Allineare anche `og:description` e `twitter:description` con lo stesso testo per evitare incoerenze tra audit social/SEO.
-- Nessuna altra modifica: title, canonical, OG image, JSON-LD restano invariati.
+## File modificati
+
+- `src/pages/Index.tsx` — aggiunta di 3 `<script type="application/ld+json">` dentro l'`<Helmet>` esistente
 
 ## Verifica
 
-- DevTools → `<head>` di ciascuna pagina interessata: contare i caratteri della description (≤155).
-- Al prossimo audit SEO la segnalazione "1232 px" deve sparire e nessuna pagina deve risultare > 1000 px.
+- DevTools → `<head>` della home: verificare presenza dei 3 nuovi script JSON-LD
+- Validazione mentale: nessuna duplicazione con il `ProfessionalService` globale (entità collegata via `@id` reference)
+- Test Rich Results di Google (post-deploy) per FAQPage
