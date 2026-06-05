@@ -129,6 +129,7 @@ const faqSchema = {
   '@id': 'https://4weblab.it/faq-realizzazione-siti-web#faqpage',
   url: 'https://4weblab.it/faq-realizzazione-siti-web',
   inLanguage: 'it-IT',
+  isPartOf: { '@id': 'https://4weblab.it/#website' },
   about: [
     { '@type': 'Thing', name: 'Realizzazione siti web' },
     { '@type': 'Thing', name: 'AI Overviews di Google' },
