@@ -169,16 +169,6 @@ const Realizzazioni = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#business",
-            name: "4 Web Lab",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://4weblab.it/realizzazioni#service",
             serviceType: "Realizzazione siti web",
