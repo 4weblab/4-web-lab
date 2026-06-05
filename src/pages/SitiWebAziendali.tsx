@@ -100,6 +100,26 @@ const SitiWebAziendali = () => {
             ],
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Siti Web Aziendali",
+            description:
+              "Realizziamo siti web aziendali a Padova: design su misura, SEO e assistenza locale per PMI e aziende.",
+            serviceType: "Corporate Web Design",
+            areaServed: { "@type": "Country", name: "IT" },
+            url: "https://4weblab.it/siti-web-aziendali",
+            provider: { "@id": "https://4weblab.it/#business" },
+            offers: {
+              "@type": "Offer",
+              price: "899",
+              priceCurrency: "EUR",
+              url: "https://4weblab.it/siti-web-aziendali",
+              availability: "https://schema.org/InStock",
+            },
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
