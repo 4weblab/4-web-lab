@@ -1131,37 +1131,7 @@ const StickyMobileCTA = () => (
 const DemoFlowerAtelier = () => {
   const canonical = "https://4weblab.it/realizzazioni/demo-flower-atelier";
 
-  const orgLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://4weblab.it/#organization",
-    name: "4 Web Lab",
-    legalName: "4 Web Lab di Fullin Carlo",
-    url: "https://4weblab.it/",
-    vatID: "05765760284",
-    founder: { "@type": "Person", name: "Carlo Fullin" },
-    areaServed: ["IT", "Veneto", "Padova"],
-    knowsAbout: [
-      "Realizzazione siti web per negozi",
-      "Web design attività locali",
-      "Siti web per fiorerie e boutique",
-      "UX design retail",
-      "SEO locale per piccoli negozi",
-      "Concept e demo siti web professionali",
-    ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+393514656042",
-      contactType: "sales",
-      areaServed: "IT",
-      availableLanguage: ["Italian", "English"],
-    },
-    sameAs: [
-      "https://share.google/oGOMV0sHAaV8JlqnZ",
-      "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-    ],
-  };
-
+  // 4 Web Lab Organization è emessa globalmente in App.tsx (#business).
   const creativeLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -1182,10 +1152,10 @@ const DemoFlowerAtelier = () => {
       "showcase web design",
       "siti web per negozi moderni",
     ],
-    author: { "@id": "https://4weblab.it/#organization" },
-    creator: { "@id": "https://4weblab.it/#organization" },
-    producer: { "@id": "https://4weblab.it/#organization" },
-    publisher: { "@id": "https://4weblab.it/#organization" },
+    author: { "@id": "https://4weblab.it/#business" },
+    creator: { "@id": "https://4weblab.it/#business" },
+    producer: { "@id": "https://4weblab.it/#business" },
+    publisher: { "@id": "https://4weblab.it/#business" },
   };
 
   const breadcrumbLd = {
@@ -1212,9 +1182,9 @@ const DemoFlowerAtelier = () => {
     isPartOf: { "@id": "https://4weblab.it/#website" },
     about: { "@id": `${canonical}#creativework` },
     mainEntity: { "@id": `${canonical}#creativework` },
-    author: { "@id": "https://4weblab.it/#organization" },
-    creator: { "@id": "https://4weblab.it/#organization" },
-    publisher: { "@id": "https://4weblab.it/#organization" },
+    author: { "@id": "https://4weblab.it/#business" },
+    creator: { "@id": "https://4weblab.it/#business" },
+    publisher: { "@id": "https://4weblab.it/#business" },
     inLanguage: "it-IT",
   };
 
@@ -1266,8 +1236,7 @@ const DemoFlowerAtelier = () => {
           rel="stylesheet"
         />
 
-        {/* JSON-LD (solo 4 Web Lab — niente entità locale fake) */}
-        <script type="application/ld+json">{JSON.stringify(orgLd)}</script>
+        {/* JSON-LD specifico della pagina (entità 4 Web Lab globale in App.tsx) */}
         <script type="application/ld+json">{JSON.stringify(creativeLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageLd)}</script>

@@ -62,7 +62,7 @@ const App = () => (
             "sameAs": "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
           },
           "foundingDate": "2026",
-          "priceRange": "199€ - 899€+",
+          "priceRange": "€€",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Via Belluno 44",
@@ -103,34 +103,20 @@ const App = () => (
                 "description": "Sviluppo siti web su misura per negozi, aziende e professionisti a Padova e provincia."
               }
             ]
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "bestRating": "5",
-            "worstRating": "1",
-            "reviewCount": "3"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Mattia Loreggian" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-              "reviewBody": "4 Web Lab si è occupata di crearci il sito, un logo e un'identità di brand molto precisa che adesso usiamo ovunque."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Jessica Trovò" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-              "reviewBody": "Adesso ho un sito nuovo, a norma e al prezzo giusto, e sto già vedendo i primi risultati di clientela nuova."
-            },
-            {
-              "@type": "Review",
-              "author": { "@type": "Person", "name": "Lisa Bogana" },
-              "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
-              "reviewBody": "Carlo è riuscito a guidarmi senza complicare le cose. Il sito che abbiamo realizzato insieme mi rappresenta davvero."
-            }
-          ]
+          }
+        })}
+      </script>
+
+      {/* Global WebSite entity — referenced by isPartOf on all pages */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "https://4weblab.it/#website",
+          "url": "https://4weblab.it/",
+          "name": "4 Web Lab",
+          "inLanguage": "it-IT",
+          "publisher": { "@id": "https://4weblab.it/#business" }
         })}
       </script>
     </Helmet>

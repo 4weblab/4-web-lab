@@ -142,7 +142,7 @@ const Realizzazioni = () => {
               "realizzazione siti web Padova, portfolio siti web, siti web per negozi, siti web per professionisti, siti web aziendali, 4 Web Lab",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
+            publisher: { "@id": "https://4weblab.it/#business" },
             mainEntity: {
               "@type": "ItemList",
               itemListOrder: "https://schema.org/ItemListOrderAscending",
@@ -169,20 +169,10 @@ const Realizzazioni = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#organization",
-            name: "4 Web Lab",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://4weblab.it/realizzazioni#service",
             serviceType: "Realizzazione siti web",
-            provider: { "@id": "https://4weblab.it/#organization" },
+            provider: { "@id": "https://4weblab.it/#business" },
             areaServed: [
               { "@type": "City", name: "Padova" },
               { "@type": "AdministrativeArea", name: "Veneto" },

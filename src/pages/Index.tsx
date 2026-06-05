@@ -49,16 +49,39 @@ const Index = () => {
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
 
-        {/* WebSite entity, linked to the global ProfessionalService via publisher @id */}
+        {/* Home-only: aggregateRating + review (Google policy: must be visible on page) */}
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "WebSite",
-            "@id": "https://4weblab.it/#website",
-            "url": "https://4weblab.it/",
-            "name": "4 Web Lab",
-            "inLanguage": "it-IT",
-            "publisher": { "@id": "https://4weblab.it/#business" },
+            "@type": "ProfessionalService",
+            "@id": "https://4weblab.it/#business",
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": "5",
+              "bestRating": "5",
+              "worstRating": "1",
+              "reviewCount": "3",
+            },
+            "review": [
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Mattia Loreggian" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "4 Web Lab si è occupata di crearci il sito, un logo e un'identità di brand molto precisa che adesso usiamo ovunque.",
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Jessica Trovò" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Adesso ho un sito nuovo, a norma e al prezzo giusto, e sto già vedendo i primi risultati di clientela nuova.",
+              },
+              {
+                "@type": "Review",
+                "author": { "@type": "Person", "name": "Lisa Bogana" },
+                "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5", "worstRating": "1" },
+                "reviewBody": "Carlo è riuscito a guidarmi senza complicare le cose. Il sito che abbiamo realizzato insieme mi rappresenta davvero.",
+              },
+            ],
           })}
         </script>
 

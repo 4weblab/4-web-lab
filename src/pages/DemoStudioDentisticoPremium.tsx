@@ -1505,56 +1505,6 @@ const DemoStudioDentisticoPremium = () => {
         <meta name="twitter:description" content="Demo di sito web per studi dentistici · 4 Web Lab, agenzia web di Padova. Da 549€." />
         <meta name="twitter:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
 
-        {/* Organization 4 Web Lab — EEAT signal principale della pagina */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#organization",
-            name: "4 Web Lab",
-            legalName: "4 Web Lab di Fullin Carlo",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-            vatID: "05765760284",
-            foundingDate: "2026",
-            founder: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              jobTitle: "Founder & Web Designer",
-              sameAs: "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Via Belluno 44",
-              addressLocality: "Legnaro",
-              addressRegion: "PD",
-              postalCode: "35020",
-              addressCountry: "IT",
-            },
-            areaServed: ["IT", "Veneto"],
-            knowsAbout: [
-              "Web design per studi dentistici",
-              "UX design healthcare",
-              "Realizzazione siti web professionisti sanitari",
-              "SEO locale per studi medici",
-              "Digital Smile Design su web",
-              "Prenotazione online per cliniche",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+393514656042",
-              email: "info@4weblab.it",
-              contactType: "sales",
-              areaServed: "IT",
-              availableLanguage: ["Italian"],
-            },
-            sameAs: [
-              "https://share.google/oGOMV0sHAaV8JlqnZ",
-              "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            ],
-          })}
-        </script>
-
         {/* CreativeWork — il concept, attribuito interamente a 4 Web Lab */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -1565,11 +1515,11 @@ const DemoStudioDentisticoPremium = () => {
             headline: "Tech demo: web design premium per studi dentistici realizzata da 4 Web Lab",
             url: canonical,
             inLanguage: "it",
-            author: { "@id": "https://4weblab.it/#organization" },
-            creator: { "@id": "https://4weblab.it/#organization" },
-            producer: { "@id": "https://4weblab.it/#organization" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
-            copyrightHolder: { "@id": "https://4weblab.it/#organization" },
+            author: { "@id": "https://4weblab.it/#business" },
+            creator: { "@id": "https://4weblab.it/#business" },
+            producer: { "@id": "https://4weblab.it/#business" },
+            publisher: { "@id": "https://4weblab.it/#business" },
+            copyrightHolder: { "@id": "https://4weblab.it/#business" },
             about: "Web design, UX e SEO locale per studi dentistici realizzati da 4 Web Lab.",
             keywords: [
               "agenzia web design studi dentistici",
@@ -1606,11 +1556,11 @@ const DemoStudioDentisticoPremium = () => {
             url: canonical,
             inLanguage: "it",
             isPartOf: { "@type": "WebSite", name: "4 Web Lab", url: "https://4weblab.it/" },
-            about: { "@id": "https://4weblab.it/#organization" },
+            about: { "@id": "https://4weblab.it/#business" },
             mainEntity: { "@id": canonical + "#concept" },
-            author: { "@id": "https://4weblab.it/#organization" },
-            creator: { "@id": "https://4weblab.it/#organization" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
+            author: { "@id": "https://4weblab.it/#business" },
+            creator: { "@id": "https://4weblab.it/#business" },
+            publisher: { "@id": "https://4weblab.it/#business" },
             description: "Tech demo concettuale realizzata da 4 Web Lab — agenzia italiana specializzata in web design premium per studi dentistici, healthcare e professionisti.",
           })}
         </script>
