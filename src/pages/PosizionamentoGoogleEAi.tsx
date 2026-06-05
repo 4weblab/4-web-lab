@@ -297,7 +297,7 @@ const PosizionamentoGoogleEAi = () => {
                     "Audit tecnico (Core Web Vitals, indicizzazione, crawl budget)",
                     "Keyword research e mappatura intenti di ricerca",
                     "Ottimizzazione on-page (title, meta, heading, link interni)",
-                    "SEO locale per Padova e provincia",
+                    "SEO locale per città/provincia di appartenenza",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2.5 text-muted-foreground">
                       <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
