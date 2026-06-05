@@ -90,6 +90,8 @@ const Index = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "FAQPage",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
             "mainEntity": [
               {
                 "@type": "Question",
@@ -119,21 +121,6 @@ const Index = () => {
           })}
         </script>
 
-        {/* BreadcrumbList minimale per coerenza con le altre pagine */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://4weblab.it/",
-              },
-            ],
-          })}
-        </script>
       </Helmet>
 
       <Header />

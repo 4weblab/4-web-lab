@@ -77,19 +77,28 @@ const SitiWebNegozi = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://4weblab.it/siti-web-per-negozi#service",
             name: "Siti Web per Negozi",
             description:
               "Realizziamo siti web per negozi e attività locali a Padova e in tutta Italia: design moderno, SEO locale e assistenza dedicata.",
             serviceType: "Web Design for Local Shops",
-            areaServed: { "@type": "Country", name: "IT" },
+            areaServed: [
+              { "@type": "City", name: "Padova" },
+              { "@type": "AdministrativeArea", name: "Veneto" }
+            ],
             url: "https://4weblab.it/siti-web-per-negozi",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
             provider: { "@id": "https://4weblab.it/#business" },
             offers: {
               "@type": "Offer",
-              price: "199",
-              priceCurrency: "EUR",
               url: "https://4weblab.it/siti-web-per-negozi",
               availability: "https://schema.org/InStock",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "199",
+                priceCurrency: "EUR",
+              },
             },
           })}
         </script>

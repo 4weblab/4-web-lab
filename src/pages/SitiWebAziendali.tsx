@@ -104,19 +104,28 @@ const SitiWebAziendali = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://4weblab.it/siti-web-aziendali#service",
             name: "Siti Web Aziendali",
             description:
               "Realizziamo siti web aziendali a Padova: design su misura, SEO e assistenza locale per PMI e aziende.",
             serviceType: "Corporate Web Design",
-            areaServed: { "@type": "Country", name: "IT" },
+            areaServed: [
+              { "@type": "City", name: "Padova" },
+              { "@type": "AdministrativeArea", name: "Veneto" }
+            ],
             url: "https://4weblab.it/siti-web-aziendali",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
             provider: { "@id": "https://4weblab.it/#business" },
             offers: {
               "@type": "Offer",
-              price: "899",
-              priceCurrency: "EUR",
               url: "https://4weblab.it/siti-web-aziendali",
               availability: "https://schema.org/InStock",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "899",
+                priceCurrency: "EUR",
+              },
             },
           })}
         </script>
