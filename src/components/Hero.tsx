@@ -1,5 +1,4 @@
-import { ArrowDown, ArrowRight } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ArrowDown } from 'lucide-react';
 
 // Hero background images are served from /public/hero so the path stays stable
 // in production and matches the <link rel="preload"> in index.html (critical for LCP).
@@ -55,8 +54,8 @@ const Hero = () => {
         aria-hidden="true" />
 
       <div className="container-section relative z-10 py-24">
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-20">
-          {/* Left: main content */}
+        <div className="flex justify-center">
+          {/* Main content */}
           <div className="max-w-3xl text-left">
             <h1
               className="heading-1 text-primary-foreground mb-8 text-balance"
@@ -100,25 +99,6 @@ const Hero = () => {
                 Scrivi su WhatsApp
               </a>
 
-            </div>
-          </div>
-
-          {/* Right: promo box */}
-          <div className="w-full max-w-sm lg:mt-8">
-
-            <div className="rounded-2xl border-2 border-accent bg-[hsl(210_73%_10%/0.75)] backdrop-blur-md p-7 shadow-lg">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-3">🌸 Promozione</span>
-              <h2 className="text-xl font-bold text-primary-foreground mb-2 leading-snug">Offerta di Primavera</h2>
-              <p className="text-primary-foreground/75 text-sm leading-relaxed mb-5">
-                Sconto del <strong className="text-primary-foreground">20%</strong> sul tuo nuovo sito aziendale.
-              </p>
-              <Link
-                to="/siti-web-aziendali"
-                className="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-primary-foreground transition-colors"
-              >
-                Scopri di più
-                <ArrowRight className="w-4 h-4" />
-              </Link>
             </div>
           </div>
         </div>

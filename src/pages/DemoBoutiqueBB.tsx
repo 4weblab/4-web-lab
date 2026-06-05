@@ -1193,37 +1193,7 @@ const StickyMobileCTA = () => (
 const DemoBoutiqueBB = () => {
   const canonical = "https://4weblab.it/realizzazioni/boutique-bb-luxury-rooms";
 
-  // JSON-LD: tutto riferito a 4 Web Lab (CreativeWork = la demo).
-  const orgLd = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "@id": "https://4weblab.it/#organization",
-    name: "4 Web Lab",
-    legalName: "4 Web Lab di Fullin Carlo",
-    url: "https://4weblab.it/",
-    vatID: "05765760284",
-    founder: { "@type": "Person", name: "Carlo Fullin" },
-    areaServed: ["IT", "Veneto"],
-    knowsAbout: [
-      "Web design boutique hotel",
-      "Siti web per B&B e luxury rooms",
-      "UX strutture ricettive",
-      "SEO per hospitality",
-      "Lead generation turismo",
-    ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      telephone: "+393514656042",
-      contactType: "sales",
-      areaServed: "IT",
-      availableLanguage: ["Italian", "English"],
-    },
-    sameAs: [
-      "https://share.google/oGOMV0sHAaV8JlqnZ",
-      "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-    ],
-  };
-
+  // JSON-LD: 4 Web Lab è già emessa globalmente in App.tsx (#business).
   const creativeLd = {
     "@context": "https://schema.org",
     "@type": "CreativeWork",
@@ -1241,10 +1211,10 @@ const DemoBoutiqueBB = () => {
       "luxury rooms",
       "UX boutique",
     ],
-    author: { "@id": "https://4weblab.it/#organization" },
-    creator: { "@id": "https://4weblab.it/#organization" },
-    producer: { "@id": "https://4weblab.it/#organization" },
-    publisher: { "@id": "https://4weblab.it/#organization" },
+    author: { "@id": "https://4weblab.it/#business" },
+    creator: { "@id": "https://4weblab.it/#business" },
+    producer: { "@id": "https://4weblab.it/#business" },
+    publisher: { "@id": "https://4weblab.it/#business" },
   };
 
   const breadcrumbLd = {
@@ -1271,9 +1241,9 @@ const DemoBoutiqueBB = () => {
     isPartOf: { "@id": "https://4weblab.it/#website" },
     about: { "@id": `${canonical}#creativework` },
     mainEntity: { "@id": `${canonical}#creativework` },
-    author: { "@id": "https://4weblab.it/#organization" },
-    creator: { "@id": "https://4weblab.it/#organization" },
-    publisher: { "@id": "https://4weblab.it/#organization" },
+    author: { "@id": "https://4weblab.it/#business" },
+    creator: { "@id": "https://4weblab.it/#business" },
+    publisher: { "@id": "https://4weblab.it/#business" },
     inLanguage: "it-IT",
   };
 
@@ -1283,7 +1253,7 @@ const DemoBoutiqueBB = () => {
         <title>Sito Web per Boutique B&B · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per boutique B&B e luxury rooms realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per aziende e attività ricettive. Da 899€."
+          content="Demo di sito web per boutique B&B e luxury rooms, realizzata da 4 Web Lab, agenzia web di Padova specializzata in attività ricettive. Da 899€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1323,8 +1293,7 @@ const DemoBoutiqueBB = () => {
           rel="stylesheet"
         />
 
-        {/* JSON-LD (4 Web Lab EEAT) */}
-        <script type="application/ld+json">{JSON.stringify(orgLd)}</script>
+        {/* JSON-LD specifico della pagina (entità 4 Web Lab globale in App.tsx) */}
         <script type="application/ld+json">{JSON.stringify(creativeLd)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbLd)}</script>
         <script type="application/ld+json">{JSON.stringify(webPageLd)}</script>

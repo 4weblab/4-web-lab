@@ -37,7 +37,7 @@ const SitiWebAziendali = () => {
         <title>Realizzazione Siti Web Aziendali Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
 
         <meta name="robots" content="index, follow" />
@@ -47,7 +47,7 @@ const SitiWebAziendali = () => {
         <meta property="og:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
         <meta property="og:locale" content="it_IT" />
@@ -57,7 +57,7 @@ const SitiWebAziendali = () => {
         <meta name="twitter:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Realizzazione siti web aziendali professionali a Padova. Siti moderni, veloci e SEO ottimizzati per aziende e PMI con assistenza locale. Design su misura e preventivo gratuito in 24 ore."
+          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
         <script type="application/ld+json">
@@ -100,6 +100,35 @@ const SitiWebAziendali = () => {
             ],
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            "@id": "https://4weblab.it/siti-web-aziendali#service",
+            name: "Siti Web Aziendali",
+            description:
+              "Realizziamo siti web aziendali a Padova: design su misura, SEO e assistenza locale per PMI e aziende.",
+            serviceType: "Corporate Web Design",
+            areaServed: [
+              { "@type": "City", name: "Padova" },
+              { "@type": "AdministrativeArea", name: "Veneto" }
+            ],
+            url: "https://4weblab.it/siti-web-aziendali",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
+            provider: { "@id": "https://4weblab.it/#business" },
+            offers: {
+              "@type": "Offer",
+              url: "https://4weblab.it/siti-web-aziendali",
+              availability: "https://schema.org/InStock",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "899",
+                priceCurrency: "EUR",
+              },
+            },
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -126,20 +155,6 @@ const SitiWebAziendali = () => {
                 Richiedi una valutazione gratuita
                 <ArrowRight className="w-4 h-4" />
               </button>
-
-              <div className="mt-8 max-w-xl mx-auto p-5 rounded-2xl border border-primary-foreground/15 bg-primary-foreground/5 backdrop-blur-sm">
-                <p className="text-sm text-primary-foreground/80 leading-relaxed">
-                  <strong className="text-primary-foreground">Offerta di primavera:</strong> Sconto del 20% per la
-                  creazione di un sito web aziendale + creazione logo o brand identity completa. Per maggiori
-                  informazioni{" "}
-                  <button
-                    onClick={handleContactClick}
-                    className="underline underline-offset-2 text-primary-foreground hover:text-accent transition-colors font-semibold"
-                  >
-                    clicca qui
-                  </button>
-                </p>
-              </div>
             </AnimatedSection>
           </div>
         </section>

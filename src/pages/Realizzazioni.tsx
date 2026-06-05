@@ -105,7 +105,7 @@ const Realizzazioni = () => {
         <title>Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab</title>
         <meta
           name="description"
-          content="Portfolio di 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (da 199€), professionisti (da 549€) e aziende (da 899€) in tutta Italia."
+          content="Portfolio 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (199€), professionisti (549€) e aziende (899€)."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -142,7 +142,7 @@ const Realizzazioni = () => {
               "realizzazione siti web Padova, portfolio siti web, siti web per negozi, siti web per professionisti, siti web aziendali, 4 Web Lab",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
+            publisher: { "@id": "https://4weblab.it/#business" },
             mainEntity: {
               "@type": "ItemList",
               itemListOrder: "https://schema.org/ItemListOrderAscending",
@@ -169,24 +169,13 @@ const Realizzazioni = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#organization",
-            name: "4 Web Lab",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
             "@type": "Service",
             "@id": "https://4weblab.it/realizzazioni#service",
             serviceType: "Realizzazione siti web",
-            provider: { "@id": "https://4weblab.it/#organization" },
+            provider: { "@id": "https://4weblab.it/#business" },
             areaServed: [
               { "@type": "City", name: "Padova" },
               { "@type": "AdministrativeArea", name: "Veneto" },
-              { "@type": "Country", name: "Italia" },
             ],
             offers: [
               { "@type": "Offer", name: "Siti web per negozi", price: "199", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-negozi" },

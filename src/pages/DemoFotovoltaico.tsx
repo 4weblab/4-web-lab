@@ -1249,7 +1249,7 @@ const DemoFotovoltaico = () => {
         <title>Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per aziende fotovoltaiche realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web aziendali. Pacchetto una tantum da 899€."
+          content="Demo di sito web per aziende fotovoltaiche, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti aziendali. Da 899€ una tantum."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1273,56 +1273,6 @@ const DemoFotovoltaico = () => {
         <meta name="theme-color" content="#070B14" />
         <link rel="preload" as="image" href={heroImg} fetchPriority="high" />
 
-        {/* Organization 4 Web Lab — EEAT */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#organization",
-            name: "4 Web Lab",
-            legalName: "4 Web Lab di Fullin Carlo",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-            vatID: "05765760284",
-            foundingDate: "2026",
-            founder: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              jobTitle: "Founder & Web Designer",
-              sameAs: "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Via Belluno 44",
-              addressLocality: "Legnaro",
-              addressRegion: "PD",
-              postalCode: "35020",
-              addressCountry: "IT",
-            },
-            areaServed: ["IT", "Veneto"],
-            knowsAbout: [
-              "Web design per aziende fotovoltaiche",
-              "Realizzazione siti web settore energia rinnovabile",
-              "UX per dashboard energetiche",
-              "SEO B2B impianti fotovoltaici",
-              "Lead generation per installatori fotovoltaico",
-              "Web design Padova e Veneto",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+393514656042",
-              email: "info@4weblab.it",
-              contactType: "sales",
-              areaServed: "IT",
-              availableLanguage: ["Italian"],
-            },
-            sameAs: [
-              "https://share.google/oGOMV0sHAaV8JlqnZ",
-              "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            ],
-          })}
-        </script>
-
         {/* CreativeWork — il concept */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -1332,12 +1282,12 @@ const DemoFotovoltaico = () => {
             name: "Concept di sito web premium per azienda fotovoltaica — by 4 Web Lab",
             headline: "Tech demo: web design premium per aziende del settore fotovoltaico realizzata da 4 Web Lab",
             url: "https://4weblab.it/realizzazioni/demo-fotovoltaico",
-            inLanguage: "it",
-            author: { "@id": "https://4weblab.it/#organization" },
-            creator: { "@id": "https://4weblab.it/#organization" },
-            producer: { "@id": "https://4weblab.it/#organization" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
-            copyrightHolder: { "@id": "https://4weblab.it/#organization" },
+            inLanguage: "it-IT",
+            author: { "@id": "https://4weblab.it/#business" },
+            creator: { "@id": "https://4weblab.it/#business" },
+            producer: { "@id": "https://4weblab.it/#business" },
+            publisher: { "@id": "https://4weblab.it/#business" },
+            copyrightHolder: { "@id": "https://4weblab.it/#business" },
             about: "Web design, UX e SEO per aziende del settore fotovoltaico ed energie rinnovabili realizzati da 4 Web Lab.",
             keywords: [
               "agenzia web design fotovoltaico",
@@ -1373,13 +1323,13 @@ const DemoFotovoltaico = () => {
             "@id": "https://4weblab.it/realizzazioni/demo-fotovoltaico#webpage",
             name: "4 Web Lab · Concept Web Design Premium per Aziende Fotovoltaiche",
             url: "https://4weblab.it/realizzazioni/demo-fotovoltaico",
-            inLanguage: "it",
-            isPartOf: { "@type": "WebSite", name: "4 Web Lab", url: "https://4weblab.it/" },
-            about: { "@id": "https://4weblab.it/#organization" },
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
+            about: { "@id": "https://4weblab.it/realizzazioni/demo-fotovoltaico#concept" },
             mainEntity: { "@id": "https://4weblab.it/realizzazioni/demo-fotovoltaico#concept" },
-            author: { "@id": "https://4weblab.it/#organization" },
-            creator: { "@id": "https://4weblab.it/#organization" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
+            author: { "@id": "https://4weblab.it/#business" },
+            creator: { "@id": "https://4weblab.it/#business" },
+            publisher: { "@id": "https://4weblab.it/#business" },
             description:
               "Tech demo concettuale realizzata da 4 Web Lab — agenzia italiana specializzata in web design premium per aziende del settore fotovoltaico ed energia rinnovabile.",
           })}

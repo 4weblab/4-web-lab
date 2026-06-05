@@ -974,7 +974,7 @@ const DemoMetalmeccanica = () => {
     <>
       <Helmet>
         <title>Sito Web per Azienda Metalmeccanica · Demo | 4 Web Lab</title>
-        <meta name="description" content="Demo di sito web per aziende metalmeccaniche e carpenteria industriale realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web aziendali. Pacchetto una tantum da 899€." />
+        <meta name="description" content="Demo di sito web per aziende metalmeccaniche e carpenteria, realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 899€." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni/demo-metalmeccanica" />
@@ -993,56 +993,6 @@ const DemoMetalmeccanica = () => {
         <meta name="twitter:image" content="https://4weblab.it/og/demo-metalmeccanica.webp" />
         <meta name="theme-color" content="#1A1A1B" />
 
-        {/* Organization 4 Web Lab — EEAT signal principale della pagina */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#organization",
-            name: "4 Web Lab",
-            legalName: "4 Web Lab di Fullin Carlo",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-            vatID: "05765760284",
-            foundingDate: "2026",
-            founder: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              jobTitle: "Founder & Web Designer",
-              sameAs: "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Via Belluno 44",
-              addressLocality: "Legnaro",
-              addressRegion: "PD",
-              postalCode: "35020",
-              addressCountry: "IT",
-            },
-            areaServed: ["IT", "Veneto"],
-            knowsAbout: [
-              "Web design per aziende metalmeccaniche",
-              "UX B2B industriale",
-              "SEO B2B manufacturing",
-              "Realizzazione siti web carpenteria e CNC",
-              "Schede tecniche di processo su web",
-              "Lead generation industriale",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+393514656042",
-              email: "info@4weblab.it",
-              contactType: "sales",
-              areaServed: "IT",
-              availableLanguage: ["Italian"],
-            },
-            sameAs: [
-              "https://share.google/oGOMV0sHAaV8JlqnZ",
-              "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            ],
-          })}
-        </script>
-
         {/* CreativeWork — il concept, attribuito interamente a 4 Web Lab */}
         <script type="application/ld+json">
           {JSON.stringify({
@@ -1052,12 +1002,12 @@ const DemoMetalmeccanica = () => {
             name: "Concept di sito web premium per azienda metalmeccanica — by 4 Web Lab",
             headline: "Tech demo: web design premium per aziende metalmeccaniche realizzata da 4 Web Lab",
             url: "https://4weblab.it/realizzazioni/demo-metalmeccanica",
-            inLanguage: "it",
-            author: { "@id": "https://4weblab.it/#organization" },
-            creator: { "@id": "https://4weblab.it/#organization" },
-            producer: { "@id": "https://4weblab.it/#organization" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
-            copyrightHolder: { "@id": "https://4weblab.it/#organization" },
+            inLanguage: "it-IT",
+            author: { "@id": "https://4weblab.it/#business" },
+            creator: { "@id": "https://4weblab.it/#business" },
+            producer: { "@id": "https://4weblab.it/#business" },
+            publisher: { "@id": "https://4weblab.it/#business" },
+            copyrightHolder: { "@id": "https://4weblab.it/#business" },
             about: "Web design, UX e SEO B2B per aziende metalmeccaniche realizzati da 4 Web Lab.",
             keywords: [
               "agenzia web design metalmeccanica",
@@ -1092,13 +1042,13 @@ const DemoMetalmeccanica = () => {
             "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#webpage",
             name: "4 Web Lab · Concept Web Design Premium per Aziende Metalmeccaniche",
             url: "https://4weblab.it/realizzazioni/demo-metalmeccanica",
-            inLanguage: "it",
-            isPartOf: { "@type": "WebSite", name: "4 Web Lab", url: "https://4weblab.it/" },
-            about: { "@id": "https://4weblab.it/#organization" },
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
+            about: { "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#concept" },
             mainEntity: { "@id": "https://4weblab.it/realizzazioni/demo-metalmeccanica#concept" },
-            author: { "@id": "https://4weblab.it/#organization" },
-            creator: { "@id": "https://4weblab.it/#organization" },
-            publisher: { "@id": "https://4weblab.it/#organization" },
+            author: { "@id": "https://4weblab.it/#business" },
+            creator: { "@id": "https://4weblab.it/#business" },
+            publisher: { "@id": "https://4weblab.it/#business" },
             description: "Tech demo concettuale realizzata da 4 Web Lab — agenzia italiana specializzata in web design premium per aziende metalmeccaniche, carpenteria e manifatturiero B2B.",
           })}
         </script>

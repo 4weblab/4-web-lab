@@ -59,13 +59,29 @@ const SitiWebProfessionisti = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://4weblab.it/realizzazione-siti-web-per-professionisti#service",
             name: "Siti Web per Professionisti",
             description:
               "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
             serviceType: "Web Design for Professionals",
-            areaServed: { "@type": "Country", name: "IT" },
+            areaServed: [
+              { "@type": "City", name: "Padova" },
+              { "@type": "AdministrativeArea", name: "Veneto" }
+            ],
             url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
             provider: { "@id": "https://4weblab.it/#business" },
+            offers: {
+              "@type": "Offer",
+              url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+              availability: "https://schema.org/InStock",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "549",
+                priceCurrency: "EUR",
+              },
+            },
           })}
         </script>
       </Helmet>
