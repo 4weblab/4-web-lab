@@ -47,6 +47,7 @@ const SitiWebPadova = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
+            "@id": "https://4weblab.it/realizzazione-siti-web-padova#service",
             name: "Realizzazione Siti Web a Padova",
             description:
               "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
@@ -56,6 +57,8 @@ const SitiWebPadova = () => {
               { "@type": "AdministrativeArea", name: "Veneto" }
             ],
             url: "https://4weblab.it/realizzazione-siti-web-padova",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
             provider: { "@id": "https://4weblab.it/#business" },
             offers: {
               "@type": "Offer",
