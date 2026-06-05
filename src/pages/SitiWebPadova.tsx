@@ -25,6 +25,16 @@ const SitiWebPadova = () => {
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Siti web a Padova", item: "https://4weblab.it/realizzazione-siti-web-padova" },
+            ],
+          })}
+        </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:title" content="Realizzazione Siti Web Padova | da 199€ | 4 Web Lab" />

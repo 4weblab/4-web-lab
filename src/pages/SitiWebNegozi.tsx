@@ -33,6 +33,16 @@ const SitiWebNegozi = () => {
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-per-negozi" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Siti web per negozi", item: "https://4weblab.it/siti-web-per-negozi" },
+            ],
+          })}
+        </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-per-negozi" />
         <meta property="og:title" content="Siti Web per Negozi a Padova e in Italia | 4 Web Lab" />

@@ -38,6 +38,17 @@ const BlogNotFoundOnGoogleArticle = () => {
         <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
+              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
+            ],
+          })}
+        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content={pageTitle} />
