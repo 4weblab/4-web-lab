@@ -54,6 +54,17 @@ const SitiWebPadova = () => {
             areaServed: { "@type": "City", name: "Padova", containedInPlace: { "@type": "Country", name: "IT" } },
             url: "https://4weblab.it/realizzazione-siti-web-padova",
             provider: { "@id": "https://4weblab.it/#business" },
+            offers: {
+              "@type": "Offer",
+              url: "https://4weblab.it/realizzazione-siti-web-padova",
+              availability: "https://schema.org/InStock",
+              priceSpecification: {
+                "@type": "PriceSpecification",
+                minPrice: "199",
+                maxPrice: "899",
+                priceCurrency: "EUR",
+              },
+            },
           })}
         </script>
       </Helmet>
