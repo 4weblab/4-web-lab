@@ -68,6 +68,8 @@ const Contact = () => {
             name: pageTitle,
             description: pageDescription,
             url: pageUrl,
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
             mainEntity: { "@id": "https://4weblab.it/#business" },
           })}
         </script>
