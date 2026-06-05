@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Servizi', href: '#servizi' },
   { label: 'Domande Frequenti', href: '#faq' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
+  { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contatti', href: '/contatti' },
 ];
