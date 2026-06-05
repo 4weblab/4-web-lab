@@ -37,6 +37,16 @@ const SitiWebProfessionisti = () => {
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "Siti web per professionisti", item: "https://4weblab.it/realizzazione-siti-web-per-professionisti" },
+            ],
+          })}
+        </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
         <meta property="og:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
