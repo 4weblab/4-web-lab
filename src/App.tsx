@@ -76,7 +76,10 @@ const App = () => (
             "latitude": 45.3461,
             "longitude": 11.9536
           },
-          "areaServed": ["IT", "Veneto", "Padova (PD)", "Venezia (VE)", "Treviso (TV)", "Vicenza (VI)", "Verona (VR)", "Rovigo (RO)", "Belluno (BL)"],
+          "areaServed": [
+            { "@type": "City", "name": "Padova" },
+            { "@type": "AdministrativeArea", "name": "Veneto" }
+          ],
           "sameAs": [
             "https://share.google/oGOMV0sHAaV8JlqnZ",
             "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
