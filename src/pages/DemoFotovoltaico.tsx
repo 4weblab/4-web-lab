@@ -1273,56 +1273,6 @@ const DemoFotovoltaico = () => {
         <meta name="theme-color" content="#070B14" />
         <link rel="preload" as="image" href={heroImg} fetchPriority="high" />
 
-        {/* Organization 4 Web Lab — EEAT */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            "@id": "https://4weblab.it/#business",
-            name: "4 Web Lab",
-            legalName: "4 Web Lab di Fullin Carlo",
-            url: "https://4weblab.it/",
-            logo: "https://4weblab.it/logo.webp",
-            vatID: "05765760284",
-            foundingDate: "2026",
-            founder: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              jobTitle: "Founder & Web Designer",
-              sameAs: "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            },
-            address: {
-              "@type": "PostalAddress",
-              streetAddress: "Via Belluno 44",
-              addressLocality: "Legnaro",
-              addressRegion: "PD",
-              postalCode: "35020",
-              addressCountry: "IT",
-            },
-            areaServed: ["IT", "Veneto"],
-            knowsAbout: [
-              "Web design per aziende fotovoltaiche",
-              "Realizzazione siti web settore energia rinnovabile",
-              "UX per dashboard energetiche",
-              "SEO B2B impianti fotovoltaici",
-              "Lead generation per installatori fotovoltaico",
-              "Web design Padova e Veneto",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              telephone: "+393514656042",
-              email: "info@4weblab.it",
-              contactType: "sales",
-              areaServed: "IT",
-              availableLanguage: ["Italian"],
-            },
-            sameAs: [
-              "https://share.google/oGOMV0sHAaV8JlqnZ",
-              "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/",
-            ],
-          })}
-        </script>
-
         {/* CreativeWork — il concept */}
         <script type="application/ld+json">
           {JSON.stringify({
