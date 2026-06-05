@@ -1134,7 +1134,7 @@ const DemoFlowerAtelier = () => {
   const orgLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "@id": "https://4weblab.it/#organization",
+    "@id": "https://4weblab.it/#business",
     name: "4 Web Lab",
     legalName: "4 Web Lab di Fullin Carlo",
     url: "https://4weblab.it/",
@@ -1182,10 +1182,10 @@ const DemoFlowerAtelier = () => {
       "showcase web design",
       "siti web per negozi moderni",
     ],
-    author: { "@id": "https://4weblab.it/#organization" },
-    creator: { "@id": "https://4weblab.it/#organization" },
-    producer: { "@id": "https://4weblab.it/#organization" },
-    publisher: { "@id": "https://4weblab.it/#organization" },
+    author: { "@id": "https://4weblab.it/#business" },
+    creator: { "@id": "https://4weblab.it/#business" },
+    producer: { "@id": "https://4weblab.it/#business" },
+    publisher: { "@id": "https://4weblab.it/#business" },
   };
 
   const breadcrumbLd = {
@@ -1212,9 +1212,9 @@ const DemoFlowerAtelier = () => {
     isPartOf: { "@id": "https://4weblab.it/#website" },
     about: { "@id": `${canonical}#creativework` },
     mainEntity: { "@id": `${canonical}#creativework` },
-    author: { "@id": "https://4weblab.it/#organization" },
-    creator: { "@id": "https://4weblab.it/#organization" },
-    publisher: { "@id": "https://4weblab.it/#organization" },
+    author: { "@id": "https://4weblab.it/#business" },
+    creator: { "@id": "https://4weblab.it/#business" },
+    publisher: { "@id": "https://4weblab.it/#business" },
     inLanguage: "it-IT",
   };
 
