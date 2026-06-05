@@ -28,6 +28,60 @@
     />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" media="print" onload="this.media='all'" />
     <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" /></noscript>
+
+    <!-- AEO/GEO: allow full snippets and large image previews for AI Overviews & answer engines -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Sitewide JSON-LD: Organization (brand entity for LLMs) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://4weblab.it/#business",
+      "name": "4 Web Lab",
+      "url": "https://4weblab.it",
+      "logo": "https://4weblab.it/logo.webp",
+      "image": "https://4weblab.it/og-image.jpg",
+      "description": "Studio web di Legnaro (Padova) specializzato nella realizzazione di siti web professionali per negozi, professionisti e aziende. Servizi SEO, AEO e GEO per il posizionamento su Google e sulle AI.",
+      "telephone": "+39 351 465 6042",
+      "email": "info@4weblab.it",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Legnaro",
+        "addressRegion": "PD",
+        "addressCountry": "IT"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Padova" },
+        { "@type": "AdministrativeArea", "name": "Veneto" },
+        { "@type": "Country", "name": "Italia" }
+      ],
+      "knowsAbout": [
+        "Realizzazione siti web",
+        "Search Engine Optimization",
+        "Answer Engine Optimization",
+        "Generative Engine Optimization",
+        "GDPR",
+        "Core Web Vitals"
+      ],
+      "sameAs": [
+        "https://www.google.com/maps?cid=4weblab"
+      ]
+    }
+    </script>
+
+    <!-- Sitewide JSON-LD: WebSite (entity anchor for per-page WebPage references) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://4weblab.it/#website",
+      "url": "https://4weblab.it",
+      "name": "4 Web Lab",
+      "inLanguage": "it-IT",
+      "publisher": { "@id": "https://4weblab.it/#business" }
+    }
+    </script>
   </head>
 
   <body>
