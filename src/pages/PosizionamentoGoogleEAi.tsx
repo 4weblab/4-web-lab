@@ -196,6 +196,17 @@ const PosizionamentoGoogleEAi = () => {
             primaryImageOfPage: { "@type": "ImageObject", url: "https://4weblab.it/og-image.jpg" },
           })}
         </script>
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            itemListElement: [
+              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              { "@type": "ListItem", position: 2, name: "SEO & AI", item: PAGE_URL },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
