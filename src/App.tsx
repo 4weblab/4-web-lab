@@ -27,6 +27,7 @@ const BlogOutdatedWebsiteArticle = lazy(() => import("./pages/BlogOutdatedWebsit
 const BlogNotFoundOnGoogleArticle = lazy(() => import("./pages/BlogNotFoundOnGoogleArticle"));
 const BlogQuotePlatformsArticle = lazy(() => import("./pages/BlogQuotePlatformsArticle"));
 const BlogDiyWebsiteArticle = lazy(() => import("./pages/BlogDiyWebsiteArticle"));
+const BlogArubaSupersiteArticle = lazy(() => import("./pages/BlogArubaSupersiteArticle"));
 const Contact = lazy(() => import("./pages/Contact"));
 const Realizzazioni = lazy(() => import("./pages/Realizzazioni"));
 const DemoMetalmeccanica = lazy(() => import("./pages/DemoMetalmeccanica"));
@@ -151,6 +152,7 @@ const App = () => (
               <Route path="/blog/perche-il-tuo-sito-non-si-trova-su-google" element={<BlogNotFoundOnGoogleArticle />} />
               <Route path="/blog/siti-web-piattaforme-preventivi-online-conviene" element={<BlogQuotePlatformsArticle />} />
               <Route path="/blog/creare-sito-web-da-soli-conviene" element={<BlogDiyWebsiteArticle />} />
+              <Route path="/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere" element={<BlogArubaSupersiteArticle />} />
               <Route path="/contatti" element={<Contact />} />
               <Route path="/realizzazioni" element={<Realizzazioni />} />
               <Route path="/realizzazioni/demo-metalmeccanica" element={<DemoMetalmeccanica />} />
