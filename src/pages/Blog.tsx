@@ -13,8 +13,18 @@ import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
 import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
 import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.jpg";
+import blogArubaSupersite from "@/assets/blog-aruba-supersite.jpg";
 
 const articles = [
+  {
+    slug: "/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
+    title: "Aruba SuperSite conviene davvero? Limiti, tempo perso e cosa sapere",
+    description:
+      "Aruba SuperSite sembra la scorciatoia perfetta per creare un sito da soli. Ecco i limiti reali, il tempo perso e cosa valutare prima di iniziare.",
+    image: blogArubaSupersite,
+    alt: "Schermata di Aruba SuperSite con editor drag and drop per creare un sito web da soli",
+    datePublished: "2026-06-09",
+  },
   {
     slug: "/blog/creare-sito-web-da-soli-conviene",
     title: "Creare un sito web da soli conviene davvero? Costi, rischi e cosa sapere nel 2026",
