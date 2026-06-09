@@ -6,6 +6,7 @@ import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
 import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
 import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.jpg";
+import blogArubaSupersite from "@/assets/blog-aruba-supersite.jpg";
 
 export type BlogArticle = {
   slug: string;
@@ -47,6 +48,26 @@ export const formatItalianDate = (iso: string): string => {
 };
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
+    path: "/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
+    title: "Aruba SuperSite conviene davvero? Limiti, tempo perso e cosa sapere prima di creare il tuo sito",
+    shortTitle: "Aruba SuperSite: conviene davvero?",
+    description:
+      "Aruba SuperSite è davvero la soluzione giusta per il tuo sito? Limiti, tempi nascosti e cosa valutare prima di scegliere una piattaforma fai-da-te.",
+    excerpt:
+      "Aruba SuperSite promette siti facili e veloci: cosa funziona, cosa no e cosa valutare prima di scegliere una piattaforma fai-da-te.",
+    image: blogArubaSupersite,
+    alt: "Interfaccia di una piattaforma fai-da-te per la creazione di siti web tipo Aruba SuperSite",
+    datePublished: "2026-06-09",
+    dateModified: "2026-06-09",
+    category: "Strategia digitale",
+    related: [
+      "creare-sito-web-da-soli-conviene",
+      "siti-web-piattaforme-preventivi-online-conviene",
+    ],
+    wordCount: 720,
+  },
   {
     slug: "creare-sito-web-da-soli-conviene",
     path: "/blog/creare-sito-web-da-soli-conviene",

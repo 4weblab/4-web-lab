@@ -1,50 +1,67 @@
-## Obiettivo
-Rendere tutto il sito AEO/GEO-friendly con soli interventi additivi (JSON-LD, meta, file di crawler). Nessuna modifica a struttura, layout, copy o immagini.
 
-## Interventi
+## Nuovo articolo blog: Aruba SuperSite
 
-### 1. JSON-LD sitewide in `index.html`
-- Aggiungere `Organization` (logo, contatti, `sameAs`, areaServed) e `WebSite` (con `potentialAction` SearchAction simbolica). Diventa la base entità per tutti i LLM.
-- Verificare e mantenere i JSON-LD già presenti.
+### Slug & route
+- Slug: `aruba-supersite-conviene-davvero-limiti-e-cosa-sapere`
+- Route: `/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere`
 
-### 2. Meta robots esteso in `index.html`
-Sostituire `<meta name="robots" content="index, follow">` con:
-`<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">`
-→ permette ad AI Overviews / featured snippet di usare estratti più lunghi.
+### Meta SEO
+- **Title** (<60): `Aruba SuperSite conviene? Limiti e cosa sapere prima`
+- **Description** (<160): `Aruba SuperSite è davvero la soluzione giusta per il tuo sito? Limiti, tempi nascosti e cosa valutare prima di scegliere una piattaforma fai-da-te.`
+- Canonical, OG, Twitter, BreadcrumbList + BlogPosting JSON-LD (stesso pattern di `BlogSiteVsSocialArticle.tsx`).
+- Categoria: `Strategia digitale`
+- Data pubblicazione/modifica: `2026-06-09`
 
-### 3. `BreadcrumbList` JSON-LD su tutte le pagine satellite e blog
-Aggiunta di un blocco `<script type="application/ld+json">` dentro `<Helmet>` esistente, in:
-- `SitiWebAziendali`, `SitiWebProfessionisti`, `SitiWebNegozi`, `SitiWebPadova`, `FaqSitiWeb`
-- `Realizzazioni` + tutte le demo
-- Tutti gli articoli del blog
-- `Contact`, `PrivacyPolicy`, `CookiePolicy` (BreadcrumbList minimo)
+### Ottimizzazione SEO/AEO/GEO (senza stravolgere)
+- Rielaboro paragrafi mantenendo i concetti, ma includendo keyword: "Aruba SuperSite", "piattaforma fai-da-te", "sito web professionale", "alternativa Aruba SuperSite", "creare sito web Padova".
+- Frasi brevi, domande dirette (AEO-friendly).
+- H2 tematizzati riprendendo le sezioni dell'articolo originale (8 sezioni + conclusione).
+- Frase locale GEO: riferimento a Padova/Veneto nella conclusione.
 
-### 4. `Speakable` schema sulle FAQ esistenti
-Aggiungere `speakable` al JSON-LD `FAQPage` già presente in `FaqSitiWeb` e `PosizionamentoGoogleEAi`.
+### Interlinking interno
+- `creare-sito-web-da-soli-conviene` (sezione "Il vero costo nascosto")
+- `siti-web-piattaforme-preventivi-online-conviene` (sezione "Essere online non significa essere visibili" o "Aruba è cattiva soluzione")
+- `perche-il-tuo-sito-non-si-trova-su-google` (sezione visibilità Google)
+- `quanto-costa-un-sito-web-nel-2026` (sezione costi nascosti)
+- CTA finale a `/contatti`
 
-### 5. `robots.txt`: esplicitare crawler AI
-Aggiungere blocchi `User-agent:` espliciti con `Allow: /` per:
-GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, Applebot-Extended, OAI-SearchBot, Bytespider, Amazonbot.
-Mantenere intatti i blocchi esistenti.
+### Related articles (in `blogArticles.ts`)
+Related: `creare-sito-web-da-soli-conviene`, `siti-web-piattaforme-preventivi-online-conviene`.
+Aggiorno anche `related` di un paio di articoli esistenti per puntare al nuovo (es. `creare-sito-web-da-soli-conviene` → aggiunge nuovo articolo).
 
-### 6. `public/llms-full.txt`
-Nuovo file companion di `llms.txt` con descrizioni più estese di servizi, pacchetti, prezzi, FAQ chiave e dati di contatto. Solo metadata + sintesi (no copy delle pagine).
+### Immagini esempio (lightbox)
+Due screenshot caricati: `favesrl.it` e `importirrigation.com`.
+- Converto entrambe in **WebP** (qualità ~82, larghezza max 1600px) e le salvo in `src/assets/`:
+  - `blog-aruba-example-favesrl.webp`
+  - `blog-aruba-example-importirrigation.webp`
+- Genero anche **hero article image WebP** con imagegen (1024x640) — schermata stilizzata di builder fai-da-te — per coerenza con gli altri articoli.
+- Nuova sezione "Esempi di siti realizzati con piattaforme fai-da-te" con grid 2 colonne (1 col mobile). Ogni thumbnail è un `<button>` (accessibile) che apre un **lightbox modale React**:
+  - Overlay scuro `bg-background/90 backdrop-blur`
+  - Immagine centrata, max-w 90vw / max-h 90vh, `object-contain`
+  - Bottone **X** in alto a destra, visibile e cliccabile (icona Lucide `X` dentro pulsante con bg + aria-label "Chiudi")
+  - Chiusura anche su click overlay e tasto `Esc`
+  - Body scroll lock quando aperto
+  - Trap focus minimo (autofocus su X)
+  - Caption con didascalia (nome sito + nota "esempio sito realizzato con piattaforma fai-da-te")
 
-### 7. `Article` JSON-LD sugli articoli blog
-Verifica e, dove mancante, aggiunta di `Article` con `headline`, `author`, `datePublished`, `dateModified`, `image`, `publisher` (Organization riferimento).
+Componente lightbox locale dentro la pagina articolo (state-driven, niente nuove dipendenze).
 
-## File toccati
-- `index.html`
-- `public/robots.txt`
-- `public/llms-full.txt` (nuovo)
-- Tutte le pagine `src/pages/*.tsx` listate sopra (solo aggiunta di blocchi `<script>` dentro `<Helmet>` esistenti)
+### File da creare
+- `src/pages/BlogArubaSupersiteArticle.tsx` (stessa struttura di `BlogSiteVsSocialArticle.tsx` + sezione esempi + lightbox)
+- `src/assets/blog-aruba-supersite.jpg` (hero — imagegen, poi useremo .jpg standard come gli altri)
+- `src/assets/blog-aruba-example-favesrl.webp`
+- `src/assets/blog-aruba-example-importirrigation.webp`
 
-## Cosa NON tocchiamo
-- Copy, H1/H2, struttura DOM, layout, design, immagini, componenti UI
-- `sitemap.xml` (resta come è)
-- `llms.txt` (resta come è)
+### File da modificare
+- `src/App.tsx` — aggiungo `lazy` import + `<Route>` per il nuovo articolo
+- `src/data/blogArticles.ts` — aggiungo nuovo `BlogArticle` in testa, aggiorno `related` di articoli affini
+- `public/sitemap.xml` — aggiungo `<url>` per la nuova pagina con `lastmod` `2026-06-09` e aggiorno `lastmod` di `/blog` a `2026-06-09`
+- `public/llms-full.txt` — aggiungo riferimento al nuovo articolo
 
-## Impatto
-- Zero modifiche visive.
-- Zero impatto su performance (gli script JSON-LD non bloccano il rendering).
-- Beneficio: ogni pagina diventa interpretabile dai motori di risposta e dai LLM con segnali entità, breadcrumb e snippet espliciti.
+### Note tecniche
+- Immagini lazy con `loading="lazy"`, `width`/`height` espliciti (WebP).
+- Hero usa `<img>` standard (no Framer Motion su H1).
+- Lightbox: portal non necessario (z-index alto basta). `role="dialog"` + `aria-modal="true"`.
+- Reading time calcolato da `wordCount` (~720).
+
+Procedo?
