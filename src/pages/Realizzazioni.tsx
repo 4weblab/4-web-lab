@@ -165,6 +165,8 @@ const Realizzazioni = () => {
                 position: i + 1,
                 url: `https://4weblab.it/realizzazioni/${p.slug}`,
                 name: p.title,
+                description: p.description,
+                image: `https://4weblab.it${p.image}`,
               })),
             },
           })}
