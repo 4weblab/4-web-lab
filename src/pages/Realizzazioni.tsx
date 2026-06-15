@@ -23,18 +23,31 @@ import imgFotovoltaico from "@/assets/solaris-industrial.webp";
 import imgBoutique from "@/assets/bb-room-deluxe.webp";
 import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
+import imgRbSnc from "@/assets/rb-snc-edilizia.webp";
 
 interface Project {
   slug: string;
   title: string;
   description: string;
   badge: string;
+  badgeVariant?: "concept" | "real";
   features: string[];
   image: string;
   alt: string;
 }
 
 const projects: Project[] = [
+  {
+    slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
+    title: "Sito web R.B s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
+    description:
+      "Lavoro reale online: restyling completo del sito, ottimizzazione SEO on-page e campagna Google Ads attiva per un'impresa edile specializzata in rimozione amianto e rifacimento coperture nel Veneto.",
+    badge: "Progetto reale",
+    badgeVariant: "real",
+    features: ["Restyling completo", "Ottimizzazione SEO", "Campagna Google Ads"],
+    image: imgRbSnc,
+    alt: "Operai con DPI rimuovono lastre di eternit e installano nuova copertura metallica su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab",
+  },
   {
     slug: "demo-metalmeccanica",
     title: "Sito web per azienda metalmeccanica — concept",
