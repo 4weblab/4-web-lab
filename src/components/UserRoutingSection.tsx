@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Store, Briefcase, Building2, ArrowRight } from 'lucide-react';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
-import cardNegozio from '@/assets/card-negozio.jpg';
-import cardProfessionista from '@/assets/card-professionista.jpg';
-import cardAzienda from '@/assets/card-azienda.jpg';
+import cardNegozio from '@/assets/card-negozio.webp';
+import cardProfessionista from '@/assets/card-professionista.webp';
+import cardAzienda from '@/assets/card-azienda.webp';
 
 const cards = [
   {

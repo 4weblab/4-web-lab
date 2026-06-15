@@ -20,8 +20,8 @@ import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import mockupImg from "@/assets/aziendali-mockup.jpg";
-import teamImg from "@/assets/aziendali-team.png";
+import mockupImg from "@/assets/aziendali-mockup.webp";
+import teamImg from "@/assets/aziendali-team.webp";
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
@@ -59,7 +59,7 @@ const SitiWebAziendali = () => {
           property="og:description"
           content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -69,7 +69,7 @@ const SitiWebAziendali = () => {
           name="twitter:description"
           content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
         />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

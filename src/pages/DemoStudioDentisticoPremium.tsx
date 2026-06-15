@@ -30,15 +30,15 @@ import {
   Heart,
 } from "lucide-react";
 
-import heroImg from "@/assets/dental-hero.jpg";
-import smileImg from "@/assets/dental-smile.jpg";
-import roomImg from "@/assets/dental-room.jpg";
-import scan3dImg from "@/assets/dental-3d-scan.jpg";
-import beforeImg from "@/assets/dental-before.jpg";
-import afterImg from "@/assets/dental-after.jpg";
-import doc1 from "@/assets/dental-doctor-1.jpg";
-import doc2 from "@/assets/dental-doctor-2.jpg";
-import doc3 from "@/assets/dental-doctor-3.jpg";
+import heroImg from "@/assets/dental-hero.webp";
+import smileImg from "@/assets/dental-smile.webp";
+import roomImg from "@/assets/dental-room.webp";
+import scan3dImg from "@/assets/dental-3d-scan.webp";
+import beforeImg from "@/assets/dental-before.webp";
+import afterImg from "@/assets/dental-after.webp";
+import doc1 from "@/assets/dental-doctor-1.webp";
+import doc2 from "@/assets/dental-doctor-2.webp";
+import doc3 from "@/assets/dental-doctor-3.webp";
 
 /* =====================================================================
    "Studio Dentistico Aurea" — Premium Dental Tech Demo by 4 Web Lab

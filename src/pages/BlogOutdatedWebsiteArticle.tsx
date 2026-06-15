@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
+import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.webp";
 
 const introParagraphs = [
   "Nel 2026 la differenza tra un sito web che porta clienti e uno che resta fermo a fare da semplice vetrina è diventata molto evidente.",

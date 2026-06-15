@@ -128,14 +128,14 @@ const PosizionamentoGoogleEAi = () => {
         <meta property="og:url" content={PAGE_URL} />
         <meta property="og:title" content={PAGE_TITLE} />
         <meta property="og:description" content={PAGE_DESCRIPTION} />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={PAGE_URL} />
         <meta name="twitter:title" content={PAGE_TITLE} />
         <meta name="twitter:description" content={PAGE_DESCRIPTION} />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({
@@ -197,7 +197,7 @@ const PosizionamentoGoogleEAi = () => {
               { "@type": "Thing", name: "Answer Engine Optimization" },
               { "@type": "Thing", name: "Generative Engine Optimization" },
             ],
-            primaryImageOfPage: { "@type": "ImageObject", url: "https://4weblab.it/og-image.jpg" },
+            primaryImageOfPage: { "@type": "ImageObject", url: "https://4weblab.it/og-image.webp" },
           })}
         </script>
 

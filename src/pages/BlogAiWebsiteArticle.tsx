@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogAiWebsite from "@/assets/blog-ai-website.jpg";
+import blogAiWebsite from "@/assets/blog-ai-website.webp";
 
 const introParagraphs = [
   "Negli ultimi anni, l’intelligenza artificiale è entrata in modo deciso anche nel mondo della creazione di siti web. Sempre più piattaforme promettono di generare un sito completo in pochi minuti, partendo da poche informazioni: nome dell’attività, settore, qualche preferenza grafica.",

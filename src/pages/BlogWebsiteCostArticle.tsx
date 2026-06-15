@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
+import blogWebsiteCost from "@/assets/blog-website-cost.webp";
 
 const introParagraphs = [
   "Nel 2026 una delle domande più frequenti per chi vuole creare un sito web è sempre la stessa:",

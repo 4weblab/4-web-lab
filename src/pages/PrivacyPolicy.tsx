@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
   const pageTitle = 'Privacy Policy | 4 Web Lab';
   const pageDescription = 'Informativa sul trattamento dei dati personali di 4 Web Lab, ai sensi del GDPR. Scopri come raccogliamo e utilizziamo i tuoi dati.';
   const pageUrl = 'https://4weblab.it/privacy';
-  const pageImage = 'https://4weblab.it/og-image.jpg';
+  const pageImage = 'https://4weblab.it/og-image.webp';
 
   return (
     <div className="min-h-screen bg-background">
