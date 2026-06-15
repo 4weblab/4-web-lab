@@ -35,6 +35,7 @@ const DemoStudioDentisticoPremium = lazy(() => import("./pages/DemoStudioDentist
 const DemoFotovoltaico = lazy(() => import("./pages/DemoFotovoltaico"));
 const DemoBoutiqueBB = lazy(() => import("./pages/DemoBoutiqueBB"));
 const DemoFlowerAtelier = lazy(() => import("./pages/DemoFlowerAtelier"));
+const DemoRbSncEdilizia = lazy(() => import("./pages/DemoRbSncEdilizia"));
 
 const queryClient = new QueryClient();
 
@@ -155,6 +156,7 @@ const App = () => (
               <Route path="/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere" element={<BlogArubaSupersiteArticle />} />
               <Route path="/contatti" element={<Contact />} />
               <Route path="/realizzazioni" element={<Realizzazioni />} />
+              <Route path="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" element={<DemoRbSncEdilizia />} />
               <Route path="/realizzazioni/demo-metalmeccanica" element={<DemoMetalmeccanica />} />
               <Route path="/realizzazioni/demo-studio-dentistico-premium" element={<DemoStudioDentisticoPremium />} />
               <Route path="/realizzazioni/demo-fotovoltaico" element={<DemoFotovoltaico />} />

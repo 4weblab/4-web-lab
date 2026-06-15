@@ -23,18 +23,31 @@ import imgFotovoltaico from "@/assets/solaris-industrial.webp";
 import imgBoutique from "@/assets/bb-room-deluxe.webp";
 import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
+import imgRbSnc from "@/assets/rb-snc-edilizia.webp";
 
 interface Project {
   slug: string;
   title: string;
   description: string;
   badge: string;
+  badgeVariant?: "concept" | "real";
   features: string[];
   image: string;
   alt: string;
 }
 
 const projects: Project[] = [
+  {
+    slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
+    title: "Sito web R.B s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
+    description:
+      "Lavoro reale online: restyling completo del sito, ottimizzazione SEO on-page e campagna Google Ads attiva per un'impresa edile specializzata in rimozione amianto e rifacimento coperture nel Veneto.",
+    badge: "Progetto reale",
+    badgeVariant: "real",
+    features: ["Restyling completo", "Ottimizzazione SEO", "Campagna Google Ads"],
+    image: imgRbSnc,
+    alt: "Operai con DPI rimuovono lastre di eternit e installano nuova copertura metallica su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab",
+  },
   {
     slug: "demo-metalmeccanica",
     title: "Sito web per azienda metalmeccanica — concept",
@@ -102,20 +115,20 @@ const Realizzazioni = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab</title>
+        <title>Realizzazioni siti web reali e concept — Portfolio 4 Web Lab Padova</title>
         <meta
           name="description"
-          content="Portfolio 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (199€), professionisti (549€) e aziende (899€)."
+          content="Portfolio 4 Web Lab, agenzia web di Padova: lavori reali pubblicati (es. R.B s.n.c., edilizia, Cittadella) e concept per negozi (199€), professionisti (549€) e aziende (899€)."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni" />
-        <meta property="og:title" content="Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazioni siti web reali e concept — Portfolio 4 Web Lab Padova" />
         <meta
           property="og:description"
-          content="Portfolio 4 Web Lab: siti web per negozi, professionisti e aziende a Padova e in tutta Italia. Demo premium con SEO, UX e conversione."
+          content="Portfolio 4 Web Lab: lavori reali online e concept di siti web per negozi, professionisti e aziende a Padova e in tutta Italia. SEO, UX e conversione."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -124,8 +137,8 @@ const Realizzazioni = () => {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Portfolio 4 Web Lab — realizzazioni e concept di siti web a Padova" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab" />
-        <meta name="twitter:description" content="Demo e concept di siti web per negozi, professionisti e aziende. 4 Web Lab, agenzia web di Padova." />
+        <meta name="twitter:title" content="Realizzazioni siti web reali e concept — 4 Web Lab Padova" />
+        <meta name="twitter:description" content="Lavori reali pubblicati e concept di siti web per negozi, professionisti e aziende. 4 Web Lab, agenzia web di Padova." />
         <meta name="twitter:image" content="https://4weblab.it/og/realizzazioni-4weblab.webp" />
 
         {/* CollectionPage + ItemList JSON-LD */}
@@ -152,6 +165,8 @@ const Realizzazioni = () => {
                 position: i + 1,
                 url: `https://4weblab.it/realizzazioni/${p.slug}`,
                 name: p.title,
+                description: p.description,
+                image: `https://4weblab.it${p.image}`,
               })),
             },
           })}
@@ -241,11 +256,11 @@ const Realizzazioni = () => {
         <section className="py-16 md:py-20 bg-background">
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto text-center">
-              <h2 className="heading-3 mb-4">Progetti reali e concept dimostrativi</h2>
+              <h2 className="heading-3 mb-4">Progetti reali pubblicati e concept dimostrativi</h2>
               <p className="body-base text-muted-foreground">
-                Alcuni progetti presenti in questa raccolta sono lavori reali, altri sono concept
-                sviluppati per mostrare possibili soluzioni di design, struttura e comunicazione
-                per specifici settori professionali.
+                In testa trovi un <strong>lavoro reale già online</strong>, con restyling, SEO e Google Ads gestiti da 4 Web Lab.
+                A seguire, una selezione di <strong>concept dimostrativi</strong> sviluppati per mostrare design, struttura e
+                comunicazione per settori specifici.
               </p>
             </AnimatedSection>
           </div>
@@ -284,7 +299,13 @@ const Realizzazioni = () => {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                      <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-card/95 text-foreground backdrop-blur-sm shadow-sm">
+                      <span
+                        className={`absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm shadow-sm ${
+                          p.badgeVariant === "real"
+                            ? "bg-accent text-accent-foreground"
+                            : "bg-card/95 text-foreground"
+                        }`}
+                      >
                         {p.badge}
                       </span>
                     </div>

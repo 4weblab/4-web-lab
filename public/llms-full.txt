@@ -32,6 +32,10 @@
 
 - **Pagina dedicata**: `/realizzazione-siti-web-padova` — Servizio rivolto a Padova e provincia (Legnaro, Albignasego, Selvazzano, Abano Terme, Vigodarzere e tutta l'area metropolitana).
 
+## Casi studio reali
+
+- **R.B s.n.c. di Bertoluzzo e Ragazzo** — Cittadella (Padova). Impresa edile specializzata in rimozione eternit (amianto) e rifacimento tetti nel Veneto. Per questo cliente 4 Web Lab ha realizzato: restyling completo del sito, ottimizzazione SEO on-page e SEO locale, attivazione e gestione di una campagna Google Ads. Sito live: https://rb-snc.it. Scheda interna: https://4weblab.it/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto.
+
 ## Modello di pricing
 
 - Tutti i pacchetti sono **una tantum**, senza canoni mensili obbligatori per il sito.
