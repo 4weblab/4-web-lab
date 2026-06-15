@@ -115,20 +115,20 @@ const Realizzazioni = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab</title>
+        <title>Realizzazioni siti web reali e concept — Portfolio 4 Web Lab Padova</title>
         <meta
           name="description"
-          content="Portfolio 4 Web Lab, agenzia web di Padova: realizzazioni e concept di siti web per negozi (199€), professionisti (549€) e aziende (899€)."
+          content="Portfolio 4 Web Lab, agenzia web di Padova: lavori reali pubblicati (es. R.B s.n.c., edilizia, Cittadella) e concept per negozi (199€), professionisti (549€) e aziende (899€)."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni" />
-        <meta property="og:title" content="Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazioni siti web reali e concept — Portfolio 4 Web Lab Padova" />
         <meta
           property="og:description"
-          content="Portfolio 4 Web Lab: siti web per negozi, professionisti e aziende a Padova e in tutta Italia. Demo premium con SEO, UX e conversione."
+          content="Portfolio 4 Web Lab: lavori reali online e concept di siti web per negozi, professionisti e aziende a Padova e in tutta Italia. SEO, UX e conversione."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -137,8 +137,8 @@ const Realizzazioni = () => {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Portfolio 4 Web Lab — realizzazioni e concept di siti web a Padova" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Realizzazioni Siti Web Padova — Portfolio | 4 Web Lab" />
-        <meta name="twitter:description" content="Demo e concept di siti web per negozi, professionisti e aziende. 4 Web Lab, agenzia web di Padova." />
+        <meta name="twitter:title" content="Realizzazioni siti web reali e concept — 4 Web Lab Padova" />
+        <meta name="twitter:description" content="Lavori reali pubblicati e concept di siti web per negozi, professionisti e aziende. 4 Web Lab, agenzia web di Padova." />
         <meta name="twitter:image" content="https://4weblab.it/og/realizzazioni-4weblab.webp" />
 
         {/* CollectionPage + ItemList JSON-LD */}
