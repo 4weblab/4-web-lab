@@ -12,7 +12,7 @@ const CookiePolicy = () => {
   const pageTitle = 'Cookie Policy | 4 Web Lab';
   const pageDescription = "Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento.";
   const pageUrl = 'https://4weblab.it/cookie';
-  const pageImage = 'https://4weblab.it/og-image.jpg';
+  const pageImage = 'https://4weblab.it/og-image.webp';
 
   return (
     <div className="min-h-screen bg-background">

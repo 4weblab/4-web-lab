@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.jpg";
+import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
 
 const introParagraphs = [
   "Stai pensando di creare un sito web da solo?",

@@ -35,14 +35,14 @@ import {
   Instagram,
 } from "lucide-react";
 
-import heroImg from "@/assets/flower-hero.jpg";
-import comp1 from "@/assets/flower-composition-1.jpg";
-import comp2 from "@/assets/flower-composition-2.jpg";
-import comp3 from "@/assets/flower-composition-3.jpg";
-import weddingImg from "@/assets/flower-wedding.jpg";
-import eventImg from "@/assets/flower-event.jpg";
-import detailImg from "@/assets/flower-atelier-detail.jpg";
-import shopImg from "@/assets/flower-shop-interior.jpg";
+import heroImg from "@/assets/flower-hero.webp";
+import comp1 from "@/assets/flower-composition-1.webp";
+import comp2 from "@/assets/flower-composition-2.webp";
+import comp3 from "@/assets/flower-composition-3.webp";
+import weddingImg from "@/assets/flower-wedding.webp";
+import eventImg from "@/assets/flower-event.webp";
+import detailImg from "@/assets/flower-atelier-detail.webp";
+import shopImg from "@/assets/flower-shop-interior.webp";
 
 /* ============================================================================
  * Palette — botanical luxury (cream / botanical green / soft black / gold)

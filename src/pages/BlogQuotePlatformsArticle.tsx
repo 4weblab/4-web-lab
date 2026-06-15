@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
+import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.webp";
 
 const introParagraphs = [
   "Hai bisogno di un sito web, fai una ricerca su Google e tra i primi risultati trovi piattaforme che promettono preventivi rapidi in pochi minuti.",

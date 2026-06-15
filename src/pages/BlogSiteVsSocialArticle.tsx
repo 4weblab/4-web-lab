@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
+import blogSiteVsSocial from "@/assets/blog-site-vs-social.webp";
 
 const introParagraphs = [
   "Molte attività oggi si fanno sempre la stessa domanda: serve davvero un sito web o bastano i social?",

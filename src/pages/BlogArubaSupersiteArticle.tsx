@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogArubaHero from "@/assets/blog-aruba-supersite.jpg";
+import blogArubaHero from "@/assets/blog-aruba-supersite.webp";
 import exampleFavesrl from "@/assets/blog-aruba-example-favesrl.webp";
 import exampleImport from "@/assets/blog-aruba-example-importirrigation.webp";
 

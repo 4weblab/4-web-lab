@@ -1,12 +1,12 @@
-import blogAiWebsite from "@/assets/blog-ai-website.jpg";
-import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
-import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
-import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
-import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
-import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
-import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
-import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.jpg";
-import blogArubaSupersite from "@/assets/blog-aruba-supersite.jpg";
+import blogAiWebsite from "@/assets/blog-ai-website.webp";
+import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.webp";
+import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.webp";
+import blogWebsiteCost from "@/assets/blog-website-cost.webp";
+import blogSiteVsSocial from "@/assets/blog-site-vs-social.webp";
+import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
+import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.webp";
+import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
+import blogArubaSupersite from "@/assets/blog-aruba-supersite.webp";
 
 export type BlogArticle = {
   slug: string;

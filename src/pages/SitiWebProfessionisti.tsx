@@ -54,7 +54,7 @@ const SitiWebProfessionisti = () => {
           property="og:description"
           content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
         />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -64,7 +64,7 @@ const SitiWebProfessionisti = () => {
           name="twitter:description"
           content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
         />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

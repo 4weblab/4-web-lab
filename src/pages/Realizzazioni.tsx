@@ -21,7 +21,7 @@ import imgMetalmeccanica from "@/assets/aurum-cnc.webp";
 import imgDentistico from "@/assets/dental-room.webp";
 import imgFotovoltaico from "@/assets/solaris-industrial.webp";
 import imgBoutique from "@/assets/bb-room-deluxe.webp";
-import imgFlowerAtelier from "@/assets/flower-atelier-card.jpg";
+import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
 
 interface Project {

@@ -8,7 +8,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
+import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.webp";
 
 const introParagraphs = [
   "Molte aziende sottovalutano ancora un aspetto fondamentale del proprio sito web: la conformità a GDPR, privacy e gestione dei cookie.",

@@ -47,14 +47,14 @@ const SitiWebNegozi = () => {
         <meta property="og:url" content="https://4weblab.it/siti-web-per-negozi" />
         <meta property="og:title" content="Siti Web per Negozi a Padova e in Italia | 4 Web Lab" />
         <meta property="og:description" content="Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h." />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-per-negozi" />
         <meta name="twitter:title" content="Siti Web per Negozi a Padova e in Italia | 4 Web Lab" />
         <meta name="twitter:description" content="Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h." />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

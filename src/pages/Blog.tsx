@@ -5,15 +5,15 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import blogAiWebsite from "@/assets/blog-ai-website.jpg";
-import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.jpg";
-import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.jpg";
-import blogWebsiteCost from "@/assets/blog-website-cost.jpg";
-import blogSiteVsSocial from "@/assets/blog-site-vs-social.jpg";
-import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
-import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.jpg";
-import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.jpg";
-import blogArubaSupersite from "@/assets/blog-aruba-supersite.jpg";
+import blogAiWebsite from "@/assets/blog-ai-website.webp";
+import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.webp";
+import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.webp";
+import blogWebsiteCost from "@/assets/blog-website-cost.webp";
+import blogSiteVsSocial from "@/assets/blog-site-vs-social.webp";
+import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
+import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.webp";
+import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
+import blogArubaSupersite from "@/assets/blog-aruba-supersite.webp";
 
 const articles = [
   {
@@ -106,7 +106,7 @@ const Blog = () => {
   const pageKeywords =
     "blog siti web, guide SEO, costi sito web, GDPR siti web, intelligenza artificiale siti web, agenzia web Padova, siti web aziendali, siti web professionisti";
   const pageUrl = "https://4weblab.it/blog";
-  const pageImage = "https://4weblab.it/og-image.jpg";
+  const pageImage = "https://4weblab.it/og-image.webp";
 
   return (
     <>
