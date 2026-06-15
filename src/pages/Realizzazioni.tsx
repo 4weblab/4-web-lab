@@ -256,11 +256,11 @@ const Realizzazioni = () => {
         <section className="py-16 md:py-20 bg-background">
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto text-center">
-              <h2 className="heading-3 mb-4">Progetti reali e concept dimostrativi</h2>
+              <h2 className="heading-3 mb-4">Progetti reali pubblicati e concept dimostrativi</h2>
               <p className="body-base text-muted-foreground">
-                Alcuni progetti presenti in questa raccolta sono lavori reali, altri sono concept
-                sviluppati per mostrare possibili soluzioni di design, struttura e comunicazione
-                per specifici settori professionali.
+                In testa trovi un <strong>lavoro reale già online</strong>, con restyling, SEO e Google Ads gestiti da 4 Web Lab.
+                A seguire, una selezione di <strong>concept dimostrativi</strong> sviluppati per mostrare design, struttura e
+                comunicazione per settori specifici.
               </p>
             </AnimatedSection>
           </div>
