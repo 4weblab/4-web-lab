@@ -34,7 +34,7 @@ const Index = () => {
           property="og:description"
           content="Agenzia Web Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza e preventivo gratuito in 24h."
         />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -47,7 +47,7 @@ const Index = () => {
           name="twitter:description"
           content="Agenzia Web Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza e preventivo gratuito in 24h."
         />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
         {/* Home-only: aggregateRating + review (Google policy: must be visible on page) */}
         <script type="application/ld+json">

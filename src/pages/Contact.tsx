@@ -16,7 +16,7 @@ const Contact = () => {
   const pageDescription =
     "Contatta 4 Web Lab per una consulenza gratuita. Raccontaci la tua attività e ti diremo come possiamo aiutarti a creare un sito web che porta risultati.";
   const pageUrl = "https://4weblab.it/contatti";
-  const pageImage = "https://4weblab.it/og-image.jpg";
+  const pageImage = "https://4weblab.it/og-image.webp";
 
   const steps = [
     {

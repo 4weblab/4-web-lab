@@ -23,14 +23,14 @@ import {
   Sparkles,
 } from "lucide-react";
 
-import heroImg from "@/assets/aurum-hero.jpg";
-import laserImg from "@/assets/aurum-laser.jpg";
-import cncImg from "@/assets/aurum-cnc.jpg";
-import weldingImg from "@/assets/aurum-welding.jpg";
-import factoryImg from "@/assets/aurum-factory.jpg";
-import componentsImg from "@/assets/aurum-components.jpg";
-import carpentryImg from "@/assets/aurum-carpentry.jpg";
-import inoxImg from "@/assets/aurum-inox.jpg";
+import heroImg from "@/assets/aurum-hero.webp";
+import laserImg from "@/assets/aurum-laser.webp";
+import cncImg from "@/assets/aurum-cnc.webp";
+import weldingImg from "@/assets/aurum-welding.webp";
+import factoryImg from "@/assets/aurum-factory.webp";
+import componentsImg from "@/assets/aurum-components.webp";
+import carpentryImg from "@/assets/aurum-carpentry.webp";
+import inoxImg from "@/assets/aurum-inox.webp";
 
 /* =====================================================================
    AURUM Meccanica — Tech Demo by 4 Web Lab

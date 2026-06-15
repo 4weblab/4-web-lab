@@ -40,15 +40,15 @@ import {
   Heart,
 } from "lucide-react";
 
-import heroImg from "@/assets/bb-hero.jpg";
-import roomDeluxe from "@/assets/bb-room-deluxe.jpg";
-import roomJunior from "@/assets/bb-room-junior.jpg";
-import roomRomantic from "@/assets/bb-room-romantic.jpg";
-import breakfastImg from "@/assets/bb-breakfast.jpg";
-import territoryImg from "@/assets/bb-territory.jpg";
-import terraceImg from "@/assets/bb-terrace.jpg";
-import bathImg from "@/assets/bb-bath.jpg";
-import detailImg from "@/assets/bb-detail.jpg";
+import heroImg from "@/assets/bb-hero.webp";
+import roomDeluxe from "@/assets/bb-room-deluxe.webp";
+import roomJunior from "@/assets/bb-room-junior.webp";
+import roomRomantic from "@/assets/bb-room-romantic.webp";
+import breakfastImg from "@/assets/bb-breakfast.webp";
+import territoryImg from "@/assets/bb-territory.webp";
+import terraceImg from "@/assets/bb-terrace.webp";
+import bathImg from "@/assets/bb-bath.webp";
+import detailImg from "@/assets/bb-detail.webp";
 
 /* ============================================================================
  * Palette (boutique luxury, beige/ivory/dark walnut + champagne accents)

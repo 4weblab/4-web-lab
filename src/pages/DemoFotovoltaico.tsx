@@ -30,12 +30,12 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-import heroImg from "@/assets/solaris-hero.jpg";
-import villaImg from "@/assets/solaris-villa.jpg";
-import industrialImg from "@/assets/solaris-industrial.jpg";
-import storageImg from "@/assets/solaris-storage.jpg";
-import evImg from "@/assets/solaris-ev.jpg";
-import installImg from "@/assets/solaris-install.jpg";
+import heroImg from "@/assets/solaris-hero.webp";
+import villaImg from "@/assets/solaris-villa.webp";
+import industrialImg from "@/assets/solaris-industrial.webp";
+import storageImg from "@/assets/solaris-storage.webp";
+import evImg from "@/assets/solaris-ev.webp";
+import installImg from "@/assets/solaris-install.webp";
 
 /* =====================================================================
    SOLARIS Energy — Tech Demo by 4 Web Lab

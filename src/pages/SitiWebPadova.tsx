@@ -42,7 +42,7 @@ const SitiWebPadova = () => {
           property="og:description"
           content="Agenzia web a Padova: siti professionali per aziende, negozi e professionisti da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
         />
-        <meta property="og:image" content="https://4weblab.it/og-image.jpg" />
+        <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -52,7 +52,7 @@ const SitiWebPadova = () => {
           name="twitter:description"
           content="Agenzia web a Padova: siti professionali per aziende, negozi e professionisti da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
         />
-        <meta name="twitter:image" content="https://4weblab.it/og-image.jpg" />
+        <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

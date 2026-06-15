@@ -7,7 +7,7 @@ import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
-import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.jpg";
+import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
 
 const introParagraphs = [
   "Ti è mai capitato di cercare su Google il servizio che offri e scoprire che, al posto tuo, compaiono sempre gli stessi concorrenti?",
