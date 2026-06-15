@@ -216,7 +216,7 @@ const DemoRbSncEdilizia = () => {
                       href={URL_LIVE}
                       target="_blank"
                       rel="noopener external"
-                      className="hero-cta hero-cta-secondary"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold border border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 transition-colors"
                     >
                       Apri rb-snc.it
                       <ExternalLink className="w-4 h-4" />
