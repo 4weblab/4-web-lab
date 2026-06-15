@@ -131,7 +131,7 @@ const DemoRbSncEdilizia = () => {
             <div className="max-w-5xl mx-auto rounded-2xl overflow-hidden" style={{ boxShadow: "var(--shadow-lg)" }}>
               <img
                 src={heroImg}
-                alt="Operai con DPI durante la rimozione di lastre di eternit e installazione di nuova copertura metallica su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab"
+                alt="Operaio specializzato con DPI completi durante la rimozione di lastre di eternit su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab"
                 width={1600}
                 height={1000}
                 loading="eager"
