@@ -297,8 +297,6 @@ const Realizzazioni = () => {
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
                       <div aria-hidden className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400" />
-                      <span className="absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-card/95 text-foreground backdrop-blur-sm shadow-sm">
-                      </span>
                       <span
                         className={`absolute top-4 left-4 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold backdrop-blur-sm shadow-sm ${
                           p.badgeVariant === "real"
