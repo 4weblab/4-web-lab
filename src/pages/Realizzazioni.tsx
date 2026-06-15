@@ -327,7 +327,7 @@ const Realizzazioni = () => {
                         ))}
                       </ul>
                       <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                        Vedi il sito web demo
+                        Approfondisci
                         <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                       </span>
                     </div>
