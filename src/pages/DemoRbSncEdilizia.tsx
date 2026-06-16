@@ -105,11 +105,11 @@ const DemoRbSncEdilizia = () => {
                 Caso studio reale · pubblicato
               </span>
               <h1 className="heading-1 text-primary-foreground mb-6 text-balance">
-                R.B s.n.c. — sito web, SEO e Google Ads per rimozione eternit e rifacimento tetti a Cittadella
+                R.B. s.n.c. — sito web, SEO e Google Ads per rimozione eternit e rifacimento tetti a Cittadella
               </h1>
               <p className="body-large text-primary-foreground/80 max-w-2xl mx-auto mb-10 text-balance">
                 Restyling completo del sito, ottimizzazione SEO on-page e campagna Google Ads attiva per
-                <strong> R.B s.n.c. di Bertoluzzo e Ragazzo</strong>, impresa edile specializzata in
+                <strong> R.B. s.n.c. di Bertoluzzo e Ragazzo</strong>, impresa edile specializzata in
                 rimozione amianto e rifacimento coperture con sede a Cittadella (PD).
               </p>
               <a
@@ -148,7 +148,7 @@ const DemoRbSncEdilizia = () => {
             <div className="max-w-3xl mx-auto">
               <h2 className="heading-2 mb-6">Il progetto in breve</h2>
               <p className="body-base text-muted-foreground mb-4">
-                <strong>R.B s.n.c. di Bertoluzzo e Ragazzo</strong> è un'impresa edile attiva nel Veneto, specializzata
+                <strong>R.B. s.n.c. di Bertoluzzo e Ragazzo</strong> è un'impresa edile attiva nel Veneto, specializzata
                 in <strong>rimozione eternit</strong> (smaltimento amianto) e <strong>rifacimento tetti</strong>.
                 Ha scelto 4 Web Lab per un intervento completo su presenza online e acquisizione clienti.
               </p>
