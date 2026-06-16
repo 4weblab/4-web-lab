@@ -24,6 +24,7 @@ import imgBoutique from "@/assets/bb-room-deluxe.webp";
 import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
 import imgRbSnc from "@/assets/rb-snc-edilizia.webp";
+import imgVeraMethod from "@/assets/vera-method-hero.webp";
 
 interface Project {
   slug: string;
@@ -47,6 +48,16 @@ const projects: Project[] = [
     features: ["Restyling completo", "Ottimizzazione SEO", "Campagna Google Ads"],
     image: imgRbSnc,
     alt: "Operai con DPI rimuovono lastre di eternit e installano nuova copertura metallica su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab",
+  },
+  {
+    slug: "demo-personal-trainer-vera-method",
+    title: "Sito web per personal trainer donna — concept",
+    description:
+      "Demo premium per una personal trainer femminile: estetica antracite + coral, metodo a tre pilastri, programmi 1:1 e small group, bio EEAT e form di contatto.",
+    badge: "Concept",
+    features: ["Estetica empowering", "Bio EEAT dedicata", "Form contatto premium"],
+    image: imgVeraMethod,
+    alt: "Personal trainer donna in studio premium antracite con luce coral — concept sito web 4 Web Lab",
   },
   {
     slug: "demo-metalmeccanica",
