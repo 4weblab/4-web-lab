@@ -73,7 +73,7 @@ const Hero = () => {
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              4 Web Lab realizza il sito su misura del tuo business. SEO mirato, siti moderni e responsivi per cellulare, cose che l' IA ancora non sa fare.
+              4 Web Lab realizza il sito su misura per il tuo business. SEO mirato, siti moderni e responsivi per cellulare: creiamo strategie su misura e relazioni umane che nessuna IA potrà mai replicare.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
