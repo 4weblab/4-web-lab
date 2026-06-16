@@ -39,7 +39,7 @@ interface Project {
 const projects: Project[] = [
   {
     slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
-    title: "Sito web R.B s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
+    title: "Sito web R.B. s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
     description:
       "Lavoro reale online: restyling completo del sito, ottimizzazione SEO on-page e campagna Google Ads attiva per un'impresa edile specializzata in rimozione amianto e rifacimento coperture nel Veneto.",
     badge: "Progetto reale",
