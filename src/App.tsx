@@ -36,6 +36,7 @@ const DemoFotovoltaico = lazy(() => import("./pages/DemoFotovoltaico"));
 const DemoBoutiqueBB = lazy(() => import("./pages/DemoBoutiqueBB"));
 const DemoFlowerAtelier = lazy(() => import("./pages/DemoFlowerAtelier"));
 const DemoRbSncEdilizia = lazy(() => import("./pages/DemoRbSncEdilizia"));
+const DemoPersonalTrainerVeraMethod = lazy(() => import("./pages/DemoPersonalTrainerVeraMethod"));
 
 const queryClient = new QueryClient();
 
@@ -162,6 +163,7 @@ const App = () => (
               <Route path="/realizzazioni/demo-fotovoltaico" element={<DemoFotovoltaico />} />
               <Route path="/realizzazioni/boutique-bb-luxury-rooms" element={<DemoBoutiqueBB />} />
               <Route path="/realizzazioni/demo-flower-atelier" element={<DemoFlowerAtelier />} />
+              <Route path="/realizzazioni/demo-personal-trainer-vera-method" element={<DemoPersonalTrainerVeraMethod />} />
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/cookie" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />
