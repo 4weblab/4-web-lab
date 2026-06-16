@@ -1073,6 +1073,134 @@ const DemoPersonalTrainerVeraMethod = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sito Web per Personal Trainer Donna · Demo | 4 Web Lab" />
         <meta name="twitter:description" content="Concept premium per personal trainer donna realizzato da 4 Web Lab." />
+
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": `${canonical}#webpage`,
+                url: canonical,
+                name: "Sito Web per Personal Trainer Donna · Demo Vera Method",
+                description:
+                  "Demo concept di sito web premium per personal trainer donna, realizzata da 4 Web Lab. Brand fittizio 'Giulia Conti — Vera Method' creato a scopo dimostrativo.",
+                inLanguage: "it-IT",
+                isPartOf: { "@id": "https://4weblab.it/#website" },
+                publisher: { "@id": "https://4weblab.it/#business" },
+                primaryImageOfPage: "https://4weblab.it/assets/vera-method-hero.webp",
+              },
+              {
+                "@type": "Person",
+                "@id": `${canonical}#giulia-conti`,
+                name: "Giulia Conti",
+                jobTitle: "Personal Trainer",
+                description:
+                  "Brand fittizio realizzato come concept dimostrativo da 4 Web Lab. Personal trainer specializzata nell'allenamento femminile, con focus su forza, mobilità e percorsi pre e post partum.",
+                areaServed: { "@type": "City", name: "Padova" },
+                knowsAbout: [
+                  "Allenamento funzionale femminile",
+                  "Pre e post partum",
+                  "Ricomposizione corporea",
+                  "Mobilità articolare",
+                  "Forza per donne",
+                ],
+              },
+              {
+                "@type": "Service",
+                "@id": `${canonical}#service`,
+                serviceType: "Personal Training per donne",
+                provider: { "@id": `${canonical}#giulia-conti` },
+                areaServed: { "@type": "City", name: "Padova" },
+                hasOfferCatalog: {
+                  "@type": "OfferCatalog",
+                  name: "Programmi Vera Method",
+                  itemListElement: [
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Vera 1:1",
+                        description: "Percorso personale uno-a-uno in studio privato a Padova.",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Vera Small Group",
+                        description: "Allenamento in piccolo gruppo di sole donne, max 4 persone.",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      itemOffered: {
+                        "@type": "Service",
+                        name: "Vera Online",
+                        description: "Programma di allenamento online con coaching e check settimanali.",
+                      },
+                    },
+                  ],
+                },
+              },
+              {
+                "@type": "FAQPage",
+                "@id": `${canonical}#faq`,
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Devo già essere allenata per iniziare?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Assolutamente no. La maggior parte delle donne che seguo parte da zero o riprende dopo anni di pausa. Il programma viene costruito a partire dal tuo punto di partenza reale.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Lavori solo con donne?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì, il metodo è progettato sulla fisiologia, gli obiettivi e i tempi delle donne. È una scelta di specializzazione, non un'esclusione.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Posso allenarmi anche se sono in gravidanza o ho appena partorito?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì. Ho una formazione specifica in pre e post partum e collaboro con ginecologhe e ostetriche per percorsi sicuri in ogni trimestre e nel periodo di ripresa.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Dove si svolgono le sessioni 1:1?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "In uno studio privato a Padova, dedicato e attrezzato. Il setting è pensato per garantire intimità, concentrazione e qualità dell'allenamento.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Come funziona la consulenza iniziale gratuita?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "30 minuti in videocall o in studio, in cui ci conosciamo, parliamo dei tuoi obiettivi e capiamo se il metodo è giusto per te. Senza impegno.",
+                    },
+                  },
+                ],
+              },
+              {
+                "@type": "BreadcrumbList",
+                "@id": `${canonical}#breadcrumb`,
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+                  { "@type": "ListItem", position: 2, name: "Realizzazioni", item: "https://4weblab.it/realizzazioni" },
+                  { "@type": "ListItem", position: 3, name: "Personal Trainer Vera Method (concept)", item: canonical },
+                ],
+              },
+            ],
+          })}
+        </script>
       </Helmet>
 
       <div style={{ background: C.bg, color: C.ink, minHeight: "100vh" }}>
