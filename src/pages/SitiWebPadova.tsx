@@ -237,6 +237,16 @@ const SitiWebPadova = () => {
         {/* Sezione 1 – Perché scegliere una realtà con sede a Padova */}
         <section className="section-padding bg-background">
           <div className="container-section">
+            <div className="max-w-4xl mx-auto mb-12">
+              <AnimatedSection>
+                <h2 className="heading-3 mb-4">Cos'è un sito web professionale a Padova</h2>
+                <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
+                  Un sito web professionale a Padova è una piattaforma online progettata da un'agenzia con sede sul territorio per presentare un'attività locale (negozio, professionista o azienda), generare contatti qualificati e posizionarsi su Google per ricerche geolocalizzate come "parrucchiere Padova", "commercialista Padova" o "azienda Padova". Costa da 199€ una tantum.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+          <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
                 {/* Testo a sinistra */}
