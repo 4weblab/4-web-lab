@@ -589,17 +589,20 @@ const SitiWebAziendali = () => {
                 <Accordion type="single" collapsible className="space-y-3">
                   {[
                     {
+                      question: "Quanto costa un sito web aziendale in Veneto?",
+                      answer:
+                        "Un sito web aziendale in Veneto costa da 899€ una tantum per la versione base, da 1.299€ per un sito multipagina strutturato, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                    },
+                    {
                       question: "Quanto tempo serve per realizzare un sito web aziendale?",
                       answer:
-                        "Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere sviluppato e ottimizzato correttamente.",
+                        "Un sito web aziendale richiede in media da 2 a 6 settimane: pochi giorni per una versione base, fino a 4–6 settimane per un sito multipagina strutturato con contenuti su misura, ottimizzazione SEO e integrazioni dedicate.",
                     },
                     {
                       question: "Serve davvero un sito web per un'azienda oggi?",
                       answer:
                         <>
-                          Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare
-                          un'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità —
-                          ed è esattamente il problema che spieghiamo nell'articolo{" "}
+                          Sì: oltre il 90% delle persone cerca un'azienda su Google prima di contattarla. Senza un sito web professionale un'impresa perde credibilità, contatti qualificati e visibilità rispetto ai competitor — ne parliamo nell'articolo{" "}
                           <Link
                             to="/blog/perche-il-tuo-sito-non-si-trova-su-google"
                             className="text-accent hover:underline font-medium"
@@ -612,12 +615,31 @@ const SitiWebAziendali = () => {
                     {
                       question: "Qual è la differenza tra sito vetrina e sito aziendale?",
                       answer:
-                        "Un sito vetrina è più semplice e ha poche pagine, mentre un sito aziendale è strutturato per presentare in modo completo servizi, competenze e valore dell'azienda.",
+                        "Un sito vetrina ha 1–3 pagine e presenta in sintesi l'attività, mentre un sito aziendale è multipagina e strutturato per descrivere servizi, identità e contatti, generare lead e posizionarsi su Google con un'architettura scalabile.",
+                    },
+                    {
+                      question: "Quali tipi di siti web aziendali esistono?",
+                      answer:
+                        "Esistono quattro principali tipi di sito web aziendale: sito vetrina (presenza essenziale), sito multipagina (presentazione strutturata di servizi e azienda), sito corporate (grandi aziende con più sedi o lingue) ed e-commerce (vendita online di prodotti).",
+                    },
+                    {
+                      question: "Realizzate siti web aziendali anche fuori Padova?",
+                      answer:
+                        <>
+                          Sì: realizziamo siti web aziendali per imprese in tutto il Veneto (Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno) e in qualsiasi altra regione d'Italia, grazie a un metodo collaudato per collaborazioni interamente da remoto. Trovi altre risposte nella nostra{" "}
+                          <Link
+                            to="/faq-realizzazione-siti-web"
+                            className="text-accent hover:underline font-medium"
+                          >
+                            FAQ completa sulla realizzazione siti web
+                          </Link>
+                          .
+                        </>,
                     },
                     {
                       question: "Posso aggiornare il sito in autonomia?",
                       answer:
-                        "Sì, il sito può essere progettato in modo da permettere aggiornamenti semplici senza dover intervenire sul codice.",
+                        "Sì: il sito può essere progettato con un pannello di amministrazione che permette di modificare testi, immagini e nuove sezioni in autonomia, senza intervenire sul codice.",
                     },
                   ].map((faq, index) => (
                     <AccordionItem
@@ -628,7 +650,7 @@ const SitiWebAziendali = () => {
                       <AccordionTrigger className="text-left py-5 hover:no-underline">
                         <h3 className="font-semibold text-foreground text-base pr-4">{faq.question}</h3>
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground text-sm leading-relaxed pb-5">
+                      <AccordionContent className="aeo-faq-answer text-muted-foreground text-sm leading-relaxed pb-5">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
