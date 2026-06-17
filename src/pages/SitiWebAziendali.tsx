@@ -261,6 +261,14 @@ const SitiWebAziendali = () => {
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
+              {/* Definizione AEO */}
+              <AnimatedSection className="mb-12 p-6 md:p-8 rounded-2xl bg-accent/5 border border-accent/15">
+                <h2 className="font-bold text-foreground text-xl mb-3">Cos'è un sito web aziendale</h2>
+                <p className="aeo-definition text-muted-foreground leading-relaxed">
+                  Un sito web aziendale è una piattaforma digitale multipagina che rappresenta online un'impresa, ne presenta servizi, identità e valore, e supporta l'acquisizione di nuovi contatti. A differenza di un semplice sito vetrina, è strutturato, scalabile e ottimizzato per i motori di ricerca, così da accompagnare la crescita del business nel tempo.
+                </p>
+              </AnimatedSection>
+
               <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="icon-box w-13 h-13">
                   <Building2 className="w-6 h-6 text-accent-foreground" />
