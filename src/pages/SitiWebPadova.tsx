@@ -502,6 +502,11 @@ const SitiWebPadova = () => {
                   realmente efficaci, senza formule standardizzate.
                 </p>
                 <p className="mt-6">
+                  Seguiamo abitualmente clienti a Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza,
+                  Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco, oltre agli altri comuni
+                  della provincia.
+                </p>
+                <p className="mt-6">
                   Offriamo anche soluzioni specifiche per ogni settore. Per approfondire i costi, consulta la nostra
                   guida su{" "}
                   <Link
