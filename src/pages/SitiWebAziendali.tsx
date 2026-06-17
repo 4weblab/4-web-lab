@@ -811,7 +811,7 @@ const SitiWebAziendali = () => {
                 </h2>
                 <p className="body-large text-primary-foreground/70 mb-8">
                   Vuoi realizzare un sito web aziendale strutturato e professionale? Contattaci per un confronto senza
-                  impegno: lavoriamo con Aziende in tutta Italia.
+                  impegno: lavoriamo con aziende clienti in Veneto e in tutta Italia.
                 </p>
                 <div className="text-center">
                   <a
