@@ -407,8 +407,74 @@ const SitiWebAziendali = () => {
                     Sia che la tua azienda sia in Veneto o in qualsiasi altra parte d'Italia, 4 Web Lab porta online il
                     tuo business.
                   </p>
+                  <p className="mt-4">
+                    Realizziamo siti web aziendali per imprese in tutto il Veneto — Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno — e in qualsiasi altra regione italiana. Per progetti specifici nel capoluogo, vedi la pagina dedicata alla{" "}
+                    <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
+                      realizzazione siti web a Padova
+                    </Link>
+                    .
+                  </p>
                 </AnimatedSection>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Tabella comparativa - AEO friendly */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Layers className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
+                <p>
+                  Confronto sintetico tra le tre principali tipologie di sito per un'impresa, con pagine medie, obiettivo principale, costo indicativo e profilo ideale.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="overflow-x-auto rounded-2xl border border-border/60 bg-white shadow-sm">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-accent/8 text-foreground">
+                      <tr>
+                        <th className="px-5 py-4 font-semibold">Caratteristica</th>
+                        <th className="px-5 py-4 font-semibold">Sito vetrina</th>
+                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
+                        <th className="px-5 py-4 font-semibold">Sito corporate</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
+                        <td className="px-5 py-4">1–3</td>
+                        <td className="px-5 py-4">5–15</td>
+                        <td className="px-5 py-4">15+ (anche multilingua)</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
+                        <td className="px-5 py-4">Presenza online di base</td>
+                        <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
+                        <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
+                        <td className="px-5 py-4">da 549€</td>
+                        <td className="px-5 py-4">da 899€ a 1.299€+</td>
+                        <td className="px-5 py-4">Preventivo su misura</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
+                        <td className="px-5 py-4">Liberi professionisti, micro-imprese</td>
+                        <td className="px-5 py-4">PMI che vogliono crescere online</td>
+                        <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </AnimatedSection>
             </div>
           </div>
         </section>
