@@ -1,25 +1,52 @@
-# Piano: Integrazione JSON-LD nella pagina Vera Method
+## Obiettivo
+Migliorare `/siti-web-aziendali` per AEO (citabilità da ChatGPT/Perplexity/Google AI Overviews) e GEO (copertura Veneto + Italia), in linea con il nuovo H1 e copy.
 
-Aggiungo i dati strutturati JSON-LD nel componente `<Helmet>` della pagina `src/pages/DemoPersonalTrainerVeraMethod.tsx`, come previsto inizialmente, coerenti con il pattern usato nelle altre pagine di concept (es. R.B. s.n.c.).
+## Interventi
 
-## File modificato
-- `src/pages/DemoPersonalTrainerVeraMethod.tsx` — un solo blocco modificato dentro `<Helmet>` (righe ~1057-1076), nessuna modifica al markup visibile.
+### 1. Meta tag allineati al nuovo posizionamento
+- `<title>`: "Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab"
+- `meta description` + `og:*` + `twitter:*` coerenti, mantenendo il prezzo "da 899€" (trigger AEO).
+- `canonical` invariato.
 
-## Schemi inclusi
+### 2. Nuova sezione "Cos'è un sito web aziendale" (definizione AEO)
+Paragrafo 40–60 parole in apertura, che inizia con *"Un sito web aziendale è…"*. Formato preferito dai LLM per citazioni dirette.
 
-1. **WebPage** — canonical, name, description, inLanguage `it-IT`, isPartOf 4 Web Lab, primaryImageOfPage = hero WebP, publisher = 4 Web Lab.
-2. **Person** (entità fittizia "Giulia Conti") — name, jobTitle "Personal Trainer", areaServed Padova, knowsAbout (allenamento funzionale femminile, pre/post partum, ricomposizione corporea, mobilità), description coerente con la sezione Bio. Marcata chiaramente come demo: `description` include "Brand fittizio realizzato come concept da 4 Web Lab".
-3. **Service** — serviceType "Personal Training per donne", provider = Person Giulia Conti, areaServed Padova, hasOfferCatalog con i 3 programmi (Vera 1:1, Vera Small Group, Vera Online).
-4. **FAQPage** — le 5 FAQ presenti nell'array `FAQS` (mappate 1:1 da `q`/`a`).
-5. **BreadcrumbList** — Home → Realizzazioni → Personal Trainer Vera Method (concept).
+### 3. FAQ riscritte answer-first + 3 nuove
+- Riscrivere le 4 risposte esistenti in stile "risposta-prima-frase".
+- Aggiungere:
+  - "Quanto costa un sito web aziendale in Veneto?" (include range 899€–1.299€+)
+  - "Quali tipi di siti web aziendali esistono?" (vetrina / multipagina / corporate / e-commerce)
+  - "Realizzate siti web aziendali anche fuori Padova?" (elenco province venete + Italia)
+- Sincronizzare `FAQPage` JSON-LD.
 
-## Note tecniche
-- Tutti gli schemi vanno in un unico `<script type="application/ld+json">` con `@graph`, per evitare di duplicare `@context` e mantenere il payload compatto.
-- Le URL usano `https://4weblab.it` (no `www`, da memoria progetto).
-- `primaryImageOfPage` usa il path della hero WebP servita da Vite; per JSON-LD uso un URL assoluto basato sul dominio + il filename pubblico del bundle? Per semplicità e coerenza con le altre demo pages, uso un URL placeholder testuale del file (`/assets/vera-method-hero.webp`) come fatto altrove — verifico prima il pattern usato in `DemoRbSncEdilizia.tsx` e replico l'approccio identico (URL costruito o stringa relativa convertita in assoluta).
-- Nessuna modifica a CSS, routing, sitemap, o componenti React esistenti.
-- Nessuna modifica alle FAQ visibili: il JSON-LD rispecchia esattamente q/a esistenti per evitare disallineamento Google.
+### 4. Tabella comparativa "Sito vetrina vs aziendale vs corporate"
+`<table>` semantica con 3 colonne e 4 righe (pagine, obiettivo, costo indicativo, ideale per). Le tabelle sono uno dei formati più citati dagli AI engine.
 
-## Cosa NON cambia
-- Nessuna modifica al contenuto visibile, palette, immagini, form, header/footer, route, sitemap.
-- Nessuna modifica ad altre pagine.
+### 5. Sezione "Come realizziamo un sito web aziendale" (processo)
+5 step numerati: Analisi → Strategia → Design → Sviluppo → Lancio & SEO. JSON-LD `HowTo` annesso.
+
+### 6. Schema markup arricchito
+- Aggiungere `LocalBusiness` con:
+  - `areaServed`: Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno + "Italia"
+  - `priceRange`: **"€899+"** (formato valido e più informativo del classico "€€", come hai suggerito)
+  - `geo` (Legnaro, PD)
+  - riferimenti `@id` a Organization globale
+- Estendere `Service.offers` in `AggregateOffer` con `lowPrice: "899"` / `highPrice: "1299"` / `priceCurrency: "EUR"`.
+- Aggiungere `SpeakableSpecification` sui paragrafi-risposta (definizione + FAQ) per ricerca vocale/AI.
+- Mantenere `BreadcrumbList` esistente.
+
+### 7. Copertura GEO testuale
+- 1 paragrafo nella sezione "Siti multipagina e strutturati" con menzione esplicita delle province venete (no keyword stuffing).
+- Microcopy "Aziende clienti in Veneto e in tutta Italia" sopra il form.
+
+### 8. Interlinking semantico
+- Link contestuale a `/realizzazione-siti-web-padova` dal blocco GEO.
+- Link a `/faq-realizzazione-siti-web` sotto le FAQ.
+
+## Dettagli tecnici
+- File unico: `src/pages/SitiWebAziendali.tsx`.
+- Nessuna nuova immagine, nessuna modifica a routing / sitemap / robots / `index.html`.
+- Nuovi blocchi JSON-LD inseriti dentro `<Helmet>` come ulteriori `<script type="application/ld+json">`.
+
+## Fuori scope
+Generazione OG image, modifiche al pricing reale, nuove pagine satellite per città venete (eventuale fase 2).
