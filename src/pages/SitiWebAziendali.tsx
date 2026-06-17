@@ -34,109 +34,198 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Aziendali Padova | 4 Web Lab</title>
+        <title>Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
+          content="Siti web aziendali da 899€: design su misura, SEO e assistenza per PMI e aziende in Veneto e in tutta Italia. Preventivo gratuito in 24h da 4 Web Lab."
         />
-
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Siti web aziendali", item: "https://4weblab.it/siti-web-aziendali" },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
+          content="Siti web aziendali da 899€ per PMI e aziende in Veneto e in tutta Italia. Design su misura, SEO integrato, preventivo gratuito in 24h."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Aziendali Padova | 4 Web Lab" />
+        <meta name="twitter:title" content="Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Siti web aziendali a Padova da 899€: design su misura, SEO e assistenza locale per PMI e aziende. Preventivo gratuito in 24h da 4 Web Lab."
+          content="Siti web aziendali da 899€ per PMI e aziende in Veneto e in tutta Italia. Design su misura, SEO integrato, preventivo gratuito in 24h."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
+            "@graph": [
               {
-                "@type": "Question",
-                name: "Quanto tempo serve per realizzare un sito web aziendale?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Dipende dalla complessità del progetto. Un sito semplice può essere realizzato in pochi giorni, mentre un sito più strutturato richiede più tempo per essere sviluppato e ottimizzato correttamente.",
+                "@type": "BreadcrumbList",
+                "@id": "https://4weblab.it/siti-web-aziendali#breadcrumb",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+                  { "@type": "ListItem", position: 2, name: "Siti web aziendali", item: "https://4weblab.it/siti-web-aziendali" },
+                ],
+              },
+              {
+                "@type": "WebPage",
+                "@id": "https://4weblab.it/siti-web-aziendali#webpage",
+                url: "https://4weblab.it/siti-web-aziendali",
+                name: "Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab",
+                inLanguage: "it-IT",
+                isPartOf: { "@id": "https://4weblab.it/#website" },
+                breadcrumb: { "@id": "https://4weblab.it/siti-web-aziendali#breadcrumb" },
+                about: { "@id": "https://4weblab.it/siti-web-aziendali#service" },
+                speakable: {
+                  "@type": "SpeakableSpecification",
+                  cssSelector: [".aeo-definition", ".aeo-faq-answer"],
                 },
               },
               {
-                "@type": "Question",
-                name: "Serve davvero un sito web per un'azienda oggi?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sì. Oggi la maggior parte delle persone cerca informazioni su Google prima di contattare un'azienda. Senza un sito web professionale si rischia di perdere opportunità e credibilità.",
+                "@type": ["LocalBusiness", "ProfessionalService"],
+                "@id": "https://4weblab.it/#business",
+                name: "4 Web Lab",
+                url: "https://4weblab.it/",
+                telephone: "+39 351 465 6042",
+                priceRange: "€899+",
+                image: "https://4weblab.it/og-image.webp",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Legnaro",
+                  addressRegion: "PD",
+                  addressCountry: "IT",
+                },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: 45.3447,
+                  longitude: 11.9606,
+                },
+                areaServed: [
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
+                  { "@type": "City", name: "Vicenza" },
+                  { "@type": "City", name: "Verona" },
+                  { "@type": "City", name: "Treviso" },
+                  { "@type": "City", name: "Rovigo" },
+                  { "@type": "City", name: "Belluno" },
+                  { "@type": "AdministrativeArea", name: "Veneto" },
+                  { "@type": "Country", name: "Italia" },
+                ],
+              },
+              {
+                "@type": "Service",
+                "@id": "https://4weblab.it/siti-web-aziendali#service",
+                name: "Realizzazione Siti Web Aziendali",
+                description:
+                  "Realizziamo siti web aziendali su misura per PMI e imprese in Veneto e in tutta Italia: design professionale, architettura scalabile, SEO integrato.",
+                serviceType: "Corporate Web Design",
+                category: "Web Development",
+                url: "https://4weblab.it/siti-web-aziendali",
+                inLanguage: "it-IT",
+                isPartOf: { "@id": "https://4weblab.it/#website" },
+                provider: { "@id": "https://4weblab.it/#business" },
+                areaServed: [
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
+                  { "@type": "City", name: "Vicenza" },
+                  { "@type": "City", name: "Verona" },
+                  { "@type": "City", name: "Treviso" },
+                  { "@type": "City", name: "Rovigo" },
+                  { "@type": "City", name: "Belluno" },
+                  { "@type": "AdministrativeArea", name: "Veneto" },
+                  { "@type": "Country", name: "Italia" },
+                ],
+                offers: {
+                  "@type": "AggregateOffer",
+                  url: "https://4weblab.it/siti-web-aziendali",
+                  availability: "https://schema.org/InStock",
+                  priceCurrency: "EUR",
+                  lowPrice: "899",
+                  highPrice: "1299",
+                  offerCount: 3,
                 },
               },
               {
-                "@type": "Question",
-                name: "Qual è la differenza tra sito vetrina e sito aziendale?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Un sito vetrina è più semplice e ha poche pagine, mentre un sito aziendale è strutturato per presentare in modo completo servizi, competenze e valore dell'azienda.",
-                },
+                "@type": "FAQPage",
+                "@id": "https://4weblab.it/siti-web-aziendali#faq",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Quanto costa un sito web aziendale in Veneto?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Un sito web aziendale in Veneto costa da 899€ una tantum per la versione base, da 1.299€ per un sito multipagina strutturato, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Quanto tempo serve per realizzare un sito web aziendale?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Un sito web aziendale richiede in media da 2 a 6 settimane: pochi giorni per una versione base, fino a 4–6 settimane per un sito multipagina strutturato con contenuti su misura, ottimizzazione SEO e integrazioni dedicate.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Serve davvero un sito web per un'azienda oggi?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: oltre il 90% delle persone cerca un'azienda su Google prima di contattarla. Senza un sito web professionale un'impresa perde credibilità, contatti qualificati e visibilità rispetto ai competitor già presenti online.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Qual è la differenza tra sito vetrina e sito aziendale?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Un sito vetrina ha 1–3 pagine e presenta in sintesi l'attività, mentre un sito aziendale è multipagina e strutturato per descrivere servizi, identità e contatti, generare lead e posizionarsi su Google con un'architettura scalabile.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Quali tipi di siti web aziendali esistono?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Esistono quattro principali tipi di sito web aziendale: sito vetrina (presenza essenziale), sito multipagina (presentazione strutturata di servizi e azienda), sito corporate (grandi aziende con più sedi o lingue) ed e-commerce (vendita online di prodotti).",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Realizzate siti web aziendali anche fuori Padova?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: realizziamo siti web aziendali per imprese in tutto il Veneto (Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno) e in qualsiasi altra regione d'Italia, grazie a un metodo collaudato per collaborazioni interamente da remoto.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Posso aggiornare il sito in autonomia?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: il sito può essere progettato con un pannello di amministrazione che permette di modificare testi, immagini e nuove sezioni in autonomia, senza intervenire sul codice.",
+                    },
+                  },
+                ],
               },
               {
-                "@type": "Question",
-                name: "Posso aggiornare il sito in autonomia?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Sì, il sito può essere progettato in modo da permettere aggiornamenti semplici senza dover intervenire sul codice.",
-                },
+                "@type": "HowTo",
+                "@id": "https://4weblab.it/siti-web-aziendali#howto",
+                name: "Come realizziamo un sito web aziendale",
+                description:
+                  "Il metodo in 4 fasi di 4 Web Lab per progettare e pubblicare un sito web aziendale efficace.",
+                totalTime: "P30D",
+                step: [
+                  { "@type": "HowToStep", position: 1, name: "Analisi e briefing", text: "Raccogliamo informazioni su azienda, obiettivi di business e pubblico di riferimento." },
+                  { "@type": "HowToStep", position: 2, name: "Progettazione", text: "Definiamo struttura, architettura informativa e design coerente con l'identità aziendale." },
+                  { "@type": "HowToStep", position: 3, name: "Sviluppo", text: "Sviluppiamo il sito con tecnologie moderne, performance elevate e SEO integrato." },
+                  { "@type": "HowToStep", position: 4, name: "Revisione e lancio", text: "Condividiamo il risultato per le modifiche, pubblichiamo il sito e forniamo supporto." },
+                ],
               },
             ],
-          })}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://4weblab.it/siti-web-aziendali#service",
-            name: "Siti Web Aziendali",
-            description:
-              "Realizziamo siti web aziendali a Padova: design su misura, SEO e assistenza locale per PMI e aziende.",
-            serviceType: "Corporate Web Design",
-            areaServed: [
-              { "@type": "City", name: "Padova" },
-              { "@type": "AdministrativeArea", name: "Veneto" }
-            ],
-            url: "https://4weblab.it/siti-web-aziendali",
-            inLanguage: "it-IT",
-            isPartOf: { "@id": "https://4weblab.it/#website" },
-            provider: { "@id": "https://4weblab.it/#business" },
-            offers: {
-              "@type": "Offer",
-              url: "https://4weblab.it/siti-web-aziendali",
-              availability: "https://schema.org/InStock",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                minPrice: "899",
-                priceCurrency: "EUR",
-              },
-            },
           })}
         </script>
       </Helmet>
