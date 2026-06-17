@@ -662,6 +662,9 @@ const SitiWebPadova = () => {
               {/* Box destra - Form */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">
                 <ContactFormWeb3Forms />
+                <p className="text-xs text-primary-foreground/60 mt-4 text-center">
+                  Sede operativa a Legnaro (PD) – serviamo Padova città e tutta la provincia.
+                </p>
               </div>
             </AnimatedSection>
           </div>
