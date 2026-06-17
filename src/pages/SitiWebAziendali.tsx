@@ -155,11 +155,10 @@ const SitiWebAziendali = () => {
                 ]}
               />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti Web Aziendali Professionali e Multipagina
+                Siti Web Aziendali Professionali: Performance e Conversione per il tuo Business
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Progettiamo siti web aziendali professionali per aziende della provincia di Padova che vogliono
-                presentarsi al meglio online e acquisire nuovi contatti in modo concreto.
+                Progettiamo siti web aziendali su misura per aziende che puntano a un'immagine autorevole e a un ecosistema digitale capace di generare contatti e valore concreto, ovunque operi la tua impresa.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
@@ -308,7 +307,7 @@ const SitiWebAziendali = () => {
                     dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
                   </p>
                   <p>
-                    Sia che la tua azienda sia a Padova che in qualsiasi altra parte d'Italia, 4 Web Lab porta online il
+                    Sia che la tua azienda sia in Veneto o in qualsiasi altra parte d'Italia, 4 Web Lab porta online il
                     tuo business.
                   </p>
                 </AnimatedSection>
