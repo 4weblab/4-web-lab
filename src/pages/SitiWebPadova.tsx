@@ -8,7 +8,7 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/Ani
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { Layers, HelpCircle, BookOpen } from "lucide-react";
+import { Layers, HelpCircle } from "lucide-react";
 
 const SitiWebPadova = () => {
   const navigate = useNavigate();
