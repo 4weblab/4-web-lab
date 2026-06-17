@@ -7,6 +7,8 @@ import { CheckCircle2, MapPin, Briefcase, Settings, Globe, MessageCircle } from 
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Layers, HelpCircle } from "lucide-react";
 
 const SitiWebPadova = () => {
   const navigate = useNavigate();
@@ -17,70 +19,164 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Padova | da 199€ | 4 Web Lab</title>
+        <title>Realizzazione Siti Web a Padova e Provincia | da 199€ | 4 Web Lab</title>
         <meta
           name="description"
-          content="Agenzia web a Padova: siti professionali per aziende, negozi e professionisti da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
+          content="Agenzia web a Padova e provincia: siti professionali per negozi, professionisti e aziende da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
         />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Siti web a Padova", item: "https://4weblab.it/realizzazione-siti-web-padova" },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione Siti Web Padova | da 199€ | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione Siti Web a Padova e Provincia | da 199€ | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Agenzia web a Padova: siti professionali per aziende, negozi e professionisti da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
+          content="Agenzia web a Padova e provincia: siti professionali per negozi, professionisti e aziende da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Padova | da 199€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Realizzazione Siti Web a Padova e Provincia | da 199€ | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Agenzia web a Padova: siti professionali per aziende, negozi e professionisti da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
+          content="Agenzia web a Padova e provincia: siti professionali per negozi, professionisti e aziende da 199€. SEO locale, design moderno e preventivo gratuito in 24h."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Service",
-            "@id": "https://4weblab.it/realizzazione-siti-web-padova#service",
-            name: "Realizzazione Siti Web a Padova",
-            description:
-              "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
-            serviceType: "Web Design",
-            areaServed: [
-              { "@type": "City", name: "Padova" },
-              { "@type": "AdministrativeArea", name: "Veneto" }
-            ],
-            url: "https://4weblab.it/realizzazione-siti-web-padova",
-            inLanguage: "it-IT",
-            isPartOf: { "@id": "https://4weblab.it/#website" },
-            provider: { "@id": "https://4weblab.it/#business" },
-            offers: {
-              "@type": "Offer",
-              url: "https://4weblab.it/realizzazione-siti-web-padova",
-              availability: "https://schema.org/InStock",
-              priceSpecification: {
-                "@type": "PriceSpecification",
-                minPrice: "199",
-                maxPrice: "899",
-                priceCurrency: "EUR",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                itemListElement: [
+                  { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Padova", item: "https://4weblab.it/realizzazione-siti-web-padova" },
+                ],
               },
-            },
+              {
+                "@type": "LocalBusiness",
+                "@id": "https://4weblab.it/#business",
+                name: "4 Web Lab",
+                url: "https://4weblab.it/",
+                telephone: "+39 351 465 6042",
+                priceRange: "€199+",
+                image: "https://4weblab.it/og-image.webp",
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: "Legnaro",
+                  addressRegion: "PD",
+                  postalCode: "35020",
+                  addressCountry: "IT",
+                },
+                geo: {
+                  "@type": "GeoCoordinates",
+                  latitude: 45.3434,
+                  longitude: 11.9569,
+                },
+                areaServed: [
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Abano Terme" },
+                  { "@type": "City", name: "Albignasego" },
+                  { "@type": "City", name: "Selvazzano Dentro" },
+                  { "@type": "City", name: "Vigonza" },
+                  { "@type": "City", name: "Cadoneghe" },
+                  { "@type": "City", name: "Rubano" },
+                  { "@type": "City", name: "Legnaro" },
+                  { "@type": "City", name: "Este" },
+                  { "@type": "City", name: "Monselice" },
+                  { "@type": "City", name: "Cittadella" },
+                  { "@type": "City", name: "Piove di Sacco" },
+                  { "@type": "AdministrativeArea", name: "Provincia di Padova" },
+                  { "@type": "AdministrativeArea", name: "Veneto" },
+                ],
+              },
+              {
+                "@type": "Service",
+                "@id": "https://4weblab.it/realizzazione-siti-web-padova#service",
+                name: "Realizzazione Siti Web a Padova",
+                description:
+                  "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
+                serviceType: "Web Design",
+                areaServed: [
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "AdministrativeArea", name: "Provincia di Padova" },
+                  { "@type": "AdministrativeArea", name: "Veneto" },
+                ],
+                url: "https://4weblab.it/realizzazione-siti-web-padova",
+                inLanguage: "it-IT",
+                isPartOf: { "@id": "https://4weblab.it/#website" },
+                provider: { "@id": "https://4weblab.it/#business" },
+                offers: {
+                  "@type": "AggregateOffer",
+                  url: "https://4weblab.it/realizzazione-siti-web-padova",
+                  availability: "https://schema.org/InStock",
+                  priceCurrency: "EUR",
+                  lowPrice: "199",
+                  highPrice: "1299",
+                  offerCount: 3,
+                },
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: [
+                  {
+                    "@type": "Question",
+                    name: "Quanto costa realizzare un sito web a Padova?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Un sito web a Padova costa da 199€ una tantum per un sito vetrina per negozi, da 549€ per i professionisti e da 899€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "In quanto tempo viene realizzato un sito a Padova?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Un sito web a Padova viene realizzato in media in 2–6 settimane: pochi giorni per una versione base, 4–6 settimane per un sito multipagina con contenuti su misura, ottimizzazione SEO locale e integrazioni dedicate."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Lavorate solo a Padova città o anche in provincia?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "È possibile incontrarvi di persona a Padova?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: per i progetti che lo richiedono organizziamo incontri di persona a Padova e provincia, su appuntamento. Per la maggior parte delle collaborazioni preferiamo invece confronti rapidi da remoto o telefonici, per ottimizzare i tempi del progetto."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Offrite SEO locale per posizionarsi su Padova?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: ogni sito realizzato a Padova viene ottimizzato per la SEO locale con title, meta description, contenuti e dati strutturati pensati per la ricerca geolocalizzata (es. 'parrucchiere Padova', 'commercialista Padova'). Su richiesta gestiamo anche la scheda Google Business Profile."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Realizzate siti anche per clienti fuori Padova?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: lavoriamo con clienti in tutto il Veneto e in qualsiasi altra regione d'Italia, grazie a un metodo collaudato per collaborazioni interamente da remoto."
+                    }
+                  }
+                ]
+              },
+              {
+                "@type": "SpeakableSpecification",
+                cssSelector: [".aeo-definition", ".aeo-faq-answer"],
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -140,6 +236,16 @@ const SitiWebPadova = () => {
 
         {/* Sezione 1 – Perché scegliere una realtà con sede a Padova */}
         <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto mb-12">
+              <AnimatedSection>
+                <h2 className="heading-3 mb-4">Cos'è un sito web professionale a Padova</h2>
+                <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
+                  Un sito web professionale a Padova è una piattaforma online progettata da un'agenzia con sede sul territorio per presentare un'attività locale (negozio, professionista o azienda), generare contatti qualificati e posizionarsi su Google per ricerche geolocalizzate come "parrucchiere Padova", "commercialista Padova" o "azienda Padova". Costa da 199€ una tantum.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="grid md:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -244,6 +350,61 @@ const SitiWebPadova = () => {
         {/* Sezione 3 – Il nostro metodo */}
         <section className="section-padding bg-background">
           <div className="container-section">
+            <div className="max-w-5xl mx-auto mb-16">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Layers className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Negozio, professionista o azienda: quale sito a Padova</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
+                <p>
+                  Confronto sintetico tra le tre tipologie di sito web più richieste a Padova e provincia, con target tipico, numero medio di pagine e range di prezzo una tantum.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="overflow-x-auto rounded-2xl border border-border/60 bg-white shadow-sm">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-accent/8 text-foreground">
+                      <tr>
+                        <th className="px-5 py-4 font-semibold">Caratteristica</th>
+                        <th className="px-5 py-4 font-semibold">Sito per negozi</th>
+                        <th className="px-5 py-4 font-semibold">Sito per professionisti</th>
+                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Target tipico</td>
+                        <td className="px-5 py-4">Attività commerciali di Padova</td>
+                        <td className="px-5 py-4">Studi e liberi professionisti</td>
+                        <td className="px-5 py-4">PMI della provincia di Padova</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
+                        <td className="px-5 py-4">1–3</td>
+                        <td className="px-5 py-4">3–6</td>
+                        <td className="px-5 py-4">5–15</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Obiettivo principale</td>
+                        <td className="px-5 py-4">Visibilità locale e contatti</td>
+                        <td className="px-5 py-4">Autorevolezza e prenotazioni</td>
+                        <td className="px-5 py-4">Lead generation e brand</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Prezzo indicativo</td>
+                        <td className="px-5 py-4">da 199€</td>
+                        <td className="px-5 py-4">da 549€</td>
+                        <td className="px-5 py-4">da 899€ a 1.299€+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+          <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-12">
                 <div className="icon-box w-13 h-13">
@@ -341,6 +502,11 @@ const SitiWebPadova = () => {
                   realmente efficaci, senza formule standardizzate.
                 </p>
                 <p className="mt-6">
+                  Seguiamo abitualmente clienti a Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza,
+                  Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco, oltre agli altri comuni
+                  della provincia.
+                </p>
+                <p className="mt-6">
                   Offriamo anche soluzioni specifiche per ogni settore. Per approfondire i costi, consulta la nostra
                   guida su{" "}
                   <Link
@@ -358,6 +524,80 @@ const SitiWebPadova = () => {
                   </Link>
                   .
                 </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Sezione FAQ – AEO answer-first */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sui siti web a Padova</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-8">
+                  Risposte rapide alle domande più comuni di chi cerca un'agenzia web a Padova.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      question: "Quanto costa realizzare un sito web a Padova?",
+                      answer:
+                        "Un sito web a Padova costa da 199€ una tantum per un sito vetrina per negozi, da 549€ per i professionisti e da 899€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                    },
+                    {
+                      question: "In quanto tempo viene realizzato un sito a Padova?",
+                      answer:
+                        "Un sito web a Padova viene realizzato in media in 2–6 settimane: pochi giorni per una versione base, 4–6 settimane per un sito multipagina con contenuti su misura, ottimizzazione SEO locale e integrazioni dedicate.",
+                    },
+                    {
+                      question: "Lavorate solo a Padova città o anche in provincia?",
+                      answer:
+                        "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
+                    },
+                    {
+                      question: "È possibile incontrarvi di persona a Padova?",
+                      answer:
+                        "Sì: per i progetti che lo richiedono organizziamo incontri di persona a Padova e provincia, su appuntamento. Per la maggior parte delle collaborazioni preferiamo confronti rapidi da remoto o telefonici, per ottimizzare i tempi del progetto.",
+                    },
+                    {
+                      question: "Offrite SEO locale per posizionarsi su Padova?",
+                      answer:
+                        "Sì: ogni sito realizzato a Padova viene ottimizzato per la SEO locale con title, meta description, contenuti e dati strutturati pensati per la ricerca geolocalizzata (es. \"parrucchiere Padova\", \"commercialista Padova\"). Su richiesta gestiamo anche la scheda Google Business Profile.",
+                    },
+                    {
+                      question: "Realizzate siti anche per clienti fuori Padova?",
+                      answer:
+                        <>
+                          Sì: lavoriamo con clienti in tutto il Veneto e in qualsiasi altra regione d'Italia, grazie a un metodo collaudato per collaborazioni interamente da remoto. Trovi altre risposte nella nostra{" "}
+                          <Link to="/faq-realizzazione-siti-web" className="text-accent hover:underline font-medium">
+                            FAQ completa sulla realizzazione siti web
+                          </Link>
+                          .
+                        </>,
+                    },
+                  ].map((faq, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`faq-padova-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="text-left py-5 hover:no-underline">
+                        <h3 className="font-semibold text-foreground text-base pr-4">{faq.question}</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer text-muted-foreground text-sm leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </AnimatedSection>
             </div>
           </div>
@@ -422,6 +662,9 @@ const SitiWebPadova = () => {
               {/* Box destra - Form */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">
                 <ContactFormWeb3Forms />
+                <p className="text-xs text-primary-foreground/60 mt-4 text-center">
+                  Sede operativa a Legnaro (PD) – serviamo Padova città e tutta la provincia.
+                </p>
               </div>
             </AnimatedSection>
           </div>

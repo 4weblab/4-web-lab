@@ -1,52 +1,48 @@
 ## Obiettivo
-Migliorare `/siti-web-aziendali` per AEO (citabilità da ChatGPT/Perplexity/Google AI Overviews) e GEO (copertura Veneto + Italia), in linea con il nuovo H1 e copy.
+Rendere `/realizzazione-siti-web-padova` più forte su **AEO** (risposte dirette in Google AI Overviews, ChatGPT, Perplexity) e **GEO** (rilevanza geografica su Padova e provincia), allineando lo stile a quanto già fatto su `/siti-web-aziendali`.
 
-## Interventi
+## Modifiche (solo `src/pages/SitiWebPadova.tsx`)
 
-### 1. Meta tag allineati al nuovo posizionamento
-- `<title>`: "Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab"
-- `meta description` + `og:*` + `twitter:*` coerenti, mantenendo il prezzo "da 899€" (trigger AEO).
+### 1. Meta & Title
+- `<title>`: "Realizzazione Siti Web a Padova e Provincia | da 199€ | 4 Web Lab"
+- `meta description`: rinforzo con "Padova e provincia", "preventivo gratuito" e leva prezzo "da 199€" mantenuta. Aggiornare anche `og:*` e `twitter:*` coerenti.
 - `canonical` invariato.
 
-### 2. Nuova sezione "Cos'è un sito web aziendale" (definizione AEO)
-Paragrafo 40–60 parole in apertura, che inizia con *"Un sito web aziendale è…"*. Formato preferito dai LLM per citazioni dirette.
+### 2. Sezione "Cos'è un sito web professionale a Padova" (definizione AEO)
+Nuovo blocco breve (40–60 parole) subito dopo l'Hero, con class `aeo-definition`. Definizione netta e citabile da LLM ("Un sito web professionale a Padova è…"). Posizionata sopra la sezione "Perché scegliere…".
 
-### 3. FAQ riscritte answer-first + 3 nuove
-- Riscrivere le 4 risposte esistenti in stile "risposta-prima-frase".
-- Aggiungere:
-  - "Quanto costa un sito web aziendale in Veneto?" (include range 899€–1.299€+)
-  - "Quali tipi di siti web aziendali esistono?" (vetrina / multipagina / corporate / e-commerce)
-  - "Realizzate siti web aziendali anche fuori Padova?" (elenco province venete + Italia)
-- Sincronizzare `FAQPage` JSON-LD.
+### 3. Copertura GEO testuale
+- Citazione esplicita (in modo naturale, no keyword stuffing) dei principali comuni della provincia: Padova, Abano Terme, Albignasego, Selvazzano, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella, Piove di Sacco.
+- Microcopy "Sede operativa a Legnaro (PD) – serviamo Padova e tutta la provincia" sotto il form contatti.
 
-### 4. Tabella comparativa "Sito vetrina vs aziendale vs corporate"
-`<table>` semantica con 3 colonne e 4 righe (pagine, obiettivo, costo indicativo, ideale per). Le tabelle sono uno dei formati più citati dagli AI engine.
+### 4. Tabella comparativa "Negozio vs Professionista vs Azienda" (a Padova)
+Tabella responsive in nuova sezione tra "Cosa realizziamo" e "Metodo": 3 colonne (target tipico, pagine, range prezzo da 199€/549€/899€+). Formato spesso citato da AI Overviews/Perplexity.
 
-### 5. Sezione "Come realizziamo un sito web aziendale" (processo)
-5 step numerati: Analisi → Strategia → Design → Sviluppo → Lancio & SEO. JSON-LD `HowTo` annesso.
+### 5. FAQ "answer-first" (nuova sezione + JSON-LD FAQPage)
+Nuova sezione FAQ con accordion (riusando il pattern di SitiWebAziendali se disponibile, altrimenti `<details>` semantici) con risposte direct-answer. 6 domande:
+1. Quanto costa realizzare un sito web a Padova? (risposta: da 199€, range 199–1.299€+)
+2. In quanto tempo viene realizzato un sito a Padova?
+3. Lavorate solo a Padova città o anche in provincia?
+4. È possibile incontrarvi di persona a Padova?
+5. Offrite SEO locale per posizionarsi su Padova?
+6. Realizzate siti anche per clienti fuori Padova?
 
-### 6. Schema markup arricchito
-- Aggiungere `LocalBusiness` con:
-  - `areaServed`: Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno + "Italia"
-  - `priceRange`: **"€899+"** (formato valido e più informativo del classico "€€", come hai suggerito)
-  - `geo` (Legnaro, PD)
-  - riferimenti `@id` a Organization globale
-- Estendere `Service.offers` in `AggregateOffer` con `lowPrice: "899"` / `highPrice: "1299"` / `priceCurrency: "EUR"`.
-- Aggiungere `SpeakableSpecification` sui paragrafi-risposta (definizione + FAQ) per ricerca vocale/AI.
-- Mantenere `BreadcrumbList` esistente.
+Ogni `<p>` di risposta riceve la class `aeo-faq-answer` per la `SpeakableSpecification`.
 
-### 7. Copertura GEO testuale
-- 1 paragrafo nella sezione "Siti multipagina e strutturati" con menzione esplicita delle province venete (no keyword stuffing).
-- Microcopy "Aziende clienti in Veneto e in tutta Italia" sopra il form.
+### 6. Schema markup arricchito (JSON-LD `@graph`)
+Sostituire i due blocchi attuali con un unico `@graph` contenente:
+- **LocalBusiness** (`@id` `#business`): nome 4 Web Lab, indirizzo sede Legnaro (PD), `geo` (lat/lng Legnaro), `telephone` +39 351 465 6042, `priceRange` "€199+", `areaServed` con tutti i comuni elencati al punto 3 + "Provincia di Padova", `url`, `sameAs` se disponibili.
+- **Service** (esistente, esteso): `AggregateOffer` con `lowPrice: "199"`, `highPrice: "1299"`, `priceCurrency: "EUR"`, `offerCount`.
+- **FAQPage** con le 6 Q&A del punto 5.
+- **SpeakableSpecification** su `.aeo-definition` e `.aeo-faq-answer`.
+- **BreadcrumbList** invariata.
 
-### 8. Interlinking semantico
-- Link contestuale a `/realizzazione-siti-web-padova` dal blocco GEO.
-- Link a `/faq-realizzazione-siti-web` sotto le FAQ.
+### 7. Interlinking semantico aggiuntivo
+- Link contestuale a `/siti-web-aziendali`, `/realizzazione-siti-web-per-professionisti`, `/siti-web-per-negozi` (già presenti, da preservare) e nuovo link a `/faq-realizzazione-siti-web` dalla nuova FAQ ("Vedi tutte le FAQ").
 
-## Dettagli tecnici
-- File unico: `src/pages/SitiWebAziendali.tsx`.
-- Nessuna nuova immagine, nessuna modifica a routing / sitemap / robots / `index.html`.
-- Nuovi blocchi JSON-LD inseriti dentro `<Helmet>` come ulteriori `<script type="application/ld+json">`.
+## Fuori scopo
+- Nessuna modifica a `index.html`, `robots.txt`, `sitemap.xml`, routing, asset/immagini.
+- Nessuna modifica ad altre pagine.
 
-## Fuori scope
-Generazione OG image, modifiche al pricing reale, nuove pagine satellite per città venete (eventuale fase 2).
+## Conferma
+Procedo con tutti i punti 1–7, oppure indica quali escludere/posticipare (es. tabella comparativa o sezione FAQ).
