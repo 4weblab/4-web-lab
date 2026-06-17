@@ -350,6 +350,61 @@ const SitiWebPadova = () => {
         {/* Sezione 3 – Il nostro metodo */}
         <section className="section-padding bg-background">
           <div className="container-section">
+            <div className="max-w-5xl mx-auto mb-16">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Layers className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Negozio, professionista o azienda: quale sito a Padova</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
+                <p>
+                  Confronto sintetico tra le tre tipologie di sito web più richieste a Padova e provincia, con target tipico, numero medio di pagine e range di prezzo una tantum.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="overflow-x-auto rounded-2xl border border-border/60 bg-white shadow-sm">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-accent/8 text-foreground">
+                      <tr>
+                        <th className="px-5 py-4 font-semibold">Caratteristica</th>
+                        <th className="px-5 py-4 font-semibold">Sito per negozi</th>
+                        <th className="px-5 py-4 font-semibold">Sito per professionisti</th>
+                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Target tipico</td>
+                        <td className="px-5 py-4">Attività commerciali di Padova</td>
+                        <td className="px-5 py-4">Studi e liberi professionisti</td>
+                        <td className="px-5 py-4">PMI della provincia di Padova</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
+                        <td className="px-5 py-4">1–3</td>
+                        <td className="px-5 py-4">3–6</td>
+                        <td className="px-5 py-4">5–15</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Obiettivo principale</td>
+                        <td className="px-5 py-4">Visibilità locale e contatti</td>
+                        <td className="px-5 py-4">Autorevolezza e prenotazioni</td>
+                        <td className="px-5 py-4">Lead generation e brand</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Prezzo indicativo</td>
+                        <td className="px-5 py-4">da 199€</td>
+                        <td className="px-5 py-4">da 549€</td>
+                        <td className="px-5 py-4">da 899€ a 1.299€+</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+          <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-12">
                 <div className="icon-box w-13 h-13">
