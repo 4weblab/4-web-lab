@@ -7,6 +7,8 @@ import { CheckCircle2, MapPin, Briefcase, Settings, Globe, MessageCircle } from 
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { Layers, HelpCircle, BookOpen } from "lucide-react";
 
 const SitiWebPadova = () => {
   const navigate = useNavigate();
