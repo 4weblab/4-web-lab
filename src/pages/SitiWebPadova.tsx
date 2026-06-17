@@ -529,6 +529,80 @@ const SitiWebPadova = () => {
           </div>
         </section>
 
+        {/* Sezione FAQ – AEO answer-first */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sui siti web a Padova</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-8">
+                  Risposte rapide alle domande più comuni di chi cerca un'agenzia web a Padova.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {[
+                    {
+                      question: "Quanto costa realizzare un sito web a Padova?",
+                      answer:
+                        "Un sito web a Padova costa da 199€ una tantum per un sito vetrina per negozi, da 549€ per i professionisti e da 899€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                    },
+                    {
+                      question: "In quanto tempo viene realizzato un sito a Padova?",
+                      answer:
+                        "Un sito web a Padova viene realizzato in media in 2–6 settimane: pochi giorni per una versione base, 4–6 settimane per un sito multipagina con contenuti su misura, ottimizzazione SEO locale e integrazioni dedicate.",
+                    },
+                    {
+                      question: "Lavorate solo a Padova città o anche in provincia?",
+                      answer:
+                        "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
+                    },
+                    {
+                      question: "È possibile incontrarvi di persona a Padova?",
+                      answer:
+                        "Sì: per i progetti che lo richiedono organizziamo incontri di persona a Padova e provincia, su appuntamento. Per la maggior parte delle collaborazioni preferiamo confronti rapidi da remoto o telefonici, per ottimizzare i tempi del progetto.",
+                    },
+                    {
+                      question: "Offrite SEO locale per posizionarsi su Padova?",
+                      answer:
+                        "Sì: ogni sito realizzato a Padova viene ottimizzato per la SEO locale con title, meta description, contenuti e dati strutturati pensati per la ricerca geolocalizzata (es. \"parrucchiere Padova\", \"commercialista Padova\"). Su richiesta gestiamo anche la scheda Google Business Profile.",
+                    },
+                    {
+                      question: "Realizzate siti anche per clienti fuori Padova?",
+                      answer:
+                        <>
+                          Sì: lavoriamo con clienti in tutto il Veneto e in qualsiasi altra regione d'Italia, grazie a un metodo collaudato per collaborazioni interamente da remoto. Trovi altre risposte nella nostra{" "}
+                          <Link to="/faq-realizzazione-siti-web" className="text-accent hover:underline font-medium">
+                            FAQ completa sulla realizzazione siti web
+                          </Link>
+                          .
+                        </>,
+                    },
+                  ].map((faq, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`faq-padova-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="text-left py-5 hover:no-underline">
+                        <h3 className="font-semibold text-foreground text-base pr-4">{faq.question}</h3>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer text-muted-foreground text-sm leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* Sezione 5 – CTA forte locale */}
         <section
           id="contatti-padova"
