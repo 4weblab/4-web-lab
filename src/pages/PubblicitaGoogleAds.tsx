@@ -481,7 +481,7 @@ const PubblicitaGoogleAds = () => {
                 </div>
                 <h2 className="heading-2">Il nostro metodo in 5 step</h2>
               </AnimatedSection>
-              <div className="grid md:grid-cols-5 md:grid-cols-[1fr_1.2fr] gap-12 items-start">
+              <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 items-start">
                 <AnimatedSection direction="left">
                   <img
                     src={methodImg}
