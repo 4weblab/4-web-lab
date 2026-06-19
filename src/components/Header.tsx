@@ -9,6 +9,7 @@ const navItems = [
   { label: 'Domande Frequenti', href: '#faq' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
   { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
+  { label: 'Google ADS', href: '/pubblicita-google-ads' },
   { label: 'Blog', href: '/blog' },
   { label: 'Contatti', href: '/contatti' },
 ];
