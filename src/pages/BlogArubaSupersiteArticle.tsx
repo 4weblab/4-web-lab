@@ -74,7 +74,13 @@ const sections: Section[] = [
         </Link>
         .
       </>,
-      "In altre parole: avere un martello non significa saper costruire una casa.",
+      <>
+        In altre parole: avere un martello non significa saper costruire una casa. E se ti serve visibilità subito, valuta anche{" "}
+        <Link to="/pubblicita-google-ads" className={linkClass}>
+          pubblicità su Google ADS gestita da chi conosce il tuo settore
+        </Link>
+        .
+      </>,
     ],
   },
   {

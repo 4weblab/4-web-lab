@@ -184,6 +184,16 @@ const BlogNotFoundOnGoogleArticle = () => {
                       .
                     </p>
                     <p>Avere un sito è solo il primo passo. Il vero obiettivo è farsi trovare.</p>
+                    <p>
+                      Per chi non può aspettare i tempi della SEO, una scorciatoia concreta è{" "}
+                      <Link
+                        to="/pubblicita-google-ads"
+                        className="text-accent font-medium hover:underline"
+                      >
+                        investire in pubblicità su Google ADS
+                      </Link>{" "}
+                      e iniziare a comparire da subito sopra ai risultati organici.
+                    </p>
                   </div>
                 </article>
               </AnimatedSection>
