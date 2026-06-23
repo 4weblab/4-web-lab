@@ -279,7 +279,7 @@ const SitiWebNegozi = () => {
                     <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
                       negozi della provincia di Padova
                     </Link>
-                    {" "}che lavorano su un bacino fortemente locale. Vedi alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link>.
+                    {" "}che lavorano su un bacino fortemente locale. Vedi alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link>. Per accelerare l'arrivo di clienti nuovi, il sito può essere affiancato a <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google ADS mirate sulla tua zona</Link>.
                   </p>
                   <StaggerContainer className="space-y-4" staggerDelay={0.1}>
                     {[

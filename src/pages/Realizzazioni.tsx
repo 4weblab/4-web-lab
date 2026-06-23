@@ -269,7 +269,7 @@ const Realizzazioni = () => {
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <h2 className="heading-3 mb-4">Progetti reali pubblicati e concept dimostrativi</h2>
               <p className="body-base text-muted-foreground">
-                In testa trovi un <strong>lavoro reale già online</strong>, con restyling, SEO e Google Ads gestiti da 4 Web Lab.
+                In testa trovi un <strong>lavoro reale già online</strong>, con restyling, SEO e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">Google ADS gestite da 4 Web Lab</Link>.
                 A seguire, una selezione di <strong>concept dimostrativi</strong> sviluppati per mostrare design, struttura e
                 comunicazione per settori specifici.
               </p>
