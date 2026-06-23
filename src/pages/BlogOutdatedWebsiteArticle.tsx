@@ -50,7 +50,13 @@ const sections: Section[] = [
       "Se il tuo sito non compare quando qualcuno cerca i tuoi servizi, per il mercato è come se non esistesse.",
       "Nel 2026 questo problema si è ampliato: non si tratta più solo di comparire su Google, ma anche di essere presenti nelle risposte generate dall’intelligenza artificiale.",
       "I siti con contenuti generici, senza struttura e senza chiarezza, vengono semplicemente ignorati.",
-      "E questo significa perdere una quantità enorme di traffico potenziale.",
+      <>
+        E questo significa perdere una quantità enorme di traffico potenziale, sia organico sia da{" "}
+        <Link to="/pubblicita-google-ads" className={linkClass}>
+          campagne Google ADS
+        </Link>
+        , che su un sito obsoleto rendono molto meno.
+      </>,
     ],
   },
   {

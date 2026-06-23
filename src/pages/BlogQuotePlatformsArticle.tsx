@@ -255,7 +255,17 @@ const BlogQuotePlatformsArticle = () => {
                       .
                     </p>
                     <p>Può essere online, funzionante, anche gradevole.</p>
-                    <p>Ma se non viene trovato e non converte, non serve.</p>
+                    <p>
+                      Ma se non viene trovato e non converte, non serve: per accelerare l'arrivo di richieste reali è
+                      spesso più efficace investire in{" "}
+                      <Link
+                        to="/pubblicita-google-ads"
+                        className="text-accent font-medium hover:underline"
+                      >
+                        campagne Google ADS gestite con criterio
+                      </Link>
+                      .
+                    </p>
                   </div>
                 </article>
               </AnimatedSection>

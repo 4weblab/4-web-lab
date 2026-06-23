@@ -104,7 +104,13 @@ const sections: Section[] = [
         </Link>
         : contenuti standard, struttura uguale a mille altri.
       </>,
-      "Se operi in un mercato competitivo, avere un sito simile a molti altri è un problema concreto.",
+      <>
+        Se operi in un mercato competitivo, avere un sito simile a molti altri è un problema concreto: in questi casi diventa quasi obbligatorio affiancare al sito anche{" "}
+        <Link to="/pubblicita-google-ads" className={linkClass}>
+          campagne Google ADS gestite con criterio
+        </Link>{" "}
+        per intercettare clienti reali.
+      </>,
     ],
   },
   {

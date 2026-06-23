@@ -233,7 +233,7 @@ const Contact = () => {
               <div className="w-12 h-1 rounded-full mx-auto mb-6 bg-accent" />
               <h2 className="heading-2 text-foreground mb-4">Non sai da dove partire?</h2>
               <p className="body-large text-muted-foreground text-balance">
-                Se non sei sicuro di cosa ti serve, dai un'occhiata alle pagine dedicate per capire quale soluzione è più adatta alla tua attività.
+                Se non sei sicuro di cosa ti serve, dai un'occhiata alle pagine dedicate per capire quale soluzione è più adatta alla tua attività. Se invece vuoi portare clienti subito, puoi anche valutare la <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">gestione delle tue campagne Google ADS</Link>.
               </p>
             </AnimatedSection>
 

@@ -332,7 +332,7 @@ const SitiWebAziendali = () => {
                   <p className="mb-6">
                     Progettiamo e sviluppiamo siti web aziendali multipagina con architetture pensate per crescere
                     insieme al business. Ogni progetto nasce da un'analisi approfondita delle esigenze dell'azienda e si
-                    traduce in una struttura chiara, navigabile e orientata alla conversione. Esempi e concept nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>.
+                    traduce in una struttura chiara, navigabile e orientata alla conversione. Esempi e concept nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>. Per generare lead qualificati B2B fin dal lancio, integriamo il sito con <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google ADS dedicate alle aziende</Link>.
                   </p>
                   <p className="mb-6">
                     I nostri siti web per aziende includono sezioni dedicate ai servizi, all'identità aziendale, ai

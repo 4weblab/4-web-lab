@@ -71,7 +71,7 @@ const faqs = [
   answerText:
   'Sì, se progettato e ottimizzato bene. Un sito professionale può generare richieste di contatto in modo costante: è uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un sito generato automaticamente con l\'IA.',
   answer:
-  <><strong>Sì, se progettato e ottimizzato bene.</strong> Un sito professionale può generare richieste di contatto in modo costante: è uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>.</>
+  <><strong>Sì, se progettato e ottimizzato bene.</strong> Un sito professionale può generare richieste di contatto in modo costante: è uno strumento di acquisizione, non una semplice vetrina online — molto più di quanto possa fare un{" "}<Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-sm text-accent hover:underline">sito generato automaticamente con l'IA</Link>. Per accelerare i risultati nelle prime settimane online, può essere affiancato a <Link to="/pubblicita-google-ads" className="text-sm text-accent hover:underline">campagne Google ADS gestite</Link>.</>
 },
 {
   id: 'siti-web-servono-ancora-2026-ai',
