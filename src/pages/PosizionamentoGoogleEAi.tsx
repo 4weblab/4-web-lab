@@ -305,7 +305,8 @@ const PosizionamentoGoogleEAi = () => {
                   Una buona strategia SEO lavora su tre pilastri: ottimizzazione tecnica del sito
                   (velocità, struttura, indicizzabilità), contenuti pensati per rispondere all'intento
                   di ricerca degli utenti e autorità del dominio costruita nel tempo. È la base su cui
-                  poggiano sia l'AEO che la GEO.
+                  poggiano sia l'AEO che la GEO. Se invece servono risultati immediati, la SEO si
+                  affianca bene a <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google ADS</Link> per intercettare subito le ricerche ad alto intento.
                 </p>
                 <ul className="space-y-2.5">
                   {[

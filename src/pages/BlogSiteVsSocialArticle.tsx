@@ -61,7 +61,13 @@ const sections: Section[] = [
         </Link>
         .
       </>,
-      "E questa è una differenza sostanziale.",
+      <>
+        E questa è una differenza sostanziale: oltre al posizionamento organico, il sito è anche la destinazione naturale di{" "}
+        <Link to="/pubblicita-google-ads" className={linkClass}>
+          campagne Google ADS
+        </Link>
+        , canale che i social semplicemente non offrono nello stesso modo.
+      </>,
     ],
   },
   {

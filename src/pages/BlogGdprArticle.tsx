@@ -95,7 +95,14 @@ const sections: Section[] = [
         </Link>
         .
       </>,
-      "Gestirli correttamente, invece, significa costruire una presenza online più solida, più credibile e più professionale.",
+      <>
+        Gestirli correttamente, invece, significa costruire una presenza online più solida, più credibile e più professionale —
+        una base indispensabile anche prima di investire in{" "}
+        <Link to="/pubblicita-google-ads" className={linkClass}>
+          campagne Google ADS
+        </Link>
+        , che richiedono un sito conforme per essere davvero efficaci.
+      </>,
     ],
   },
 ];

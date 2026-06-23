@@ -246,7 +246,7 @@ const SitiWebProfessionisti = () => {
                 <p className="mb-8">
                   In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato, ideale anche per
                   collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo garantisce trasparenza
-                  in ogni fase. Puoi vedere alcuni esempi nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>:
+                  in ogni fase. Puoi vedere alcuni esempi nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>. Per chi vuole ricevere richieste di consulenza già nei primi giorni online, valutiamo insieme anche <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">la pubblicità su Google ADS</Link> dedicata ai professionisti:
                 </p>
                 <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
                   {[

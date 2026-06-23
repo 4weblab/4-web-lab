@@ -132,7 +132,11 @@ const sections: Section[] = [
         <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className={linkClass}>
           siti generati con intelligenza artificiale
         </Link>
-        : sembrano un affare, ma spesso restano una vetrina vuota.
+        : sembrano un affare, ma spesso restano una vetrina vuota. Quando il budget invece c'è, ha più senso destinarlo a un sito ben fatto e a{" "}
+        <Link to="/pubblicita-google-ads" className={linkClass}>
+          campagne Google ADS gestite con criterio
+        </Link>
+        .
       </>,
     ],
   },

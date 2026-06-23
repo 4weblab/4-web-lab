@@ -248,7 +248,14 @@ const BlogDiyWebsiteArticle = () => {
                       utenti che cercano i tuoi servizi.
                     </p>
                     <p>Se questi elementi non sono chiari, il sito resta invisibile.</p>
-                    <p>È come aprire un negozio perfetto in mezzo a un bosco.</p>
+                    <p>
+                      È come aprire un negozio perfetto in mezzo a un bosco. In questi casi, una strada veloce per essere
+                      trovati è affiancare al sito{" "}
+                      <Link to="/pubblicita-google-ads" className="text-accent font-medium hover:underline">
+                        campagne Google ADS mirate
+                      </Link>
+                      .
+                    </p>
                   </div>
                 </article>
               </AnimatedSection>
