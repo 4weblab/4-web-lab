@@ -411,30 +411,14 @@ const SitiWebAziendali = () => {
                   className="prose prose-lg max-w-none text-muted-foreground order-1 md:order-2"
                   direction="right"
                 >
-                  <p className="mb-6">
-                    Un sito web aziendale strutturato non è semplicemente un sito con più pagine: è un ecosistema
-                    digitale progettato con una gerarchia dei contenuti chiara, una navigazione intuitiva e
-                    un'architettura informativa che guida il visitatore verso le azioni desiderate.
+                  <p className="mb-5">
+                    Un sito aziendale strutturato è un ecosistema digitale: gerarchia dei contenuti chiara, navigazione intuitiva, percorsi che guidano il visitatore alla conversione.
                   </p>
-                  <p className="mb-6">
-                    Progettiamo siti web per piccole e medie imprese con strutture che facilitano l'indicizzazione sui
-                    motori di ricerca, migliorano l'esperienza utente e permettono di aggiungere nuove sezioni senza
-                    compromettere la coerenza complessiva.
-                  </p>
-                  <p className="mb-6">
-                    La scalabilità è al centro del nostro approccio: ogni sito è pensato per accompagnare la crescita
-                    dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
+                  <p className="mb-5">
+                    Progettiamo per <strong>scalare</strong>: nuove pagine, nuovi servizi o nuove lingue si aggiungono senza compromettere coerenza e posizionamento SEO.
                   </p>
                   <p>
-                    Sia che la tua azienda sia in Veneto o in qualsiasi altra parte d'Italia, 4 Web Lab porta online il
-                    tuo business.
-                  </p>
-                  <p className="mt-4">
-                    Realizziamo siti web aziendali per imprese in tutto il Veneto — Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno — e in qualsiasi altra regione italiana. Per progetti specifici nel capoluogo, vedi la pagina dedicata alla{" "}
-                    <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
-                      realizzazione siti web a Padova
-                    </Link>
-                    .
+                    Lavoriamo da remoto in tutta Italia con un metodo collaudato. Tra le competenze parallele integrabili: <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">posizionamento su Google e AI</Link> e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads B2B</Link>.
                   </p>
                 </AnimatedSection>
               </div>
