@@ -15,6 +15,8 @@ import {
   LayoutTemplate,
   Wrench,
   ChevronDown,
+  MapPin,
+  Image as ImageIcon,
 } from "lucide-react";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -22,6 +24,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import mockupImg from "@/assets/aziendali-mockup.webp";
 import teamImg from "@/assets/aziendali-team.webp";
+import rbSncEdilizia from "@/assets/rb-snc-edilizia.webp";
+import dentalHero from "@/assets/dental-hero.webp";
+import veraMethodHero from "@/assets/vera-method-hero.webp";
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
