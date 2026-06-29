@@ -39,10 +39,10 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab</title>
+        <title>Siti Web Aziendali da 899€ · Veneto e Italia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web aziendali da 899€: design su misura, SEO e assistenza per PMI e aziende in Veneto e in tutta Italia. Preventivo gratuito in 24h da 4 Web Lab."
+          content="Siti web aziendali professionali da 899€: design su misura, SEO per Google e AI, Google Ads. Per PMI in Veneto e in tutta Italia. Preventivo in 24h."
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
