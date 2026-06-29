@@ -38,28 +38,30 @@ const AboutSection = () => {
   return (
     <section id="chi-siamo" className="section-padding bg-surface-alt" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Chi siamo: la tua Agenzia Web di fiducia</h2>
-          <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance whitespace-pre-line">
-            4 Web Lab è un’agenzia web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> specializzata nella realizzazione di siti professionali per chi vuole presenza online seria senza spendere cifre da studio strutturato.{"\n"}
-            Qualità da agenzia, prezzi accessibili e supporto continuo.{"\n"}
-            Lavoriamo con negozi, professionisti e PMI di Padova e in tutta Italia, realizzando siti veloci, su misura e orientati al tuo business.
+          <p className="aeo-answer body-large text-muted-foreground max-w-3xl mx-auto text-balance">
+            <strong>4 Web Lab</strong> è uno studio web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> che realizza siti professionali, <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le AI</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link> per negozi, professionisti e PMI in tutta Italia.
           </p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-16 items-center">
-          <AnimatedSection className="space-y-7" direction="left">
-            <p className="body-base text-muted-foreground">
-              Collaboriamo con professionisti, negozi e aziende in tutta Italia, seguendo ogni progetto da remoto attraverso un processo strutturato che garantisce chiarezza, tempi certi e qualità. Non vendiamo template: progettiamo soluzioni su misura, pensate per convertire visitatori in clienti. Realizziamo siti web professionali per professionisti, negozi e aziende che operano su tutto il territorio nazionale.
-            </p>
-            <p className="body-base text-muted-foreground">
-              Ogni progetto nasce dall'ascolto delle esigenze del cliente e si sviluppa con un approccio orientato ai risultati:
-              design curato, ottimizzazione per i motori di ricerca e performance elevate. Puoi vedere alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link> già pubblicati e, per chi vuole risultati immediati, gestiamo anche <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne pubblicitarie su Google ADS</Link>.
-            </p>
-            <blockquote className="body-base text-muted-foreground italic border-l-4 border-accent pl-6 py-2 bg-accent/5 rounded-r-2xl">
-              "Il nostro obiettivo è rendere il web accessibile a chi vuole crescere online, senza complicazioni e con un partner di fiducia al proprio fianco."
-            </blockquote>
+          <AnimatedSection className="space-y-5" direction="left">
+            <ul className="space-y-4">
+              <li className="flex gap-3 text-muted-foreground">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+                <span><strong className="text-foreground">Processo strutturato e tempi certi</strong> — brief, progettazione, sviluppo e pubblicazione in 2-4 settimane, da remoto in tutta Italia.</span>
+              </li>
+              <li className="flex gap-3 text-muted-foreground">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+                <span><strong className="text-foreground">Soluzioni su misura, mai template</strong> — design, contenuti e SEO pensati per convertire visitatori in clienti reali.</span>
+              </li>
+              <li className="flex gap-3 text-muted-foreground">
+                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+                <span><strong className="text-foreground">Casi reali, non solo demo</strong> — vedi il restyling completo di <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link> o tutte le <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link> pubblicati.</span>
+              </li>
+            </ul>
           </AnimatedSection>
 
           <StaggerContainer className="grid gap-5" staggerDelay={0.12}>
