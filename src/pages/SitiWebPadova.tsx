@@ -699,6 +699,21 @@ const SitiWebPadova = () => {
                           .
                         </>,
                     },
+                    {
+                      question: "Cosa fa un web studio a Padova?",
+                      answer:
+                        "Un web studio a Padova si occupa di progettazione, sviluppo, pubblicazione e manutenzione di siti web per attività locali. 4 Web Lab segue l'intero ciclo: analisi, design, sviluppo SEO-friendly, hosting, ottimizzazione locale per Padova e supporto continuativo.",
+                    },
+                    {
+                      question: "Qual è la differenza tra realizzazione, creazione e sviluppo di un sito web?",
+                      answer:
+                        "Sono termini usati come sinonimi: realizzazione, creazione e sviluppo di un sito web indicano lo stesso processo, ovvero la progettazione e costruzione di un sito internet professionale. La differenza è puramente terminologica; il risultato è un sito online, ottimizzato per Google e pronto a generare contatti.",
+                    },
+                    {
+                      question: "Come scegliere un'agenzia per la creazione di siti internet a Padova?",
+                      answer:
+                        "Per scegliere un'agenzia di creazione siti internet a Padova valuta: portfolio di lavori realizzati, trasparenza dei prezzi, competenze SEO locali, recensioni Google, tempi di risposta e disponibilità di un referente diretto. 4 Web Lab ha sede a Legnaro (PD), prezzi pubblici da 199€ e risposte entro 24h.",
+                    },
                   ].map((faq, index) => (
                     <AccordionItem
                       key={index}
