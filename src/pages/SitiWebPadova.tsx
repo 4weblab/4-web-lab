@@ -246,36 +246,64 @@ const SitiWebPadova = () => {
                 className="heading-1 text-primary-foreground mb-8 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Realizzazione Siti Web a Padova – la soluzione web per il tuo business
+                Realizzazione Siti Web a Padova: il tuo web studio locale per negozi, professionisti e aziende
               </h1>
               <p
                 className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Realizziamo siti professionali per negozi, professionisti e aziende di Padova e provincia. Da 199€, SEO locale e supporto continuativo.
+                Sviluppo e creazione di siti internet professionali a Padova e provincia. Web studio con sede a Legnaro (PD): SEO locale, design moderno e supporto continuativo. Preventivo gratuito in 24h, da 199€.
               </p>
-              <button
-                onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
-                className="btn-primary text-lg px-10 py-4"
-                aria-label="Richiedi una consulenza"
-              >
-                Richiedi una consulenza
-              </button>
-              <p className="text-primary-foreground/50 text-sm mt-5">
-                Sede operativa a Padova – lavoriamo con clienti in tutta Italia.
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                <button
+                  onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
+                  className="btn-primary text-lg px-10 py-4"
+                  aria-label="Richiedi una valutazione gratuita"
+                >
+                  Richiedi una valutazione gratuita
+                </button>
+                <a
+                  href="https://wa.me/393514656042"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-primary-foreground/30 text-primary-foreground/90 hover:bg-primary-foreground/10 transition-all text-base font-semibold"
+                >
+                  <MessageCircle className="w-5 h-5" /> WhatsApp
+                </a>
+              </div>
+              <p className="text-primary-foreground/60 text-sm mt-6">
+                Sede a Legnaro (PD) · da 199€ · risposta in 24h · clienti in tutta la provincia
               </p>
             </AnimatedSection>
           </div>
         </section>
 
-        {/* Sezione 1 – Perché scegliere una realtà con sede a Padova */}
+        {/* Answer Box AEO – risposte rapide */}
+        <section className="py-12 bg-background border-b border-border/40">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection>
+                <div className="aeo-definition rounded-2xl border border-accent/15 bg-accent/5 p-6 md:p-8">
+                  <p className="text-foreground font-semibold mb-3 text-base">
+                    In sintesi: realizzazione siti web a Padova
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    <strong className="text-foreground">4 Web Lab</strong> è un web studio con sede a Legnaro (PD) che si occupa di <strong>realizzazione, creazione e sviluppo di siti web a Padova</strong> e in tutta la provincia. Lavoriamo con negozi, liberi professionisti e aziende. I prezzi partono da <strong>199€ una tantum</strong> e il tempo medio di consegna è di <strong>2–6 settimane</strong>. Ogni sito viene ottimizzato per la <strong>SEO locale</strong>, con design responsive e supporto continuativo dopo la pubblicazione.
+                  </p>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Sezione 1 – Perché scegliere un web studio a Padova */}
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto mb-12">
               <AnimatedSection>
-                <h2 className="heading-3 mb-4">Cos'è un sito web professionale a Padova</h2>
+                <h2 className="heading-3 mb-4">Cos'è un web studio a Padova e cosa fa</h2>
                 <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
-                  Un sito web professionale a Padova è una piattaforma online progettata da un'agenzia con sede sul territorio per presentare un'attività locale (negozio, professionista o azienda), generare contatti qualificati e posizionarsi su Google per ricerche geolocalizzate come "parrucchiere Padova", "commercialista Padova" o "azienda Padova". Costa da 199€ una tantum.
+                  Un <strong>web studio a Padova</strong> è un'agenzia con sede sul territorio che si occupa della <strong>realizzazione, creazione e sviluppo di siti internet</strong> per attività locali: negozi, liberi professionisti e aziende. Progetta, sviluppa e mantiene siti web ottimizzati per posizionarsi su Google con ricerche geolocalizzate come "parrucchiere Padova", "commercialista Padova" o "sito internet Padova". Il vantaggio di un web studio locale è la prossimità: comunicazione diretta, conoscenza del tessuto imprenditoriale padovano e possibilità di incontri di persona quando serve.
                 </p>
               </AnimatedSection>
             </div>
@@ -289,11 +317,10 @@ const SitiWebPadova = () => {
                     <div className="icon-box w-13 h-13">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <h2 className="heading-2">Perché affidarsi a un’agenzia web con sede a Padova</h2>
+                    <h2 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h2>
                   </div>
                   <p className="body-base text-muted-foreground">
-                    Avere un punto di riferimento locale significa poter contare su una comunicazione più diretta, una
-                    comprensione profonda del territorio e la possibilità di un confronto anche dal vivo.
+                    Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente rimpalli: parli sempre con chi sviluppa il tuo sito.
                   </p>
                 </div>
 
@@ -330,7 +357,7 @@ const SitiWebPadova = () => {
                   </div>
                 </div>
                 <h2 className="heading-2">
-                  Servizi web per negozi, professionisti e aziende di Padova
+                  Creazione e sviluppo siti web a Padova: scegli in base alla tua attività
                 </h2>
               </AnimatedSection>
 
