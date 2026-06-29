@@ -308,13 +308,6 @@ const SitiWebAziendali = () => {
                 </div>
                 <h2 className="heading-2">Perché un'azienda ha bisogno di un sito strutturato</h2>
               </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
-                <p>
-                  Un sito web aziendale non è un semplice biglietto da visita digitale: è uno strumento strategico per
-                  la crescita del business. La realizzazione di un sito web per aziende richiede un approccio
-                  strutturato che tenga conto di obiettivi, pubblico e posizionamento nel mercato.
-                </p>
-              </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
                 {[
                   {
