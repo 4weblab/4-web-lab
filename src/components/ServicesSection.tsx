@@ -1,11 +1,9 @@
-import { Globe, Palette, BarChart3, Megaphone, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Globe, Palette, BarChart3, Megaphone } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useState, useCallback, useEffect } from 'react';
 import useEmblaCarousel from 'embla-carousel-react';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 import { AnimatedSection } from './AnimatedSection';
-import { motion } from 'framer-motion';
 
 const services = [
   {
@@ -38,7 +36,6 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  const isMobile = useIsMobile();
   const navigate = useNavigate();
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
@@ -48,18 +45,11 @@ const ServicesSection = () => {
   });
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const [canScrollPrev, setCanScrollPrev] = useState(false);
-  const [canScrollNext, setCanScrollNext] = useState(false);
-
-  const scrollPrev = useCallback(() => emblaApi?.scrollPrev(), [emblaApi]);
-  const scrollNext = useCallback(() => emblaApi?.scrollNext(), [emblaApi]);
   const scrollTo = useCallback((index: number) => emblaApi?.scrollTo(index), [emblaApi]);
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
-    setCanScrollPrev(emblaApi.canScrollPrev());
-    setCanScrollNext(emblaApi.canScrollNext());
   }, [emblaApi]);
 
   useEffect(() => {
