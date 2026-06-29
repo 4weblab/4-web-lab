@@ -355,27 +355,23 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" direction="left">
-                  <p className="mb-6">
-                    Progettiamo e sviluppiamo siti web aziendali multipagina con architetture pensate per crescere
-                    insieme al business. Ogni progetto nasce da un'analisi approfondita delle esigenze dell'azienda e si
-                    traduce in una struttura chiara, navigabile e orientata alla conversione. Esempi e concept nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>. Per generare lead qualificati B2B fin dal lancio, integriamo il sito con <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google ADS dedicate alle aziende</Link>.
+                  <p className="mb-5">
+                    Progettiamo siti aziendali multipagina con architetture scalabili e copy orientato alla conversione, evitando i limiti di un <Link to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026" className="text-accent hover:underline font-medium">sito datato che fa perdere clienti</Link>.
                   </p>
-                  <p className="mb-6">
-                    I nostri siti web per aziende includono sezioni dedicate ai servizi, all'identità aziendale, ai
-                    contatti e a ogni area strategica del business. Realizziamo architetture scalabili, pronte per
-                    evolversi nel tempo con nuove pagine, funzionalità e contenuti.
-                  </p>
-                  <p>
-                    Ogni sito è sviluppato con tecnologie moderne che garantiscono velocità, sicurezza e un'esperienza
-                    utente ottimale su qualsiasi dispositivo, evitando i limiti tipici di un{" "}
-                    <Link
-                      to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
-                      className="text-accent hover:underline font-medium"
-                    >
-                      sito ormai datato che fa perdere clienti
-                    </Link>
-                    .
-                  </p>
+                  <ul className="list-none space-y-2.5 not-prose">
+                    {[
+                      "Architettura multipagina chiara e indicizzabile",
+                      "Sezioni dedicate a servizi, identità, casi e contatti",
+                      "CMS opzionale per aggiornare contenuti in autonomia",
+                      "Performance elevate (Core Web Vitals) e mobile-first",
+                      "Predisposizione a SEO, AI e campagne Google Ads",
+                    ].map((it) => (
+                      <li key={it} className="flex items-start gap-2.5 text-base text-muted-foreground">
+                        <CheckCircle2 className="w-4 h-4 mt-1 text-accent flex-shrink-0" />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </AnimatedSection>
                 <AnimatedSection direction="right">
                   <img
