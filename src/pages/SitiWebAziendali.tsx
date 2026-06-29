@@ -485,6 +485,120 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
+        {/* Realizzazioni teaser */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-3">
+                <div className="icon-box w-13 h-13">
+                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Alcuni siti web aziendali realizzati</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-10 max-w-3xl">
+                  Una selezione di lavori pubblicati e concept dedicati a imprese italiane, tra settori tecnici, servizi e attività professionali.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+                {[
+                  {
+                    img: rbSncEdilizia,
+                    title: "R.B. s.n.c. – Cittadella (PD)",
+                    desc: "Sito web aziendale, SEO e Google Ads per impresa di rimozione eternit e rifacimento tetti.",
+                    to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto",
+                  },
+                  {
+                    img: dentalHero,
+                    title: "Studio Dentistico Premium – concept",
+                    desc: "Concept di sito aziendale multipagina per studio medico-dentistico ad alta gamma.",
+                    to: "/realizzazioni/demo-studio-dentistico-premium",
+                  },
+                  {
+                    img: veraMethodHero,
+                    title: "Vera Method – concept",
+                    desc: "Concept di sito aziendale per metodo proprietario nel mondo del personal training.",
+                    to: "/realizzazioni/demo-personal-trainer-vera-method",
+                  },
+                ].map((item, i) => (
+                  <StaggerItem key={i}>
+                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
+                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          loading="lazy"
+                          width="640"
+                          height="400"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </Link>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <AnimatedSection delay={0.2} className="mt-8 text-center">
+                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
+                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Zone servite GEO */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Globe className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Zone servite: Veneto e tutta Italia</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {[
+                    { name: "Padova", to: "/realizzazione-siti-web-padova" },
+                    { name: "Venezia" },
+                    { name: "Vicenza" },
+                    { name: "Verona" },
+                    { name: "Treviso" },
+                    { name: "Rovigo" },
+                    { name: "Belluno" },
+                  ].map((c) =>
+                    c.to ? (
+                      <Link
+                        key={c.name}
+                        to={c.to}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-sm text-foreground hover:bg-accent/15 transition-colors"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </Link>
+                    ) : (
+                      <span
+                        key={c.name}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/8 border border-accent/15 text-sm text-foreground/80"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </span>
+                    )
+                  )}
+                </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p>
+                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti web aziendali per imprese di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto. Operiamo con <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">studi professionali</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">attività commerciali</Link> e PMI di settori tecnici e dei servizi.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* Quanto costa un sito web aziendale */}
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
