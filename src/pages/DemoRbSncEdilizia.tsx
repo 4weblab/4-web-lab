@@ -12,12 +12,18 @@
 
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, ExternalLink, Search, Target, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ExternalLink, Search, Target, Sparkles, CheckCircle2, Gauge, Calendar, Layers, ShieldCheck } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import heroImg from "@/assets/rb-snc-edilizia.webp";
+import beforeImg from "@/assets/case-rb-snc/before-2010.webp";
+import afterDesktop from "@/assets/case-rb-snc/after-desktop.webp";
+import afterMobile from "@/assets/case-rb-snc/after-mobile.webp";
+import afterDetail from "@/assets/case-rb-snc/after-detail.webp";
+import psMobile from "@/assets/case-rb-snc/pagespeed-mobile.webp";
+import psDesktop from "@/assets/case-rb-snc/pagespeed-desktop.webp";
 
 const URL_LIVE = "https://rb-snc.it";
 const URL_PAGE = "https://4weblab.it/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto";
@@ -26,19 +32,19 @@ const DemoRbSncEdilizia = () => {
   return (
     <>
       <Helmet>
-        <title>Caso studio R.B s.n.c. — sito web, SEO e Google Ads per rimozione eternit a Cittadella | 4 Web Lab</title>
+        <title>R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab</title>
         <meta
           name="description"
-          content="Caso studio reale 4 Web Lab: restyling completo del sito, ottimizzazione SEO e campagna Google Ads per R.B s.n.c. di Bertoluzzo e Ragazzo, impresa edile specializzata in rimozione amianto e rifacimento tetti a Cittadella (PD)."
+          content="Case study reale: restyling completo, ottimizzazione SEO e campagna Google Ads per R.B. s.n.c., impresa edile specializzata in rimozione eternit a Cittadella (PD)."
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={URL_PAGE} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={URL_PAGE} />
-        <meta property="og:title" content="Caso studio R.B s.n.c. — sito web, SEO e Google Ads | 4 Web Lab" />
+        <meta property="og:title" content="R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Restyling, SEO e Google Ads per un'impresa edile di Cittadella (PD) specializzata in rimozione eternit e rifacimento tetti. Caso studio reale 4 Web Lab."
+          content="Case study reale: restyling, SEO e Google Ads per un'impresa edile di Cittadella (PD) specializzata in rimozione eternit e rifacimento tetti."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -52,6 +58,8 @@ const DemoRbSncEdilizia = () => {
             name: "Restyling sito web, SEO e Google Ads per R.B s.n.c.",
             url: URL_PAGE,
             inLanguage: "it-IT",
+            datePublished: "2026-06-29",
+            dateCreated: "2026-06-29",
             isPartOf: { "@id": "https://4weblab.it/#website" },
             author: { "@id": "https://4weblab.it/#business" },
             creator: { "@id": "https://4weblab.it/#business" },
@@ -63,8 +71,9 @@ const DemoRbSncEdilizia = () => {
               description:
                 "Impresa edile specializzata in rimozione eternit (amianto) e rifacimento tetti, con sede a Cittadella (Padova).",
             },
+            workExample: { "@type": "WebSite", url: URL_LIVE, name: "rb-snc.it" },
             keywords:
-              "rimozione eternit Cittadella, rifacimento tetti Padova, sito web edilizia, Google Ads edilizia, SEO impresa edile, R.B s.n.c.",
+              "rimozione eternit Cittadella, rifacimento tetti Padova, sito web edilizia, Google Ads edilizia, SEO impresa edile, restyling sito edile Veneto, R.B. s.n.c.",
           })}
         </script>
         <script type="application/ld+json">
@@ -121,6 +130,12 @@ const DemoRbSncEdilizia = () => {
                 Visita il sito live
                 <ExternalLink className="w-4 h-4" />
               </a>
+              <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs md:text-sm text-primary-foreground/80">
+                <span className="inline-flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-accent" /> Sito live</span>
+                <span className="inline-flex items-center gap-1.5"><Gauge className="w-4 h-4 text-accent" /> Lighthouse 95 / 96</span>
+                <span className="inline-flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-accent" /> SEO 100/100</span>
+                <span className="inline-flex items-center gap-1.5"><Target className="w-4 h-4 text-accent" /> Campagna Ads attiva</span>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -142,54 +157,229 @@ const DemoRbSncEdilizia = () => {
           </div>
         </section>
 
-        {/* INTRO + PREVIEW */}
+        {/* IL CONTESTO */}
         <section className="py-16 md:py-24 bg-background">
           <div className="container-section">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="heading-2 mb-6">Il progetto in breve</h2>
-              <p className="body-base text-muted-foreground mb-4">
-                <strong>R.B. s.n.c. di Bertoluzzo e Ragazzo</strong> è un'impresa edile attiva nel Veneto, specializzata
-                in <strong>rimozione eternit</strong> (smaltimento amianto) e <strong>rifacimento tetti</strong>.
-                Ha scelto 4 Web Lab per un intervento completo su presenza online e acquisizione clienti.
-              </p>
-              <p className="body-base text-muted-foreground mb-10">
-                Il lavoro ha incluso un <strong>restyling completo del sito</strong>, l'<strong>ottimizzazione SEO</strong>
-                (struttura, contenuti, dati strutturati, Core Web Vitals) e l'attivazione di una
-                <strong> campagna Google Ads</strong> mirata al bacino locale, con focus su preventivi e contatti qualificati.
-              </p>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
-                {[
-                  { icon: Sparkles, title: "Restyling completo", desc: "Nuovo design, struttura chiara, mobile-first." },
-                  { icon: Search, title: "Ottimizzazione SEO", desc: "On-page, schema, performance, SEO locale." },
-                  { icon: Target, title: "Google Ads", desc: "Campagna a pagamento per lead qualificati." },
-                ].map((b) => (
-                  <div key={b.title} className="rounded-2xl p-6 bg-card border border-border" style={{ boxShadow: "var(--shadow-sm)" }}>
-                    <div className="w-10 h-10 rounded-xl mb-3 flex items-center justify-center" style={{ background: "var(--gradient-accent)" }}>
-                      <b.icon className="w-5 h-5 text-accent-foreground" />
-                    </div>
-                    <h3 className="text-base font-semibold mb-1.5">{b.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">{b.desc}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="rounded-2xl p-6 md:p-8 border border-dashed border-border bg-muted/30">
-                <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-accent" /> Case study in preparazione
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Stiamo preparando la scheda completa con sfida, soluzione, screenshot before/after e i risultati
-                  ottenuti su SEO e campagne Google Ads. Nel frattempo puoi vedere il lavoro dal vivo:
+            <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-14 items-center">
+              <div>
+                <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">Il contesto</span>
+                <h2 className="heading-2 mb-5">Un sito del 2010, fermo a 16 anni fa</h2>
+                <p className="body-base text-muted-foreground mb-4">
+                  Il sito precedente di R.B. s.n.c. risaliva al 2010 e mostrava tutti i limiti
+                  di un'impostazione tecnica ormai superata. La concorrenza, nello stesso settore
+                  della bonifica amianto e del rifacimento coperture, si era già aggiornata da tempo.
                 </p>
-                <ul className="space-y-2 mb-2">
-                  {["Sito web restilizzato e responsive", "SEO on-page e SEO locale Veneto", "Campagna Google Ads attiva"].map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-foreground/85">
-                      <CheckCircle2 className="w-4 h-4 text-accent flex-shrink-0" />
-                      <span>{f}</span>
+                <ul className="space-y-2.5">
+                  {[
+                    "Markup HTML legacy non più allineato agli standard attuali",
+                    "Esperienza mobile assente: layout pensato solo per desktop",
+                    "Nessuna ottimizzazione SEO, GEO o AEO",
+                    "Assenza totale di dati strutturati e schema markup",
+                    "Tempi di caricamento e Core Web Vitals fuori soglia",
+                  ].map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-sm text-foreground/85">
+                      <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                      <span>{p}</span>
                     </li>
                   ))}
                 </ul>
+              </div>
+              <figure className="rounded-2xl overflow-hidden border border-border bg-muted" style={{ boxShadow: "var(--shadow-md)" }}>
+                <img
+                  src={beforeImg}
+                  alt="Screenshot del sito web precedente di R.B. s.n.c., realizzato nel 2010, con grafica datata e layout solo desktop"
+                  width={1600}
+                  height={721}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-auto block"
+                />
+                <figcaption className="text-xs text-muted-foreground px-4 py-2 border-t border-border bg-card">
+                  Sito precedente · 2010
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        {/* OBIETTIVI */}
+        <section className="py-16 md:py-20 bg-muted/30 border-y border-border">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center mb-10">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">Obiettivi del cliente</span>
+              <h2 className="heading-2 mb-4">Cosa è stato richiesto</h2>
+            </div>
+            <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+              {[
+                { t: "Immagine professionale", d: "Un sito moderno, coerente con la natura tecnica e specialistica del lavoro svolto in cantiere." },
+                { t: "Risultati su Google", d: "Massimizzare la visibilità organica e attivare un canale a pagamento per i preventivi qualificati." },
+                { t: "Servizi chiari", d: "Presentare in modo lineare bonifica amianto, smaltimento eternit e rifacimento coperture." },
+              ].map((o) => (
+                <div key={o.t} className="rounded-2xl p-6 bg-card border border-border" style={{ boxShadow: "var(--shadow-sm)" }}>
+                  <h3 className="text-base font-semibold mb-2">{o.t}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{o.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* LA SOLUZIONE */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">La soluzione</span>
+              <h2 className="heading-2 mb-4">L'intervento, in quattro aree</h2>
+              <p className="body-base text-muted-foreground">
+                Il progetto è stato ricostruito da zero in circa un mese e mezzo, dal brief operativo
+                fino alla messa online e all'attivazione della campagna pubblicitaria.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+              {[
+                { icon: Sparkles, t: "Restyling completo da zero", d: "Nuova architettura informativa, design system dedicato, gerarchia chiara dei contenuti, mobile-first nativo." },
+                { icon: Gauge, t: "Ottimizzazione tecnica & Core Web Vitals", d: "Immagini WebP, asset minimi, font non bloccanti, LCP controllato, layout shift azzerato." },
+                { icon: Search, t: "SEO on-page e SEO locale Veneto", d: "Title e meta dedicati, struttura H1-H2 coerente, schema LocalBusiness, copertura territoriale Cittadella e Veneto." },
+                { icon: Target, t: "Campagna Google Ads dedicata", d: "Setup completo e gestione della campagna a pagamento, attualmente attiva e focalizzata sulle keyword di servizio." },
+              ].map((b) => (
+                <div key={b.t} className="rounded-2xl p-6 bg-card border border-border" style={{ boxShadow: "var(--shadow-sm)" }}>
+                  <div className="w-11 h-11 rounded-xl mb-4 flex items-center justify-center" style={{ background: "var(--gradient-accent)" }}>
+                    <b.icon className="w-5 h-5 text-accent-foreground" />
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">{b.t}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{b.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* BEFORE / AFTER */}
+        <section className="py-16 md:py-24 bg-muted/30 border-y border-border">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">Before / After</span>
+              <h2 className="heading-2 mb-4">Il salto visivo, in due immagini</h2>
+              <p className="body-base text-muted-foreground">
+                A sinistra il sito storico del 2010. A destra il nuovo rb-snc.it, online dal 2026.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+              <figure className="rounded-2xl overflow-hidden border border-border bg-card" style={{ boxShadow: "var(--shadow-md)" }}>
+                <img src={beforeImg} alt="Sito web R.B. s.n.c. nel 2010, design legacy non responsive" width={1600} height={721} loading="lazy" decoding="async" className="w-full h-auto block" />
+                <figcaption className="text-xs font-semibold uppercase tracking-wider text-muted-foreground px-4 py-2 border-t border-border">Before · 2010</figcaption>
+              </figure>
+              <figure className="rounded-2xl overflow-hidden border border-border bg-card" style={{ boxShadow: "var(--shadow-md)" }}>
+                <img src={afterDesktop} alt="Nuovo sito web R.B. s.n.c., homepage 2026 con hero scuro e CTA arancione" width={1600} height={711} loading="lazy" decoding="async" className="w-full h-auto block" />
+                <figcaption className="text-xs font-semibold uppercase tracking-wider text-accent px-4 py-2 border-t border-border">After · 2026</figcaption>
+              </figure>
+            </div>
+
+            <div className="grid md:grid-cols-[1fr_2fr] gap-6 max-w-6xl mx-auto mt-6">
+              <figure className="rounded-2xl overflow-hidden border border-border bg-card flex items-center justify-center p-4" style={{ boxShadow: "var(--shadow-sm)" }}>
+                <img src={afterMobile} alt="Vista mobile di una pagina interna del nuovo sito R.B. s.n.c., scheda intervento di bonifica amianto" width={900} height={780} loading="lazy" decoding="async" className="w-full h-auto block max-w-[420px]" />
+              </figure>
+              <figure className="rounded-2xl overflow-hidden border border-border bg-card" style={{ boxShadow: "var(--shadow-sm)" }}>
+                <img src={afterDetail} alt="Dettaglio scheda realizzazione: bonifica amianto su copertura industriale, dati strutturati e informazioni tecniche" width={1600} height={727} loading="lazy" decoding="async" className="w-full h-auto block" />
+                <figcaption className="text-xs text-muted-foreground px-4 py-2 border-t border-border">Dettaglio scheda realizzazione · vista desktop</figcaption>
+              </figure>
+            </div>
+          </div>
+        </section>
+
+        {/* RISULTATI TECNICI */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center mb-12">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">Risultati misurabili</span>
+              <h2 className="heading-2 mb-4">Risultati tecnici verificabili</h2>
+              <p className="body-base text-muted-foreground">
+                I dati di seguito provengono da Google PageSpeed Insights (Lighthouse) e sono verificabili
+                in autonomia inserendo l'URL <strong>rb-snc.it</strong> su <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Frb-snc.it%2F" target="_blank" rel="noopener external" className="underline decoration-accent underline-offset-2">pagespeed.web.dev</a>.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              {[
+                { img: psMobile, label: "Mobile", scores: [["Prestazioni", 95], ["Accessibilità", 95], ["Best Practice", 100], ["SEO", 100]] },
+                { img: psDesktop, label: "Desktop", scores: [["Prestazioni", 96], ["Accessibilità", 91], ["Best Practice", 100], ["SEO", 100]] },
+              ].map((card) => (
+                <div key={card.label} className="rounded-2xl overflow-hidden border border-border bg-card" style={{ boxShadow: "var(--shadow-md)" }}>
+                  <div className="px-5 py-3 border-b border-border flex items-center justify-between">
+                    <span className="text-sm font-semibold">PageSpeed · {card.label}</span>
+                    <span className="text-xs text-muted-foreground">rb-snc.it</span>
+                  </div>
+                  <img src={card.img} alt={`Report PageSpeed Insights ${card.label} per rb-snc.it`} width={1400} height={card.label === "Mobile" ? 638 : 634} loading="lazy" decoding="async" className="w-full h-auto block" />
+                  <div className="grid grid-cols-4 border-t border-border">
+                    {card.scores.map(([k, v]) => (
+                      <div key={k} className="px-3 py-3 text-center border-r last:border-r-0 border-border">
+                        <div className="text-2xl font-bold text-foreground">{v}</div>
+                        <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-0.5">{k}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <p className="text-sm text-muted-foreground max-w-3xl mx-auto text-center mt-10 italic">
+              Per rispetto della privacy del cliente non vengono pubblicati dati di traffico, CTR
+              o conversioni della campagna Google Ads. I punteggi Lighthouse sopra restano
+              verificabili pubblicamente.
+            </p>
+          </div>
+        </section>
+
+        {/* TIMELINE */}
+        <section className="py-16 md:py-20 bg-muted/30 border-y border-border">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center mb-10">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">Timeline</span>
+              <h2 className="heading-2 mb-3">Un mese e mezzo dal brief al live</h2>
+              <p className="body-base text-muted-foreground">
+                Il progetto è partito da zero: il sito precedente non era recuperabile né come base
+                tecnica né come impostazione di contenuti.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+              {[
+                { n: "01", t: "Brief & strategia", d: "Analisi del settore, mappatura servizi, keyword e architettura del nuovo sito." },
+                { n: "02", t: "Design & sviluppo", d: "Design system dedicato, sviluppo mobile-first, ottimizzazione tecnica e SEO." },
+                { n: "03", t: "Lancio & Ads", d: "Messa online, indicizzazione, attivazione e gestione della campagna Google Ads." },
+              ].map((s) => (
+                <div key={s.n} className="rounded-2xl p-6 bg-card border border-border" style={{ boxShadow: "var(--shadow-sm)" }}>
+                  <div className="text-3xl font-bold text-accent mb-2">{s.n}</div>
+                  <h3 className="text-base font-semibold mb-2 flex items-center gap-2">
+                    <Calendar className="w-4 h-4 text-accent" /> {s.t}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{s.d}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* APPROCCIO TECNICO */}
+        <section className="py-16 md:py-20 bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <span className="inline-block text-xs font-semibold uppercase tracking-wider text-accent mb-3">Approccio tecnico</span>
+              <h2 className="heading-2 mb-6">Scelte tecniche alla base del risultato</h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {[
+                  "Design system custom (no template generici)",
+                  "Immagini WebP con dimensioni esplicite",
+                  "Dati strutturati JSON-LD (LocalBusiness, schema servizi)",
+                  "Layout mobile-first nativo, breakpoint controllati",
+                  "Accessibilità: contrasti, focus visibile, alt text",
+                  "Indicizzazione: sitemap, robots, canonical puliti",
+                ].map((t) => (
+                  <div key={t} className="flex items-start gap-2.5 text-sm text-foreground/85">
+                    <Layers className="w-4 h-4 text-accent flex-shrink-0 mt-0.5" />
+                    <span>{t}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

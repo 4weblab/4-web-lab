@@ -1,115 +1,80 @@
 ## Obiettivo
-Restyling completo (copy + struttura) della pagina `/realizzazione-siti-web-padova` per massimizzare SEO/GEO/AEO, sfruttando le query che già generano impression (408 in 3 mesi, ma solo 1 click → forte gap CTR da chiudere) e creando interlinking strategico verso le altre pagine top per impression.
+Trasformare lo stub `/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto` in un case study completo, **fattuale** (zero metriche inventate), basato su screenshot reali e dati Lighthouse verificabili. Approccio scelto: **Opzione 3** — case study senza numeri di business inventati, con focus su Lighthouse/PageSpeed reali (95 mobile, 96 desktop, 100 SEO, 100 Best Practice) come prova oggettiva. Tono **asciutto-istituzionale**, terza persona, nessun inserto personale.
 
-## Diagnosi attuale
-- **Query principali captate** (Search Console, ultimi 3 mesi):
-  1. realizzazione siti web padova (73)
-  2. siti web padova (65)
-  3. sviluppo siti web padova (30)
-  4. creazione siti web padova (28)
-  5. realizzazione siti internet padova (23)
-  6. creazione siti internet padova (14)
-  7. web studio padova (12)
-  8. realizzazione sito web padova (12)
-  9. realizzazione siti padova (11)
-- **Problema CTR**: 408 impression → 1 click. Title e meta description attuali non agganciano. La keyword "web studio padova" e le varianti "internet" non compaiono nel copy.
-- **Struttura**: pagina già ben impostata ma con H2 generici, sezioni testuali dense e poco scannabili, nessun blocco "answer-first" sopra la piega oltre al definition block, nessuna prova sociale/realizzazioni inline.
+## Asset forniti dall'utente
+- `home.jpg` — hero nuovo sito (desktop)
+- `mobile.jpg` — vista mobile pagina interna
+- `realizzaz.jpg` — dettaglio scheda realizzazione
+- `pi1.jpg` — PageSpeed mobile (95/95/100/100)
+- `pi2.jpg` — PageSpeed desktop (96/91/100/100)
+- `sfondo.webp` — screenshot vecchio sito 2010
 
-## Nuova struttura della pagina (ordine sezioni)
+Tutte le immagini verranno convertite/ottimizzate in WebP (qualità 82), ridimensionate (max-width 1600 per gli screenshot full, 900 per il mobile mockup, 1400 per i PageSpeed) e salvate in `src/assets/case-rb-snc/`. I `.jpg` originali non vengono committati.
+
+## Nuova struttura della pagina
 
 ```
-1. HERO (rivisto)
-   - H1 nuovo + sub-copy che integra varianti keyword
-   - 2 CTA (consulenza gratuita + WhatsApp)
-   - Trust-strip: sede Legnaro (PD) · da 199€ · risposta in 24h · clienti in tutta la provincia
+1. HERO (rivisto, minimo)
+   - Trust-strip sotto la CTA: "Sito live · Lighthouse 95/96 · SEO 100/100 · Campagna Ads attiva"
 
-2. ANSWER BOX AEO (nuovo, sopra-piega)
-   - Risposta diretta in 2 frasi a "quanto costa / quanto tempo / chi siamo"
-   - .aeo-definition wrapper (già usato per Speakable)
+2. IL CONTESTO
+   - "Un sito del 2010, fermo a 16 anni fa"
+   - Bullet: HTML legacy, no mobile, no SEO/AEO, no schema, concorrenza già modernizzata
+   - Screenshot `sfondo.webp` con etichetta "Sito precedente · 2010"
 
-3. PERCHÉ SCEGLIERE UN WEB STUDIO A PADOVA (rivisto)
-   - H2 keyword-rich ("Web studio a Padova: perché conta la prossimità")
-   - 5 bullet potenziati + micro-prova ("Sede a Legnaro, raggiungibile in 15 min da Padova centro")
+3. OBIETTIVI DEL CLIENTE (3 punti)
+   - Sito moderno con tono professionale
+   - Massimizzazione dei risultati su Google (organico + Ads)
+   - Presentazione chiara dei servizi di bonifica amianto e rifacimento coperture
 
-4. SERVIZI PER NEGOZI / PROFESSIONISTI / AZIENDE (mantenuto + rafforzato)
-   - Cards con prezzi una tantum visibili
-   - Link interni alle 3 landing → interlinking diretto verso top-impression pages
+4. LA SOLUZIONE — INTERVENTO IN 4 AREE
+   a) Restyling completo da zero (1 mese e mezzo)
+   b) Ottimizzazione tecnica & Core Web Vitals
+   c) SEO on-page, SEO locale Veneto, schema LocalBusiness
+   d) Campagna Google Ads dedicata, attualmente attiva
 
-5. TABELLA COMPARATIVA (mantenuta, spostata qui)
+5. BEFORE / AFTER VISIVO
+   - Griglia 2 colonne: BEFORE (`sfondo.webp`) vs AFTER (`home.jpg`)
+   - Sotto: mockup mobile (`mobile.jpg`) + dettaglio scheda interna (`realizzaz.jpg`)
 
-6. METODO 4 STEP (mantenuto, compatto)
+6. RISULTATI TECNICI VERIFICABILI (solo dati reali)
+   - Due card PageSpeed: Mobile 95 · Desktop 96, con i 4 score per ciascuna
+   - Nota: "Per rispetto della privacy del cliente non vengono pubblicati dati di traffico, CTR o conversioni. I punteggi Lighthouse sopra sono verificabili in autonomia su pagespeed.web.dev."
+   - Link diretto a PageSpeed Insights con URL rb-snc.it pre-compilato
 
-7. ZONE SERVITE (nuovo, GEO-focus)
-   - Mini-mappa testuale con i 12 comuni della provincia in chip cliccabili (no link, solo visual)
-   - Paragrafo discorsivo con co-occorrenze "creazione siti web Padova", "sviluppo siti internet Padova", "realizzazione sito web Padova"
-   - Riuso `MapSection` esistente se compatibile (sede Legnaro)
+7. TIMELINE
+   - "1 mese e mezzo dal brief al live" — 3 step: Brief & strategia · Design & sviluppo · Lancio & Ads
 
-8. CASI / REALIZZAZIONI (nuovo blocco snello)
-   - 2-3 anteprime da `Realizzazioni` o demo già esistenti (DemoRbSncEdilizia, DemoStudioDentisticoPremium, DemoBoutiqueBB) con link → /realizzazioni
-   - Prova visiva → migliora CTR e tempo sulla pagina
+8. APPROCCIO TECNICO (sintetico)
+   - Design system custom, immagini WebP, dati strutturati, mobile-first, accessibilità
 
-9. BLOCCO INTERLINKING DISCORSIVO (nuovo)
-   - Paragrafo con link contestuali a:
-     · /siti-web-aziendali (214 impr)
-     · /realizzazione-siti-web-per-professionisti (90 impr)
-     · /siti-web-per-negozi (84 impr)
-     · /blog/quanto-costa-un-sito-web-nel-2026
-     · /blog/siti-web-creati-con-intelligenza-artificiale (70 impr)
-     · /blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere (55 impr)
-     · /posizionamento-google-e-ai
-     · /pubblicita-google-ads (link già presente, mantenuto)
-
-10. FAQ AEO (estesa)
-    - Aggiunte domande che intercettano varianti keyword:
-      · "Cosa fa un web studio a Padova?"
-      · "Qual è la differenza tra realizzazione e sviluppo siti web?"
-      · "Come scegliere un'agenzia per la creazione di siti internet a Padova?"
-    - Mantenute le 6 esistenti
-
-11. CTA FINALE (mantenuta, copy rifinito)
+9. CTA FINALE (rifinita, tono asciutto)
 ```
 
-## Copy & SEO – modifiche chiave
+## Stile copy
+- Terza persona / forma impersonale ("È stato realizzato…", "Il sito è stato sviluppato…")
+- Nessun "noi", nessun aneddoto personale, nessuna testimonianza
+- Spazio lasciato per inserire in futuro una review Google del cliente (sezione "testimonianza" NON creata ora)
 
-### Title & Meta
-- **Title** (≤60 char): `Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab`
-- **Meta description** (≤160 char): `Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h.`
-- Aggiornati anche og: e twitter: corrispondenti.
-
-### H1
-Da: *"Realizzazione Siti Web a Padova – la soluzione web per il tuo business"*
-A: **"Realizzazione Siti Web a Padova: il tuo web studio locale per negozi, professionisti e aziende"**
-(integra "web studio padova", mantiene la keyword primaria a inizio).
-
-### H2 keyword-rich (rivisti)
-- "Web studio a Padova: perché la prossimità fa la differenza"
-- "Creazione e sviluppo siti web a Padova per ogni tipo di attività"
-- "Realizzazione sito web a Padova: il nostro metodo in 4 passi"
-- "Zone servite: Padova città e tutta la provincia"
-- "Realizzazioni: alcuni siti internet creati a Padova"
-- "Domande frequenti su realizzazione siti web a Padova"
-
-### Co-occorrenze keyword distribuite naturalmente
-"realizzazione siti web Padova", "sviluppo siti web Padova", "creazione siti web Padova", "siti internet Padova", "web studio Padova", "agenzia web Padova" — sparse nei paragrafi senza keyword stuffing.
-
-## JSON-LD aggiornato
-- `Service.name`: aggiunto alias `"Realizzazione e sviluppo siti web a Padova"`
-- `LocalBusiness`: aggiunto `alternateName: "Web Studio Padova"`
-- `FAQPage`: aggiunte 3 nuove Q&A allineate alle varianti keyword
-- Mantenuti BreadcrumbList, SpeakableSpecification, AggregateOffer
+## SEO / EEAT
+- **Title** (≤60): `R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab`
+- **Meta description** (≤160): `Case study reale: restyling completo, ottimizzazione SEO e campagna Google Ads per R.B. s.n.c., impresa edile specializzata in rimozione eternit a Cittadella (PD).`
+- JSON-LD `CreativeWork` esteso con `dateCreated`/`datePublished` 2026, `keywords` ampliato, `workExample` con URL del sito live.
+- `BreadcrumbList` invariato.
 
 ## File modificati
-- `src/pages/SitiWebPadova.tsx` (riscrittura sezioni + Helmet)
+- `src/pages/DemoRbSncEdilizia.tsx` — riscrittura sezioni post-hero
+- `src/assets/case-rb-snc/` (nuova cartella) — 6 immagini WebP ottimizzate
+- `public/sitemap.xml` — `lastmod` aggiornato
 
 ## File NON modificati
-- Nessun nuovo componente: si riusano `AnimatedSection`, `StaggerContainer`, `PageBreadcrumb`, `Accordion`, `ContactFormWeb3Forms`, `MapSection`.
-- Nessun cambio a sitemap, header, footer, colori, design tokens.
-- Nessuna nuova immagine: si riusano eventuali asset esistenti delle realizzazioni.
+- Nessun cambio a colori, tipografia, design tokens, Header, Footer, routing
+- Nessun cambio alla card di `/realizzazioni`
 
 ## Esclusioni esplicite
-- Non si toccano le altre pagine (interlinking parte solo *dalla* pagina Padova).
-- Non si cambia palette, font, spaziature globali.
-- Non si modifica la rotta né il canonical URL.
+- Nessuna metrica di business inventata (CTR, lead, posizionamenti, % traffico)
+- Nessuna testimonianza (riservata a futura review Google del cliente)
+- Nessun budget Ads, nessun dato di campagna
 
 ## Verifica
-Build automatica + check visivo del preview a `/realizzazione-siti-web-padova` dopo l'implementazione.
+Build automatica + screenshot Playwright della pagina renderizzata per controllare layout before/after e caricamento WebP.
