@@ -87,7 +87,7 @@ const SitiWebAziendali = () => {
                 about: { "@id": "https://4weblab.it/siti-web-aziendali#service" },
                 speakable: {
                   "@type": "SpeakableSpecification",
-                  cssSelector: [".aeo-definition", ".aeo-faq-answer"],
+                  cssSelector: [".aeo-answer", ".aeo-definition", ".aeo-faq-answer"],
                 },
               },
               {
@@ -125,6 +125,7 @@ const SitiWebAziendali = () => {
                 "@type": "Service",
                 "@id": "https://4weblab.it/siti-web-aziendali#service",
                 name: "Realizzazione Siti Web Aziendali",
+                alternateName: ["Sito web per aziende", "Sito web corporate", "Sito web multipagina B2B"],
                 description:
                   "Realizziamo siti web aziendali su misura per PMI e imprese in Veneto e in tutta Italia: design professionale, architettura scalabile, SEO integrato.",
                 serviceType: "Corporate Web Design",
