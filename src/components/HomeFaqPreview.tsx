@@ -22,8 +22,15 @@ const previewFaqs = [
   },
   {
     question: "I siti web servono ancora nel 2026 con l'arrivo dell'AI?",
-    answer:
-      "Sì, oggi più che mai: gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano sui contenuti dei siti web per generare le risposte. Senza un sito autorevole, l'attività non viene citata.",
+    answer: (
+      <>
+        Sì, oggi più che mai: gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano sui contenuti dei siti web per generare le risposte. Senza un sito autorevole, l'attività non viene citata.
+        <br />
+        <Link to="/posizionamento-google-e-ai" className="text-sm text-accent hover:underline inline-block mt-2">
+          Scopri come funziona il posizionamento su Google e AI →
+        </Link>
+      </>
+    ),
   },
 ];
 

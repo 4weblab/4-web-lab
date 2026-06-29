@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.webp';
 const cards = [
   {
     title: 'Ho un negozio',
-    text: 'Il sito che ogni negozio dovrebbe avere, semplice, chiaro nei servizi offerti, bello da vedere e orientato a Google per la visibilità. A partire da 199€',
+    text: 'Sito chiaro, veloce e ottimizzato per Google Maps e ricerche locali. A partire da 199€.',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: 'Sono un professionista',
-    text: 'Siti web per i professionisti di qualsiasi settore. Una necessità nel 2026, dall\'elettricista all\'avvocato. La prima credibilità si costruisce sul web. A partire da 549€',
+    text: 'Dall\'avvocato all\'elettricista: il sito che costruisce credibilità e porta nuovi contatti. Da 549€.',
     cta: 'Scopri i siti per professionisti',
     link: '/realizzazione-siti-web-per-professionisti',
     image: cardProfessionista,
@@ -26,7 +26,7 @@ const cards = [
   },
   {
     title: 'Ho un\'azienda',
-    text: 'Siti web aziendali. Dalle imprese più piccole a quelle più strutturate. Realizziamo siti web nati per un solo scopo, aumentare visibilità, credibilità e nuovi clienti. A partire da 899€',
+    text: 'Siti aziendali per PMI: visibilità, autorevolezza e generazione di lead misurabili. Da 899€.',
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
