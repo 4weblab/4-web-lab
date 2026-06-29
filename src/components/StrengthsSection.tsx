@@ -37,7 +37,7 @@ const StrengthsSection = () => {
           </p>
         </AnimatedSection>
 
-        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-3 gap-7" staggerDelay={0.08}>
+        <StaggerContainer className="grid sm:grid-cols-2 lg:grid-cols-4 gap-7" staggerDelay={0.08}>
           {strengths.map((strength, index) => (
             <StaggerItem key={index}>
               <article className="card-glass text-center group hover:-translate-y-2 transition-all duration-400 h-full">
