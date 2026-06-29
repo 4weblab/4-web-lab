@@ -269,12 +269,23 @@ const SitiWebAziendali = () => {
                 Siti Web Aziendali Professionali: Performance e Conversione per il tuo Business
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Progettiamo siti web aziendali su misura per aziende che puntano a un'immagine autorevole e a un ecosistema digitale capace di generare contatti e valore concreto, ovunque operi la tua impresa.
+                Siti aziendali multipagina, veloci e ottimizzati per Google e AI. Da 899€, in Veneto e in tutta Italia.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
                 <ArrowRight className="w-4 h-4" />
               </button>
+
+              <div className="aeo-answer mt-10 mx-auto max-w-3xl text-left rounded-2xl bg-primary-foreground/8 border border-primary-foreground/15 p-6 md:p-7 backdrop-blur-sm">
+                <p className="text-primary-foreground/95 text-base md:text-lg leading-relaxed mb-4">
+                  <strong>4 Web Lab</strong> realizza siti web aziendali multipagina per PMI italiane, con sede a Legnaro (PD), a partire da <strong>899€ una tantum</strong>. Design su misura, SEO integrato e supporto continuativo, ovunque sia la tua impresa.
+                </p>
+                <ul className="grid sm:grid-cols-3 gap-3 text-sm text-primary-foreground/85">
+                  <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Esperienza su PMI e settori tecnici</li>
+                  <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Copertura nazionale, lavoro da remoto</li>
+                  <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> SEO, AI e Google Ads inclusi nel metodo</li>
+                </ul>
+              </div>
             </AnimatedSection>
           </div>
         </section>
