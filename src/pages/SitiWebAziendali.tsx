@@ -25,8 +25,8 @@ import PageBreadcrumb from "@/components/PageBreadcrumb";
 import mockupImg from "@/assets/aziendali-mockup.webp";
 import teamImg from "@/assets/aziendali-team.webp";
 import rbSncEdilizia from "@/assets/rb-snc-edilizia.webp";
-import dentalHero from "@/assets/dental-hero.webp";
-import veraMethodHero from "@/assets/vera-method-hero.webp";
+import metalmeccanicaImg from "@/assets/aurum-cnc.webp";
+import fotovoltaicoImg from "@/assets/solaris-industrial.webp";
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
@@ -509,16 +509,16 @@ const SitiWebAziendali = () => {
                     to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto",
                   },
                   {
-                    img: dentalHero,
-                    title: "Studio Dentistico Premium – concept",
-                    desc: "Concept di sito aziendale multipagina per studio medico-dentistico ad alta gamma.",
-                    to: "/realizzazioni/demo-studio-dentistico-premium",
+                    img: metalmeccanicaImg,
+                    title: "Azienda metalmeccanica – concept",
+                    desc: "Concept di sito aziendale multipagina per PMI metalmeccanica: catalogo prodotti, certificazioni e area B2B.",
+                    to: "/realizzazioni/demo-metalmeccanica",
                   },
                   {
-                    img: veraMethodHero,
-                    title: "Vera Method – concept",
-                    desc: "Concept di sito aziendale per metodo proprietario nel mondo del personal training.",
-                    to: "/realizzazioni/demo-personal-trainer-vera-method",
+                    img: fotovoltaicoImg,
+                    title: "Azienda fotovoltaico – concept",
+                    desc: "Concept di sito aziendale per impianti fotovoltaici e accumulo: case studies industriali e lead generation B2B.",
+                    to: "/realizzazioni/demo-fotovoltaico",
                   },
                 ].map((item, i) => (
                   <StaggerItem key={i}>
