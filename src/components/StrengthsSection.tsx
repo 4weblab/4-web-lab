@@ -1,4 +1,4 @@
-import { Zap, Search, Smartphone, Shield, HeadphonesIcon, Wrench } from 'lucide-react';
+import { Zap, Search, Smartphone, Wrench } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
 
@@ -6,32 +6,22 @@ const strengths = [
   {
     icon: Zap,
     title: 'Performance elevate',
-    description: 'Siti veloci e ottimizzati che si caricano in un attimo, migliorando esperienza utente e posizionamento.',
+    description: 'Caricamento rapido e Core Web Vitals al top: più utenti restano, più Google ti premia.',
   },
   {
     icon: Search,
-    title: 'SEO integrata',
-    description: 'Ottimizzazione per farti trovare dai clienti su Google, con strategie mirate per il posizionamento nazionale.',
+    title: 'SEO e visibilità AI',
+    description: 'Ottimizzazione per Google e per le AI (ChatGPT, Gemini, Perplexity): farti trovare, ovunque cerchino.',
   },
   {
     icon: Smartphone,
     title: 'Mobile-first',
-    description: 'Design pensato prima per smartphone, dove la maggior parte degli utenti naviga oggi.',
-  },
-  {
-    icon: Shield,
-    title: 'Sicurezza garantita',
-    description: 'Protocolli HTTPS, aggiornamenti costanti e conformità alle normative privacy.',
+    description: 'Progettazione mobile-first: il sito funziona perfettamente dove i tuoi clienti lo guardano davvero.',
   },
   {
     icon: Wrench,
     title: 'Supporto dedicato',
-    description: 'Un referente sempre disponibile per ogni tua esigenza tecnica o creativa.',
-  },
-  {
-    icon: HeadphonesIcon,
-    title: 'Sempre operativo',
-    description: 'Assistenza continua per garantire che il tuo sito sia sempre funzionante e aggiornato.',
+    description: 'Un referente diretto, niente ticket impersonali: rispondiamo a te, sul tuo progetto.',
   },
 ];
 
