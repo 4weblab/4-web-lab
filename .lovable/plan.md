@@ -1,46 +1,115 @@
 ## Obiettivo
-Aggiungere a ogni pagina del sito **un solo link discorsivo** (in linea con il testo, non un bottone) verso `/pubblicita-google-ads`, con anchor text variato e contestuale al contenuto della pagina ospitante.
+Restyling completo (copy + struttura) della pagina `/realizzazione-siti-web-padova` per massimizzare SEO/GEO/AEO, sfruttando le query che già generano impression (408 in 3 mesi, ma solo 1 click → forte gap CTR da chiudere) e creando interlinking strategico verso le altre pagine top per impression.
 
-## Regole generali
-- **1 link per pagina**, integrato in un paragrafo esistente (no nuove sezioni dedicate).
-- Anchor text **vario** (no ripetizione esatta) ma sempre con keyword pertinenti: "pubblicità su Google ADS", "campagne Google ADS", "fare pubblicità su Google", "Google ADS gestite da noi", ecc.
-- Usare `<Link to="/pubblicita-google-ads">` (React Router) sulle pagine SPA; `<a href>` solo se la pagina già usa quello stile.
-- Posizionare il link dove **fluisce naturalmente** nel discorso (es. dopo un riferimento a visibilità, traffico, acquisizione clienti, Google, SEO).
-- **Escludere**: `PubblicitaGoogleAds.tsx` (self), `NotFound.tsx`, `CookiePolicy.tsx`, `PrivacyPolicy.tsx` (pagine legali/utility).
+## Diagnosi attuale
+- **Query principali captate** (Search Console, ultimi 3 mesi):
+  1. realizzazione siti web padova (73)
+  2. siti web padova (65)
+  3. sviluppo siti web padova (30)
+  4. creazione siti web padova (28)
+  5. realizzazione siti internet padova (23)
+  6. creazione siti internet padova (14)
+  7. web studio padova (12)
+  8. realizzazione sito web padova (12)
+  9. realizzazione siti padova (11)
+- **Problema CTR**: 408 impression → 1 click. Title e meta description attuali non agganciano. La keyword "web studio padova" e le varianti "internet" non compaiono nel copy.
+- **Struttura**: pagina già ben impostata ma con H2 generici, sezioni testuali dense e poco scannabili, nessun blocco "answer-first" sopra la piega oltre al definition block, nessuna prova sociale/realizzazioni inline.
 
-## Pagine da modificare e dove inserire il link
+## Nuova struttura della pagina (ordine sezioni)
 
-### Servizi principali
-1. **Index.tsx** (Home) — link in `AboutSection` o in un blocco testuale: "…oltre ai siti web, possiamo anche [gestire le tue campagne Google ADS](…)".
-2. **SitiWebNegozi.tsx** — paragrafo su visibilità locale: "…e se vuoi accelerare i risultati, possiamo affiancare il sito con [campagne Google ADS mirate]".
-3. **SitiWebProfessionisti.tsx** — sezione su acquisizione clienti: "…per ottenere richieste subito, valuta anche [la pubblicità su Google ADS]".
-4. **SitiWebAziendali.tsx** — paragrafo su lead B2B: "…integrabile con [campagne Google ADS per generare lead qualificati]".
-5. **SitiWebPadova.tsx** — sezione locale Padova: "…per le attività di Padova che vogliono risultati immediati offriamo anche [gestione Google ADS]".
-6. **PosizionamentoGoogleEAi.tsx** — paragrafo SEO vs ADS: "…mentre la SEO costruisce visibilità nel tempo, [Google ADS] porta traffico immediato; i due canali si rafforzano".
-7. **Realizzazioni.tsx** — chiusura/intro: "…oltre ai siti realizzati, gestiamo anche [campagne Google ADS]".
-8. **FaqSitiWeb.tsx** — in una risposta esistente che parla di traffico/visibilità, link a "[pubblicità su Google ADS]".
-9. **Contact.tsx** — nel paragrafo "Non sai da dove partire?" o nell'hero, riga discorsiva con link "[gestione Google ADS]".
+```
+1. HERO (rivisto)
+   - H1 nuovo + sub-copy che integra varianti keyword
+   - 2 CTA (consulenza gratuita + WhatsApp)
+   - Trust-strip: sede Legnaro (PD) · da 199€ · risposta in 24h · clienti in tutta la provincia
 
-### Blog (9 articoli)
-Inserire 1 link contestuale nel corpo di ciascun articolo:
-10. **BlogNotFoundOnGoogleArticle.tsx** — naturale: parla di non comparire su Google → "…oppure [investire in pubblicità su Google ADS] per comparire subito".
-11. **BlogAiWebsiteArticle.tsx** — accenno traffico/promozione → link.
-12. **BlogArubaSupersiteArticle.tsx** — in confronto piattaforme/visibilità.
-13. **BlogDiyWebsiteArticle.tsx** — passaggio su come farsi trovare.
-14. **BlogGdprArticle.tsx** — link più sottile, es. in conclusione su strumenti di marketing conformi.
-15. **BlogOutdatedWebsiteArticle.tsx** — passaggio su rilancio sito + traffico.
-16. **BlogQuotePlatformsArticle.tsx** — confronto canali acquisizione.
-17. **BlogSiteVsSocialArticle.tsx** — paragrafo su canali di traffico, ottimo per ADS.
-18. **BlogWebsiteCostArticle.tsx** — sezione su investimenti complementari.
+2. ANSWER BOX AEO (nuovo, sopra-piega)
+   - Risposta diretta in 2 frasi a "quanto costa / quanto tempo / chi siamo"
+   - .aeo-definition wrapper (già usato per Speakable)
 
-### Demo (escluse di default)
-Le pagine `Demo*.tsx` sono showcase per clienti specifici e non rappresentano contenuto editoriale del sito 4 Web Lab; **non vengono modificate** (no interlinking forzato in demo di terzi).
+3. PERCHÉ SCEGLIERE UN WEB STUDIO A PADOVA (rivisto)
+   - H2 keyword-rich ("Web studio a Padova: perché conta la prossimità")
+   - 5 bullet potenziati + micro-prova ("Sede a Legnaro, raggiungibile in 15 min da Padova centro")
 
-## Tecnica
-- Per ogni file: 1 modifica chirurgica `apply_patch` che aggiunge un `<Link>` (importato se non già presente) all'interno di un paragrafo esistente.
-- Verifica build automatica al termine.
+4. SERVIZI PER NEGOZI / PROFESSIONISTI / AZIENDE (mantenuto + rafforzato)
+   - Cards con prezzi una tantum visibili
+   - Link interni alle 3 landing → interlinking diretto verso top-impression pages
+
+5. TABELLA COMPARATIVA (mantenuta, spostata qui)
+
+6. METODO 4 STEP (mantenuto, compatto)
+
+7. ZONE SERVITE (nuovo, GEO-focus)
+   - Mini-mappa testuale con i 12 comuni della provincia in chip cliccabili (no link, solo visual)
+   - Paragrafo discorsivo con co-occorrenze "creazione siti web Padova", "sviluppo siti internet Padova", "realizzazione sito web Padova"
+   - Riuso `MapSection` esistente se compatibile (sede Legnaro)
+
+8. CASI / REALIZZAZIONI (nuovo blocco snello)
+   - 2-3 anteprime da `Realizzazioni` o demo già esistenti (DemoRbSncEdilizia, DemoStudioDentisticoPremium, DemoBoutiqueBB) con link → /realizzazioni
+   - Prova visiva → migliora CTR e tempo sulla pagina
+
+9. BLOCCO INTERLINKING DISCORSIVO (nuovo)
+   - Paragrafo con link contestuali a:
+     · /siti-web-aziendali (214 impr)
+     · /realizzazione-siti-web-per-professionisti (90 impr)
+     · /siti-web-per-negozi (84 impr)
+     · /blog/quanto-costa-un-sito-web-nel-2026
+     · /blog/siti-web-creati-con-intelligenza-artificiale (70 impr)
+     · /blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere (55 impr)
+     · /posizionamento-google-e-ai
+     · /pubblicita-google-ads (link già presente, mantenuto)
+
+10. FAQ AEO (estesa)
+    - Aggiunte domande che intercettano varianti keyword:
+      · "Cosa fa un web studio a Padova?"
+      · "Qual è la differenza tra realizzazione e sviluppo siti web?"
+      · "Come scegliere un'agenzia per la creazione di siti internet a Padova?"
+    - Mantenute le 6 esistenti
+
+11. CTA FINALE (mantenuta, copy rifinito)
+```
+
+## Copy & SEO – modifiche chiave
+
+### Title & Meta
+- **Title** (≤60 char): `Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab`
+- **Meta description** (≤160 char): `Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h.`
+- Aggiornati anche og: e twitter: corrispondenti.
+
+### H1
+Da: *"Realizzazione Siti Web a Padova – la soluzione web per il tuo business"*
+A: **"Realizzazione Siti Web a Padova: il tuo web studio locale per negozi, professionisti e aziende"**
+(integra "web studio padova", mantiene la keyword primaria a inizio).
+
+### H2 keyword-rich (rivisti)
+- "Web studio a Padova: perché la prossimità fa la differenza"
+- "Creazione e sviluppo siti web a Padova per ogni tipo di attività"
+- "Realizzazione sito web a Padova: il nostro metodo in 4 passi"
+- "Zone servite: Padova città e tutta la provincia"
+- "Realizzazioni: alcuni siti internet creati a Padova"
+- "Domande frequenti su realizzazione siti web a Padova"
+
+### Co-occorrenze keyword distribuite naturalmente
+"realizzazione siti web Padova", "sviluppo siti web Padova", "creazione siti web Padova", "siti internet Padova", "web studio Padova", "agenzia web Padova" — sparse nei paragrafi senza keyword stuffing.
+
+## JSON-LD aggiornato
+- `Service.name`: aggiunto alias `"Realizzazione e sviluppo siti web a Padova"`
+- `LocalBusiness`: aggiunto `alternateName: "Web Studio Padova"`
+- `FAQPage`: aggiunte 3 nuove Q&A allineate alle varianti keyword
+- Mantenuti BreadcrumbList, SpeakableSpecification, AggregateOffer
+
+## File modificati
+- `src/pages/SitiWebPadova.tsx` (riscrittura sezioni + Helmet)
+
+## File NON modificati
+- Nessun nuovo componente: si riusano `AnimatedSection`, `StaggerContainer`, `PageBreadcrumb`, `Accordion`, `ContactFormWeb3Forms`, `MapSection`.
+- Nessun cambio a sitemap, header, footer, colori, design tokens.
+- Nessuna nuova immagine: si riusano eventuali asset esistenti delle realizzazioni.
 
 ## Esclusioni esplicite
-- Nessuna nuova sezione, nessun bottone, nessun cambio di layout.
-- Nessuna modifica a sitemap, JSON-LD o memoria.
-- Pagine demo non toccate (confermami se invece le vuoi includere).
+- Non si toccano le altre pagine (interlinking parte solo *dalla* pagina Padova).
+- Non si cambia palette, font, spaziature globali.
+- Non si modifica la rotta né il canonical URL.
+
+## Verifica
+Build automatica + check visivo del preview a `/realizzazione-siti-web-padova` dopo l'implementazione.
