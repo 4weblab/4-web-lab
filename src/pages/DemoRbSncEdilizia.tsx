@@ -12,12 +12,18 @@
 
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowRight, ExternalLink, Search, Target, Sparkles, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ExternalLink, Search, Target, Sparkles, CheckCircle2, Gauge, Calendar, Layers, ShieldCheck } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import heroImg from "@/assets/rb-snc-edilizia.webp";
+import beforeImg from "@/assets/case-rb-snc/before-2010.webp";
+import afterDesktop from "@/assets/case-rb-snc/after-desktop.webp";
+import afterMobile from "@/assets/case-rb-snc/after-mobile.webp";
+import afterDetail from "@/assets/case-rb-snc/after-detail.webp";
+import psMobile from "@/assets/case-rb-snc/pagespeed-mobile.webp";
+import psDesktop from "@/assets/case-rb-snc/pagespeed-desktop.webp";
 
 const URL_LIVE = "https://rb-snc.it";
 const URL_PAGE = "https://4weblab.it/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto";
@@ -26,19 +32,19 @@ const DemoRbSncEdilizia = () => {
   return (
     <>
       <Helmet>
-        <title>Caso studio R.B s.n.c. — sito web, SEO e Google Ads per rimozione eternit a Cittadella | 4 Web Lab</title>
+        <title>R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab</title>
         <meta
           name="description"
-          content="Caso studio reale 4 Web Lab: restyling completo del sito, ottimizzazione SEO e campagna Google Ads per R.B s.n.c. di Bertoluzzo e Ragazzo, impresa edile specializzata in rimozione amianto e rifacimento tetti a Cittadella (PD)."
+          content="Case study reale: restyling completo, ottimizzazione SEO e campagna Google Ads per R.B. s.n.c., impresa edile specializzata in rimozione eternit a Cittadella (PD)."
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={URL_PAGE} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={URL_PAGE} />
-        <meta property="og:title" content="Caso studio R.B s.n.c. — sito web, SEO e Google Ads | 4 Web Lab" />
+        <meta property="og:title" content="R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Restyling, SEO e Google Ads per un'impresa edile di Cittadella (PD) specializzata in rimozione eternit e rifacimento tetti. Caso studio reale 4 Web Lab."
+          content="Case study reale: restyling, SEO e Google Ads per un'impresa edile di Cittadella (PD) specializzata in rimozione eternit e rifacimento tetti."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -52,6 +58,8 @@ const DemoRbSncEdilizia = () => {
             name: "Restyling sito web, SEO e Google Ads per R.B s.n.c.",
             url: URL_PAGE,
             inLanguage: "it-IT",
+            datePublished: "2026-06-29",
+            dateCreated: "2026-06-29",
             isPartOf: { "@id": "https://4weblab.it/#website" },
             author: { "@id": "https://4weblab.it/#business" },
             creator: { "@id": "https://4weblab.it/#business" },
@@ -63,8 +71,9 @@ const DemoRbSncEdilizia = () => {
               description:
                 "Impresa edile specializzata in rimozione eternit (amianto) e rifacimento tetti, con sede a Cittadella (Padova).",
             },
+            workExample: { "@type": "WebSite", url: URL_LIVE, name: "rb-snc.it" },
             keywords:
-              "rimozione eternit Cittadella, rifacimento tetti Padova, sito web edilizia, Google Ads edilizia, SEO impresa edile, R.B s.n.c.",
+              "rimozione eternit Cittadella, rifacimento tetti Padova, sito web edilizia, Google Ads edilizia, SEO impresa edile, restyling sito edile Veneto, R.B. s.n.c.",
           })}
         </script>
         <script type="application/ld+json">
