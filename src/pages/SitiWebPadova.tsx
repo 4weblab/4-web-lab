@@ -471,7 +471,7 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Settings className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Un metodo chiaro e rapido</h2>
+                <h2 className="heading-2">Realizzazione sito web a Padova: il nostro metodo in 4 passi</h2>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
@@ -525,7 +525,7 @@ const SitiWebPadova = () => {
           </div>
         </section>
 
-        {/* Sezione 4 – Operiamo a Padova e provincia */}
+        {/* Sezione 4 – Zone servite GEO */}
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
@@ -533,12 +533,27 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Globe className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Operativi a Padova e provincia</h2>
+                <h2 className="heading-2">Zone servite: Padova città e tutta la provincia</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {[
+                    "Padova", "Abano Terme", "Albignasego", "Selvazzano Dentro", "Vigonza",
+                    "Cadoneghe", "Rubano", "Legnaro", "Este", "Monselice", "Cittadella",
+                    "Piove di Sacco", "Vigodarzere", "Ponte San Nicolò", "Saonara",
+                  ].map((comune) => (
+                    <span
+                      key={comune}
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/8 border border-accent/15 text-sm text-foreground/80"
+                    >
+                      <MapPin className="w-3.5 h-3.5 text-accent" /> {comune}
+                    </span>
+                  ))}
+                </div>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  La nostra sede operativa a Padova ci permette di essere un riferimento concreto per le attività del
-                  territorio. Lavoriamo con{" "}
+                  La sede operativa a <strong>Legnaro (PD)</strong> ci rende un riferimento concreto per la <strong>realizzazione di siti web a Padova</strong> e per chi cerca <strong>sviluppo e creazione di siti internet</strong> in tutta la provincia. Lavoriamo con{" "}
                   <Link
                     to="/realizzazione-siti-web-per-professionisti"
                     className="text-accent hover:underline font-medium"
@@ -553,38 +568,78 @@ const SitiWebPadova = () => {
                   <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">
                     aziende
                   </Link>{" "}
-                  della provincia di Padova, offrendo un servizio che combina la vicinanza di una realtà locale con la
-                  solidità di un metodo collaudato a livello nazionale.
+                  della provincia di Padova, combinando la vicinanza di un web studio locale con un metodo collaudato a livello nazionale.
                 </p>
                 <p>
-                  Che la tua attività sia nel centro di Padova o in uno dei comuni della provincia, il nostro approccio
-                  resta lo stesso: ascolto, progettazione su misura e un risultato finale che rispecchia davvero la tua
-                  attività. Puoi sfogliare alcune <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link>. Alle attività di Padova che vogliono risultati misurabili fin dalle prime settimane proponiamo anche la <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">gestione completa di campagne Google ADS</Link>. La conoscenza del tessuto imprenditoriale padovano ci consente di proporre soluzioni
-                  realmente efficaci, senza formule standardizzate.
+                  Che la tua attività sia in centro a Padova o in uno dei comuni della provincia, l'approccio resta lo stesso: ascolto, progettazione su misura e un risultato che rispecchia davvero la tua attività. Alle realtà che vogliono risultati misurabili fin dalle prime settimane proponiamo anche la <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">gestione completa di campagne Google ADS</Link>, perfetta per affiancare il sito appena pubblicato e portare traffico qualificato da subito.
                 </p>
-                <p className="mt-6">
-                  Seguiamo abitualmente clienti a Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza,
-                  Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco, oltre agli altri comuni
-                  della provincia.
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Sezione Realizzazioni teaser */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-3">
+                <div className="icon-box w-13 h-13">
+                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Realizzazioni: alcuni siti internet creati a Padova e provincia</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-10 max-w-3xl">
+                  Una piccola selezione di siti web realizzati per attività del territorio padovano e veneto. Tra lavori pubblicati e concept di design.
                 </p>
-                <p className="mt-6">
-                  Offriamo anche soluzioni specifiche per ogni settore. Per approfondire i costi, consulta la nostra
-                  guida su{" "}
-                  <Link
-                    to="/blog/quanto-costa-un-sito-web-nel-2026"
-                    className="text-accent hover:underline font-medium"
-                  >
-                    quanto costa un sito web nel 2026
-                  </Link>
-                  , oppure scopri se conviene{" "}
-                  <Link
-                    to="/blog/siti-web-creati-con-intelligenza-artificiale"
-                    className="text-accent hover:underline font-medium"
-                  >
-                    creare un sito con intelligenza artificiale
-                  </Link>
-                  .
-                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+                {[
+                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Sito web, SEO e Google Ads per azienda di rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
+                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium per studio dentistico.", to: "/realizzazioni" },
+                  { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di sito per personal trainer con metodo proprietario.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
+                ].map((item, i) => (
+                  <StaggerItem key={i}>
+                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
+                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                        <img src={item.img} alt={item.title} loading="lazy" width="640" height="400" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </Link>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <div className="text-center mt-10">
+                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-semibold link-underline">
+                  Vedi tutte le realizzazioni →
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sezione Interlinking discorsivo */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Link2 className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Approfondisci il servizio adatto alla tua attività</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <div className="prose prose-lg max-w-none text-muted-foreground">
+                  <p>
+                    Se hai un'attività commerciale a Padova puoi partire dalla pagina dedicata ai <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">siti web per negozi</Link>, mentre per studi e liberi professionisti abbiamo una sezione specifica sulla <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">realizzazione di siti web per professionisti</Link>. Le PMI strutturate trovano un percorso dedicato nella pagina <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">siti web aziendali</Link>, con architetture multipagina e lead generation.
+                  </p>
+                  <p>
+                    Per capire meglio costi, tempistiche e tecnologie ti consigliamo la guida <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, l'approfondimento su <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">siti creati con intelligenza artificiale</Link> e l'analisi su <Link to="/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere" className="text-accent hover:underline font-medium">Aruba SuperSite</Link> per chi sta valutando soluzioni fai-da-te. Se invece ti interessa la visibilità organica oltre Padova, dai un'occhiata alla pagina <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">posizionamento Google e AI</Link>.
+                  </p>
+                </div>
               </AnimatedSection>
             </div>
           </div>
