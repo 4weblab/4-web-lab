@@ -15,6 +15,8 @@ import {
   LayoutTemplate,
   Wrench,
   ChevronDown,
+  MapPin,
+  Image as ImageIcon,
 } from "lucide-react";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -22,6 +24,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import mockupImg from "@/assets/aziendali-mockup.webp";
 import teamImg from "@/assets/aziendali-team.webp";
+import rbSncEdilizia from "@/assets/rb-snc-edilizia.webp";
+import metalmeccanicaImg from "@/assets/aurum-cnc.webp";
+import fotovoltaicoImg from "@/assets/solaris-industrial.webp";
 
 const SitiWebAziendali = () => {
   const handleContactClick = () => {
@@ -34,10 +39,10 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab</title>
+        <title>Siti Web Aziendali da 899€ · Veneto e Italia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web aziendali da 899€: design su misura, SEO e assistenza per PMI e aziende in Veneto e in tutta Italia. Preventivo gratuito in 24h da 4 Web Lab."
+          content="Siti web aziendali professionali da 899€: design su misura, SEO per Google e AI, Google Ads. Per PMI in Veneto e in tutta Italia. Preventivo in 24h."
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
@@ -82,7 +87,7 @@ const SitiWebAziendali = () => {
                 about: { "@id": "https://4weblab.it/siti-web-aziendali#service" },
                 speakable: {
                   "@type": "SpeakableSpecification",
-                  cssSelector: [".aeo-definition", ".aeo-faq-answer"],
+                  cssSelector: [".aeo-answer", ".aeo-definition", ".aeo-faq-answer"],
                 },
               },
               {
@@ -120,6 +125,7 @@ const SitiWebAziendali = () => {
                 "@type": "Service",
                 "@id": "https://4weblab.it/siti-web-aziendali#service",
                 name: "Realizzazione Siti Web Aziendali",
+                alternateName: ["Sito web per aziende", "Sito web corporate", "Sito web multipagina B2B"],
                 description:
                   "Realizziamo siti web aziendali su misura per PMI e imprese in Veneto e in tutta Italia: design professionale, architettura scalabile, SEO integrato.",
                 serviceType: "Corporate Web Design",
@@ -209,6 +215,22 @@ const SitiWebAziendali = () => {
                       text: "Sì: il sito può essere progettato con un pannello di amministrazione che permette di modificare testi, immagini e nuove sezioni in autonomia, senza intervenire sul codice.",
                     },
                   },
+                  {
+                    "@type": "Question",
+                    name: "Cosa fa un'agenzia di siti web aziendali?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Un'agenzia di siti web aziendali progetta, sviluppa e ottimizza siti multipagina per imprese: analizza obiettivi e pubblico, definisce architettura informativa, sviluppa il sito con tecnologie moderne, integra SEO e dati strutturati, fornisce supporto continuativo e, se richiesto, gestisce campagne Google Ads per generare lead qualificati.",
+                    },
+                  },
+                  {
+                    "@type": "Question",
+                    name: "Un sito web aziendale aiuta davvero ad acquisire clienti B2B?",
+                    acceptedAnswer: {
+                      "@type": "Answer",
+                      text: "Sì: un sito aziendale strutturato e ottimizzato è il principale strumento di credibilità nel B2B. Buyer e responsabili acquisti verificano sempre online un potenziale fornitore prima di contattarlo, e un sito chiaro su servizi, casi reali e contatti aumenta in modo significativo la qualità e il volume dei lead in ingresso.",
+                    },
+                  },
                 ],
               },
               {
@@ -247,12 +269,23 @@ const SitiWebAziendali = () => {
                 Siti Web Aziendali Professionali: Performance e Conversione per il tuo Business
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Progettiamo siti web aziendali su misura per aziende che puntano a un'immagine autorevole e a un ecosistema digitale capace di generare contatti e valore concreto, ovunque operi la tua impresa.
+                Siti aziendali multipagina, veloci e ottimizzati per Google e AI. Da 899€, in Veneto e in tutta Italia.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
                 <ArrowRight className="w-4 h-4" />
               </button>
+
+              <div className="aeo-answer mt-10 mx-auto max-w-3xl text-left rounded-2xl bg-primary-foreground/8 border border-primary-foreground/15 p-6 md:p-7 backdrop-blur-sm">
+                <p className="text-primary-foreground/95 text-base md:text-lg leading-relaxed mb-4">
+                  <strong>4 Web Lab</strong> realizza siti web aziendali multipagina per PMI italiane, con sede a Legnaro (PD), a partire da <strong>899€ una tantum</strong>. Design su misura, SEO integrato e supporto continuativo, ovunque sia la tua impresa.
+                </p>
+                <ul className="grid sm:grid-cols-3 gap-3 text-sm text-primary-foreground/85">
+                  <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Esperienza su PMI e settori tecnici</li>
+                  <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Copertura nazionale, lavoro da remoto</li>
+                  <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> SEO, AI e Google Ads inclusi nel metodo</li>
+                </ul>
+              </div>
             </AnimatedSection>
           </div>
         </section>
@@ -274,13 +307,6 @@ const SitiWebAziendali = () => {
                   <Building2 className="w-6 h-6 text-accent-foreground" />
                 </div>
                 <h2 className="heading-2">Perché un'azienda ha bisogno di un sito strutturato</h2>
-              </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
-                <p>
-                  Un sito web aziendale non è un semplice biglietto da visita digitale: è uno strumento strategico per
-                  la crescita del business. La realizzazione di un sito web per aziende richiede un approccio
-                  strutturato che tenga conto di obiettivi, pubblico e posizionamento nel mercato.
-                </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
                 {[
@@ -329,27 +355,23 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" direction="left">
-                  <p className="mb-6">
-                    Progettiamo e sviluppiamo siti web aziendali multipagina con architetture pensate per crescere
-                    insieme al business. Ogni progetto nasce da un'analisi approfondita delle esigenze dell'azienda e si
-                    traduce in una struttura chiara, navigabile e orientata alla conversione. Esempi e concept nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>. Per generare lead qualificati B2B fin dal lancio, integriamo il sito con <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google ADS dedicate alle aziende</Link>.
+                  <p className="mb-5">
+                    Progettiamo siti aziendali multipagina con architetture scalabili e copy orientato alla conversione, evitando i limiti di un <Link to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026" className="text-accent hover:underline font-medium">sito datato che fa perdere clienti</Link>.
                   </p>
-                  <p className="mb-6">
-                    I nostri siti web per aziende includono sezioni dedicate ai servizi, all'identità aziendale, ai
-                    contatti e a ogni area strategica del business. Realizziamo architetture scalabili, pronte per
-                    evolversi nel tempo con nuove pagine, funzionalità e contenuti.
-                  </p>
-                  <p>
-                    Ogni sito è sviluppato con tecnologie moderne che garantiscono velocità, sicurezza e un'esperienza
-                    utente ottimale su qualsiasi dispositivo, evitando i limiti tipici di un{" "}
-                    <Link
-                      to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
-                      className="text-accent hover:underline font-medium"
-                    >
-                      sito ormai datato che fa perdere clienti
-                    </Link>
-                    .
-                  </p>
+                  <ul className="list-none space-y-2.5 not-prose">
+                    {[
+                      "Architettura multipagina chiara e indicizzabile",
+                      "Sezioni dedicate a servizi, identità, casi e contatti",
+                      "CMS opzionale per aggiornare contenuti in autonomia",
+                      "Performance elevate (Core Web Vitals) e mobile-first",
+                      "Predisposizione a SEO, AI e campagne Google Ads",
+                    ].map((it) => (
+                      <li key={it} className="flex items-start gap-2.5 text-base text-muted-foreground">
+                        <CheckCircle2 className="w-4 h-4 mt-1 text-accent flex-shrink-0" />
+                        <span>{it}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </AnimatedSection>
                 <AnimatedSection direction="right">
                   <img
@@ -389,30 +411,14 @@ const SitiWebAziendali = () => {
                   className="prose prose-lg max-w-none text-muted-foreground order-1 md:order-2"
                   direction="right"
                 >
-                  <p className="mb-6">
-                    Un sito web aziendale strutturato non è semplicemente un sito con più pagine: è un ecosistema
-                    digitale progettato con una gerarchia dei contenuti chiara, una navigazione intuitiva e
-                    un'architettura informativa che guida il visitatore verso le azioni desiderate.
+                  <p className="mb-5">
+                    Un sito aziendale strutturato è un ecosistema digitale: gerarchia dei contenuti chiara, navigazione intuitiva, percorsi che guidano il visitatore alla conversione.
                   </p>
-                  <p className="mb-6">
-                    Progettiamo siti web per piccole e medie imprese con strutture che facilitano l'indicizzazione sui
-                    motori di ricerca, migliorano l'esperienza utente e permettono di aggiungere nuove sezioni senza
-                    compromettere la coerenza complessiva.
-                  </p>
-                  <p className="mb-6">
-                    La scalabilità è al centro del nostro approccio: ogni sito è pensato per accompagnare la crescita
-                    dell'azienda nel tempo, adattandosi a nuove esigenze e opportunità.
+                  <p className="mb-5">
+                    Progettiamo per <strong>scalare</strong>: nuove pagine, nuovi servizi o nuove lingue si aggiungono senza compromettere coerenza e posizionamento SEO.
                   </p>
                   <p>
-                    Sia che la tua azienda sia in Veneto o in qualsiasi altra parte d'Italia, 4 Web Lab porta online il
-                    tuo business.
-                  </p>
-                  <p className="mt-4">
-                    Realizziamo siti web aziendali per imprese in tutto il Veneto — Padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno — e in qualsiasi altra regione italiana. Per progetti specifici nel capoluogo, vedi la pagina dedicata alla{" "}
-                    <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
-                      realizzazione siti web a Padova
-                    </Link>
-                    .
+                    Lavoriamo da remoto in tutta Italia con un metodo collaudato. Tra le competenze parallele integrabili: <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">posizionamento su Google e AI</Link> e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads B2B</Link>.
                   </p>
                 </AnimatedSection>
               </div>
@@ -474,6 +480,120 @@ const SitiWebAziendali = () => {
                     </tbody>
                   </table>
                 </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Realizzazioni teaser */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-3">
+                <div className="icon-box w-13 h-13">
+                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Alcuni siti web aziendali realizzati</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-10 max-w-3xl">
+                  Una selezione di lavori pubblicati e concept dedicati a imprese italiane, tra settori tecnici, servizi e attività professionali.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+                {[
+                  {
+                    img: rbSncEdilizia,
+                    title: "R.B. s.n.c. – Cittadella (PD)",
+                    desc: "Sito web aziendale, SEO e Google Ads per impresa di rimozione eternit e rifacimento tetti.",
+                    to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto",
+                  },
+                  {
+                    img: metalmeccanicaImg,
+                    title: "Azienda metalmeccanica – concept",
+                    desc: "Concept di sito aziendale multipagina per PMI metalmeccanica: catalogo prodotti, certificazioni e area B2B.",
+                    to: "/realizzazioni/demo-metalmeccanica",
+                  },
+                  {
+                    img: fotovoltaicoImg,
+                    title: "Azienda fotovoltaico – concept",
+                    desc: "Concept di sito aziendale per impianti fotovoltaici e accumulo: case studies industriali e lead generation B2B.",
+                    to: "/realizzazioni/demo-fotovoltaico",
+                  },
+                ].map((item, i) => (
+                  <StaggerItem key={i}>
+                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
+                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          loading="lazy"
+                          width="640"
+                          height="400"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </Link>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <AnimatedSection delay={0.2} className="mt-8 text-center">
+                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
+                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Zone servite GEO */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Globe className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Zone servite: Veneto e tutta Italia</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {[
+                    { name: "Padova", to: "/realizzazione-siti-web-padova" },
+                    { name: "Venezia" },
+                    { name: "Vicenza" },
+                    { name: "Verona" },
+                    { name: "Treviso" },
+                    { name: "Rovigo" },
+                    { name: "Belluno" },
+                  ].map((c) =>
+                    c.to ? (
+                      <Link
+                        key={c.name}
+                        to={c.to}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-sm text-foreground hover:bg-accent/15 transition-colors"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </Link>
+                    ) : (
+                      <span
+                        key={c.name}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/8 border border-accent/15 text-sm text-foreground/80"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </span>
+                    )
+                  )}
+                </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p>
+                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti web aziendali per imprese di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto. Operiamo con <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">studi professionali</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">attività commerciali</Link> e PMI di settori tecnici e dei servizi.
+                </p>
               </AnimatedSection>
             </div>
           </div>
@@ -640,6 +760,16 @@ const SitiWebAziendali = () => {
                       question: "Posso aggiornare il sito in autonomia?",
                       answer:
                         "Sì: il sito può essere progettato con un pannello di amministrazione che permette di modificare testi, immagini e nuove sezioni in autonomia, senza intervenire sul codice.",
+                    },
+                    {
+                      question: "Cosa fa un'agenzia di siti web aziendali?",
+                      answer:
+                        "Un'agenzia di siti web aziendali progetta, sviluppa e ottimizza siti multipagina per imprese: analizza obiettivi e pubblico, definisce architettura informativa, sviluppa il sito con tecnologie moderne, integra SEO e dati strutturati, fornisce supporto continuativo e, se richiesto, gestisce campagne Google Ads per generare lead qualificati.",
+                    },
+                    {
+                      question: "Un sito web aziendale aiuta davvero ad acquisire clienti B2B?",
+                      answer:
+                        "Sì: un sito aziendale strutturato e ottimizzato è il principale strumento di credibilità nel B2B. Buyer e responsabili acquisti verificano sempre online un potenziale fornitore prima di contattarlo, e un sito chiaro su servizi, casi reali e contatti aumenta in modo significativo la qualità e il volume dei lead in ingresso.",
                     },
                   ].map((faq, index) => (
                     <AccordionItem

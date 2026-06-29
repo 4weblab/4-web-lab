@@ -1,88 +1,71 @@
-
 ## Diagnosi attuale
 
-**Ridondanze copy (sotto-piega lunga e ripetitiva)**
-- `AboutSection`: il blocco intro + i due paragrafi successivi ripetono 3 volte "siti professionali per professionisti, negozi e aziende in tutta Italia". La citazione "Il nostro obiettivo…" è anonima e non aggiunge EEAT.
-- `StrengthsSection`: 6 card di cui 3 dicono di fatto la stessa cosa (Supporto dedicato / Sempre operativo / Sicurezza generica). Riducibili a 4 punti distintivi.
-- `ServicesSection`: 6 card in carousel; "Siti web professionali" duplica `UserRoutingSection`, "Restyling" e "Gestione contenuti" sono micro-servizi che appesantiscono il flusso decisionale.
-- `UserRoutingSection`: testi card con 4 righe ciascuna — il prezzo viene letto bene, il resto è didascalico.
+La pagina è già solida (definizione AEO, tabella comparativa, FAQ con `aeo-faq-answer`, JSON-LD `@graph` completo con LocalBusiness + Service + FAQPage + HowTo + Speakable). Confronto con i miglioramenti recenti su `/realizzazione-siti-web-padova` e `Index.tsx` evidenzia però queste lacune:
 
-**Interlinking presente**
-Padova (About) · Realizzazioni (About) · Google Ads (About) · Professionisti/Negozi/Aziendali (Strengths + Routing) · Blog 1 articolo (FAQ preview) · FAQ completa.
-**Mancanti / deboli**
-- Nessun link a `/posizionamento-google-e-ai` (servizio differenziante SEO/AEO/GEO).
-- Nessun link a un case study reale (`/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto`) → perdita di segnale EEAT in home.
-- Nessun link a `/contatti` come pagina (solo scroll all'ancora).
+**Copy**
+- Sezione "Perché un'azienda ha bisogno di un sito strutturato": paragrafo intro generico e ripetitivo (concetti già coperti dalla definizione AEO sopra).
+- "Cosa realizziamo per le aziende": 3 paragrafi che dicono in 130 parole quello che si può dire in 60.
+- "Siti multipagina e strutturati": 4 paragrafi con ridondanze ("ecosistema digitale", "architettura informativa", "scalabilità") + chiusura GEO che ripete quanto già nella tabella e nella FAQ.
+- Hero sub-copy lungo (37 parole) e poco scansionabile.
 
-**AEO/GEO**
-- Solo `FAQPage` + `AggregateRating` + `Review`. Manca `Service` con catalogo, `SpeakableSpecification`, `HowTo` (processo in 4 step), `BreadcrumbList` per la home, `sameAs` su Organization già in `index.html` (da verificare).
-- Nessun "answer box" testuale sopra-piega (chi/cosa/dove/da quanto) facilmente estraibile da AI Overviews / Perplexity.
+**Struttura / efficacia commerciale**
+- Manca un **answer box "answer-first"** sopra-piega (subito dopo l'H1) sul modello Padova: 1 frase + 3 bullet (chi/cosa/dove/da quanto), ottimo per AI Overviews e Speakable.
+- Manca un **teaser realizzazioni reali** (R.B. s.n.c., Vera Method, Studio Dentistico) che è invece presente su Padova e dà EEAT immediato.
+- Manca una **sezione "Zone servite"** con chip cliccabili (le città sono solo nel JSON-LD e in un paragrafo discorsivo, non scansionabili).
+- Manca un **blocco di interlinking discorsivo** verso le pagine pillar correlate (professionisti, negozi, Padova, SEO/AI), oggi i link sono sparsi nei paragrafi e poco visibili.
+- "Cosa realizziamo" e "Siti multipagina" trattano lo stesso tema da angolazioni diverse → fondibili in una sola sezione più snella con bullet.
 
----
+**SEO/AEO**
+- Title attuale (66 char): "Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab" — manca il prezzo come ancora CTR; recente pattern del sito lo include.
+- Description non menziona "Google Ads" né "AI", ora keyword pillar nella strategia.
+- Mancano nel JSON-LD: `alternateName` sul Service, una `Question` esplicita su "cosa fa un'agenzia di siti web aziendali" (intent informazionale crescente), `priceRange` già OK.
 
 ## Cosa propongo
 
-### 1. `AboutSection` — sfrondare e trasformare in Answer Box
-- Sostituire l'intro + 2 paragrafi con: **un blocco "answer-first"** di 2 frasi (chi siamo, cosa facciamo, dove, da quando) + 3 bullet sintetici (esperienza, processo, copertura nazionale). Stesso tono, metà del testo.
-- Eliminare la quote anonima.
-- Mantenere le 3 card "Approccio / Risultati / Su misura" (sono brevi e chiare).
-- Mantenere testimonianze (EEAT) e link Google Maps.
-- **Aggiungere** 1 link contestuale a `/posizionamento-google-e-ai` (frase "siti pensati per posizionarsi su Google e sulle AI come ChatGPT, Gemini, Perplexity").
-- **Aggiungere** 1 link contestuale al case study `/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto` (frase "Vedi un caso reale: R.B. s.n.c.…").
+### 1. Hero — copy più asciutto + answer box AEO
+- Sub-copy ridotto a ~20 parole, benefit-first.
+- Subito sotto l'H1 (prima della prossima sezione) aggiungo un **answer box** `.aeo-answer`: 1 frase secca ("4 Web Lab realizza siti web aziendali multipagina per PMI italiane, con sede a Legnaro (PD), da 899€ una tantum.") + 3 bullet con icone (Esperienza, Copertura nazionale, SEO+Ads inclusi).
 
-### 2. `StrengthsSection` — da 6 a 4 punti distintivi
-Mantengo: **Performance / SEO integrata / Mobile-first / Supporto dedicato**.
-Rimuovo: "Sicurezza garantita" e "Sempre operativo" (generici, dati per scontati).
-Riscrivo i copy in tono benefit-oriented (1 frase, 14-18 parole).
-H2 invariato; lascio l'attuale interlinking (professionisti/negozi/aziendali).
+### 2. Fusione "Perché serve" + "Cosa realizziamo" + "Multipagina" → 2 sezioni snelle
+- **"Cosa otteniamo per la tua azienda"** (era "Perché un'azienda…"): elimino il paragrafo intro generico, tengo le 4 card che già funzionano. -1 paragrafo di testo morto.
+- **"Come è strutturato un sito web aziendale 4 Web Lab"** (fusione delle due sezioni con immagini): riduco da 7 paragrafi totali a 3 paragrafi + bullet list di 5 elementi concreti (architettura multipagina, sezioni servizi, CMS, performance, scalabilità). Tengo entrambe le immagini ma in un unico blocco a 2 colonne.
 
-### 3. `ServicesSection` — da 6 a 4 card, niente carousel su desktop
-Mantengo 4 macro-servizi allineati al business reale: **Siti web** (link a `/siti-web-aziendali`), **SEO e visibilità AI** (link a `/posizionamento-google-e-ai`), **Google Ads** (nuova, link a `/pubblicita-google-ads`), **Restyling**.
-- Rimuovo Manutenzione / Gestione contenuti / Consulenza (assorbite in altre pagine o nel form contatti).
-- Su desktop griglia 4 colonne statica (carousel solo su mobile) → meno JS, miglior LCP/INP, scansione più rapida da parte di utenti e crawler.
-- H2 più orientato all'utente: "Cosa possiamo fare per la tua presenza online".
+### 3. Nuova sezione "Realizzazioni recenti" (teaser 3 card)
+- 3 card immagine+titolo che linkano alle pagine reali già esistenti: R.B. s.n.c. (case study reale), Studio Dentistico Premium (concept), Vera Method (concept). Modello identico a quello implementato su Padova.
+- Forte segnale EEAT, riduce il tasso di abbandono, dà materiale concreto da mostrare.
 
-### 4. `UserRoutingSection` — copy più conciso
-- Da ~30 parole/card → ~18 parole/card, mantenendo il prezzo "da 199€ / 549€ / 899€" come ancora visiva (resta visibile e indicizzabile).
-- Blocco "Non esiste un sito giusto per tutti…": invariato (funziona come transizione psicologica).
+### 4. Nuova sezione "Zone servite" con chip
+- 7 chip cliccabili (Padova → link a /realizzazione-siti-web-padova, Venezia, Vicenza, Verona, Treviso, Rovigo, Belluno) + microcopy "operiamo in tutta Italia da remoto".
+- Stesso pattern di Padova, GEO scansionabile per Google e AI.
 
-### 5. `HomeFaqPreview` — invariato nella struttura, +1 link
-- Aggiungo nella terza FAQ ("…servono ancora nel 2026 con l'arrivo dell'AI?") un link inline a `/posizionamento-google-e-ai` (rafforza il cluster AEO/GEO).
+### 5. Blocco interlinking discorsivo verso pillar
+- Sostituisce il paragrafo geo ridondante nella sezione "multipagina". 1 paragrafo che linka in modo naturale a: `/realizzazione-siti-web-per-professionisti`, `/siti-web-per-negozi`, `/posizionamento-google-e-ai`, `/pubblicita-google-ads`, `/realizzazione-siti-web-padova`.
 
-### 6. AEO/GEO — potenziamento JSON-LD in `Index.tsx`
-Aggiungo (mantenendo quanto già presente):
-- `@type: "Service"` con `serviceType`, `areaServed: "IT"`, `provider: { @id: "#business" }`, e `hasOfferCatalog` con i 3 pacchetti (199/549/899).
-- `@type: "HowTo"` "Come realizziamo il tuo sito web" — 4 step coerenti col reale processo (Brief gratuito → Progettazione → Sviluppo & SEO → Pubblicazione & supporto).
-- `SpeakableSpecification` sui selettori `h1`, `.aeo-answer` (la classe del nuovo answer box).
-- `BreadcrumbList` con singolo nodo Home (allinea pattern delle altre pagine).
-- Verifico in `index.html` la presenza di `Organization.sameAs` (LinkedIn, Google Maps, Instagram se attivi) — se mancano li aggiungo lì.
+### 6. AEO/GEO — potenziamento JSON-LD e meta
+- **Title** (≤60): `Siti Web Aziendali da 899€ · Veneto e Italia | 4 Web Lab`
+- **Description** (≤160): `Siti web aziendali professionali da 899€: design su misura, SEO per Google e AI, Google Ads. Per PMI in Veneto e in tutta Italia. Preventivo in 24h.`
+- Aggiungo `alternateName: ["Sito web per aziende", "Sito web corporate"]` al nodo `Service`.
+- Aggiungo 2 Q&A alla FAQPage: "Cosa fa un'agenzia di siti web aziendali" e "Un sito web aziendale aiuta davvero ad acquisire clienti B2B?" (sia visibili che nel JSON-LD).
+- Estendo `Speakable.cssSelector` includendo `.aeo-answer` (nuovo answer box).
 
-### 7. SEO meta — micro-tuning Title/Description
-- **Title** (≤60): `Agenzia Web Padova · Siti, SEO e Google Ads da 199€ | 4 Web Lab`
-- **Description** (≤160): `Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h.`
-(Inserisce il keyword "Google Ads" oggi assente, e "AI" per GEO.)
-
----
+### 7. Aggiornamento sitemap
+- `lastmod` di `/siti-web-aziendali` portato a `2026-06-29` per attivare IndexNow.
 
 ## File toccati
 
 ```text
-src/pages/Index.tsx                 — JSON-LD esteso (Service+HowTo+Speakable+Breadcrumb), title/description
-src/components/AboutSection.tsx     — riscrittura intro + 2 paragrafi → answer box + bullet, +2 link contestuali
-src/components/StrengthsSection.tsx — da 6 a 4 card, copy riscritto
-src/components/ServicesSection.tsx  — da 6 a 4 card, desktop in grid statica, mobile carousel, +link Ads/SEO-AI
-src/components/UserRoutingSection.tsx — copy card più conciso
-src/components/HomeFaqPreview.tsx   — +1 link inline su FAQ AI
-index.html                          — solo se mancano sameAs su Organization
+src/pages/SitiWebAziendali.tsx — restyling sezioni, copy snellito, nuove sezioni teaser+zone+interlinking, JSON-LD esteso, title/description
+public/sitemap.xml             — lastmod aggiornato
 ```
 
 ## File NON toccati
-Hero, ContactSection, Footer, Header, design tokens, colori, immagini.
+Header, Footer, design tokens, immagini esistenti (riuso `aziendali-mockup.webp` + `aziendali-team.webp` + le 3 immagini realizzazioni già presenti in `src/assets`), nessun nuovo componente.
 
 ## Esclusioni esplicite
-- Niente nuovi componenti, nessuna modifica visiva al design system.
+- Nessuna nuova immagine generata.
 - Nessuna metrica inventata.
-- Nessuna modifica alla struttura URL / routing.
+- Nessuna modifica al pricing o ai contenuti del form.
+- Nessuna modifica visiva al design system.
 
 ## Verifica
-Build automatica + screenshot Playwright della home per controllare densità testo, layout 4-col desktop di Services, e visibilità dell'answer box sopra la piega.
+Build automatica + lettura veloce per controllare bilanciamento sezioni, lunghezza copy e validità JSON-LD.
