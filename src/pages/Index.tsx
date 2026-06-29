@@ -16,11 +16,11 @@ const Index = () => {
     <>
       <Helmet>
         <title>
-          Agenzia Web Padova - Siti web, SEO, da 199€ | 4 Web Lab
+          Agenzia Web Padova · Siti, SEO e Google Ads da 199€ | 4 Web Lab
         </title>
         <meta
           name="description"
-          content="Agenzia Web Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza e preventivo gratuito in 24h."
+          content="Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
@@ -28,11 +28,11 @@ const Index = () => {
         <meta property="og:url" content="https://4weblab.it/" />
         <meta
           property="og:title"
-          content="Agenzia Web Padova - Siti da 199€ | 4 Web Lab"
+          content="Agenzia Web Padova · Siti, SEO e Google Ads da 199€"
         />
         <meta
           property="og:description"
-          content="Agenzia Web Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza e preventivo gratuito in 24h."
+          content="Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
@@ -41,11 +41,11 @@ const Index = () => {
         <meta name="twitter:url" content="https://4weblab.it/" />
         <meta
           name="twitter:title"
-          content="Agenzia Web Padova - Siti da 199€ | 4 Web Lab"
+          content="Agenzia Web Padova · Siti, SEO e Google Ads da 199€"
         />
         <meta
           name="twitter:description"
-          content="Agenzia Web Padova: siti professionali per negozi, professionisti e aziende da 199€. SEO, assistenza e preventivo gratuito in 24h."
+          content="Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
@@ -117,6 +117,92 @@ const Index = () => {
                   "text": "Sì, oggi più che mai: gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano sui contenuti dei siti web per generare le risposte. Senza un sito autorevole, l'attività non viene citata.",
                 },
               },
+            ],
+          })}
+        </script>
+
+        {/* WebPage + Speakable + BreadcrumbList */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "@id": "https://4weblab.it/#webpage",
+            url: "https://4weblab.it/",
+            name: "Agenzia Web Padova · Siti, SEO e Google Ads da 199€",
+            inLanguage: "it-IT",
+            isPartOf: { "@id": "https://4weblab.it/#website" },
+            about: { "@id": "https://4weblab.it/#business" },
+            speakable: {
+              "@type": "SpeakableSpecification",
+              cssSelector: ["h1", ".aeo-answer"],
+            },
+            breadcrumb: {
+              "@type": "BreadcrumbList",
+              itemListElement: [
+                { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
+              ],
+            },
+          })}
+        </script>
+
+        {/* Service + hasOfferCatalog (3 pacchetti) */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            serviceType: "Realizzazione siti web, SEO e Google Ads",
+            provider: { "@id": "https://4weblab.it/#business" },
+            areaServed: [
+              { "@type": "Country", name: "Italia" },
+              { "@type": "AdministrativeArea", name: "Veneto" },
+              { "@type": "City", name: "Padova" },
+            ],
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Pacchetti siti web 4 Web Lab",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  name: "Sito web per negozi",
+                  url: "https://4weblab.it/siti-web-per-negozi",
+                  priceCurrency: "EUR",
+                  price: "199",
+                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "199", valueAddedTaxIncluded: false },
+                },
+                {
+                  "@type": "Offer",
+                  name: "Sito web per professionisti",
+                  url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+                  priceCurrency: "EUR",
+                  price: "549",
+                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "549", valueAddedTaxIncluded: false },
+                },
+                {
+                  "@type": "Offer",
+                  name: "Sito web aziendale",
+                  url: "https://4weblab.it/siti-web-aziendali",
+                  priceCurrency: "EUR",
+                  price: "899",
+                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "899", valueAddedTaxIncluded: false },
+                },
+              ],
+            },
+          })}
+        </script>
+
+        {/* HowTo: come realizziamo il tuo sito web */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            name: "Come realizziamo il tuo sito web",
+            description: "Il processo in 4 step di 4 Web Lab per realizzare un sito professionale ottimizzato per Google e per le AI.",
+            totalTime: "P28D",
+            step: [
+              { "@type": "HowToStep", position: 1, name: "Brief gratuito", text: "Analisi delle tue esigenze, del settore e degli obiettivi di business. Sopralluogo telefonico o videocall." },
+              { "@type": "HowToStep", position: 2, name: "Progettazione", text: "Architettura informativa, wireframe, scelte di design e copy strategy orientata alla conversione." },
+              { "@type": "HowToStep", position: 3, name: "Sviluppo e SEO", text: "Sviluppo del sito, ottimizzazione Core Web Vitals, SEO on-page, dati strutturati per Google e AI." },
+              { "@type": "HowToStep", position: 4, name: "Pubblicazione e supporto", text: "Go-live, indicizzazione, formazione e supporto continuo con un referente dedicato." },
             ],
           })}
         </script>
