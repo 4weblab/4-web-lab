@@ -761,6 +761,16 @@ const SitiWebAziendali = () => {
                       answer:
                         "Sì: il sito può essere progettato con un pannello di amministrazione che permette di modificare testi, immagini e nuove sezioni in autonomia, senza intervenire sul codice.",
                     },
+                    {
+                      question: "Cosa fa un'agenzia di siti web aziendali?",
+                      answer:
+                        "Un'agenzia di siti web aziendali progetta, sviluppa e ottimizza siti multipagina per imprese: analizza obiettivi e pubblico, definisce architettura informativa, sviluppa il sito con tecnologie moderne, integra SEO e dati strutturati, fornisce supporto continuativo e, se richiesto, gestisce campagne Google Ads per generare lead qualificati.",
+                    },
+                    {
+                      question: "Un sito web aziendale aiuta davvero ad acquisire clienti B2B?",
+                      answer:
+                        "Sì: un sito aziendale strutturato e ottimizzato è il principale strumento di credibilità nel B2B. Buyer e responsabili acquisti verificano sempre online un potenziale fornitore prima di contattarlo, e un sito chiaro su servizi, casi reali e contatti aumenta in modo significativo la qualità e il volume dei lead in ingresso.",
+                    },
                   ].map((faq, index) => (
                     <AccordionItem
                       key={index}
