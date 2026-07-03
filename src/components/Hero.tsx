@@ -36,7 +36,7 @@ const Hero = () => {
         <source media="(max-width: 1280px)" srcSet={heroBgTablet} type="image/webp" />
         <img
           src={heroBgDesktop}
-          alt="Sito web professionale realizzato da 4 Web Lab per PMI e professionisti"
+          alt="Skyline stilizzato di Padova al tramonto con Basilica di Sant'Antonio e Prato della Valle — 4 Web Lab, agenzia web locale"
           width={1920}
           height={1070}
           fetchPriority="high"
