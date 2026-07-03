@@ -1,11 +1,8 @@
-## Aggiungere voce "Siti web" nella navbar
+## Sostituire link della card "Siti web professionali"
 
-**File:** `src/components/Header.tsx`
+**File:** `src/components/ServicesSection.tsx`
 
-Nell'array `navItems`, inserire subito dopo `Home`:
+1. In `services[0]` (icon Globe), cambiare `link: '/siti-web-aziendali'` in `link: '#sitiweb'`.
+2. Adeguare l'`onClick` dell'`<article>` (sia desktop che mobile) affinché, se `link` inizia con `#`, faccia scroll smooth all'elemento con quell'id anziché usare `navigate`. Fallback attuale (`navigate(link)`) resta per le altre card.
 
-```ts
-{ label: 'Siti web', href: '/#sitiweb' },
-```
-
-La logica esistente tratta gli href che iniziano con `/` come route link (`<Link>`), quindi navigherà alla home e il browser (assieme a `ScrollToTop`) gestirà l'ancora `#sitiweb`.
+Nessun'altra modifica.
