@@ -216,7 +216,7 @@ const Realizzazioni = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* HERO */}
-        <section className="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32" style={{ background: "var(--gradient-hero)" }}>
+        <section className="page-hero">
           {/* decorative pattern */}
           <div aria-hidden className="absolute inset-0 opacity-[0.18]" style={{
             backgroundImage:

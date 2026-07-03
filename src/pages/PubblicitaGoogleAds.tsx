@@ -232,7 +232,7 @@ const PubblicitaGoogleAds = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero */}
-        <section className="section-padding relative overflow-hidden" style={{ background: "var(--gradient-hero)" }}>
+        <section className="page-hero">
           <div className="container-section relative z-10">
             <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
               <div>
