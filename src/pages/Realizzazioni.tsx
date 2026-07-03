@@ -51,7 +51,7 @@ const projects: Project[] = [
   },
   {
     slug: "demo-personal-trainer-vera-method",
-    title: "Sito web per personal trainer donna — concept",
+    title: "Sito web per personal trainer — concept",
     description:
       "Demo premium per una personal trainer femminile: estetica antracite + coral, metodo a tre pilastri, programmi 1:1 e small group, bio EEAT e form di contatto.",
     badge: "Concept",
