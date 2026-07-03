@@ -11,7 +11,7 @@ const services = [
     title: 'Siti web professionali',
     description: 'Siti vetrina, one-page e multi-pagina su misura, ottimizzati per velocità e conversioni.',
     features: ['Design personalizzato', 'Responsive su tutti i dispositivi', 'Ottimizzato per la velocità'],
-    link: '/siti-web-aziendali',
+    link: '#sitiweb',
   },
   {
     icon: BarChart3,
@@ -37,6 +37,14 @@ const services = [
 
 const ServicesSection = () => {
   const navigate = useNavigate();
+  const handleServiceClick = (link: string) => {
+    if (link.startsWith('#')) {
+      const el = document.getElementById(link.slice(1));
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate(link);
+    }
+  };
   const [emblaRef, emblaApi] = useEmblaCarousel({
     align: 'start',
     loop: true,
@@ -88,7 +96,7 @@ const ServicesSection = () => {
               <article
                 key={index}
                 className={`card-glass flex flex-col h-full group hover:-translate-y-2 transition-all duration-400${service.link ? ' cursor-pointer' : ''}`}
-                onClick={service.link ? () => navigate(service.link!) : undefined}
+                onClick={service.link ? () => handleServiceClick(service.link!) : undefined}
               >
                 <div className="icon-box w-13 h-13 rounded-xl mb-6 transition-all duration-300 group-hover:scale-110">
                   <service.icon className="w-6 h-6 text-white" aria-hidden="true" />
@@ -123,7 +131,7 @@ const ServicesSection = () => {
                   >
                     <article
                       className={`card-glass flex flex-col h-full group hover:-translate-y-2 transition-all duration-400 mx-2${service.link ? ' cursor-pointer' : ''}`}
-                      onClick={service.link ? () => navigate(service.link!) : undefined}
+                      onClick={service.link ? () => handleServiceClick(service.link!) : undefined}
                     >
                       <div className="icon-box w-13 h-13 rounded-xl mb-6 transition-all duration-300 group-hover:scale-110">
                         <service.icon className="w-6 h-6 text-white" aria-hidden="true" />
