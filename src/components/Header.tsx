@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', href: '/' },
+  { label: 'Siti web', href: '/#sitiweb' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
   { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
   { label: 'Google ADS', href: '/pubblicita-google-ads' },

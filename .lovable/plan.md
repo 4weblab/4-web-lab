@@ -1,7 +1,11 @@
-## Aggiungere anchor `sitiweb` sopra H2
+## Aggiungere voce "Siti web" nella navbar
 
-**File:** `src/components/UserRoutingSection.tsx` (riga ~47)
+**File:** `src/components/Header.tsx`
 
-Aggiungere un `<span id="sitiweb" />` (o `aria-hidden` div) immediatamente sopra l'H2 "Dicci chi sei, al resto pensiamo noi", così il link `#sitiweb` porti a quella sezione.
+Nell'array `navItems`, inserire subito dopo `Home`:
 
-Nessun altro cambiamento.
+```ts
+{ label: 'Siti web', href: '/#sitiweb' },
+```
+
+La logica esistente tratta gli href che iniziano con `/` come route link (`<Link>`), quindi navigherà alla home e il browser (assieme a `ScrollToTop`) gestirà l'ancora `#sitiweb`.
