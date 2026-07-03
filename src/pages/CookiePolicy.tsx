@@ -45,7 +45,7 @@ const CookiePolicy = () => {
         <meta name="twitter:image" content={pageImage} />
       </Helmet>
       {/* Header */}
-      <header className="relative overflow-hidden py-10" style={{ background: 'var(--gradient-hero)' }}>
+      <header className="page-hero">
         <div className="absolute inset-0 bg-accent/5 blur-[100px]" aria-hidden="true" />
         <div className="container-section relative z-10">
           <PageBreadcrumb

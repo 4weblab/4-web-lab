@@ -217,10 +217,7 @@ const PosizionamentoGoogleEAi = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero */}
-        <section
-          className="section-padding relative overflow-hidden"
-          style={{ background: "var(--gradient-hero)" }}
-        >
+        <section className="page-hero">
           <div className="container-section relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <PageBreadcrumb

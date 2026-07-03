@@ -180,10 +180,7 @@ const Blog = () => {
 
       <main id="main-content">
         {/* HERO */}
-        <section
-          className="relative overflow-hidden py-20 md:py-28"
-          style={{ background: "var(--gradient-hero)" }}
-        >
+        <section className="page-hero">
           {/* Decorative shapes */}
           <div
             aria-hidden="true"

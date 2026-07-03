@@ -444,3 +444,38 @@
     transition-duration: 400ms;
   }
 }
+
+/* Page hero — unified hero for all internal pages (not home).
+   Fixed medium min-height that grows with content, with the home hero
+   image cropped as background and a dark overlay for legibility. */
+.page-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  min-height: 440px;
+  padding: 4rem 0;
+  background-color: hsl(210 73% 10%);
+  background-image:
+    linear-gradient(90deg,
+      hsl(210 73% 10% / 0.78) 0%,
+      hsl(210 73% 10% / 0.55) 55%,
+      hsl(210 73% 10% / 0.35) 100%),
+    url("/hero/hero-mini-desktop.webp");
+  background-size: cover;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .page-hero {
+    min-height: 360px;
+    padding: 3rem 0;
+    background-image:
+      linear-gradient(180deg,
+        hsl(210 73% 10% / 0.75) 0%,
+        hsl(210 73% 10% / 0.55) 100%),
+      url("/hero/hero-mini-mobile.webp");
+    background-position: center;
+  }
+}

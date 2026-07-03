@@ -119,7 +119,7 @@ const SitiWebNegozi = () => {
       <main id="main-content" className="pt-[var(--header-height)]">
 
         {/* ─── HERO ─── */}
-        <section className="section-padding relative overflow-hidden" style={{ background: 'var(--gradient-hero)' }}>
+        <section className="page-hero">
           <div className="container-section relative z-10">
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <PageBreadcrumb

@@ -51,7 +51,7 @@ const projects: Project[] = [
   },
   {
     slug: "demo-personal-trainer-vera-method",
-    title: "Sito web per personal trainer donna — concept",
+    title: "Sito web per personal trainer — concept",
     description:
       "Demo premium per una personal trainer femminile: estetica antracite + coral, metodo a tre pilastri, programmi 1:1 e small group, bio EEAT e form di contatto.",
     badge: "Concept",
@@ -216,7 +216,7 @@ const Realizzazioni = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* HERO */}
-        <section className="relative overflow-hidden pt-20 pb-24 md:pt-28 md:pb-32" style={{ background: "var(--gradient-hero)" }}>
+        <section className="page-hero">
           {/* decorative pattern */}
           <div aria-hidden className="absolute inset-0 opacity-[0.18]" style={{
             backgroundImage:
