@@ -235,10 +235,7 @@ const BlogArubaSupersiteArticle = () => {
       <Header satelliteMode />
 
       <main id="main-content">
-        <section
-          className="relative overflow-hidden pt-[calc(var(--header-height)+4rem)] pb-16 md:pt-[calc(var(--header-height)+5rem)] md:pb-20"
-          style={{ background: "var(--gradient-hero)" }}
-        >
+        <section className="page-hero">
           <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-accent/10 blur-[120px]" />
           <div aria-hidden="true" className="pointer-events-none absolute bottom-0 left-1/4 h-56 w-56 rounded-full bg-primary-foreground/10 blur-[110px]" />
           <div className="container-section relative z-10">

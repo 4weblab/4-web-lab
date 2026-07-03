@@ -239,9 +239,7 @@ const FaqSitiWeb = () => {
 
       <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero */}
-        <section
-          className="section-padding relative overflow-hidden"
-          style={{ background: 'var(--gradient-hero)' }}>
+        <section className="page-hero">
 
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">

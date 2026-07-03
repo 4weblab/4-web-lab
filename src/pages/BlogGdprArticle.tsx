@@ -183,10 +183,7 @@ const BlogGdprArticle = () => {
       <Header satelliteMode />
 
       <main id="main-content">
-        <section
-          className="relative overflow-hidden pt-[calc(var(--header-height)+4rem)] pb-16 md:pt-[calc(var(--header-height)+5rem)] md:pb-20"
-          style={{ background: "var(--gradient-hero)" }}
-        >
+        <section className="page-hero">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute -top-24 right-0 h-72 w-72 rounded-full bg-accent/10 blur-[120px]"
