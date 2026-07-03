@@ -3,14 +3,11 @@ import { Menu, X, ArrowLeft } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
-  { label: 'Chi siamo', href: '#chi-siamo' },
-  { label: 'Punti di forza', href: '#punti-di-forza' },
-  { label: 'Servizi', href: '#servizi' },
-  { label: 'Domande Frequenti', href: '#faq' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
   { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
   { label: 'Google ADS', href: '/pubblicita-google-ads' },
   { label: 'Blog', href: '/blog' },
+  { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
 ];
 interface HeaderProps {
