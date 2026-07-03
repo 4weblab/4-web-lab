@@ -38,6 +38,7 @@ const cards = [
 const UserRoutingSection = () => {
   return (
     <section className="py-28 md:py-36 bg-surface-alt relative overflow-hidden">
+      <span id="sitiweb" aria-hidden="true" className="block relative -top-24" />
       {/* Subtle background pattern */}
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
