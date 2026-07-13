@@ -7,7 +7,8 @@ const TopNotificationBar = () => (
     style={{ minHeight: "var(--notification-bar-height)" }}
   >
     <div className="container-section flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm text-center">
-      <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-accent" />
+      <span className="font-semibold shrink-0">Consiglio del giorno:</span>
+      <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
       <p className="leading-snug">
         Ottimizza le immagini inserendo sempre un testo Alt descrittivo. Aiuta Google a capire il contesto e migliora il posizionamento.
       </p>
