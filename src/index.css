@@ -480,3 +480,9 @@
     background-position: center;
   }
 }
+
+@media (max-width: 640px) {
+  :root {
+    --notification-bar-height: 3.75rem;
+  }
+}
