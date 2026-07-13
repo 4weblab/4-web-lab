@@ -8,6 +8,7 @@ import { HelmetProvider, Helmet } from "react-helmet-async";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+import TopNotificationBar from "./components/TopNotificationBar";
 
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
@@ -135,6 +136,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <TopNotificationBar />
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Index />} />
