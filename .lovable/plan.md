@@ -1,45 +1,81 @@
 ## Obiettivo
-Uniformare il campo `areaServed` in tutti i JSON-LD che descrivono 4 Web Lab (entità `#business` / `#localbusiness` e pagine di servizio), impostandolo esattamente su:
 
-- **Veneto** (`AdministrativeArea`)
-- **Padova** (`City`)
-- **Venezia** (`City`)
+Eliminare la duplicazione dei JSON-LD sitewide (`#business` e `#website`) mantenendo **tutte** le informazioni oggi fornite a Google, e migliorare al contempo la leggibilità server-side (SEO tool che non eseguono JS).
 
-I concept/clienti (R.B. s.n.c. a Cittadella, Vera Method a Padova) non verranno toccati.
+## Stato attuale
 
-## File da modificare
+Due copie di `#business` e `#website` vengono emesse su ogni pagina:
 
-1. **`index.html`** — schema statico `#business`
-2. **`src/App.tsx`** — schema globale `#business`
-3. **`src/pages/Index.tsx`** — schema `Service` homepage
-4. **`src/pages/SitiWebPadova.tsx`** — `#localbusiness` + `Service`
-5. **`src/pages/SitiWebAziendali.tsx`** — `#localbusiness` + `Service`
-6. **`src/pages/PubblicitaGoogleAds.tsx`** — `#localbusiness` + `Service`
-7. **`src/pages/SitiWebProfessionisti.tsx`** — schema `Service`
-8. **`src/pages/SitiWebNegozi.tsx`** — schema `Service`
-9. **`src/pages/Realizzazioni.tsx`** — schema `Service`
-10. **`src/pages/PosizionamentoGoogleEAi.tsx`** — schema `Service`
+- **`index.html`** (statico, crawler-friendly senza JS): versione "leggera" con `knowsAbout`, `slogan`, `description`.
+- **`src/App.tsx`** (via Helmet, richiede JS): versione "ricca" con `founder`, `vatID`, `foundingDate`, `priceRange`, `geo`, `openingHoursSpecification`, `hasOfferCatalog`.
 
-## Modifica tecnica
+Google deduplica per `@id`, ma:
+- Peso inutile su ogni pagina (2× lo stesso oggetto).
+- I tool SEO statici vedono solo la versione povera.
+- Rischio di divergenza nel tempo (già oggi i due oggetti non coincidono).
 
-In ogni `areaServed` dei file sopra, sostituire il contenuto esistente con:
+## Strategia
 
-```json
-"areaServed": [
-  { "@type": "AdministrativeArea", "name": "Veneto" },
-  { "@type": "City", "name": "Padova" },
-  { "@type": "City", "name": "Venezia" }
-]
-```
+**Una sola fonte di verità, statica in `index.html`**, che contenga l'**unione** dei campi delle due versioni attuali. Rimozione totale dei due blocchi da `App.tsx`.
 
-Per i file con doppia definizione (`#localbusiness` e `Service`), applicare lo stesso array a entrambe.
+Vantaggi:
+- Zero perdita di informazioni per Google.
+- Crawler e tool SEO senza JS vedono subito il dato completo.
+- `-1` script JSON-LD per pagina (meno lavoro per Helmet, HTML più pulito).
+- Fine del rischio di drift tra le due copie.
 
-## File NON modificati
+## Modifiche
 
-- `src/pages/DemoRbSncEdilizia.tsx` (area specifica cliente: Cittadella)
-- `src/pages/DemoPersonalTrainerVeraMethod.tsx` (area concept: Padova)
+### 1. `index.html` — unificare `#business`
+
+Sostituire l'attuale `LocalBusiness` con la versione unificata, includendo tutti i campi che oggi esistono solo in `App.tsx`:
+
+- `name: "4 Web Lab di Fullin Carlo"` (versione legale completa da App.tsx)
+- `description` (da index.html)
+- `slogan` (da index.html)
+- `knowsAbout` (da index.html)
+- `founder` con `sameAs` LinkedIn (da App.tsx)
+- `foundingDate: "2026"` (da App.tsx)
+- `vatID: "05765760284"` (da App.tsx)
+- `priceRange: "€€"` (da App.tsx)
+- `geo` con lat/lng (da App.tsx)
+- `openingHoursSpecification` (da App.tsx)
+- `hasOfferCatalog` (da App.tsx)
+- `address` completo (già presente, invariato)
+- `areaServed` (già uniformato: Veneto, Padova, Venezia)
+- `sameAs`: unione dei due (Google Business + LinkedIn founder)
+- `telephone`, `email`, `logo`, `image` (invariati)
+
+`#website` in `index.html` resta invariato.
+
+### 2. `src/App.tsx` — rimuovere i duplicati
+
+Eliminare dal `<Helmet>` globale i due blocchi `<script type="application/ld+json">`:
+- Quello con `@id: https://4weblab.it/#business`
+- Quello con `@id: https://4weblab.it/#website`
+
+Mantenere invariato il resto (`<html lang>`, `<meta robots>`).
+
+### 3. Nessun impatto sulle pagine interne
+
+Le landing di servizio (`SitiWebPadova`, `SitiWebAziendali`, `PubblicitaGoogleAds`, ecc.) continuano a emettere i loro `Service` / `#localbusiness` / `WebPage` / `FAQPage` — restano invariate perché portano informazioni **specifiche di pagina** che non appartengono al blocco sitewide.
 
 ## Verifica
 
-- `rg -n "areaServed"` per confermare che tutte le occorrenze di 4 Web Lab siano allineate.
-- Build del progetto per assicurare che non ci siano errori di sintassi JSON/TSX.
+- `rg -n "@id.*#business" index.html src/App.tsx` → una sola occorrenza in `index.html`.
+- `rg -n "@id.*#website" index.html src/App.tsx` → una sola occorrenza in `index.html`.
+- Ispezione HTML server-side (view-source) mostra il JSON-LD completo con tutti i campi.
+- Google Rich Results Test sull'homepage: `LocalBusiness` valido con tutti i campi (founder, geo, openingHours, offerCatalog…).
+- Build senza errori.
+
+## File toccati
+
+1. `index.html` — sostituzione blocco `#business` con versione unificata.
+2. `src/App.tsx` — rimozione dei due `<script type="application/ld+json">` dall'Helmet globale.
+
+## Cosa NON tocchiamo
+
+- Pagine interne (Service, LocalBusiness locali, WebPage, FAQPage, BreadcrumbList).
+- Case study / concept (CreativeWork, Person, Service dedicati).
+- `areaServed` già uniformato nella sessione precedente.
+- Sitemap, robots, llms-full.txt.
