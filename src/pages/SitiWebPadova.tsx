@@ -61,7 +61,8 @@ const SitiWebPadova = () => {
               },
               {
                 "@type": "LocalBusiness",
-                "@id": "https://4weblab.it/#business",
+                "additionalType": "https://schema.org/InternetMarketingService",
+                "@id": "https://4weblab.it/#localbusiness",
                 name: "4 Web Lab",
                 alternateName: ["Web Studio Padova", "Agenzia Web Padova"],
                 url: "https://4weblab.it/",
