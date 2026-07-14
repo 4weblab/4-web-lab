@@ -172,7 +172,8 @@ const PubblicitaGoogleAds = () => {
                 parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "AdministrativeArea", name: "Veneto" },
-                  { "@type": "Country", name: "Italia" },
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
                 ],
               },
               {
@@ -189,7 +190,8 @@ const PubblicitaGoogleAds = () => {
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "AdministrativeArea", name: "Veneto" },
-                  { "@type": "Country", name: "Italia" },
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
                 ],
                 offers: {
                   "@type": "Offer",

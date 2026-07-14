@@ -147,9 +147,9 @@ const PosizionamentoGoogleEAi = () => {
               "Servizio di ottimizzazione SEO, AEO (Answer Engine Optimization) e GEO (Generative Engine Optimization) per siti web. Padova e tutta Italia.",
             serviceType: ["SEO", "Answer Engine Optimization", "Generative Engine Optimization"],
             areaServed: [
-              { "@type": "City", name: "Padova" },
               { "@type": "AdministrativeArea", name: "Veneto" },
-              { "@type": "Country", name: "Italia" },
+              { "@type": "City", name: "Padova" },
+              { "@type": "City", name: "Venezia" },
             ],
             url: PAGE_URL,
             inLanguage: "it-IT",
