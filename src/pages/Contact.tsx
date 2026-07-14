@@ -38,7 +38,7 @@ const Contact = () => {
 
   const solutions = [
     { icon: Store, label: "Siti per negozi", href: "/siti-web-per-negozi" },
-    { icon: Briefcase, label: "Siti per professionisti", href: "/realizzazione-siti-web-per-professionisti" },
+    { icon: Briefcase, label: "Siti per professionisti", href: "/siti-web-per-professionisti" },
     { icon: Building2, label: "Siti aziendali", href: "/siti-web-aziendali" },
   ];
 

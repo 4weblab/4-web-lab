@@ -367,7 +367,7 @@ const SitiWebPadova = () => {
                     title: "Siti web per professionisti",
                     description:
                       "Presenze digitali autorevoli per liberi professionisti e studi che vogliono farsi trovare e trasmettere fiducia online.",
-                    link: "/realizzazione-siti-web-per-professionisti",
+                    link: "/siti-web-per-professionisti",
                     linkLabel: "Scopri il servizio",
                   },
                   {
@@ -555,7 +555,7 @@ const SitiWebPadova = () => {
                 <p className="mb-6">
                   La sede operativa a <strong>Legnaro (PD)</strong> ci rende un riferimento concreto per la <strong>realizzazione di siti web a Padova</strong> e per chi cerca <strong>sviluppo e creazione di siti internet</strong> in tutta la provincia. Lavoriamo con{" "}
                   <Link
-                    to="/realizzazione-siti-web-per-professionisti"
+                    to="/siti-web-per-professionisti"
                     className="text-accent hover:underline font-medium"
                   >
                     professionisti
@@ -634,7 +634,7 @@ const SitiWebPadova = () => {
               <AnimatedSection delay={0.1}>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p>
-                    Se hai un'attività commerciale a Padova puoi partire dalla pagina dedicata ai <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">siti web per negozi</Link>, mentre per studi e liberi professionisti abbiamo una sezione specifica sulla <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">realizzazione di siti web per professionisti</Link>. Le PMI strutturate trovano un percorso dedicato nella pagina <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">siti web aziendali</Link>, con architetture multipagina e lead generation.
+                    Se hai un'attività commerciale a Padova puoi partire dalla pagina dedicata ai <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">siti web per negozi</Link>, mentre per studi e liberi professionisti abbiamo una sezione specifica sulla <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">realizzazione di siti web per professionisti</Link>. Le PMI strutturate trovano un percorso dedicato nella pagina <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">siti web aziendali</Link>, con architetture multipagina e lead generation.
                   </p>
                   <p>
                     Per capire meglio costi, tempistiche e tecnologie ti consigliamo la guida <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, l'approfondimento su <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">siti creati con intelligenza artificiale</Link> e l'analisi su <Link to="/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere" className="text-accent hover:underline font-medium">Aruba SuperSite</Link> per chi sta valutando soluzioni fai-da-te. Se invece ti interessa la visibilità organica oltre Padova, dai un'occhiata alla pagina <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">posizionamento Google e AI</Link>.

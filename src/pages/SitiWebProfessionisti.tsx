@@ -36,19 +36,19 @@ const SitiWebProfessionisti = () => {
         />
 
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <link rel="canonical" href="https://4weblab.it/siti-web-per-professionisti" />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "BreadcrumbList",
             itemListElement: [
               { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Siti web per professionisti", item: "https://4weblab.it/realizzazione-siti-web-per-professionisti" },
+              { "@type": "ListItem", position: 2, name: "Siti web per professionisti", item: "https://4weblab.it/siti-web-per-professionisti" },
             ],
           })}
         </script>
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <meta property="og:url" content="https://4weblab.it/siti-web-per-professionisti" />
         <meta property="og:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
         <meta
           property="og:description"
@@ -58,7 +58,7 @@ const SitiWebProfessionisti = () => {
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-per-professionisti" />
+        <meta name="twitter:url" content="https://4weblab.it/siti-web-per-professionisti" />
         <meta name="twitter:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
         <meta
           name="twitter:description"
@@ -69,7 +69,7 @@ const SitiWebProfessionisti = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            "@id": "https://4weblab.it/realizzazione-siti-web-per-professionisti#service",
+            "@id": "https://4weblab.it/siti-web-per-professionisti#service",
             name: "Siti Web per Professionisti",
             description:
               "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
@@ -78,13 +78,13 @@ const SitiWebProfessionisti = () => {
               { "@type": "City", name: "Padova" },
               { "@type": "AdministrativeArea", name: "Veneto" }
             ],
-            url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+            url: "https://4weblab.it/siti-web-per-professionisti",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
             provider: { "@id": "https://4weblab.it/#business" },
             offers: {
               "@type": "Offer",
-              url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+              url: "https://4weblab.it/siti-web-per-professionisti",
               availability: "https://schema.org/InStock",
               priceSpecification: {
                 "@type": "PriceSpecification",
