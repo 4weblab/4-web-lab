@@ -131,15 +131,9 @@ const SitiWebAziendali = () => {
                 isPartOf: { "@id": "https://4weblab.it/#website" },
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
+                  { "@type": "AdministrativeArea", name: "Veneto" },
                   { "@type": "City", name: "Padova" },
                   { "@type": "City", name: "Venezia" },
-                  { "@type": "City", name: "Vicenza" },
-                  { "@type": "City", name: "Verona" },
-                  { "@type": "City", name: "Treviso" },
-                  { "@type": "City", name: "Rovigo" },
-                  { "@type": "City", name: "Belluno" },
-                  { "@type": "AdministrativeArea", name: "Veneto" },
-                  { "@type": "Country", name: "Italia" },
                 ],
                 offers: {
                   "@type": "AggregateOffer",
