@@ -154,9 +154,9 @@ const Index = () => {
             serviceType: "Realizzazione siti web, SEO e Google Ads",
             provider: { "@id": "https://4weblab.it/#business" },
             areaServed: [
-              { "@type": "Country", name: "Italia" },
               { "@type": "AdministrativeArea", name: "Veneto" },
               { "@type": "City", name: "Padova" },
+              { "@type": "City", name: "Venezia" },
             ],
             hasOfferCatalog: {
               "@type": "OfferCatalog",

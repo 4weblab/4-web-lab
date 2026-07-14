@@ -1,40 +1,45 @@
-Attualmente l'attività è identificata in modo non omogeneo nei dati strutturati:
+## Obiettivo
+Uniformare il campo `areaServed` in tutti i JSON-LD che descrivono 4 Web Lab (entità `#business` / `#localbusiness` e pagine di servizio), impostandolo esattamente su:
 
-- `index.html`: `@type` `Organization`, `@id` `https://4weblab.it/#business`
-- `src/App.tsx`: `@type` `ProfessionalService`, `@id` `https://4weblab.it/#business`
-- `src/pages/Index.tsx`: `@type` `ProfessionalService`, `@id` `https://4weblab.it/#business` (con recensioni)
-- `src/pages/SitiWebPadova.tsx`: `@type` `LocalBusiness`, `@id` `https://4weblab.it/#business`
-- `src/pages/SitiWebAziendali.tsx`: `@type` `["LocalBusiness","ProfessionalService"]`, `@id` `https://4weblab.it/#business`
-- `src/pages/PubblicitaGoogleAds.tsx`: `@type` `["LocalBusiness","ProfessionalService"]`, `@id` `https://4weblab.it/#business`
+- **Veneto** (`AdministrativeArea`)
+- **Padova** (`City`)
+- **Venezia** (`City`)
 
-Nessuno di questi schema usa il tipo schema.org `InternetMarketingService`, che corrisponde alla categoria Google Business Profile "Servizio di marketing su Internet". Inoltre lo stesso `@id` `#business` viene ridefinito con tipi diversi, il che può frammentare l'entità agli occhi di Google.
+I concept/clienti (R.B. s.n.c. a Cittadella, Vera Method a Padova) non verranno toccati.
 
-### Proposta
+## File da modificare
 
-1. **Tipo canonico per `#business`**
-   Impostare l'entità principale `#business` come `LocalBusiness` con `additionalType: "https://schema.org/InternetMarketingService"`.
-   - `LocalBusiness` è sottoclasse di `Organization`, quindi rimane valida come `publisher`/`author`/`copyrightHolder` sui `CreativeWork`.
-   - Supporta NAP, geo coordinate, `openingHoursSpecification` e `priceRange`.
-   - `additionalType` comunica a Google la categoria GBP senza rompere i riferimenti esistenti.
+1. **`index.html`** — schema statico `#business`
+2. **`src/App.tsx`** — schema globale `#business`
+3. **`src/pages/Index.tsx`** — schema `Service` homepage
+4. **`src/pages/SitiWebPadova.tsx`** — `#localbusiness` + `Service`
+5. **`src/pages/SitiWebAziendali.tsx`** — `#localbusiness` + `Service`
+6. **`src/pages/PubblicitaGoogleAds.tsx`** — `#localbusiness` + `Service`
+7. **`src/pages/SitiWebProfessionisti.tsx`** — schema `Service`
+8. **`src/pages/SitiWebNegozi.tsx`** — schema `Service`
+9. **`src/pages/Realizzazioni.tsx`** — schema `Service`
+10. **`src/pages/PosizionamentoGoogleEAi.tsx`** — schema `Service`
 
-2. **Aggiornare le definizioni globali**
-   - `src/App.tsx`: cambiare `@type` da `ProfessionalService` a `LocalBusiness` e aggiungere `additionalType`.
-   - `src/pages/Index.tsx`: allineare il `ProfessionalService` con recensioni allo stesso `LocalBusiness` + `additionalType`.
-   - `index.html`: allineare lo schema statico a `LocalBusiness` + `additionalType` (oppure, se si preferisce un'entità brand separata, lasciarlo come `Organization` con `@id` `#organization` e collegarlo a `#business` tramite `parentOrganization`).
+## Modifica tecnica
 
-3. **Risolvere le ridefinizioni di `#business` nelle pagine interne**
-   - `SitiWebPadova.tsx`, `SitiWebAziendali.tsx`, `PubblicitaGoogleAds.tsx`: spostare lo schema locale su un `@id` diverso (es. `https://4weblab.it/#localbusiness`) e collegarlo a `#business` tramite `parentOrganization` o `branchOf`. Mantenere `provider: { "@id": "https://4weblab.it/#business" }` per il servizio.
+In ogni `areaServed` dei file sopra, sostituire il contenuto esistente con:
 
-4. **Affinare il copy semantico**
-   - Aggiornare `description` e `knowsAbout` per includere "servizio di marketing su Internet" e termini correlati (SEO, Google Ads, web marketing).
-   - Verificare che NAP, `sameAs` e orari siano identici a quelli del profilo Google Business.
+```json
+"areaServed": [
+  { "@type": "AdministrativeArea", "name": "Veneto" },
+  { "@type": "City", "name": "Padova" },
+  { "@type": "City", "name": "Venezia" }
+]
+```
 
-5. **Validazione**
-   - Build del progetto.
-   - Verifica che non ci siano errori JSON-LD (virgole trailing, ID duplicati).
-   - Eventuale test con Rich Results Test / Schema Markup Validator su una pagina di esempio.
+Per i file con doppia definizione (`#localbusiness` e `Service`), applicare lo stesso array a entrambe.
 
-### Note tecniche
+## File NON modificati
 
-- Non è necessario modificare i riferimenti `{ "@id": "https://4weblab.it/#business" }` nelle altre pagine, perché `LocalBusiness` eredita da `Organization`.
-- Se si preferisce un'entità brand separata, si può tenere `index.html` come `Organization` con `@id` `#organization` e usare `parentOrganization` su `#business`.
+- `src/pages/DemoRbSncEdilizia.tsx` (area specifica cliente: Cittadella)
+- `src/pages/DemoPersonalTrainerVeraMethod.tsx` (area concept: Padova)
+
+## Verifica
+
+- `rg -n "areaServed"` per confermare che tutte le occorrenze di 4 Web Lab siano allineate.
+- Build del progetto per assicurare che non ci siano errori di sintassi JSON/TSX.

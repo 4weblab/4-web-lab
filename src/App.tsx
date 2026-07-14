@@ -84,8 +84,9 @@ const App = () => (
             "longitude": 11.9536
           },
           "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Veneto" },
             { "@type": "City", "name": "Padova" },
-            { "@type": "AdministrativeArea", "name": "Veneto" }
+            { "@type": "City", "name": "Venezia" }
           ],
           "sameAs": [
             "https://share.google/fYQnR3BJIrKSNlkDK",

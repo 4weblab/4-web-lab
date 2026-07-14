@@ -75,8 +75,9 @@ const SitiWebProfessionisti = () => {
               "Realizziamo siti web professionali per avvocati, commercialisti, medici e liberi professionisti. Struttura chiara, SEO locale e assistenza continua.",
             serviceType: "Web Design for Professionals",
             areaServed: [
+              { "@type": "AdministrativeArea", name: "Veneto" },
               { "@type": "City", name: "Padova" },
-              { "@type": "AdministrativeArea", name: "Veneto" }
+              { "@type": "City", name: "Venezia" },
             ],
             url: "https://4weblab.it/siti-web-per-professionisti",
             inLanguage: "it-IT",
