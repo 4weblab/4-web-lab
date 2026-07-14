@@ -43,6 +43,7 @@
     --container-max: 1200px;
     --header-height: 4.5rem;
     --mobile-cta-height: 3.5rem;
+    --notification-bar-height: 2.5rem;
 
     /* Gradients – deep brand */
     --gradient-hero: linear-gradient(145deg, hsl(210 73% 10%) 0%, hsl(210 65% 17%) 50%, hsl(207 55% 24%) 100%);
@@ -130,7 +131,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: var(--header-height);
+    scroll-padding-top: calc(var(--header-height) + var(--notification-bar-height));
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -477,5 +478,11 @@
         hsl(210 73% 10% / 0.55) 100%),
       url("/hero/hero-mini-mobile.webp");
     background-position: center;
+  }
+}
+
+@media (max-width: 640px) {
+  :root {
+    --notification-bar-height: 3.75rem;
   }
 }
