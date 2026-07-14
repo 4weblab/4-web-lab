@@ -110,6 +110,7 @@ const SitiWebAziendali = () => {
                   latitude: 45.3447,
                   longitude: 11.9606,
                 },
+                parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "City", name: "Padova" },
                   { "@type": "City", name: "Venezia" },
