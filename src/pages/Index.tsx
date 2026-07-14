@@ -53,7 +53,8 @@ const Index = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProfessionalService",
+            "@type": "LocalBusiness",
+            "additionalType": "https://schema.org/InternetMarketingService",
             "@id": "https://4weblab.it/#business",
             "aggregateRating": {
               "@type": "AggregateRating",

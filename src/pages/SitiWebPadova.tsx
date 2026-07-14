@@ -61,7 +61,8 @@ const SitiWebPadova = () => {
               },
               {
                 "@type": "LocalBusiness",
-                "@id": "https://4weblab.it/#business",
+                "additionalType": "https://schema.org/InternetMarketingService",
+                "@id": "https://4weblab.it/#localbusiness",
                 name: "4 Web Lab",
                 alternateName: ["Web Studio Padova", "Agenzia Web Padova"],
                 url: "https://4weblab.it/",
@@ -80,6 +81,7 @@ const SitiWebPadova = () => {
                   latitude: 45.3434,
                   longitude: 11.9569,
                 },
+                parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "City", name: "Padova" },
                   { "@type": "City", name: "Abano Terme" },

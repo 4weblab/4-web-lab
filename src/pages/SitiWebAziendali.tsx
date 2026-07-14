@@ -91,8 +91,9 @@ const SitiWebAziendali = () => {
                 },
               },
               {
-                "@type": ["LocalBusiness", "ProfessionalService"],
-                "@id": "https://4weblab.it/#business",
+                "@type": "LocalBusiness",
+                "additionalType": "https://schema.org/InternetMarketingService",
+                "@id": "https://4weblab.it/#localbusiness",
                 name: "4 Web Lab",
                 url: "https://4weblab.it/",
                 telephone: "+39 351 465 6042",
@@ -109,6 +110,7 @@ const SitiWebAziendali = () => {
                   latitude: 45.3447,
                   longitude: 11.9606,
                 },
+                parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "City", name: "Padova" },
                   { "@type": "City", name: "Venezia" },
