@@ -81,6 +81,7 @@ const SitiWebPadova = () => {
                   latitude: 45.3434,
                   longitude: 11.9569,
                 },
+                parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "City", name: "Padova" },
                   { "@type": "City", name: "Abano Terme" },
