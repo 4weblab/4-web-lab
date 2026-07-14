@@ -91,8 +91,9 @@ const SitiWebAziendali = () => {
                 },
               },
               {
-                "@type": ["LocalBusiness", "ProfessionalService"],
-                "@id": "https://4weblab.it/#business",
+                "@type": "LocalBusiness",
+                "additionalType": "https://schema.org/InternetMarketingService",
+                "@id": "https://4weblab.it/#localbusiness",
                 name: "4 Web Lab",
                 url: "https://4weblab.it/",
                 telephone: "+39 351 465 6042",
