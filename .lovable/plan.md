@@ -1,19 +1,22 @@
-L'utente ha fornito il CID del profilo Google Business: `2075680678385206471`.
+## Obiettivo
+Verificare che tutti i riferimenti `sameAs` a Google Business Profile nel sito puntino all'URL condiviso dall'utente (`https://share.google/fYQnR3BJIrKSNlkDK`) e correggere quelli non allineati.
 
-## Azioni da svolgere
+## Esito verifica
+- `index.html` (schema `Organization`): già corretto con `https://share.google/fYQnR3BJIrKSNlkDK`.
+- `src/App.tsx` (schema `ProfessionalService`): contiene un `sameAs` non allineato → `https://share.google/oGOMV0sHAaV8JlqnZ`.
+- `src/components/MapSection.tsx`: contiene URL Google Maps per direzioni/embed, non `sameAs`.
+- Nessun altro riferimento a `sameAs` o `share.google` rilevato nel progetto.
 
-1. **Aggiornare `sameAs` in `index.html`**
-   - Sostituire `https://www.google.com/maps?cid=4weblab` con `https://www.google.com/maps?cid=2075680678385206471` nello schema `Organization`.
+## Modifiche previste
+1. **Aggiornare `src/App.tsx`**  
+   Sostituire nel `sameAs` dello schema `ProfessionalService` (riga ~90):
+   - Da: `https://share.google/oGOMV0sHAaV8JlqnZ`
+   - A: `https://share.google/fYQnR3BJIrKSNlkDK`
+   Mantenere invariato il `sameAs` del `founder` (`Person`) che punta correttamente a LinkedIn.
 
-2. **Verificare coerenza NAP in tutto il sito**
-   - Nome: `4 Web Lab`
-   - Telefono: `+39 351 465 6042`
-   - Località: `Legnaro, PD, IT`
-   - Controllare footer, pagina contatti, `public/llms-full.txt` e eventuali altri JSON-LD per allineamento.
-
-3. **Verificare build**
-   - Eseguire il build check per assicurarsi che il JSON-LD rimanga valido e che non ci siano errori di sintassi.
+2. **Verifica post-modifica**
+   - Ricontrollare con `rg` che tutti i `share.google` siano identici.
+   - Eseguire la build per assicurarsi che non ci siano errori.
 
 ## Nota
-Il CID fornito è un identificativo numerico Google Maps standard (19 cifre). L'URL finale sarà:
-`https://www.google.com/maps?cid=2075680678385206471`
+Gli schemi `Organization` (in `index.html`) e `ProfessionalService` (in `src/App.tsx`) condividono entrambi l'`@id` `https://4weblab.it/#business`. Questo non è strettamente un errore di `sameAs`, ma potrebbe creare ambiguità per i crawler (due entità con lo stesso identificatore). Se l'utente lo desidera, si può affrontare in un intervento separato.

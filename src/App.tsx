@@ -87,7 +87,7 @@ const App = () => (
             { "@type": "AdministrativeArea", "name": "Veneto" }
           ],
           "sameAs": [
-            "https://share.google/oGOMV0sHAaV8JlqnZ",
+            "https://share.google/fYQnR3BJIrKSNlkDK",
             "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
           ],
           "openingHoursSpecification": [{
