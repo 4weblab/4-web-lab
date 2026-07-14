@@ -1,36 +1,45 @@
 ## Obiettivo
-Aggiungere una **Top Notification Bar** sitewide, posizionata sopra l'Header, con icona lampadina e testo SEO tip. Responsive, HTML reale, non sovrapposta all'header.
+Uniformare il campo `areaServed` in tutti i JSON-LD che descrivono 4 Web Lab (entità `#business` / `#localbusiness` e pagine di servizio), impostandolo esattamente su:
 
-## Implementazione
+- **Veneto** (`AdministrativeArea`)
+- **Padova** (`City`)
+- **Venezia** (`City`)
 
-### 1. Nuovo componente `src/components/TopNotificationBar.tsx`
-- `<div>` fisso in top (`fixed top-0 left-0 right-0 z-[60]`, sopra l'header che è `z-50`).
-- Sfondo scuro coerente col brand: usa `bg-primary` (navy della Hero) con testo `text-primary-foreground`.
-- Contenuto: `<Lightbulb />` da `lucide-react` + `<p>` con il testo richiesto.
-- Layout: `flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm`.
-- Su mobile il testo va a capo naturalmente (nessun `truncate`); icona `shrink-0`.
-- Altezza calcolata via CSS var `--notification-bar-height` (es. `36px` desktop, `56px` mobile via media query) per offset dinamico.
+I concept/clienti (R.B. s.n.c. a Cittadella, Vera Method a Padova) non verranno toccati.
 
-### 2. Aggiornare `src/components/Header.tsx`
-- Cambia `top-0` → `top-[var(--notification-bar-height)]` così l'header si sposta sotto la barra senza sovrapposizioni.
+## File da modificare
 
-### 3. Aggiornare `src/index.css`
-- Definire `--notification-bar-height` in `:root` (36px) e in media query mobile (56px, considerando eventuale wrap del testo).
-- Aggiungere `scroll-padding-top` e regolare l'offset globale dei contenuti sotto header (se attualmente si basa solo su `--header-height`, sommare la nuova var dove serve — es. `.page-hero` padding-top, anchor scroll di `handleNavClick`).
-- Aggiornare la logica scroll-to-anchor nell'Header per sottrarre anche `--notification-bar-height`.
+1. **`index.html`** — schema statico `#business`
+2. **`src/App.tsx`** — schema globale `#business`
+3. **`src/pages/Index.tsx`** — schema `Service` homepage
+4. **`src/pages/SitiWebPadova.tsx`** — `#localbusiness` + `Service`
+5. **`src/pages/SitiWebAziendali.tsx`** — `#localbusiness` + `Service`
+6. **`src/pages/PubblicitaGoogleAds.tsx`** — `#localbusiness` + `Service`
+7. **`src/pages/SitiWebProfessionisti.tsx`** — schema `Service`
+8. **`src/pages/SitiWebNegozi.tsx`** — schema `Service`
+9. **`src/pages/Realizzazioni.tsx`** — schema `Service`
+10. **`src/pages/PosizionamentoGoogleEAi.tsx`** — schema `Service`
 
-### 4. Montaggio sitewide
-- Inserire `<TopNotificationBar />` in `src/App.tsx` dentro `<BrowserRouter>`, prima di `<Suspense>`, così è presente in **tutte le pagine** (Home, landing, blog, demo, policy, 404).
+## Modifica tecnica
 
-### 5. Verifica
-- Controllare che le hero (`.page-hero` e Hero home) restino visibili integralmente (nessun contenuto tagliato).
-- Testare responsive: mobile <400px il testo deve andare a capo pulito senza rompere il layout.
+In ogni `areaServed` dei file sopra, sostituire il contenuto esistente con:
 
-## Dettagli tecnici
-- Nessuna nuova dipendenza (Lucide già installato).
-- Nessuna interazione JS: barra puramente statica, sempre visibile (no dismiss) come richiesto.
-- Accessibilità: `role="note"` sul contenitore e `aria-hidden="true"` sull'icona decorativa.
+```json
+"areaServed": [
+  { "@type": "AdministrativeArea", "name": "Veneto" },
+  { "@type": "City", "name": "Padova" },
+  { "@type": "City", "name": "Venezia" }
+]
+```
 
-## Fuori scopo
-- Nessuna modifica ai contenuti pagina, SEO tag, sitemap.
-- Nessun sistema di dismissal / cookie / A/B (non richiesto).
+Per i file con doppia definizione (`#localbusiness` e `Service`), applicare lo stesso array a entrambe.
+
+## File NON modificati
+
+- `src/pages/DemoRbSncEdilizia.tsx` (area specifica cliente: Cittadella)
+- `src/pages/DemoPersonalTrainerVeraMethod.tsx` (area concept: Padova)
+
+## Verifica
+
+- `rg -n "areaServed"` per confermare che tutte le occorrenze di 4 Web Lab siano allineate.
+- Build del progetto per assicurare che non ci siano errori di sintassi JSON/TSX.

@@ -16,11 +16,11 @@ const Index = () => {
     <>
       <Helmet>
         <title>
-          Agenzia Web Padova · Siti, SEO e Google Ads da 199€ | 4 Web Lab
+          Web Agency Padova | Realizzazione Siti Web, SEO e Google Ads | 4 Web Lab
         </title>
         <meta
           name="description"
-          content="Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h."
+          content="4 Web Lab è la web agency a Padova specializzata in realizzazione siti web professionali, SEO avanzata per Google e AI, e campagne Google Ads mirate."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
@@ -28,11 +28,11 @@ const Index = () => {
         <meta property="og:url" content="https://4weblab.it/" />
         <meta
           property="og:title"
-          content="Agenzia Web Padova · Siti, SEO e Google Ads da 199€"
+          content="Web Agency Padova | Realizzazione Siti Web, SEO e Google Ads | 4 Web Lab"
         />
         <meta
           property="og:description"
-          content="Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h."
+          content="4 Web Lab è la web agency a Padova specializzata in realizzazione siti web professionali, SEO avanzata per Google e AI, e campagne Google Ads mirate."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
@@ -41,11 +41,11 @@ const Index = () => {
         <meta name="twitter:url" content="https://4weblab.it/" />
         <meta
           name="twitter:title"
-          content="Agenzia Web Padova · Siti, SEO e Google Ads da 199€"
+          content="Web Agency Padova | Realizzazione Siti Web, SEO e Google Ads | 4 Web Lab"
         />
         <meta
           name="twitter:description"
-          content="Agenzia web di Padova: siti professionali da 199€, SEO per Google e AI (ChatGPT, Gemini), campagne Google Ads. Preventivo gratuito in 24h."
+          content="4 Web Lab è la web agency a Padova specializzata in realizzazione siti web professionali, SEO avanzata per Google e AI, e campagne Google Ads mirate."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
@@ -53,7 +53,8 @@ const Index = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "ProfessionalService",
+            "@type": "LocalBusiness",
+            "additionalType": "https://schema.org/InternetMarketingService",
             "@id": "https://4weblab.it/#business",
             "aggregateRating": {
               "@type": "AggregateRating",
@@ -128,7 +129,7 @@ const Index = () => {
             "@type": "WebPage",
             "@id": "https://4weblab.it/#webpage",
             url: "https://4weblab.it/",
-            name: "Agenzia Web Padova · Siti, SEO e Google Ads da 199€",
+            name: "Web Agency Padova | Realizzazione Siti Web, SEO e Google Ads | 4 Web Lab",
             inLanguage: "it-IT",
             isPartOf: { "@id": "https://4weblab.it/#website" },
             about: { "@id": "https://4weblab.it/#business" },
@@ -153,9 +154,9 @@ const Index = () => {
             serviceType: "Realizzazione siti web, SEO e Google Ads",
             provider: { "@id": "https://4weblab.it/#business" },
             areaServed: [
-              { "@type": "Country", name: "Italia" },
               { "@type": "AdministrativeArea", name: "Veneto" },
               { "@type": "City", name: "Padova" },
+              { "@type": "City", name: "Venezia" },
             ],
             hasOfferCatalog: {
               "@type": "OfferCatalog",

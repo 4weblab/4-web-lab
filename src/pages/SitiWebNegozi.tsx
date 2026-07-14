@@ -93,8 +93,9 @@ const SitiWebNegozi = () => {
               "Realizziamo siti web per negozi e attività locali a Padova e in tutta Italia: design moderno, SEO locale e assistenza dedicata.",
             serviceType: "Web Design for Local Shops",
             areaServed: [
+              { "@type": "AdministrativeArea", name: "Veneto" },
               { "@type": "City", name: "Padova" },
-              { "@type": "AdministrativeArea", name: "Veneto" }
+              { "@type": "City", name: "Venezia" },
             ],
             url: "https://4weblab.it/siti-web-per-negozi",
             inLanguage: "it-IT",

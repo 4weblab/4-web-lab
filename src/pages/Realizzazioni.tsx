@@ -200,8 +200,9 @@ const Realizzazioni = () => {
             serviceType: "Realizzazione siti web",
             provider: { "@id": "https://4weblab.it/#business" },
             areaServed: [
-              { "@type": "City", name: "Padova" },
               { "@type": "AdministrativeArea", name: "Veneto" },
+              { "@type": "City", name: "Padova" },
+              { "@type": "City", name: "Venezia" },
             ],
             offers: [
               { "@type": "Offer", name: "Siti web per negozi", price: "199", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-negozi" },

@@ -32,31 +32,35 @@
     <!-- AEO/GEO: allow full snippets and large image previews for AI Overviews & answer engines -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
-    <!-- Sitewide JSON-LD: Organization (brand entity for LLMs) -->
+    <!-- Sitewide JSON-LD: LocalBusiness + InternetMarketingService (aligned with GBP category) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": "LocalBusiness",
+      "additionalType": "https://schema.org/InternetMarketingService",
       "@id": "https://4weblab.it/#business",
       "name": "4 Web Lab",
       "url": "https://4weblab.it",
       "logo": "https://4weblab.it/logo.webp",
       "image": "https://4weblab.it/og-image.webp",
-      "description": "Studio web di Legnaro (Padova) specializzato nella realizzazione di siti web professionali per negozi, professionisti e aziende. Servizi SEO, AEO e GEO per il posizionamento su Google e sulle AI.",
+      "description": "4 Web Lab è un servizio di marketing su Internet con sede a Legnaro (Padova): realizzazione siti web professionali, SEO avanzata, Google Ads e ottimizzazione per Google e le AI.",
       "telephone": "+39 351 465 6042",
       "email": "info@4weblab.it",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Via Belluno 44",
         "addressLocality": "Legnaro",
         "addressRegion": "PD",
+        "postalCode": "35020",
         "addressCountry": "IT"
       },
       "areaServed": [
-        { "@type": "City", "name": "Padova" },
         { "@type": "AdministrativeArea", "name": "Veneto" },
-        { "@type": "Country", "name": "Italia" }
+        { "@type": "City", "name": "Padova" },
+        { "@type": "City", "name": "Venezia" }
       ],
       "knowsAbout": [
+        "Servizio di marketing su Internet",
         "Realizzazione siti web",
         "Search Engine Optimization",
         "Answer Engine Optimization",
@@ -70,7 +74,7 @@
       ],
       "slogan": "Siti web, SEO e AI per chi vuole essere trovato davvero.",
       "sameAs": [
-        "https://www.google.com/maps?cid=4weblab"
+        "https://share.google/fYQnR3BJIrKSNlkDK"
       ]
     }
     </script>

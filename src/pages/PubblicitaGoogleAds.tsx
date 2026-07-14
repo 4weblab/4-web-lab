@@ -154,8 +154,9 @@ const PubblicitaGoogleAds = () => {
                 },
               },
               {
-                "@type": ["LocalBusiness", "ProfessionalService"],
-                "@id": "https://4weblab.it/#business",
+                "@type": "LocalBusiness",
+                "additionalType": "https://schema.org/InternetMarketingService",
+                "@id": "https://4weblab.it/#localbusiness",
                 name: "4 Web Lab",
                 url: "https://4weblab.it/",
                 telephone: "+39 351 465 6042",
@@ -168,9 +169,11 @@ const PubblicitaGoogleAds = () => {
                   addressCountry: "IT",
                 },
                 geo: { "@type": "GeoCoordinates", latitude: 45.3447, longitude: 11.9606 },
+                parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "AdministrativeArea", name: "Veneto" },
-                  { "@type": "Country", name: "Italia" },
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
                 ],
               },
               {
@@ -187,7 +190,8 @@ const PubblicitaGoogleAds = () => {
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "AdministrativeArea", name: "Veneto" },
-                  { "@type": "Country", name: "Italia" },
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
                 ],
                 offers: {
                   "@type": "Offer",

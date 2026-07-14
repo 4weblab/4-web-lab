@@ -53,7 +53,8 @@ const App = () => (
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "ProfessionalService",
+          "@type": "LocalBusiness",
+          "additionalType": "https://schema.org/InternetMarketingService",
           "@id": "https://4weblab.it/#business",
           "name": "4 Web Lab di Fullin Carlo",
           "url": "https://4weblab.it/",
@@ -83,11 +84,12 @@ const App = () => (
             "longitude": 11.9536
           },
           "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Veneto" },
             { "@type": "City", "name": "Padova" },
-            { "@type": "AdministrativeArea", "name": "Veneto" }
+            { "@type": "City", "name": "Venezia" }
           ],
           "sameAs": [
-            "https://share.google/oGOMV0sHAaV8JlqnZ",
+            "https://share.google/fYQnR3BJIrKSNlkDK",
             "https://www.linkedin.com/in/carlo-fullin-6aa6b73b7/"
           ],
           "openingHoursSpecification": [{
