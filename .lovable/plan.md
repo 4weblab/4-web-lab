@@ -1,36 +1,26 @@
 ## Obiettivo
-Aggiungere una **Top Notification Bar** sitewide, posizionata sopra l'Header, con icona lampadina e testo SEO tip. Responsive, HTML reale, non sovrapposta all'header.
+Allineare i tag SEO della Home e l'H1 della Hero alla nuova value proposition, eliminando il prezzo dai meta tag e inserendo "Google Ads" nel titolo principale.
 
-## Implementazione
+## Modifiche
 
-### 1. Nuovo componente `src/components/TopNotificationBar.tsx`
-- `<div>` fisso in top (`fixed top-0 left-0 right-0 z-[60]`, sopra l'header che è `z-50`).
-- Sfondo scuro coerente col brand: usa `bg-primary` (navy della Hero) con testo `text-primary-foreground`.
-- Contenuto: `<Lightbulb />` da `lucide-react` + `<p>` con il testo richiesto.
-- Layout: `flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm`.
-- Su mobile il testo va a capo naturalmente (nessun `truncate`); icona `shrink-0`.
-- Altezza calcolata via CSS var `--notification-bar-height` (es. `36px` desktop, `56px` mobile via media query) per offset dinamico.
+### 1. Tag SEO in `src/pages/Index.tsx`
+- Sostituire `<title>` con: **"Web Agency Padova | Realizzazione Siti Web, SEO e Google Ads | 4 Web Lab"**
+- Sostituire `<meta name="description">` con: **"4 Web Lab è la web agency a Padova specializzata in realizzazione siti web professionali, SEO avanzata per Google e AI, e campagne Google Ads mirate."**
+- Allineare di conseguenza i tag Open Graph e Twitter:
+  - `og:title`, `twitter:title`
+  - `og:description`, `twitter:description`
+- Aggiornare il JSON-LD `WebPage` (`name`) per riflettere il nuovo title.
+- Lasciare invariati gli altri schema (Organization, WebSite, FAQPage, Service, HowTo, ProfessionalService) poiché già coerenti.
 
-### 2. Aggiornare `src/components/Header.tsx`
-- Cambia `top-0` → `top-[var(--notification-bar-height)]` così l'header si sposta sotto la barra senza sovrapposizioni.
+### 2. H1 in `src/components/Hero.tsx`
+- Mantenere layout a tre righe.
+- Modificare la terza riga da **"SITI WEB, SEO, CONSULENZA"** a **"SITI WEB, SEO, GOOGLE ADS"**.
+- Lasciare invariato il paragrafo descrittivo sottostante.
 
-### 3. Aggiornare `src/index.css`
-- Definire `--notification-bar-height` in `:root` (36px) e in media query mobile (56px, considerando eventuale wrap del testo).
-- Aggiungere `scroll-padding-top` e regolare l'offset globale dei contenuti sotto header (se attualmente si basa solo su `--header-height`, sommare la nuova var dove serve — es. `.page-hero` padding-top, anchor scroll di `handleNavClick`).
-- Aggiornare la logica scroll-to-anchor nell'Header per sottrarre anche `--notification-bar-height`.
+### 3. Verifica
+- Build del progetto per confermare assenza di errori.
+- Controllo visivo della Hero e dei meta tag nel sorgente renderizzato.
 
-### 4. Montaggio sitewide
-- Inserire `<TopNotificationBar />` in `src/App.tsx` dentro `<BrowserRouter>`, prima di `<Suspense>`, così è presente in **tutte le pagine** (Home, landing, blog, demo, policy, 404).
-
-### 5. Verifica
-- Controllare che le hero (`.page-hero` e Hero home) restino visibili integralmente (nessun contenuto tagliato).
-- Testare responsive: mobile <400px il testo deve andare a capo pulito senza rompere il layout.
-
-## Dettagli tecnici
-- Nessuna nuova dipendenza (Lucide già installato).
-- Nessuna interazione JS: barra puramente statica, sempre visibile (no dismiss) come richiesto.
-- Accessibilità: `role="note"` sul contenitore e `aria-hidden="true"` sull'icona decorativa.
-
-## Fuori scopo
-- Nessuna modifica ai contenuti pagina, SEO tag, sitemap.
-- Nessun sistema di dismissal / cookie / A/B (non richiesto).
+## File coinvolti
+- `src/pages/Index.tsx`
+- `src/components/Hero.tsx`

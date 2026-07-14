@@ -66,7 +66,7 @@ const Hero = () => {
               }}>
               <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SCEGLI LA MIGLIORE</span>
               <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, CONSULENZA</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, GOOGLE ADS</span>
             </h1>
 
             <p
