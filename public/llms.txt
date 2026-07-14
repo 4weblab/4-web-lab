@@ -9,7 +9,7 @@
 - [Home](/): chi siamo, servizi e contatti.
 - [Realizzazione siti web Padova](/realizzazione-siti-web-padova): landing locale per Padova e provincia.
 - [Siti web per negozi](/siti-web-per-negozi): pacchetto da 199€ per attività commerciali.
-- [Siti web per professionisti](/realizzazione-siti-web-per-professionisti): da 549€ per studi e liberi professionisti.
+- [Siti web per professionisti](/siti-web-per-professionisti): da 549€ per studi e liberi professionisti.
 - [Siti web aziendali](/siti-web-aziendali): da 899€ per PMI strutturate.
 - [FAQ siti web](/faq-realizzazione-siti-web): risposte su costi, tempi, AI e SEO.
 - [Posizionamento Google e AI (SEO, AEO, GEO)](/posizionamento-google-e-ai): servizio di ottimizzazione per Google e per assistenti AI come ChatGPT, Perplexity, Gemini e Copilot.

@@ -592,7 +592,7 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p>
-                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti web aziendali per imprese di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto. Operiamo con <Link to="/realizzazione-siti-web-per-professionisti" className="text-accent hover:underline font-medium">studi professionali</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">attività commerciali</Link> e PMI di settori tecnici e dei servizi.
+                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti web aziendali per imprese di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto. Operiamo con <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">studi professionali</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">attività commerciali</Link> e PMI di settori tecnici e dei servizi.
                 </p>
               </AnimatedSection>
             </div>
@@ -893,7 +893,7 @@ const SitiWebAziendali = () => {
                 </p>
                 <div className="mt-8 space-y-4">
                   <Link
-                    to="/realizzazione-siti-web-per-professionisti"
+                    to="/siti-web-per-professionisti"
                     className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group"
                   >
                     <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">

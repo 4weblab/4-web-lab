@@ -140,7 +140,8 @@ const App = () => (
           <Suspense fallback={null}>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/realizzazione-siti-web-per-professionisti" element={<SitiWebProfessionisti />} />
+              <Route path="/siti-web-per-professionisti" element={<SitiWebProfessionisti />} />
+              <Route path="/realizzazione-siti-web-per-professionisti" element={<Navigate to="/siti-web-per-professionisti" replace />} />
               <Route path="/siti-web-aziendali" element={<SitiWebAziendali />} />
               <Route path="/realizzazione-siti-web-padova" element={<SitiWebPadova />} />
               <Route path="/siti-web-per-negozi" element={<SitiWebNegozi />} />

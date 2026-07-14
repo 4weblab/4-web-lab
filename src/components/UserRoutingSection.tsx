@@ -19,7 +19,7 @@ const cards = [
     title: 'Sono un professionista',
     text: 'Dall\'avvocato all\'elettricista: il sito che costruisce credibilità e porta nuovi contatti. Da 549€.',
     cta: 'Scopri i siti per professionisti',
-    link: '/realizzazione-siti-web-per-professionisti',
+    link: '/siti-web-per-professionisti',
     image: cardProfessionista,
     imageAlt: 'Professionista al lavoro in uno studio mentre consulta il computer',
     icon: Briefcase,
