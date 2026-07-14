@@ -169,6 +169,7 @@ const PubblicitaGoogleAds = () => {
                   addressCountry: "IT",
                 },
                 geo: { "@type": "GeoCoordinates", latitude: 45.3447, longitude: 11.9606 },
+                parentOrganization: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
                   { "@type": "AdministrativeArea", name: "Veneto" },
                   { "@type": "Country", name: "Italia" },
