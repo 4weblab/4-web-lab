@@ -102,9 +102,9 @@ const SitiWebPadova = () => {
                   "Agenzia web a Padova: realizziamo siti professionali per negozi, studi e aziende del territorio con SEO locale e assistenza dedicata.",
                 serviceType: "Web Design",
                 areaServed: [
-                  { "@type": "City", name: "Padova" },
-                  { "@type": "AdministrativeArea", name: "Provincia di Padova" },
                   { "@type": "AdministrativeArea", name: "Veneto" },
+                  { "@type": "City", name: "Padova" },
+                  { "@type": "City", name: "Venezia" },
                 ],
                 url: "https://4weblab.it/realizzazione-siti-web-padova",
                 inLanguage: "it-IT",
