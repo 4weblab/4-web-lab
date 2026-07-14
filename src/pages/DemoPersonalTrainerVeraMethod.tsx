@@ -1018,7 +1018,7 @@ const DemoFooter = () => (
           <li><a href="tel:+393514656042" className="hover:text-white">+39 351 465 6042</a></li>
           <li><a href="mailto:info@4weblab.it" className="hover:text-white">info@4weblab.it</a></li>
           <li><a href="https://wa.me/393514656042" target="_blank" rel="noopener noreferrer" className="hover:text-white">WhatsApp</a></li>
-          <li><Link to="/realizzazione-siti-web-per-professionisti" className="hover:text-white">Siti web per professionisti</Link></li>
+          <li><Link to="/siti-web-per-professionisti" className="hover:text-white">Siti web per professionisti</Link></li>
           <li><Link to="/realizzazioni" className="hover:text-white">Altre realizzazioni</Link></li>
         </ul>
       </div>

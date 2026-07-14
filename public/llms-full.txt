@@ -18,7 +18,7 @@
 ### Realizzazione siti web
 
 - **Siti web per negozi** (`/siti-web-per-negozi`) — Pacchetto essenziale per attività commerciali locali. Prezzo una tantum **da 199€**. Include hosting, dominio, sito responsive ottimizzato, SEO locale di base, modulo contatti.
-- **Siti web per professionisti** (`/realizzazione-siti-web-per-professionisti`) — Per studi professionali, liberi professionisti, consulenti. Prezzo una tantum **da 549€**. Include sito multipagina, SEO, blog opzionale, integrazione prenotazioni.
+- **Siti web per professionisti** (`/siti-web-per-professionisti`) — Per studi professionali, liberi professionisti, consulenti. Prezzo una tantum **da 549€**. Include sito multipagina, SEO, blog opzionale, integrazione prenotazioni.
 - **Siti web aziendali** (`/siti-web-aziendali`) — Per PMI strutturate. Prezzo una tantum **da 899€**. Include architettura multilingua opzionale, area servizi, blog, integrazioni CRM, performance avanzate.
 
 ### SEO, AEO e GEO

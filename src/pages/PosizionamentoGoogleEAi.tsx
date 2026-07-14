@@ -588,7 +588,7 @@ const PosizionamentoGoogleEAi = () => {
                     description: "Pacchetti strutturati per PMI da 899€.",
                   },
                   {
-                    to: "/realizzazione-siti-web-per-professionisti",
+                    to: "/siti-web-per-professionisti",
                     title: "Siti per professionisti",
                     description: "Soluzioni per studi e liberi professionisti da 549€.",
                   },

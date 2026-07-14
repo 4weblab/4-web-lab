@@ -172,7 +172,7 @@ const Index = () => {
                 {
                   "@type": "Offer",
                   name: "Sito web per professionisti",
-                  url: "https://4weblab.it/realizzazione-siti-web-per-professionisti",
+                  url: "https://4weblab.it/siti-web-per-professionisti",
                   priceCurrency: "EUR",
                   price: "549",
                   priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "549", valueAddedTaxIncluded: false },

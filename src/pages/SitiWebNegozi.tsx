@@ -514,7 +514,7 @@ const SitiWebNegozi = () => {
                   <Link to="/siti-web-aziendali" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
                     <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Ho bisogno di un sito web per la mia azienda →</span>
                   </Link>
-                  <Link to="/realizzazione-siti-web-per-professionisti" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
+                  <Link to="/siti-web-per-professionisti" className="block p-5 rounded-2xl border border-border/60 bg-white hover:border-accent/30 hover:shadow-md transition-all duration-300 group">
                     <span className="text-lg font-semibold text-foreground group-hover:text-accent transition-colors">Cerco un sito per la mia attività professionale →</span>
                   </Link>
                 </div>

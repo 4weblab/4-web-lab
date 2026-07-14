@@ -205,7 +205,7 @@ const Realizzazioni = () => {
             ],
             offers: [
               { "@type": "Offer", name: "Siti web per negozi", price: "199", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-negozi" },
-              { "@type": "Offer", name: "Siti web per professionisti", price: "549", priceCurrency: "EUR", url: "https://4weblab.it/realizzazione-siti-web-per-professionisti" },
+              { "@type": "Offer", name: "Siti web per professionisti", price: "549", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-professionisti" },
               { "@type": "Offer", name: "Siti web aziendali", price: "899", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-aziendali" },
             ],
           })}
@@ -251,7 +251,7 @@ const Realizzazioni = () => {
               <p className="body-large text-primary-foreground/80 max-w-2xl mx-auto mb-10 text-balance">
                 Portfolio di <strong className="font-semibold">4 Web Lab</strong>, agenzia web di Padova: demo e concept di
                 siti web per <Link to="/siti-web-per-negozi" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">negozi</Link>,{" "}
-                <Link to="/realizzazione-siti-web-per-professionisti" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">professionisti</Link> e{" "}
+                <Link to="/siti-web-per-professionisti" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">professionisti</Link> e{" "}
                 <Link to="/siti-web-aziendali" className="underline decoration-accent/60 underline-offset-4 hover:text-accent">aziende</Link>{" "}
                 a Padova e in tutta Italia.
               </p>
