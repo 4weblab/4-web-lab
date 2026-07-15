@@ -1,37 +1,51 @@
-## Problema
+# Transizione wave/curva post-Hero
 
-Su mobile, la Top Notification Bar va a capo su 2 righe e diventa più alta. Il menu sticky (`fixed` con `top: var(--notification-bar-height)`) scende di conseguenza e si sovrappone all'H1 della Hero della home.
+## Obiettivo
+Creare un elemento visivo-animato subito dopo la hero che funga da ponte verso la sezione "Chi siamo" e indichi chiaramente all'utente di scrollare verso il basso.
 
-Causa: mentre tutte le pagine interne applicano `padding-top: calc(var(--header-height) + var(--notification-bar-height))` sul `<main>`, la home (`src/pages/Index.tsx`) non lo fa perché la Hero usa `min-h-screen` con contenuto centrato verticalmente. Quando la bar cresce, l'header scivola nell'area centrale della Hero e copre il testo.
+## Soluzione proposta
+Un componente `HeroScrollTransition` posizionato in fondo alla hero con:
+- **SVG wave** che collega il fondo scuro della hero al background chiaro di `AboutSection` (`bg-surface-alt`)
+- **Icona centrale animata** (freccia o doppia freccia) che rimbalza/riluce in loop per suggerire lo scroll
+- Stili coerenti con i token esistenti (navy, accent, glassmorphism)
+- Rispetto di `prefers-reduced-motion`
 
-La variabile `--notification-bar-height` è già aggiornata dinamicamente dal `ResizeObserver` in `TopNotificationBar.tsx`, quindi basta consumarla correttamente nella Hero.
+## File coinvolti
+1. `src/components/HeroScrollTransition.tsx` — nuovo componente
+2. `src/components/Hero.tsx` — montare la transizione in fondo alla sezione
+3. `src/index.css` — keyframes e classi utility per l'animazione
 
-## Fix
+## Implementazione
 
-**`src/components/Hero.tsx`** — sostituire `min-h-screen` con altezza calcolata al netto delle barre fisse, e riservare padding-top pari all'ingombro combinato di notification bar + header, così il contenuto resta perfettamente centrato nella viewport visibile:
+### 1. Nuovo componente `HeroScrollTransition.tsx`
+- SVG wave a tutta larghezza con viewBox 1440x120 (o simile) per garantire scalabilità
+- Fill del path: `hsl(var(--surface-alt))` per fondersi con il background della sezione successiva
+- Elemento centrale: cerchio glassmorfico con icona `ChevronDown` o doppia freccia
+- Animazione icona: movimento verticale a onda (`translateY`) con opacità pulsante
+- Posizionamento: `absolute bottom-0 left-0 right-0 z-20` dentro la hero
 
-```tsx
-<section
-  className="relative flex items-center justify-center overflow-hidden"
-  style={{
-    background: 'var(--gradient-hero)',
-    minHeight: 'calc(100svh - var(--header-height) - var(--notification-bar-height, 0px))',
-    paddingTop: 'calc(var(--header-height) + var(--notification-bar-height, 0px))',
-  }}
->
-```
+### 2. Modifica `Hero.tsx`
+- Importare e montare `<HeroScrollTransition />` come ultimo figlio della `<section>` hero, prima della chiusura
+- Rimuovere o ridurre il bottone `ArrowDown` esistente per evitare ridondanza (opzionale, da decidere in fase di build)
 
-Note tecniche:
-- `100svh` (small viewport height) evita il salto causato dalla barra URL mobile.
-- Fallback `0px` per la variabile prima che il ResizeObserver la imposti (evita `calc(... - )` non valido).
-- Il `py-24` interno resta per il respiro tipografico; l'`align-items: center` centra il contenuto nello spazio effettivamente visibile.
+### 3. Aggiornamento `src/index.css`
+- Aggiungere keyframe `scroll-pulse`:
+  - 0%: translateY(0), opacity 1
+  - 50%: translateY(8px), opacity 0.6
+  - 100%: translateY(0), opacity 1
+- Classe `.scroll-indicator` con `animation: scroll-pulse 2s ease-in-out infinite`
+- Racchiudere in `@media (prefers-reduced-motion: reduce)` per disabilitare l'animazione
+
+## Dettagli tecnici
+- Nessuna dipendenza aggiuntiva: si usa Framer Motion già presente (o CSS puro per evitare JS aggiuntivo)
+- Accessibilità: `aria-hidden="true"` sull'animazione decorativa; nessun testo nascosto per screen reader
+- Mobile: wave si adatta con `preserveAspectRatio="none"`; icona centrale rimane touch-friendly
+- Performance: animazione CSS su `transform` e `opacity`, nessun reflow
 
 ## Verifica
-
-Playwright headless a viewport 390×812:
-1. Caricare `/`, misurare `--notification-bar-height` reale (2 righe attese).
-2. Verificare che `header.getBoundingClientRect().bottom` sia ≤ posizione top dell'H1 della Hero (nessuna sovrapposizione).
-3. Screenshot mobile per conferma visiva.
-4. Ripetere a 1440px desktop per non regredire.
-
-Nessuna modifica ad altre pagine: usano già il padding-top corretto sul `<main>`.
+- Build del progetto senza errori
+- Screenshot su desktop e mobile per confermare che:
+  - La wave si fonde con il background di `AboutSection`
+  - L'icona animata è visibile ma non invasiva
+  - Non ci sono sovrapposizioni con testo o CTA della hero
+  - L'animazione si ferma con `prefers-reduced-motion: reduce`
