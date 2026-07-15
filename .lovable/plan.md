@@ -1,45 +1,22 @@
 ## Obiettivo
-Uniformare il campo `areaServed` in tutti i JSON-LD che descrivono 4 Web Lab (entità `#business` / `#localbusiness` e pagine di servizio), impostandolo esattamente su:
+Ridurre l'effetto trasparenza del menu mobile aperto (hamburger) in modo che i link di navigazione siano più leggibili, mantenendo un aspetto premium coerente con il design system.
 
-- **Veneto** (`AdministrativeArea`)
-- **Padova** (`City`)
-- **Venezia** (`City`)
+## Contesto attuale
+In `src/components/Header.tsx` il menu mobile aperto utilizza:
+- `background: 'var(--glass-bg)'` (`hsla(0, 0%, 100%, 0.72)`)
+- `backdropFilter: 'blur(20px)'`
 
-I concept/clienti (R.B. s.n.c. a Cittadella, Vera Method a Padova) non verranno toccati.
+L'elevata trasparenza del vetro satina e sovrappone il contenuto della pagina sottostante, rendendo i link meno leggibili su alcuni sfondi.
 
-## File da modificare
-
-1. **`index.html`** — schema statico `#business`
-2. **`src/App.tsx`** — schema globale `#business`
-3. **`src/pages/Index.tsx`** — schema `Service` homepage
-4. **`src/pages/SitiWebPadova.tsx`** — `#localbusiness` + `Service`
-5. **`src/pages/SitiWebAziendali.tsx`** — `#localbusiness` + `Service`
-6. **`src/pages/PubblicitaGoogleAds.tsx`** — `#localbusiness` + `Service`
-7. **`src/pages/SitiWebProfessionisti.tsx`** — schema `Service`
-8. **`src/pages/SitiWebNegozi.tsx`** — schema `Service`
-9. **`src/pages/Realizzazioni.tsx`** — schema `Service`
-10. **`src/pages/PosizionamentoGoogleEAi.tsx`** — schema `Service`
-
-## Modifica tecnica
-
-In ogni `areaServed` dei file sopra, sostituire il contenuto esistente con:
-
-```json
-"areaServed": [
-  { "@type": "AdministrativeArea", "name": "Veneto" },
-  { "@type": "City", "name": "Padova" },
-  { "@type": "City", "name": "Venezia" }
-]
-```
-
-Per i file con doppia definizione (`#localbusiness` e `Service`), applicare lo stesso array a entrambe.
-
-## File NON modificati
-
-- `src/pages/DemoRbSncEdilizia.tsx` (area specifica cliente: Cittadella)
-- `src/pages/DemoPersonalTrainerVeraMethod.tsx` (area concept: Padova)
+## Modifica proposta
+Aggiornare lo stile inline del pannello mobile menu (`#mobile-menu`) in `src/components/Header.tsx`:
+- Sostituire il background glass con un colore di superficie più opaco, ad esempio `bg-background/95` o un valore custom `hsla(0, 0%, 100%, 0.95)`.
+- Mantenere un blur leggero (es. `blur(12px)`) per conservare continuità visiva con l'header, ma ridotto rispetto ai 20px attuali.
+- Mantenere il bordo e l'ombra esistenti per non perdere la profondità.
 
 ## Verifica
+- Verificare in anteprima mobile che il menu aperto copra bene lo sfondo sottostante e che i link siano nitidi.
+- Confermare che la chiusura/apertura continui a funzionare correttamente.
 
-- `rg -n "areaServed"` per confermare che tutte le occorrenze di 4 Web Lab siano allineate.
-- Build del progetto per assicurare che non ci siano errori di sintassi JSON/TSX.
+## File coinvolto
+- `src/components/Header.tsx`

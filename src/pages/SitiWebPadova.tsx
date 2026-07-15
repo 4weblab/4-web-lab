@@ -208,7 +208,7 @@ const SitiWebPadova = () => {
 
       <Header satelliteMode />
 
-      <main id="main-content" className="pt-[var(--header-height)]">
+      <main id="main-content" className="pt-[calc(var(--header-height)+var(--notification-bar-height))]">
         {/* Hero Section */}
         <section className="page-hero">
           {/* Noise texture */}
