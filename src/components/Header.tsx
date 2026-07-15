@@ -90,13 +90,13 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <Link to="/" aria-label="Vai alla home" className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
           <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo.webp" width={36} height={36} decoding="async" />
-          <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground md:text-foreground'}`}>
+          <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground lg:text-foreground'}`}>
             4 Web Lab
           </span>
         </Link>
 
         {satelliteMode ? (
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             {isBlogArticle && (
               <Link to="/blog" className={backLinkClass}>
                 <ArrowLeft className="w-4 h-4" />
@@ -109,7 +109,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
             </Link>
           </div>
         ) : (
-          <ul className="hidden md:flex items-center gap-1">
+          <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isRoute = item.href.startsWith('/');
               const isActive = !isRoute && activeSection === item.href.substring(1);
@@ -151,7 +151,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
 
         {/* Mobile Menu Button */}
         {satelliteMode ? (
-          <div className="md:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-2">
             {isBlogArticle && (
               <Link to="/blog" className={mobileBackLinkClass}>
                 <ArrowLeft className="w-4 h-4" />
@@ -165,7 +165,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           </div>
         ) : (
           <button
-            className="md:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
+            className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
             onClick={() => setIsOpen(!isOpen)}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
@@ -183,7 +183,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
         {isOpen && !satelliteMode && (
             <div
               id="mobile-menu"
-              className="absolute top-full left-0 right-0 md:hidden border-b border-border/30 bg-background/95"
+              className="absolute top-full left-0 right-0 lg:hidden border-b border-border/30 bg-background/95"
               style={{
                 backdropFilter: 'blur(14px)',
                 WebkitBackdropFilter: 'blur(14px)',
