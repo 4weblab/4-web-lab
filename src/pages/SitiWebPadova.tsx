@@ -278,12 +278,15 @@ const SitiWebPadova = () => {
             <div className="max-w-4xl mx-auto">
               <AnimatedSection>
                 <div className="aeo-definition rounded-2xl border border-accent/15 bg-accent/5 p-6 md:p-8">
-                  <p className="text-foreground font-semibold mb-3 text-base">
-                    In sintesi: realizzazione siti web a Padova
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <strong className="text-foreground">4 Web Lab</strong> è un web studio con sede a Legnaro (PD) che si occupa di <strong>realizzazione, creazione e sviluppo di siti web a Padova</strong> e in tutta la provincia. Lavoriamo con negozi, liberi professionisti e aziende. I prezzi partono da <strong>199€ una tantum</strong> e il tempo medio di consegna è di <strong>2–6 settimane</strong>. Ogni sito viene ottimizzato per la <strong>SEO locale</strong>, con design responsive e supporto continuativo dopo la pubblicazione.
-                  </p>
+                  <h2 className="text-foreground font-semibold mb-4 text-base">
+                    In sintesi: Realizzazione Siti Web a Padova con 4 Web Lab
+                  </h2>
+                  <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
+                    <li><strong className="text-foreground">Sede:</strong> Legnaro (PD) – operativi in tutta la provincia di Padova e Veneto.</li>
+                    <li><strong className="text-foreground">Servizi inclusi:</strong> Progettazione web, ottimizzazione SEO locale, design responsivo e supporto tecnico continuo.</li>
+                    <li><strong className="text-foreground">Tempi di consegna:</strong> In media 2-5 settimane.</li>
+                    <li><strong className="text-foreground">Target:</strong> Negozi, artigiani, liberi professionisti e PMI locali.</li>
+                  </ul>
                 </div>
               </AnimatedSection>
             </div>
