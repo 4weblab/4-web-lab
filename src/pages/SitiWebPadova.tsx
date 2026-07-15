@@ -22,30 +22,30 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab</title>
+        <title>Creazione Siti Web Padova e Provincia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h."
+          content="Creazione siti web a Padova e provincia per negozi, professionisti e PMI. Ottimizzazione SEO e AI. Richiedi un'analisi gratis!"
         />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab" />
+        <meta property="og:title" content="Creazione Siti Web Padova e Provincia | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h."
+          content="Creazione siti web a Padova e provincia per negozi, professionisti e PMI. Ottimizzazione SEO e AI. Richiedi un'analisi gratis!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Creazione Siti Web Padova e Provincia | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h."
+          content="Creazione siti web a Padova e provincia per negozi, professionisti e PMI. Ottimizzazione SEO e AI. Richiedi un'analisi gratis!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
@@ -234,36 +234,39 @@ const SitiWebPadova = () => {
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <PageBreadcrumb items={[{ label: "Home", to: "/" }, { label: "Realizzazione siti web Padova" }]} />
               <h1
-                className="heading-1 text-primary-foreground mb-8 text-balance"
+                className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Realizzazione Siti Web a Padova: il tuo web studio locale per negozi, professionisti e aziende
+                <span className="block">Siti Web che Generano Clienti a Padova e Provincia</span>
+                <span className="block mt-3 text-[0.55em] sm:text-[0.6em] tracking-wide font-semibold opacity-90 leading-tight">
+                  Il web studio locale per artigiani, professionisti e PMI che vogliono crescere online.
+                </span>
               </h1>
               <p
-                className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance"
+                className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sviluppo e creazione di siti internet professionali a Padova e provincia. Web studio con sede a Legnaro (PD): SEO locale, design moderno e supporto continuativo. Preventivo gratuito in 24h, da 199€.
+                Progettiamo siti web veloci, ottimizzati SEO e pronti per i motori di ricerca e l'Intelligenza Artificiale. Con sede a Legnaro (PD), aiutiamo le attività di Padova e provincia a farsi trovare da chi cerca i loro servizi. Preventivo personalizzato gratuito in 24 ore.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
                   onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
                   className="btn-primary text-lg px-10 py-4"
-                  aria-label="Richiedi una valutazione gratuita"
+                  aria-label="Analizza il mio progetto gratis"
                 >
-                  Richiedi una valutazione gratuita
+                  Analizza il mio progetto gratis
                 </button>
                 <a
                   href="https://wa.me/393514656042"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-primary-foreground/30 text-primary-foreground/90 hover:bg-primary-foreground/10 transition-all text-base font-semibold"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-primary-foreground/30 text-primary-foreground/95 hover:bg-primary-foreground/10 transition-all text-base font-semibold"
                 >
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
+                  <MessageCircle className="w-5 h-5" /> Scrivici su WhatsApp
                 </a>
               </div>
-              <p className="text-primary-foreground/60 text-sm mt-6">
-                Sede a Legnaro (PD) · da 199€ · risposta in 24h · clienti in tutta la provincia
+              <p className="text-primary-foreground/95 text-sm sm:text-base font-medium mt-6">
+                Sede a Legnaro (PD) • Risposta entro 24 ore • Assistenza e supporto inclusi
               </p>
             </AnimatedSection>
           </div>
@@ -275,12 +278,15 @@ const SitiWebPadova = () => {
             <div className="max-w-4xl mx-auto">
               <AnimatedSection>
                 <div className="aeo-definition rounded-2xl border border-accent/15 bg-accent/5 p-6 md:p-8">
-                  <p className="text-foreground font-semibold mb-3 text-base">
-                    In sintesi: realizzazione siti web a Padova
-                  </p>
-                  <p className="text-muted-foreground leading-relaxed">
-                    <strong className="text-foreground">4 Web Lab</strong> è un web studio con sede a Legnaro (PD) che si occupa di <strong>realizzazione, creazione e sviluppo di siti web a Padova</strong> e in tutta la provincia. Lavoriamo con negozi, liberi professionisti e aziende. I prezzi partono da <strong>199€ una tantum</strong> e il tempo medio di consegna è di <strong>2–6 settimane</strong>. Ogni sito viene ottimizzato per la <strong>SEO locale</strong>, con design responsive e supporto continuativo dopo la pubblicazione.
-                  </p>
+                  <h2 className="text-foreground font-semibold mb-4 text-base">
+                    In sintesi: Realizzazione Siti Web a Padova con 4 Web Lab
+                  </h2>
+                  <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
+                    <li><strong className="text-foreground">Sede:</strong> Legnaro (PD) – operativi in tutta la provincia di Padova e Veneto.</li>
+                    <li><strong className="text-foreground">Servizi inclusi:</strong> Progettazione web, ottimizzazione SEO locale, design responsivo e supporto tecnico continuo.</li>
+                    <li><strong className="text-foreground">Tempi di consegna:</strong> In media 2-5 settimane.</li>
+                    <li><strong className="text-foreground">Target:</strong> Negozi, artigiani, liberi professionisti e PMI locali.</li>
+                  </ul>
                 </div>
               </AnimatedSection>
             </div>
@@ -292,9 +298,9 @@ const SitiWebPadova = () => {
           <div className="container-section">
             <div className="max-w-4xl mx-auto mb-12">
               <AnimatedSection>
-                <h2 className="heading-3 mb-4">Cos'è un web studio a Padova e cosa fa</h2>
+                <h2 className="heading-3 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h2>
                 <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
-                  Un <strong>web studio a Padova</strong> è un'agenzia con sede sul territorio che si occupa della <strong>realizzazione, creazione e sviluppo di siti internet</strong> per attività locali: negozi, liberi professionisti e aziende. Progetta, sviluppa e mantiene siti web ottimizzati per posizionarsi su Google con ricerche geolocalizzate come "parrucchiere Padova", "commercialista Padova" o "sito internet Padova". Il vantaggio di un web studio locale è la prossimità: comunicazione diretta, conoscenza del tessuto imprenditoriale padovano e possibilità di incontri di persona quando serve.
+                  Realizzare un sito web a Padova non significa solo creare una bella vetrina grafica, ma strutturare una vera e propria calamita per i clienti locali. Ottimizziamo il tuo sito per intercettare le ricerche geolocalizzate dei tuoi potenziali clienti (es. "idraulico Padova", "centro estetico Legnaro", "consulente finanziario Padova"). Il vantaggio di scegliere uno studio del territorio è la combinazione tra una strategia SEO locale mirata, comunicazione diretta e la conoscenza reale del tessuto imprenditoriale padovano.
                 </p>
               </AnimatedSection>
             </div>
@@ -311,18 +317,18 @@ const SitiWebPadova = () => {
                     <h2 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h2>
                   </div>
                   <p className="body-base text-muted-foreground">
-                    Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente rimpalli: parli sempre con chi sviluppa il tuo sito.
+                    Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente risposte automatiche: parli sempre direttamente con chi sviluppa e gestisce il tuo sito.
                   </p>
                 </div>
 
                 {/* Lista a destra */}
                 <StaggerContainer className="space-y-4" staggerDelay={0.08}>
                   {[
-                    "Conoscenza del tessuto imprenditoriale locale",
+                    "Profonda conoscenza del mercato locale",
                     "Comunicazione diretta e senza intermediari",
-                    "Possibilità di confronto anche dal vivo su richiesta",
-                    "Supporto continuativo dopo la pubblicazione",
-                    "Struttura organizzata",
+                    "Incontri di persona e supporto sul territorio",
+                    "Assistenza e aggiornamenti post-lancio",
+                    "Struttura snella e tempi di risposta rapidi",
                   ].map((item, index) => (
                     <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
@@ -347,31 +353,34 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2">
-                  Creazione e sviluppo siti web a Padova: scegli in base alla tua attività
+                <h2 className="heading-2 mb-4">
+                  Soluzioni Web su Misura per il Tuo Business a Padova
                 </h2>
+                <p className="body-large text-muted-foreground max-w-3xl mx-auto text-balance">
+                  Progettiamo esperienze digitali specifiche per ogni tipo di attività locale e aziendale.
+                </p>
               </AnimatedSection>
 
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
                   {
-                    title: "Siti web per professionisti",
+                    title: "Siti per Professionisti & Studi",
                     description:
-                      "Presenze digitali autorevoli per liberi professionisti e studi che vogliono farsi trovare e trasmettere fiducia online.",
+                      "Presenze digitali autorevoli per medici, avvocati, psicologi e consulenti. Creiamo siti ottimizzati per posizionare il tuo nome su Google, trasmettere massima fiducia e facilitare la prenotazione di appuntamenti o contatti diretti.",
                     link: "/siti-web-per-professionisti",
                     linkLabel: "Scopri il servizio",
                   },
                   {
-                    title: "Siti web per negozi",
+                    title: "Siti per Negozi & Attività Locali",
                     description:
-                      "Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.",
+                      "Siti moderni e pronti per la Local SEO dedicati a negozi, artigiani, ristoranti e showroom. Ottimizziamo la tua presenza per attirare nuovi clienti dal territorio padovano direttamente nel tuo punto vendita fisico o online.",
                     link: "/siti-web-per-negozi",
                     linkLabel: "Scopri il servizio",
                   },
                   {
-                    title: "Siti web aziendali strutturati",
+                    title: "Siti Aziendali & Lead Generation",
                     description:
-                      "Piattaforme web complete per aziende che necessitano di una presenza online solida, organizzata e orientata alla conversione.",
+                      "Piattaforme web complete per PMI e aziende strutturate che necessitano di una presenza online solida, performante e integrata. Progetti orientati alla generazione di contatti commerciali qualificati (lead) e alla conversione.",
                     link: "/siti-web-aziendali",
                     linkLabel: "Scopri il servizio",
                   },
@@ -407,7 +416,7 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Negozio, professionista o azienda: quale sito a Padova</h2>
+                <h2 className="heading-2">Negozio, professionista o azienda:</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
@@ -462,13 +471,12 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Settings className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Realizzazione sito web a Padova: il nostro metodo in 4 passi</h2>
+                <h2 className="heading-2">Realizzazione Siti Web a Padova: il Nostro Metodo in 4 Step</h2>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
                 <p className="body-base text-muted-foreground mb-10 max-w-3xl">
-                  Ogni progetto di realizzazione siti web segue un percorso strutturato, pensato per garantire qualità,
-                  trasparenza e risultati misurabili.
+                  Dall'idea iniziale al lancio online, seguiamo un processo strutturato e trasparente per garantirti un sito web veloce, sicuro e pronto a generare risultati reali per la tua attività.
                 </p>
               </AnimatedSection>
 
@@ -476,27 +484,27 @@ const SitiWebPadova = () => {
                 {[
                   {
                     step: "01",
-                    title: "Analisi dell'attività",
+                    title: "01. Analisi Strategica & Obiettivi",
                     description:
-                      "Studiamo il tuo settore, i tuoi obiettivi e il contesto competitivo per definire le fondamenta del progetto.",
+                      "Studiamo il tuo settore di riferimento a Padova, i tuoi competitor locali e i tuoi obiettivi di business per definire le fondamenta strategiche del progetto prima di scrivere una sola riga di codice.",
                   },
                   {
                     step: "02",
-                    title: "Progettazione struttura",
+                    title: "02. Design Web & Esperienza Utente (UX)",
                     description:
-                      "Definiamo architettura delle informazioni, layout e design in linea con la tua identità e le aspettative del tuo pubblico.",
+                      "Progettiamo la struttura del sito e l'interfaccia grafica su misura. Ogni elemento visivo e testuale viene posizionato per guidare l'utente verso l'azione (contatto, chiamata o acquisto) in modo semplice e intuitivo.",
                   },
                   {
                     step: "03",
-                    title: "Sviluppo ottimizzato SEO",
+                    title: "03. Sviluppo Ottimizzato SEO & AI Ready",
                     description:
-                      "Realizziamo il sito con tecnologie moderne, velocità di caricamento elevata e ottimizzazione per i motori di ricerca.",
+                      "Sviluppiamo il sito web utilizzando tecnologie moderne e pulite. Ci assicuriamo che le pagine siano ultra-veloci da caricare, perfettamente ottimizzate per i dispositivi mobile e strutturate per essere lette al meglio da Google e dagli assistenti AI.",
                   },
                   {
                     step: "04",
-                    title: "Pubblicazione e supporto",
+                    title: "04. Lancio, Monitoraggio & Supporto Continuo",
                     description:
-                      "Lanciamo il sito e restiamo al tuo fianco con assistenza continuativa per aggiornamenti e miglioramenti.",
+                      "Mettiamo online il sito configurando gli strumenti di analisi (Google Search Console e Analytics). Dopo il lancio, non ti lasciamo solo: ti garantiamo supporto continuo, assistenza tecnica e manutenzione per mantenere il sito sempre aggiornato.",
                   },
                 ].map((item, index) => (
                   <StaggerItem key={index}>
@@ -520,11 +528,16 @@ const SitiWebPadova = () => {
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
-                <div className="icon-box w-13 h-13">
-                  <Globe className="w-6 h-6 text-accent-foreground" />
+              <AnimatedSection className="mb-10">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="icon-box w-13 h-13">
+                    <Globe className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
                 </div>
-                <h2 className="heading-2">Zone servite: Padova città e tutta la provincia</h2>
+                <p className="body-large text-muted-foreground max-w-3xl">
+                  Copriamo capillarmente il territorio padovano per offrire una presenza digitale forte e un supporto tecnico reale, anche direttamente presso la tua sede.
+                </p>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <div className="flex flex-wrap gap-2 mb-8">
@@ -544,11 +557,8 @@ const SitiWebPadova = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  La sede operativa a <strong>Legnaro (PD)</strong> ci rende un riferimento concreto per la <strong>realizzazione di siti web a Padova</strong> e per chi cerca <strong>sviluppo e creazione di siti internet</strong> in tutta la provincia. Lavoriamo con{" "}
-                  <Link
-                    to="/siti-web-per-professionisti"
-                    className="text-accent hover:underline font-medium"
-                  >
+                  Con sede operativa a <strong>Legnaro (PD)</strong>, siamo il punto di riferimento concreto per le attività che cercano un servizio di <strong>sviluppo e creazione di siti internet a Padova</strong> e provincia. Lavoriamo fianco a fianco con{" "}
+                  <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">
                     professionisti
                   </Link>
                   ,{" "}
@@ -559,10 +569,17 @@ const SitiWebPadova = () => {
                   <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">
                     aziende
                   </Link>{" "}
-                  della provincia di Padova, combinando la vicinanza di un web studio locale con un metodo collaudato a livello nazionale.
+                  del territorio, unendo la flessibilità e l'ascolto di uno studio locale alla solidità di strategie collaudate.
+                </p>
+                <p className="mb-6">
+                  Che la tua attività si trovi nel centro storico di Padova o in uno dei comuni limitrofi, l'approccio non cambia: progettiamo soluzioni su misura capaci di convertire i visitatori in clienti.
                 </p>
                 <p>
-                  Che la tua attività sia in centro a Padova o in uno dei comuni della provincia, l'approccio resta lo stesso: ascolto, progettazione su misura e un risultato che rispecchia davvero la tua attività. Alle realtà che vogliono risultati misurabili fin dalle prime settimane proponiamo anche la <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">gestione completa di campagne Google ADS</Link>, perfetta per affiancare il sito appena pubblicato e portare traffico qualificato da subito.
+                  Vuoi accelerare i risultati fin da subito? Oltre alla realizzazione del sito, pianifichiamo e gestiamo{" "}
+                  <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">
+                    <strong>campagne Google Ads</strong>
+                  </Link>{" "}
+                  per portare traffico qualificato sulle tue pagine fin dal primo giorno di pubblicazione.
                 </p>
               </AnimatedSection>
             </div>
@@ -577,18 +594,18 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <ImageIcon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Realizzazioni: alcuni siti internet creati a Padova e provincia</h2>
+                <h2 className="heading-2">Il Nostro Portfolio: Storie di Successo e Concept Innovativi</h2>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <p className="text-muted-foreground mb-10 max-w-3xl">
-                  Una piccola selezione di siti web realizzati per attività del territorio padovano e veneto. Tra lavori pubblicati e concept di design.
+                  Dai un'occhiata ad alcuni dei siti web che abbiamo realizzato per le attività del territorio padovano e ai nostri prototipi di design ad alta conversione.
                 </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
-                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Sito web, SEO e Google Ads per azienda di rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
-                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium per studio dentistico.", to: "/realizzazioni" },
-                  { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di sito per personal trainer con metodo proprietario.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
+                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Progetto web completo con ottimizzazione SEO e campagne Google Ads mirate per massimizzare le richieste di preventivo di un'azienda locale leader nella rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
+                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni" },
+                  { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di presenza online per personal trainer e professionisti del benessere. Struttura snella e moderna, focalizzata sulla presentazione del metodo e sulla conversione rapida.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
                 ].map((item, i) => (
                   <StaggerItem key={i}>
                     <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
@@ -605,7 +622,7 @@ const SitiWebPadova = () => {
               </StaggerContainer>
               <div className="text-center mt-10">
                 <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-semibold link-underline">
-                  Vedi tutte le realizzazioni →
+                  Esplora tutti i nostri progetti →
                 </Link>
               </div>
             </div>
