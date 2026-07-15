@@ -444,6 +444,27 @@
   .duration-400 {
     transition-duration: 400ms;
   }
+
+  .scroll-indicator {
+    animation: scroll-pulse 2s ease-in-out infinite;
+  }
+}
+
+@keyframes scroll-pulse {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(6px);
+    opacity: 0.65;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-indicator {
+    animation: none;
+  }
 }
 
 /* Page hero — unified hero for all internal pages (not home).
