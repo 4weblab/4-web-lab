@@ -41,7 +41,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Ottimizza le immagini inserendo sempre un testo Alt descrittivo. Aiuta Google a capire il contesto e migliora il posizionamento.
+          Velocizza il caricamento del sito usando immagini in formato WebP o AVIF. Un sito più rapido si posiziona meglio su Google.
         </p>
       </div>
     </div>
