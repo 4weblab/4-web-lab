@@ -311,11 +311,11 @@ const DemoRbSncEdilizia = () => {
                     <span className="text-xs text-muted-foreground">rb-snc.it</span>
                   </div>
                   <img src={card.img} alt={`Report PageSpeed Insights ${card.label} per rb-snc.it`} width={1400} height={card.label === "Mobile" ? 638 : 634} loading="lazy" decoding="async" className="w-full h-auto block" />
-                  <div className="grid grid-cols-4 border-t border-border">
+                  <div className="grid grid-cols-4 border-t border-border" lang="it">
                     {card.scores.map(([k, v]) => (
-                      <div key={k} className="px-3 py-3 text-center border-r last:border-r-0 border-border">
-                        <div className="text-2xl font-bold text-foreground">{v}</div>
-                        <div className="text-[10px] uppercase tracking-wider text-muted-foreground mt-0.5">{k}</div>
+                      <div key={k} className="min-w-0 px-1.5 sm:px-3 py-3 text-center border-r last:border-r-0 border-border">
+                        <div className="text-xl sm:text-2xl font-bold text-foreground">{v}</div>
+                        <div className="text-[9px] sm:text-[10px] leading-tight uppercase tracking-wider text-muted-foreground mt-0.5 break-words hyphens-auto">{k}</div>
                       </div>
                     ))}
                   </div>
