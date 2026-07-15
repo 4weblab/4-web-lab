@@ -1,8 +1,23 @@
 import { Lightbulb } from "lucide-react";
 import { useLayoutEffect, useRef } from "react";
+import { useLocation } from "react-router-dom";
+
+const CONCEPT_DEMO_PATHS = [
+  "/realizzazioni/demo-metalmeccanica",
+  "/realizzazioni/demo-studio-dentistico-premium",
+  "/realizzazioni/demo-fotovoltaico",
+  "/realizzazioni/boutique-bb-luxury-rooms",
+  "/realizzazioni/demo-flower-atelier",
+  "/realizzazioni/demo-personal-trainer-vera-method",
+];
 
 const TopNotificationBar = () => {
+  const { pathname } = useLocation();
   const ref = useRef<HTMLDivElement | null>(null);
+
+  if (CONCEPT_DEMO_PATHS.includes(pathname)) {
+    return null;
+  }
 
   useLayoutEffect(() => {
     const el = ref.current;
