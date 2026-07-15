@@ -8,7 +8,7 @@ const HeroScrollTransition = () => {
     >
       {/* Wave SVG bridging hero to AboutSection surface */}
       <svg
-        className="w-full h-16 sm:h-20 md:h-24 lg:h-28"
+        className="w-full h-14 sm:h-18 md:h-22 lg:h-26"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -20,9 +20,9 @@ const HeroScrollTransition = () => {
       </svg>
 
       {/* Animated scroll indicator */}
-      <div className="absolute left-1/2 -translate-x-1/2 bottom-2 sm:bottom-3">
-        <div className="scroll-indicator flex items-center justify-center w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-background/80 border border-border/60 shadow-lg backdrop-blur-md">
-          <ChevronDown className="w-5 h-5 text-primary" />
+      <div className="absolute left-1/2 -translate-x-1/2 bottom-3 sm:bottom-4">
+        <div className="scroll-indicator flex items-center justify-center w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-background/90 border border-accent/30 shadow-accent/30 shadow-lg backdrop-blur-md">
+          <ChevronDown className="w-6 h-6 text-accent" strokeWidth={2.5} />
         </div>
       </div>
     </div>
