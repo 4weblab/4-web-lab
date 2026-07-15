@@ -317,18 +317,18 @@ const SitiWebPadova = () => {
                     <h2 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h2>
                   </div>
                   <p className="body-base text-muted-foreground">
-                    Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente rimpalli: parli sempre con chi sviluppa il tuo sito.
+                    Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente risposte automatiche: parli sempre direttamente con chi sviluppa e gestisce il tuo sito.
                   </p>
                 </div>
 
                 {/* Lista a destra */}
                 <StaggerContainer className="space-y-4" staggerDelay={0.08}>
                   {[
-                    "Conoscenza del tessuto imprenditoriale locale",
+                    "Profonda conoscenza del mercato locale",
                     "Comunicazione diretta e senza intermediari",
-                    "Possibilità di confronto anche dal vivo su richiesta",
-                    "Supporto continuativo dopo la pubblicazione",
-                    "Struttura organizzata",
+                    "Incontri di persona e supporto sul territorio",
+                    "Assistenza e aggiornamenti post-lancio",
+                    "Struttura snella e tempi di risposta rapidi",
                   ].map((item, index) => (
                     <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
