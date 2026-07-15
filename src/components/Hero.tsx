@@ -36,7 +36,7 @@ const Hero = () => {
         <source media="(max-width: 1280px)" srcSet={heroBgTablet} type="image/webp" />
         <img
           src={heroBgDesktop}
-          alt="Skyline di Padova con Basilica di Sant'Antonio e Prato della Valle stilizzati in codice sorgente — 4 Web Lab, agenzia web tech a Padova"
+          alt="Mappa astratta del Veneto con rete di nodi luminosi e linee dati che convergono su Padova — 4 Web Lab, web agency SEO e siti web a Padova"
           width={1920}
           height={1070}
           fetchPriority="high"
