@@ -484,27 +484,27 @@ const SitiWebPadova = () => {
                 {[
                   {
                     step: "01",
-                    title: "Analisi dell'attività",
+                    title: "01. Analisi Strategica & Obiettivi",
                     description:
-                      "Studiamo il tuo settore, i tuoi obiettivi e il contesto competitivo per definire le fondamenta del progetto.",
+                      "Studiamo il tuo settore di riferimento a Padova, i tuoi competitor locali e i tuoi obiettivi di business per definire le fondamenta strategiche del progetto prima di scrivere una sola riga di codice.",
                   },
                   {
                     step: "02",
-                    title: "Progettazione struttura",
+                    title: "02. Design Web & Esperienza Utente (UX)",
                     description:
-                      "Definiamo architettura delle informazioni, layout e design in linea con la tua identità e le aspettative del tuo pubblico.",
+                      "Progettiamo la struttura del sito e l'interfaccia grafica su misura. Ogni elemento visivo e testuale viene posizionato per guidare l'utente verso l'azione (contatto, chiamata o acquisto) in modo semplice e intuitivo.",
                   },
                   {
                     step: "03",
-                    title: "Sviluppo ottimizzato SEO",
+                    title: "03. Sviluppo Ottimizzato SEO & AI Ready",
                     description:
-                      "Realizziamo il sito con tecnologie moderne, velocità di caricamento elevata e ottimizzazione per i motori di ricerca.",
+                      "Sviluppiamo il sito web utilizzando tecnologie moderne e pulite. Ci assicuriamo che le pagine siano ultra-veloci da caricare, perfettamente ottimizzate per i dispositivi mobile e strutturate per essere lette al meglio da Google e dagli assistenti AI.",
                   },
                   {
                     step: "04",
-                    title: "Pubblicazione e supporto",
+                    title: "04. Lancio, Monitoraggio & Supporto Continuo",
                     description:
-                      "Lanciamo il sito e restiamo al tuo fianco con assistenza continuativa per aggiornamenti e miglioramenti.",
+                      "Mettiamo online il sito configurando gli strumenti di analisi (Google Search Console e Analytics). Dopo il lancio, non ti lasciamo solo: ti garantiamo supporto continuo, assistenza tecnica e manutenzione per mantenere il sito sempre aggiornato.",
                   },
                 ].map((item, index) => (
                   <StaggerItem key={index}>
