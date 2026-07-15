@@ -594,18 +594,18 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <ImageIcon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Realizzazioni: alcuni siti internet creati a Padova e provincia</h2>
+                <h2 className="heading-2">Il Nostro Portfolio: Storie di Successo e Concept Innovativi</h2>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <p className="text-muted-foreground mb-10 max-w-3xl">
-                  Una piccola selezione di siti web realizzati per attività del territorio padovano e veneto. Tra lavori pubblicati e concept di design.
+                  Dai un'occhiata ad alcuni dei siti web che abbiamo realizzato per le attività del territorio padovano e ai nostri prototipi di design ad alta conversione.
                 </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
-                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Sito web, SEO e Google Ads per azienda di rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
-                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium per studio dentistico.", to: "/realizzazioni" },
-                  { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di sito per personal trainer con metodo proprietario.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
+                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Progetto web completo con ottimizzazione SEO e campagne Google Ads mirate per massimizzare le richieste di preventivo di un'azienda locale leader nella rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
+                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni" },
+                  { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di presenza online per personal trainer e professionisti del benessere. Struttura snella e moderna, focalizzata sulla presentazione del metodo e sulla conversione rapida.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
                 ].map((item, i) => (
                   <StaggerItem key={i}>
                     <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
@@ -622,7 +622,7 @@ const SitiWebPadova = () => {
               </StaggerContainer>
               <div className="text-center mt-10">
                 <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-semibold link-underline">
-                  Vedi tutte le realizzazioni →
+                  Esplora tutti i nostri progetti →
                 </Link>
               </div>
             </div>
