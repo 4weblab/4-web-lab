@@ -8,6 +8,7 @@ import { HelmetProvider, Helmet } from "react-helmet-async";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+import CookiePreferencesButton from "./components/CookiePreferencesButton";
 import TopNotificationBar from "./components/TopNotificationBar";
 
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -95,6 +96,7 @@ const App = () => (
             </Routes>
           </Suspense>
           <CookieBanner />
+          <CookiePreferencesButton />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
