@@ -125,10 +125,6 @@ const Footer = () => {
                   <span>info@4weblab.it</span>
                 </a>
               </li>
-              <li className="inline-flex items-start gap-2.5 text-primary-foreground/70">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
-                <span>{businessInfo.address}, {businessInfo.postalCode} {businessInfo.city}, {businessInfo.country}</span>
-              </li>
             </ul>
           </div>
         </div>
