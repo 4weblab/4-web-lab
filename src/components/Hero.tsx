@@ -27,8 +27,12 @@ const Hero = () => {
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'var(--gradient-hero)' }}>
+      className="relative flex items-center justify-center overflow-hidden"
+      style={{
+        background: 'var(--gradient-hero)',
+        minHeight: 'calc(100svh - var(--header-height) - var(--notification-bar-height, 0px))',
+        paddingTop: 'calc(var(--header-height) + var(--notification-bar-height, 0px))',
+      }}>
 
       {/* Background image */}
       <picture>
