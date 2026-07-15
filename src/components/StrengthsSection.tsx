@@ -11,7 +11,7 @@ const strengths = [
   {
     icon: Search,
     title: 'SEO e visibilità AI',
-    description: 'Ottimizzazione per Google e per le AI (ChatGPT, Gemini, Perplexity): farti trovare, ovunque cerchino.',
+    description: "Ottimizzazione per Google e per le AI (ChatGPT, Gemini, Perplexity): farti trovare, ovunque cerchino. I tuoi clienti stanno già cercando soluzioni su Gemini o ChatGPT. Progettiamo un'architettura semantica avanzata che posiziona il tuo brand come fonte ufficiale e attendibile, convertendo le ricerche assistite dall'AI in lead reali per il tuo business.",
   },
   {
     icon: Smartphone,
