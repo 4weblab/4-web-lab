@@ -117,7 +117,7 @@ const SitiWebNegozi = () => {
 
       <Header satelliteMode />
 
-      <main id="main-content" className="pt-[var(--header-height)]">
+      <main id="main-content" className="pt-[calc(var(--header-height)+var(--notification-bar-height))]">
 
         {/* ─── HERO ─── */}
         <section className="page-hero">
