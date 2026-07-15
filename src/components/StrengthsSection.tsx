@@ -6,7 +6,7 @@ const strengths = [
   {
     icon: Zap,
     title: 'Performance elevate',
-    description: 'Caricamento rapido e Core Web Vitals al top: più utenti restano, più Google ti premia.',
+    description: "Realizziamo siti web ultra-veloci\u00a0 e ottimizzati secondo i rigidi standard Core Web Vitals di Google. Un sito rapido non solo offre un'esperienza d'uso fluida e piacevole per i tuoi clienti, ma si posiziona meglio sui motori di ricerca, trasformando i semplici visitatori in contatti concreti per la tua attività.",
   },
   {
     icon: Search,
