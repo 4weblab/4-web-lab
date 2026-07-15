@@ -15,10 +15,6 @@ const TopNotificationBar = () => {
   const { pathname } = useLocation();
   const ref = useRef<HTMLDivElement | null>(null);
 
-  if (CONCEPT_DEMO_PATHS.includes(pathname)) {
-    return null;
-  }
-
   useLayoutEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -45,6 +41,10 @@ const TopNotificationBar = () => {
       document.documentElement.style.removeProperty("--notification-bar-height");
     };
   }, []);
+
+  if (CONCEPT_DEMO_PATHS.includes(pathname)) {
+    return null;
+  }
 
   return (
     <div
