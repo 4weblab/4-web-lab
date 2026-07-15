@@ -96,6 +96,17 @@ const PrivacyPolicy = () => {
                   <strong>Dati forniti volontariamente:</strong> eventuali dati personali comunicati dall'utente
                   tramite il contatto WhatsApp (nome, numero di telefono, contenuto dei messaggi).
                 </li>
+                <li>
+                  <strong>Dati raccolti tramite strumenti di misurazione:</strong> previo consenso
+                  dell'utente, il sito utilizza <strong>Google Analytics 4</strong> per raccogliere
+                  in forma aggregata e pseudonima dati statistici sull'utilizzo del sito
+                  (pagine viste, tempo di permanenza, dispositivo, sorgente di traffico). L'indirizzo
+                  IP è anonimizzato e le funzioni pubblicitarie di Google Analytics non sono attive.
+                  Per il dettaglio dei cookie utilizzati e per revocare il consenso consulta la{' '}
+                  <Link to="/cookie" className="text-accent hover:underline font-medium">
+                    Cookie Policy
+                  </Link>.
+                </li>
               </ul>
             </section>
 
@@ -116,7 +127,8 @@ const PrivacyPolicy = () => {
               <h2 className="heading-3 mb-4">4. Base giuridica</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Il trattamento dei dati si fonda sul consenso dell'interessato (art. 6.1.a GDPR)
-                espresso al momento del contatto, sull'esecuzione di un contratto o di misure precontrattuali
+                espresso al momento del contatto o dell'accettazione dei cookie statistici tramite banner,
+                sull'esecuzione di un contratto o di misure precontrattuali
                 (art. 6.1.b GDPR), e sugli obblighi legali del titolare (art. 6.1.c GDPR).
               </p>
             </section>
@@ -127,11 +139,28 @@ const PrivacyPolicy = () => {
                 I dati personali sono conservati per il tempo strettamente necessario al conseguimento
                 delle finalità per cui sono stati raccolti, e comunque non oltre i termini previsti dalla legge.
                 I dati di contatto sono conservati per un massimo di 24 mesi dall'ultima interazione.
+                {' '}I dati raccolti tramite Google Analytics 4 sono conservati per 14 mesi
+                (impostazione minima consigliata); i relativi cookie hanno durata massima 2 anni.
               </p>
             </section>
 
             <section className="mb-10">
-              <h2 className="heading-3 mb-4">6. Diritti dell'interessato</h2>
+              <h2 className="heading-3 mb-4">6. Trasferimenti di dati extra-UE</h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Alcuni servizi di terze parti utilizzati dal sito (in particolare Google Analytics 4
+                fornito da Google Ireland Limited, con eventuale ulteriore trattamento da parte di
+                Google LLC negli Stati Uniti) possono comportare il trasferimento di dati personali
+                al di fuori dello Spazio Economico Europeo. Tali trasferimenti avvengono in presenza
+                delle garanzie previste dagli artt. 44 e ss. del GDPR: adesione di Google LLC
+                all'<em>EU-U.S. Data Privacy Framework</em>, adozione delle <em>Clausole
+                Contrattuali Standard</em> approvate dalla Commissione Europea e implementazione
+                di misure tecniche e organizzative supplementari (pseudonimizzazione, anonimizzazione
+                dell'IP, cifratura in transito e a riposo).
+              </p>
+            </section>
+
+            <section className="mb-10">
+              <h2 className="heading-3 mb-4">7. Diritti dell'interessato</h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 Ai sensi degli articoli 15-22 del GDPR, l'interessato ha diritto di:
               </p>
@@ -151,7 +180,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section className="mb-10">
-              <h2 className="heading-3 mb-4">7. Sicurezza</h2>
+              <h2 className="heading-3 mb-4">8. Sicurezza</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Il Titolare adotta misure di sicurezza tecniche e organizzative adeguate per proteggere
                 i dati personali da accessi non autorizzati, perdita, distruzione o divulgazione.
@@ -160,7 +189,7 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
-              <h2 className="heading-3 mb-4">8. Modifiche alla Privacy Policy</h2>
+              <h2 className="heading-3 mb-4">9. Modifiche alla Privacy Policy</h2>
               <p className="text-muted-foreground leading-relaxed">
                 Il Titolare si riserva il diritto di modificare la presente Privacy Policy in qualsiasi momento,
                 dandone comunicazione agli utenti su questa pagina. Si consiglia di consultare periodicamente

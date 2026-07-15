@@ -1,81 +1,88 @@
 
-## Obiettivo
+# Attivazione Google Analytics 4 conforme al consenso
 
-Due interventi separati e sequenziali:
+Il tag fornito da Google è corretto ma, incollato tal quale in `<head>`, caricherebbe GA4 e scriverebbe i cookie `_ga` / `_ga_HWVJ1KWYSN` **prima** che l'utente accetti — in contrasto con:
+- art. 122 Codice Privacy (consenso preventivo per cookie non tecnici)
+- Linee guida Garante 10 giugno 2021
+- il banner a categorie che abbiamo appena implementato in `src/components/CookieBanner.tsx` + `src/lib/consent.ts`
 
-1. **Menu hamburger anche su tablet** — attualmente la nav desktop si attiva già da 768px (`md:`) e con 8 voci (Home, Siti web, Realizzazioni, SEO & AI, Google ADS, Blog, FAQ, Contatti) va in overflow o si sovrappone al logo su tablet in portrait/landscape stretti.
-2. **Audit sitewide dei testi che escono dai riquadri** su mobile/tablet, partendo dal caso segnalato: le label `Prestazioni / Accessibilità / Best Practice / SEO` nella griglia 4-colonne dei punteggi PageSpeed nel case study RB.
+La soluzione corretta è **Google Consent Mode v2**: gtag viene caricato subito ma in stato `denied` di default, e si passa a `granted` solo quando l'utente accetta la categoria "statistici". Se rifiuta, GA4 non scrive cookie e invia al massimo "ping" anonimi senza identificatori (comportamento previsto e documentato da Google).
 
----
+## 1. Inserimento del tag in `index.html`
 
-## 1. Header — hamburger fino a desktop largo
+In `<head>`, prima dei JSON-LD, aggiungiamo:
 
-File: `src/components/Header.tsx`
+- Uno script inline **sincrono** che inizializza `dataLayer` e imposta i default di Consent Mode v2 a `denied` per tutte le categorie pubblicitarie e analitiche, con `wait_for_update: 500` per dare tempo al banner di leggere l'eventuale scelta già salvata.
+- Se in `localStorage` è già presente un consenso valido (`cookie-consent-v1` con `analytics: true`, versione e scadenza OK), aggiornare subito lo stato a `granted` prima del primo `gtag('config', ...)`, così gli utenti che tornano non perdono il pageview.
+- Lo `<script async src="…gtag/js?id=G-HWVJ1KWYSN">` di Google.
+- Il blocco `gtag('js', new Date()); gtag('config', 'G-HWVJ1KWYSN', { anonymize_ip: true });`.
 
-Cambiare il breakpoint di attivazione della nav orizzontale da `md` (768px) a `lg` (1024px) su tutti gli elementi coinvolti:
+Note tecniche:
+- `anonymize_ip: true` è ridondante su GA4 (che non registra l'IP completo) ma lo dichiariamo esplicitamente perché è citato nella Cookie Policy.
+- Non usiamo `send_page_view: false`: GA4 continuerà a tracciare pageview in SPA tramite l'evento di route change (punto 3).
 
-- `<ul className="hidden md:flex …">` → `hidden lg:flex`
-- Bottone hamburger `className="md:hidden …"` → `lg:hidden`
-- Blocco satelliteMode (back links) desktop `hidden md:flex` → `hidden lg:flex`, mobile `md:hidden` → `lg:hidden`
-- Menu mobile aperto: `md:hidden` → `lg:hidden`
-- Colore label logo: `md:text-foreground` → `lg:text-foreground` (per coerenza con lo stato scroll)
+## 2. Collegamento al banner — `src/lib/consent.ts`
 
-Nessuna modifica al comportamento: hamburger e drawer già esistono, si estende semplicemente la loro fascia di attivazione a tablet.
+Nessun cambiamento all'API pubblica. Aggiungiamo un piccolo modulo `src/lib/analytics.ts` (o in fondo a `consent.ts`, come preferisci) che:
 
-## 2. Audit responsive testi in overflow
+- All'avvio dell'app (`src/main.tsx` o `src/App.tsx`) si sottoscrive all'evento `consent-updated` già emesso da `saveConsent`.
+- Alla ricezione, chiama `gtag('consent', 'update', { analytics_storage: <granted|denied> })`.
+- Se `analytics` passa da `granted` a `denied`, invoca anche la cancellazione dei cookie `_ga` e `_ga_HWVJ1KWYSN` dal dominio corrente (per rispettare la revoca immediata).
 
-### 2a. Fix immediato PageSpeed cards (RB)
+## 3. Pageview su cambio route (SPA)
 
-File: `src/pages/DemoRbSncEdilizia.tsx` (righe ~314-321)
+Il sito è una SPA React Router: senza aiuto, GA4 registra solo il primo pageview. Aggiungiamo un hook `useGaPageview` montato in `src/App.tsx` che, ad ogni cambio di `location.pathname + search`, se `hasAnalyticsConsent()` è true, chiama:
 
-La griglia `grid-cols-4` con label `text-[10px] uppercase tracking-wider` fa uscire "Accessibilità" e "Best Practice" dai riquadri su schermi < 400px perché la card è dentro un `md:grid-cols-2` che su mobile occupa l'intera larghezza divisa per 4 celle strette.
+```
+gtag('event', 'page_view', {
+  page_path: location.pathname + location.search,
+  page_location: window.location.href,
+  page_title: document.title,
+});
+```
 
-Interventi:
-- `text-[10px]` → `text-[10px] leading-tight break-words hyphens-auto` con `lang="it"` a livello di container per spezzatura corretta.
-- Aggiungere `px-2 sm:px-3` per ridurre padding orizzontale su mobile.
-- Su mobile molto stretti (<380px) valutare `grid-cols-2` con 2 righe invece di 4 colonne, tramite `grid-cols-2 xs:grid-cols-4` oppure sempre `grid-cols-4` con font ridotto a `text-[9px]` <sm.
+Se il consenso è denied, non fa nulla (Consent Mode gestisce eventuali ping).
 
-Approccio scelto: mantenere `grid-cols-4` (leggibilità del pattern "4 metriche Lighthouse") ma:
-- `text-[9px] sm:text-[10px]`
-- `break-words hyphens-auto`
-- Padding orizzontale ridotto `px-1.5 sm:px-3`
-- `min-w-0` sulle celle per consentire lo shrinking del testo.
+## 4. Micro-aggiornamento Cookie Policy
 
-### 2b. Audit sitewide
+`src/pages/CookiePolicy.tsx`: aggiungere una riga che cita esplicitamente l'ID misurazione `G-HWVJ1KWYSN` e menzionare l'uso di **Google Consent Mode v2** nella sezione GA4 (rafforza la trasparenza richiesta dal Garante). Nessun'altra modifica legale: le sezioni già scritte (basi giuridiche, DPF/SCC, 14 mesi, revoca) restano valide.
 
-Passata sistematica su tutte le pagine e componenti principali con Playwright a 3 viewport (360, 768, 1024) per rilevare overflow:
+## 5. TypeScript
 
-- Home: `Hero`, `AboutSection`, `StrengthsSection` (bento), `UserRoutingSection`, `ContactSection`, `Footer`
-- Landing: `SitiWebAziendali`, `SitiWebProfessionisti`, `SitiWebNegozi`, `SitiWebPadova`, `PosizionamentoGoogleEAi`, `PubblicitaGoogleAds`, `Realizzazioni`, `FaqSitiWeb`, `Contact`, `Blog`
-- Demo/Case: `DemoRbSncEdilizia`, `DemoPersonalTrainerVeraMethod`, `DemoStudioDentisticoPremium`, `DemoBoutiqueBB`, `DemoFlowerAtelier`, `DemoFotovoltaico`, `DemoMetalmeccanica`
-- Articoli blog
+Aggiungere in `src/vite-env.d.ts` (o file dedicato `src/types/gtag.d.ts`) le dichiarazioni:
 
-Pattern da correggere in modo mirato quando trovati:
-- Titoli/heading con parole lunghe (es. "Personalizzazione") in colonne strette → `text-balance`, `break-words`, `hyphens-auto` con `lang="it"` sull'`<html>` o sul container.
-- Griglie a N colonne con label brevi maiuscole → riduzione font e padding sotto sm, oppure wrap forzato.
-- Pill/badge con testo lungo (`ShieldCheck` inline-flex) → `flex-wrap` sui container.
-- Prezzi/numeri con simboli (es. `199€ una tantum`) → `whitespace-nowrap` sul numero, `flex-wrap` sul container.
-- Card bento con contenuto denso → padding responsive `p-4 sm:p-6 md:p-8`, `min-w-0` interno.
+```ts
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+}
+export {};
+```
 
-### Metodologia audit
+## File toccati
 
-Script Playwright che per ciascun URL:
-1. Naviga a 360×800, 768×1024, 1024×1366.
-2. Confronta `scrollWidth` di ogni figlio diretto di `<section>`, `<article>`, `.card-*`, `[class*="grid"]` con la propria `clientWidth`.
-3. Riporta gli elementi in overflow con selettore, testo e viewport.
-4. Screenshot puntuale delle zone rilevate.
+```text
+MOD  index.html                       # gtag + Consent Mode v2 default denied + bootstrap da localStorage
+NEW  src/lib/analytics.ts             # bridge consent-updated → gtag('consent','update') + purge cookie GA
+NEW  src/hooks/useGaPageview.ts       # pageview su cambio route in SPA
+MOD  src/App.tsx                      # inizializza analytics.ts + monta useGaPageview
+MOD  src/pages/CookiePolicy.tsx       # cita ID G-HWVJ1KWYSN e Consent Mode v2
+NEW  src/types/gtag.d.ts              # tipi window.gtag / dataLayer
+```
 
-Output: tabella di casi ordinati per gravità → fix iterativi per file.
+## Fuori scope
 
-## Dettagli tecnici
+- Google Tag Manager (usiamo gtag.js diretto, come da snippet fornito).
+- Google Ads / Floodlight / eventi e-commerce custom.
+- Server-side tagging.
 
-- Verifica finale con `bunx tsgo` e Playwright screenshot ai tre viewport delle pagine più critiche (Home, RB, SitiWebAziendali) per confermare zero overflow orizzontale (`document.documentElement.scrollWidth === clientWidth`).
-- Nessuna modifica al design system tokens: solo utility responsive e microcorrezioni locali.
-- Aggiunta `lang="it"` sull'`<html>` in `index.html` se non già presente, per attivare l'hyphenation italiana quando si usa `hyphens-auto`.
+## Cosa vedrai dopo il deploy
 
-## Ordine di esecuzione
+- Prima visita: banner mostrato, GA4 caricato ma in `denied` → nessun cookie `_ga*`.
+- Utente clicca "Accetta tutti" o attiva "Statistici": consenso salvato, `consent update → granted`, cookie `_ga` / `_ga_HWVJ1KWYSN` scritti, pageview inviato.
+- Utente clicca "Rifiuta" o chiude con X: nessun cookie GA, nessun pageview identificato.
+- Revoca dal pulsante flottante: cookie GA rimossi immediatamente.
 
-1. Fix Header hamburger a `lg:` (5 min, alto impatto immediato su tablet).
-2. Fix mirato griglia PageSpeed cards RB.
-3. Audit Playwright multi-viewport → lista overflow.
-4. Fix a batch per file, ripassata di verifica.
+Confermi e passo in build mode?

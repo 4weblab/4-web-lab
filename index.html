@@ -32,6 +32,45 @@
     <!-- AEO/GEO: allow full snippets and large image previews for AI Overviews & answer engines -->
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
 
+    <!-- Google tag (gtag.js) — Consent Mode v2, default DENIED.
+         Nessun cookie _ga / _ga_* viene scritto finché l'utente non presta
+         consenso ai cookie statistici tramite il banner (art. 122 Codice Privacy
+         e Linee guida Garante 10 giugno 2021). -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+
+      // 1) Default: tutto negato, ereditato da tutti i tag Google.
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+
+      // 2) Bootstrap dal consenso già salvato (utente di ritorno).
+      try {
+        var raw = localStorage.getItem('cookie-consent-v1');
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          var SIX_MONTHS = 1000 * 60 * 60 * 24 * 30 * 6;
+          if (parsed && parsed.version === 1 &&
+              (Date.now() - parsed.timestamp) < SIX_MONTHS &&
+              parsed.categories && parsed.categories.analytics === true) {
+            gtag('consent', 'update', { analytics_storage: 'granted' });
+          }
+        }
+      } catch (e) { /* storage disabled */ }
+
+      gtag('js', new Date());
+      gtag('config', 'G-HWVJ1KWYSN', { anonymize_ip: true });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HWVJ1KWYSN"></script>
+
     <!-- Sitewide JSON-LD: LocalBusiness + InternetMarketingService (aligned with GBP category) -->
     <script type="application/ld+json">
     {

@@ -1,4 +1,4 @@
-import { lazy, Suspense } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -8,7 +8,10 @@ import { HelmetProvider, Helmet } from "react-helmet-async";
 import Index from "./pages/Index";
 import ScrollToTop from "./components/ScrollToTop";
 import CookieBanner from "./components/CookieBanner";
+import CookiePreferencesButton from "./components/CookiePreferencesButton";
 import TopNotificationBar from "./components/TopNotificationBar";
+import { initAnalyticsBridge } from "./lib/analytics";
+import { useGaPageview } from "./hooks/useGaPageview";
 
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
@@ -42,7 +45,16 @@ const DemoPersonalTrainerVeraMethod = lazy(() => import("./pages/DemoPersonalTra
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const RouterInner = () => {
+  useGaPageview();
+  return null;
+};
+
+const App = () => {
+  useEffect(() => {
+    initAnalyticsBridge();
+  }, []);
+  return (
   <HelmetProvider>
     <Helmet>
       {/* Solo defaults sitewide. Ogni pagina emette title/description/canonical/og/twitter via il proprio Helmet. */}
@@ -56,6 +68,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <ScrollToTop />
+          <RouterInner />
           <TopNotificationBar />
           <Suspense fallback={null}>
             <Routes>
@@ -95,10 +108,12 @@ const App = () => (
             </Routes>
           </Suspense>
           <CookieBanner />
+          <CookiePreferencesButton />
         </BrowserRouter>
       </TooltipProvider>
     </QueryClientProvider>
   </HelmetProvider>
-);
+  );
+};
 
 export default App;

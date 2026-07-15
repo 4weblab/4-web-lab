@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import PageBreadcrumb from '@/components/PageBreadcrumb';
+import { openPreferences } from '@/lib/consent';
 
 const CookiePolicy = () => {
   useEffect(() => {
@@ -10,7 +11,7 @@ const CookiePolicy = () => {
   }, []);
 
   const pageTitle = 'Cookie Policy | 4 Web Lab';
-  const pageDescription = "Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab. Il sito utilizza esclusivamente cookie tecnici necessari al funzionamento.";
+  const pageDescription = "Informativa sull'utilizzo dei cookie nel sito di 4 Web Lab: cookie tecnici e, previo consenso, cookie statistici Google Analytics 4.";
   const pageUrl = 'https://4weblab.it/cookie';
   const pageImage = 'https://4weblab.it/og-image.webp';
 
@@ -80,14 +81,13 @@ const CookiePolicy = () => {
             <section className="mb-10">
               <h2 className="heading-3 mb-4">Cookie utilizzati da questo sito</h2>
               <p className="text-muted-foreground mb-5 leading-relaxed">
-                Il presente sito web <strong>non utilizza cookie HTTP di profilazione, di marketing o di terze parti</strong>.
-                Vengono impiegati esclusivamente strumenti di archiviazione locale (<em>localStorage</em>) di natura
-                tecnica, strettamente necessari al corretto funzionamento del sito e all'erogazione dei servizi richiesti
-                dall'utente (es. memorizzazione del consenso e protezione anti-spam del modulo di contatto).
-                Non sono presenti Google Analytics, Meta Pixel o altri sistemi di tracciamento.
+                Il presente sito web utilizza <strong>cookie tecnici</strong> strettamente necessari al funzionamento
+                del sito e, <strong>previo consenso dell'utente</strong>, <strong>cookie statistici di terze parti</strong>
+                {' '}(Google Analytics 4) per misurare in forma aggregata l'utilizzo del sito.
+                Non sono presenti cookie di profilazione o di marketing.
               </p>
               <div className="overflow-x-auto rounded-2xl border border-border/40" style={{ boxShadow: 'var(--shadow-sm)' }}>
-                <table className="w-full border-collapse text-sm">
+                <table className="w-full border-collapse text-sm min-w-[520px]">
                   <thead>
                     <tr className="bg-muted/50">
                       <th className="border-b border-border/40 p-4 text-left font-semibold">Nome</th>
@@ -98,16 +98,28 @@ const CookiePolicy = () => {
                   </thead>
                   <tbody className="text-muted-foreground">
                     <tr>
-                      <td className="p-4">cookie-consent-accepted</td>
+                      <td className="p-4">cookie-consent-v1</td>
                       <td className="p-4">Tecnico (localStorage)</td>
-                      <td className="p-4">Memorizza l'accettazione del banner cookie</td>
-                      <td className="p-4">Persistente (fino a cancellazione manuale)</td>
+                      <td className="p-4">Memorizza le scelte dell'utente sul banner cookie (categorie accettate/rifiutate)</td>
+                      <td className="p-4">6 mesi</td>
                     </tr>
                     <tr>
                       <td className="p-4">web3forms_last_send</td>
                       <td className="p-4">Tecnico (localStorage)</td>
                       <td className="p-4">Protezione anti-spam del modulo di contatto (limite di 1 invio al minuto)</td>
                       <td className="p-4">Persistente (fino a cancellazione manuale)</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">_ga</td>
+                      <td className="p-4">Statistica — terza parte (Google)</td>
+                      <td className="p-4">Identifica in modo pseudonimo l'utente per Google Analytics 4 (misurazione aggregata del traffico)</td>
+                      <td className="p-4">2 anni</td>
+                    </tr>
+                    <tr>
+                      <td className="p-4">_ga_&lt;container-id&gt;</td>
+                      <td className="p-4">Statistica — terza parte (Google)</td>
+                      <td className="p-4">Mantiene lo stato di sessione per la property Google Analytics 4</td>
+                      <td className="p-4">2 anni</td>
                     </tr>
                   </tbody>
                 </table>
@@ -120,9 +132,115 @@ const CookiePolicy = () => {
               </p>
             </section>
 
+            <section className="mb-10">
+              <h2 className="heading-3 mb-4">Cookie statistici — Google Analytics 4</h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Il sito può utilizzare <strong>Google Analytics 4</strong>, uno strumento di analisi web fornito
+                da <strong>Google Ireland Limited</strong> (Gordon House, Barrow Street, Dublino 4, Irlanda),
+                per raccogliere in forma aggregata e pseudonima informazioni su come i visitatori interagiscono
+                con il sito (pagine viste, tempo di permanenza, dispositivo, sorgente di traffico).
+              </p>
+              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                <strong>ID misurazione:</strong> <code>G-HWVJ1KWYSN</code>. Il tag di Google è
+                caricato tramite <strong>Google Consent Mode v2</strong> con stato predefinito
+                <em> denied</em>: nessun cookie <em>_ga</em> / <em>_ga_HWVJ1KWYSN</em> viene
+                scritto finché non presti consenso ai cookie statistici tramite il banner.
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 leading-relaxed">
+                <li>
+                  <strong>Finalità:</strong> misurazione statistica del traffico e miglioramento
+                  dell'esperienza utente.
+                </li>
+                <li>
+                  <strong>Base giuridica:</strong> consenso dell'utente ai sensi dell'art. 122 del
+                  Codice Privacy e delle Linee guida del Garante del 10 giugno 2021, nonché
+                  art. 6.1.a GDPR.
+                </li>
+                <li>
+                  <strong>Dati trattati:</strong> identificatori pseudonimi (cookie <em>_ga</em>,{' '}
+                  <em>_ga_&lt;container-id&gt;</em>), indirizzo IP <strong>anonimizzato</strong>
+                  {' '}(GA4 non memorizza né registra l'IP completo), informazioni tecniche sul
+                  browser e sul dispositivo, eventi di navigazione.
+                </li>
+                <li>
+                  <strong>Trasferimento extra-UE:</strong> i dati possono essere trasferiti negli
+                  Stati Uniti. Google LLC aderisce all'<em>EU-U.S. Data Privacy Framework</em> e
+                  ha adottato le <em>Clausole Contrattuali Standard</em> approvate dalla Commissione
+                  Europea, oltre a misure tecniche e organizzative supplementari.
+                </li>
+                <li>
+                  <strong>Conservazione:</strong> 14 mesi (impostazione minima consigliata) per i
+                  dati a livello utente/evento; i cookie <em>_ga</em> hanno durata 2 anni salvo
+                  rinnovo o cancellazione.
+                </li>
+                <li>
+                  <strong>Profilazione:</strong> le funzioni pubblicitarie di Google Analytics
+                  (Google Signals, remarketing, condivisione dati con Google Ads) <strong>non sono
+                  attive</strong>. Il servizio è configurato in modalità puramente statistica.
+                </li>
+              </ul>
+              <p className="text-muted-foreground mt-4 leading-relaxed">
+                Per maggiori informazioni:{' '}
+                <a
+                  href="https://policies.google.com/privacy"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline font-medium"
+                >
+                  Informativa privacy di Google
+                </a>
+                {' · '}
+                <a
+                  href="https://tools.google.com/dlpage/gaoptout"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-accent hover:underline font-medium"
+                >
+                  Componente di opt-out del browser
+                </a>
+                .
+              </p>
+            </section>
 
             <section className="mb-10">
-              <h2 className="heading-3 mb-4">Gestione dei cookie</h2>
+              <h2 className="heading-3 mb-4">Revoca e modifica del consenso</h2>
+              <p className="text-muted-foreground mb-4 leading-relaxed">
+                Puoi modificare o revocare in qualsiasi momento le tue preferenze sui cookie
+                statistici. La revoca ha effetto immediato e non pregiudica la liceità del
+                trattamento avvenuto prima della revoca stessa.
+              </p>
+              <ul className="list-disc pl-6 text-muted-foreground space-y-2 leading-relaxed">
+                <li>
+                  <strong>Icona flottante</strong> (biscotto) sempre visibile in basso a sinistra
+                  su ogni pagina del sito.
+                </li>
+                <li>
+                  Link <strong>"Gestisci cookie"</strong> nel piè di pagina di ogni pagina.
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={openPreferences}
+                    className="text-accent hover:underline font-medium"
+                  >
+                    Apri ora il pannello preferenze
+                  </button>
+                  .
+                </li>
+                <li>
+                  Eliminazione dei cookie direttamente dalle impostazioni del browser
+                  (vedi sezione seguente).
+                </li>
+              </ul>
+              <p className="text-muted-foreground mt-4 text-sm leading-relaxed">
+                Il consenso ha una durata massima di 6 mesi: allo scadere, o quando la Cookie
+                Policy viene aggiornata in modo sostanziale, il banner ti verrà nuovamente
+                proposto.
+              </p>
+            </section>
+
+            <section className="mb-10">
+              <h2 className="heading-3 mb-4">Gestione dei cookie dal browser</h2>
               <p className="text-muted-foreground mb-4 leading-relaxed">
                 L'utente può gestire le proprie preferenze sui cookie direttamente dal proprio browser.
                 Ecco i link alle guide per i browser più diffusi:
@@ -142,18 +260,26 @@ const CookiePolicy = () => {
                 ))}
               </ul>
               <p className="text-muted-foreground mt-4">
-                <strong>Nota:</strong> La disabilitazione dei cookie tecnici potrebbe compromettere
+                <strong>Nota:</strong> la disabilitazione dei cookie tecnici potrebbe compromettere
                 il corretto funzionamento del sito web.
               </p>
             </section>
 
             <section className="mb-10">
               <h2 className="heading-3 mb-4">Base giuridica</h2>
+              <p className="text-muted-foreground leading-relaxed mb-3">
+                <strong>Cookie tecnici:</strong> non richiedono il consenso dell'utente ai sensi
+                dell'art. 122, comma 1, del Codice Privacy e delle Linee guida del Garante per la
+                protezione dei dati personali in materia di cookie e altri strumenti di tracciamento
+                (10 giugno 2021), in quanto strettamente necessari all'erogazione del servizio
+                richiesto.
+              </p>
               <p className="text-muted-foreground leading-relaxed">
-                L’utilizzo dei cookie tecnici non richiede il consenso dell’utente ai sensi dell’art. 122,
-                comma 1, del Codice Privacy e delle Linee guida del Garante per la protezione dei dati
-                personali in materia di cookie e altri strumenti di tracciamento (10 giugno 2021), in
-                quanto strettamente necessario all’erogazione del servizio richiesto.
+                <strong>Cookie statistici di terze parti (Google Analytics 4):</strong> vengono
+                installati esclusivamente <strong>previo consenso esplicito, libero, specifico e
+                informato</strong> dell'utente, prestato tramite il banner cookie (art. 122 Codice
+                Privacy e art. 6.1.a GDPR). Il consenso è documentato tramite la registrazione
+                puntuale delle scelte e delle relative marche temporali sul dispositivo dell'utente.
               </p>
             </section>
 

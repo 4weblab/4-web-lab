@@ -1,5 +1,6 @@
 import { Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { openPreferences } from '@/lib/consent';
 
 const businessInfo = {
   name: '4 Web Lab',
@@ -143,6 +144,13 @@ const Footer = () => {
             <Link to="/cookie" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
               Cookie Policy
             </Link>
+            <button
+              type="button"
+              onClick={openPreferences}
+              className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4"
+            >
+              Gestisci cookie
+            </button>
           </div>
         </div>
       </div>
