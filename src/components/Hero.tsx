@@ -1,4 +1,4 @@
-import { ArrowDown } from 'lucide-react';
+import HeroScrollTransition from './HeroScrollTransition';
 
 // Hero background images are served from /public/hero so the path stays stable
 // in production and matches the <link rel="preload"> in index.html (critical for LCP).
@@ -18,17 +18,15 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const handleScrollToAbout = () => {
-    const element = document.getElementById('chi-siamo');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'var(--gradient-hero)' }}>
+      className="relative flex items-center justify-center overflow-hidden"
+      style={{
+        background: 'var(--gradient-hero)',
+        minHeight: 'calc(100svh - var(--header-height) - var(--notification-bar-height, 0px))',
+        paddingTop: 'calc(var(--header-height) + var(--notification-bar-height, 0px))',
+      }}>
 
       {/* Background image */}
       <picture>
@@ -103,15 +101,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <button
-          onClick={handleScrollToAbout}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors"
-          aria-label="Scorri verso il basso"
-        >
-
-          <ArrowDown className="w-6 h-6" />
-        </button>
+        <HeroScrollTransition />
       </div>
     </section>);
 
