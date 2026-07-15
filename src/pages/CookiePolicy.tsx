@@ -140,6 +140,12 @@ const CookiePolicy = () => {
                 per raccogliere in forma aggregata e pseudonima informazioni su come i visitatori interagiscono
                 con il sito (pagine viste, tempo di permanenza, dispositivo, sorgente di traffico).
               </p>
+              <p className="text-muted-foreground mb-4 leading-relaxed text-sm">
+                <strong>ID misurazione:</strong> <code>G-HWVJ1KWYSN</code>. Il tag di Google è
+                caricato tramite <strong>Google Consent Mode v2</strong> con stato predefinito
+                <em> denied</em>: nessun cookie <em>_ga</em> / <em>_ga_HWVJ1KWYSN</em> viene
+                scritto finché non presti consenso ai cookie statistici tramite il banner.
+              </p>
               <ul className="list-disc pl-6 text-muted-foreground space-y-2 leading-relaxed">
                 <li>
                   <strong>Finalità:</strong> misurazione statistica del traffico e miglioramento
