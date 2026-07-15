@@ -22,30 +22,30 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab</title>
+        <title>Creazione Siti Web Padova e Provincia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h."
+          content="Creazione siti web a Padova e provincia per negozi, professionisti e PMI. Ottimizzazione SEO e AI. Richiedi un'analisi gratis!"
         />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab" />
+        <meta property="og:title" content="Creazione Siti Web Padova e Provincia | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h."
+          content="Creazione siti web a Padova e provincia per negozi, professionisti e PMI. Ottimizzazione SEO e AI. Richiedi un'analisi gratis!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Padova | Web Studio da 199€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Creazione Siti Web Padova e Provincia | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Web studio a Padova: realizzazione e sviluppo di siti web professionali per negozi, studi e aziende. Da 199€, SEO locale, preventivo gratuito in 24h."
+          content="Creazione siti web a Padova e provincia per negozi, professionisti e PMI. Ottimizzazione SEO e AI. Richiedi un'analisi gratis!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
