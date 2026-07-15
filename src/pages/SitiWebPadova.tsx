@@ -528,11 +528,16 @@ const SitiWebPadova = () => {
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
-                <div className="icon-box w-13 h-13">
-                  <Globe className="w-6 h-6 text-accent-foreground" />
+              <AnimatedSection className="mb-10">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="icon-box w-13 h-13">
+                    <Globe className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
                 </div>
-                <h2 className="heading-2">Zone servite: Padova città e tutta la provincia</h2>
+                <p className="body-large text-muted-foreground max-w-3xl">
+                  Copriamo capillarmente il territorio padovano per offrire una presenza digitale forte e un supporto tecnico reale, anche direttamente presso la tua sede.
+                </p>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <div className="flex flex-wrap gap-2 mb-8">
@@ -552,11 +557,8 @@ const SitiWebPadova = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  La sede operativa a <strong>Legnaro (PD)</strong> ci rende un riferimento concreto per la <strong>realizzazione di siti web a Padova</strong> e per chi cerca <strong>sviluppo e creazione di siti internet</strong> in tutta la provincia. Lavoriamo con{" "}
-                  <Link
-                    to="/siti-web-per-professionisti"
-                    className="text-accent hover:underline font-medium"
-                  >
+                  Con sede operativa a <strong>Legnaro (PD)</strong>, siamo il punto di riferimento concreto per le attività che cercano un servizio di <strong>sviluppo e creazione di siti internet a Padova</strong> e provincia. Lavoriamo fianco a fianco con{" "}
+                  <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">
                     professionisti
                   </Link>
                   ,{" "}
@@ -567,10 +569,17 @@ const SitiWebPadova = () => {
                   <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">
                     aziende
                   </Link>{" "}
-                  della provincia di Padova, combinando la vicinanza di un web studio locale con un metodo collaudato a livello nazionale.
+                  del territorio, unendo la flessibilità e l'ascolto di uno studio locale alla solidità di strategie collaudate.
+                </p>
+                <p className="mb-6">
+                  Che la tua attività si trovi nel centro storico di Padova o in uno dei comuni limitrofi, l'approccio non cambia: progettiamo soluzioni su misura capaci di convertire i visitatori in clienti.
                 </p>
                 <p>
-                  Che la tua attività sia in centro a Padova o in uno dei comuni della provincia, l'approccio resta lo stesso: ascolto, progettazione su misura e un risultato che rispecchia davvero la tua attività. Alle realtà che vogliono risultati misurabili fin dalle prime settimane proponiamo anche la <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">gestione completa di campagne Google ADS</Link>, perfetta per affiancare il sito appena pubblicato e portare traffico qualificato da subito.
+                  Vuoi accelerare i risultati fin da subito? Oltre alla realizzazione del sito, pianifichiamo e gestiamo{" "}
+                  <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">
+                    <strong>campagne Google Ads</strong>
+                  </Link>{" "}
+                  per portare traffico qualificato sulle tue pagine fin dal primo giorno di pubblicazione.
                 </p>
               </AnimatedSection>
             </div>
