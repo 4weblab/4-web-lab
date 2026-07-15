@@ -98,6 +98,9 @@ const AboutSection = () => {
         <AnimatedSection className="text-center mt-20 mb-10">
           <div className="section-divider" />
           <h3 className="heading-3 mb-2">La parola a chi ha scelto 4 Web Lab</h3>
+          <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
+            Storie di business reali. Risultati concreti, codice su misura e nessuna promessa campata in aria.
+          </p>
         </AnimatedSection>
 
         <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.12}>
