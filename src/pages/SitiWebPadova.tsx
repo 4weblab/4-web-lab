@@ -416,7 +416,7 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Negozio, professionista o azienda: quale sito a Padova</h2>
+                <h2 className="heading-2">Negozio, professionista o azienda:</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
