@@ -8,7 +8,7 @@ const HeroScrollTransition = () => {
     >
       {/* Wave SVG bridging hero to AboutSection surface */}
       <svg
-        className="w-full h-14 sm:h-18 md:h-22 lg:h-26"
+        className="w-full h-14 sm:h-16 md:h-20 lg:h-24"
         viewBox="0 0 1440 120"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
