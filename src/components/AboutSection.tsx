@@ -22,49 +22,62 @@ const testimonials = [
 
 const cards = [{
   icon: Users,
-  title: 'Approccio personale',
-  description: 'Lavoriamo fianco a fianco con ogni cliente, comprendendo le specifiche esigenze del suo settore.'
+  title: 'Approccio Personale',
+  description: 'Lavoriamo fianco a fianco con te. Parli direttamente con chi sviluppa il tuo sito, senza intermediari o sistemi a ticket.'
 }, {
   icon: Target,
-  title: 'Orientati ai risultati',
-  description: 'Non solo belli da vedere: i nostri siti sono progettati per portare contatti e clienti.'
+  title: 'Orientati ai Risultati',
+  description: 'Non solo estetica: ogni linea di codice e di copy è progettata per intercettare i clienti e convertire i visitatori in contatti reali.'
 }, {
   icon: Lightbulb,
-  title: 'Soluzioni su misura',
-  description: 'Niente template generici: ogni progetto è costruito sulle tue reali necessità.'
+  title: 'Design Sartoriale (Zero Template)',
+  description: 'Nessun modello pre-fatto o stampino. Il tuo brand riceve un design esclusivo, flessibile e cucito al millimetro sulle tue necessità.'
 }];
+
+const guarantees = [
+  {
+    label: 'Tempi certi e zero attese',
+    text: 'Analisi, sviluppo e pubblicazione in 2-4 settimane, con gestione diretta da remoto.',
+  },
+  {
+    label: 'Tecnologia e Performance',
+    text: 'Siti web statici ultra-veloci ospitati su hosting Netlify. Massima sicurezza, zero canoni nascosti.',
+  },
+  {
+    label: 'Casi reali, non solo demo',
+    text: <>Guarda il restyling completo di <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link> o naviga tutti i nostri <Link to="/realizzazioni" className="text-accent hover:underline font-medium">concept e realizzazioni</Link>.</>,
+  },
+];
 
 const AboutSection = () => {
   return (
     <section id="chi-siamo" className="section-padding bg-surface-alt" style={{ scrollMarginTop: 'var(--header-height)' }}>
       <div className="container-section">
-        <AnimatedSection className="text-center mb-12">
+        <AnimatedSection className="text-center mb-14 md:mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Chi siamo: la tua Agenzia Web di fiducia</h2>
+          <h2 className="heading-2 mb-5">Il web si è evoluto. Il tuo sito è pronto per le AI?</h2>
           <p className="aeo-answer body-large text-muted-foreground max-w-3xl mx-auto text-balance">
             <strong>4 Web Lab</strong> è uno studio web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> che realizza siti professionali, <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le AI</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link> per negozi, professionisti e PMI in tutta Italia.
           </p>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-16 items-center">
-          <AnimatedSection className="space-y-5" direction="left">
-            <ul className="space-y-4">
-              <li className="flex gap-3 text-muted-foreground">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                <span><strong className="text-foreground">Processo strutturato e tempi certi</strong> — brief, progettazione, sviluppo e pubblicazione in 2-4 settimane, da remoto in tutta Italia.</span>
-              </li>
-              <li className="flex gap-3 text-muted-foreground">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                <span><strong className="text-foreground">Soluzioni su misura, mai template</strong> — design, contenuti e SEO pensati per convertire visitatori in clienti reali.</span>
-              </li>
-              <li className="flex gap-3 text-muted-foreground">
-                <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                <span><strong className="text-foreground">Casi reali, non solo demo</strong> — vedi il restyling completo di <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link> o tutte le <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni e concept</Link> pubblicati.</span>
-              </li>
+        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
+          <AnimatedSection className="md:pt-2" direction="left">
+            <h3 className="sr-only">Le garanzie tecniche</h3>
+            <ul className="space-y-5">
+              {guarantees.map((item, index) => (
+                <li key={index} className="flex gap-3 text-muted-foreground">
+                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
+                  <span>
+                    <strong className="text-foreground">{item.label}:</strong>{' '}
+                    {item.text}
+                  </span>
+                </li>
+              ))}
             </ul>
           </AnimatedSection>
 
-          <StaggerContainer className="grid gap-5" staggerDelay={0.12}>
+          <StaggerContainer className="grid gap-4" staggerDelay={0.12}>
             {cards.map((card, index) => (
               <StaggerItem key={index}>
                 <div className="card-glass flex items-start gap-5 group hover:-translate-y-1.5 transition-all duration-400">
