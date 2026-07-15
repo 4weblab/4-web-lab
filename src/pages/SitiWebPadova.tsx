@@ -298,9 +298,9 @@ const SitiWebPadova = () => {
           <div className="container-section">
             <div className="max-w-4xl mx-auto mb-12">
               <AnimatedSection>
-                <h2 className="heading-3 mb-4">Cos'è un web studio a Padova e cosa fa</h2>
+                <h2 className="heading-3 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h2>
                 <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
-                  Un <strong>web studio a Padova</strong> è un'agenzia con sede sul territorio che si occupa della <strong>realizzazione, creazione e sviluppo di siti internet</strong> per attività locali: negozi, liberi professionisti e aziende. Progetta, sviluppa e mantiene siti web ottimizzati per posizionarsi su Google con ricerche geolocalizzate come "parrucchiere Padova", "commercialista Padova" o "sito internet Padova". Il vantaggio di un web studio locale è la prossimità: comunicazione diretta, conoscenza del tessuto imprenditoriale padovano e possibilità di incontri di persona quando serve.
+                  Realizzare un sito web a Padova non significa solo creare una bella vetrina grafica, ma strutturare una vera e propria calamita per i clienti locali. Ottimizziamo il tuo sito per intercettare le ricerche geolocalizzate dei tuoi potenziali clienti (es. "idraulico Padova", "centro estetico Legnaro", "consulente finanziario Padova"). Il vantaggio di scegliere uno studio del territorio è la combinazione tra una strategia SEO locale mirata, comunicazione diretta e la conoscenza reale del tessuto imprenditoriale padovano.
                 </p>
               </AnimatedSection>
             </div>
