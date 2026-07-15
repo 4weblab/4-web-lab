@@ -101,15 +101,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll indicator */}
-        <button
-          onClick={handleScrollToAbout}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 text-primary-foreground/40 hover:text-primary-foreground/70 transition-colors"
-          aria-label="Scorri verso il basso"
-        >
-
-          <ArrowDown className="w-6 h-6" />
-        </button>
+        <HeroScrollTransition />
       </div>
     </section>);
 
