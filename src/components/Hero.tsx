@@ -1,4 +1,4 @@
-import { ArrowDown } from 'lucide-react';
+import HeroScrollTransition from './HeroScrollTransition';
 
 // Hero background images are served from /public/hero so the path stays stable
 // in production and matches the <link rel="preload"> in index.html (critical for LCP).
@@ -14,12 +14,6 @@ const Hero = () => {
 
   const handleScrollToContact = () => {
     const element = document.getElementById('contatti');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-  const handleScrollToAbout = () => {
-    const element = document.getElementById('chi-siamo');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
