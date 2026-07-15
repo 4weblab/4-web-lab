@@ -1,81 +1,88 @@
 
-## Obiettivo
+# Aggiornamento GDPR per attivazione Google Analytics
 
-Due interventi separati e sequenziali:
+Interventi solo su **parte legale** e **meccanica del cookie banner**. Non viene installato lo script GA4 in questa fase: verrà attivato in un secondo momento leggendo il consenso salvato.
 
-1. **Menu hamburger anche su tablet** — attualmente la nav desktop si attiva già da 768px (`md:`) e con 8 voci (Home, Siti web, Realizzazioni, SEO & AI, Google ADS, Blog, FAQ, Contatti) va in overflow o si sovrappone al logo su tablet in portrait/landscape stretti.
-2. **Audit sitewide dei testi che escono dai riquadri** su mobile/tablet, partendo dal caso segnalato: le label `Prestazioni / Accessibilità / Best Practice / SEO` nella griglia 4-colonne dei punteggi PageSpeed nel case study RB.
+## 1. Nuovo Cookie Banner a categorie
 
----
+File: `src/components/CookieBanner.tsx` (riscrittura)
 
-## 1. Header — hamburger fino a desktop largo
+Banner a due livelli conforme alle Linee guida Garante Privacy 10 giugno 2021:
 
-File: `src/components/Header.tsx`
+- **Livello 1 — banner iniziale** con testo informativo breve e 3 pulsanti equivalenti per stile e prominenza (nessun "dark pattern"):
+  - `Accetta tutti`
+  - `Rifiuta tutti`
+  - `Personalizza`
+- **Livello 2 — pannello preferenze** (aperto da "Personalizza"): toggle per categoria
+  - *Cookie tecnici* — sempre attivi, toggle disabilitato
+  - *Cookie statistici (Google Analytics 4)* — off di default
+  - Pulsante `Salva preferenze`
+- Chiusura con la X = **equivalente a rifiuto** (no consenso implicito).
+- Alla prima visita **nessun cookie non tecnico viene scritto** finché l'utente non sceglie.
+- Il consenso è **granulare, informato, revocabile e documentabile**:
+  - salvato in `localStorage` come oggetto `{ necessary: true, analytics: bool, timestamp, version }`
+  - `version` incrementata quando cambia la Cookie Policy → il banner riappare automaticamente
+  - durata max 6 mesi (poi ri-richiesta), come raccomandato dal Garante
+- Espone un evento globale `window.dispatchEvent(new CustomEvent('consent-updated', { detail }))` e un helper `getConsent()` che in futuro attiverà/disattiverà GA4 (integrazione fuori da questo intervento).
 
-Cambiare il breakpoint di attivazione della nav orizzontale da `md` (768px) a `lg` (1024px) su tutti gli elementi coinvolti:
+## 2. Pulsante flottante "Gestisci cookie" sempre visibile
 
-- `<ul className="hidden md:flex …">` → `hidden lg:flex`
-- Bottone hamburger `className="md:hidden …"` → `lg:hidden`
-- Blocco satelliteMode (back links) desktop `hidden md:flex` → `hidden lg:flex`, mobile `md:hidden` → `lg:hidden`
-- Menu mobile aperto: `md:hidden` → `lg:hidden`
-- Colore label logo: `md:text-foreground` → `lg:text-foreground` (per coerenza con lo stato scroll)
+Nuovo file: `src/components/CookiePreferencesButton.tsx`
 
-Nessuna modifica al comportamento: hamburger e drawer già esistono, si estende semplicemente la loro fascia di attivazione a tablet.
+- Icona rotonda 40×40 fissa in basso-sinistra (non collide con il WhatsApp button in basso-destra), z-index sotto banner e sopra contenuto.
+- Rispetta la palette del sito (rounded-xl, glass, accento navy/arancio).
+- Riapre il pannello preferenze del CookieBanner via evento globale.
+- Nascosta quando il banner è già aperto per non sovrapporsi.
+- Aggiunto anche un link testuale "Gestisci preferenze cookie" nel footer e in fondo alla Cookie Policy per ridondanza legale.
 
-## 2. Audit responsive testi in overflow
+## 3. Cookie Policy aggiornata
 
-### 2a. Fix immediato PageSpeed cards (RB)
+File: `src/pages/CookiePolicy.tsx`
 
-File: `src/pages/DemoRbSncEdilizia.tsx` (righe ~314-321)
+- Rimossa la frase "Non sono presenti Google Analytics…".
+- Nuova sezione **"Cookie statistici — Google Analytics 4"**:
+  - finalità: misurazione anonima del traffico
+  - titolare del trattamento del cookie: Google Ireland Limited
+  - base giuridica: **consenso ex art. 122 Codice Privacy**
+  - trasferimento extra-UE: USA con Clausole Contrattuali Standard e misure supplementari (Data Privacy Framework)
+  - IP anonimizzato (GA4 non registra l'IP completo)
+  - conservazione: 14 mesi (impostazione consigliata)
+- Tabella cookie estesa con riga per `_ga` (2 anni) e `_ga_<container-id>` (2 anni), tipologia "Statistica — terza parte".
+- Sezione **"Revoca e modifica del consenso"** che spiega:
+  - pulsante flottante sempre visibile
+  - link nel footer
+  - possibilità di cancellare i cookie dal browser
+- Aggiornata la nota base giuridica: cookie tecnici ex art. 122 c.1, cookie statistici solo previo consenso.
 
-La griglia `grid-cols-4` con label `text-[10px] uppercase tracking-wider` fa uscire "Accessibilità" e "Best Practice" dai riquadri su schermi < 400px perché la card è dentro un `md:grid-cols-2` che su mobile occupa l'intera larghezza divisa per 4 celle strette.
+## 4. Privacy Policy aggiornata
 
-Interventi:
-- `text-[10px]` → `text-[10px] leading-tight break-words hyphens-auto` con `lang="it"` a livello di container per spezzatura corretta.
-- Aggiungere `px-2 sm:px-3` per ridurre padding orizzontale su mobile.
-- Su mobile molto stretti (<380px) valutare `grid-cols-2` con 2 righe invece di 4 colonne, tramite `grid-cols-2 xs:grid-cols-4` oppure sempre `grid-cols-4` con font ridotto a `text-[9px]` <sm.
+File: `src/pages/PrivacyPolicy.tsx`
 
-Approccio scelto: mantenere `grid-cols-4` (leggibilità del pattern "4 metriche Lighthouse") ma:
-- `text-[9px] sm:text-[10px]`
-- `break-words hyphens-auto`
-- Padding orizzontale ridotto `px-1.5 sm:px-3`
-- `min-w-0` sulle celle per consentire lo shrinking del testo.
+- Nuova sezione **"Dati raccolti tramite strumenti di misurazione"** con riferimento a GA4 (dati aggregati e pseudonimi) e rimando alla Cookie Policy.
+- Nuova sezione **"Trasferimenti di dati extra-UE"** (Google USA, SCC + DPF).
+- Sezione "Base giuridica" integrata con art. 6.1.a GDPR per consenso analytics.
+- Sezione "Diritti dell'interessato" invariata (già completa).
 
-### 2b. Audit sitewide
+## 5. Note tecniche (per il futuro developer / integrazione GA)
 
-Passata sistematica su tutte le pagine e componenti principali con Playwright a 3 viewport (360, 768, 1024) per rilevare overflow:
+Fuori scope questa iterazione, ma il banner è predisposto:
+- Google Consent Mode v2 può essere collegato ascoltando `consent-updated`.
+- Finché `analytics=false` nessun tag GA4 deve essere caricato / il tag deve stare in `default consent denied`.
 
-- Home: `Hero`, `AboutSection`, `StrengthsSection` (bento), `UserRoutingSection`, `ContactSection`, `Footer`
-- Landing: `SitiWebAziendali`, `SitiWebProfessionisti`, `SitiWebNegozi`, `SitiWebPadova`, `PosizionamentoGoogleEAi`, `PubblicitaGoogleAds`, `Realizzazioni`, `FaqSitiWeb`, `Contact`, `Blog`
-- Demo/Case: `DemoRbSncEdilizia`, `DemoPersonalTrainerVeraMethod`, `DemoStudioDentisticoPremium`, `DemoBoutiqueBB`, `DemoFlowerAtelier`, `DemoFotovoltaico`, `DemoMetalmeccanica`
-- Articoli blog
+## File modificati/creati
 
-Pattern da correggere in modo mirato quando trovati:
-- Titoli/heading con parole lunghe (es. "Personalizzazione") in colonne strette → `text-balance`, `break-words`, `hyphens-auto` con `lang="it"` sull'`<html>` o sul container.
-- Griglie a N colonne con label brevi maiuscole → riduzione font e padding sotto sm, oppure wrap forzato.
-- Pill/badge con testo lungo (`ShieldCheck` inline-flex) → `flex-wrap` sui container.
-- Prezzi/numeri con simboli (es. `199€ una tantum`) → `whitespace-nowrap` sul numero, `flex-wrap` sul container.
-- Card bento con contenuto denso → padding responsive `p-4 sm:p-6 md:p-8`, `min-w-0` interno.
+```text
+MOD  src/components/CookieBanner.tsx      # banner 3 pulsanti + pannello categorie
+NEW  src/components/CookiePreferencesButton.tsx   # icona flottante permanente
+MOD  src/components/Footer.tsx            # link "Gestisci cookie"
+MOD  src/pages/CookiePolicy.tsx           # sezione GA4, tabella, revoca
+MOD  src/pages/PrivacyPolicy.tsx          # sezione analytics + trasferimenti extra-UE
+MOD  src/App.tsx                          # monta CookiePreferencesButton
+```
 
-### Metodologia audit
+## Fuori scope (dichiarato)
 
-Script Playwright che per ciascun URL:
-1. Naviga a 360×800, 768×1024, 1024×1366.
-2. Confronta `scrollWidth` di ogni figlio diretto di `<section>`, `<article>`, `.card-*`, `[class*="grid"]` con la propria `clientWidth`.
-3. Riporta gli elementi in overflow con selettore, testo e viewport.
-4. Screenshot puntuale delle zone rilevate.
-
-Output: tabella di casi ordinati per gravità → fix iterativi per file.
-
-## Dettagli tecnici
-
-- Verifica finale con `bunx tsgo` e Playwright screenshot ai tre viewport delle pagine più critiche (Home, RB, SitiWebAziendali) per confermare zero overflow orizzontale (`document.documentElement.scrollWidth === clientWidth`).
-- Nessuna modifica al design system tokens: solo utility responsive e microcorrezioni locali.
-- Aggiunta `lang="it"` sull'`<html>` in `index.html` se non già presente, per attivare l'hyphenation italiana quando si usa `hyphens-auto`.
-
-## Ordine di esecuzione
-
-1. Fix Header hamburger a `lg:` (5 min, alto impatto immediato su tablet).
-2. Fix mirato griglia PageSpeed cards RB.
-3. Audit Playwright multi-viewport → lista overflow.
-4. Fix a batch per file, ripassata di verifica.
+- Installazione script `gtag.js` / GA4
+- Configurazione Google Tag Manager
+- Consent Mode v2 (predisposizione sì, wiring reale no)
+- Modifiche grafiche non richieste dall'aggiornamento legale
