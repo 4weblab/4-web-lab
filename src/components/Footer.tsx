@@ -1,4 +1,4 @@
-import { Phone, MessageCircle, Mail } from 'lucide-react';
+import { Phone, MessageCircle, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const businessInfo = {
@@ -20,10 +20,11 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-16 md:pb-16 pb-[calc(var(--mobile-cta-height)+1rem)]">
       <div className="container-section">
-        <div className="flex flex-col items-center text-center gap-8 mb-12">
-          {/* Brand */}
-          <div>
-            <Link to="/" className="flex items-center justify-center gap-2.5 mb-6 hover:opacity-80 transition-opacity duration-300">
+        {/* Main grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+          {/* Colonna 1 - Brand */}
+          <div className="text-left sm:col-span-2 lg:col-span-1">
+            <Link to="/" className="inline-flex items-center gap-2.5 mb-5 hover:opacity-80 transition-opacity duration-300">
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
@@ -34,55 +35,123 @@ const Footer = () => {
                 decoding="async" />
               <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
             </Link>
-            <p className="text-primary-foreground/60 max-w-md leading-relaxed">
+            <p className="text-primary-foreground/60 leading-relaxed text-sm">
               Studio di soluzioni web per negozi, professionisti ed aziende con sede a Padova. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione per attività in tutta Italia.
             </p>
           </div>
 
-          {/* Contact Info */}
-          <ul className="flex flex-col sm:flex-row sm:flex-nowrap gap-x-8 gap-y-3 mt-4 items-center">
-            <li>
-              <a
-                href="tel:+393514656042"
-                className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
-                <Phone className="w-5 h-5" aria-hidden="true" />
-                <span className="text-primary-foreground/45">/</span>
-                <MessageCircle className="w-5 h-5" aria-hidden="true" />
-                +39 351 465 6042
-              </a>
-            </li>
-            <li>
-              <a
-                href="mailto:info@4weblab.it"
-                className="flex items-center gap-2.5 text-primary-foreground/60 hover:text-primary-foreground transition-colors duration-300">
-                <Mail className="w-5 h-5" aria-hidden="true" />
-                info@4weblab.it
-              </a>
-            </li>
-          </ul>
+          {/* Colonna 2 - Soluzioni */}
+          <div className="text-left">
+            <h3 className="text-accent text-sm font-semibold uppercase tracking-wider mb-4">
+              Soluzioni
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/siti-web-per-negozi" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Siti per Negozi
+                </Link>
+              </li>
+              <li>
+                <Link to="/siti-web-per-professionisti" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Siti per Professionisti
+                </Link>
+              </li>
+              <li>
+                <Link to="/siti-web-aziendali" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Siti per Aziende
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Colonna 3 - Esplora */}
+          <div className="text-left">
+            <h3 className="text-accent text-sm font-semibold uppercase tracking-wider mb-4">
+              Esplora
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/posizionamento-google-e-ai" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  SEO & AI
+                </Link>
+              </li>
+              <li>
+                <Link to="/pubblicita-google-ads" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Google ADS
+                </Link>
+              </li>
+              <li>
+                <Link to="/blog" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq-realizzazione-siti-web" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Domande Frequenti (FAQ)
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Colonna 4 - Contatti */}
+          <div className="text-left">
+            <h3 className="text-accent text-sm font-semibold uppercase tracking-wider mb-4">
+              Contatti
+            </h3>
+            <ul className="space-y-3 text-sm">
+              <li>
+                <a
+                  href="tel:+393514656042"
+                  className="inline-flex items-center gap-2.5 text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+                  <Phone className="w-4 h-4" aria-hidden="true" />
+                  <span>+39 351 465 6042</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href={`https://wa.me/${businessInfo.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2.5 text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+                  <MessageCircle className="w-4 h-4" aria-hidden="true" />
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:info@4weblab.it"
+                  className="inline-flex items-center gap-2.5 text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+                  <Mail className="w-4 h-4" aria-hidden="true" />
+                  <span>info@4weblab.it</span>
+                </a>
+              </li>
+              <li className="inline-flex items-start gap-2.5 text-primary-foreground/70">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0" aria-hidden="true" />
+                <span>{businessInfo.address}, {businessInfo.postalCode} {businessInfo.city}, {businessInfo.country}</span>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-primary-foreground/12 pt-8 flex flex-col items-center text-center gap-x-6 gap-y-2">
-          <p className="text-primary-foreground/45 text-sm whitespace-nowrap">
-            © {currentYear} {businessInfo.name}. Tutti i diritti riservati.
-          </p>
-          <p className="text-primary-foreground/45 text-sm">
-            {businessInfo.fullName} — {businessInfo.vatNumber}
-          </p>
-          <div className="flex items-center gap-4 mt-1">
-            <Link to="/privacy" className="text-primary-foreground/45 text-sm hover:text-primary-foreground transition-colors duration-300">
+        <div className="border-t border-primary-foreground/12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-x-4 gap-y-1 text-sm text-primary-foreground/45">
+            <span>© {currentYear} {businessInfo.name}. Tutti i diritti riservati.</span>
+            <span className="hidden md:inline text-primary-foreground/25">|</span>
+            <span>{businessInfo.fullName} — {businessInfo.vatNumber}</span>
+          </div>
+          <div className="flex items-center gap-4 text-sm">
+            <Link to="/privacy" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
               Privacy Policy
             </Link>
-            <span className="text-primary-foreground/25">​</span>
-            <Link to="/cookie" className="text-primary-foreground/45 text-sm hover:text-primary-foreground transition-colors duration-300">
+            <Link to="/cookie" className="text-primary-foreground/45 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
               Cookie Policy
             </Link>
           </div>
         </div>
       </div>
-    </footer>);
-
+    </footer>
+  );
 };
 
 export default Footer;
