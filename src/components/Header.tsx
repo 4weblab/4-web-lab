@@ -183,11 +183,10 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
         {isOpen && !satelliteMode && (
             <div
               id="mobile-menu"
-              className="absolute top-full left-0 right-0 md:hidden border-b border-border/30"
+              className="absolute top-full left-0 right-0 md:hidden border-b border-border/30 bg-background/95"
               style={{
-                background: 'var(--glass-bg)',
-                backdropFilter: 'blur(20px)',
-                WebkitBackdropFilter: 'blur(20px)',
+                backdropFilter: 'blur(14px)',
+                WebkitBackdropFilter: 'blur(14px)',
                 boxShadow: 'var(--shadow-lg)',
               }}
             >
