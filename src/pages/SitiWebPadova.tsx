@@ -234,36 +234,39 @@ const SitiWebPadova = () => {
             <AnimatedSection className="max-w-4xl mx-auto text-center">
               <PageBreadcrumb items={[{ label: "Home", to: "/" }, { label: "Realizzazione siti web Padova" }]} />
               <h1
-                className="heading-1 text-primary-foreground mb-8 text-balance"
+                className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Realizzazione Siti Web a Padova: il tuo web studio locale per negozi, professionisti e aziende
+                <span className="block">Siti Web che Generano Clienti a Padova e Provincia</span>
+                <span className="block mt-3 text-[0.55em] sm:text-[0.6em] tracking-wide font-semibold opacity-90 leading-tight">
+                  Il web studio locale per artigiani, professionisti e PMI che vogliono crescere online.
+                </span>
               </h1>
               <p
-                className="body-large text-primary-foreground/90 mb-10 max-w-3xl mx-auto text-balance"
+                className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sviluppo e creazione di siti internet professionali a Padova e provincia. Web studio con sede a Legnaro (PD): SEO locale, design moderno e supporto continuativo. Preventivo gratuito in 24h, da 199€.
+                Progettiamo siti web veloci, ottimizzati SEO e pronti per i motori di ricerca e l'Intelligenza Artificiale. Con sede a Legnaro (PD), aiutiamo le attività di Padova e provincia a farsi trovare da chi cerca i loro servizi. Preventivo personalizzato gratuito in 24 ore.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
                   onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
                   className="btn-primary text-lg px-10 py-4"
-                  aria-label="Richiedi una valutazione gratuita"
+                  aria-label="Analizza il mio progetto gratis"
                 >
-                  Richiedi una valutazione gratuita
+                  Analizza il mio progetto gratis
                 </button>
                 <a
                   href="https://wa.me/393514656042"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-primary-foreground/30 text-primary-foreground/90 hover:bg-primary-foreground/10 transition-all text-base font-semibold"
+                  className="inline-flex items-center gap-2 px-7 py-4 rounded-full border border-primary-foreground/30 text-primary-foreground/95 hover:bg-primary-foreground/10 transition-all text-base font-semibold"
                 >
-                  <MessageCircle className="w-5 h-5" /> WhatsApp
+                  <MessageCircle className="w-5 h-5" /> Scrivici su WhatsApp
                 </a>
               </div>
-              <p className="text-primary-foreground/60 text-sm mt-6">
-                Sede a Legnaro (PD) · da 199€ · risposta in 24h · clienti in tutta la provincia
+              <p className="text-primary-foreground/95 text-sm sm:text-base font-medium mt-6">
+                Sede a Legnaro (PD) • Risposta entro 24 ore • Assistenza e supporto inclusi
               </p>
             </AnimatedSection>
           </div>
