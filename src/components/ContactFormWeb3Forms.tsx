@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 
 type Status = { state: "idle" | "sending" | "success" | "error"; message: string };
 type FieldErrors = Record<string, string>;
@@ -7,21 +8,12 @@ type FieldErrors = Record<string, string>;
 export default function ContactFormWeb3Forms() {
   const [status, setStatus] = useState<Status>({ state: "idle", message: "" });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
-  const [timePrefs, setTimePrefs] = useState({ morning: false, afternoon: false });
-  const [channel, setChannel] = useState<"email" | "phone">("email");
 
   const ACCESS_KEY = "2afa7184-7e7d-4881-9472-d10ca4e3c6c3";
   const mountedAtRef = useRef(Date.now());
   const formRef = useRef<HTMLFormElement>(null);
   const RATE_LIMIT_MS = 60_000;
   const RL_KEY = "w3f_last_submit_ts";
-
-  const timePrefLabel = useMemo(() => {
-    const v: string[] = [];
-    if (timePrefs.morning) v.push("Mattina");
-    if (timePrefs.afternoon) v.push("Pomeriggio");
-    return v.length ? v.join(", ") : "Nessuna";
-  }, [timePrefs]);
 
   useEffect(() => {
     mountedAtRef.current = Date.now();
@@ -45,15 +37,15 @@ export default function ContactFormWeb3Forms() {
 
     // --- Field validation ---
     const errors: FieldErrors = {};
-    const firstName = String(formData.get("first_name") || "").trim();
-    const lastName = String(formData.get("last_name") || "").trim();
-    const phone = String(formData.get("phone") || "").trim();
+    const name = String(formData.get("name") || "").trim();
     const email = String(formData.get("email") || "").trim();
+    const businessType = String(formData.get("business_type") || "").trim();
+    const message = String(formData.get("message") || "").trim();
 
-    if (!firstName) errors.first_name = "Campo obbligatorio";
-    if (!lastName) errors.last_name = "Campo obbligatorio";
-    if (channel === "phone" && !phone) errors.phone = "Inserisci il numero di cellulare";
-    if (channel === "email" && !email) errors.email = "Inserisci un indirizzo email valido";
+    if (!name) errors.name = "Campo obbligatorio";
+    if (!email) errors.email = "Inserisci un indirizzo email valido";
+    if (!businessType) errors.business_type = "Seleziona un'opzione";
+    if (!message) errors.message = "Raccontaci qualcosa del tuo progetto";
 
     if (Object.keys(errors).length > 0) {
       setFieldErrors(errors);
@@ -90,9 +82,7 @@ export default function ContactFormWeb3Forms() {
     }
 
     formData.append("access_key", ACCESS_KEY);
-    formData.append("subject", "Nuova richiesta dal sito");
-    formData.append("preferred_time", timePrefLabel);
-    formData.append("preferred_channel", channel === "email" ? "Email" : "Telefono");
+    formData.append("subject", "Nuova richiesta di analisi gratuita dal sito");
 
     setStatus({ state: "sending", message: "Invio in corso..." });
 
@@ -119,8 +109,6 @@ export default function ContactFormWeb3Forms() {
       setStatus({ state: "success", message: "Messaggio inviato. Ti ricontattiamo a breve." });
       setFieldErrors({});
       form.reset();
-      setTimePrefs({ morning: false, afternoon: false });
-      setChannel("email");
       mountedAtRef.current = Date.now();
     } catch {
       setStatus({ state: "error", message: "Problema di rete. Controlla la connessione e riprova." });
@@ -139,144 +127,79 @@ export default function ContactFormWeb3Forms() {
 
   return (
     <form ref={formRef} onSubmit={onSubmit} noValidate className="space-y-4">
-      {/* Nome / Cognome */}
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="flex flex-col gap-1.5">
-          <span className={labelClasses}>Nome *</span>
-          <input
-            data-field="first_name"
-            name="first_name"
-            type="text"
-            required
-            autoComplete="given-name"
-            className={inputClasses("first_name")}
-            onChange={() => clearFieldError("first_name")}
-          />
-          {fieldErrors.first_name && (
-            <span className="text-xs text-red-400 mt-0.5">{fieldErrors.first_name}</span>
-          )}
-        </label>
-        <label className="flex flex-col gap-1.5">
-          <span className={labelClasses}>Cognome *</span>
-          <input
-            data-field="last_name"
-            name="last_name"
-            type="text"
-            required
-            autoComplete="family-name"
-            className={inputClasses("last_name")}
-            onChange={() => clearFieldError("last_name")}
-          />
-          {fieldErrors.last_name && (
-            <span className="text-xs text-red-400 mt-0.5">{fieldErrors.last_name}</span>
-          )}
-        </label>
-      </div>
-
-      {/* Azienda */}
+      {/* Nome */}
       <label className="flex flex-col gap-1.5">
-        <span className={labelClasses}>Azienda</span>
-        <input name="company" type="text" autoComplete="organization" className={inputClasses()} />
+        <span className={labelClasses}>Nome *</span>
+        <input
+          data-field="name"
+          name="name"
+          type="text"
+          required
+          autoComplete="name"
+          className={inputClasses("name")}
+          onChange={() => clearFieldError("name")}
+        />
+        {fieldErrors.name && (
+          <span className="text-xs text-red-400 mt-0.5">{fieldErrors.name}</span>
+        )}
       </label>
 
-      {/* Telefono / Email */}
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="flex flex-col gap-1.5">
-          <span className={labelClasses}>Cellulare *</span>
-          <input
-            data-field="phone"
-            name="phone"
-            type="tel"
-            inputMode="tel"
-            required
-            autoComplete="tel"
-            placeholder="+39 ..."
-            className={inputClasses("phone")}
-            onChange={() => clearFieldError("phone")}
-          />
-          {fieldErrors.phone && (
-            <span className="text-xs text-red-400 mt-0.5">{fieldErrors.phone}</span>
-          )}
-        </label>
-        <label className="flex flex-col gap-1.5">
-          <span className={labelClasses}>Email *</span>
-          <input
-            data-field="email"
-            name="email"
-            type="email"
-            required
-            autoComplete="email"
-            className={inputClasses("email")}
-            onChange={() => clearFieldError("email")}
-          />
-          {fieldErrors.email && (
-            <span className="text-xs text-red-400 mt-0.5">{fieldErrors.email}</span>
-          )}
-        </label>
-      </div>
-
-      {/* Preferenze orario */}
-      <fieldset className="space-y-2">
-        <legend className={labelClasses}>Preferenze di contatto</legend>
-        <div className="flex flex-wrap gap-4 mt-1">
-          <label className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={timePrefs.morning}
-              onChange={(e) => setTimePrefs((s) => ({ ...s, morning: e.target.checked }))}
-              className="rounded border-primary-foreground/20 bg-primary-foreground/5 text-accent focus:ring-accent h-4 w-4"
-            />
-            Mattina
-          </label>
-          <label className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 cursor-pointer">
-            <input
-              type="checkbox"
-              checked={timePrefs.afternoon}
-              onChange={(e) => setTimePrefs((s) => ({ ...s, afternoon: e.target.checked }))}
-              className="rounded border-primary-foreground/20 bg-primary-foreground/5 text-accent focus:ring-accent h-4 w-4"
-            />
-            Pomeriggio
-          </label>
-        </div>
-      </fieldset>
-
-      {/* Canale preferito */}
-      <fieldset className="space-y-2">
-        <legend className={labelClasses}>Come preferisci essere contattato?</legend>
-        <div className="flex flex-wrap gap-4 mt-1">
-          <label className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 cursor-pointer">
-            <input
-              type="radio"
-              name="preferred_channel_ui"
-              value="email"
-              checked={channel === "email"}
-              onChange={() => setChannel("email")}
-              className="border-primary-foreground/20 text-accent focus:ring-accent h-4 w-4"
-            />
-            Email
-          </label>
-          <label className="inline-flex items-center gap-2 text-sm text-primary-foreground/70 cursor-pointer">
-            <input
-              type="radio"
-              name="preferred_channel_ui"
-              value="phone"
-              checked={channel === "phone"}
-              onChange={() => setChannel("phone")}
-              className="border-primary-foreground/20 text-accent focus:ring-accent h-4 w-4"
-            />
-            Telefono
-          </label>
-        </div>
-      </fieldset>
-
-      {/* Messaggio */}
+      {/* Email */}
       <label className="flex flex-col gap-1.5">
-        <span className={labelClasses}>Messaggio</span>
-        <textarea
-          name="message"
-          rows={4}
-          className={`${inputClasses()} resize-none`}
+        <span className={labelClasses}>Email *</span>
+        <input
+          data-field="email"
+          name="email"
+          type="email"
+          required
+          autoComplete="email"
+          className={inputClasses("email")}
+          onChange={() => clearFieldError("email")}
         />
+        {fieldErrors.email && (
+          <span className="text-xs text-red-400 mt-0.5">{fieldErrors.email}</span>
+        )}
+      </label>
+
+      {/* Tipo di attività */}
+      <label className="flex flex-col gap-1.5">
+        <span className={labelClasses}>Tipo di attività *</span>
+        <select
+          data-field="business_type"
+          name="business_type"
+          required
+          defaultValue=""
+          className={`${inputClasses("business_type")} appearance-none pr-10 bg-[length:12px] bg-[right_1rem_center] bg-no-repeat`}
+          style={{
+            backgroundImage:
+              "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8' fill='none' stroke='%23ffffff' stroke-opacity='0.6' stroke-width='1.5'><path d='M1 1.5l5 5 5-5'/></svg>\")",
+          }}
+          onChange={() => clearFieldError("business_type")}
+        >
+          <option value="" disabled className="bg-neutral-900">Seleziona un'opzione</option>
+          <option value="Negozi" className="bg-neutral-900">Negozi</option>
+          <option value="Professionisti" className="bg-neutral-900">Professionisti</option>
+          <option value="Aziende" className="bg-neutral-900">Aziende</option>
+        </select>
+        {fieldErrors.business_type && (
+          <span className="text-xs text-red-400 mt-0.5">{fieldErrors.business_type}</span>
+        )}
+      </label>
+
+      {/* Progetto */}
+      <label className="flex flex-col gap-1.5">
+        <span className={labelClasses}>Parlaci del tuo progetto *</span>
+        <textarea
+          data-field="message"
+          name="message"
+          rows={5}
+          required
+          className={`${inputClasses("message")} resize-none`}
+          onChange={() => clearFieldError("message")}
+        />
+        {fieldErrors.message && (
+          <span className="text-xs text-red-400 mt-0.5">{fieldErrors.message}</span>
+        )}
       </label>
 
       {/* Honeypots */}
@@ -297,7 +220,14 @@ export default function ContactFormWeb3Forms() {
         disabled={status.state === "sending"}
         className="btn-primary w-full mt-2 disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:scale-100"
       >
-        {status.state === "sending" ? "Invio..." : "Invia richiesta"}
+        {status.state === "sending" ? (
+          "Invio..."
+        ) : (
+          <>
+            Richiedi analisi gratuita
+            <ArrowRight className="w-5 h-5" aria-hidden="true" />
+          </>
+        )}
       </button>
 
       {/* Status message */}
