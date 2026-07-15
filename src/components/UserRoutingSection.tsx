@@ -43,22 +43,12 @@ const UserRoutingSection = () => {
       <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, hsl(var(--foreground)) 1px, transparent 0)', backgroundSize: '32px 32px' }} />
 
       <div className="container-section relative">
-        <AnimatedSection className="text-center mb-8">
+        <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Dicci chi sei, al resto pensiamo noi</h2>
+          <h2 className="heading-2 mb-5">Soluzioni sartoriali cucite sul tuo business</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Ogni attività ha esigenze diverse. Scegli il tuo caso e scopri il sito web più adatto.
+            Ogni attività ha esigenze e regole diverse. Scegli il tuo profilo e scopri l'architettura web più adatta per scalare il tuo mercato.
           </p>
-        </AnimatedSection>
-
-        {/* Psychological transition block */}
-        <AnimatedSection className="text-center mb-16" delay={0.1}>
-          <div className="inline-block bg-background/80 backdrop-blur-sm border border-border/60 rounded-2xl px-8 py-5 shadow-sm">
-            <p className="text-foreground font-medium text-lg leading-relaxed">
-              Non esiste un sito giusto per tutti.<br />
-              <span className="text-accent">Esiste quello giusto per il tuo tipo di attività.</span>
-            </p>
-          </div>
         </AnimatedSection>
 
         <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8" staggerDelay={0.15} delay={0.2}>
