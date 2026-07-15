@@ -1,36 +1,31 @@
 ## Obiettivo
-Sostituire l'attuale hero image (Padova + skyline in codice) con una nuova immagine coerente con il posizionamento del sito, in stile **astratto tech-geo Veneto** con palette **navy + arancio** brand.
+Rimuovere la Top Notification Bar da tutte le pagine "concept" (demo fittizi) mantenendola sulla pagina reale di R.B. s.n.c. e sul resto del sito.
 
-## Concept visivo
-Composizione astratta e sofisticata che rappresenti:
-- Sagoma stilizzata della regione **Veneto** (o area Padova) come base geografica
-- **Nodi luminosi** interconnessi (rete/network) con Padova come punto focale evidenziato
-- Elementi tech sottili: linee dati, griglia, particelle, connessioni che ricordano SEO/AI/traffico organico
-- **Palette**: navy profondo (#0a1e3a / #12294d) come sfondo dominante, accenti **arancio** brand (glow, nodi principali, linee dati) e blu-ciano freddi come contrappunto
-- Atmosfera premium, editoriale, non fotografica — ricorda una data-visualization d'autore
-- Ampia zona a sinistra volutamente "calma" (poco affollata) per lasciare respiro a H1 e CTA sopra l'overlay scuro
+## Analisi
+Attualmente `TopNotificationBar` è montato globalmente in `src/App.tsx` all'interno di `BrowserRouter`, quindi ha accesso al contesto di `react-router-dom`. La soluzione più pulita è rendere il componente consapevole della route corrente e restituire `null` sulle pagine concept.
 
-## Deliverable immagini
-Tre varianti WebP mantenendo dimensioni/proporzioni attuali:
-- `public/hero/hero-bg-desktop.webp` — 1920×1070
-- `public/hero/hero-bg-tablet.webp` — 1280×720 circa (proporzione attuale)
-- `public/hero/hero-bg-mobile.webp` — 800×1200 circa (orientamento mobile con soggetto centrato/spostato per essere leggibile dietro il testo)
-- `public/hero/hero-mini-desktop.webp` — versione ridotta usata dalle pagine satellite (`.page-hero`), stessa composizione ma crop più compatto
+## Pagine interessate
+Concept da escludere:
+- `/realizzazioni/demo-metalmeccanica`
+- `/realizzazioni/demo-studio-dentistico-premium`
+- `/realizzazioni/demo-fotovoltaico`
+- `/realizzazioni/boutique-bb-luxury-rooms`
+- `/realizzazioni/demo-flower-atelier`
+- `/realizzazioni/demo-personal-trainer-vera-method`
 
-Tutte in `.webp` di qualità ottimizzata.
+Pagina reale da mantenere:
+- `/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto`
 
-## Coerenza tecnica
-- Aggiornati **solo** i file immagine: non modifico markup, `srcset`, `preload` in `index.html`, né la classe `.page-hero` in `src/index.css`. I path e le proporzioni restano invariati, quindi tutte le pagine (index + satellite) recepiscono automaticamente il nuovo asset.
-- **Alt text** aggiornato in `src/components/Hero.tsx` per riflettere il nuovo soggetto (mappa astratta Veneto + rete dati) mantenendo keyword "Padova / 4 Web Lab / web agency".
-- Nessuna modifica ad altri componenti o al layout.
+Tutte le altre pagine mantengono la barra.
 
-## Passi
-1. Generare la variante **desktop** (1920×1070) come immagine master con imagegen (modello premium per qualità typografia/nitidezza dei nodi).
-2. Derivare **tablet**, **mobile** e **mini-desktop** con edit_image per garantire coerenza cromatica e compositiva tra le varianti.
-3. Sostituire i 4 file esistenti in `public/hero/`.
-4. Aggiornare l'`alt` in `Hero.tsx`.
-5. Verifica build + screenshot rapido della home per validare LCP e leggibilità del testo sopra l'immagine.
+## Implementazione
+1. In `src/components/TopNotificationBar.tsx` importare `useLocation` da `react-router-dom`.
+2. Definire un array con i path dei concept demo.
+3. All'inizio del componente, se il pathname corrente corrisponde a uno dei concept, restituire `null`.
+4. Mantenere invariata la logica di altezza dinamica (`ResizeObserver` + CSS variable) per tutte le altre pagine.
+5. Non modificare `src/App.tsx` (il componente rimane montato globalmente).
 
-## Non incluso
-- Nessuna modifica a JSON-LD, SEO, sitemap, palette CSS o altri asset.
-- Nessuna nuova sezione o componente.
+## Verifica
+- Eseguire build per controllare errori TypeScript.
+- Verificare visivamente che la barra non compaia sui concept demo.
+- Verificare che la barra rimanga visibile su `/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto`, home e altre pagine.
