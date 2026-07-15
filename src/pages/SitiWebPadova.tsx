@@ -471,13 +471,12 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Settings className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Realizzazione sito web a Padova: il nostro metodo in 4 passi</h2>
+                <h2 className="heading-2">Realizzazione Siti Web a Padova: il Nostro Metodo in 4 Step</h2>
               </AnimatedSection>
 
               <AnimatedSection delay={0.1}>
                 <p className="body-base text-muted-foreground mb-10 max-w-3xl">
-                  Ogni progetto di realizzazione siti web segue un percorso strutturato, pensato per garantire qualità,
-                  trasparenza e risultati misurabili.
+                  Dall'idea iniziale al lancio online, seguiamo un processo strutturato e trasparente per garantirti un sito web veloce, sicuro e pronto a generare risultati reali per la tua attività.
                 </p>
               </AnimatedSection>
 
