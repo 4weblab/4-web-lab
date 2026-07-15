@@ -811,7 +811,7 @@ const Contatti = () => {
           </h2>
           <p className="text-[16px] md:text-[17px] leading-[1.8] max-w-2xl mx-auto" style={{ fontFamily: SANS, color: C.inkSoft }}>
             <strong style={{ color: C.ink }}>4 Web Lab</strong> realizza siti web per
-            professionisti, personal trainer, studi privati e attività femminili
+            professionisti, personal trainer, studi privati e di settore
             a Padova e in tutta Italia. Soluzioni una tantum{" "}
             <strong style={{ color: C.ink }}>a partire da 549€</strong>, curate
             in ogni dettaglio.
