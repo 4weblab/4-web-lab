@@ -353,31 +353,34 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2">
-                  Creazione e sviluppo siti web a Padova: scegli in base alla tua attività
+                <h2 className="heading-2 mb-4">
+                  Soluzioni Web su Misura per il Tuo Business a Padova
                 </h2>
+                <p className="body-large text-muted-foreground max-w-3xl mx-auto text-balance">
+                  Progettiamo esperienze digitali specifiche per ogni tipo di attività locale e aziendale.
+                </p>
               </AnimatedSection>
 
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
                   {
-                    title: "Siti web per professionisti",
+                    title: "Siti per Professionisti & Studi",
                     description:
-                      "Presenze digitali autorevoli per liberi professionisti e studi che vogliono farsi trovare e trasmettere fiducia online.",
+                      "Presenze digitali autorevoli per medici, avvocati, psicologi e consulenti. Creiamo siti ottimizzati per posizionare il tuo nome su Google, trasmettere massima fiducia e facilitare la prenotazione di appuntamenti o contatti diretti.",
                     link: "/siti-web-per-professionisti",
                     linkLabel: "Scopri il servizio",
                   },
                   {
-                    title: "Siti web per negozi",
+                    title: "Siti per Negozi & Attività Locali",
                     description:
-                      "Siti moderni e funzionali per attività commerciali che desiderano presentarsi al meglio e attrarre nuovi clienti dal territorio.",
+                      "Siti moderni e pronti per la Local SEO dedicati a negozi, artigiani, ristoranti e showroom. Ottimizziamo la tua presenza per attirare nuovi clienti dal territorio padovano direttamente nel tuo punto vendita fisico o online.",
                     link: "/siti-web-per-negozi",
                     linkLabel: "Scopri il servizio",
                   },
                   {
-                    title: "Siti web aziendali strutturati",
+                    title: "Siti Aziendali & Lead Generation",
                     description:
-                      "Piattaforme web complete per aziende che necessitano di una presenza online solida, organizzata e orientata alla conversione.",
+                      "Piattaforme web complete per PMI e aziende strutturate che necessitano di una presenza online solida, performante e integrata. Progetti orientati alla generazione di contatti commerciali qualificati (lead) e alla conversione.",
                     link: "/siti-web-aziendali",
                     linkLabel: "Scopri il servizio",
                   },
