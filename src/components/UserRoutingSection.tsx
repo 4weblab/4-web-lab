@@ -45,7 +45,7 @@ const UserRoutingSection = () => {
       <div className="container-section relative">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Soluzioni sartoriali cucite sul tuo business</h2>
+          <h2 className="heading-2 mb-5">Servizi web e soluzioni sartoriali per il tuo business</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Ogni attività ha esigenze e regole diverse. Scegli il tuo profilo e scopri l'architettura web più adatta per scalare il tuo mercato.
           </p>
