@@ -85,7 +85,7 @@ const StrengthsSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Perché sceglierci</h2>
+          <h2 className="heading-2 mb-5">Perché scegliere la nostra agenzia web</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
             Supportiamo <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">negozi</Link> e <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">piccole e medie imprese</Link> in tutta Italia nella realizzazione di siti web professionali orientati alla crescita online.
           </p>
