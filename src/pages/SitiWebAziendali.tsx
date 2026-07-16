@@ -39,29 +39,29 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web Aziendali da 899€ · Veneto e Italia | 4 Web Lab</title>
+        <title>Siti Web Aziendali Professionali da 899€ | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web aziendali professionali da 899€: design su misura, SEO per Google e AI, Google Ads. Per PMI in Veneto e in tutta Italia. Preventivo in 24h."
+          content="Siti web aziendali da 899€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab" />
+        <meta property="og:title" content="Siti Web Aziendali Professionali da 899€ | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Siti web aziendali da 899€ per PMI e aziende in Veneto e in tutta Italia. Design su misura, SEO integrato, preventivo gratuito in 24h."
+          content="Siti web aziendali da 899€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Aziendali in Veneto e Italia | 4 Web Lab" />
+        <meta name="twitter:title" content="Siti Web Aziendali Professionali da 899€ | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Siti web aziendali da 899€ per PMI e aziende in Veneto e in tutta Italia. Design su misura, SEO integrato, preventivo gratuito in 24h."
+          content="Siti web aziendali da 899€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
@@ -286,7 +286,7 @@ const SitiWebAziendali = () => {
             <div className="max-w-4xl mx-auto">
               {/* Definizione AEO */}
               <AnimatedSection className="mb-12 p-6 md:p-8 rounded-2xl bg-accent/5 border border-accent/15">
-                <h2 className="font-bold text-foreground text-xl mb-3">Cos'è un sito web aziendale</h2>
+                <h3 className="font-bold text-foreground text-xl mb-3">Cos'è un sito web aziendale</h3>
                 <p className="aeo-definition text-muted-foreground leading-relaxed">
                   Un sito web aziendale è una piattaforma digitale multipagina che rappresenta online un'impresa, ne presenta servizi, identità e valore, e supporta l'acquisizione di nuovi contatti. A differenza di un semplice sito vetrina, è strutturato, scalabile e ottimizzato per i motori di ricerca, così da accompagnare la crescita del business nel tempo.
                 </p>
@@ -385,7 +385,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <TrendingUp className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Siti multipagina e strutturati</h2>
+                <h3 className="heading-2">Siti multipagina e strutturati</h3>
               </AnimatedSection>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection direction="left" className="order-2 md:order-1">
@@ -424,7 +424,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
+                <h3 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h3>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
@@ -483,7 +483,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <ImageIcon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Alcuni siti web aziendali realizzati</h2>
+                <h3 className="heading-2">Alcuni siti web aziendali realizzati</h3>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <p className="text-muted-foreground mb-10 max-w-3xl">
@@ -597,7 +597,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <TrendingUp className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Quanto costa un sito web aziendale</h2>
+                <h2 className="heading-2">Quanto costa un sito web aziendale?</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
                 <p>
@@ -926,9 +926,9 @@ const SitiWebAziendali = () => {
             <AnimatedSection className="grid md:grid-cols-2 gap-8 items-stretch">
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
-                <h2 className="heading-2 text-primary-foreground mb-6">
+                <p className="heading-2 text-primary-foreground mb-6">
                   Richiedi un preventivo per il tuo sito web aziendale
-                </h2>
+                </p>
                 <p className="body-large text-primary-foreground/70 mb-8">
                   Vuoi realizzare un sito web aziendale strutturato e professionale? Contattaci per un confronto senza
                   impegno: lavoriamo con aziende clienti in Veneto e in tutta Italia.
