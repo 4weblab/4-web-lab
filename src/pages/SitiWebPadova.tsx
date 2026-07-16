@@ -237,11 +237,16 @@ const SitiWebPadova = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                <span className="block">Siti Web che Generano Clienti a Padova e Provincia</span>
+                Siti Web che Generano Clienti a Padova e Provincia
+              </h1>
+              <p
+                className="heading-1 text-primary-foreground mb-6 text-balance"
+                style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
+              >
                 <span className="block mt-3 text-[0.55em] sm:text-[0.6em] tracking-wide font-semibold opacity-90 leading-tight">
                   Il web studio locale per artigiani, professionisti e PMI che vogliono crescere online.
                 </span>
-              </h1>
+              </p>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
@@ -298,7 +303,7 @@ const SitiWebPadova = () => {
           <div className="container-section">
             <div className="max-w-4xl mx-auto mb-12">
               <AnimatedSection>
-                <h2 className="heading-3 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h2>
+                <h3 className="heading-2 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h3>
                 <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
                   Realizzare un sito web a Padova non significa solo creare una bella vetrina grafica, ma strutturare una vera e propria calamita per i clienti locali. Ottimizziamo il tuo sito per intercettare le ricerche geolocalizzate dei tuoi potenziali clienti (es. "idraulico Padova", "centro estetico Legnaro", "consulente finanziario Padova"). Il vantaggio di scegliere uno studio del territorio è la combinazione tra una strategia SEO locale mirata, comunicazione diretta e la conoscenza reale del tessuto imprenditoriale padovano.
                 </p>
@@ -353,9 +358,9 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h2 className="heading-2 mb-4">
+                <h3 className="heading-2 mb-4">
                   Soluzioni Web su Misura per il Tuo Business a Padova
-                </h2>
+                </h3>
                 <p className="body-large text-muted-foreground max-w-3xl mx-auto text-balance">
                   Progettiamo esperienze digitali specifiche per ogni tipo di attività locale e aziendale.
                 </p>
@@ -416,7 +421,7 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Negozio, professionista o azienda:</h2>
+                <h2 className="heading-2">Piani e Costi per la Realizzazione di Siti Web a Padova</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
@@ -533,7 +538,7 @@ const SitiWebPadova = () => {
                   <div className="icon-box w-13 h-13">
                     <Globe className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
+                  <h3 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h3>
                 </div>
                 <p className="body-large text-muted-foreground max-w-3xl">
                   Copriamo capillarmente il territorio padovano per offrire una presenza digitale forte e un supporto tecnico reale, anche direttamente presso la tua sede.
@@ -637,7 +642,7 @@ const SitiWebPadova = () => {
                 <div className="icon-box w-13 h-13">
                   <Link2 className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Approfondisci il servizio adatto alla tua attività</h2>
+                <p className="heading-2">Approfondisci il servizio adatto alla tua attività</p>
               </AnimatedSection>
               <AnimatedSection delay={0.1}>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
@@ -766,9 +771,9 @@ const SitiWebPadova = () => {
             <AnimatedSection className="grid md:grid-cols-2 gap-8 items-stretch">
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
-                <h2 className="heading-2 text-primary-foreground mb-6">
+                <p className="heading-2 text-primary-foreground mb-6">
                   Vuoi realizzare un sito web professionale a Padova?
-                </h2>
+                </p>
                 <p className="body-large text-primary-foreground/70 mb-8">Contattaci per un confronto senza impegno.</p>
                 <div className="text-center">
                   <a
