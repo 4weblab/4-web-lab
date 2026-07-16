@@ -29,7 +29,7 @@ const ContactSection = () => {
           {/* Colonna sinistra: copy + canali rapidi */}
           <AnimatedSection className="lg:pr-4">
             <div className="w-16 h-1 rounded-full mb-8 bg-accent" />
-            <h2 className="heading-2 text-primary-foreground mb-5">Diamo vita al tuo progetto web</h2>
+            <h2 className="heading-2 text-primary-foreground mb-5">Inizia il tuo progetto web con noi</h2>
             <p className="body-large text-primary-foreground/70 mb-10 text-balance">
               Parla direttamente con lo sviluppatore. Analizziamo la tua presenza online per trovare i blocchi che rallentano la tua crescita su Google e sulle AI.
             </p>
