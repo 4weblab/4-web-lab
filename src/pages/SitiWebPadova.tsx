@@ -734,7 +734,7 @@ const SitiWebPadova = () => {
                       className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
                     >
                       <AccordionTrigger className="text-left py-5 hover:no-underline">
-                        <h3 className="font-semibold text-foreground text-base pr-4">{faq.question}</h3>
+                        <span className="font-semibold text-foreground text-base pr-4">{faq.question}</span>
                       </AccordionTrigger>
                       <AccordionContent className="aeo-faq-answer text-muted-foreground text-sm leading-relaxed pb-5">
                         {faq.answer}
