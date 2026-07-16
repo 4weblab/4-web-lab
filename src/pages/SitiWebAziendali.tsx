@@ -286,7 +286,7 @@ const SitiWebAziendali = () => {
             <div className="max-w-4xl mx-auto">
               {/* Definizione AEO */}
               <AnimatedSection className="mb-12 p-6 md:p-8 rounded-2xl bg-accent/5 border border-accent/15">
-                <h2 className="font-bold text-foreground text-xl mb-3">Cos'è un sito web aziendale</h2>
+                <h3 className="font-bold text-foreground text-xl mb-3">Cos'è un sito web aziendale</h3>
                 <p className="aeo-definition text-muted-foreground leading-relaxed">
                   Un sito web aziendale è una piattaforma digitale multipagina che rappresenta online un'impresa, ne presenta servizi, identità e valore, e supporta l'acquisizione di nuovi contatti. A differenza di un semplice sito vetrina, è strutturato, scalabile e ottimizzato per i motori di ricerca, così da accompagnare la crescita del business nel tempo.
                 </p>
@@ -385,7 +385,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <TrendingUp className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Siti multipagina e strutturati</h2>
+                <h3 className="heading-2">Siti multipagina e strutturati</h3>
               </AnimatedSection>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection direction="left" className="order-2 md:order-1">
@@ -424,7 +424,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
+                <h3 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h3>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
@@ -483,7 +483,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <ImageIcon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Alcuni siti web aziendali realizzati</h2>
+                <h3 className="heading-2">Alcuni siti web aziendali realizzati</h3>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
                 <p className="text-muted-foreground mb-10 max-w-3xl">
@@ -597,7 +597,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <TrendingUp className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Quanto costa un sito web aziendale</h2>
+                <h2 className="heading-2">Quanto costa un sito web aziendale?</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
                 <p>
@@ -926,9 +926,9 @@ const SitiWebAziendali = () => {
             <AnimatedSection className="grid md:grid-cols-2 gap-8 items-stretch">
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
-                <h2 className="heading-2 text-primary-foreground mb-6">
+                <p className="heading-2 text-primary-foreground mb-6">
                   Richiedi un preventivo per il tuo sito web aziendale
-                </h2>
+                </p>
                 <p className="body-large text-primary-foreground/70 mb-8">
                   Vuoi realizzare un sito web aziendale strutturato e professionale? Contattaci per un confronto senza
                   impegno: lavoriamo con aziende clienti in Veneto e in tutta Italia.
