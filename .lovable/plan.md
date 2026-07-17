@@ -1,44 +1,47 @@
-## Obiettivo
-Ridurre latenza e richieste esterne migrando i font Google (Inter + Playfair Display) al self-hosting via `@fontsource-variable`, servendoli dal bundle Vite invece che da `fonts.googleapis.com` / `fonts.gstatic.com`.
+## Problema
 
-## Perché conviene
-- Elimina 2 preconnect + 1 richiesta CSS blocking verso Google Fonts
-- I file `.woff2` diventano asset locali con hash, con caching CDN aggressivo di Netlify
-- Migliora LCP e riduce CLS del font swap
-- Rimuove una dipendenza terza (privacy/GDPR: nessun IP inviato a Google Fonts)
+Lo screenshot del "Rich Result Test" di Google mostra la pagina vuota. Causa probabile: Googlebot (o il renderer del test) scatta lo screenshot prima che React abbia montato l'app e che i font/immagini self-hosted siano dipinti. Il segnale attuale `window.prerenderReady` scatta dopo 2 `requestAnimationFrame` (pochi ms dopo il primo render), quindi:
 
-## Modifiche
+- non serve al Rich Result Test (Google non legge `prerenderReady`, quel flag è per Prerender.io/Rendertron)
+- scatta troppo presto: hero, font e immagini LCP potrebbero non essere ancora dipinti
 
-### 1. Installare dipendenze
-- `@fontsource-variable/inter` (variable font, un solo file per tutti i pesi 400–700)
-- `@fontsource/playfair-display` con pesi 600/700/800
+## Cosa consiglio
 
-### 2. `src/main.tsx` — importare i CSS dei font
-```ts
-import "@fontsource-variable/inter";
-import "@fontsource/playfair-display/600.css";
-import "@fontsource/playfair-display/700.css";
-import "@fontsource/playfair-display/800.css";
+Attacchiamo il problema su due fronti, senza toccare business logic.
+
+### 1. Migliorare il First Paint per il renderer di Google
+
+- **Fallback SSR-like in `index.html`**: inserire dentro `<div id="root">` un markup statico minimale con H1, sottotitolo e CTA della Hero (stessi testi già presenti in `Hero.tsx`), stilizzato inline in modo che sia visibile immediatamente anche prima che il bundle JS venga eseguito. React lo sovrascrive al mount senza flicker percepibile.
+- **Preload esplicito dell'immagine LCP** della Hero in `<link rel="preload" as="image" fetchpriority="high">` in `index.html` (se non già presente per la variante attualmente servita).
+- **Preload dei font `.woff2` critici** (Inter Variable + Playfair 700) con `<link rel="preload" as="font" type="font/woff2" crossorigin>` così il testo del fallback viene dipinto con il font corretto subito.
+
+### 2. Rendere affidabile `window.prerenderReady`
+
+Sostituire in `src/main.tsx` il doppio `requestAnimationFrame` con una sequenza che attende eventi reali:
+
+```text
+1. attende il mount di React (callback in createRoot render)
+2. attende `document.fonts.ready`
+3. attende `window.load` (immagini)
+4. imposta prerenderReady = true, con timeout di sicurezza a 4s
 ```
 
-### 3. `index.html` — rimuovere
-- `<link rel="preconnect" ...googleapis>` e `...gstatic>`
-- `<link rel="preload" ...playfairdisplay...woff2>` esterno
-- `<link rel="stylesheet" href="https://fonts.googleapis.com/css2?...">` + relativo `<noscript>`
+Questo aiuta i prerenderer di terze parti; per Googlebot vero il punto 1 è quello risolutivo.
 
-### 4. `src/index.css` — aggiornare font-family
-- `font-family: 'Inter Variable', 'Inter', system-ui, sans-serif;`
-- Playfair Display resta invariato (il nome famiglia è lo stesso)
+### Cosa NON faccio
 
-### 5. Verifica
-- `bun run build` → nessun errore
-- Verifica visiva rapida: la Hero e i titoli devono mantenere lo stesso rendering tipografico
-- Controllo network: nessuna chiamata a fonts.gstatic.com/googleapis.com
+- Non introduco SSR/Next.js: fuori scope, rischio alto.
+- Non tocco copy, layout, colori, business logic.
+- Non aggiungo un `setTimeout(2000)` cieco: rallenta gli utenti reali e non risolve lo screenshot vuoto se React non è ancora montato.
 
-## Altre dipendenze valutate — non tocco
-- **framer-motion** già lazy nei componenti non-LCP (memory rule). Ok.
-- **lucide-react**: import tree-shakeable per icona, nessun bundle bloat.
-- **date-fns v3**: già modular.
-- **embla, radix**: usati, non alleggeribili senza refactor.
+## File toccati
 
-Se in seguito vuoi, valutiamo `vite-plugin-compression` (gzip/brotli pre-build) o code splitting per rotte pesanti, ma sono ottimizzazioni separate da questo intervento sui font.
+- `index.html` — fallback statico dentro `#root`, preload font e immagine LCP.
+- `src/main.tsx` — logica `prerenderReady` basata su `fonts.ready` + `window.load` con timeout.
+
+## Verifica
+
+- Build passata.
+- Playwright: disabilito JS e faccio screenshot → il fallback statico della Hero deve essere visibile.
+- Playwright: con JS attivo → nessun flicker, layout identico all'attuale.
+- Al termine, l'utente ripete il Rich Result Test di Google per confermare che lo screenshot non è più vuoto (nota: il test cachea, potrebbe servire qualche minuto).
