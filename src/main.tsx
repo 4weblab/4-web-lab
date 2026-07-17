@@ -19,10 +19,28 @@ window.prerenderReady = false;
 createRoot(document.getElementById("root")!).render(<App />);
 
 // Segnala ai prerenderer (Prerender.io, Rendertron, ecc.) che la SPA è pronta
-// per lo snapshot dopo che React ha renderizzato e react-helmet-async ha
-// iniettato title/meta/JSON-LD nel <head>.
-requestAnimationFrame(() => {
-  requestAnimationFrame(() => {
-    window.prerenderReady = true;
-  });
-});
+// per lo snapshot solo dopo:
+//   1. mount di React (doppio rAF -> primo paint completato)
+//   2. font self-hosted pronti (document.fonts.ready)
+//   3. window.load (immagini LCP e risorse critiche scaricate)
+// Timeout di sicurezza a 4s per non bloccare mai il flag.
+const markReady = () => {
+  if (window.prerenderReady) return;
+  window.prerenderReady = true;
+};
+
+const waitForReady = async () => {
+  await new Promise<void>((r) => requestAnimationFrame(() => requestAnimationFrame(() => r())));
+  try {
+    if (document.fonts && document.fonts.ready) {
+      await document.fonts.ready;
+    }
+  } catch { /* no-op */ }
+  if (document.readyState !== "complete") {
+    await new Promise<void>((r) => window.addEventListener("load", () => r(), { once: true }));
+  }
+  markReady();
+};
+
+waitForReady();
+setTimeout(markReady, 4000);
