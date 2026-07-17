@@ -3,7 +3,7 @@ import App from "./App.tsx";
 import "./index.css";
 
 // Self-hosted fonts (no requests to fonts.gstatic.com / googleapis.com)
-import "@fontsource-variable/inter";
+import "@fontsource-variable/inter/wght.css";
 import "@fontsource/playfair-display/600.css";
 import "@fontsource/playfair-display/700.css";
 import "@fontsource/playfair-display/800.css";
