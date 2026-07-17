@@ -62,7 +62,7 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SCEGLI LA MIGLIORE</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap uppercase">SOLUZIONI SU MISURA E ACCESSIBILI</span>
               <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
               <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, GOOGLE ADS</span>
             </h1>
@@ -71,7 +71,7 @@ const Hero = () => {
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              4 Web Lab realizza il sito su misura per il tuo business. SEO mirato, siti moderni e responsivi per cellulare: creiamo strategie su misura e relazioni umane che nessuna IA potrà mai replicare.
+              4 Web Lab realizza il sito su misura per il tuo business. SEO mirata, siti moderni e responsivi per cellulare: creiamo strategie su misura e relazioni umane che nessuna IA potrà mai replicare.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
