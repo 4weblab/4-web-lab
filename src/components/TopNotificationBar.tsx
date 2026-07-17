@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Ottimizza sempre il sito per i dispositivi mobili. Google indicizza i contenuti basandosi principalmente sulla versione mobile (Mobile-First Indexing).
+          Proteggi i dati dei tuoi utenti installando un certificato SSL (HTTPS). Google premia i siti web sicuri e gli utenti navigano con più fiducia.
         </p>
       </div>
     </div>
