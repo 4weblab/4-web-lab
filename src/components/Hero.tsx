@@ -64,14 +64,14 @@ const Hero = () => {
               }}>
               <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap uppercase">SOLUZIONI SU MISURA E ACCESSIBILI</span>
               <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, GOOGLE ADS</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, GOOGLE ADS, BRANDING</span>
             </h1>
 
             <p
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              4 Web Lab realizza il sito su misura per il tuo business. SEO mirata, siti moderni e responsivi per cellulare: creiamo strategie su misura e relazioni umane che nessuna IA potrà mai replicare.
+              Ottimizzazione e posizionamento sui motori di ricerca per intercettare clienti qualificati. Sviluppo di siti web veloci, ottimizzati per i dispositivi mobili e pronti per l'AI, per dare visibilità concreta alla tua attività.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
