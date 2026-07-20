@@ -177,58 +177,7 @@
   </head>
 
   <body>
-    <div id="root">
-      <!-- SSR-like fallback: reso visibile ai crawler / renderer che scattano lo
-           screenshot prima che il bundle JS sia eseguito (es. Rich Result Test).
-           React lo sostituisce al mount senza flicker. -->
-      <noscript>
-        <style>
-          #ssr-fallback { display: block !important; }
-        </style>
-      </noscript>
-      <div
-        id="ssr-fallback"
-        style="
-          position: relative;
-          min-height: 100vh;
-          background: #0b1a2b url('/hero/hero-bg-desktop.webp') center/cover no-repeat;
-          color: #ffffff;
-          font-family: 'Inter Variable', Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-          padding: 96px 24px;
-          box-sizing: border-box;
-        ">
-        <div style="
-          position: absolute; inset: 0;
-          background: linear-gradient(to right, rgba(6,20,36,0.78) 0%, rgba(6,20,36,0.5) 45%, rgba(6,20,36,0.15) 75%, transparent 100%);
-        "></div>
-        <div style="position: relative; max-width: 900px; margin: 0 auto;">
-          <h1 style="
-            font-size: clamp(2rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1.05;
-            letter-spacing: -0.03em;
-            margin: 0 0 24px;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.55);
-          ">
-            <span style="display:block;font-size:0.6em;font-weight:600;opacity:0.9;text-transform:uppercase;letter-spacing:0.04em;">Soluzioni su misura e accessibili</span>
-            <span style="display:block;margin:12px 0;">Web Agency Padova</span>
-            <span style="display:block;font-size:0.6em;font-weight:600;opacity:0.9;letter-spacing:0.04em;">Siti web, SEO, Google Ads, Branding</span>
-          </h1>
-          <p style="
-            font-size: clamp(1rem, 1.6vw, 1.25rem);
-            line-height: 1.55;
-            max-width: 640px;
-            margin: 0 0 32px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-          ">
-            Ottimizzazione e posizionamento sui motori di ricerca per intercettare clienti qualificati. Sviluppo di siti web veloci, ottimizzati per i dispositivi mobili e pronti per l'AI, per dare visibilità concreta alla tua attività.
-          </p>
-          <p style="font-size:0.95rem;opacity:0.85;margin:0;">
-            4 Web Lab &middot; Legnaro (Padova) &middot; <a href="tel:+393514656042" style="color:#fff;text-decoration:underline;">+39 351 465 6042</a>
-          </p>
-        </div>
-      </div>
-    </div>
+    <div id="root"><!--app-html--></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

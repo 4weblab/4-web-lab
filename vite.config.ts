@@ -17,5 +17,10 @@ export default defineConfig(({ mode }) => ({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
+    dedupe: ["react", "react-dom", "react-helmet-async"],
+  },
+  ssr: {
+    // Bundle CJS-only deps into the SSG bundle so their named exports resolve.
+    noExternal: ["react-helmet-async", "framer-motion", "embla-carousel-react"],
   },
 }));
