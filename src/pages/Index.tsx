@@ -1,14 +1,12 @@
-import { lazy, Suspense } from "react";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-
-const AboutSection = lazy(() => import("@/components/AboutSection"));
-const StrengthsSection = lazy(() => import("@/components/StrengthsSection"));
-const UserRoutingSection = lazy(() => import("@/components/UserRoutingSection"));
-const HomeFaqPreview = lazy(() => import("@/components/HomeFaqPreview"));
-const ContactSection = lazy(() => import("@/components/ContactSection"));
+import AboutSection from "@/components/AboutSection";
+import StrengthsSection from "@/components/StrengthsSection";
+import UserRoutingSection from "@/components/UserRoutingSection";
+import HomeFaqPreview from "@/components/HomeFaqPreview";
+import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
   return (
@@ -205,13 +203,11 @@ const Index = () => {
 
       <main id="main-content">
         <Hero />
-        <Suspense fallback={null}>
-          <AboutSection />
-          <StrengthsSection />
-          <UserRoutingSection />
-          <HomeFaqPreview />
-          <ContactSection />
-        </Suspense>
+        <AboutSection />
+        <StrengthsSection />
+        <UserRoutingSection />
+        <HomeFaqPreview />
+        <ContactSection />
       </main>
 
       <Footer />

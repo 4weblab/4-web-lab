@@ -1,47 +1,64 @@
-## Problema
+## Obiettivo
 
-Lo screenshot del "Rich Result Test" di Google mostra la pagina vuota. Causa probabile: Googlebot (o il renderer del test) scatta lo screenshot prima che React abbia montato l'app e che i font/immagini self-hosted siano dipinti. Il segnale attuale `window.prerenderReady` scatta dopo 2 `requestAnimationFrame` (pochi ms dopo il primo render), quindi:
+Generare HTML statico pre-renderizzato per ogni route del sito durante `vite build`, così che:
+- Google e altri crawler vedano contenuto completo senza aspettare JS
+- Lo screenshot del Rich Result Test mostri la pagina reale
+- Netlify, al push su GitHub, esegua già `vite build` → pubblichi automaticamente le pagine HTML pre-renderizzate senza plugin extra
 
-- non serve al Rich Result Test (Google non legge `prerenderReady`, quel flag è per Prerender.io/Rendertron)
-- scatta troppo presto: hero, font e immagini LCP potrebbero non essere ancora dipinti
+Sì, è fattibile. Il flusso Netlify non cambia: continua a lanciare `npm run build` dopo il push, ma l'output di `dist/` contiene già un `index.html` per ogni route (`/`, `/siti-web-per-professionisti`, `/blog/...`, ecc.) invece di un solo `index.html` SPA.
 
-## Cosa consiglio
+## Approccio consigliato: `vite-react-ssg`
 
-Attacchiamo il problema su due fronti, senza toccare business logic.
+Tra le opzioni valutate:
+- **`vite-react-ssg`** ✅ — pensato per Vite + React + React Router, hydration automatica, integrazione minima. Consigliato.
+- `react-snap` — usa Puppeteer, più fragile, deprecato di fatto.
+- `vike` / TanStack Start — richiederebbero refactor completo dell'app.
 
-### 1. Migliorare il First Paint per il renderer di Google
+Restiamo su `vite-react-ssg`.
 
-- **Fallback SSR-like in `index.html`**: inserire dentro `<div id="root">` un markup statico minimale con H1, sottotitolo e CTA della Hero (stessi testi già presenti in `Hero.tsx`), stilizzato inline in modo che sia visibile immediatamente anche prima che il bundle JS venga eseguito. React lo sovrascrive al mount senza flicker percepibile.
-- **Preload esplicito dell'immagine LCP** della Hero in `<link rel="preload" as="image" fetchpriority="high">` in `index.html` (se non già presente per la variante attualmente servita).
-- **Preload dei font `.woff2` critici** (Inter Variable + Playfair 700) con `<link rel="preload" as="font" type="font/woff2" crossorigin>` così il testo del fallback viene dipinto con il font corretto subito.
+## Modifiche previste
 
-### 2. Rendere affidabile `window.prerenderReady`
+### 1. Dipendenze
+- Aggiungere `vite-react-ssg` (dev + runtime).
+- Nessuna rimozione: React Router, Helmet, Vite restano invariati.
 
-Sostituire in `src/main.tsx` il doppio `requestAnimationFrame` con una sequenza che attende eventi reali:
+### 2. Entry point
+- `src/main.tsx`: sostituire `createRoot(...).render(<App />)` con l'entry `ViteReactSSG` che riceve le routes.
+- `src/App.tsx`: estrarre l'array di routes in un file dedicato (`src/routes.tsx`) per riusarlo lato SSG e lato client. `BrowserRouter` viene gestito internamente da `vite-react-ssg`.
+- Le pagine lazy (`lazy(() => import(...))`) restano compatibili: SSG le importa in fase di build.
 
-```text
-1. attende il mount di React (callback in createRoot render)
-2. attende `document.fonts.ready`
-3. attende `window.load` (immagini)
-4. imposta prerenderReady = true, con timeout di sicurezza a 4s
-```
+### 3. Config build
+- `vite.config.ts`: aggiungere l'opzione `ssgOptions` per elencare le route dinamiche (in questo caso sono tutte statiche, quindi la scoperta automatica basta) e settare `script: 'async'`.
+- `package.json`: cambiare `"build": "vite build"` in `"build": "vite-react-ssg build"`. `dev` resta `vite`.
 
-Questo aiuta i prerenderer di terze parti; per Googlebot vero il punto 1 è quello risolutivo.
+### 4. Fallback statico e prerenderReady
+- Rimuovere il fallback HTML manuale dentro `<div id="root">` in `index.html`: non serve più, ogni pagina avrà il proprio markup pre-renderizzato.
+- Semplificare `main.tsx`: il flag `window.prerenderReady` non è più necessario (l'HTML è già pronto lato server). Lo lasciamo per sicurezza ma settato a `true` subito.
 
-### Cosa NON faccio
+### 5. Cose da verificare/adattare
+- **`window`/`document` in import top-level**: `initAnalyticsBridge`, GA snippet in `index.html`, cookie banner. Vanno spostati dentro `useEffect` o guardati con `typeof window !== 'undefined'`. Al momento `initAnalyticsBridge` è già in `useEffect` — OK. Verificare `src/lib/consent.ts` e `TopNotificationBar.tsx`.
+- **Helmet**: `react-helmet-async` funziona con SSG via `HelmetProvider` — già presente. `vite-react-ssg` estrae i tag `<head>` per pagina automaticamente.
+- **Navigazione hash / ScrollToTop**: funzionano lato client dopo hydration, invariato.
+- **Componenti che usano `useLocation`, `useNavigate`**: OK, SSG li supporta.
+- **Redirect (`<Navigate>`)**: SSG li segue e genera l'HTML della destinazione — verifichiamo che non generi HTML doppio.
 
-- Non introduco SSR/Next.js: fuori scope, rischio alto.
-- Non tocco copy, layout, colori, business logic.
-- Non aggiungo un `setTimeout(2000)` cieco: rallenta gli utenti reali e non risolve lo screenshot vuoto se React non è ancora montato.
+### 6. Netlify
+- Nessun file di config extra. Il plugin IndexNow esistente continua a funzionare (legge `dist/sitemap.xml`).
+- `_redirects` va tenuto: le route pre-renderizzate coprono il caso "refresh su path deep", ma il fallback SPA resta utile per eventuali path non pre-renderizzati.
 
-## File toccati
+## Rischi noti
 
-- `index.html` — fallback statico dentro `#root`, preload font e immagine LCP.
-- `src/main.tsx` — logica `prerenderReady` basata su `fonts.ready` + `window.load` con timeout.
+- **Errori di build su `window`/`document`**: risolvibili con guardie, ma richiedono un giro di verifica.
+- **Tempo di build più lungo**: da ~10s a ~30–60s per ~35 route. Accettabile.
+- **Route dinamiche future**: se in futuro aggiungerai pagine con parametri (`/blog/:slug` da CMS), andranno elencate in `ssgOptions.includedRoutes`. Oggi tutte le route sono statiche, quindi nessun problema.
 
-## Verifica
+## Verifica post-implementazione
 
-- Build passata.
-- Playwright: disabilito JS e faccio screenshot → il fallback statico della Hero deve essere visibile.
-- Playwright: con JS attivo → nessun flicker, layout identico all'attuale.
-- Al termine, l'utente ripete il Rich Result Test di Google per confermare che lo screenshot non è più vuoto (nota: il test cachea, potrebbe servire qualche minuto).
+1. `npm run build` locale → controllare che `dist/` contenga un `index.html` per ogni route (`dist/siti-web-per-professionisti/index.html`, ecc.).
+2. Aprire uno di questi file HTML e confermare che H1, meta title, JSON-LD siano già presenti senza JS.
+3. `npm run preview` + navigazione client-side per confermare che l'hydration non rompa nulla.
+4. Push su GitHub → build Netlify → Rich Result Test sulla home per verificare lo screenshot.
+
+## Domanda aperta
+
+Confermi di procedere con `vite-react-ssg`? Se preferisci una soluzione più semplice ma meno robusta (`react-snap` con Puppeteer già installato in build), posso proporla in alternativa — ma la sconsiglio.

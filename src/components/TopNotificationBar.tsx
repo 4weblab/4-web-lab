@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Proteggi i dati dei tuoi utenti installando un certificato SSL (HTTPS). Google premia i siti web sicuri e gli utenti navigano con più fiducia.
+          Crea una scheda Google Business Profile completa se vuoi clienti nella tua zona. La SEO locale è la via più veloce per farsi trovare.
         </p>
       </div>
     </div>
