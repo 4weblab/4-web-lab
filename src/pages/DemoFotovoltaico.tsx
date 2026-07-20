@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, FormEvent } from "react";
+import { useEffect, useRef, useState, type ComponentType, type CSSProperties, type FormEvent } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
@@ -387,7 +387,7 @@ const Hero = () => (
   </section>
 );
 
-const FloatingStat = ({ icon: Icon, label, value, sub }: { icon: any; label: string; value: string; sub: string }) => (
+const FloatingStat = ({ icon: Icon, label, value, sub }: { icon: ComponentType<{ className?: string; style?: CSSProperties }>; label: string; value: string; sub: string }) => (
   <div
     className="rounded-xl p-3.5"
     style={{ background: "rgba(7,11,20,0.5)", border: `1px solid ${C.border}` }}
@@ -1155,7 +1155,7 @@ const Field = ({ name, label, type = "text", required = false }: { name: string;
   </div>
 );
 
-const ContactCard = ({ icon: Icon, label, value, href }: { icon: any; label: string; value: string; href?: string }) => {
+const ContactCard = ({ icon: Icon, label, value, href }: { icon: ComponentType<{ className?: string; style?: CSSProperties }>; label: string; value: string; href?: string }) => {
   const inner = (
     <div
       className="rounded-xl p-5 flex items-center gap-4 transition-all hover:-translate-y-0.5"

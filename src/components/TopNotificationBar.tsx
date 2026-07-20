@@ -1,5 +1,5 @@
 import { Lightbulb } from "lucide-react";
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 
 const CONCEPT_DEMO_PATHS = [
@@ -15,7 +15,7 @@ const TopNotificationBar = () => {
   const { pathname } = useLocation();
   const ref = useRef<HTMLDivElement | null>(null);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
