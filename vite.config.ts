@@ -20,7 +20,10 @@ export default defineConfig(({ mode }) => ({
     dedupe: ["react", "react-dom", "react-helmet-async"],
   },
   ssr: {
-    // Bundle CJS-only deps into the SSG bundle so their named exports resolve.
-    noExternal: ["react-helmet-async", "framer-motion", "embla-carousel-react"],
+    // Bundle CJS-only deps into the SSG bundle. react-helmet-async must NOT be
+    // bundled here — vite-react-ssg wraps our app with its own HelmetProvider
+    // imported from Node, and bundling would create a second instance with a
+    // different React context.
+    noExternal: ["framer-motion", "embla-carousel-react"],
   },
 }));
