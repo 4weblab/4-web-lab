@@ -1,64 +1,55 @@
-## Obiettivo
+# Audit tecnico completo del sito
 
-Generare HTML statico pre-renderizzato per ogni route del sito durante `vite build`, così che:
-- Google e altri crawler vedano contenuto completo senza aspettare JS
-- Lo screenshot del Rich Result Test mostri la pagina reale
-- Netlify, al push su GitHub, esegua già `vite build` → pubblichi automaticamente le pagine HTML pre-renderizzate senza plugin extra
+Obiettivo: verificare l'intero codice del progetto, individuare problemi, ridondanze, incongruenze di gerarchia e opportunità di alleggerimento — **senza modificare nulla in questa fase**. Il risultato sarà un report con priorità e proposte di intervento; le correzioni verranno eseguite solo dopo tua approvazione (una per volta o in blocco, come preferisci).
 
-Sì, è fattibile. Il flusso Netlify non cambia: continua a lanciare `npm run build` dopo il push, ma l'output di `dist/` contiene già un `index.html` per ogni route (`/`, `/siti-web-per-professionisti`, `/blog/...`, ecc.) invece di un solo `index.html` SPA.
+## Aree di verifica
 
-## Approccio consigliato: `vite-react-ssg`
+### 1. Sintassi e qualità del codice
+- Errori TypeScript / warning `tsgo` su tutto `src/`.
+- Warning ESLint (regole React, hooks, a11y).
+- Import inutilizzati, variabili morte, `console.log` residui.
+- File orfani non referenziati (es. `RentalSection.tsx` già noto come deprecato).
 
-Tra le opzioni valutate:
-- **`vite-react-ssg`** ✅ — pensato per Vite + React + React Router, hydration automatica, integrazione minima. Consigliato.
-- `react-snap` — usa Puppeteer, più fragile, deprecato di fatto.
-- `vike` / TanStack Start — richiederebbero refactor completo dell'app.
+### 2. Gerarchia semantica (SEO/AEO)
+- Controllo H1/H2/H3 su tutte le pagine (`Index`, `SitiWebPadova`, `SitiWebAziendali`, `SitiWebProfessionisti`, `SitiWebNegozi`, `FaqSitiWeb`, `PosizionamentoGoogleEAi`, `PubblicitaGoogleAds`, `Blog*`, `Demo*`, `Realizzazioni`, `Contact`).
+- Verifica: un solo H1 per pagina, nessun salto di livello (H2→H4), coerenza con il contenuto.
+- Landmark HTML (`main`, `nav`, `footer`, `section`) e `aria-*`.
 
-Restiamo su `vite-react-ssg`.
+### 3. Metadati e JSON-LD
+- Presenza e correttezza di `<title>`, `meta description`, canonical, OG/Twitter su ogni pagina.
+- Validità dei JSON-LD (Organization, WebSite, BreadcrumbList, FAQPage, Service, HowTo, Article) — schema corretto, `@id` coerenti, nessun duplicato tra `index.html` e Helmet.
+- Sitemap.xml e robots.txt allineati con le rotte reali in `src/routes.tsx`.
 
-## Modifiche previste
+### 4. Performance e alleggerimento
+- Bundle size: dipendenze pesanti o duplicate (`react-helmet-async` già sistemato, verificare altre).
+- Immagini: tutte WebP con `width`/`height` espliciti e `loading="lazy"` dove serve; preload solo per LCP.
+- Font: verificare che `@fontsource` carichi solo i weight effettivamente usati.
+- Componenti lazy-loaded correttamente vs. eager per LCP.
+- CSS: classi Tailwind ridondanti, `src/index.css` e `src/App.css` (quest'ultimo potenzialmente residuo del template).
 
-### 1. Dipendenze
-- Aggiungere `vite-react-ssg` (dev + runtime).
-- Nessuna rimozione: React Router, Helmet, Vite restano invariati.
+### 5. Struttura e coerenza
+- Duplicazioni tra pagine (sezioni copy-incollate che potrebbero diventare componenti condivisi).
+- Coerenza dei CTA sitewide ("Richiedi una valutazione gratuita", link WhatsApp `wa.me/393514656042`).
+- Coerenza del design system (colori tokenizzati vs. hardcoded, uso di `text-white`/`bg-black` proibiti).
+- Rotte in `src/routes.tsx` vs. link interni: dead link, redirect corretti.
 
-### 2. Entry point
-- `src/main.tsx`: sostituire `createRoot(...).render(<App />)` con l'entry `ViteReactSSG` che riceve le routes.
-- `src/App.tsx`: estrarre l'array di routes in un file dedicato (`src/routes.tsx`) per riusarlo lato SSG e lato client. `BrowserRouter` viene gestito internamente da `vite-react-ssg`.
-- Le pagine lazy (`lazy(() => import(...))`) restano compatibili: SSG le importa in fase di build.
+### 6. GDPR / Consent Mode
+- Verifica che nessuno script di terze parti carichi prima del consenso.
+- Coerenza tra `CookieBanner`, `consent.ts`, `analytics.ts` e lo snippet in `index.html`.
 
-### 3. Config build
-- `vite.config.ts`: aggiungere l'opzione `ssgOptions` per elencare le route dinamiche (in questo caso sono tutte statiche, quindi la scoperta automatica basta) e settare `script: 'async'`.
-- `package.json`: cambiare `"build": "vite build"` in `"build": "vite-react-ssg build"`. `dev` resta `vite`.
+### 7. Build e SSG
+- Output `dist/` pulito, tutte le rotte pre-renderizzate, nessun warning di build.
+- Verifica che il fallback statico nell'`index.html` non entri in conflitto con l'idratazione React.
 
-### 4. Fallback statico e prerenderReady
-- Rimuovere il fallback HTML manuale dentro `<div id="root">` in `index.html`: non serve più, ogni pagina avrà il proprio markup pre-renderizzato.
-- Semplificare `main.tsx`: il flag `window.prerenderReady` non è più necessario (l'HTML è già pronto lato server). Lo lasciamo per sicurezza ma settato a `true` subito.
+## Deliverable
 
-### 5. Cose da verificare/adattare
-- **`window`/`document` in import top-level**: `initAnalyticsBridge`, GA snippet in `index.html`, cookie banner. Vanno spostati dentro `useEffect` o guardati con `typeof window !== 'undefined'`. Al momento `initAnalyticsBridge` è già in `useEffect` — OK. Verificare `src/lib/consent.ts` e `TopNotificationBar.tsx`.
-- **Helmet**: `react-helmet-async` funziona con SSG via `HelmetProvider` — già presente. `vite-react-ssg` estrae i tag `<head>` per pagina automaticamente.
-- **Navigazione hash / ScrollToTop**: funzionano lato client dopo hydration, invariato.
-- **Componenti che usano `useLocation`, `useNavigate`**: OK, SSG li supporta.
-- **Redirect (`<Navigate>`)**: SSG li segue e genera l'HTML della destinazione — verifichiamo che non generi HTML doppio.
+Un report suddiviso in:
+- **Bloccanti** (bug, errori di build, JSON-LD non validi)
+- **Alta priorità** (gerarchia semantica, SEO, performance LCP)
+- **Media** (pulizia codice, deduplicazioni, refactor)
+- **Bassa** (nice-to-have, micro-ottimizzazioni)
 
-### 6. Netlify
-- Nessun file di config extra. Il plugin IndexNow esistente continua a funzionare (legge `dist/sitemap.xml`).
-- `_redirects` va tenuto: le route pre-renderizzate coprono il caso "refresh su path deep", ma il fallback SPA resta utile per eventuali path non pre-renderizzati.
+Per ogni problema: file:linea, spiegazione, fix proposto e stima d'impatto.
 
-## Rischi noti
-
-- **Errori di build su `window`/`document`**: risolvibili con guardie, ma richiedono un giro di verifica.
-- **Tempo di build più lungo**: da ~10s a ~30–60s per ~35 route. Accettabile.
-- **Route dinamiche future**: se in futuro aggiungerai pagine con parametri (`/blog/:slug` da CMS), andranno elencate in `ssgOptions.includedRoutes`. Oggi tutte le route sono statiche, quindi nessun problema.
-
-## Verifica post-implementazione
-
-1. `npm run build` locale → controllare che `dist/` contenga un `index.html` per ogni route (`dist/siti-web-per-professionisti/index.html`, ecc.).
-2. Aprire uno di questi file HTML e confermare che H1, meta title, JSON-LD siano già presenti senza JS.
-3. `npm run preview` + navigazione client-side per confermare che l'hydration non rompa nulla.
-4. Push su GitHub → build Netlify → Rich Result Test sulla home per verificare lo screenshot.
-
-## Domanda aperta
-
-Confermi di procedere con `vite-react-ssg`? Se preferisci una soluzione più semplice ma meno robusta (`react-snap` con Puppeteer già installato in build), posso proporla in alternativa — ma la sconsiglio.
+## Nota
+Questa fase è **solo di analisi (read-only)**. Al termine ti presenterò il report e decideremo insieme cosa correggere e in che ordine — non toccherò il codice senza tuo via libera.
