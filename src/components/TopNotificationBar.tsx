@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Crea una scheda Google Business Profile completa se vuoi clienti nella tua zona. La SEO locale è la via più veloce per farsi trovare.
+          Inserisci link interni tra le pagine del tuo sito per guidare gli utenti e aiutare Google a scoprire e indicizzare i contenuti più importanti.
         </p>
       </div>
     </div>
