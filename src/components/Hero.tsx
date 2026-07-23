@@ -71,7 +71,7 @@ const Hero = () => {
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              Ottimizzazione e posizionamento sui motori di ricerca per intercettare clienti qualificati. Sviluppo di siti web veloci, ottimizzati per i dispositivi mobili e pronti per l'AI, per dare visibilità concreta alla tua attività.
+              4 Web Lab è la web agency a Padova specializzata nello sviluppo di siti web veloci e pronti per l'AI, posizionamento SEO e campagne Google Ads per portare clienti qualificati alla tua attività.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
