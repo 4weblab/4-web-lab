@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Inserisci link interni tra le pagine del tuo sito per guidare gli utenti e aiutare Google a scoprire e indicizzare i contenuti più importanti.
+          Rendi i testi del tuo sito facili da scansionare: usa paragrafi brevi, elenchi puntati e grassetti per trattenere i lettori più a lungo.
         </p>
       </div>
     </div>
