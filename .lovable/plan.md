@@ -1,62 +1,61 @@
-# Ottimizzazione PageSpeed: GA differito + CSS critico inline
+# Audit & refactoring gerarchia Heading Tags
 
-Due interventi indipendenti, entrambi compatibili con `vite-react-ssg build`.
+Obiettivo: gerarchia semantica pulita (un solo H1, H2 per macro-sezioni, H3 per card/FAQ/sotto-blocchi, nessun salto illogico) mantenendo intatto il design attuale. Nessuna modifica su `src/pages/Demo*` e su primitive UI (`ui/card.tsx`, `ui/alert.tsx`).
 
-## 1. Differire Google Analytics (gtag.js)
+## Regole applicate
 
-**Situazione attuale (`index.html`)**
-- Consent Mode v2 inline (piccolo, non bloccante) → **da mantenere così com'è**: serve subito per rispettare il default `denied`.
-- `<script async src="…gtag/js?id=G-HWVJ1KWYSN">` in `<head>` → viene comunque messo in coda subito dal parser, contribuisce al forced reflow segnalato da PSI e occupa main thread durante l'LCP.
+- Ogni pagina: un solo `<h1>` (nella hero/titolo principale).
+- Titoli di macro-sezioni: `<h2>`.
+- Card, item FAQ, sotto-blocchi interni a una sezione: `<h3>`.
+- Salti (`h2 → h4`) vietati; se serve un ulteriore livello dopo H3, usare `<h4>`.
+- Etichette/badge (es. "In sintesi", "SOLUZIONI SU MISURA") come `<p>`/`<span>` stilizzati.
+- Se cambiando il tag il rendering visivo cambia, si preserva l'aspetto con classi Tailwind (`text-2xl`, `text-xl`, `font-bold`, ecc.) — nessuna modifica visibile.
 
-**Modifica**
-- Rimuovere il tag `<script async src="…gtag/js">` dall'`<head>`.
-- Sostituirlo con un piccolo loader inline che carica `gtag.js` **dopo** il primo rendering, usando in ordine di preferenza:
-  1. `requestIdleCallback` (con timeout di sicurezza ~3s),
-  2. fallback `setTimeout(…, 2500)` se il browser non supporta idle,
-  3. anticipazione al primo `pointerdown` / `scroll` / `keydown` (ascoltatori `{ once: true, passive: true }`) così l'utente interattivo non paga ritardi.
-- Il loader crea `<script async src="https://www.googletagmanager.com/gtag/js?id=G-HWVJ1KWYSN">` e lo appende a `<head>`. `dataLayer` e `gtag()` esistono già (dichiarati inline), quindi le chiamate `consent`/`config` fatte prima del load restano in coda e vengono elaborate normalmente da GA4 all'arrivo.
-- `gtag('config', 'G-HWVJ1KWYSN', …)` continua a essere invocato inline: GA4 lo processa quando lo script è pronto — nessuna perdita di pageview.
+## Interventi per file
 
-Impatto atteso: main-thread libero durante FCP/LCP, forced reflow eliminato, nessuna regressione funzionale su Consent Mode.
+### `src/pages/SitiWebPadova.tsx`
+- L.286 `<h2>` del box "In sintesi" → `<h3>` (è un pannello riassuntivo dentro una sezione, non una macro-sezione).
+- L.306 `<h3 className="heading-2">` "Come un Web Studio Locale…" → `<h2>` (è il titolo della sezione "Perché scegliere un web studio a Padova").
+- L.322 `<h2>` "Web studio a Padova: perché la prossimità fa la differenza" → `<h3>` (sotto-blocco della stessa sezione, evita due H2 nella stessa `<section>`).
+- L.361 `<h3 className="heading-2">` "Soluzioni Web su Misura…" → `<h2>` (è il titolo della sezione "Cosa realizziamo a Padova").
+- L.541 `<h3 className="heading-2">` "Sviluppo Siti Web a Padova e Provincia…" → `<h2>` (titolo della sezione "Zone servite").
+- Card interne (L.398, 521, 621) restano `<h3>` — corretto.
 
-## 2. CSS critico inline (rimozione del render-blocking `app-*.css`)
+### `src/pages/SitiWebAziendali.tsx`
+- L.289 `<h3>` "Cos'è un sito web aziendale" appare prima dell'H2 della sezione (L.299): scambio semantico — l'H2 di sezione ("Perché un'azienda ha bisogno…") va posizionato come primo heading della `<section>`, e "Cos'è un sito web aziendale" resta `<h3>` (definizione AEO dentro la sezione).
+  - Implementazione: sposto l'header con `<h2>` (attualmente L.295–300) sopra il blocco definizione (L.288–293), così l'ordine DOM diventa H2 → H3.
+- L.388, 427, 486 `<h3 className="heading-2">` rimangono `<h3>` (già corretti da modifica precedente, sono sotto-blocchi di sezioni H2).
 
-**Situazione attuale**
-- Vite emette un unico bundle CSS globale (~Tailwind + tokens + shadcn) referenziato con `<link rel="stylesheet">` in ogni HTML pre-renderizzato da `vite-react-ssg`. È render-blocking.
+### `src/pages/PosizionamentoGoogleEAi.tsx`
+- L.267 `<h2>` "In sintesi" (label uppercase in box AEO) → `<p className="font-bold text-foreground text-sm uppercase tracking-wider m-0">` (è un'etichetta, non una macro-sezione).
 
-**Strategia scelta: `beasties` come postbuild step**
-- `beasties` (fork attivo di `critters`, mantenuto da Nuxt) analizza ciascun HTML generato, inlina in `<style>` solo le regole effettivamente usate dall'above-the-fold della singola pagina e converte il `<link rel="stylesheet">` originale in `<link rel="preload" as="style" onload="this.rel='stylesheet'">` con `<noscript>` di fallback.
-- Perfettamente compatibile con SSG: opera **dopo** `vite-react-ssg build`, quindi non tocca il pipeline Vite né il bundling.
-- Il CSS "full" resta un file separato, cache-friendly, e viene caricato in modo asincrono → l'idratazione React lo trova già disponibile praticamente sempre.
+### `src/pages/PubblicitaGoogleAds.tsx`
+- L.295 `<h2>` "Cos'è Google ADS e come funziona" (dentro riquadro AEO) → `<h3>` con classi che preservano lo stile (`font-bold text-foreground text-xl mb-3`). La sezione successiva "Perché fare pubblicità su Google" (L.315) resta H2 come titolo di macro-sezione.
 
-**Passi**
-1. `npm i -D beasties`.
-2. Aggiungere `scripts/inline-critical-css.mjs` che:
-   - trova tutti gli `.html` sotto `dist/`,
-   - istanzia `new Beasties({ path: 'dist', preload: 'swap', pruneSource: false, logLevel: 'warn' })`,
-   - per ogni file esegue `process(html)` e sovrascrive.
-3. Aggiornare `package.json`:
-   - `"build": "vite-react-ssg build && node scripts/inline-critical-css.mjs"`
-   - `"build:dev"` invariato oppure con lo stesso postbuild (a scelta).
-4. `pruneSource: false` — non rimuoviamo regole dal file completo, così le route client-side navigate dopo l'idratazione hanno comunque tutti gli stili.
-5. `preload: 'swap'` — pattern raccomandato: `preload` + swap a stylesheet on load + `<noscript>` fallback (già gestito da beasties).
+### `src/pages/FaqSitiWeb.tsx`
+- Attualmente: H1 (hero) poi direttamente `<h3>` per ogni domanda FAQ — manca l'H2 di sezione.
+- Aggiungere un `<h2>` "Domande frequenti sui siti web" (visualmente `sr-only` oppure integrato con l'intro già presente) all'inizio del blocco lista FAQ, così gli H3 delle domande sono correttamente subordinati.
 
-**Alternativa considerata e scartata**
-- `vite build --cssCodeSplit=false` / manualChunks: non risolve il render-blocking, sposta solo dove viene servito.
-- Inlining totale del CSS in ogni HTML: aumenta drasticamente il peso di ogni pagina e vanifica la cache condivisa. Beasties fa la scelta corretta (solo above-the-fold inline, resto in preload).
+### `src/components/AboutSection.tsx`
+- L.100 `<h3 className="heading-3">` "La parola a chi ha scelto 4 Web Lab" → `<h2>` (è una macro-sezione distinta — testimonials — con proprio divider). Applico `className="heading-3 mb-2"` invariata per preservare stile visivo.
+- L.66 `<h3 className="sr-only">` "Le garanzie tecniche" resta `<h3>` (sotto-blocco della sezione principale — coerente).
+- L.88 card `<h3>` resta.
 
-## 3. Verifica
+### `src/components/HomeFaqPreview.tsx`
+- Le domande dell'anteprima FAQ sono `<p className="font-semibold …">` (L.60): promossi a `<h3>` con le stesse classi per preservare lo stile. L'H2 di sezione già presente (L.47) diventa così padre semantico corretto.
 
-- Eseguire `npm run build` e controllare:
-  - build completa senza errori,
-  - ogni `dist/**/*.html` contiene un `<style>` con regole critiche + `<link rel="preload" as="style" …>` per il CSS completo,
-  - `<head>` non contiene più il tag `<script async src="…gtag/js">` (solo il loader inline + il piccolo bootstrap Consent Mode),
-  - all'apertura del sito in preview il pageview GA4 arriva comunque (dopo idle) e nessuna FOUC visibile su Hero.
+### Componenti già corretti (nessuna modifica)
+- `Hero.tsx`, `StrengthsSection.tsx`, `ServicesSection.tsx`, `UserRoutingSection.tsx`, `ContactSection.tsx`, `MapSection.tsx`, `PricingSection.tsx`, `RelatedArticles.tsx`, `Footer.tsx` (H3 come titoli colonne footer — accettabile fuori dal main), `CookieBanner.tsx`.
+- Pagine blog e `Blog.tsx`, `Contact.tsx`, `Realizzazioni.tsx`, `PrivacyPolicy.tsx`, `CookiePolicy.tsx`, `SitiWebNegozi.tsx`, `SitiWebProfessionisti.tsx`, `NotFound.tsx` — gerarchia già conforme.
 
-## File toccati
+## Dettagli tecnici
 
-- `index.html` — rimozione `<script async>` GA, aggiunta loader differito.
-- `package.json` — nuovo `postbuild` integrato nel comando `build`, aggiunta devDep `beasties`.
-- `scripts/inline-critical-css.mjs` (nuovo) — postbuild che inlina critical CSS su tutti gli HTML di `dist/`.
+- Tutti i cambi di tag preservano `className` esistente o aggiungono classi Tailwind equivalenti (`text-2xl`, `text-xl`, `font-bold`, `uppercase tracking-wider`) per mantenere identico il rendering.
+- Le classi CSS di progetto `heading-1/2/3` sono solo di stile: cambiare il tag HTML non altera la resa se la classe viene preservata.
+- Verifica finale: `npm run build` (SSG) per confermare 0 errori TS/ESLint, ispezione veloce Playwright su Home, `/realizzazione-siti-web-padova`, `/siti-web-aziendali`, `/faq-realizzazione-siti-web`, `/pubblicita-google-ads`, `/posizionamento-google-e-ai` per confermare che l'aspetto visivo non è cambiato.
 
-Nessuna modifica a `src/**`, a `vite.config.ts` o alla configurazione SSG.
+## Fuori scope
+
+- Pagine `Demo*` (escluse su richiesta).
+- Primitive shadcn (`card.tsx`, `alert.tsx`).
+- Riscritture di copy o modifiche di layout/style oltre a quanto necessario per preservare l'aspetto.
