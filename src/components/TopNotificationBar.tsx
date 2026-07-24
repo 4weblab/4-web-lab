@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Rendi i testi del tuo sito facili da scansionare: usa paragrafi brevi, elenchi puntati e grassetti per trattenere i lettori più a lungo.
+          Minimizza i file CSS e JavaScript per ridurre i tempi di caricamento del sito. Pagine più veloci migliorano sia la SEO che le conversioni.
         </p>
       </div>
     </div>
