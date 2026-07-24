@@ -283,9 +283,9 @@ const SitiWebPadova = () => {
             <div className="max-w-4xl mx-auto">
               <AnimatedSection>
                 <div className="aeo-definition rounded-2xl border border-accent/15 bg-accent/5 p-6 md:p-8">
-                  <h2 className="text-foreground font-semibold mb-4 text-base">
+                  <h3 className="text-foreground font-semibold mb-4 text-base">
                     In sintesi: Realizzazione Siti Web a Padova con 4 Web Lab
-                  </h2>
+                  </h3>
                   <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
                     <li><strong className="text-foreground">Sede:</strong> Legnaro (PD) – operativi in tutta la provincia di Padova e Veneto.</li>
                     <li><strong className="text-foreground">Servizi inclusi:</strong> Progettazione web, ottimizzazione SEO locale, design responsivo e supporto tecnico continuo.</li>
@@ -303,7 +303,7 @@ const SitiWebPadova = () => {
           <div className="container-section">
             <div className="max-w-4xl mx-auto mb-12">
               <AnimatedSection>
-                <h3 className="heading-2 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h3>
+                <h2 className="heading-2 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h2>
                 <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
                   Realizzare un sito web a Padova non significa solo creare una bella vetrina grafica, ma strutturare una vera e propria calamita per i clienti locali. Ottimizziamo il tuo sito per intercettare le ricerche geolocalizzate dei tuoi potenziali clienti (es. "idraulico Padova", "centro estetico Legnaro", "consulente finanziario Padova"). Il vantaggio di scegliere uno studio del territorio è la combinazione tra una strategia SEO locale mirata, comunicazione diretta e la conoscenza reale del tessuto imprenditoriale padovano.
                 </p>
@@ -319,7 +319,7 @@ const SitiWebPadova = () => {
                     <div className="icon-box w-13 h-13">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <h2 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h2>
+                    <h3 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h3>
                   </div>
                   <p className="body-base text-muted-foreground">
                     Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente risposte automatiche: parli sempre direttamente con chi sviluppa e gestisce il tuo sito.
@@ -358,9 +358,9 @@ const SitiWebPadova = () => {
                     <Briefcase className="w-6 h-6 text-accent-foreground" />
                   </div>
                 </div>
-                <h3 className="heading-2 mb-4">
+                <h2 className="heading-2 mb-4">
                   Soluzioni Web su Misura per il Tuo Business a Padova
-                </h3>
+                </h2>
                 <p className="body-large text-muted-foreground max-w-3xl mx-auto text-balance">
                   Progettiamo esperienze digitali specifiche per ogni tipo di attività locale e aziendale.
                 </p>
@@ -538,7 +538,7 @@ const SitiWebPadova = () => {
                   <div className="icon-box w-13 h-13">
                     <Globe className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <h3 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h3>
+                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
                 </div>
                 <p className="body-large text-muted-foreground max-w-3xl">
                   Copriamo capillarmente il territorio padovano per offrire una presenza digitale forte e un supporto tecnico reale, anche direttamente presso la tua sede.
