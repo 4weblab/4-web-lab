@@ -292,7 +292,7 @@ const PubblicitaGoogleAds = () => {
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="p-6 md:p-8 rounded-2xl bg-accent/5 border border-accent/15">
-                <h2 className="font-bold text-foreground text-xl mb-3">Cos'è Google ADS e come funziona</h2>
+                <h3 className="font-bold text-foreground text-xl mb-3">Cos'è Google ADS e come funziona</h3>
                 <p className="aeo-definition text-muted-foreground leading-relaxed">
                   Google ADS (ex Google AdWords) è la piattaforma pubblicitaria di Google che permette a qualsiasi
                   attività di mostrare annunci in cima ai risultati di ricerca, su YouTube, Gmail e su milioni di

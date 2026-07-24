@@ -287,6 +287,7 @@ In questa pagina trovi risposte sintetiche e concrete alle domande più frequent
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-3xl mx-auto">
+              <h2 className="sr-only">Domande frequenti sulla realizzazione di siti web</h2>
               <StaggerContainer className="space-y-4" staggerDelay={0.06}>
                 {faqs.map((faq, index) => <StaggerItem key={faq.id}>
                     <FaqItem faq={faq} index={index} />

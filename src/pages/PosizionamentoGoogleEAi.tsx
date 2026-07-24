@@ -264,7 +264,7 @@ const PosizionamentoGoogleEAi = () => {
               <AnimatedSection className="rounded-2xl border border-accent/20 bg-accent/5 p-8">
                 <div className="flex items-center gap-3 mb-4">
                   <Lightbulb className="w-6 h-6 text-accent" />
-                  <h2 className="font-bold text-foreground text-lg uppercase tracking-wider">In sintesi</h2>
+                  <p className="font-bold text-foreground text-lg uppercase tracking-wider m-0">In sintesi</p>
                 </div>
                 <p className="text-muted-foreground leading-relaxed">
                   <strong className="text-foreground">4 Web Lab</strong> è uno studio web di Legnaro
