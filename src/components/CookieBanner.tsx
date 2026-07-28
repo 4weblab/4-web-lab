@@ -1,7 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { X } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   CONSENT_OPEN_EVENT,
   getConsent,
@@ -11,6 +10,7 @@ import {
 type View = 'banner' | 'preferences';
 
 const CookieBanner = () => {
+  const [mounted, setMounted] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [view, setView] = useState<View>('banner');
   const [analyticsOn, setAnalyticsOn] = useState(false);
@@ -19,7 +19,11 @@ const CookieBanner = () => {
   useEffect(() => {
     const current = getConsent();
     if (!current) {
-      const timer = setTimeout(() => setIsVisible(true), 800);
+      const timer = setTimeout(() => {
+        setMounted(true);
+        // Doppio rAF per assicurare che la classe di transizione venga applicata dopo il mount.
+        requestAnimationFrame(() => requestAnimationFrame(() => setIsVisible(true)));
+      }, 800);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -30,7 +34,8 @@ const CookieBanner = () => {
       const current = getConsent();
       setAnalyticsOn(!!current?.categories.analytics);
       setView('preferences');
-      setIsVisible(true);
+      setMounted(true);
+      requestAnimationFrame(() => requestAnimationFrame(() => setIsVisible(true)));
     };
     window.addEventListener(CONSENT_OPEN_EVENT, openHandler);
     return () => window.removeEventListener(CONSENT_OPEN_EVENT, openHandler);
@@ -38,8 +43,11 @@ const CookieBanner = () => {
 
   const close = useCallback(() => {
     setIsVisible(false);
-    // Al prossimo mount ripartiamo dalla vista banner.
-    setTimeout(() => setView('banner'), 300);
+    // Attende la transizione CSS prima di smontare il nodo e resettare la vista.
+    setTimeout(() => {
+      setMounted(false);
+      setView('banner');
+    }, 400);
   }, []);
 
   const handleAcceptAll = () => {
@@ -69,26 +77,26 @@ const CookieBanner = () => {
     close();
   };
 
+  if (!mounted) return null;
+
   return (
-    <AnimatePresence>
-      {isVisible && (
-        <motion.div
-          className="fixed left-0 right-0 bottom-0 z-50 border-t border-border/30"
-          style={{
-            background: 'var(--glass-bg)',
-            backdropFilter: 'blur(20px)',
-            WebkitBackdropFilter: 'blur(20px)',
-            boxShadow: 'var(--shadow-lg)',
-          }}
-          role="dialog"
-          aria-modal="false"
-          aria-labelledby="cookie-banner-title"
-          aria-describedby="cookie-banner-description"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: 40 }}
-          transition={{ duration: 0.4, ease: [0.25, 0.46, 0.45, 0.94] }}
-        >
+    <div
+      className="fixed left-0 right-0 bottom-0 z-50 border-t border-border/30"
+      style={{
+        background: 'var(--glass-bg)',
+        backdropFilter: 'blur(20px)',
+        WebkitBackdropFilter: 'blur(20px)',
+        boxShadow: 'var(--shadow-lg)',
+        opacity: isVisible ? 1 : 0,
+        transform: isVisible ? 'translateY(0)' : 'translateY(40px)',
+        transition: 'opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+        willChange: 'opacity, transform',
+      }}
+      role="dialog"
+      aria-modal="false"
+      aria-labelledby="cookie-banner-title"
+      aria-describedby="cookie-banner-description"
+    >
           <div className="container-section py-5 relative">
             <button
               onClick={handleDismiss}
@@ -244,9 +252,7 @@ const CookieBanner = () => {
               </div>
             )}
           </div>
-        </motion.div>
-      )}
-    </AnimatePresence>
+    </div>
   );
 };
 
