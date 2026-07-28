@@ -1,13 +1,13 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
+import TopNotificationBar from "@/components/TopNotificationBar";
 import { initAnalyticsBridge } from "@/lib/analytics";
 import { useGaPageview } from "@/hooks/useGaPageview";
 
 // Non-critical UI: lazy-loaded after first paint to keep initial JS light.
 const CookieBanner = lazy(() => import("@/components/CookieBanner"));
 const CookiePreferencesButton = lazy(() => import("@/components/CookiePreferencesButton"));
-const TopNotificationBar = lazy(() => import("@/components/TopNotificationBar"));
 
 const Layout = () => {
   useGaPageview();
@@ -40,11 +40,7 @@ const Layout = () => {
   return (
     <>
       <ScrollToTop />
-      {deferredReady && (
-        <Suspense fallback={null}>
-          <TopNotificationBar />
-        </Suspense>
-      )}
+      <TopNotificationBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
