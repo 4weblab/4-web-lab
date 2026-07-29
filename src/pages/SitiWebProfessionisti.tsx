@@ -50,10 +50,10 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Siti web per Professionisti, SEO locale | 4 Web Lab</title>
+        <title>Siti Web per Professionisti e Studi | Da 549€ | 4 Web Lab</title>
         <meta
           name="description"
-          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
+          content="Realizziamo siti web su misura per professionisti e studi tecnici o legali. Soluzioni veloci, ottimizzate SEO e pensate per acquisire clienti. Richiedi un preventivo!"
         />
 
         <meta name="robots" content="index, follow" />
