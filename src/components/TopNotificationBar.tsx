@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Elimina i link corrotti ed evita le pagine "404 Error". Un sito senza vicoli ciechi migliora l'esperienza di navigazione e mantiene alto il punteggio SEO.
+          Scrivi Tag Title chiari e ingaggianti sotto i 60 caratteri. Un buon titolo aumenta il CTR (tasso di clic) dai risultati di ricerca di Google.
         </p>
       </div>
     </div>
