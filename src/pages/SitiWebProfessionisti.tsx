@@ -20,12 +20,33 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const faqItems = [
+  {
+    q: "Quanto tempo occorre per la realizzazione del sito?",
+    a: "Mediamente consegniamo il sito web pronto e collaudato entro 2-4 settimane dalla fase di analisi e ricezione dei materiali.",
+  },
+  {
+    q: "Il sito sarà visibile su Google?",
+    a: "Sì, ogni progetto include l'ottimizzazione SEO on-page di base (struttura dei contenuti, meta tag, velocizzazione del caricamento ed indicizzazione su Google).",
+  },
+  {
+    q: "Posso aggiornare i contenuti in autonomia dopo il lancio?",
+    a: "Certamente. Ti forniremo una formazione completa per permetterti di gestire testi, contatti e aggiornamenti in totale autonomia.",
+  },
+  {
+    q: "Come funziona la collaborazione da remoto?",
+    a: "Lavoriamo con professionisti in tutta Italia tramite briefing online, strumenti condivisi e aggiornamenti continui sulle fasi di sviluppo.",
+  },
+];
 
 const SitiWebProfessionisti = () => {
-  const handleContactClick = () => {
-    window.location.href = "/#contatti";
-  };
-
   return (
     <>
       <Helmet>
@@ -95,6 +116,17 @@ const SitiWebProfessionisti = () => {
             },
           })}
         </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqItems.map((f) => ({
+              "@type": "Question",
+              name: f.q,
+              acceptedAnswer: { "@type": "Answer", text: f.a },
+            })),
+          })}
+        </script>
       </Helmet>
 
       <Header satelliteMode />
@@ -111,13 +143,12 @@ const SitiWebProfessionisti = () => {
                 ]}
               />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti Web per Professionisti
+                Siti Web per Professionisti e Studi Professionali
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                In 4 Web Lab realizziamo siti web per professionisti o studi professionali a Padova e in tutta Italia.
-                Il nostro approccio si fonda su un metodo strutturato, pensato per garantire affidabilità, chiarezza e
-                risultati concreti nella crescita online. Lavoriamo da remoto con un processo organizzato che permette
-                collaborazioni efficaci ovunque ti trovi.
+                Realizziamo siti web per liberi professionisti e studi a Padova e in tutta Italia. Sviluppiamo
+                soluzioni su misura, veloci e ottimizzate per attirare nuovi clienti e posizionare il tuo brand con
+                autorevolezza.
               </p>
               <button
                 onClick={() =>
@@ -154,7 +185,7 @@ const SitiWebProfessionisti = () => {
                     "Professionisti indipendenti alla ricerca di una presenza digitale strutturata e affidabile ( elettricista, idraulico, pittore etc. ) ",
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
+                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20 hover:-translate-y-[3px] hover:shadow-md">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
@@ -210,7 +241,7 @@ const SitiWebProfessionisti = () => {
                     },
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
+                      <div className="card-glass h-full hover:-translate-y-[3px] hover:shadow-md transition-all duration-400">
                         <h3 className="font-bold text-foreground mb-2.5">{item.title}</h3>
                         <p className="text-sm">{item.description}</p>
                       </div>
@@ -322,7 +353,7 @@ const SitiWebProfessionisti = () => {
                     "Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace",
                   ].map((item, index) => (
                     <StaggerItem key={index}>
-                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
+                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20 hover:-translate-y-[3px] hover:shadow-md">
                         <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                         <span>{item}</span>
                       </div>
@@ -390,23 +421,42 @@ const SitiWebProfessionisti = () => {
                       </div>
                       <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
                       <p className="text-muted-foreground text-sm mt-4">
-                        Una soluzione ideale per chi cerca la realizzazione di un sito web professionale completo,
-                        ovunque si trovi in Italia.
+                        La soluzione One-Page ideale per liberi professionisti che vogliono una presenza online completa,
+                        moderna ed efficace.
                       </p>
                     </div>
                     <ul className="space-y-4 mb-10" role="list">
                       {[
-                        "Sviluppo sito One page professionale",
-                        "Personalizzazione contenuti",
-                        "Scelta font e tipografia",
-                        "Palette colori su misura",
-                        "Ottimizzazione SEO",
+                        {
+                          label: "Sviluppo sito One page professionale",
+                          tooltip: "Possibilità di espansione a sito multi-pagina su richiesta.",
+                        },
+                        { label: "Personalizzazione contenuti" },
+                        { label: "Scelta font e tipografia" },
+                        { label: "Palette colori su misura" },
+                        { label: "Ottimizzazione SEO" },
                       ].map((feature, index) => (
                         <li key={index} className="flex items-start gap-3">
                           <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
                             <Check className="w-3 h-3 text-accent" aria-hidden="true" />
                           </span>
-                          <span className="text-foreground">{feature}</span>
+                          <span className="text-foreground">
+                            {feature.tooltip ? (
+                              <span
+                                className="underline decoration-dotted decoration-accent/60 underline-offset-4 cursor-help"
+                                title={feature.tooltip}
+                              >
+                                {feature.label}
+                              </span>
+                            ) : (
+                              feature.label
+                            )}
+                            {feature.tooltip && (
+                              <span className="block text-xs text-muted-foreground mt-1">
+                                {feature.tooltip}
+                              </span>
+                            )}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -478,6 +528,35 @@ const SitiWebProfessionisti = () => {
               </span>
             </Link>
           </AnimatedSection>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-3xl mx-auto">
+              <AnimatedSection className="text-center mb-10">
+                <h2 className="heading-2">Domande Frequenti sui Siti Web per Professionisti</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="w-full space-y-3">
+                  {faqItems.map((item, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="rounded-2xl border border-border/60 bg-card px-5 transition-all duration-300 hover:shadow-md"
+                    >
+                      <AccordionTrigger className="text-left font-semibold text-foreground">
+                        {item.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {item.a}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
+            </div>
+          </div>
         </section>
 
         {/* CTA Section */}
