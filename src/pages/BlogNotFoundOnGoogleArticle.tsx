@@ -251,7 +251,7 @@ const BlogNotFoundOnGoogleArticle = () => {
                     <p>
                       Un sito lento non solo fa scappare le persone, ma scende anche nei risultati di ricerca. È
                       anche per questo che ha senso{" "}
-                      <Link to="/quanto-costa-sito-web" className="text-accent font-medium hover:underline">
+                      <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent font-medium hover:underline">
                         investire in un sito ben fatto
                       </Link>
                       , invece di ripiegare su soluzioni improvvisate.
