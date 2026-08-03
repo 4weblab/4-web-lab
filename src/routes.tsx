@@ -52,19 +52,6 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/PubblicitaGoogleAds.tsx",
       },
       {
-        path: "creare-sito-con-intelligenza-artificiale",
-        element: (
-          <Navigate
-            to="/blog/siti-web-creati-con-intelligenza-artificiale"
-            replace
-          />
-        ),
-      },
-      {
-        path: "quanto-costa-sito-web",
-        element: <Navigate to="/blog/quanto-costa-un-sito-web-nel-2026" replace />,
-      },
-      {
         path: "blog",
         lazy: page(() => import("./pages/Blog")),
         entry: "src/pages/Blog.tsx",
