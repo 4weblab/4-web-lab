@@ -1,50 +1,26 @@
-## Obiettivo
+# Piano: Risolvere il doppio redirect per il vecchio URL professionisti
 
-Ridurre il peso di JavaScript e CSS caricati sulla Homepage (`/`) mantenendo **struttura, contenuti e resa visiva identici**. Interventi mirati al bundle globale (Layout + componenti Home) senza rimuovere funzionalità.
+## Problema
+Il vecchio URL `/realizzazione-siti-web-per-professionisti` è gestito contemporaneamente da due meccanismi diversi:
 
-## Diagnosi (già verificata sul codice)
+1. `public/_redirects` — redirect 301 lato server verso `/siti-web-per-professionisti`.
+2. `src/routes.tsx:26-28` — route React Router con `<Navigate replace>` che esegue un redirect client-side via JavaScript.
 
-- La Home renderizza: `Header`, `Hero`, `AboutSection`, `StrengthsSection`, `UserRoutingSection`, `HomeFaqPreview`, `ContactSection`, `Footer`.
-- Nessuno di questi componenti usa direttamente `framer-motion`, `sonner`, `@radix-ui/react-toast`, `@tanstack/react-query`.
-- Sono però **importati sempre** tramite `src/Layout.tsx` (Toaster, Sonner, QueryClientProvider, TooltipProvider) e tramite `src/components/CookieBanner.tsx` (framer-motion) → finiscono nel chunk iniziale.
-- `src/index.css` è 511 righe, con regole custom da verificare/purge.
+Questa sovrapposizione può confondere i crawler e i motori di ricerca:
+- Se SSG genera un file statico per il vecchio path, Netlify potrebbe servire l'`index.html` prodotto da React prima di applicare la regola `_redirects`, trasformando il 301 SEO-friendly in un redirect JS lato client.
+- Google e altri crawler potrebbero interpretare la pagina come esistente anziché come spostata permanentemente, diluendo il segnale di ranking verso il nuovo URL.
 
-## Interventi
+## Soluzione proposta
+Rimuovere la route client-side `realizzazione-siti-web-per-professionisti` da `src/routes.tsx` e lasciare che `public/_redirects` gestisca da solo il redirect 301 lato server. Il vecchio URL non ha più link interni attivi, quindi la route React non è necessaria per la navigazione SPA.
 
-### 1. Rimuovere Framer Motion dal chunk iniziale della Home
-`CookieBanner` è l'unico consumer di `framer-motion` caricato in Layout. Sostituire le due `motion.div` + `AnimatePresence` con transizioni CSS equivalenti (fade+slide su `data-state`), mantenendo identico look e timing. Effetto: `framer-motion` esce dal bundle globale (~35 kB gz).
+## Azioni
+1. **Rimuovere** il blocco route in `src/routes.tsx` (righe 25-28).
+2. **Verificare** che `public/_redirects` contenga ancora la regola 301 corretta.
+3. **Controllare** gli altri redirect client-side presenti in `routes.tsx` (`creare-sito-con-intelligenza-artificiale` e `quanto-costa-sito-web`) per lo stesso potenziale conflitto e applicare lo stesso trattamento se non hanno link interni.
+4. **Eseguire** build SSG per confermare che il vecchio path non generi più un file statico e che non ci siano errori di routing.
+5. **Verificare** con una richiesta HTTP diretta che il vecchio URL restituisca 301 verso il nuovo URL.
 
-### 2. Lazy-load di banner e widget non critici
-In `src/Layout.tsx` avvolgere in `React.lazy` + `Suspense` (mount dopo `requestIdleCallback` / primo scroll):
-- `CookieBanner` (già gated dal consenso, non serve al first paint)
-- `CookiePreferencesButton`
-- `TopNotificationBar`
-
-Nessun impatto visivo: appaiono comunque entro pochi ms, ma escono dal critical path JS.
-
-### 3. Toaster / Sonner / QueryClient fuori dal Layout globale
-La Home non usa toast né query. Opzioni (scelgo la prima):
-- Rimuovere `Toaster`, `Sonner`, `QueryClientProvider` da `Layout.tsx` e montarli solo dove servono (es. nelle pagine con form / azioni). `TooltipProvider` resta perché usato in vari punti — oppure anch'esso viene lazy-mounted.
-- Effetto: rimuove `@radix-ui/react-toast`, `sonner`, `@tanstack/react-query` dal bundle iniziale della Home.
-
-### 4. Pulizia CSS globale
-- Audit di `src/index.css`: rimozione regole non referenziate (verifica con `rg` classe per classe delle utility custom tipo `.hero-cta-*`, `.aeo-answer`, ecc. — restano solo quelle usate).
-- Verifica che `@tailwindcss/typography` sia effettivamente usato (se solo blog article pages, ok; se non ci sono `prose` altrove resta comunque tree-shaken da Tailwind JIT).
-- Nessuna modifica ai design token.
-
-### 5. Verifica bundle
-Dopo le modifiche eseguo `bun run build` e ispeziono `dist/assets/*.js` / `*.css` per confermare la riduzione. Riporto delta prima/dopo.
-
-## Cosa NON tocco
-- Markup JSX / gerarchia heading / testi.
-- Design tokens, palette, font.
-- Hero (LCP), preload, critical CSS inlining già in place.
-- JSON-LD, meta tag, SSG pipeline.
-- Altre pagine oltre alla Home: beneficieranno dello stesso bundle globale più leggero senza modifiche dedicate.
-
-## Rischi
-- CookieBanner senza framer-motion: rischio microdifferenza di easing → mitigato replicando cubic-bezier attuale in CSS.
-- Rimuovere `QueryClientProvider` da Layout: se una pagina lo usa in futuro va reintrodotto localmente. Controllo preventivo con `rg "useQuery|useMutation"` prima di rimuoverlo.
-
-## Deliverable
-File toccati previsti: `src/Layout.tsx`, `src/components/CookieBanner.tsx`, `src/index.css`. Nessun cambio di dipendenze in `package.json` in questa fase (eventuale `bun remove framer-motion` solo se nessun altra pagina lo usa — attualmente lo usano `PricingSection`, `WhatsAppButton`, alcuni demo, quindi resta installato ma non entra nel chunk Home).
+## Risultato atteso
+- Un solo canale di redirect per il vecchio URL (301 lato server).
+- Nessun file HTML statico generato per il vecchio path durante il build.
+- Trasferimento corretto dell'autorità SEO verso `/siti-web-per-professionisti`.
