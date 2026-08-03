@@ -1,5 +1,4 @@
 import type { RouteRecord } from "vite-react-ssg";
-import { Navigate } from "react-router-dom";
 import Layout from "./Layout";
 import Index from "./pages/Index";
 
@@ -21,10 +20,6 @@ export const routes: RouteRecord[] = [
         path: "siti-web-per-professionisti",
         lazy: page(() => import("./pages/SitiWebProfessionisti")),
         entry: "src/pages/SitiWebProfessionisti.tsx",
-      },
-      {
-        path: "realizzazione-siti-web-per-professionisti",
-        element: <Navigate to="/siti-web-per-professionisti" replace />,
       },
       {
         path: "siti-web-aziendali",
@@ -55,19 +50,6 @@ export const routes: RouteRecord[] = [
         path: "pubblicita-google-ads",
         lazy: page(() => import("./pages/PubblicitaGoogleAds")),
         entry: "src/pages/PubblicitaGoogleAds.tsx",
-      },
-      {
-        path: "creare-sito-con-intelligenza-artificiale",
-        element: (
-          <Navigate
-            to="/blog/siti-web-creati-con-intelligenza-artificiale"
-            replace
-          />
-        ),
-      },
-      {
-        path: "quanto-costa-sito-web",
-        element: <Navigate to="/blog/quanto-costa-un-sito-web-nel-2026" replace />,
       },
       {
         path: "blog",

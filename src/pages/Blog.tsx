@@ -356,7 +356,7 @@ const Blog = () => {
                 </li>
                 <li>
                   <Link
-                    to="/quanto-costa-sito-web"
+                    to="/blog/quanto-costa-un-sito-web-nel-2026"
                     className="group flex items-center justify-between gap-3 rounded-xl border border-border/60 bg-card px-5 py-4 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-[var(--shadow-card-hover)]"
                   >
                     <span className="font-medium text-foreground">Quanto costa un sito web</span>
