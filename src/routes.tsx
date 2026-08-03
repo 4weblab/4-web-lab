@@ -22,10 +22,6 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/SitiWebProfessionisti.tsx",
       },
       {
-        path: "realizzazione-siti-web-per-professionisti",
-        element: <Navigate to="/siti-web-per-professionisti" replace />,
-      },
-      {
         path: "siti-web-aziendali",
         lazy: page(() => import("./pages/SitiWebAziendali")),
         entry: "src/pages/SitiWebAziendali.tsx",
