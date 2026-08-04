@@ -11,7 +11,7 @@ const strengths = [
   {
     icon: Search,
     title: 'SEO Tradizionale e AEO/GEO Native',
-    description: "Ottimizziamo la struttura semantica del sito per Google e per i motori di ricerca AI (ChatGPT, Gemini, Perplexity). Rendiamo il tuo brand la fonte citata dagli agenti IA per intercettare lead qualificati.",
+    description: "Ottimizziamo la struttura semantica del sito per Google e per i motori di ricerca IA (ChatGPT, Gemini, Perplexity). Rendiamo il tuo brand la fonte citata dagli agenti IA per intercettare lead qualificati.",
   },
   {
     icon: Smartphone,

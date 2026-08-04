@@ -21,13 +21,13 @@ const previewFaqs = [
       "4 Web Lab realizza e pubblica un sito web in 2-4 settimane. Le tempistiche dipendono dalla complessità del progetto e dalla velocità nella consegna dei materiali; i siti monopagina o per negozi sono pronti in circa 14 giorni, mentre i progetti aziendali articolati richiedono 3-4 settimane.",
   },
   {
-    question: "I siti web servono ancora nel 2026 con l'arrivo dell'AI?",
+    question: "I siti web servono ancora nel 2026 con l'arrivo dell'IA?",
     answer: (
       <>
-        Sì, i siti web sono fondamentali nell'era dell'AI. Gli AI Overviews di Google e gli assistenti come ChatGPT, Gemini e Perplexity si basano sui contenuti dei siti web autoritativi per generare le risposte. Un sito sviluppato da 4 Web Lab fornisce la struttura semantica necessaria per far sì che la tua attività venga consigliata e citata dalle chat IA.
+        Sì, i siti web sono fondamentali nell'era dell'IA. Gli AI Overviews di Google e gli assistenti come ChatGPT, Gemini e Perplexity si basano sui contenuti dei siti web autoritativi per generare le risposte. Un sito sviluppato da 4 Web Lab fornisce la struttura semantica necessaria per far sì che la tua attività venga consigliata e citata dalle chat IA.
         <br />
         <Link to="/posizionamento-google-e-ai" className="text-sm text-accent hover:underline inline-block mt-2">
-          Scopri come funziona il posizionamento su Google e AI →
+          Scopri come funziona il posizionamento su Google e IA →
         </Link>
       </>
     ),

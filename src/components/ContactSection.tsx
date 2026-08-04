@@ -31,7 +31,7 @@ const ContactSection = () => {
             <div className="w-16 h-1 rounded-full mb-8 bg-accent" />
             <h2 className="heading-2 text-primary-foreground mb-5">Inizia il tuo progetto web con 4 Web Lab</h2>
             <p className="body-large text-primary-foreground/70 mb-10 text-balance">
-              Richiedi un'analisi gratuita del tuo sito web. Parli ed entri in contatto diretto con uno sviluppatore web a Padova. Analizziamo la tua presenza online per individuare le criticità che rallentano il tuo posizionamento SEO e la visibilità sui motori AI (ChatGPT, Gemini, Perplexity).
+              Richiedi un'analisi gratuita del tuo sito web. Parli ed entri in contatto diretto con uno sviluppatore web a Padova. Analizziamo la tua presenza online per individuare le criticità che rallentano il tuo posizionamento SEO e la visibilità sui motori IA (ChatGPT, Gemini, Perplexity).
             </p>
 
             <ul className="space-y-5">

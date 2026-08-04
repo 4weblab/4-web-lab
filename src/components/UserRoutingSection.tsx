@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.webp';
 const cards = [
   {
     title: 'Siti Web per Negozi e Attività Locali',
-    text: 'Presenza web ultra-veloce e ottimizzata per la Local SEO, Google Maps e le ricerche geolocalizzate degli assistenti AI. Ideale per farti trovare dai clienti vicino a te. Da 199€',
+    text: 'Presenza web ultra-veloce e ottimizzata per la Local SEO, Google Maps e le ricerche geolocalizzate degli assistenti IA. Ideale per farti trovare dai clienti vicino a te. Da 199€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
