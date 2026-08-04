@@ -22,30 +22,30 @@ const testimonials = [
 
 const cards = [{
   icon: Users,
-  title: 'Approccio Personale',
-  description: 'Lavoriamo fianco a fianco con te. Parli direttamente con chi sviluppa il tuo sito, senza intermediari o sistemi a ticket.'
+  title: 'Contatto Diretto con gli Sviluppatori',
+  description: 'Parli ed entri in contatto diretto con chi progetta e scrive il codice del tuo sito, senza intermediari o commercialisti.'
 }, {
   icon: Target,
-  title: 'Orientati ai Risultati',
-  description: 'Non solo estetica: ogni linea di codice e di copy è progettata per intercettare i clienti e convertire i visitatori in contatti reali.'
+  title: 'Architettura GEO & AEO Native',
+  description: 'Ogni riga di codice e di copy è ottimizzata per intercettare sia le ricerche tradizionali Google sia le raccomandazioni degli agenti IA.'
 }, {
   icon: Lightbulb,
-  title: 'Design Sartoriale (Zero Template)',
-  description: 'Nessun modello pre-fatto o stampino. Il tuo brand riceve un design esclusivo, flessibile e cucito al millimetro sulle tue necessità.'
+  title: 'Codice Custom Senza Template',
+  description: 'Sviluppo 100% su misura senza l\'uso di page builder pesanti o temi WordPress predefiniti: massima velocità e sicurezza.'
 }];
 
 const guarantees = [
   {
-    label: 'Tempi certi e zero attese',
-    text: 'Analisi, sviluppo e pubblicazione in 2-4 settimane, con gestione diretta da remoto.',
+    label: 'Tempi certi (2-4 settimane)',
+    text: 'Dallo studio di fattibilità alla pubblicazione online, garantiamo tempi di consegna definiti senza ritardi.',
   },
   {
-    label: 'Tecnologia e Performance',
-    text: 'Siti web statici ultra-veloci ospitati su hosting Netlify. Massima sicurezza, zero canoni nascosti.',
+    label: 'Infrastruttura Jamstack & Netlify',
+    text: 'Realizziamo siti web statici ad altissime prestazioni, azzerando i tempi di caricamento e i costi di manutenzione server.',
   },
   {
-    label: 'Casi reali, non solo demo',
-    text: <>Guarda il restyling completo di <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link> o naviga tutti i nostri <Link to="/realizzazioni" className="text-accent hover:underline font-medium">concept e realizzazioni</Link>.</>,
+    label: 'Risultati Verificati',
+    text: <>Progetti reali con dati di traffico e conversioni misurabili, come il restyling per <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link></>,
   },
 ];
 
@@ -55,7 +55,7 @@ const AboutSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-14 md:mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Il web si è evoluto. Il tuo sito è pronto per le AI?</h2>
+          <h2 className="heading-2 mb-5">Perché scegliere 4 Web Lab per il tuo sito web a Padova</h2>
           <p className="aeo-answer body-large text-muted-foreground max-w-3xl mx-auto text-balance">
             <strong>4 Web Lab</strong> è uno studio web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> che realizza siti professionali, <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le AI</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link> per negozi, professionisti e PMI in tutta Italia.
           </p>
