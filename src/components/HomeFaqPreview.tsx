@@ -7,7 +7,7 @@ const previewFaqs = [
     question: "Quanto costa realizzare un sito web?",
     answer: (
       <>
-        Il costo parte generalmente a partire da 199€ per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.
+        Il costo per realizzare un sito web con 4 Web Lab parte da 199€ per i negozi locali. I pacchetti per professionisti partono da 549€, mentre i siti aziendali per PMI partono da 899€. Il prezzo varia in base al numero di pagine, alle funzionalità e all'ottimizzazione SEO/AEO richiesta.
         <br />
         <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">
           Leggi "Quanto costa un sito web nel 2026?"
@@ -18,16 +18,16 @@ const previewFaqs = [
   {
     question: "In quanto tempo viene realizzato un sito web?",
     answer:
-      "Un sito standard può essere realizzato in 2–4 settimane, a seconda della complessità e della rapidità nella consegna dei materiali.",
+      "4 Web Lab realizza e pubblica un sito web in 2-4 settimane. Le tempistiche dipendono dalla complessità del progetto e dalla velocità nella consegna dei materiali; i siti monopagina o per negozi sono pronti in circa 14 giorni, mentre i progetti aziendali articolati richiedono 3-4 settimane.",
   },
   {
-    question: "I siti web servono ancora nel 2026 con l'arrivo dell'AI?",
+    question: "I siti web servono ancora nel 2026 con l'arrivo dell'IA?",
     answer: (
       <>
-        Sì, oggi più che mai: gli AI Overviews di Google e gli assistenti come ChatGPT o Gemini si basano sui contenuti dei siti web per generare le risposte. Senza un sito autorevole, l'attività non viene citata.
+        Sì, i siti web sono fondamentali nell'era dell'IA. Gli AI Overviews di Google e gli assistenti come ChatGPT, Gemini e Perplexity si basano sui contenuti dei siti web autoritativi per generare le risposte. Un sito sviluppato da 4 Web Lab fornisce la struttura semantica necessaria per far sì che la tua attività venga consigliata e citata dalle chat IA.
         <br />
         <Link to="/posizionamento-google-e-ai" className="text-sm text-accent hover:underline inline-block mt-2">
-          Scopri come funziona il posizionamento su Google e AI →
+          Scopri come funziona il posizionamento su Google e IA →
         </Link>
       </>
     ),

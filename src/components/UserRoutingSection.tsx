@@ -7,8 +7,8 @@ import cardAzienda from '@/assets/card-azienda.webp';
 
 const cards = [
   {
-    title: 'Ho un negozio',
-    text: 'Sito chiaro, veloce e ottimizzato per Google Maps e ricerche locali. A partire da 199€.',
+    title: 'Siti Web per Negozi e Attività Locali',
+    text: 'Presenza web ultra-veloce e ottimizzata per la Local SEO, Google Maps e le ricerche geolocalizzate degli assistenti IA. Ideale per farti trovare dai clienti vicino a te. Da 199€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
@@ -16,8 +16,8 @@ const cards = [
     icon: Store,
   },
   {
-    title: 'Sono un professionista',
-    text: 'Dall\'avvocato all\'elettricista: il sito che costruisce credibilità e porta nuovi contatti. Da 549€.',
+    title: 'Siti Web per Liberi Professionisti',
+    text: 'Dagli studi legali ai consulenti e artigiani: piattaforme personalizzate per posizionare il tuo personal brand, acquisire lead qualificati ed essere consigliato dalle chat IA. Da 549€',
     cta: 'Scopri i siti per professionisti',
     link: '/siti-web-per-professionisti',
     image: cardProfessionista,
@@ -25,8 +25,8 @@ const cards = [
     icon: Briefcase,
   },
   {
-    title: 'Ho un\'azienda',
-    text: 'Siti aziendali per PMI: visibilità, autorevolezza e generazione di lead misurabili. Da 899€.',
+    title: 'Siti Web Aziendali per PMI',
+    text: 'Architetture complesse e performanti pensate per piccole e medie imprese: massima autorevolezza, posizionamento SEO/AEO avanzato e generazione di contatti B2B. Da 899€',
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
@@ -45,9 +45,9 @@ const UserRoutingSection = () => {
       <div className="container-section relative">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Servizi web e soluzioni sartoriali per il tuo business</h2>
+          <h2 className="heading-2 mb-5">Soluzioni Web e Pricing per ogni Tipologia di Business</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Ogni attività ha esigenze e regole diverse. Scegli il tuo profilo e scopri l'architettura web più adatta per scalare il tuo mercato.
+            Piani trasparenti e architetture su misura per negozi locali, liberi professionisti e PMI. Scegli il tuo profilo e scopri la struttura ideale per la tua attività.
           </p>
         </AnimatedSection>
 

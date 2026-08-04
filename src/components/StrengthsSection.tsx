@@ -5,23 +5,23 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSectio
 const strengths = [
   {
     icon: Zap,
-    title: 'Performance elevate',
-    description: "Realizziamo siti web ultra-veloci\u00a0 e ottimizzati secondo i rigidi standard Core Web Vitals di Google. Un sito rapido non solo offre un'esperienza d'uso fluida e piacevole per i tuoi clienti, ma si posiziona meglio sui motori di ricerca, trasformando i semplici visitatori in contatti concreti per la tua attività.",
+    title: 'Performance & Core Web Vitals',
+    description: "Sviluppiamo codice statico custom privo di database pesanti o plugin ridondanti, garantendo punteggi vicini al 100/100 sui principali strumenti di analisi delle prestazioni. Ogni pagina viene erogata istantaneamente tramite reti CDN globali (Netlify). Risultato: tempi di risposta minimi, massima sicurezza contro i problemi di vulnerabilità e un vantaggio competitivo concreto sui motori di ricerca.",
   },
   {
     icon: Search,
-    title: 'SEO e visibilità AI',
-    description: "Ottimizzazione per Google e per le AI (ChatGPT, Gemini, Perplexity): farti trovare, ovunque cerchino. I tuoi clienti stanno già cercando soluzioni su Gemini o ChatGPT. Progettiamo un'architettura semantica avanzata che posiziona il tuo brand come fonte ufficiale e attendibile, convertendo le ricerche assistite dall'AI in lead reali per il tuo business.",
+    title: 'SEO Tradizionale e AEO/GEO Native',
+    description: "Ottimizziamo la struttura semantica del sito per Google e per i motori di ricerca IA (ChatGPT, Gemini, Perplexity). Rendiamo il tuo brand la fonte citata dagli agenti IA per intercettare lead qualificati.",
   },
   {
     icon: Smartphone,
-    title: 'Mobile-first',
-    description: 'Progettazione mobile-first: il sito funziona perfettamente dove i tuoi clienti lo guardano davvero.',
+    title: 'UX & Design Mobile-First',
+    description: 'Interfaccia e navigazione progettate prioritariamente per smartphone e tablet: layout reattivi, codice leggero ed esperienza utente fluida su qualsiasi dispositivo.',
   },
   {
     icon: Wrench,
-    title: 'Supporto dedicato',
-    description: 'Un referente diretto, niente ticket impersonali: rispondiamo a te, sul tuo progetto.',
+    title: 'Referente Tecnico Dedicato',
+    description: 'Assistenza e supporto senza intermediari o sistemi di ticketing impersonali: parli ed entri in contatto diretto con chi sviluppa e gestisce il tuo sito.',
   },
 ];
 
@@ -85,9 +85,9 @@ const StrengthsSection = () => {
       <div className="container-section">
         <AnimatedSection className="text-center mb-16">
           <div className="section-divider" />
-          <h2 className="heading-2 mb-5">Perché scegliere la nostra agenzia web</h2>
+          <h2 className="heading-2 mb-5">I 4 Pilastri del nostro metodo Web</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Supportiamo <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">professionisti</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">negozi</Link> e <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">piccole e medie imprese</Link> in tutta Italia nella realizzazione di siti web professionali orientati alla crescita online.
+            Come coniughiamo velocità tecnologica, ottimizzazione per i motori AI e assistenza diretta per fare crescere la tua attività.
           </p>
         </AnimatedSection>
 
