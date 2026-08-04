@@ -62,16 +62,16 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap uppercase">SOLUZIONI SU MISURA E ACCESSIBILI</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap uppercase">SITI WEB PRONTI PER LE IA</span>
               <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SITI WEB, SEO, GOOGLE ADS, BRANDING</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SEO, GOOGLE ADS e BRANDING</span>
             </h1>
 
             <p
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              4 Web Lab è la web agency a Padova specializzata nello sviluppo di siti web veloci e pronti per l'AI, posizionamento SEO e campagne Google Ads per portare clienti qualificati alla tua attività.
+              4 Web Lab è la web agency a Padova specializzata nello sviluppo di siti web ultra-veloci pronti per i motori di ricerca IA&nbsp;(ChatGPT, Gemini, Perplexity), posizionamento SEO, AEO, GEO e campagne Google Ads. Consegna in 2-4 settimane.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
