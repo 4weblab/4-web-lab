@@ -97,9 +97,9 @@ const AboutSection = () => {
         {/* Testimonials */}
         <AnimatedSection className="text-center mt-20 mb-10">
           <div className="section-divider" />
-          <h2 className="heading-3 mb-2">La parola a chi ha scelto 4 Web Lab</h2>
+          <h2 className="heading-3 mb-2">Cosa dicono i nostri clienti a Padova e in Italia</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Storie di business reali. Risultati concreti, codice su misura e nessuna promessa campata in aria.
+            Valutazione media 4.9 su Google. Storie di business reali, restyling ad alte prestazioni e risultati di posizionamento verificabili.
           </p>
         </AnimatedSection>
 
@@ -134,7 +134,7 @@ const AboutSection = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 text-sm text-accent hover:text-accent/80 font-medium transition-colors"
           >
-            Leggi tutte le recensioni su Google →
+            Leggi le altre recensioni verificate su Google Business Profile →
           </a>
         </AnimatedSection>
       </div>
