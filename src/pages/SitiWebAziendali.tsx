@@ -256,10 +256,11 @@ const SitiWebAziendali = () => {
                 ]}
               />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti Web Aziendali Professionali: Performance e Conversione per il tuo Business
+                Siti Web Aziendali ad alte prestazioni a Padova<br />
+                4 Web Lab
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Siti aziendali multipagina, veloci e ottimizzati per Google e AI. Da 899€, in Veneto e in tutta Italia.
+                Realizziamo siti multipagina veloci, sicuri e ottimizzati per Google e IA. Da 899€, in Veneto e in tutta Italia.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
