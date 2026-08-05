@@ -256,10 +256,11 @@ const SitiWebAziendali = () => {
                 ]}
               />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti Web Aziendali Professionali: Performance e Conversione per il tuo Business
+                Siti Web Aziendali ad alte prestazioni a Padova<br />
+                4 Web Lab
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Siti aziendali multipagina, veloci e ottimizzati per Google e AI. Da 899€, in Veneto e in tutta Italia.
+                Realizziamo siti multipagina veloci, sicuri e ottimizzati per Google e IA. Da 899€, in Veneto e in tutta Italia.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
@@ -268,7 +269,7 @@ const SitiWebAziendali = () => {
 
               <div className="aeo-answer mt-10 mx-auto max-w-3xl text-left rounded-2xl bg-primary-foreground/8 border border-primary-foreground/15 p-6 md:p-7 backdrop-blur-sm">
                 <p className="text-primary-foreground/95 text-base md:text-lg leading-relaxed mb-4">
-                  <strong>4 Web Lab</strong> realizza siti web aziendali multipagina per PMI italiane, con sede a Legnaro (PD), a partire da <strong>899€ una tantum</strong>. Design su misura, SEO integrato e supporto continuativo, ovunque sia la tua impresa.
+                  <strong>4 Web Lab</strong> è la web agency con sede a Legnaro (Padova) specializzata nello sviluppo di siti aziendali su architettura Jamstack ed hosting Netlify. Combiniamo design su misura, predisposizione per l'Intelligenza Artificiale (AEO) e SEO integrata a partire da <strong>899€ una tantum</strong>.
                 </p>
                 <ul className="grid sm:grid-cols-3 gap-3 text-sm text-primary-foreground/85">
                   <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Esperienza su PMI e settori tecnici</li>
