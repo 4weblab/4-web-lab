@@ -289,7 +289,7 @@ const SitiWebAziendali = () => {
                 <div className="icon-box w-13 h-13">
                   <Building2 className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Perché un'azienda ha bisogno di un sito strutturato</h2>
+                <h2 className="heading-2">Perché le PMI scelgono un sito aziendale strutturato con 4 Web Lab</h2>
               </AnimatedSection>
 
               {/* Definizione AEO */}
