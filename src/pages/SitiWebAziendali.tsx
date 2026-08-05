@@ -304,22 +304,22 @@ const SitiWebAziendali = () => {
                   {
                     title: "Credibilità e autorevolezza",
                     description:
-                      "Un sito web aziendale professionale trasmette solidità e affidabilità, elementi fondamentali per conquistare la fiducia di clienti e partner.",
+                      "Solidità del brand e massima sicurezza. Un sito professionale progettato su misura trasmette affidabilità immediata a clienti e partner, proteggendo i dati senza rischi di vulnerabilità.",
                   },
                   {
-                    title: "Presenza online solida",
+                    title: "Visibilità su Google e IA (GEO/AEO)",
                     description:
-                      "Essere presenti online con un sito strutturato significa farsi trovare dove i clienti cercano: su Google, sui motori di ricerca, sul web.",
+                      "Presenza ottimizzata per i motori del futuro. La struttura dati consente alla tua azienda a Padova e in tutta Italia di essere trovata sia su Google sia nelle risposte generate da ChatGPT, Gemini e Perplexity.",
                   },
                   {
-                    title: "Acquisizione contatti",
+                    title: "Acquisizione contatti qualificati",
                     description:
-                      "Un sito web per aziende ben progettato facilita la conversione dei visitatori in contatti qualificati attraverso form, call-to-action e percorsi chiari.",
+                      "Architettura orientata alla conversione. Trasforma i visitatori in lead commerciali grazie a percorsi di navigazione chiari, call-to-action strategiche e form ad alte prestazioni.",
                   },
                   {
-                    title: "SEO e crescita nel tempo",
+                    title: "Prestazioni & Scalabilità",
                     description:
-                      "La realizzazione di un sito web aziendale ottimizzato per i motori di ricerca garantisce visibilità crescente e un flusso costante di nuove opportunità.",
+                      "Velocità di caricamento azzerata e zero canoni inutili. L'infrastruttura Netlify garantisce tempi di risposta immediati e un sito capace di crescere nel tempo insieme al tuo business.",
                   },
                 ].map((item, index) => (
                   <StaggerItem key={index}>
