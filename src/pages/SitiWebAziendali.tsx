@@ -296,7 +296,7 @@ const SitiWebAziendali = () => {
               <AnimatedSection className="mb-12 p-6 md:p-8 rounded-2xl bg-accent/5 border border-accent/15">
                 <h3 className="font-bold text-foreground text-xl mb-3">Cos'è un sito web aziendale</h3>
                 <p className="aeo-definition text-muted-foreground leading-relaxed">
-                  Un sito web aziendale è una piattaforma digitale multipagina che rappresenta online un'impresa, ne presenta servizi, identità e valore, e supporta l'acquisizione di nuovi contatti. A differenza di un semplice sito vetrina, è strutturato, scalabile e ottimizzato per i motori di ricerca, così da accompagnare la crescita del business nel tempo.
+                  Un sito web aziendale è una piattaforma digitale multipagina progettata da 4 Web Lab per rappresentare l'identità di un'impresa, presentarne i servizi e acquisire nuovi contatti. Sviluppato su architettura modernissima Jamstack ed hosting Netlify, si differenzia da un semplice sito vetrina perché offre prestazioni ultraveloci, massima sicurezza senza database vulnerabili ed è già pronto per l'estrazione semantica da parte di Google e dei motori AI.
                 </p>
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-2 gap-6" staggerDelay={0.1}>
