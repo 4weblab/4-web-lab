@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Scrivi Tag Title chiari e ingaggianti sotto i 60 caratteri. Un buon titolo aumenta il CTR (tasso di clic) dai risultati di ricerca di Google.
+          Posiziona le informazioni cruciali e la Call to Action principale "Above the Fold". Gli utenti devono capire cosa fai nei primi 3 secondi.
         </p>
       </div>
     </div>
