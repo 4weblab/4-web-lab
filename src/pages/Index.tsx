@@ -204,6 +204,7 @@ const Index = () => {
 
       <main id="main-content">
         <Hero />
+        <SummerClosureNotice />
         <AboutSection />
         <StrengthsSection />
         <UserRoutingSection />
