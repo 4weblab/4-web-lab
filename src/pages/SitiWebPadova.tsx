@@ -277,6 +277,8 @@ const SitiWebPadova = () => {
           </div>
         </section>
 
+        <SummerClosureNotice />
+
         {/* Answer Box AEO – risposte rapide */}
         <section className="py-12 bg-background border-b border-border/40">
           <div className="container-section">

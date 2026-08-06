@@ -163,6 +163,8 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
+        <SummerClosureNotice />
+
         {/* A chi è rivolto */}
         <section className="section-padding bg-background">
           <div className="container-section">
