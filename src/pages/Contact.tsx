@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Mail, MessageCircle, Ear, Search, Lightbulb, Store, Briefcase, Building2, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SummerClosureNotice from "@/components/SummerClosureNotice";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
@@ -115,6 +116,8 @@ const Contact = () => {
             </p>
           </div>
         </section>
+
+        <SummerClosureNotice />
 
         {/* COME LAVORIAMO */}
         <section className="section-padding bg-background">

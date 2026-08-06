@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import PageBreadcrumb from '@/components/PageBreadcrumb';
+import SummerClosureNotice from '@/components/SummerClosureNotice';
 
 const PrivacyPolicy = () => {
   useEffect(() => {
@@ -58,6 +59,8 @@ const PrivacyPolicy = () => {
           <h1 className="heading-1 text-primary-foreground">Privacy Policy</h1>
         </div>
       </header>
+
+      <SummerClosureNotice />
 
       {/* Content */}
       <main className="container-section section-padding">

@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import PageBreadcrumb from '@/components/PageBreadcrumb';
+import SummerClosureNotice from '@/components/SummerClosureNotice';
 import { openPreferences } from '@/lib/consent';
 
 const CookiePolicy = () => {
@@ -59,6 +60,8 @@ const CookiePolicy = () => {
           <h1 className="heading-1 text-primary-foreground">Cookie Policy</h1>
         </div>
       </header>
+
+      <SummerClosureNotice />
 
       {/* Content */}
       <main className="container-section section-padding">
