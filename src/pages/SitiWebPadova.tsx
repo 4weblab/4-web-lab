@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SummerClosureNotice from "@/components/SummerClosureNotice";
 
 import { CheckCircle2, MapPin, Briefcase, Settings, Globe, MessageCircle, Sparkles, Image as ImageIcon, Link2 } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
