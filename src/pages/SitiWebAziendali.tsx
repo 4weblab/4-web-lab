@@ -282,6 +282,8 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
+        <SummerClosureNotice />
+
         {/* Perché un'azienda ha bisogno di un sito strutturato */}
         <section className="section-padding bg-background">
           <div className="container-section">
