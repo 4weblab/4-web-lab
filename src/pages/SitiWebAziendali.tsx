@@ -141,7 +141,7 @@ const SitiWebAziendali = () => {
                   availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
                   lowPrice: "1890",
-                  highPrice: "1299",
+                  highPrice: "1890",
                   offerCount: 3,
                 },
               },
@@ -154,7 +154,7 @@ const SitiWebAziendali = () => {
                     name: "Quanto costa un sito web aziendale in Veneto?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Un sito web aziendale in Veneto costa da 1890€ una tantum per la versione base, da 1.299€ per un sito multipagina strutturato, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                      text: "Un sito web aziendale in Veneto costa da 1890€ una tantum per la versione base, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
                     },
                   },
                   {
@@ -460,7 +460,7 @@ const SitiWebAziendali = () => {
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
                         <td className="px-5 py-4">da 990€</td>
-                        <td className="px-5 py-4">da 1890€ a 1.299€+</td>
+                        <td className="px-5 py-4">da 1890€</td>
                         <td className="px-5 py-4">Preventivo su misura</td>
                       </tr>
                       <tr className="border-t border-border/50">
@@ -703,7 +703,7 @@ const SitiWebAziendali = () => {
                     {
                       question: "Quanto costa un sito web aziendale in Veneto?",
                       answer:
-                        "Un sito web aziendale in Veneto costa da 1890€ una tantum per la versione base, da 1.299€ per un sito multipagina strutturato, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                        "Un sito web aziendale in Veneto costa da 1890€ una tantum per la versione base, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
                     },
                     {
                       question: "Quanto tempo serve per realizzare un sito web aziendale?",

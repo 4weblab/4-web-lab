@@ -116,7 +116,7 @@ const SitiWebPadova = () => {
                   availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
                   lowPrice: "490",
-                  highPrice: "1299",
+                  highPrice: "1890",
                   offerCount: 3,
                 },
               },
@@ -128,7 +128,7 @@ const SitiWebPadova = () => {
                     name: "Quanto costa realizzare un sito web a Padova?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Un sito web a Padova costa da 490€ una tantum per un sito vetrina per negozi, da 990€ per i professionisti e da 1890€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base."
+                      text: "Un sito web a Padova costa da 490€ una tantum per un sito vetrina per negozi, da 990€ per i professionisti e da 1890€ per le aziende. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base."
                     }
                   },
                   {
@@ -463,7 +463,7 @@ const SitiWebPadova = () => {
                         <td className="px-5 py-4 font-medium text-foreground">Prezzo indicativo</td>
                         <td className="px-5 py-4">da 490€</td>
                         <td className="px-5 py-4">da 990€</td>
-                        <td className="px-5 py-4">da 1890€ a 1.299€+</td>
+                        <td className="px-5 py-4">da 1890€</td>
                       </tr>
                     </tbody>
                   </table>
@@ -680,7 +680,7 @@ const SitiWebPadova = () => {
                     {
                       question: "Quanto costa realizzare un sito web a Padova?",
                       answer:
-                        "Un sito web a Padova costa da 490€ una tantum per un sito vetrina per negozi, da 990€ per i professionisti e da 1890€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                        "Un sito web a Padova costa da 490€ una tantum per un sito vetrina per negozi, da 990€ per i professionisti e da 1890€ per le aziende. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
                     },
                     {
                       question: "In quanto tempo viene realizzato un sito a Padova?",
