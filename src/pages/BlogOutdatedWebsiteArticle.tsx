@@ -4,7 +4,6 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -232,7 +231,6 @@ const BlogOutdatedWebsiteArticle = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         <section className="article-intro-section">
           <div className="container-section">

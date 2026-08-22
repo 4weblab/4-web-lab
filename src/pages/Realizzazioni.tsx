@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { motion } from "framer-motion";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import {
   ArrowRight,
   CheckCircle2,
@@ -265,7 +264,6 @@ const Realizzazioni = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* INTRO */}
         <section className="py-16 md:py-20 bg-background">
