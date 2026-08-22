@@ -50,7 +50,7 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web per Professionisti e Studi | Da 549€ | 4 Web Lab</title>
+        <title>Siti Web per Professionisti e Studi | Da 990€ | 4 Web Lab</title>
         <meta
           name="description"
           content="Realizziamo siti web su misura per professionisti e studi tecnici o legali. Soluzioni veloci, ottimizzate SEO e pensate per acquisire clienti. Richiedi un preventivo!"
@@ -73,7 +73,7 @@ const SitiWebProfessionisti = () => {
         <meta property="og:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
+          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 990€."
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
@@ -83,7 +83,7 @@ const SitiWebProfessionisti = () => {
         <meta name="twitter:title" content="Siti web per Professionisti, SEO locale | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 549€."
+          content="Sito web per studi e professionisti: avvocati, notai, geometri, architetti, idraulici, elettricisti. Sviluppo personalizzato e mirato, da 990€."
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
@@ -110,7 +110,7 @@ const SitiWebProfessionisti = () => {
               availability: "https://schema.org/InStock",
               priceSpecification: {
                 "@type": "PriceSpecification",
-                minPrice: "549",
+                minPrice: "990",
                 priceCurrency: "EUR",
               },
             },
@@ -418,7 +418,7 @@ const SitiWebProfessionisti = () => {
                       </div>
                       <div className="mb-3">
                         <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
-                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€549</span>
+                        <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€990</span>
                       </div>
                       <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
                       <p className="text-muted-foreground text-sm mt-4">

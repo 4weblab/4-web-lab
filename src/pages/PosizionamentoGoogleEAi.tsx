@@ -586,17 +586,17 @@ const PosizionamentoGoogleEAi = () => {
                   {
                     to: "/siti-web-aziendali",
                     title: "Siti web aziendali",
-                    description: "Pacchetti strutturati per PMI da 899€.",
+                    description: "Pacchetti strutturati per PMI da 1890€.",
                   },
                   {
                     to: "/siti-web-per-professionisti",
                     title: "Siti per professionisti",
-                    description: "Soluzioni per studi e liberi professionisti da 549€.",
+                    description: "Soluzioni per studi e liberi professionisti da 990€.",
                   },
                   {
                     to: "/siti-web-per-negozi",
                     title: "Siti per negozi",
-                    description: "Pacchetto essenziale per attività locali da 199€.",
+                    description: "Pacchetto essenziale per attività locali da 490€.",
                   },
                   {
                     to: "/realizzazione-siti-web-padova",

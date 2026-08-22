@@ -67,7 +67,7 @@ const SitiWebPadova = () => {
                 alternateName: ["Web Studio Padova", "Agenzia Web Padova"],
                 url: "https://4weblab.it/",
                 telephone: "+39 351 465 6042",
-                priceRange: "€199+",
+                priceRange: "€490+",
                 image: "https://4weblab.it/og-image.webp",
                 address: {
                   "@type": "PostalAddress",
@@ -115,8 +115,8 @@ const SitiWebPadova = () => {
                   url: "https://4weblab.it/realizzazione-siti-web-padova",
                   availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
-                  lowPrice: "199",
-                  highPrice: "1299",
+                  lowPrice: "490",
+                  highPrice: "1890",
                   offerCount: 3,
                 },
               },
@@ -128,7 +128,7 @@ const SitiWebPadova = () => {
                     name: "Quanto costa realizzare un sito web a Padova?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Un sito web a Padova costa da 199€ una tantum per un sito vetrina per negozi, da 549€ per i professionisti e da 899€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base."
+                      text: "Un sito web a Padova costa da 490€ una tantum per un sito vetrina per negozi, da 990€ per i professionisti e da 1890€ per le aziende. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base."
                     }
                   },
                   {
@@ -192,7 +192,7 @@ const SitiWebPadova = () => {
                     name: "Come scegliere un'agenzia per la creazione di siti internet a Padova?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Per scegliere un'agenzia di creazione siti internet a Padova valuta: portfolio di lavori realizzati, trasparenza dei prezzi, competenze SEO locali, recensioni Google, tempi di risposta e disponibilità di un referente diretto. 4 Web Lab ha sede a Legnaro (PD), prezzi pubblici da 199€ e risposte entro 24h."
+                      text: "Per scegliere un'agenzia di creazione siti internet a Padova valuta: portfolio di lavori realizzati, trasparenza dei prezzi, competenze SEO locali, recensioni Google, tempi di risposta e disponibilità di un referente diretto. 4 Web Lab ha sede a Legnaro (PD), prezzi pubblici da 490€ e risposte entro 24h."
                     }
                   }
                 ]
@@ -461,9 +461,9 @@ const SitiWebPadova = () => {
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Prezzo indicativo</td>
-                        <td className="px-5 py-4">da 199€</td>
-                        <td className="px-5 py-4">da 549€</td>
-                        <td className="px-5 py-4">da 899€ a 1.299€+</td>
+                        <td className="px-5 py-4">da 490€</td>
+                        <td className="px-5 py-4">da 990€</td>
+                        <td className="px-5 py-4">da 1890€</td>
                       </tr>
                     </tbody>
                   </table>
@@ -680,7 +680,7 @@ const SitiWebPadova = () => {
                     {
                       question: "Quanto costa realizzare un sito web a Padova?",
                       answer:
-                        "Un sito web a Padova costa da 199€ una tantum per un sito vetrina per negozi, da 549€ per i professionisti e da 899€ per le aziende. Per progetti multipagina o e-commerce il range arriva indicativamente fino a 1.299€+. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                        "Un sito web a Padova costa da 490€ una tantum per un sito vetrina per negozi, da 990€ per i professionisti e da 1890€ per le aziende. Tutti i prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
                     },
                     {
                       question: "In quanto tempo viene realizzato un sito a Padova?",
@@ -726,7 +726,7 @@ const SitiWebPadova = () => {
                     {
                       question: "Come scegliere un'agenzia per la creazione di siti internet a Padova?",
                       answer:
-                        "Per scegliere un'agenzia di creazione siti internet a Padova valuta: portfolio di lavori realizzati, trasparenza dei prezzi, competenze SEO locali, recensioni Google, tempi di risposta e disponibilità di un referente diretto. 4 Web Lab ha sede a Legnaro (PD), prezzi pubblici da 199€ e risposte entro 24h.",
+                        "Per scegliere un'agenzia di creazione siti internet a Padova valuta: portfolio di lavori realizzati, trasparenza dei prezzi, competenze SEO locali, recensioni Google, tempi di risposta e disponibilità di un referente diretto. 4 Web Lab ha sede a Legnaro (PD), prezzi pubblici da 490€ e risposte entro 24h.",
                     },
                   ].map((faq, index) => (
                     <AccordionItem

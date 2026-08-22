@@ -847,7 +847,7 @@ const CTAFinale = () => {
           <p className="text-[16px] md:text-[17px] leading-[1.8] max-w-2xl mx-auto" style={{ fontFamily: SANS, color: "rgba(255,255,255,0.78)" }}>
             <strong style={{ color: "#fff", fontWeight: 600 }}>4 Web Lab</strong> realizza siti web per
             negozi, attività locali e professionisti a Padova, in Veneto e in tutta Italia.
-            Soluzioni moderne <strong style={{ color: "#fff" }}>a partire da 199€</strong>,
+            Soluzioni moderne <strong style={{ color: "#fff" }}>a partire da 490€</strong>,
             progettate per essere veloci, curate e ottimizzate anche da mobile.
           </p>
 
@@ -1194,7 +1194,7 @@ const DemoFlowerAtelier = () => {
         <title>Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web per negozi e attività locali. Pacchetto una tantum da 199€."
+          content="Demo realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web per negozi e attività locali. Pacchetto una tantum da 490€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1208,7 +1208,7 @@ const DemoFlowerAtelier = () => {
         <meta property="og:title" content="Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 199€."
+          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 490€."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -1221,7 +1221,7 @@ const DemoFlowerAtelier = () => {
         <meta name="twitter:title" content="Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Da 199€."
+          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Da 490€."
         />
         <meta name="twitter:image" content="https://4weblab.it/og/flower-atelier-demo.webp" />
 

@@ -17,9 +17,9 @@
 
 ### Realizzazione siti web
 
-- **Siti web per negozi** (`/siti-web-per-negozi`) — Pacchetto essenziale per attività commerciali locali. Prezzo una tantum **da 199€**. Include hosting, dominio, sito responsive ottimizzato, SEO locale di base, modulo contatti.
-- **Siti web per professionisti** (`/siti-web-per-professionisti`) — Per studi professionali, liberi professionisti, consulenti. Prezzo una tantum **da 549€**. Include sito multipagina, SEO, blog opzionale, integrazione prenotazioni.
-- **Siti web aziendali** (`/siti-web-aziendali`) — Per PMI strutturate. Prezzo una tantum **da 899€**. Include architettura multilingua opzionale, area servizi, blog, integrazioni CRM, performance avanzate.
+- **Siti web per negozi** (`/siti-web-per-negozi`) — Pacchetto essenziale per attività commerciali locali. Prezzo una tantum **da 490€**. Include hosting, dominio, sito responsive ottimizzato, SEO locale di base, modulo contatti.
+- **Siti web per professionisti** (`/siti-web-per-professionisti`) — Per studi professionali, liberi professionisti, consulenti. Prezzo una tantum **da 990€**. Include sito multipagina, SEO, blog opzionale, integrazione prenotazioni.
+- **Siti web aziendali** (`/siti-web-aziendali`) — Per PMI strutturate. Prezzo una tantum **da 1890€**. Include architettura multilingua opzionale, area servizi, blog, integrazioni CRM, performance avanzate.
 
 ### SEO, AEO e GEO
 
@@ -55,7 +55,7 @@
 ## Domande frequenti
 
 **Quanto costa un sito web con 4 Web Lab?**
-I pacchetti partono da 199€ una tantum per i negozi, 549€ per i professionisti, 899€ per le aziende. Il prezzo finale dipende da numero di pagine, integrazioni, contenuti e SEO richiesti.
+I pacchetti partono da 490€ una tantum per i negozi, 990€ per i professionisti, 1890€ per le aziende. Il prezzo finale dipende da numero di pagine, integrazioni, contenuti e SEO richiesti.
 
 **In quanto tempo si vede online il sito?**
 Mediamente tra 2 e 4 settimane dal kick-off, in funzione della rapidità nel ricevere contenuti e feedback dal cliente.

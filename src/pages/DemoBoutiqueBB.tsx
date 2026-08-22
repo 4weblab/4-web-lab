@@ -1253,7 +1253,7 @@ const DemoBoutiqueBB = () => {
         <title>Sito Web per Boutique B&B · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per boutique B&B e luxury rooms, realizzata da 4 Web Lab, agenzia web di Padova specializzata in attività ricettive. Da 899€."
+          content="Demo di sito web per boutique B&B e luxury rooms, realizzata da 4 Web Lab, agenzia web di Padova specializzata in attività ricettive. Da 1890€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1267,7 +1267,7 @@ const DemoBoutiqueBB = () => {
         <meta property="og:title" content="Sito Web per Boutique B&B · Demo Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Demo di sito web per boutique B&B e luxury rooms · 4 Web Lab, agenzia web di Padova. Pacchetto aziendale da 899€."
+          content="Demo di sito web per boutique B&B e luxury rooms · 4 Web Lab, agenzia web di Padova. Pacchetto aziendale da 1890€."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
