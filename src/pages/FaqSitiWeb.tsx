@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SummerClosureNotice from '@/components/SummerClosureNotice';
 import ContactSection from '@/components/ContactSection';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import PageBreadcrumb from '@/components/PageBreadcrumb';
@@ -284,7 +283,6 @@ In questa pagina trovi risposte sintetiche e concrete alle domande più frequent
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* FAQ Accordion */}
         <section className="section-padding bg-background">

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import blogAiWebsite from "@/assets/blog-ai-website.webp";
@@ -235,7 +234,6 @@ const Blog = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* INTRO SEO */}
         <section className="pt-16 md:pt-20 pb-20 md:pb-24 bg-background">

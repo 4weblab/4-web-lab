@@ -7,7 +7,6 @@ import StrengthsSection from "@/components/StrengthsSection";
 import UserRoutingSection from "@/components/UserRoutingSection";
 import HomeFaqPreview from "@/components/HomeFaqPreview";
 import ContactSection from "@/components/ContactSection";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 
 const Index = () => {
   return (
@@ -204,7 +203,6 @@ const Index = () => {
 
       <main id="main-content">
         <Hero />
-        <SummerClosureNotice />
         <AboutSection />
         <StrengthsSection />
         <UserRoutingSection />
