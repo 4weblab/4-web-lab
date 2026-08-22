@@ -615,26 +615,18 @@ const SitiWebAziendali = () => {
                   .
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-10" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-2 gap-8 mb-10" staggerDelay={0.1}>
                 {[
                   {
                     icon: Globe,
                     label: "Base",
-                    title: "Sito base",
+                    title: "Sito aziendale",
                     price: "A partire da 1890€",
                     priceNote: "IVA esclusa",
                     description:
                       "Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.",
                   },
-                  {
-                    icon: LayoutTemplate,
-                    label: "Intermedio",
-                    title: "Sito aziendale strutturato",
-                    price: "A partire da 1.299€",
-                    priceNote: "IVA esclusa",
-                    description:
-                      "Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.",
-                  },
+
                   {
                     icon: Wrench,
                     label: "Avanzato",
