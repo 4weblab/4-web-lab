@@ -12,7 +12,6 @@ import {
   ArrowRight,
   CheckCircle2,
   Globe,
-  LayoutTemplate,
   Wrench,
   ChevronDown,
   MapPin,
