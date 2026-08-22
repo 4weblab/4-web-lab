@@ -7,7 +7,7 @@ const previewFaqs = [
     question: "Quanto costa realizzare un sito web?",
     answer: (
       <>
-        Il costo per realizzare un sito web con 4 Web Lab parte da 199€ per i negozi locali. I pacchetti per professionisti partono da 549€, mentre i siti aziendali per PMI partono da 899€. Il prezzo varia in base al numero di pagine, alle funzionalità e all'ottimizzazione SEO/AEO richiesta.
+        Il costo per realizzare un sito web con 4 Web Lab parte da 490€ per i negozi locali. I pacchetti per professionisti partono da 990€, mentre i siti aziendali per PMI partono da 1890€. Il prezzo varia in base al numero di pagine, alle funzionalità e all'ottimizzazione SEO/AEO richiesta.
         <br />
         <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">
           Leggi "Quanto costa un sito web nel 2026?"

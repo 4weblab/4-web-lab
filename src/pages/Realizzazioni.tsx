@@ -129,7 +129,7 @@ const Realizzazioni = () => {
         <title>Realizzazioni siti web reali e concept — Portfolio 4 Web Lab Padova</title>
         <meta
           name="description"
-          content="Portfolio 4 Web Lab, agenzia web di Padova: lavori reali pubblicati (es. R.B s.n.c., edilizia, Cittadella) e concept per negozi (199€), professionisti (549€) e aziende (899€)."
+          content="Portfolio 4 Web Lab, agenzia web di Padova: lavori reali pubblicati (es. R.B s.n.c., edilizia, Cittadella) e concept per negozi (490€), professionisti (990€) e aziende (1890€)."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -205,9 +205,9 @@ const Realizzazioni = () => {
               { "@type": "City", name: "Venezia" },
             ],
             offers: [
-              { "@type": "Offer", name: "Siti web per negozi", price: "199", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-negozi" },
-              { "@type": "Offer", name: "Siti web per professionisti", price: "549", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-professionisti" },
-              { "@type": "Offer", name: "Siti web aziendali", price: "899", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-aziendali" },
+              { "@type": "Offer", name: "Siti web per negozi", price: "490", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-negozi" },
+              { "@type": "Offer", name: "Siti web per professionisti", price: "990", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-per-professionisti" },
+              { "@type": "Offer", name: "Siti web aziendali", price: "1890", priceCurrency: "EUR", url: "https://4weblab.it/siti-web-aziendali" },
             ],
           })}
         </script>

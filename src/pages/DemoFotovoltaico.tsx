@@ -1249,7 +1249,7 @@ const DemoFotovoltaico = () => {
         <title>Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per aziende fotovoltaiche, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti aziendali. Da 899€ una tantum."
+          content="Demo di sito web per aziende fotovoltaiche, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti aziendali. Da 1890€ una tantum."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1261,14 +1261,14 @@ const DemoFotovoltaico = () => {
         <meta property="og:title" content="Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Demo di sito web per aziende del settore fotovoltaico, realizzata da 4 Web Lab, agenzia web di Padova. Da 899€."
+          content="Demo di sito web per aziende del settore fotovoltaico, realizzata da 4 Web Lab, agenzia web di Padova. Da 1890€."
         />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og/demo-fotovoltaico.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sito Web per Azienda Fotovoltaica · Demo | 4 Web Lab" />
-        <meta name="twitter:description" content="Demo di sito web per aziende fotovoltaiche · 4 Web Lab, agenzia web di Padova. Da 899€." />
+        <meta name="twitter:description" content="Demo di sito web per aziende fotovoltaiche · 4 Web Lab, agenzia web di Padova. Da 1890€." />
         <meta name="twitter:image" content="https://4weblab.it/og/demo-fotovoltaico.webp" />
         <meta name="theme-color" content="#070B14" />
         <link rel="preload" as="image" href={heroImg} fetchPriority="high" />

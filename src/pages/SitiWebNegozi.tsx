@@ -29,7 +29,7 @@ const SitiWebNegozi = () => {
         <title>Siti Web per Negozi a Padova e in Italia | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h."
+          content="Siti web per negozi a Padova da 490€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-per-negozi" />
@@ -46,14 +46,14 @@ const SitiWebNegozi = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-per-negozi" />
         <meta property="og:title" content="Siti Web per Negozi a Padova e in Italia | 4 Web Lab" />
-        <meta property="og:description" content="Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h." />
+        <meta property="og:description" content="Siti web per negozi a Padova da 490€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-per-negozi" />
         <meta name="twitter:title" content="Siti Web per Negozi a Padova e in Italia | 4 Web Lab" />
-        <meta name="twitter:description" content="Siti web per negozi a Padova da 199€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h." />
+        <meta name="twitter:description" content="Siti web per negozi a Padova da 490€ una tantum: design moderno, SEO locale e assistenza. Attira clienti da Google. Preventivo gratuito in 24h." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({
@@ -107,7 +107,7 @@ const SitiWebNegozi = () => {
               availability: "https://schema.org/InStock",
               priceSpecification: {
                 "@type": "PriceSpecification",
-                minPrice: "199",
+                minPrice: "490",
                 priceCurrency: "EUR",
               },
             },
@@ -137,7 +137,7 @@ const SitiWebNegozi = () => {
               </p>
 
               <div className="inline-flex items-center gap-2 text-accent font-semibold bg-accent/10 px-6 py-3 rounded-full mb-8">
-                <span>Siti web per negozi a partire da 199€</span>
+                <span>Siti web per negozi a partire da 490€</span>
               </div>
 
               <div>
@@ -377,7 +377,7 @@ const SitiWebNegozi = () => {
                   </div>
                   <div className="text-center mb-10">
                     <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
-                    <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€199</span>
+                    <span className="text-5xl md:text-6xl font-serif font-bold text-foreground">€490</span>
                     <p className="text-muted-foreground text-sm mt-2">IVA esclusa</p>
                   </div>
                   <ul className="space-y-4 mb-10 max-w-md mx-auto" role="list">

@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.webp';
 const cards = [
   {
     title: 'Siti Web per Negozi e Attività Locali',
-    text: 'Presenza web ultra-veloce e ottimizzata per la Local SEO, Google Maps e le ricerche geolocalizzate degli assistenti IA. Ideale per farti trovare dai clienti vicino a te. Da 199€',
+    text: 'Presenza web ultra-veloce e ottimizzata per la Local SEO, Google Maps e le ricerche geolocalizzate degli assistenti IA. Ideale per farti trovare dai clienti vicino a te. Da 490€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: 'Siti Web per Liberi Professionisti',
-    text: 'Dagli studi legali ai consulenti e artigiani: piattaforme personalizzate per posizionare il tuo personal brand, acquisire lead qualificati ed essere consigliato dalle chat IA. Da 549€',
+    text: 'Dagli studi legali ai consulenti e artigiani: piattaforme personalizzate per posizionare il tuo personal brand, acquisire lead qualificati ed essere consigliato dalle chat IA. Da 990€',
     cta: 'Scopri i siti per professionisti',
     link: '/siti-web-per-professionisti',
     image: cardProfessionista,
@@ -26,7 +26,7 @@ const cards = [
   },
   {
     title: 'Siti Web Aziendali per PMI',
-    text: 'Architetture complesse e performanti pensate per piccole e medie imprese: massima autorevolezza, posizionamento SEO/AEO avanzato e generazione di contatti B2B. Da 899€',
+    text: 'Architetture complesse e performanti pensate per piccole e medie imprese: massima autorevolezza, posizionamento SEO/AEO avanzato e generazione di contatti B2B. Da 1890€',
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
