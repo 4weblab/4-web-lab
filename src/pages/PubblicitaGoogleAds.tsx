@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import {
   Megaphone,
   Target,
@@ -102,29 +101,29 @@ const PubblicitaGoogleAds = () => {
   return (
     <>
       <Helmet>
-        <title>Pubblicità Google ADS | Gestione Campagne | 4 Web Lab</title>
+        <title>Gestione Campagne Google Ads Padova e Veneto | 4 Web Lab</title>
         <meta
           name="description"
-          content="Gestione completa campagne Google ADS per negozi, professionisti e aziende in Veneto e in tutta Italia. Consulenza gratuita per la tua strategia pubblicitaria."
+          content="Gestione Google Ads per negozi, professionisti e PMI. Campagne pubblicitarie orientate alla conversione e al ROI. Richiedi una consulenza gratuita!"
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:title" content="Pubblicità Google ADS | Gestione Campagne | 4 Web Lab" />
+        <meta property="og:title" content="Gestione Campagne Google Ads Padova e Veneto | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Gestione completa campagne Google ADS per negozi, professionisti e aziende in Veneto e in tutta Italia. Consulenza gratuita."
+          content="Gestione Google Ads per negozi, professionisti e PMI. Campagne pubblicitarie orientate alla conversione e al ROI. Richiedi una consulenza gratuita!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={PAGE_URL} />
-        <meta name="twitter:title" content="Pubblicità Google ADS | Gestione Campagne | 4 Web Lab" />
+        <meta name="twitter:title" content="Gestione Campagne Google Ads Padova e Veneto | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Gestione completa campagne Google ADS per negozi, professionisti e aziende in Veneto e in tutta Italia. Consulenza gratuita."
+          content="Gestione Google Ads per negozi, professionisti e PMI. Campagne pubblicitarie orientate alla conversione e al ROI. Richiedi una consulenza gratuita!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
@@ -288,7 +287,6 @@ const PubblicitaGoogleAds = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* AEO Definition */}
         <section className="section-padding bg-background">

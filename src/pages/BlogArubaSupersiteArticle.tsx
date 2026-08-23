@@ -4,7 +4,6 @@ import { ArrowRight, Calendar, Clock, X, ZoomIn } from "lucide-react";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -275,7 +274,6 @@ const BlogArubaSupersiteArticle = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         <section className="article-intro-section">
           <div className="container-section">

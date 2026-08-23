@@ -1487,7 +1487,7 @@ const DemoStudioDentisticoPremium = () => {
         <title>Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo di sito web per studi dentistici, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 549€."
+          content="Demo di sito web per studi dentistici, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 990€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
@@ -1497,12 +1497,12 @@ const DemoStudioDentisticoPremium = () => {
         <meta property="article:section" content="Realizzazioni" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:title" content="Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab" />
-        <meta property="og:description" content="Demo di sito web per studi dentistici e professionisti sanitari · 4 Web Lab, agenzia web di Padova. Da 549€." />
+        <meta property="og:description" content="Demo di sito web per studi dentistici e professionisti sanitari · 4 Web Lab, agenzia web di Padova. Da 990€." />
         <meta property="og:url" content={canonical} />
         <meta property="og:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sito Web per Studio Dentistico · Demo Padova | 4 Web Lab" />
-        <meta name="twitter:description" content="Demo di sito web per studi dentistici · 4 Web Lab, agenzia web di Padova. Da 549€." />
+        <meta name="twitter:description" content="Demo di sito web per studi dentistici · 4 Web Lab, agenzia web di Padova. Da 990€." />
         <meta name="twitter:image" content="https://4weblab.it/og/demo-studio-dentistico-premium.webp" />
 
         {/* CreativeWork — il concept, attribuito interamente a 4 Web Lab */}

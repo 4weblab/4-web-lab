@@ -7,35 +7,34 @@ import StrengthsSection from "@/components/StrengthsSection";
 import UserRoutingSection from "@/components/UserRoutingSection";
 import HomeFaqPreview from "@/components/HomeFaqPreview";
 import ContactSection from "@/components/ContactSection";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Web Agency Padova | Siti Web e SEO | 4 Web Lab</title>
+        <title>Realizzazione Siti Web e SEO Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Web Agency a Padova specializzata in siti web professionali, SEO per Google/AI e Google Ads. Contattaci per un preventivo gratuito in 24 ore!"
+          content="Web Agency a Padova specializzata in siti web ultra-veloci e posizionamento SEO/AI (ChatGPT, Gemini). Richiedi un'analisi o preventivo in 24h!"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/" />
-        <meta property="og:title" content="Web Agency Padova | Siti Web e SEO | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione Siti Web e SEO Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Web Agency a Padova specializzata in siti web professionali, SEO per Google/AI e Google Ads. Contattaci per un preventivo gratuito in 24 ore!"
+          content="Web Agency a Padova specializzata in siti web ultra-veloci e posizionamento SEO/AI (ChatGPT, Gemini). Richiedi un'analisi o preventivo in 24h!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/" />
-        <meta name="twitter:title" content="Web Agency Padova | Siti Web e SEO | 4 Web Lab" />
+        <meta name="twitter:title" content="Realizzazione Siti Web e SEO Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Web Agency a Padova specializzata in siti web professionali, SEO per Google/AI e Google Ads. Contattaci per un preventivo gratuito in 24 ore!"
+          content="Web Agency a Padova specializzata in siti web ultra-veloci e posizionamento SEO/AI (ChatGPT, Gemini). Richiedi un'analisi o preventivo in 24h!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
@@ -89,7 +88,7 @@ const Index = () => {
                 "name": "Quanto costa realizzare un sito web?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Il costo parte generalmente a partire da 199€ per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.",
+                  "text": "Il costo parte generalmente a partire da 490€ per una struttura one-page e aumenta in base a pagine, funzionalità e ottimizzazione SEO.",
                 },
               },
               {
@@ -157,24 +156,24 @@ const Index = () => {
                   name: "Sito web per negozi",
                   url: "https://4weblab.it/siti-web-per-negozi",
                   priceCurrency: "EUR",
-                  price: "199",
-                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "199", valueAddedTaxIncluded: false },
+                  price: "490",
+                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "490", valueAddedTaxIncluded: false },
                 },
                 {
                   "@type": "Offer",
                   name: "Sito web per professionisti",
                   url: "https://4weblab.it/siti-web-per-professionisti",
                   priceCurrency: "EUR",
-                  price: "549",
-                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "549", valueAddedTaxIncluded: false },
+                  price: "990",
+                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "990", valueAddedTaxIncluded: false },
                 },
                 {
                   "@type": "Offer",
                   name: "Sito web aziendale",
                   url: "https://4weblab.it/siti-web-aziendali",
                   priceCurrency: "EUR",
-                  price: "899",
-                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "899", valueAddedTaxIncluded: false },
+                  price: "1890",
+                  priceSpecification: { "@type": "PriceSpecification", priceCurrency: "EUR", price: "1890", valueAddedTaxIncluded: false },
                 },
               ],
             },
@@ -204,7 +203,6 @@ const Index = () => {
 
       <main id="main-content">
         <Hero />
-        <SummerClosureNotice />
         <AboutSection />
         <StrengthsSection />
         <UserRoutingSection />

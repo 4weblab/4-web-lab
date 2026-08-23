@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import blogAiWebsite from "@/assets/blog-ai-website.webp";
@@ -101,9 +100,9 @@ const articles = [
 ];
 
 const Blog = () => {
-  const pageTitle = "Blog siti web 2026: guide, costi e SEO | 4 Web Lab";
+  const pageTitle = "Blog Siti Web, SEO e Strategie AI 2026 | 4 Web Lab Padova";
   const pageDescription =
-    "Guide 2026 su siti web, costi, GDPR, SEO e AI. Consigli per aziende, professionisti e negozi da 4 Web Lab, agenzia web di Padova.";
+    "Guide pratiche, approfondimenti su costi web, GDPR, SEO e AEO per far crescere la tua attività a Padova. Consigli dallo staff di 4 Web Lab.";
   const pageKeywords =
     "blog siti web, guide SEO, costi sito web, GDPR siti web, intelligenza artificiale siti web, agenzia web Padova, siti web aziendali, siti web professionisti";
   const pageUrl = "https://4weblab.it/blog";
@@ -235,7 +234,6 @@ const Blog = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* INTRO SEO */}
         <section className="pt-16 md:pt-20 pb-20 md:pb-24 bg-background">

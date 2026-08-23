@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -23,9 +22,9 @@ import {
 } from "lucide-react";
 
 const PAGE_URL = "https://4weblab.it/posizionamento-google-e-ai";
-const PAGE_TITLE = "SEO, AEO e GEO: posizionamento Google e AI | 4 Web Lab";
+const PAGE_TITLE = "Posizionamento SEO, AEO e GEO a Padova | Google & AI | 4 Web Lab";
 const PAGE_DESCRIPTION =
-  "Servizio SEO, AEO e GEO a Padova: ottimizziamo il tuo sito per Google e per gli assistenti AI come ChatGPT, Perplexity e Gemini. Preventivo gratuito.";
+  "Ottimizziamo il tuo sito per Google e per essere citato dagli assistenti IA come ChatGPT, Perplexity e Gemini. Fatti trovare dove cercano i clienti.";
 
 const faqItems: { question: string; answerText: string; answerNode: React.ReactNode }[] = [
   {
@@ -258,7 +257,6 @@ const PosizionamentoGoogleEAi = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* In sintesi (TL;DR AEO) */}
         <section className="section-padding bg-background">
@@ -588,17 +586,17 @@ const PosizionamentoGoogleEAi = () => {
                   {
                     to: "/siti-web-aziendali",
                     title: "Siti web aziendali",
-                    description: "Pacchetti strutturati per PMI da 899€.",
+                    description: "Pacchetti strutturati per PMI da 1890€.",
                   },
                   {
                     to: "/siti-web-per-professionisti",
                     title: "Siti per professionisti",
-                    description: "Soluzioni per studi e liberi professionisti da 549€.",
+                    description: "Soluzioni per studi e liberi professionisti da 990€.",
                   },
                   {
                     to: "/siti-web-per-negozi",
                     title: "Siti per negozi",
-                    description: "Pacchetto essenziale per attività locali da 199€.",
+                    description: "Pacchetto essenziale per attività locali da 490€.",
                   },
                   {
                     to: "/realizzazione-siti-web-padova",

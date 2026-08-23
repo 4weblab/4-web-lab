@@ -4,7 +4,6 @@ import { Helmet } from 'react-helmet-async';
 import { ChevronDown, HelpCircle } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import SummerClosureNotice from '@/components/SummerClosureNotice';
 import ContactSection from '@/components/ContactSection';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
 import PageBreadcrumb from '@/components/PageBreadcrumb';
@@ -14,17 +13,17 @@ const faqs = [
   id: 'costo-sito-web',
   question: 'Quanto costa realizzare un sito web?',
   answerText:
-  'Da 199€ una tantum per una one-page professionale. Il prezzo cresce in base a numero di pagine, funzionalità e ottimizzazione SEO: per un sito vetrina aziendale si parte da 899€, per un professionista da 549€. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.',
+  'Da 490€ una tantum per una one-page professionale. Il prezzo cresce in base a numero di pagine, funzionalità e ottimizzazione SEO: per un sito vetrina aziendale si parte da 1890€, per un professionista da 990€. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.',
   answer:
-  <><strong>Da 199€</strong> una tantum per una one-page professionale. Il prezzo cresce in base a numero di pagine, funzionalità e ottimizzazione SEO: per un sito vetrina aziendale si parte da 899€, per un professionista da 549€. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
+  <><strong>Da 490€</strong> una tantum per una one-page professionale. Il prezzo cresce in base a numero di pagine, funzionalità e ottimizzazione SEO: per un sito vetrina aziendale si parte da 1890€, per un professionista da 990€. Un progetto più completo richiede un investimento maggiore, ma consente una comunicazione più strutturata e una migliore capacità di generare contatti nel tempo.<br /><Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">Quanto costa un sito web nel 2026?</Link></>
 },
 {
   id: 'prezzo-sito-professionista',
   question: 'Qual è il prezzo di un sito web per un professionista?',
   answerText:
-  'Da 549€ una tantum per un sito professionale già ottimizzato. Per uno studio o un libero professionista il sito deve trasmettere autorevolezza e chiarezza, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.',
+  'Da 990€ una tantum per un sito professionale già ottimizzato. Per uno studio o un libero professionista il sito deve trasmettere autorevolezza e chiarezza, con possibilità di espansione futura. L\'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.',
   answer:
-  <><strong>Da 549€</strong> una tantum per un sito professionale già ottimizzato. Per uno studio o un libero professionista il sito deve trasmettere autorevolezza e chiarezza, con possibilità di espansione futura. L'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.<br /><Link to="/siti-web-per-professionisti" className="text-sm text-accent hover:underline inline-block mt-2">Siti web per professionisti</Link></>
+  <><strong>Da 990€</strong> una tantum per un sito professionale già ottimizzato. Per uno studio o un libero professionista il sito deve trasmettere autorevolezza e chiarezza, con possibilità di espansione futura. L'obiettivo non è solo presenza online, ma uno strumento che faciliti il contatto e rafforzi la credibilità.<br /><Link to="/siti-web-per-professionisti" className="text-sm text-accent hover:underline inline-block mt-2">Siti web per professionisti</Link></>
 },
 {
   id: 'tempi-realizzazione',
@@ -209,10 +208,10 @@ const FaqSitiWeb = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab</title>
+        <title>FAQ Siti Web, Costi e SEO AI (2026) | 4 Web Lab Padova</title>
         <meta
           name="description"
-          content="FAQ su realizzazione siti web nel 2026: costi, tempi, AI Overviews di Google, SGE e siti generati con AI. Risposte chiare da 4 Web Lab, Padova." />
+          content="Risposte chiare su costi, tempi di consegna, AI Overviews e posizionamento sui motori IA per la realizzazione di siti web a Padova." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/faq-realizzazione-siti-web" />
@@ -220,15 +219,15 @@ const FaqSitiWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta property="og:title" content="FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab" />
-        <meta property="og:description" content="FAQ su realizzazione siti web nel 2026: costi, tempi, AI Overviews di Google, SGE e siti generati con AI. Risposte chiare da 4 Web Lab, Padova." />
+        <meta property="og:title" content="FAQ Siti Web, Costi e SEO AI (2026) | 4 Web Lab Padova" />
+        <meta property="og:description" content="Risposte chiare su costi, tempi di consegna, AI Overviews e posizionamento sui motori IA per la realizzazione di siti web a Padova." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta name="twitter:title" content="FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab" />
-        <meta name="twitter:description" content="FAQ su realizzazione siti web nel 2026: costi, tempi, AI Overviews di Google, SGE e siti generati con AI. Risposte chiare da 4 Web Lab, Padova." />
+        <meta name="twitter:title" content="FAQ Siti Web, Costi e SEO AI (2026) | 4 Web Lab Padova" />
+        <meta name="twitter:description" content="Risposte chiare su costi, tempi di consegna, AI Overviews e posizionamento sui motori IA per la realizzazione di siti web a Padova." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
         {/* JSON-LD FAQPage */}
@@ -284,7 +283,6 @@ In questa pagina trovi risposte sintetiche e concrete alle domande più frequent
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* FAQ Accordion */}
         <section className="section-padding bg-background">

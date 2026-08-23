@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Posiziona le informazioni cruciali e la Call to Action principale "Above the Fold". Gli utenti devono capire cosa fai nei primi 3 secondi.
+          Cura le schede Open Graph. Quando condividi un link sui social o su WhatsApp, un'anteprima curata con foto e titolo aumenta notevolmente i clic.
         </p>
       </div>
     </div>

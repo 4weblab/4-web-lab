@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 
 import {
   Building2,
@@ -13,7 +12,6 @@ import {
   ArrowRight,
   CheckCircle2,
   Globe,
-  LayoutTemplate,
   Wrench,
   ChevronDown,
   MapPin,
@@ -40,29 +38,29 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web Aziendali Professionali da 899€ | 4 Web Lab</title>
+        <title>Siti Web Aziendali per PMI in Veneto | Da 1890€ | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web aziendali da 899€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
+          content="Sviluppo siti aziendali su misura da 1890€ per PMI. Prestazioni Jamstack, SEO avanzata, GEO per assistenti AI e Google Ads. Preventivo in 24h!"
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti Web Aziendali Professionali da 899€ | 4 Web Lab" />
+        <meta property="og:title" content="Siti Web Aziendali per PMI in Veneto | Da 1890€ | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Siti web aziendali da 899€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
+          content="Sviluppo siti aziendali su misura da 1890€ per PMI. Prestazioni Jamstack, SEO avanzata, GEO per assistenti AI e Google Ads. Preventivo in 24h!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta name="twitter:title" content="Siti Web Aziendali Professionali da 899€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Siti Web Aziendali per PMI in Veneto | Da 1890€ | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Siti web aziendali da 899€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
+          content="Sviluppo siti aziendali su misura da 1890€ per PMI. Prestazioni Jamstack, SEO avanzata, GEO per assistenti AI e Google Ads. Preventivo in 24h!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
@@ -98,7 +96,7 @@ const SitiWebAziendali = () => {
                 name: "4 Web Lab",
                 url: "https://4weblab.it/",
                 telephone: "+39 351 465 6042",
-                priceRange: "€899+",
+                priceRange: "€1890+",
                 image: "https://4weblab.it/og-image.webp",
                 address: {
                   "@type": "PostalAddress",
@@ -141,8 +139,8 @@ const SitiWebAziendali = () => {
                   url: "https://4weblab.it/siti-web-aziendali",
                   availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
-                  lowPrice: "899",
-                  highPrice: "1299",
+                  lowPrice: "1890",
+                  highPrice: "1890",
                   offerCount: 3,
                 },
               },
@@ -155,7 +153,7 @@ const SitiWebAziendali = () => {
                     name: "Quanto costa un sito web aziendale in Veneto?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Un sito web aziendale in Veneto costa da 899€ una tantum per la versione base, da 1.299€ per un sito multipagina strutturato, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                      text: "Un sito web aziendale in Veneto costa da 1890€ una tantum per la versione base, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
                     },
                   },
                   {
@@ -261,7 +259,7 @@ const SitiWebAziendali = () => {
                 4 Web Lab
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Realizziamo siti multipagina veloci, sicuri e ottimizzati per Google e IA. Da 899€, in Veneto e in tutta Italia.
+                Realizziamo siti multipagina veloci, sicuri e ottimizzati per Google e IA. Da 1890€, in Veneto e in tutta Italia.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi una valutazione gratuita
@@ -270,7 +268,7 @@ const SitiWebAziendali = () => {
 
               <div className="aeo-answer mt-10 mx-auto max-w-3xl text-left rounded-2xl bg-primary-foreground/8 border border-primary-foreground/15 p-6 md:p-7 backdrop-blur-sm">
                 <p className="text-primary-foreground/95 text-base md:text-lg leading-relaxed mb-4">
-                  <strong>4 Web Lab</strong> è la web agency con sede a Legnaro (Padova) specializzata nello sviluppo di siti aziendali su architettura Jamstack ed hosting Netlify. Combiniamo design su misura, predisposizione per l'Intelligenza Artificiale (AEO) e SEO integrata a partire da <strong>899€ una tantum</strong>.
+                  <strong>4 Web Lab</strong> è la web agency con sede a Legnaro (Padova) specializzata nello sviluppo di siti aziendali su architettura Jamstack ed hosting Netlify. Combiniamo design su misura, predisposizione per l'Intelligenza Artificiale (AEO) e SEO integrata a partire da <strong>1890€ una tantum</strong>.
                 </p>
                 <ul className="grid sm:grid-cols-3 gap-3 text-sm text-primary-foreground/85">
                   <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Esperienza su PMI e settori tecnici</li>
@@ -282,7 +280,6 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         {/* Perché un'azienda ha bisogno di un sito strutturato */}
         <section className="section-padding bg-background">
@@ -461,8 +458,8 @@ const SitiWebAziendali = () => {
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
-                        <td className="px-5 py-4">da 549€</td>
-                        <td className="px-5 py-4">da 899€ a 1.299€+</td>
+                        <td className="px-5 py-4">da 990€</td>
+                        <td className="px-5 py-4">da 1890€</td>
                         <td className="px-5 py-4">Preventivo su misura</td>
                       </tr>
                       <tr className="border-t border-border/50">
@@ -617,26 +614,18 @@ const SitiWebAziendali = () => {
                   .
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-8 mb-10" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-2 gap-8 mb-10" staggerDelay={0.1}>
                 {[
                   {
                     icon: Globe,
                     label: "Base",
-                    title: "Sito base",
-                    price: "A partire da 899€",
+                    title: "Sito aziendale",
+                    price: "A partire da 1890€",
                     priceNote: "IVA esclusa",
                     description:
                       "Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.",
                   },
-                  {
-                    icon: LayoutTemplate,
-                    label: "Intermedio",
-                    title: "Sito aziendale strutturato",
-                    price: "A partire da 1.299€",
-                    priceNote: "IVA esclusa",
-                    description:
-                      "Progetto completo con più pagine, organizzazione dei contenuti e struttura pensata per presentare un sito web aziendale in modo efficace.",
-                  },
+
                   {
                     icon: Wrench,
                     label: "Avanzato",
@@ -705,7 +694,7 @@ const SitiWebAziendali = () => {
                     {
                       question: "Quanto costa un sito web aziendale in Veneto?",
                       answer:
-                        "Un sito web aziendale in Veneto costa da 899€ una tantum per la versione base, da 1.299€ per un sito multipagina strutturato, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
+                        "Un sito web aziendale in Veneto costa da 1890€ una tantum per la versione base, mentre i progetti su misura vengono quotati in base agli obiettivi. I prezzi sono IVA esclusa e includono design, sviluppo e ottimizzazione SEO di base.",
                     },
                     {
                       question: "Quanto tempo serve per realizzare un sito web aziendale?",

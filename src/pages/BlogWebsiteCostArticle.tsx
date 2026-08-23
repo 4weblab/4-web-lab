@@ -4,7 +4,6 @@ import { ArrowRight, Calendar, Clock } from "lucide-react";
 import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SummerClosureNotice from "@/components/SummerClosureNotice";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
@@ -65,7 +64,7 @@ const sections: Section[] = [
     subSections: [
       {
         title: "Sito web per negozi",
-        price: "199€",
+        price: "490€",
         paragraphs: [
           "Un sito per negozi ha l’obiettivo principale di presentare prodotti, servizi e informazioni in modo chiaro e accessibile.",
           "È una soluzione pensata per avere una presenza online efficace, senza complicazioni inutili.",
@@ -73,7 +72,7 @@ const sections: Section[] = [
       },
       {
         title: "Sito web per professionisti",
-        price: "549€",
+        price: "990€",
         paragraphs: [
           "Per consulenti, liberi professionisti e attività individuali, il sito deve trasmettere fiducia e competenza.",
           "In questo caso, la struttura è orientata a valorizzare la persona e facilitare il contatto.",
@@ -81,7 +80,7 @@ const sections: Section[] = [
       },
       {
         title: "Sito web aziendale",
-        price: "899€",
+        price: "1890€",
         paragraphs: [
           "Per aziende strutturate, il sito diventa uno strumento più completo: presentazione, servizi, posizionamento e acquisizione contatti.",
           "Il costo varia in base alla complessità del progetto e agli obiettivi.",
@@ -291,7 +290,6 @@ const BlogWebsiteCostArticle = () => {
           </div>
         </section>
 
-        <SummerClosureNotice />
 
         <section className="article-intro-section">
           <div className="container-section">
