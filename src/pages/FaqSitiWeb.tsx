@@ -208,10 +208,10 @@ const FaqSitiWeb = () => {
   return (
     <>
       <Helmet>
-        <title>FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab</title>
+        <title>FAQ Siti Web, Costi e SEO AI (2026) | 4 Web Lab Padova</title>
         <meta
           name="description"
-          content="FAQ su realizzazione siti web nel 2026: costi, tempi, AI Overviews di Google, SGE e siti generati con AI. Risposte chiare da 4 Web Lab, Padova." />
+          content="Risposte chiare su costi, tempi di consegna, AI Overviews e posizionamento sui motori IA per la realizzazione di siti web a Padova." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/faq-realizzazione-siti-web" />
@@ -219,15 +219,15 @@ const FaqSitiWeb = () => {
         {/* Open Graph */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta property="og:title" content="FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab" />
-        <meta property="og:description" content="FAQ su realizzazione siti web nel 2026: costi, tempi, AI Overviews di Google, SGE e siti generati con AI. Risposte chiare da 4 Web Lab, Padova." />
+        <meta property="og:title" content="FAQ Siti Web, Costi e SEO AI (2026) | 4 Web Lab Padova" />
+        <meta property="og:description" content="Risposte chiare su costi, tempi di consegna, AI Overviews e posizionamento sui motori IA per la realizzazione di siti web a Padova." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/faq-realizzazione-siti-web" />
-        <meta name="twitter:title" content="FAQ Siti Web e AI: Costi, SGE e AI Overviews | 4 Web Lab" />
-        <meta name="twitter:description" content="FAQ su realizzazione siti web nel 2026: costi, tempi, AI Overviews di Google, SGE e siti generati con AI. Risposte chiare da 4 Web Lab, Padova." />
+        <meta name="twitter:title" content="FAQ Siti Web, Costi e SEO AI (2026) | 4 Web Lab Padova" />
+        <meta name="twitter:description" content="Risposte chiare su costi, tempi di consegna, AI Overviews e posizionamento sui motori IA per la realizzazione di siti web a Padova." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
         {/* JSON-LD FAQPage */}

@@ -22,9 +22,9 @@ import {
 } from "lucide-react";
 
 const PAGE_URL = "https://4weblab.it/posizionamento-google-e-ai";
-const PAGE_TITLE = "SEO, AEO e GEO: posizionamento Google e AI | 4 Web Lab";
+const PAGE_TITLE = "Posizionamento SEO, AEO e GEO a Padova | Google & AI | 4 Web Lab";
 const PAGE_DESCRIPTION =
-  "Servizio SEO, AEO e GEO a Padova: ottimizziamo il tuo sito per Google e per gli assistenti AI come ChatGPT, Perplexity e Gemini. Preventivo gratuito.";
+  "Ottimizziamo il tuo sito per Google e per essere citato dagli assistenti IA come ChatGPT, Perplexity e Gemini. Fatti trovare dove cercano i clienti.";
 
 const faqItems: { question: string; answerText: string; answerNode: React.ReactNode }[] = [
   {

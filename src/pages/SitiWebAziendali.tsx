@@ -38,29 +38,29 @@ const SitiWebAziendali = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web Aziendali Professionali da 1890€ | 4 Web Lab</title>
+        <title>Siti Web Aziendali per PMI in Veneto | Da 1890€ | 4 Web Lab</title>
         <meta
           name="description"
-          content="Siti web aziendali da 1890€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
+          content="Sviluppo siti aziendali su misura da 1890€ per PMI. Prestazioni Jamstack, SEO avanzata, GEO per assistenti AI e Google Ads. Preventivo in 24h!"
         />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://4weblab.it/siti-web-aziendali" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta property="og:title" content="Siti Web Aziendali Professionali da 1890€ | 4 Web Lab" />
+        <meta property="og:title" content="Siti Web Aziendali per PMI in Veneto | Da 1890€ | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Siti web aziendali da 1890€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
+          content="Sviluppo siti aziendali su misura da 1890€ per PMI. Prestazioni Jamstack, SEO avanzata, GEO per assistenti AI e Google Ads. Preventivo in 24h!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-aziendali" />
-        <meta name="twitter:title" content="Siti Web Aziendali Professionali da 1890€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Siti Web Aziendali per PMI in Veneto | Da 1890€ | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Siti web aziendali da 1890€ per PMI. Sviluppo su misura, ottimizzazione SEO e Google Ads in Veneto e tutta Italia. Richiedi un preventivo rapido in 24h!"
+          content="Sviluppo siti aziendali su misura da 1890€ per PMI. Prestazioni Jamstack, SEO avanzata, GEO per assistenti AI e Google Ads. Preventivo in 24h!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
