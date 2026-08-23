@@ -31,7 +31,7 @@ const ContactSection = () => {
             <div className="w-16 h-1 rounded-full mb-8 bg-accent" />
             <h2 className="heading-2 text-primary-foreground mb-5">Scopri se la tua attività viene consigliata da ChatGPT e Perplexity.</h2>
             <p className="body-large text-primary-foreground/70 mb-10 text-balance">
-              Richiedi un'Analisi AEO & SEO Gratuita del tuo sito. Analizziamo la tua presenza online a Padova per verificare se gli assistenti IA e Google suggeriscono il tuo brand ai clienti o se stanno inviando il traffico ai tuoi concorrenti. Parli ed entri in contatto diretto con lo sviluppatore, senza intermediari.
+              Richiedi un'Analisi AEO & SEO Gratuita del tuo sito. Analizziamo la tua presenza online per verificare se gli assistenti IA e Google suggeriscono il tuo brand ai clienti o se stanno inviando il traffico ai tuoi concorrenti. Parli ed entri in contatto diretto con lo sviluppatore, senza intermediari.
             </p>
 
             <ul className="space-y-5">
