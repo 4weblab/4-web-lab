@@ -1058,7 +1058,7 @@ const DemoPersonalTrainerVeraMethod = () => {
         <title>Sito Web per Personal Trainer Donna · Demo Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Demo concept di sito web premium per personal trainer donna, realizzata da 4 Web Lab, agenzia web di Padova. Siti per professionisti a partire da 990€."
+          content="Demo di sito web per personal trainer donna, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 990€."
         />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
@@ -1067,12 +1067,12 @@ const DemoPersonalTrainerVeraMethod = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonical} />
         <meta property="og:title" content="Sito Web per Personal Trainer Donna · Demo Padova | 4 Web Lab" />
-        <meta property="og:description" content="Concept premium antracite + coral per personal trainer donna. Demo realizzata da 4 Web Lab, agenzia web di Padova." />
+        <meta property="og:description" content="Demo di sito web per personal trainer donna e professionisti del fitness · 4 Web Lab, agenzia web di Padova. Da 990€." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sito Web per Personal Trainer Donna · Demo | 4 Web Lab" />
-        <meta name="twitter:description" content="Concept premium per personal trainer donna realizzato da 4 Web Lab." />
+        <meta name="twitter:title" content="Sito Web per Personal Trainer Donna · Demo Padova | 4 Web Lab" />
+        <meta name="twitter:description" content="Demo di sito web per personal trainer donna · 4 Web Lab, agenzia web di Padova. Da 990€." />
 
         <script type="application/ld+json">
           {JSON.stringify({
