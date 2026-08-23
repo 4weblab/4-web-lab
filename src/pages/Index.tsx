@@ -12,29 +12,29 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Web Agency Padova | Siti Web e SEO | 4 Web Lab</title>
+        <title>Realizzazione Siti Web e SEO Padova | 4 Web Lab</title>
         <meta
           name="description"
-          content="Web Agency a Padova specializzata in siti web professionali, SEO per Google/AI e Google Ads. Contattaci per un preventivo gratuito in 24 ore!"
+          content="Web Agency a Padova specializzata in siti web ultra-veloci e posizionamento SEO/AI (ChatGPT, Gemini). Richiedi un'analisi o preventivo in 24h!"
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/" />
-        <meta property="og:title" content="Web Agency Padova | Siti Web e SEO | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione Siti Web e SEO Padova | 4 Web Lab" />
         <meta
           property="og:description"
-          content="Web Agency a Padova specializzata in siti web professionali, SEO per Google/AI e Google Ads. Contattaci per un preventivo gratuito in 24 ore!"
+          content="Web Agency a Padova specializzata in siti web ultra-veloci e posizionamento SEO/AI (ChatGPT, Gemini). Richiedi un'analisi o preventivo in 24h!"
         />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/" />
-        <meta name="twitter:title" content="Web Agency Padova | Siti Web e SEO | 4 Web Lab" />
+        <meta name="twitter:title" content="Realizzazione Siti Web e SEO Padova | 4 Web Lab" />
         <meta
           name="twitter:description"
-          content="Web Agency a Padova specializzata in siti web professionali, SEO per Google/AI e Google Ads. Contattaci per un preventivo gratuito in 24 ore!"
+          content="Web Agency a Padova specializzata in siti web ultra-veloci e posizionamento SEO/AI (ChatGPT, Gemini). Richiedi un'analisi o preventivo in 24h!"
         />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
