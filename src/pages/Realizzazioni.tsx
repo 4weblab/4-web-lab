@@ -25,6 +25,7 @@ import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
 import imgRbSnc from "@/assets/rb-snc-edilizia.webp";
 import imgVeraMethod from "@/assets/vera-method-hero.webp";
+import imgElisaPiovan from "@/assets/elisa-piovan-pt.webp";
 
 interface Project {
   slug: string;
@@ -35,9 +36,24 @@ interface Project {
   features: string[];
   image: string;
   alt: string;
+  siteUrl?: string;
+  siteUrlLabel?: string;
 }
 
 const projects: Project[] = [
+  {
+    slug: "sito-web-elisa-piovan-personal-trainer-padova",
+    title: "Sito web per Elisa Piovan — Personal Trainer (Padova)",
+    description:
+      "Ci stiamo occupando della realizzazione del nuovo sito professionale di Elisa Piovan. Il restyling coprirà ogni aspetto del sito: struttura, grafica e aspetti tecnici legati a SEO, AEO e GEO, oltre alla gestione completa dell'hosting per assicurare i migliori punteggi nelle performance PageSpeed Insights.",
+    badge: "In sviluppo",
+    badgeVariant: "real",
+    features: ["Restyling completo", "Ottimizzazione SEO, AEO e GEO", "Hosting gestito"],
+    image: imgElisaPiovan,
+    alt: "Elisa Piovan, personal trainer a Padova, in palestra — nuovo sito professionale in sviluppo by 4 Web Lab",
+    siteUrl: "https://elitrainer.it",
+    siteUrlLabel: "elitrainer.it",
+  },
   {
     slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
     title: "Sito web R.B. s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
@@ -171,12 +187,12 @@ const Realizzazioni = () => {
               "@type": "ItemList",
               itemListOrder: "https://schema.org/ItemListOrderAscending",
               numberOfItems: projects.length,
-              itemListElement: projects.map((p, i) => ({
-                "@type": "ListItem",
-                position: i + 1,
-                url: `https://4weblab.it/realizzazioni/${p.slug}`,
-                name: p.title,
-                description: p.description,
+                itemListElement: projects.map((p, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  url: p.siteUrl ?? `https://4weblab.it/realizzazioni/${p.slug}`,
+                  name: p.title,
+                  description: p.description,
                 image: `https://4weblab.it${p.image}`,
               })),
             },
