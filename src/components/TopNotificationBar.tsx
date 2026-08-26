@@ -56,7 +56,7 @@ const TopNotificationBar = () => {
         <span className="font-semibold shrink-0">Consiglio del giorno:</span>
         <Lightbulb aria-hidden="true" className="w-4 h-4 shrink-0 text-yellow-400" />
         <p className="leading-snug">
-          Cura le schede Open Graph. Quando condividi un link sui social o su WhatsApp, un'anteprima curata con foto e titolo aumenta notevolmente i clic.
+          Usa i dati strutturati JSON-LD. Aiutano i motori di ricerca a comprendere il tuo business e attivano i rich snippet su Google.
         </p>
       </div>
     </div>

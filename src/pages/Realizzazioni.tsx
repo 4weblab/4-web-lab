@@ -25,6 +25,7 @@ import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
 import imgRbSnc from "@/assets/rb-snc-edilizia.webp";
 import imgVeraMethod from "@/assets/vera-method-hero.webp";
+import imgElisaPiovan from "@/assets/elisa-piovan-pt.webp";
 
 interface Project {
   slug: string;
@@ -35,9 +36,24 @@ interface Project {
   features: string[];
   image: string;
   alt: string;
+  siteUrl?: string;
+  siteUrlLabel?: string;
 }
 
 const projects: Project[] = [
+  {
+    slug: "sito-web-elisa-piovan-personal-trainer-padova",
+    title: "Sito web per Elisa Piovan — Personal Trainer (Padova)",
+    description:
+      "Ci stiamo occupando della realizzazione del nuovo sito professionale di Elisa Piovan. Il restyling coprirà ogni aspetto del sito: struttura, grafica e aspetti tecnici legati a SEO, AEO e GEO, oltre alla gestione completa dell'hosting per assicurare i migliori punteggi nelle performance PageSpeed Insights.",
+    badge: "In sviluppo",
+    badgeVariant: "real",
+    features: ["Restyling completo", "Ottimizzazione SEO, AEO e GEO", "Hosting gestito"],
+    image: imgElisaPiovan,
+    alt: "Elisa Piovan, personal trainer a Padova, in palestra — nuovo sito professionale in sviluppo by 4 Web Lab",
+    siteUrl: "https://elitrainer.it",
+    siteUrlLabel: "elitrainer.it",
+  },
   {
     slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
     title: "Sito web R.B. s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
@@ -171,12 +187,12 @@ const Realizzazioni = () => {
               "@type": "ItemList",
               itemListOrder: "https://schema.org/ItemListOrderAscending",
               numberOfItems: projects.length,
-              itemListElement: projects.map((p, i) => ({
-                "@type": "ListItem",
-                position: i + 1,
-                url: `https://4weblab.it/realizzazioni/${p.slug}`,
-                name: p.title,
-                description: p.description,
+                itemListElement: projects.map((p, i) => ({
+                  "@type": "ListItem",
+                  position: i + 1,
+                  url: p.siteUrl ?? `https://4weblab.it/realizzazioni/${p.slug}`,
+                  name: p.title,
+                  description: p.description,
                 image: `https://4weblab.it${p.image}`,
               })),
             },
@@ -284,20 +300,9 @@ const Realizzazioni = () => {
           <div className="container-section pt-16 md:pt-20">
             {/* Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-              {projects.map((p, idx) => (
-                <motion.div
-                  key={p.slug}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-50px" }}
-                  transition={{ duration: 0.45, delay: Math.min(idx * 0.05, 0.3) }}
-                >
-                  <Link
-                    to={`/realizzazioni/${p.slug}`}
-                    aria-label={`Apri demo: ${p.title}`}
-                    className="group block h-full bg-card rounded-2xl overflow-hidden border border-border transition-all duration-400 hover:-translate-y-1.5"
-                    style={{ boxShadow: "var(--shadow-md)" }}
-                  >
+              {projects.map((p, idx) => {
+                const cardBody = (
+                  <>
                     {/* Preview */}
                     <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                       <img
@@ -324,12 +329,25 @@ const Realizzazioni = () => {
                     </div>
 
                     {/* Body */}
-                    <div className="p-6 md:p-7 flex flex-col">
+                    <div className="p-6 md:p-7 flex flex-col flex-1">
                       <h3 className="text-xl font-semibold mb-2 group-hover:text-accent transition-colors duration-300">
                         {p.title}
                       </h3>
                       <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
                         {p.description}
+                        {p.siteUrl && (
+                          <>
+                            {" "}Sito attuale:{" "}
+                            <a
+                              href={p.siteUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-accent font-medium hover:underline"
+                            >
+                              {p.siteUrlLabel ?? p.siteUrl}
+                            </a>
+                          </>
+                        )}
                       </p>
                       <ul className="space-y-1.5 mb-5">
                         {p.features.map((f) => (
@@ -339,14 +357,44 @@ const Realizzazioni = () => {
                           </li>
                         ))}
                       </ul>
-                      <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
-                        Approfondisci
-                        <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      </span>
+                      {!p.siteUrl && (
+                        <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-accent">
+                          Approfondisci
+                          <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        </span>
+                      )}
                     </div>
-                  </Link>
-                </motion.div>
-              ))}
+                  </>
+                );
+
+                const cardClass =
+                  "group h-full bg-card rounded-2xl overflow-hidden border border-border transition-all duration-400 hover:-translate-y-1.5 flex flex-col";
+
+                return (
+                  <motion.div
+                    key={p.slug}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-50px" }}
+                    transition={{ duration: 0.45, delay: Math.min(idx * 0.05, 0.3) }}
+                  >
+                    {p.siteUrl ? (
+                      <div className={cardClass} style={{ boxShadow: "var(--shadow-md)" }}>
+                        {cardBody}
+                      </div>
+                    ) : (
+                      <Link
+                        to={`/realizzazioni/${p.slug}`}
+                        aria-label={`Apri demo: ${p.title}`}
+                        className={`block ${cardClass}`}
+                        style={{ boxShadow: "var(--shadow-md)" }}
+                      >
+                        {cardBody}
+                      </Link>
+                    )}
+                  </motion.div>
+                );
+              })}
               {/* Coming soon — placeholder card */}
               <motion.div
                 initial={{ opacity: 0, y: 24 }}
