@@ -118,7 +118,17 @@ const CookieBanner = () => {
                   </h2>
                   <p
                     id="cookie-banner-description"
-                    className="text-xs sm:text-sm text-muted-foreground leading-snug sm:leading-relaxed"
+                    className="text-xs sm:hidden text-muted-foreground leading-snug"
+                  >
+                    Usiamo cookie tecnici e, col tuo consenso, cookie statistici
+                    (GA4) per misurare l'uso del sito. Scelta revocabile.{' '}
+                    <Link to="/cookie" className="text-accent hover:underline font-medium">
+                      Cookie Policy
+                    </Link>
+                    .
+                  </p>
+                  <p
+                    className="hidden sm:block text-sm text-muted-foreground leading-relaxed"
                   >
                     Utilizziamo cookie tecnici necessari al funzionamento del sito e,
                     previo tuo consenso, cookie statistici di terze parti (Google Analytics 4)
