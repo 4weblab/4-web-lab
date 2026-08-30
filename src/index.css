@@ -505,6 +505,5 @@
 
 @media (max-width: 640px) {
   :root {
-    /* dynamic: set from TopNotificationBar via JS to real rendered height */
   }
 }
