@@ -97,7 +97,7 @@ const CookieBanner = () => {
       aria-labelledby="cookie-banner-title"
       aria-describedby="cookie-banner-description"
     >
-          <div className="container-section py-5 relative">
+          <div className="container-section py-3 sm:py-5 relative">
             <button
               onClick={handleDismiss}
               className="absolute top-3 right-3 sm:top-4 sm:right-4 p-2 text-muted-foreground hover:text-foreground transition-colors rounded-xl hover:bg-muted/50"
@@ -108,17 +108,17 @@ const CookieBanner = () => {
             </button>
 
             {view === 'banner' ? (
-              <div className="flex flex-col gap-4 pr-10">
+              <div className="flex flex-col gap-3 pr-10 sm:gap-4">
                 <div>
                   <h2
                     id="cookie-banner-title"
-                    className="text-base sm:text-lg font-semibold text-foreground mb-1"
+                    className="text-sm sm:text-lg font-semibold text-foreground mb-1"
                   >
                     Rispettiamo la tua privacy
                   </h2>
                   <p
                     id="cookie-banner-description"
-                    className="text-sm text-muted-foreground leading-relaxed"
+                    className="text-xs sm:text-sm text-muted-foreground leading-snug sm:leading-relaxed"
                   >
                     Utilizziamo cookie tecnici necessari al funzionamento del sito e,
                     previo tuo consenso, cookie statistici di terze parti (Google Analytics 4)
@@ -131,27 +131,27 @@ const CookieBanner = () => {
                     .
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-3">
+                <div className="grid grid-cols-3 gap-2 sm:flex sm:flex-row sm:flex-wrap sm:gap-3">
                   <button
                     onClick={handleRejectAll}
-                    className="py-2 px-5 text-sm rounded-xl border border-border bg-background hover:bg-muted/60 text-foreground font-medium transition-colors"
+                    className="py-2 px-2 sm:px-5 text-xs sm:text-sm rounded-xl border border-border bg-background hover:bg-muted/60 text-foreground font-medium transition-colors"
                     type="button"
                   >
-                    Rifiuta tutti
+                    Rifiuta
                   </button>
                   <button
                     onClick={handleOpenPreferences}
-                    className="py-2 px-5 text-sm rounded-xl border border-border bg-background hover:bg-muted/60 text-foreground font-medium transition-colors"
+                    className="py-2 px-2 sm:px-5 text-xs sm:text-sm rounded-xl border border-border bg-background hover:bg-muted/60 text-foreground font-medium transition-colors"
                     type="button"
                   >
                     Personalizza
                   </button>
                   <button
                     onClick={handleAcceptAll}
-                    className="btn-primary py-2 px-5 text-sm rounded-xl"
+                    className="btn-primary py-2 px-2 sm:px-5 text-xs sm:text-sm rounded-xl"
                     type="button"
                   >
-                    Accetta tutti
+                    Accetta
                   </button>
                 </div>
               </div>
