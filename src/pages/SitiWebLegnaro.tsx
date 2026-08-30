@@ -139,7 +139,7 @@ const SitiWebLegnaro = () => {
       </Helmet>
 
       {/* Header minimale - landing pura */}
-      <header className="absolute top-0 left-0 right-0 z-50" style={{ top: "var(--notification-bar-height)" }}>
+      <header className="absolute top-0 left-0 right-0 z-50">
         <nav className="container-section flex items-center justify-between py-5" aria-label="Navigazione landing">
           <Link to="/" aria-label="Vai alla home" className="flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
             <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo.webp" width={36} height={36} decoding="async" />

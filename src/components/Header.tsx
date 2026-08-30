@@ -60,9 +60,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
     if (element) {
       const styles = getComputedStyle(document.documentElement);
       const headerHeight = parseFloat(styles.getPropertyValue('--header-height')) * 16 || 72;
-      const barRaw = styles.getPropertyValue('--notification-bar-height');
-      const barHeight = barRaw ? parseFloat(barRaw) * 16 : 0;
-      const top = element.getBoundingClientRect().top + window.scrollY - headerHeight - barHeight;
+      const top = element.getBoundingClientRect().top + window.scrollY - headerHeight;
       window.scrollTo({ top, behavior: 'smooth' });
     }
   };
@@ -76,7 +74,6 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       }`}
       style={{
         height: 'var(--header-height)',
-        top: 'var(--notification-bar-height)',
         ...(isScrolled
           ? {
               background: 'var(--glass-bg)',

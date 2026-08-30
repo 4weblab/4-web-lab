@@ -122,7 +122,7 @@ const SitiWebProfessionisti = () => {
 
       <Header satelliteMode />
 
-      <main id="main-content" className="pt-[calc(var(--header-height)+var(--notification-bar-height))]">
+      <main id="main-content" className="pt-[var(--header-height)]">
         {/* Hero Section */}
         <section className="page-hero">
           <div className="container-section relative z-10">
