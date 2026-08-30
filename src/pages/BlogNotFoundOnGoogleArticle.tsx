@@ -34,8 +34,8 @@ const BlogNotFoundOnGoogleArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Perché il tuo Sito Non si Trova su Google? Soluzioni</title>
+        <meta name="description" content="Il tuo sito è invisibile nelle ricerche? 5 cause tecniche ed errori SEO frequenti con le istruzioni operative per farti indicizzare." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -51,8 +51,8 @@ const BlogNotFoundOnGoogleArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Perché il tuo Sito Non si Trova su Google? Soluzioni" />
+        <meta property="og:description" content="Il tuo sito è invisibile nelle ricerche? 5 cause tecniche ed errori SEO frequenti con le istruzioni operative per farti indicizzare." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -62,8 +62,8 @@ const BlogNotFoundOnGoogleArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Perché il tuo Sito Non si Trova su Google? Soluzioni" />
+        <meta name="twitter:description" content="Il tuo sito è invisibile nelle ricerche? 5 cause tecniche ed errori SEO frequenti con le istruzioni operative per farti indicizzare." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

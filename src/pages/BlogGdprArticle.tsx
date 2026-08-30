@@ -123,8 +123,8 @@ const BlogGdprArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>GDPR Siti Web 2026: Guida a Cookie Banner e Privacy</title>
+        <meta name="description" content="Cosa deve avere un sito web nel 2026 per evitare sanzioni GDPR? Regole ufficiali su cookie banner, consensi GA4 e informativa privacy." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -140,8 +140,8 @@ const BlogGdprArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="GDPR Siti Web 2026: Guida a Cookie Banner e Privacy" />
+        <meta property="og:description" content="Cosa deve avere un sito web nel 2026 per evitare sanzioni GDPR? Regole ufficiali su cookie banner, consensi GA4 e informativa privacy." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -151,8 +151,8 @@ const BlogGdprArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="GDPR Siti Web 2026: Guida a Cookie Banner e Privacy" />
+        <meta name="twitter:description" content="Cosa deve avere un sito web nel 2026 per evitare sanzioni GDPR? Regole ufficiali su cookie banner, consensi GA4 e informativa privacy." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

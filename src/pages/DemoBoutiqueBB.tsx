@@ -1250,11 +1250,8 @@ const DemoBoutiqueBB = () => {
   return (
     <>
       <Helmet>
-        <title>Sito Web per Boutique B&B · Demo Padova | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Demo di sito web per boutique B&B e luxury rooms, realizzata da 4 Web Lab, agenzia web di Padova specializzata in attività ricettive. Da 1890€."
-        />
+        <title>Sito Web per Boutique B&amp;B e Strutture Ricettive</title>
+        <meta name="description" content="Sito web per B&amp;B e luxury rooms: design d'impatto mobile-first, zero commissioni di intermediazione e posizionamento turistico." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
@@ -1264,22 +1261,16 @@ const DemoBoutiqueBB = () => {
         <meta property="article:author" content="4 Web Lab" />
         <meta property="article:section" content="Realizzazioni" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content="Sito Web per Boutique B&B · Demo Padova | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Demo di sito web per boutique B&B e luxury rooms · 4 Web Lab, agenzia web di Padova. Pacchetto aziendale da 1890€."
-        />
+        <meta property="og:title" content="Sito Web per Boutique B&amp;B e Strutture Ricettive" />
+        <meta property="og:description" content="Sito web per B&amp;B e luxury rooms: design d'impatto mobile-first, zero commissioni di intermediazione e posizionamento turistico." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og/boutique-bb-luxury-rooms.webp" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sito Web per Boutique B&B · Demo Padova | 4 Web Lab" />
-        <meta
-          name="twitter:description"
-          content="Demo di sito web per boutique B&B e luxury rooms · 4 Web Lab, agenzia web di Padova."
-        />
+        <meta name="twitter:title" content="Sito Web per Boutique B&amp;B e Strutture Ricettive" />
+        <meta name="twitter:description" content="Sito web per B&amp;B e luxury rooms: design d'impatto mobile-first, zero commissioni di intermediazione e posizionamento turistico." />
         <meta name="twitter:image" content="https://4weblab.it/og/boutique-bb-luxury-rooms.webp" />
 
         {/* Preload hero */}

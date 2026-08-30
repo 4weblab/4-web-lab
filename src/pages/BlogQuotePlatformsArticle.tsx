@@ -34,8 +34,8 @@ const BlogQuotePlatformsArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Piattaforme Preventivi Web (ProntoPro): Conviene?</title>
+        <meta name="description" content="Preventivi siti web a basso costo su piattaforme online: conveniente o errore strategico? Ecco cosa succede davvero alla qualità del codice." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -51,8 +51,8 @@ const BlogQuotePlatformsArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Piattaforme Preventivi Web (ProntoPro): Conviene?" />
+        <meta property="og:description" content="Preventivi siti web a basso costo su piattaforme online: conveniente o errore strategico? Ecco cosa succede davvero alla qualità del codice." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -62,8 +62,8 @@ const BlogQuotePlatformsArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Piattaforme Preventivi Web (ProntoPro): Conviene?" />
+        <meta name="twitter:description" content="Preventivi siti web a basso costo su piattaforme online: conveniente o errore strategico? Ecco cosa succede davvero alla qualità del codice." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

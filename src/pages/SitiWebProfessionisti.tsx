@@ -50,11 +50,8 @@ const SitiWebProfessionisti = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web per Professionisti e Studi | Da 990€ | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Siti web su misura per liberi professionisti, studi tecnici e legali. Architettura veloce, SEO e AEO per acquisire clienti qualificati."
-        />
+        <title>Siti Web per Liberi Professionisti e Studi | Da 990€</title>
+        <meta name="description" content="Piattaforme su misura per avvocati, consulenti e tecnici. Posizionamento SEO e AEO per acquisire clienti qualificati senza abbonamenti." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-per-professionisti" />
@@ -70,21 +67,15 @@ const SitiWebProfessionisti = () => {
         </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-per-professionisti" />
-        <meta property="og:title" content="Siti Web per Professionisti e Studi | Da 990€ | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Siti web su misura per liberi professionisti, studi tecnici e legali. Architettura veloce, SEO e AEO per acquisire clienti qualificati."
-        />
+        <meta property="og:title" content="Siti Web per Liberi Professionisti e Studi | Da 990€" />
+        <meta property="og:description" content="Piattaforme su misura per avvocati, consulenti e tecnici. Posizionamento SEO e AEO per acquisire clienti qualificati senza abbonamenti." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/siti-web-per-professionisti" />
-        <meta name="twitter:title" content="Siti Web per Professionisti e Studi | Da 990€ | 4 Web Lab" />
-        <meta
-          name="twitter:description"
-          content="Siti web su misura per liberi professionisti, studi tecnici e legali. Architettura veloce, SEO e AEO per acquisire clienti qualificati."
-        />
+        <meta name="twitter:title" content="Siti Web per Liberi Professionisti e Studi | Da 990€" />
+        <meta name="twitter:description" content="Piattaforme su misura per avvocati, consulenti e tecnici. Posizionamento SEO e AEO per acquisire clienti qualificati senza abbonamenti." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({

@@ -101,30 +101,21 @@ const PubblicitaGoogleAds = () => {
   return (
     <>
       <Helmet>
-        <title>Gestione Campagne Google Ads Padova e Veneto | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Gestione Google Ads per negozi, professionisti e PMI. Campagne pubblicitarie orientate alla conversione e al ROI. Richiedi una consulenza gratuita!"
-        />
+        <title>Gestione Campagne Google Ads Padova | 4 Web Lab</title>
+        <meta name="description" content="Acquisisci clienti pronti all'acquisto con campagne Google Ads ottimizzate. Zero sprechi di budget per negozi e PMI a Padova. Consulenza gratis." />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:title" content="Gestione Campagne Google Ads Padova e Veneto | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Gestione Google Ads per negozi, professionisti e PMI. Campagne pubblicitarie orientate alla conversione e al ROI. Richiedi una consulenza gratuita!"
-        />
+        <meta property="og:title" content="Gestione Campagne Google Ads Padova | 4 Web Lab" />
+        <meta property="og:description" content="Acquisisci clienti pronti all'acquisto con campagne Google Ads ottimizzate. Zero sprechi di budget per negozi e PMI a Padova. Consulenza gratis." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={PAGE_URL} />
-        <meta name="twitter:title" content="Gestione Campagne Google Ads Padova e Veneto | 4 Web Lab" />
-        <meta
-          name="twitter:description"
-          content="Gestione Google Ads per negozi, professionisti e PMI. Campagne pubblicitarie orientate alla conversione e al ROI. Richiedi una consulenza gratuita!"
-        />
+        <meta name="twitter:title" content="Gestione Campagne Google Ads Padova | 4 Web Lab" />
+        <meta name="twitter:description" content="Acquisisci clienti pronti all'acquisto con campagne Google Ads ottimizzate. Zero sprechi di budget per negozi e PMI a Padova. Consulenza gratis." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({

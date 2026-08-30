@@ -111,8 +111,8 @@ const Blog = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Blog Siti Web, SEO e AI Strategie 2026 | 4 Web Lab</title>
+        <meta name="description" content="Guide pratiche per PMI e professionisti: costi web 2026, posizionamento SEO, GDPR e come sfruttare l'IA per attirare clienti. Leggi gli articoli." />
         <meta name="keywords" content={pageKeywords} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
@@ -128,15 +128,15 @@ const Blog = () => {
         </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Blog Siti Web, SEO e AI Strategie 2026 | 4 Web Lab" />
+        <meta property="og:description" content="Guide pratiche per PMI e professionisti: costi web 2026, posizionamento SEO, GDPR e come sfruttare l'IA per attirare clienti. Leggi gli articoli." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Blog Siti Web, SEO e AI Strategie 2026 | 4 Web Lab" />
+        <meta name="twitter:description" content="Guide pratiche per PMI e professionisti: costi web 2026, posizionamento SEO, GDPR e come sfruttare l'IA per attirare clienti. Leggi gli articoli." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

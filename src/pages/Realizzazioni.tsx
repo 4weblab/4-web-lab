@@ -142,21 +142,15 @@ const Realizzazioni = () => {
   return (
     <>
       <Helmet>
-        <title>Portfolio e Casi Studio Siti Web Padova | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Scopri i progetti web e i restyling ad alte prestazioni realizzati da 4 Web Lab per negozi, professionisti e PMI a Padova e in tutta Italia."
-        />
+        <title>Casi Studio e Siti Web Realizzati a Padova | 4 Web Lab</title>
+        <meta name="description" content="Guarda i progetti web e i restyling ad alte prestazioni realizzati per negozi e PMI. Dati di traffico reali e prestazioni 100/100 verificate." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazioni" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazioni" />
-        <meta property="og:title" content="Portfolio e Casi Studio Siti Web Padova | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Scopri i progetti web e i restyling ad alte prestazioni realizzati da 4 Web Lab per negozi, professionisti e PMI a Padova e in tutta Italia."
-        />
+        <meta property="og:title" content="Casi Studio e Siti Web Realizzati a Padova | 4 Web Lab" />
+        <meta property="og:description" content="Guarda i progetti web e i restyling ad alte prestazioni realizzati per negozi e PMI. Dati di traffico reali e prestazioni 100/100 verificate." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og/realizzazioni-4weblab.webp" />
@@ -164,8 +158,8 @@ const Realizzazioni = () => {
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Portfolio 4 Web Lab — realizzazioni e concept di siti web a Padova" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Portfolio e Casi Studio Siti Web Padova | 4 Web Lab" />
-        <meta name="twitter:description" content="Scopri i progetti web e i restyling ad alte prestazioni realizzati da 4 Web Lab per negozi, professionisti e PMI a Padova e in tutta Italia." />
+        <meta name="twitter:title" content="Casi Studio e Siti Web Realizzati a Padova | 4 Web Lab" />
+        <meta name="twitter:description" content="Guarda i progetti web e i restyling ad alte prestazioni realizzati per negozi e PMI. Dati di traffico reali e prestazioni 100/100 verificate." />
         <meta name="twitter:image" content="https://4weblab.it/og/realizzazioni-4weblab.webp" />
 
         {/* CollectionPage + ItemList JSON-LD */}

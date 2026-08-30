@@ -135,8 +135,8 @@ const BlogSiteVsSocialArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Sito Web o Pagina Social nel 2026? Cosa Scegliere</title>
+        <meta name="description" content="Social network o sito di proprietà? Confronto strategico su acquisizione clienti, controllo dei dati e conversioni per attività locali." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -152,8 +152,8 @@ const BlogSiteVsSocialArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Sito Web o Pagina Social nel 2026? Cosa Scegliere" />
+        <meta property="og:description" content="Social network o sito di proprietà? Confronto strategico su acquisizione clienti, controllo dei dati e conversioni per attività locali." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -163,8 +163,8 @@ const BlogSiteVsSocialArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Sito Web o Pagina Social nel 2026? Cosa Scegliere" />
+        <meta name="twitter:description" content="Social network o sito di proprietà? Confronto strategico su acquisizione clienti, controllo dei dati e conversioni per attività locali." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({
