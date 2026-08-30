@@ -24,8 +24,8 @@ const Hero = () => {
       className="relative flex items-center justify-center overflow-hidden"
       style={{
         background: 'var(--gradient-hero)',
-        minHeight: 'calc(100svh - var(--header-height) - var(--notification-bar-height, 0px))',
-        paddingTop: 'calc(var(--header-height) + var(--notification-bar-height, 0px))',
+        minHeight: 'calc(100svh - var(--header-height))',
+        paddingTop: 'calc(var(--header-height))',
       }}>
 
       {/* Background image */}

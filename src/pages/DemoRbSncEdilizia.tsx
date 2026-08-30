@@ -85,7 +85,7 @@ const DemoRbSncEdilizia = () => {
 
       <Header satelliteMode />
 
-      <main id="main-content" className="pt-[calc(var(--header-height)+var(--notification-bar-height))]">
+      <main id="main-content" className="pt-[var(--header-height)]">
         {/* HERO */}
         <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28" style={{ background: "var(--gradient-hero)" }}>
           <div aria-hidden className="absolute inset-0 opacity-[0.15]" style={{
