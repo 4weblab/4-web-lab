@@ -297,13 +297,26 @@ const SitiWebLegnaro = () => {
         </section>
 
         {/* Conversione: doppia CTA */}
-        <section id="contatti-legnaro" className="section-padding bg-background" style={{ scrollMarginTop: "var(--header-height)" }}>
-          <div className="container-section">
+        <section
+          id="contatti-legnaro"
+          className="section-padding relative overflow-hidden"
+          style={{ background: "var(--gradient-hero)", scrollMarginTop: "var(--header-height)" }}
+        >
+          <div className="noise-overlay" aria-hidden="true">
+            <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <filter id="legnaro-contact-noise">
+                <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+              </filter>
+              <rect width="100%" height="100%" filter="url(#legnaro-contact-noise)" />
+            </svg>
+          </div>
+          <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
+          <div className="container-section relative z-10">
             <div className="max-w-3xl mx-auto">
               <AnimatedSection className="text-center mb-10">
                 <div className="section-divider" />
-                <h2 className="heading-2 mb-5">Parliamone di persona</h2>
-                <p className="body-large text-muted-foreground max-w-xl mx-auto text-balance">
+                <h2 className="heading-2 text-primary-foreground mb-5">Parliamone di persona</h2>
+                <p className="body-large text-primary-foreground/75 max-w-xl mx-auto text-balance">
                   Scrivici su WhatsApp per una risposta immediata, oppure compila il modulo: ti ricontattiamo entro 24
                   ore con un preventivo o un'analisi SEO gratuita del tuo sito attuale.
                 </p>
