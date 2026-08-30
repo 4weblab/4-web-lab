@@ -333,7 +333,7 @@ const SitiWebLegnaro = () => {
                   <MessageCircle className="w-6 h-6" aria-hidden="true" />
                   Scrivici su WhatsApp
                 </a>
-                <p className="text-xs text-muted-foreground mt-3 hidden md:block">
+                <p className="text-xs text-primary-foreground/50 mt-3 hidden md:block">
                   Da desktop si aprirà WhatsApp Web: puoi continuare la chat dal computer.
                 </p>
               </AnimatedSection>
