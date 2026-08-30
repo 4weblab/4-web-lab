@@ -185,8 +185,8 @@ const BlogWebsiteCostArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia</title>
+        <meta name="description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -202,8 +202,8 @@ const BlogWebsiteCostArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia" />
+        <meta property="og:description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -213,8 +213,8 @@ const BlogWebsiteCostArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia" />
+        <meta name="twitter:description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

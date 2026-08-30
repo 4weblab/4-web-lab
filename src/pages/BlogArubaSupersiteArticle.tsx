@@ -182,8 +182,8 @@ const BlogArubaSupersiteArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Aruba SuperSite Conviene? Limiti e Alternative 2026</title>
+        <meta name="description" content="Stai valutando Aruba SuperSite? Analizziamo limiti tecnici, costi nascosti e perché un sito fai-da-te rischia di bloccare la tua attività." />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -199,8 +199,8 @@ const BlogArubaSupersiteArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Aruba SuperSite Conviene? Limiti e Alternative 2026" />
+        <meta property="og:description" content="Stai valutando Aruba SuperSite? Analizziamo limiti tecnici, costi nascosti e perché un sito fai-da-te rischia di bloccare la tua attività." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -210,8 +210,8 @@ const BlogArubaSupersiteArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Aruba SuperSite Conviene? Limiti e Alternative 2026" />
+        <meta name="twitter:description" content="Stai valutando Aruba SuperSite? Analizziamo limiti tecnici, costi nascosti e perché un sito fai-da-te rischia di bloccare la tua attività." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

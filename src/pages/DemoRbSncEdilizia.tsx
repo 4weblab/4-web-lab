@@ -32,20 +32,14 @@ const DemoRbSncEdilizia = () => {
   return (
     <>
       <Helmet>
-        <title>R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Case study reale: restyling completo, ottimizzazione SEO e campagna Google Ads per R.B. s.n.c., impresa edile specializzata in rimozione eternit a Cittadella (PD)."
-        />
+        <title>Caso Studio R.B. s.n.c. Cittadella: Sito, SEO e Ads</title>
+        <meta name="description" content="Come abbiamo aumentato i contatti per l'impresa edile R.B. s.n.c. di Cittadella con un sito ultra-veloce e campagne Google Ads." />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={URL_PAGE} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={URL_PAGE} />
-        <meta property="og:title" content="R.B. s.n.c. Cittadella · sito, SEO e Google Ads | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Case study reale: restyling, SEO e Google Ads per un'impresa edile di Cittadella (PD) specializzata in rimozione eternit e rifacimento tetti."
-        />
+        <meta property="og:title" content="Caso Studio R.B. s.n.c. Cittadella: Sito, SEO e Ads" />
+        <meta property="og:description" content="Come abbiamo aumentato i contatti per l'impresa edile R.B. s.n.c. di Cittadella con un sito ultra-veloce e campagne Google Ads." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />

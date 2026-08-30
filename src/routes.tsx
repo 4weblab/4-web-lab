@@ -32,6 +32,11 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/SitiWebPadova.tsx",
       },
       {
+        path: "realizzazione-siti-web-legnaro",
+        lazy: page(() => import("./pages/SitiWebLegnaro")),
+        entry: "src/pages/SitiWebLegnaro.tsx",
+      },
+      {
         path: "siti-web-per-negozi",
         lazy: page(() => import("./pages/SitiWebNegozi")),
         entry: "src/pages/SitiWebNegozi.tsx",

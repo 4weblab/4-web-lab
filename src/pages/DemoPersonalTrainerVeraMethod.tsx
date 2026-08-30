@@ -1055,24 +1055,21 @@ const DemoPersonalTrainerVeraMethod = () => {
   return (
     <>
       <Helmet>
-        <title>Sito Web per Personal Trainer Donna · Demo Padova | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Demo di sito web per personal trainer donna, realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti per professionisti. Da 990€."
-        />
+        <title>Sito Web per Personal Trainer e Fitness Coach</title>
+        <meta name="description" content="Piattaforma personalizzata per personal trainer e professionisti del fitness: acquisizione lead, presentazione servizi e brand positioning." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={canonical} />
 
         <meta property="og:type" content="article" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content="Sito Web per Personal Trainer Donna · Demo Padova | 4 Web Lab" />
-        <meta property="og:description" content="Demo di sito web per personal trainer donna e professionisti del fitness · 4 Web Lab, agenzia web di Padova. Da 990€." />
+        <meta property="og:title" content="Sito Web per Personal Trainer e Fitness Coach" />
+        <meta property="og:description" content="Piattaforma personalizzata per personal trainer e professionisti del fitness: acquisizione lead, presentazione servizi e brand positioning." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sito Web per Personal Trainer Donna · Demo Padova | 4 Web Lab" />
-        <meta name="twitter:description" content="Demo di sito web per personal trainer donna · 4 Web Lab, agenzia web di Padova. Da 990€." />
+        <meta name="twitter:title" content="Sito Web per Personal Trainer e Fitness Coach" />
+        <meta name="twitter:description" content="Piattaforma personalizzata per personal trainer e professionisti del fitness: acquisizione lead, presentazione servizi e brand positioning." />
 
         <script type="application/ld+json">
           {JSON.stringify({
