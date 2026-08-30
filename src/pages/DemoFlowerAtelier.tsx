@@ -1191,11 +1191,8 @@ const DemoFlowerAtelier = () => {
   return (
     <>
       <Helmet>
-        <title>Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Demo realizzata da 4 Web Lab, agenzia web di Padova specializzata in siti web per negozi e attività locali. Pacchetto una tantum da 490€."
-        />
+        <title>Sito Web per Fiorerie e Vivai: Struttura Local SEO</title>
+        <meta name="description" content="Modello di sito web ad alte prestazioni per fiorerie: integrazione Google Maps, catalogo e acquisizione clienti locali." />
         <meta name="author" content="4 Web Lab" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={canonical} />
@@ -1205,11 +1202,8 @@ const DemoFlowerAtelier = () => {
         <meta property="article:author" content="4 Web Lab" />
         <meta property="article:section" content="Realizzazioni" />
         <meta property="og:url" content={canonical} />
-        <meta property="og:title" content="Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Pacchetto una tantum da 490€."
-        />
+        <meta property="og:title" content="Sito Web per Fiorerie e Vivai: Struttura Local SEO" />
+        <meta property="og:description" content="Modello di sito web ad alte prestazioni per fiorerie: integrazione Google Maps, catalogo e acquisizione clienti locali." />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta property="og:image" content="https://4weblab.it/og/flower-atelier-demo.webp" />
@@ -1218,11 +1212,8 @@ const DemoFlowerAtelier = () => {
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sito Web per Negozio (Fioreria) · Demo Padova | 4 Web Lab" />
-        <meta
-          name="twitter:description"
-          content="Demo di sito web per negozi realizzata da 4 Web Lab, agenzia web di Padova. Da 490€."
-        />
+        <meta name="twitter:title" content="Sito Web per Fiorerie e Vivai: Struttura Local SEO" />
+        <meta name="twitter:description" content="Modello di sito web ad alte prestazioni per fiorerie: integrazione Google Maps, catalogo e acquisizione clienti locali." />
         <meta name="twitter:image" content="https://4weblab.it/og/flower-atelier-demo.webp" />
 
         {/* Preload hero */}

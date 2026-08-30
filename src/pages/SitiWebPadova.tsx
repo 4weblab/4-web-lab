@@ -22,31 +22,22 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Realizzazione Siti Web Padova e Provincia | 4 Web Lab</title>
-        <meta
-          name="description"
-          content="Sviluppo siti web professionali a Padova e provincia per negozi, professionisti e PMI. Codice custom, SEO locale e AEO native. Analisi gratis."
-        />
+        <title>Sviluppo Siti Web Padova e Provincia | 4 Web Lab</title>
+        <meta name="description" content="Cerchi una web agency a Padova? Realizziamo siti professionali su misura per attività locali e PMI. Consegna in 2-4 settimane. Preventivo in 24h." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Realizzazione Siti Web Padova e Provincia | 4 Web Lab" />
-        <meta
-          property="og:description"
-          content="Sviluppo siti web professionali a Padova e provincia per negozi, professionisti e PMI. Codice custom, SEO locale e AEO native. Analisi gratis."
-        />
+        <meta property="og:title" content="Sviluppo Siti Web Padova e Provincia | 4 Web Lab" />
+        <meta property="og:description" content="Cerchi una web agency a Padova? Realizziamo siti professionali su misura per attività locali e PMI. Consegna in 2-4 settimane. Preventivo in 24h." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta name="twitter:title" content="Realizzazione Siti Web Padova e Provincia | 4 Web Lab" />
-        <meta
-          name="twitter:description"
-          content="Sviluppo siti web professionali a Padova e provincia per negozi, professionisti e PMI. Codice custom, SEO locale e AEO native. Analisi gratis."
-        />
+        <meta name="twitter:title" content="Sviluppo Siti Web Padova e Provincia | 4 Web Lab" />
+        <meta name="twitter:description" content="Cerchi una web agency a Padova? Realizziamo siti professionali su misura per attività locali e PMI. Consegna in 2-4 settimane. Preventivo in 24h." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
           {JSON.stringify({

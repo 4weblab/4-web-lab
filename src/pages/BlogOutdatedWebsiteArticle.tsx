@@ -126,8 +126,8 @@ const BlogOutdatedWebsiteArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Sito Web Obsoleto: 5 Segnali che Fanno Perdere Clienti</title>
+        <meta name="description" content="Il tuo sito ha più di 3 anni? Scopri i 5 segnali di obsolescenza tecnica e grafica che stanno deviando i tuoi clienti verso i concorrenti." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -143,8 +143,8 @@ const BlogOutdatedWebsiteArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Sito Web Obsoleto: 5 Segnali che Fanno Perdere Clienti" />
+        <meta property="og:description" content="Il tuo sito ha più di 3 anni? Scopri i 5 segnali di obsolescenza tecnica e grafica che stanno deviando i tuoi clienti verso i concorrenti." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -154,8 +154,8 @@ const BlogOutdatedWebsiteArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Sito Web Obsoleto: 5 Segnali che Fanno Perdere Clienti" />
+        <meta name="twitter:description" content="Il tuo sito ha più di 3 anni? Scopri i 5 segnali di obsolescenza tecnica e grafica che stanno deviando i tuoi clienti verso i concorrenti." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

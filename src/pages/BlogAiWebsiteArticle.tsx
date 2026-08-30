@@ -149,8 +149,8 @@ const BlogAiWebsiteArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Siti Web Generati con IA: Pro, Contro e Limiti 2026</title>
+        <meta name="description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -166,8 +166,8 @@ const BlogAiWebsiteArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Siti Web Generati con IA: Pro, Contro e Limiti 2026" />
+        <meta property="og:description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -177,8 +177,8 @@ const BlogAiWebsiteArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Siti Web Generati con IA: Pro, Contro e Limiti 2026" />
+        <meta name="twitter:description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

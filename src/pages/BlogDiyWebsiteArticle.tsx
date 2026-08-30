@@ -35,8 +35,8 @@ const BlogDiyWebsiteArticle = () => {
   return (
     <>
       <Helmet>
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
+        <title>Creare un Sito Web da Soli Conviene? Rischi e Costi</title>
+        <meta name="description" content="Creare un sito con Wix o WordPress da soli fa davvero risparmiare? Scopri i costi nascosti, i rischi SEO e la perdita di clienti reali." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <script type="application/ld+json">
@@ -52,8 +52,8 @@ const BlogDiyWebsiteArticle = () => {
         </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
+        <meta property="og:title" content="Creare un Sito Web da Soli Conviene? Rischi e Costi" />
+        <meta property="og:description" content="Creare un sito con Wix o WordPress da soli fa davvero risparmiare? Scopri i costi nascosti, i rischi SEO e la perdita di clienti reali." />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -63,8 +63,8 @@ const BlogDiyWebsiteArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content={pageTitle} />
-        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:title" content="Creare un Sito Web da Soli Conviene? Rischi e Costi" />
+        <meta name="twitter:description" content="Creare un sito con Wix o WordPress da soli fa davvero risparmiare? Scopri i costi nascosti, i rischi SEO e la perdita di clienti reali." />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({

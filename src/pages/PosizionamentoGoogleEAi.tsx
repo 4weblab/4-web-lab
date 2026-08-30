@@ -22,9 +22,9 @@ import {
 } from "lucide-react";
 
 const PAGE_URL = "https://4weblab.it/posizionamento-google-e-ai";
-const PAGE_TITLE = "Posizionamento SEO, AEO e GEO a Padova | Google & AI | 4 Web Lab";
+const PAGE_TITLE = "Posizionamento SEO e AEO Padova | Google, ChatGPT & Gemini";
 const PAGE_DESCRIPTION =
-  "Ottimizziamo il tuo sito per Google e per essere citato dagli assistenti IA come ChatGPT, Perplexity e Gemini. Fatti trovare dove cercano i clienti.";
+  "Ottimizziamo il tuo sito per scalare Google ed essere la risposta consigliata dagli assistenti IA (ChatGPT, Perplexity, Gemini). Richiedi l'audit.";
 
 const faqItems: { question: string; answerText: string; answerNode: React.ReactNode }[] = [
   {
@@ -120,21 +120,21 @@ const PosizionamentoGoogleEAi = () => {
   return (
     <>
       <Helmet>
-        <title>{PAGE_TITLE}</title>
-        <meta name="description" content={PAGE_DESCRIPTION} />
+        <title>Posizionamento SEO e AEO Padova | Google, ChatGPT &amp; Gemini</title>
+        <meta name="description" content="Ottimizziamo il tuo sito per scalare Google ed essere la risposta consigliata dagli assistenti IA (ChatGPT, Perplexity, Gemini). Richiedi l'audit." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={PAGE_URL} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={PAGE_URL} />
-        <meta property="og:title" content={PAGE_TITLE} />
-        <meta property="og:description" content={PAGE_DESCRIPTION} />
+        <meta property="og:title" content="Posizionamento SEO e AEO Padova | Google, ChatGPT &amp; Gemini" />
+        <meta property="og:description" content="Ottimizziamo il tuo sito per scalare Google ed essere la risposta consigliata dagli assistenti IA (ChatGPT, Perplexity, Gemini). Richiedi l'audit." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={PAGE_URL} />
-        <meta name="twitter:title" content={PAGE_TITLE} />
-        <meta name="twitter:description" content={PAGE_DESCRIPTION} />
+        <meta name="twitter:title" content="Posizionamento SEO e AEO Padova | Google, ChatGPT &amp; Gemini" />
+        <meta name="twitter:description" content="Ottimizziamo il tuo sito per scalare Google ed essere la risposta consigliata dagli assistenti IA (ChatGPT, Perplexity, Gemini). Richiedi l'audit." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
         <script type="application/ld+json">
