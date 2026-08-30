@@ -3,36 +3,35 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, MapPin, Zap, Sparkles, MessageCircle, Store, Briefcase, Building2, Check } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
-import Footer from "@/components/Footer";
-import legnaroProssimita from "@/assets/legnaro-prossimita.webp";
-import legnaroVelocita from "@/assets/legnaro-velocita.webp";
-import legnaroIa from "@/assets/legnaro-ia.webp";
+import pioveProssimita from "@/assets/piove-prossimita.webp";
+import pioveVelocita from "@/assets/piove-velocita.webp";
+import pioveIa from "@/assets/piove-ia.webp";
 
-const TITLE = "Web Agency Legnaro e Piove di Sacco | Siti Web da 490€";
+const TITLE = "Web Agency Piove di Sacco | Siti Web per Negozi e PMI da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per attività di Legnaro, Saonara e Piove di Sacco. Contatto diretto, zero intermediari e preventivo in 24h.";
-const URL = "https://4weblab.it/realizzazione-siti-web-legnaro";
+  "Realizzazione siti web ultra-veloci a Piove di Sacco e Saccisica. Zero WordPress, zero abbonamenti, contatto diretto e consegna rapida in 14 giorni.";
+const URL = "https://4weblab.it/realizzazione-siti-web-piove-di-sacco";
 
 const vantaggi = [
   {
-    image: legnaroProssimita,
-    alt: "Incontro diretto tra sviluppatore e titolare di attività locale",
+    image: pioveProssimita,
+    alt: "Incontro diretto tra sviluppatore e titolare di attività a Piove di Sacco",
     icon: MapPin,
     title: "Prossimità Reale",
     description:
-      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice a due passi dalla tua attività.",
+      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice a due passi dalla tua attività nella Saccisica.",
   },
   {
-    image: legnaroVelocita,
-    alt: "Sito web ultra-veloce con architettura Jamstack",
+    image: pioveVelocita,
+    alt: "Sito web ultra-veloce con architettura Jamstack a Piove di Sacco",
     icon: Zap,
     title: "Zero Manutenzione",
     description:
       "Architettura Jamstack pura. Nessun plugin che si rompe, nessun aggiornamento mensile obbligatorio, velocità 100/100 fissa.",
   },
   {
-    image: legnaroIa,
-    alt: "Sito web consigliato dai motori di ricerca e dagli assistenti IA",
+    image: pioveIa,
+    alt: "Sito web di Piove di Sacco consigliato dai motori di ricerca e dagli assistenti IA",
     icon: Sparkles,
     title: "Pronti per l'IA",
     description:
@@ -65,7 +64,35 @@ const pacchetti = [
   },
 ];
 
-const SitiWebLegnaro = () => {
+const MinimalFooter = () => {
+  const currentYear = new Date().getFullYear();
+  return (
+    <footer className="bg-primary text-primary-foreground py-10">
+      <div className="container-section">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+          <div className="flex flex-col md:flex-row items-center gap-x-4 gap-y-1 text-sm text-primary-foreground/55">
+            <span>© {currentYear} 4 Web Lab. Tutti i diritti riservati.</span>
+            <span className="hidden md:inline text-primary-foreground/25">|</span>
+            <span>4 Web Lab di Fullin Carlo — P.IVA: 05765760284</span>
+          </div>
+          <div className="flex items-center gap-4 text-sm">
+            <Link to="/" className="text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+              Home
+            </Link>
+            <Link to="/privacy" className="text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+              Privacy Policy
+            </Link>
+            <Link to="/cookie" className="text-primary-foreground/55 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+              Cookie Policy
+            </Link>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+const SitiWebPioveDiSacco = () => {
   return (
     <>
       <Helmet>
@@ -93,7 +120,7 @@ const SitiWebLegnaro = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Legnaro", item: URL },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Piove di Sacco", item: URL },
                 ],
               },
               {
@@ -117,12 +144,12 @@ const SitiWebLegnaro = () => {
               },
               {
                 "@type": "Service",
-                name: "Realizzazione siti web a Legnaro e Saccisica",
+                name: "Realizzazione siti web a Piove di Sacco e Saccisica",
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
-                  { "@type": "City", name: "Legnaro" },
-                  { "@type": "City", name: "Saonara" },
                   { "@type": "City", name: "Piove di Sacco" },
+                  { "@type": "City", name: "Codevigo" },
+                  { "@type": "City", name: "Ponte Longo" },
                   { "@type": "AdministrativeArea", name: "Saccisica" },
                 ],
                 offers: {
@@ -160,10 +187,10 @@ const SitiWebLegnaro = () => {
         <section className="page-hero">
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="legnaro-hero-noise">
+              <filter id="piove-hero-noise">
                 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
               </filter>
-              <rect width="100%" height="100%" filter="url(#legnaro-hero-noise)" />
+              <rect width="100%" height="100%" filter="url(#piove-hero-noise)" />
             </svg>
           </div>
           <div className="hero-spotlight" aria-hidden="true" />
@@ -176,18 +203,18 @@ const SitiWebLegnaro = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Sviluppo Siti Web a Legnaro: Soluzioni per Negozi e PMI Senza WordPress
+                Sviluppo Siti Web a Piove di Sacco: Soluzioni per Negozi, Studi e PMI Senza WordPress
               </h1>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sei un'attività della zona di Legnaro o della Saccisica? Creiamo siti web ultra-veloci, sicuri e pronti
-                per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei online.
+                Sei un'attività commerciale o un professionista a Piove di Sacco? Realizziamo siti web ultra-veloci, sicuri e pronti
+                per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni il tuo business è online.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
-                  onClick={() => document.getElementById("contatti-legnaro")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("contatti-piove")?.scrollIntoView({ behavior: "smooth" })}
                   className="btn-primary text-lg px-10 py-4"
                   aria-label="Richiedi una valutazione gratuita"
                 >
@@ -203,7 +230,7 @@ const SitiWebLegnaro = () => {
                 </a>
               </div>
               <p className="text-primary-foreground/95 text-sm sm:text-base font-medium mt-6">
-                Sede a Legnaro (PD) • Preventivo in 24 ore • Online in 14 giorni
+                Sede a due passi dalla Saccisica • Preventivo in 24 ore • Online in 14 giorni
               </p>
             </AnimatedSection>
           </div>
@@ -214,9 +241,9 @@ const SitiWebLegnaro = () => {
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
-              <h2 className="heading-2 mb-5">Perché scegliere un web studio di Legnaro</h2>
+              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino a Piove di Sacco</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per le attività di Legnaro, Saonara, Piove di Sacco e di tutta la Saccisica.
+                Tre vantaggi concreti per le attività di Piove di Sacco, Codevigo, Ponte Longo e di tutta la Saccisica.
               </p>
             </AnimatedSection>
 
@@ -298,16 +325,16 @@ const SitiWebLegnaro = () => {
 
         {/* Conversione: doppia CTA */}
         <section
-          id="contatti-legnaro"
+          id="contatti-piove"
           className="section-padding relative overflow-hidden"
           style={{ background: "var(--gradient-hero)", scrollMarginTop: "var(--header-height)" }}
         >
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="legnaro-contact-noise">
+              <filter id="piove-contact-noise">
                 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
               </filter>
-              <rect width="100%" height="100%" filter="url(#legnaro-contact-noise)" />
+              <rect width="100%" height="100%" filter="url(#piove-contact-noise)" />
             </svg>
           </div>
           <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
@@ -346,9 +373,9 @@ const SitiWebLegnaro = () => {
         </section>
       </main>
 
-      <Footer />
+      <MinimalFooter />
     </>
   );
 };
 
-export default SitiWebLegnaro;
+export default SitiWebPioveDiSacco;

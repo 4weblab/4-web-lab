@@ -1,7 +1,6 @@
 import { Suspense, lazy, useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
-import TopNotificationBar from "@/components/TopNotificationBar";
 import { initAnalyticsBridge } from "@/lib/analytics";
 import { useGaPageview } from "@/hooks/useGaPageview";
 
@@ -40,7 +39,6 @@ const Layout = () => {
   return (
     <>
       <ScrollToTop />
-      <TopNotificationBar />
       <Suspense fallback={null}>
         <Outlet />
       </Suspense>
