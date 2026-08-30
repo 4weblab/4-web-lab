@@ -1,0 +1,1 @@
+- [Legnaro Landing](mem://features/landing-pages/local-seo-legnaro-page) — /realizzazione-siti-web-legnaro landing pura, header minimale, form solo su sfondo scuro
