@@ -66,8 +66,8 @@ const UserRoutingSection = () => {
                     alt={card.imageAlt}
                     loading="lazy"
                     decoding="async"
-                    // @ts-expect-error attributo HTML valido non ancora tipizzato
-                    fetchpriority="low"
+                    fetchPriority="low"
+
 
                     width={800}
                     height={512}
