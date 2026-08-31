@@ -86,7 +86,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
     >
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <Link to="/" aria-label="Vai alla home" className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
-          <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo.webp" width={36} height={36} decoding="async" />
+          <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo-72.webp" srcSet="/logo-72.webp 72w, /logo-144.webp 144w" sizes="36px" width={36} height={36} decoding="async" />
           <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground lg:text-foreground'}`}>
             4 Web Lab
           </span>
