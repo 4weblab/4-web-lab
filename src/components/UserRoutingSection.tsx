@@ -65,6 +65,10 @@ const UserRoutingSection = () => {
                     src={card.image}
                     alt={card.imageAlt}
                     loading="lazy"
+                    decoding="async"
+                    fetchPriority="low"
+
+
                     width={800}
                     height={512}
                     className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
