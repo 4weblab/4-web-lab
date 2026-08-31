@@ -29,7 +29,9 @@ const Footer = () => {
               <img
                 alt="4 Web Lab logo"
                 className="w-10 h-10 rounded-xl object-contain"
-                src="/logo.webp"
+                src="/logo-72.webp"
+                srcSet="/logo-72.webp 72w, /logo-144.webp 144w"
+                sizes="40px"
                 width={40}
                 height={40}
                 loading="lazy"
