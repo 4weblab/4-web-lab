@@ -37,11 +37,32 @@ const beasties = new Beasties({
   logLevel: 'warn',
 });
 
+/**
+ * Beasties' `preload: 'swap'` still leaves a plain `<link rel="stylesheet">`
+ * (with a no-op onload) in the document, which Lighthouse counts as
+ * render-blocking. Convert those tags — outside <noscript> — into
+ * media="print" + onload swap so they load without blocking first paint.
+ */
+function deblockStylesheets(html) {
+  const parts = html.split(/(<noscript>[\s\S]*?<\/noscript>)/i);
+  return parts
+    .map((part) => {
+      if (/^<noscript>/i.test(part)) return part;
+      return part.replace(/<link\b[^>]*rel=["']stylesheet["'][^>]*>/gi, (tag) => {
+        if (/\bmedia=/i.test(tag)) return tag;
+        return tag
+          .replace(/\s*onload=(["'])[\s\S]*?\1/i, '')
+          .replace(/\s*\/?>$/, ` media="print" onload="this.media='all'">`);
+      });
+    })
+    .join('');
+}
+
 const htmlFiles = await walk(distDir);
 let processed = 0;
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
-  const out = await beasties.process(html);
+  const out = deblockStylesheets(await beasties.process(html));
   await writeFile(file, out, 'utf8');
   processed++;
 }
