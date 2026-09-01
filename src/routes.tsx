@@ -62,6 +62,12 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/PubblicitaGoogleAds.tsx",
       },
       {
+        path: "chatgpt-ads",
+        lazy: page(() => import("./pages/ChatGptAds")),
+        entry: "src/pages/ChatGptAds.tsx",
+      },
+
+      {
         path: "blog",
         lazy: page(() => import("./pages/Blog")),
         entry: "src/pages/Blog.tsx",
