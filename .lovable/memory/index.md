@@ -1,1 +1,2 @@
 - [Legnaro Landing](mem://features/landing-pages/local-seo-legnaro-page) — /realizzazione-siti-web-legnaro landing pura, header minimale, form solo su sfondo scuro
+- [ChatGPT Ads Landing](mem://features/landing-pages/chatgpt-ads-page) — /chatgpt-ads landing verticale, form 2 campi, mockup chat, Service+FAQPage JSON-LD
