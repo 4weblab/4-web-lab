@@ -59,6 +59,16 @@ const AboutSection = () => {
           <p className="aeo-answer body-large text-muted-foreground max-w-3xl mx-auto text-balance">
             <strong>4 Web Lab</strong> è uno studio web con sede a <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">Padova</Link> che realizza siti professionali, <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le IA</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link> per negozi, professionisti e PMI in tutta Italia.
           </p>
+          <Link
+            to="/chatgpt-ads"
+            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full border-2 border-accent/60 bg-accent/5 text-accent font-semibold text-sm hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 shadow-sm"
+          >
+            <span className="relative flex h-2 w-2">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
+            </span>
+            Scopri il nuovo servizio di pubblicità in Chat GPT
+          </Link>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
