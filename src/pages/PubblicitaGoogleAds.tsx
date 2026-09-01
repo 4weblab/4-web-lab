@@ -9,8 +9,6 @@ import {
   MapPin,
   Search,
   BarChart3,
-  ShoppingBag,
-  Youtube,
   HelpCircle,
   Layers,
   Sparkles,
@@ -18,7 +16,6 @@ import {
   CheckCircle2,
   Sliders,
   Zap,
-  Repeat,
   Store,
   UserCheck,
   Building2,
@@ -444,10 +441,6 @@ const PubblicitaGoogleAds = () => {
                 {[
                   { icon: Search, name: "Search", desc: "Annunci testuali sui risultati di ricerca Google" },
                   { icon: Sparkles, name: "Performance Max", desc: "Campagne automatiche multi-canale ad alta resa" },
-                  { icon: ShoppingBag, name: "Shopping", desc: "Schede prodotto con immagine e prezzo per e-commerce" },
-                  { icon: Layers, name: "Display", desc: "Banner visivi sui siti partner del network Google" },
-                  { icon: Youtube, name: "YouTube ADS", desc: "Video pubblicitari prima e durante i contenuti YouTube" },
-                  { icon: Repeat, name: "Remarketing", desc: "Annunci a chi ha già visitato il tuo sito web" },
                   { icon: MapPin, name: "Local", desc: "Annunci geolocalizzati per portare clienti in negozio" },
                 ].map((t, i) => (
                   <StaggerItem key={i}>
