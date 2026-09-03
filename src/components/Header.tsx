@@ -5,8 +5,6 @@ import { Link, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
-  { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
-  { label: 'Google ADS', href: '/pubblicita-google-ads' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
@@ -172,26 +170,28 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                         <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
                       </button>
                       {servicesOpen && (
-                        <ul
-                          className="absolute left-0 top-full mt-2 min-w-[15rem] rounded-xl border border-border/40 bg-background/95 py-2"
-                          style={{
-                            backdropFilter: 'blur(14px)',
-                            WebkitBackdropFilter: 'blur(14px)',
-                            boxShadow: 'var(--shadow-lg)',
-                          }}
-                        >
-                          {serviceItems.map((service) => (
-                            <li key={service.label} className={service.separatorBefore ? 'mt-2 border-t border-border/40 pt-2' : ''}>
-                              <Link
-                                to={service.href}
-                                className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted/60 transition-colors duration-300"
-                                onClick={() => setServicesOpen(false)}
-                              >
-                                {service.label}
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
+                        <div className="absolute left-0 top-full pt-2">
+                          <ul
+                            className="min-w-[15rem] rounded-xl border border-border/40 bg-background/95 py-2"
+                            style={{
+                              backdropFilter: 'blur(14px)',
+                              WebkitBackdropFilter: 'blur(14px)',
+                              boxShadow: 'var(--shadow-lg)',
+                            }}
+                          >
+                            {serviceItems.map((service) => (
+                              <li key={service.label} className={service.separatorBefore ? 'mt-2 border-t border-border/40 pt-2' : ''}>
+                                <Link
+                                  to={service.href}
+                                  className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted/60 transition-colors duration-300"
+                                  onClick={() => setServicesOpen(false)}
+                                >
+                                  {service.label}
+                                </Link>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       )}
                     </li>
                   )}
