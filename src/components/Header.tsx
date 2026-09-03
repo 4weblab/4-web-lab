@@ -1,16 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, ArrowLeft } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Menu, X, ArrowLeft, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Siti web', href: '/#sitiweb' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
   { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
   { label: 'Google ADS', href: '/pubblicita-google-ads' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
+];
+
+const serviceItems = [
+  { label: 'Siti per Negozi', href: '/siti-web-per-negozi' },
+  { label: 'Siti per Professionisti', href: '/siti-web-per-professionisti' },
+  { label: 'Siti per Aziende', href: '/siti-web-aziendali' },
+  { label: 'SEO, AEO & GEO', href: '/posizionamento-google-e-ai', separatorBefore: true },
+  { label: 'Google ADS', href: '/pubblicita-google-ads' },
+  { label: 'ChatGPT Ads', href: '/chatgpt-ads' },
 ];
 interface HeaderProps {
   satelliteMode?: boolean;
