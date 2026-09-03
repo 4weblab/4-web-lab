@@ -1,4 +1,4 @@
-import { Users, Target, Lightbulb, Star, Quote } from 'lucide-react';
+import { Users, Target, Lightbulb, Star, Quote, Zap, Search, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
 
@@ -20,34 +20,44 @@ const testimonials = [
   },
 ];
 
-const cards = [{
-  icon: Users,
-  title: 'Contatto Diretto con gli Sviluppatori',
-  description: 'Parli ed entri in contatto diretto con chi progetta e scrive il codice del tuo sito, senza intermediari o commercialisti.'
-}, {
-  icon: Target,
-  title: 'Architettura GEO & AEO Native',
-  description: 'Ogni riga di codice e di copy è ottimizzata per intercettare sia le ricerche tradizionali Google sia le raccomandazioni degli agenti IA.'
-}, {
-  icon: Lightbulb,
-  title: 'Codice Custom Senza Template',
-  description: 'Sviluppo 100% su misura senza l\'uso di page builder pesanti o temi WordPress predefiniti: massima velocità e sicurezza.'
-}];
-
-const guarantees = [
+const cards: { icon: typeof Users; title: string; description: React.ReactNode }[] = [
   {
-    label: 'Tempi certi (2-4 settimane)',
-    text: 'Dallo studio di fattibilità alla pubblicazione online, garantiamo tempi di consegna definiti senza ritardi.',
+    icon: Zap,
+    title: 'Performance & Core Web Vitals',
+    description: 'Sviluppiamo codice statico custom privo di database pesanti o plugin ridondanti, garantendo punteggi vicini al 100/100 sui principali strumenti di analisi delle prestazioni. Ogni pagina viene erogata istantaneamente tramite reti CDN globali (Netlify). Risultato: tempi di risposta minimi, massima sicurezza contro i problemi di vulnerabilità e un vantaggio competitivo concreto sui motori di ricerca.',
   },
   {
-    label: 'Infrastruttura Jamstack & Netlify',
-    text: 'Realizziamo siti web statici ad altissime prestazioni, azzerando i tempi di caricamento e i costi di manutenzione server.',
+    icon: Search,
+    title: 'SEO Tradizionale e AEO/GEO Native',
+    description: 'Ottimizziamo la struttura semantica del sito per Google e per i motori di ricerca IA (ChatGPT, Gemini, Perplexity). Rendiamo il tuo brand la fonte citata dagli agenti IA per intercettare lead qualificati.',
   },
   {
-    label: 'Risultati Verificati',
-    text: <>Progetti reali con dati di traffico e conversioni misurabili, come il restyling per <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link></>,
+    icon: Users,
+    title: 'Referente Tecnico Dedicato',
+    description: 'Parli ed entri in contatto diretto con chi progetta e scrive il codice del tuo sito, senza intermediari o commercialisti.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Codice Custom Senza Template',
+    description: 'Sviluppo 100% su misura senza l\'uso di page builder pesanti o temi WordPress predefiniti: massima velocità e sicurezza.',
+  },
+  {
+    icon: Smartphone,
+    title: 'UX & Design Mobile-First',
+    description: 'Interfaccia e navigazione progettate prioritariamente per smartphone e tablet: layout reattivi, codice leggero ed esperienza utente fluida su qualsiasi dispositivo.',
+  },
+  {
+    icon: Target,
+    title: 'Tempi Certi e Risultati Verificati',
+    description: (
+      <>
+        Dallo studio di fattibilità alla pubblicazione online, garantiamo tempi di consegna definiti (2-4 settimane) senza ritardi, con progetti reali e dati di traffico e conversioni misurabili, come il restyling per{' '}
+        <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link>
+      </>
+    ),
   },
 ];
+
 
 const AboutSection = () => {
   return (
@@ -71,38 +81,22 @@ const AboutSection = () => {
           </Link>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <AnimatedSection className="md:pt-2" direction="left">
-            <h3 className="sr-only">Le garanzie tecniche</h3>
-            <ul className="space-y-5">
-              {guarantees.map((item, index) => (
-                <li key={index} className="flex gap-3 text-muted-foreground">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                  <span>
-                    <strong className="text-foreground">{item.label}:</strong>{' '}
-                    {item.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </AnimatedSection>
-
-          <StaggerContainer className="grid gap-4" staggerDelay={0.12}>
-            {cards.map((card, index) => (
-              <StaggerItem key={index}>
-                <div className="card-glass flex items-start gap-5 group hover:-translate-y-1.5 transition-all duration-400">
-                  <div className="icon-box w-13 h-13 flex-shrink-0">
-                    <card.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-sans font-bold text-lg mb-1.5">{card.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{card.description}</p>
-                  </div>
+        <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
+          {cards.map((card, index) => (
+            <StaggerItem key={index}>
+              <div className="card-glass h-full flex flex-col items-start gap-4 group hover:-translate-y-1.5 transition-all duration-400">
+                <div className="icon-box w-13 h-13 flex-shrink-0">
+                  <card.icon className="w-6 h-6 text-white" aria-hidden="true" />
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
+                <div>
+                  <h3 className="font-sans font-bold text-lg mb-1.5">{card.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{card.description}</p>
+                </div>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
 
         {/* Testimonials */}
         <AnimatedSection className="text-center mt-20 mb-10">

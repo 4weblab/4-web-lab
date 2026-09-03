@@ -2,11 +2,12 @@ import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
+import TrustBar from "@/components/TrustBar";
 import AboutSection from "@/components/AboutSection";
-import StrengthsSection from "@/components/StrengthsSection";
 import UserRoutingSection from "@/components/UserRoutingSection";
 import HomeFaqPreview from "@/components/HomeFaqPreview";
 import ContactSection from "@/components/ContactSection";
+
 
 const Index = () => {
   return (
@@ -194,11 +195,12 @@ const Index = () => {
 
       <main id="main-content">
         <Hero />
-        <AboutSection />
-        <StrengthsSection />
+        <TrustBar />
         <UserRoutingSection />
+        <AboutSection />
         <HomeFaqPreview />
         <ContactSection />
+
       </main>
 
       <Footer />
