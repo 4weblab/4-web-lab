@@ -67,8 +67,8 @@ const ContactSection = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <div>
-                  <p className="text-xs uppercase tracking-wider text-primary-foreground/40 mb-0.5">Località</p>
-                  <p className="text-primary-foreground">Padova – Italia</p>
+                  <p className="text-xs uppercase tracking-wider text-primary-foreground/40 mb-0.5">Area di servizio</p>
+                  <p className="text-primary-foreground">Padova e provincia</p>
                   <p className="text-sm text-primary-foreground/60">Disponibili da remoto in tutta Italia</p>
                 </div>
               </li>

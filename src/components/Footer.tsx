@@ -39,7 +39,7 @@ const Footer = () => {
               <span className="font-serif text-xl font-bold">{businessInfo.name}</span>
             </Link>
             <p className="text-primary-foreground/60 leading-relaxed text-sm">
-              Studio di soluzioni web per negozi, professionisti ed aziende con sede a Padova. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione per attività in tutta Italia.
+              Studio di soluzioni web per negozi, professionisti ed aziende con base a Legnaro (Padova), attivo su Padova e provincia. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione per attività in tutta Italia.
             </p>
           </div>
 
@@ -91,6 +91,16 @@ const Footer = () => {
               <li>
                 <Link to="/faq-realizzazione-siti-web" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
                   Domande Frequenti (FAQ)
+                </Link>
+              </li>
+              <li>
+                <Link to="/chatgpt-ads" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  ChatGPT Ads
+                </Link>
+              </li>
+              <li>
+                <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Siti Web a Padova
                 </Link>
               </li>
             </ul>

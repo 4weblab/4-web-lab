@@ -76,6 +76,8 @@ export default function ContactFormChatGptAds() {
 
     formData.append("access_key", ACCESS_KEY);
     formData.append("subject", "Richiesta valutazione ChatGPT Ads dal sito");
+    formData.append("from_name", "4 Web Lab – Landing ChatGPT Ads");
+    formData.append("replyto", email);
 
     setStatus({ state: "sending", message: "Invio in corso..." });
 

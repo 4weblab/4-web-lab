@@ -1,42 +1,54 @@
 # 4 Web Lab
 
-> Agenzia web di Padova specializzata nella realizzazione di siti professionali per negozi, professionisti e aziende. Pacchetti una tantum da 199€, SEO locale e assistenza dedicata.
+> Studio di sviluppo web con base a Legnaro (Padova), specializzato in siti web statici ultra-veloci (Jamstack/Netlify) senza WordPress né page builder, ottimizzati nativamente per SEO, AEO e GEO. Realizza siti per negozi e attività locali, liberi professionisti e PMI in tutta Italia, con consegna in 2-4 settimane e contatto diretto con lo sviluppatore.
 
-4 Web Lab (Legnaro, Padova) progetta siti web veloci, ottimizzati SEO e conformi al GDPR. Telefono: +39 351 465 6042. Sito: https://4weblab.it.
+4 Web Lab non usa temi WordPress predefiniti né page builder: ogni sito è sviluppato con codice statico custom, erogato tramite CDN globali (Netlify), con l'obiettivo di ottenere punteggi vicini al 100/100 sui principali strumenti di analisi delle prestazioni. Oltre alla realizzazione siti, l'agenzia offre posizionamento SEO/AEO/GEO, gestione di campagne Google ADS e gestione di campagne ChatGPT Ads.
 
-## Pages
+## Servizi
 
-- [Home](/): chi siamo, servizi e contatti.
-- [Realizzazione siti web Padova](/realizzazione-siti-web-padova): landing locale per Padova e provincia.
-- [Siti web per negozi](/siti-web-per-negozi): pacchetto da 199€ per attività commerciali.
-- [Siti web per professionisti](/siti-web-per-professionisti): da 549€ per studi e liberi professionisti.
-- [Siti web aziendali](/siti-web-aziendali): da 899€ per PMI strutturate.
-- [FAQ siti web](/faq-realizzazione-siti-web): risposte su costi, tempi, AI e SEO.
-- [Posizionamento Google e AI (SEO, AEO, GEO)](/posizionamento-google-e-ai): servizio di ottimizzazione per Google e per assistenti AI come ChatGPT, Perplexity, Gemini e Copilot.
-- [Realizzazioni](/realizzazioni): demo e concept di siti web realizzati da 4 Web Lab.
-- [Blog](/blog): guide su siti web, costi, GDPR, SEO e intelligenza artificiale.
-- [Contatti](/contatti): preventivo gratuito in 24 ore.
+- [Siti Web per Negozi e Attività Locali](https://4weblab.it/siti-web-per-negozi): Da 490€. Presenza web ultra-veloce ottimizzata per Local SEO, Google Maps e ricerche geolocalizzate degli assistenti IA, pensata per negozi fisici e attività locali.
+- [Siti Web per Liberi Professionisti](https://4weblab.it/siti-web-per-professionisti): Da 990€. Piattaforme personalizzate per personal brand di studi legali, consulenti e artigiani, orientate all'acquisizione di lead qualificati e alla citazione da parte delle chat IA.
+- [Siti Web Aziendali per PMI](https://4weblab.it/siti-web-aziendali): Da 1890€. Architetture complesse e performanti per piccole e medie imprese, con posizionamento SEO/AEO avanzato e generazione di contatti B2B.
+- [SEO, AEO e GEO](https://4weblab.it/posizionamento-google-e-ai): Posizionamento su Google (SEO), ottimizzazione per risposte dirette come AI Overviews e featured snippet (AEO), e ottimizzazione per essere citati da ChatGPT, Perplexity, Gemini e Copilot (GEO). Metodo in 5 fasi: audit, strategia di entità e keyword, ottimizzazione on-page e dati strutturati, contenuti AEO/GEO, monitoraggio.
+- [Google ADS](https://4weblab.it/pubblicita-google-ads): Gestione completa di campagne Search, Performance Max e Local per negozi, professionisti e PMI, con setup, ottimizzazione continua e report mensili.
+- [ChatGPT Ads](https://4weblab.it/chatgpt-ads): Gestione di campagne pubblicitarie conversazionali su ChatGPT Ads, rivolte a servizi B2B, prodotti/servizi ad alto scontrino e lead generation qualificata.
+- [Siti Web a Padova e provincia](https://4weblab.it/realizzazione-siti-web-padova): Landing dedicata alla realizzazione siti web per attività di Padova e provincia.
 
-## Demo & Concept
+## Realizzazioni
 
-- [Demo Studio Dentistico](/realizzazioni/demo-studio-dentistico-premium): concept di sito per studio odontoiatrico.
-- [Demo Metalmeccanica](/realizzazioni/demo-metalmeccanica): concept B2B per azienda metalmeccanica.
-- [Demo Boutique B&B](/realizzazioni/demo-boutique-bb-luxury-rooms): concept per struttura ricettiva luxury.
-- [Demo Fotovoltaico](/realizzazioni/demo-fotovoltaico): concept per azienda di impianti fotovoltaici.
-- [Demo Flower Atelier](/realizzazioni/demo-flower-atelier): concept per negozio di fiori e attività locali.
+- [Portfolio e concept](https://4weblab.it/realizzazioni): Panoramica di progetti reali e concept dimostrativi per settore.
+- [R.B. s.n.c. — edilizia, rimozione eternit e rifacimento tetti (Cittadella, PD)](https://4weblab.it/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto): Progetto reale online, restyling completo, ottimizzazione SEO on-page e campagna Google Ads attiva.
+- [Concept — Personal Trainer (Vera Method)](https://4weblab.it/realizzazioni/demo-personal-trainer-vera-method)
+- [Concept — Azienda metalmeccanica](https://4weblab.it/realizzazioni/demo-metalmeccanica)
+- [Concept — Studio dentistico premium](https://4weblab.it/realizzazioni/demo-studio-dentistico-premium)
+- [Concept — Azienda fotovoltaica](https://4weblab.it/realizzazioni/demo-fotovoltaico)
+- [Concept — Boutique B&B e luxury rooms](https://4weblab.it/realizzazioni/boutique-bb-luxury-rooms)
+- [Concept — Negozio, fioreria (Flower Atelier)](https://4weblab.it/realizzazioni/demo-flower-atelier)
 
 ## Blog
 
-- [Quanto costa un sito web nel 2026](/blog/quanto-costa-un-sito-web-nel-2026): prezzi reali in Italia.
-- [Siti web creati con intelligenza artificiale](/blog/siti-web-creati-con-intelligenza-artificiale): opportunità e rischi.
-- [Sito web o social network](/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026): cosa conviene davvero.
-- [GDPR siti web 2026](/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy): obblighi cookie e privacy.
-- [Sito web obsoleto](/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026): 5 segnali che fanno perdere clienti.
-- [Perché il tuo sito non si trova su Google](/blog/perche-il-tuo-sito-non-si-trova-su-google): SEO di base.
-- [Siti web su piattaforme di preventivi](/blog/siti-web-piattaforme-preventivi-online-conviene): conviene davvero?
-- [Creare un sito da soli](/blog/creare-sito-web-da-soli-conviene): rischi e costi nascosti.
+- [Quanto costa un sito web nel 2026?](https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026)
+- [Perché il tuo sito non si trova su Google](https://4weblab.it/blog/perche-il-tuo-sito-non-si-trova-su-google)
+- [Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026](https://4weblab.it/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026)
+- [Sito web o social network: cosa conviene davvero per un'attività nel 2026?](https://4weblab.it/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026)
+- [Siti web fatti con intelligenza artificiale: opportunità o rischio?](https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale)
+- [GDPR siti web 2026: obblighi, cookie e privacy](https://4weblab.it/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy)
+- [Creare un sito web da soli conviene davvero?](https://4weblab.it/blog/creare-sito-web-da-soli-conviene)
+- [Aruba SuperSite conviene davvero?](https://4weblab.it/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere)
+- [Siti web su piattaforme di preventivi online: conviene davvero?](https://4weblab.it/blog/siti-web-piattaforme-preventivi-online-conviene)
 
-## Optional
+## Azienda
 
-- [Privacy Policy](/privacy)
-- [Cookie Policy](/cookie)
+- Nome: 4 Web Lab, di Fullin Carlo — P.IVA 05765760284
+- Base operativa: Legnaro (PD), Via Belluno 44, 35020 Legnaro (PD)
+- Area di servizio: Padova e provincia; disponibili da remoto in tutta Italia
+- Contatti: info@4weblab.it — +39 351 465 6042 — WhatsApp: https://wa.me/393514656042
+- Valutazione media: 4.9/5 su Google Business Profile
+- Differenzianti dichiarati: nessun uso di WordPress o page builder, codice statico custom, infrastruttura Jamstack/Netlify, tempi di consegna certi (2-4 settimane), contatto diretto con lo sviluppatore senza intermediari commerciali
+
+## Pagine utili
+
+- [FAQ sulla realizzazione siti web](https://4weblab.it/faq-realizzazione-siti-web)
+- [Contatti](https://4weblab.it/contatti)
+- [Privacy Policy](https://4weblab.it/privacy)
+- [Cookie Policy](https://4weblab.it/cookie)
