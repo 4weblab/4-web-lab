@@ -1,16 +1,24 @@
-import { useState, useEffect } from 'react';
-import { Menu, X, ArrowLeft } from 'lucide-react';
+import { useState, useEffect, useRef, Fragment } from 'react';
+import { Menu, X, ArrowLeft, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
   { label: 'Home', href: '/' },
-  { label: 'Siti web', href: '/#sitiweb' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
   { label: 'SEO & AI', href: '/posizionamento-google-e-ai' },
   { label: 'Google ADS', href: '/pubblicita-google-ads' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
+];
+
+const serviceItems = [
+  { label: 'Siti per Negozi', href: '/siti-web-per-negozi' },
+  { label: 'Siti per Professionisti', href: '/siti-web-per-professionisti' },
+  { label: 'Siti per Aziende', href: '/siti-web-aziendali' },
+  { label: 'SEO, AEO & GEO', href: '/posizionamento-google-e-ai', separatorBefore: true },
+  { label: 'Google ADS', href: '/pubblicita-google-ads' },
+  { label: 'ChatGPT Ads', href: '/chatgpt-ads' },
 ];
 interface HeaderProps {
   satelliteMode?: boolean;
@@ -20,6 +28,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLLIElement>(null);
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
 
@@ -121,26 +132,70 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                 ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
                 : {};
               return (
-                <li key={item.href}>
-                  {isRoute ? (
-                    <Link to={item.href} className={baseClass} style={activeStyle}>
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <a
-                      href={item.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavClick(item.href);
-                      }}
-                      className={baseClass}
-                      style={activeStyle}
-                      aria-current={isActive ? 'page' : undefined}
+                <Fragment key={item.href}>
+                  <li>
+                    {isRoute ? (
+                      <Link to={item.href} className={baseClass} style={activeStyle}>
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavClick(item.href);
+                        }}
+                        className={baseClass}
+                        style={activeStyle}
+                        aria-current={isActive ? 'page' : undefined}
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </li>
+                  {item.href === '/' && (
+                    <li
+                      key="servizi"
+                      className="relative"
+                      ref={servicesRef}
+                      onMouseEnter={() => setServicesOpen(true)}
+                      onMouseLeave={() => setServicesOpen(false)}
                     >
-                      {item.label}
-                    </a>
+                      <button
+                        type="button"
+                        className={`${baseClass} inline-flex items-center gap-1.5`}
+                        aria-expanded={servicesOpen}
+                        aria-haspopup="true"
+                        onClick={() => setServicesOpen((v) => !v)}
+                      >
+                        Servizi
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {servicesOpen && (
+                        <ul
+                          className="absolute left-0 top-full mt-2 min-w-[15rem] rounded-xl border border-border/40 bg-background/95 py-2"
+                          style={{
+                            backdropFilter: 'blur(14px)',
+                            WebkitBackdropFilter: 'blur(14px)',
+                            boxShadow: 'var(--shadow-lg)',
+                          }}
+                        >
+                          {serviceItems.map((service) => (
+                            <li key={service.label} className={service.separatorBefore ? 'mt-2 border-t border-border/40 pt-2' : ''}>
+                              <Link
+                                to={service.href}
+                                className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted/60 transition-colors duration-300"
+                                onClick={() => setServicesOpen(false)}
+                              >
+                                {service.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
                   )}
-                </li>
+                </Fragment>
               );
             })}
           </ul>
@@ -195,25 +250,58 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                     isActive ? 'bg-accent text-accent-foreground' : 'text-foreground hover:bg-muted/60'
                   }`;
                   return (
-                    <li key={item.href}>
-                      {isRoute ? (
-                        <Link to={item.href} className={cls} onClick={() => setIsOpen(false)}>
-                          {item.label}
-                        </Link>
-                      ) : (
-                        <a
-                          href={item.href}
-                          onClick={(e) => {
-                            e.preventDefault();
-                            handleNavClick(item.href);
-                          }}
-                          className={cls}
-                          aria-current={isActive ? 'page' : undefined}
-                        >
-                          {item.label}
-                        </a>
+                    <Fragment key={item.href}>
+                      <li>
+                        {isRoute ? (
+                          <Link to={item.href} className={cls} onClick={() => setIsOpen(false)}>
+                            {item.label}
+                          </Link>
+                        ) : (
+                          <a
+                            href={item.href}
+                            onClick={(e) => {
+                              e.preventDefault();
+                              handleNavClick(item.href);
+                            }}
+                            className={cls}
+                            aria-current={isActive ? 'page' : undefined}
+                          >
+                            {item.label}
+                          </a>
+                        )}
+                      </li>
+                      {item.href === '/' && (
+                        <li>
+                          <button
+                            type="button"
+                            className={`${cls} w-full flex items-center justify-between text-left`}
+                            aria-expanded={mobileServicesOpen}
+                            onClick={() => setMobileServicesOpen((v) => !v)}
+                          >
+                            Servizi
+                            <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${mobileServicesOpen ? 'rotate-180' : ''}`} />
+                          </button>
+                          {mobileServicesOpen && (
+                            <ul className="mt-1 mb-1 ml-3 border-l border-border/40 pl-3 flex flex-col gap-1">
+                              {serviceItems.map((service) => (
+                                <li key={service.label} className={service.separatorBefore ? 'mt-1 border-t border-border/40 pt-1' : ''}>
+                                  <Link
+                                    to={service.href}
+                                    className="block px-4 py-2.5 rounded-xl text-sm font-medium text-foreground hover:bg-muted/60 transition-all duration-300"
+                                    onClick={() => {
+                                      setIsOpen(false);
+                                      setMobileServicesOpen(false);
+                                    }}
+                                  >
+                                    {service.label}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
+                        </li>
                       )}
-                    </li>
+                    </Fragment>
                   );
                 })}
               </ul>
