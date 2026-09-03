@@ -38,14 +38,26 @@ const AccordionContent = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
+  // `forceMount` keeps the answer text in the DOM/prerendered HTML even when the
+  // panel is collapsed (Radix would otherwise unmount it), so crawlers can read it.
+  // Radix still sets the `hidden` attribute when closed: we neutralise it with
+  // `[&[hidden]]:block` and collapse the panel via height/opacity transitions
+  // instead of unmounting or `display: none`.
   <AccordionPrimitive.Content
     ref={ref}
-    className="overflow-hidden text-sm transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+    forceMount
+    className={cn(
+      "overflow-hidden text-sm [&[hidden]]:block",
+      "transition-[height,opacity] duration-200 ease-out motion-reduce:transition-none",
+      "data-[state=closed]:h-0 data-[state=closed]:opacity-0 data-[state=closed]:pointer-events-none",
+      "data-[state=open]:h-[var(--radix-accordion-content-height)] data-[state=open]:opacity-100",
+    )}
     {...props}
   >
     <div className={cn("pb-4 pt-0", className)}>{children}</div>
   </AccordionPrimitive.Content>
 ));
+
 
 AccordionContent.displayName = AccordionPrimitive.Content.displayName;
 
