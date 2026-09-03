@@ -129,26 +129,70 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                 ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
                 : {};
               return (
-                <li key={item.href}>
-                  {isRoute ? (
-                    <Link to={item.href} className={baseClass} style={activeStyle}>
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <a
-                      href={item.href}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavClick(item.href);
-                      }}
-                      className={baseClass}
-                      style={activeStyle}
-                      aria-current={isActive ? 'page' : undefined}
+                <>
+                  <li key={item.href}>
+                    {isRoute ? (
+                      <Link to={item.href} className={baseClass} style={activeStyle}>
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        href={item.href}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNavClick(item.href);
+                        }}
+                        className={baseClass}
+                        style={activeStyle}
+                        aria-current={isActive ? 'page' : undefined}
+                      >
+                        {item.label}
+                      </a>
+                    )}
+                  </li>
+                  {item.href === '/' && (
+                    <li
+                      key="servizi"
+                      className="relative"
+                      ref={servicesRef}
+                      onMouseEnter={() => setServicesOpen(true)}
+                      onMouseLeave={() => setServicesOpen(false)}
                     >
-                      {item.label}
-                    </a>
+                      <button
+                        type="button"
+                        className={`${baseClass} inline-flex items-center gap-1.5`}
+                        aria-expanded={servicesOpen}
+                        aria-haspopup="true"
+                        onClick={() => setServicesOpen((v) => !v)}
+                      >
+                        Servizi
+                        <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? 'rotate-180' : ''}`} />
+                      </button>
+                      {servicesOpen && (
+                        <ul
+                          className="absolute left-0 top-full mt-2 min-w-[15rem] rounded-xl border border-border/40 bg-background/95 py-2"
+                          style={{
+                            backdropFilter: 'blur(14px)',
+                            WebkitBackdropFilter: 'blur(14px)',
+                            boxShadow: 'var(--shadow-lg)',
+                          }}
+                        >
+                          {serviceItems.map((service) => (
+                            <li key={service.label} className={service.separatorBefore ? 'mt-2 border-t border-border/40 pt-2' : ''}>
+                              <Link
+                                to={service.href}
+                                className="block px-4 py-2.5 text-sm font-medium text-foreground hover:bg-muted/60 transition-colors duration-300"
+                                onClick={() => setServicesOpen(false)}
+                              >
+                                {service.label}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
                   )}
-                </li>
+                </>
               );
             })}
           </ul>
