@@ -1,4 +1,4 @@
-import { Users, Target, Lightbulb, Star, Quote } from 'lucide-react';
+import { Users, Target, Lightbulb, Star, Quote, Zap, Search, Smartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { AnimatedSection, StaggerContainer, StaggerItem } from './AnimatedSection';
 
@@ -20,34 +20,44 @@ const testimonials = [
   },
 ];
 
-const cards = [{
-  icon: Users,
-  title: 'Contatto Diretto con gli Sviluppatori',
-  description: 'Parli ed entri in contatto diretto con chi progetta e scrive il codice del tuo sito, senza intermediari o commercialisti.'
-}, {
-  icon: Target,
-  title: 'Architettura GEO & AEO Native',
-  description: 'Ogni riga di codice e di copy è ottimizzata per intercettare sia le ricerche tradizionali Google sia le raccomandazioni degli agenti IA.'
-}, {
-  icon: Lightbulb,
-  title: 'Codice Custom Senza Template',
-  description: 'Sviluppo 100% su misura senza l\'uso di page builder pesanti o temi WordPress predefiniti: massima velocità e sicurezza.'
-}];
-
-const guarantees = [
+const cards: { icon: typeof Users; title: string; description: React.ReactNode }[] = [
   {
-    label: 'Tempi certi (2-4 settimane)',
-    text: 'Dallo studio di fattibilità alla pubblicazione online, garantiamo tempi di consegna definiti senza ritardi.',
+    icon: Zap,
+    title: 'Performance & Core Web Vitals',
+    description: 'Sviluppiamo codice statico custom privo di database pesanti o plugin ridondanti, garantendo punteggi vicini al 100/100 sui principali strumenti di analisi delle prestazioni. Ogni pagina viene erogata istantaneamente tramite reti CDN globali (Netlify). Risultato: tempi di risposta minimi, massima sicurezza contro i problemi di vulnerabilità e un vantaggio competitivo concreto sui motori di ricerca.',
   },
   {
-    label: 'Infrastruttura Jamstack & Netlify',
-    text: 'Realizziamo siti web statici ad altissime prestazioni, azzerando i tempi di caricamento e i costi di manutenzione server.',
+    icon: Search,
+    title: 'SEO Tradizionale e AEO/GEO Native',
+    description: 'Ottimizziamo la struttura semantica del sito per Google e per i motori di ricerca IA (ChatGPT, Gemini, Perplexity). Rendiamo il tuo brand la fonte citata dagli agenti IA per intercettare lead qualificati.',
   },
   {
-    label: 'Risultati Verificati',
-    text: <>Progetti reali con dati di traffico e conversioni misurabili, come il restyling per <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link></>,
+    icon: Users,
+    title: 'Referente Tecnico Dedicato',
+    description: 'Parli ed entri in contatto diretto con chi progetta e scrive il codice del tuo sito, senza intermediari o commercialisti.',
+  },
+  {
+    icon: Lightbulb,
+    title: 'Codice Custom Senza Template',
+    description: 'Sviluppo 100% su misura senza l\'uso di page builder pesanti o temi WordPress predefiniti: massima velocità e sicurezza.',
+  },
+  {
+    icon: Smartphone,
+    title: 'UX & Design Mobile-First',
+    description: 'Interfaccia e navigazione progettate prioritariamente per smartphone e tablet: layout reattivi, codice leggero ed esperienza utente fluida su qualsiasi dispositivo.',
+  },
+  {
+    icon: Target,
+    title: 'Tempi Certi e Risultati Verificati',
+    description: (
+      <>
+        Dallo studio di fattibilità alla pubblicazione online, garantiamo tempi di consegna definiti (2-4 settimane) senza ritardi, con progetti reali e dati di traffico e conversioni misurabili, come il restyling per{' '}
+        <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link>
+      </>
+    ),
   },
 ];
+
 
 const AboutSection = () => {
   return (
