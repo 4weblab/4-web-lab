@@ -81,38 +81,22 @@ const AboutSection = () => {
           </Link>
         </AnimatedSection>
 
-        <div className="grid md:grid-cols-2 gap-12 lg:gap-16 items-start">
-          <AnimatedSection className="md:pt-2" direction="left">
-            <h3 className="sr-only">Le garanzie tecniche</h3>
-            <ul className="space-y-5">
-              {guarantees.map((item, index) => (
-                <li key={index} className="flex gap-3 text-muted-foreground">
-                  <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" aria-hidden="true" />
-                  <span>
-                    <strong className="text-foreground">{item.label}:</strong>{' '}
-                    {item.text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </AnimatedSection>
-
-          <StaggerContainer className="grid gap-4" staggerDelay={0.12}>
-            {cards.map((card, index) => (
-              <StaggerItem key={index}>
-                <div className="card-glass flex items-start gap-5 group hover:-translate-y-1.5 transition-all duration-400">
-                  <div className="icon-box w-13 h-13 flex-shrink-0">
-                    <card.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-sans font-bold text-lg mb-1.5">{card.title}</h3>
-                    <p className="text-muted-foreground text-sm leading-relaxed">{card.description}</p>
-                  </div>
+        <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
+          {cards.map((card, index) => (
+            <StaggerItem key={index}>
+              <div className="card-glass h-full flex flex-col items-start gap-4 group hover:-translate-y-1.5 transition-all duration-400">
+                <div className="icon-box w-13 h-13 flex-shrink-0">
+                  <card.icon className="w-6 h-6 text-white" aria-hidden="true" />
                 </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
+                <div>
+                  <h3 className="font-sans font-bold text-lg mb-1.5">{card.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{card.description}</p>
+                </div>
+              </div>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+
 
         {/* Testimonials */}
         <AnimatedSection className="text-center mt-20 mb-10">
