@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Fragment } from 'react';
 import { Menu, X, ArrowLeft, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
@@ -28,6 +28,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const servicesRef = useRef<HTMLLIElement>(null);
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
 
@@ -129,8 +132,8 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                 ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
                 : {};
               return (
-                <>
-                  <li key={item.href}>
+                <Fragment key={item.href}>
+                  <li>
                     {isRoute ? (
                       <Link to={item.href} className={baseClass} style={activeStyle}>
                         {item.label}
@@ -192,7 +195,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
                       )}
                     </li>
                   )}
-                </>
+                </Fragment>
               );
             })}
           </ul>
