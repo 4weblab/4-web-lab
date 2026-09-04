@@ -7,7 +7,7 @@ import {
   Store, SearchX, MessageCircleWarning, ShieldAlert, Globe,
   ArrowRight, CheckCircle2, Check, Smartphone, Zap, MapPin,
   Settings, Award, Euro, HelpCircle, ShoppingBag, Users, Eye,
-  Layers, Navigation
+  Layers, Navigation, Sparkles, Wrench, Image as ImageIcon
 } from 'lucide-react';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
@@ -16,6 +16,8 @@ import PageBreadcrumb from '@/components/PageBreadcrumb';
 
 import storefrontImg from '@/assets/negozi-storefront.webp';
 import mobileSearchImg from '@/assets/negozi-mobile-search.webp';
+import flowerAtelierImg from '@/assets/flower-atelier-card.webp';
+
 
 const SitiWebNegozi = () => {
   const handleContactClick = () => {
@@ -193,6 +195,12 @@ const SitiWebNegozi = () => {
                     title: 'Non controlli la tua presenza online',
                     description: 'Il sito è l\'unico spazio davvero tuo, non dipendi da piattaforme esterne.',
                   },
+                  {
+                    icon: Sparkles,
+                    title: 'Visibilità su Google e IA (GEO/AEO)',
+                    description: 'Presenza ottimizzata per i motori del futuro. La struttura dati consente al tuo negozio a Padova e in tutta Italia di essere trovato sia su Google sia nelle risposte generate da ChatGPT, Gemini e Perplexity.',
+                  },
+
                 ].map((item, index) => (
                   <StaggerItem key={index}>
                     <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
