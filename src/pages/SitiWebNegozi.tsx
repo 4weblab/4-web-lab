@@ -419,6 +419,22 @@ const SitiWebNegozi = () => {
                   </div>
                 </div>
               </AnimatedSection>
+              <AnimatedSection delay={0.15} className="mt-8">
+                <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-10 border border-border/50 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-card-hover)]">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+                    Avanzato
+                  </span>
+                  <div className="icon-box w-16 h-16 mx-auto mb-5">
+                    <Wrench className="w-7 h-7 text-accent-foreground" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-3">Progetto su misura</h3>
+                  <p className="text-2xl font-serif font-bold text-foreground mb-3">Preventivo da definire</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Soluzione personalizzata in base agli obiettivi del tuo negozio, con funzionalità specifiche e sviluppo dedicato.
+                  </p>
+                </div>
+              </AnimatedSection>
+
             </div>
           </div>
         </section>
