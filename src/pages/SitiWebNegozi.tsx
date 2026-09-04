@@ -440,7 +440,7 @@ const SitiWebNegozi = () => {
                   Una selezione di lavori pubblicati e concept dedicati a negozi e attività locali.
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto" staggerDelay={0.1}>
                 {[
                   {
                     img: flowerAtelierImg,
