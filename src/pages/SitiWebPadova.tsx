@@ -11,7 +11,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { Layers, HelpCircle } from "lucide-react";
 import dentalHero from "@/assets/dental-hero.webp";
 import rbSncEdilizia from "@/assets/rb-snc-edilizia.webp";
-import veraMethodHero from "@/assets/vera-method-hero.webp";
+import elisaPiovanPt from "@/assets/elisa-piovan-pt.webp";
 
 const SitiWebPadova = () => {
   const navigate = useNavigate();
@@ -602,7 +602,7 @@ const SitiWebPadova = () => {
                 {[
                   { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Progetto web completo con ottimizzazione SEO e campagne Google Ads mirate per massimizzare le richieste di preventivo di un'azienda locale leader nella rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
                   { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni/demo-studio-dentistico-premium" },
-                  { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di presenza online per personal trainer e professionisti del benessere. Struttura snella e moderna, focalizzata sulla presentazione del metodo e sulla conversione rapida.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
+                  { img: elisaPiovanPt, title: "Elisa Piovan — Personal Trainer (Padova)", desc: "Restyling completo del sito professionale di Elisa Piovan: struttura, grafica e ottimizzazione SEO, AEO e GEO, con hosting gestito per garantire i migliori punteggi PageSpeed Insights.", to: "/realizzazioni/sito-web-elisa-piovan-personal-trainer-padova" },
                 ].map((item, i) => (
                   <StaggerItem key={i}>
                     <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
