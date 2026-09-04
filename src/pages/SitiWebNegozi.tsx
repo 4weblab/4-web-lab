@@ -17,6 +17,7 @@ import PageBreadcrumb from '@/components/PageBreadcrumb';
 import storefrontImg from '@/assets/negozi-storefront.webp';
 import mobileSearchImg from '@/assets/negozi-mobile-search.webp';
 import flowerAtelierImg from '@/assets/flower-atelier-card.webp';
+import pasticceriaImg from '@/assets/farina-viva/card.webp';
 
 
 const SitiWebNegozi = () => {
@@ -439,13 +440,19 @@ const SitiWebNegozi = () => {
                   Una selezione di lavori pubblicati e concept dedicati a negozi e attività locali.
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto" staggerDelay={0.1}>
                 {[
                   {
                     img: flowerAtelierImg,
                     title: "Negozio, fioreria – concept",
                     desc: "Demo botanica e immersiva pensata per negozi e attività locali: hero cinematica, composizioni, eventi e CTA dirette.",
                     to: "/realizzazioni/demo-flower-atelier",
+                  },
+                  {
+                    img: pasticceriaImg,
+                    title: "Pasticceria e gastronomia artigianale – concept",
+                    desc: "Demo calda e artigianale per pasticcerie, panifici e gastronomie: categorie prodotto, ordini su misura e FAQ indicizzabili.",
+                    to: "/realizzazioni/demo-pasticceria-artigianale",
                   },
                 ].map((item, i) => (
                   <StaggerItem key={i}>
