@@ -626,24 +626,26 @@ const SitiWebProfessionisti = () => {
                   Una selezione di lavori pubblicati e concept dedicati a studi e attività professionali.
                 </p>
               </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+              <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto" staggerDelay={0.1}>
                 {[
                   {
-                    img: veraMethodImg,
-                    title: "Personal trainer – concept",
-                    desc: "Demo premium per una personal trainer: metodo a tre pilastri, programmi 1:1 e small group, bio EEAT e form di contatto.",
-                    to: "/realizzazioni/demo-personal-trainer-vera-method",
+                    img: elisaPiovanPt,
+                    title: "Elisa Piovan — Personal Trainer (Padova)",
+                    desc: "Restyling completo del sito professionale di Elisa Piovan: struttura, grafica e ottimizzazione SEO, AEO e GEO, con hosting gestito per garantire i migliori punteggi PageSpeed Insights.",
+                    to: null,
+                    badge: "In costruzione",
                   },
                   {
                     img: dentisticoImg,
                     title: "Studio dentistico – concept",
                     desc: "Demo per uno studio odontoiatrico moderno: struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
                     to: "/realizzazioni/demo-studio-dentistico-premium",
+                    badge: null,
                   },
-                ].map((item, i) => (
-                  <StaggerItem key={i}>
-                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
-                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                ].map((item, i) => {
+                  const inner = (
+                    <>
+                      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                         <img
                           src={item.img}
                           alt={item.title}
@@ -652,14 +654,29 @@ const SitiWebProfessionisti = () => {
                           height="400"
                           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         />
+                        {item.badge && (
+                          <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 shadow-md">
+                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-foreground animate-pulse" />
+                            {item.badge}
+                          </span>
+                        )}
                       </div>
                       <div className="p-5">
                         <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
                       </div>
-                    </Link>
-                  </StaggerItem>
-                ))}
+                    </>
+                  );
+                  return (
+                    <StaggerItem key={i}>
+                      {item.to ? (
+                        <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">{inner}</Link>
+                      ) : (
+                        <div className="block group card-elevated overflow-hidden p-0 h-full cursor-default">{inner}</div>
+                      )}
+                    </StaggerItem>
+                  );
+                })}
               </StaggerContainer>
               <AnimatedSection delay={0.2} className="mt-8 text-center">
                 <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
