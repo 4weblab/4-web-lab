@@ -41,13 +41,19 @@ const PageBreadcrumb = ({ items, variant = "light", className }: PageBreadcrumbP
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: items.map((item, idx) => ({
-      "@type": "ListItem",
-      position: idx + 1,
-      name: item.label,
-      item: toAbsoluteUrl(item.to),
-    })),
+    itemListElement: items.map((item, idx) => {
+      const isLast = idx === items.length - 1;
+      const entry: Record<string, unknown> = {
+        "@type": "ListItem",
+        position: idx + 1,
+        name: item.label,
+      };
+      // Schema.org: the last element represents the current page and omits "item".
+      if (!isLast && item.to) entry.item = toAbsoluteUrl(item.to);
+      return entry;
+    }),
   };
+
 
   return (
     <>
