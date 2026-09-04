@@ -153,17 +153,6 @@ const BlogAiWebsiteArticle = () => {
         <meta name="description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Siti Web Generati con IA: Pro, Contro e Limiti 2026" />

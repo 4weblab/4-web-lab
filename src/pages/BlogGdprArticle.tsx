@@ -127,17 +127,6 @@ const BlogGdprArticle = () => {
         <meta name="description" content="Cosa deve avere un sito web nel 2026 per evitare sanzioni GDPR? Regole ufficiali su cookie banner, consensi GA4 e informativa privacy." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="GDPR Siti Web 2026: Guida a Cookie Banner e Privacy" />

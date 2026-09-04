@@ -189,17 +189,6 @@ const BlogWebsiteCostArticle = () => {
         <meta name="description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia" />
