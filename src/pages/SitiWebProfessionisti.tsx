@@ -231,6 +231,12 @@ const SitiWebProfessionisti = () => {
                       description:
                         "Form di contatto, numeri di telefono e call-to-action ben visibili facilitano la conversione del visitatore in cliente.",
                     },
+                    {
+                      title: "Visibilità su Google e IA (GEO/AEO)",
+                      description:
+                        "Presenza ottimizzata per i motori del futuro. La struttura dati consente alla tua attività professionale di essere trovata sia su Google sia nelle risposte generate da ChatGPT, Gemini e Perplexity.",
+                    },
+
                   ].map((item, index) => (
                     <StaggerItem key={index}>
                       <div className="card-glass h-full hover:-translate-y-[3px] hover:shadow-md transition-all duration-400">
