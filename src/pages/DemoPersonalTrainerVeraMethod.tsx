@@ -1065,11 +1065,15 @@ const DemoPersonalTrainerVeraMethod = () => {
         <meta property="og:url" content={canonical} />
         <meta property="og:title" content="Sito Web per Personal Trainer e Fitness Coach" />
         <meta property="og:description" content="Piattaforma personalizzata per personal trainer e professionisti del fitness: acquisizione lead, presentazione servizi e brand positioning." />
+        <meta property="og:image" content="https://4weblab.it/og/demo-personal-trainer-vera-method.webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Sito Web per Personal Trainer e Fitness Coach" />
         <meta name="twitter:description" content="Piattaforma personalizzata per personal trainer e professionisti del fitness: acquisizione lead, presentazione servizi e brand positioning." />
+        <meta name="twitter:image" content="https://4weblab.it/og/demo-personal-trainer-vera-method.webp" />
 
         <script type="application/ld+json">
           {JSON.stringify({

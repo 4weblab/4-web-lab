@@ -407,7 +407,7 @@ const DemoRbSncEdilizia = () => {
                     </a>
                   </div>
                   <p className="text-xs text-primary-foreground/60 mt-4">
-                    Nessun impegno. Risposta entro 24h lavorative.
+                    Nessun impegno. Risposta entro 24 ore.
                   </p>
                 </div>
               </div>
