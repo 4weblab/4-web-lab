@@ -130,17 +130,6 @@ const BlogOutdatedWebsiteArticle = () => {
         <meta name="description" content="Il tuo sito ha più di 3 anni? Scopri i 5 segnali di obsolescenza tecnica e grafica che stanno deviando i tuoi clienti verso i concorrenti." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Sito Web Obsoleto: 5 Segnali che Fanno Perdere Clienti" />
