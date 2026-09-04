@@ -600,22 +600,37 @@ const SitiWebPadova = () => {
               </AnimatedSection>
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
-                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Progetto web completo con ottimizzazione SEO e campagne Google Ads mirate per massimizzare le richieste di preventivo di un'azienda locale leader nella rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
-                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni/demo-studio-dentistico-premium" },
-                  { img: elisaPiovanPt, title: "Elisa Piovan — Personal Trainer (Padova)", desc: "Restyling completo del sito professionale di Elisa Piovan: struttura, grafica e ottimizzazione SEO, AEO e GEO, con hosting gestito per garantire i migliori punteggi PageSpeed Insights.", to: "/realizzazioni/sito-web-elisa-piovan-personal-trainer-padova" },
-                ].map((item, i) => (
-                  <StaggerItem key={i}>
-                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
-                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                  { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Progetto web completo con ottimizzazione SEO e campagne Google Ads mirate per massimizzare le richieste di preventivo di un'azienda locale leader nella rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto", badge: null },
+                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni/demo-studio-dentistico-premium", badge: null },
+                  { img: elisaPiovanPt, title: "Elisa Piovan — Personal Trainer (Padova)", desc: "Restyling completo del sito professionale di Elisa Piovan: struttura, grafica e ottimizzazione SEO, AEO e GEO, con hosting gestito per garantire i migliori punteggi PageSpeed Insights.", to: null, badge: "In costruzione" },
+                ].map((item, i) => {
+                  const inner = (
+                    <>
+                      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
                         <img src={item.img} alt={item.title} loading="lazy" width="640" height="400" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                        {item.badge && (
+                          <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 shadow-md">
+                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-foreground animate-pulse" />
+                            {item.badge}
+                          </span>
+                        )}
                       </div>
                       <div className="p-5">
                         <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
                         <p className="text-sm text-muted-foreground">{item.desc}</p>
                       </div>
-                    </Link>
-                  </StaggerItem>
-                ))}
+                    </>
+                  );
+                  return (
+                    <StaggerItem key={i}>
+                      {item.to ? (
+                        <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">{inner}</Link>
+                      ) : (
+                        <div className="block group card-elevated overflow-hidden p-0 h-full cursor-default">{inner}</div>
+                      )}
+                    </StaggerItem>
+                  );
+                })}
               </StaggerContainer>
               <div className="text-center mt-10">
                 <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-semibold link-underline">
