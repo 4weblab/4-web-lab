@@ -253,7 +253,7 @@ const SitiWebAziendali = () => {
                 Realizziamo siti multipagina veloci, sicuri e ottimizzati per Google e IA. Da 1890€, in Veneto e in tutta Italia.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
-                Richiedi una valutazione gratuita
+                Richiedi un preventivo gratuito
                 <ArrowRight className="w-4 h-4" />
               </button>
 
@@ -656,7 +656,7 @@ const SitiWebAziendali = () => {
                   onClick={handleContactClick}
                   className="btn-primary inline-flex items-center gap-2.5 px-10 py-5 text-base"
                 >
-                  Richiedi una valutazione gratuita
+                  Richiedi un preventivo gratuito
                   <ArrowRight className="w-5 h-5" />
                 </button>
               </AnimatedSection>

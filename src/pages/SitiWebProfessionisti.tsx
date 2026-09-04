@@ -155,7 +155,7 @@ const SitiWebProfessionisti = () => {
                 }
                 className="btn-primary inline-flex items-center gap-2 mt-2 px-10 py-5"
               >
-                Contattaci
+                Richiedi un preventivo gratuito
               </button>
             </AnimatedSection>
           </div>
@@ -474,7 +474,7 @@ const SitiWebProfessionisti = () => {
                           document.getElementById("contatti-professionisti")?.scrollIntoView({ behavior: "smooth" })
                         }
                       >
-                        Richiedi preventivo
+                        Richiedi un preventivo gratuito
                       </Button>
                     </motion.div>
                   </div>
