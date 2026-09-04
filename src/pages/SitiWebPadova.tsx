@@ -127,7 +127,7 @@ const SitiWebPadova = () => {
                     name: "In quanto tempo viene realizzato un sito a Padova?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Un sito web a Padova viene realizzato in media in 2–6 settimane: pochi giorni per una versione base, 4–6 settimane per un sito multipagina con contenuti su misura, ottimizzazione SEO locale e integrazioni dedicate."
+                      text: "4 Web Lab realizza e pubblica un sito web a Padova in 2-4 settimane. I siti monopagina o per negozi sono pronti in circa 14 giorni, mentre i progetti aziendali articolati richiedono 3-4 settimane."
                     }
                   },
                   {
@@ -248,9 +248,9 @@ const SitiWebPadova = () => {
                 <button
                   onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
                   className="btn-primary text-lg px-10 py-4"
-                  aria-label="Analizza il mio progetto gratis"
+                  aria-label="Richiedi un preventivo gratuito"
                 >
-                  Analizza il mio progetto gratis
+                  Richiedi un preventivo gratuito
                 </button>
                 <a
                   href="https://wa.me/393514656042"
@@ -281,7 +281,7 @@ const SitiWebPadova = () => {
                   <ul className="text-muted-foreground leading-relaxed space-y-2 list-disc pl-5">
                     <li><strong className="text-foreground">Sede:</strong> Legnaro (PD) – operativi in tutta la provincia di Padova e Veneto.</li>
                     <li><strong className="text-foreground">Servizi inclusi:</strong> Progettazione web, ottimizzazione SEO locale, design responsivo e supporto tecnico continuo.</li>
-                    <li><strong className="text-foreground">Tempi di consegna:</strong> In media 2-5 settimane.</li>
+                    <li><strong className="text-foreground">Tempi di consegna:</strong> 2-4 settimane.</li>
                     <li><strong className="text-foreground">Target:</strong> Negozi, artigiani, liberi professionisti e PMI locali.</li>
                   </ul>
                 </div>
@@ -601,7 +601,7 @@ const SitiWebPadova = () => {
               <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
                 {[
                   { img: rbSncEdilizia, title: "R.B. s.n.c. – Cittadella (PD)", desc: "Progetto web completo con ottimizzazione SEO e campagne Google Ads mirate per massimizzare le richieste di preventivo di un'azienda locale leader nella rimozione eternit.", to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" },
-                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni" },
+                  { img: dentalHero, title: "Studio dentistico – concept", desc: "Concept di sito web premium progettato per medici e studi dentistici. Un design pulito ed elegante studiato per trasmettere massima fiducia e facilitare la prenotazione delle visite.", to: "/realizzazioni/demo-studio-dentistico-premium" },
                   { img: veraMethodHero, title: "Vera Method – concept", desc: "Concept di presenza online per personal trainer e professionisti del benessere. Struttura snella e moderna, focalizzata sulla presentazione del metodo e sulla conversione rapida.", to: "/realizzazioni/demo-personal-trainer-vera-method" },
                 ].map((item, i) => (
                   <StaggerItem key={i}>
@@ -676,7 +676,7 @@ const SitiWebPadova = () => {
                     {
                       question: "In quanto tempo viene realizzato un sito a Padova?",
                       answer:
-                        "Un sito web a Padova viene realizzato in media in 2–6 settimane: pochi giorni per una versione base, 4–6 settimane per un sito multipagina con contenuti su misura, ottimizzazione SEO locale e integrazioni dedicate.",
+                        "4 Web Lab realizza e pubblica un sito web a Padova in 2-4 settimane. I siti monopagina o per negozi sono pronti in circa 14 giorni, mentre i progetti aziendali articolati richiedono 3-4 settimane.",
                     },
                     {
                       question: "Lavorate solo a Padova città o anche in provincia?",
@@ -766,7 +766,7 @@ const SitiWebPadova = () => {
                 <p className="heading-2 text-primary-foreground mb-6">
                   Vuoi realizzare un sito web professionale a Padova?
                 </p>
-                <p className="body-large text-primary-foreground/70 mb-8">Contattaci per un confronto senza impegno.</p>
+                <p className="body-large text-primary-foreground/70 mb-8">Richiedi un preventivo gratuito.</p>
                 <div className="text-center">
                   <a
                     href="https://wa.me/393514656042"
