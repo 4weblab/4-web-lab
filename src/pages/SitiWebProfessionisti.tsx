@@ -25,7 +25,7 @@ import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import veraMethodImg from "@/assets/vera-method-hero.webp";
+import elisaPiovanPt from "@/assets/elisa-piovan-pt.webp";
 import dentisticoImg from "@/assets/dental-room.webp";
 
 import {
