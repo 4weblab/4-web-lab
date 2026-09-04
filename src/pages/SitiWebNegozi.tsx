@@ -7,7 +7,7 @@ import {
   Store, SearchX, MessageCircleWarning, ShieldAlert, Globe,
   ArrowRight, CheckCircle2, Check, Smartphone, Zap, MapPin,
   Settings, Award, Euro, HelpCircle, ShoppingBag, Users, Eye,
-  Layers, Navigation
+  Layers, Navigation, Sparkles, Wrench, Image as ImageIcon
 } from 'lucide-react';
 import ContactFormWeb3Forms from '@/components/ContactFormWeb3Forms';
 import { AnimatedSection, StaggerContainer, StaggerItem } from '@/components/AnimatedSection';
@@ -16,6 +16,8 @@ import PageBreadcrumb from '@/components/PageBreadcrumb';
 
 import storefrontImg from '@/assets/negozi-storefront.webp';
 import mobileSearchImg from '@/assets/negozi-mobile-search.webp';
+import flowerAtelierImg from '@/assets/flower-atelier-card.webp';
+
 
 const SitiWebNegozi = () => {
   const handleContactClick = () => {
@@ -193,6 +195,12 @@ const SitiWebNegozi = () => {
                     title: 'Non controlli la tua presenza online',
                     description: 'Il sito è l\'unico spazio davvero tuo, non dipendi da piattaforme esterne.',
                   },
+                  {
+                    icon: Sparkles,
+                    title: 'Visibilità su Google e IA (GEO/AEO)',
+                    description: 'Presenza ottimizzata per i motori del futuro. La struttura dati consente al tuo negozio a Padova e in tutta Italia di essere trovato sia su Google sia nelle risposte generate da ChatGPT, Gemini e Perplexity.',
+                  },
+
                 ].map((item, index) => (
                   <StaggerItem key={index}>
                     <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400">
@@ -357,6 +365,168 @@ const SitiWebNegozi = () => {
           </div>
         </section>
 
+        {/* ─── TABELLA COMPARATIVA ─── */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Layers className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
+                <p>
+                  Confronto sintetico tra le tre principali tipologie di sito per un'impresa, con pagine medie, obiettivo principale, costo indicativo e profilo ideale.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="overflow-x-auto rounded-2xl border border-border/60 bg-white shadow-sm">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-accent/8 text-foreground">
+                      <tr>
+                        <th className="px-5 py-4 font-semibold">Caratteristica</th>
+                        <th className="px-5 py-4 font-semibold">Sito vetrina</th>
+                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
+                        <th className="px-5 py-4 font-semibold">Sito corporate</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
+                        <td className="px-5 py-4">1–3</td>
+                        <td className="px-5 py-4">5–15</td>
+                        <td className="px-5 py-4">15+ (anche multilingua)</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
+                        <td className="px-5 py-4">Presenza online di base</td>
+                        <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
+                        <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
+                        <td className="px-5 py-4">da 990€</td>
+                        <td className="px-5 py-4">da 1890€</td>
+                        <td className="px-5 py-4">Preventivo su misura</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
+                        <td className="px-5 py-4">Liberi professionisti, micro-imprese</td>
+                        <td className="px-5 py-4">PMI che vogliono crescere online</td>
+                        <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── REALIZZAZIONI TEASER ─── */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-3">
+                <div className="icon-box w-13 h-13">
+                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Alcuni siti web per negozi realizzati</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-10 max-w-3xl">
+                  Una selezione di lavori pubblicati e concept dedicati a negozi e attività locali.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+                {[
+                  {
+                    img: flowerAtelierImg,
+                    title: "Negozio, fioreria – concept",
+                    desc: "Demo botanica e immersiva pensata per negozi e attività locali: hero cinematica, composizioni, eventi e CTA dirette.",
+                    to: "/realizzazioni/demo-flower-atelier",
+                  },
+                ].map((item, i) => (
+                  <StaggerItem key={i}>
+                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
+                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          loading="lazy"
+                          width="640"
+                          height="400"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </Link>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <AnimatedSection delay={0.2} className="mt-8 text-center">
+                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
+                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── ZONE SERVITE ─── */}
+        <section className="section-padding" style={{ background: 'var(--gradient-surface)' }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Globe className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Zone servite: Veneto e tutta Italia</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {[
+                    { name: "Padova", to: "/realizzazione-siti-web-padova" },
+                    { name: "Venezia" },
+                    { name: "Vicenza" },
+                    { name: "Verona" },
+                    { name: "Treviso" },
+                    { name: "Rovigo" },
+                    { name: "Belluno" },
+                  ].map((c) =>
+                    c.to ? (
+                      <Link
+                        key={c.name}
+                        to={c.to}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-sm text-foreground hover:bg-accent/15 transition-colors"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </Link>
+                    ) : (
+                      <span
+                        key={c.name}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/8 border border-accent/15 text-sm text-foreground/80"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </span>
+                    )
+                  )}
+                </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p>
+                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti per negozi per attività di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+
         {/* ─── PREZZO ─── */}
         <section className="section-padding bg-background">
           <div className="container-section">
@@ -411,6 +581,22 @@ const SitiWebNegozi = () => {
                   </div>
                 </div>
               </AnimatedSection>
+              <AnimatedSection delay={0.15} className="mt-8">
+                <div className="card-glass h-full hover:-translate-y-1.5 transition-all duration-400 text-center p-10 border border-border/50 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-card-hover)]">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+                    Avanzato
+                  </span>
+                  <div className="icon-box w-16 h-16 mx-auto mb-5">
+                    <Wrench className="w-7 h-7 text-accent-foreground" aria-hidden="true" />
+                  </div>
+                  <h3 className="font-bold text-lg text-foreground mb-3">Progetto su misura</h3>
+                  <p className="text-2xl font-serif font-bold text-foreground mb-3">Preventivo da definire</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Soluzione personalizzata in base agli obiettivi del tuo negozio, con funzionalità specifiche e sviluppo dedicato.
+                  </p>
+                </div>
+              </AnimatedSection>
+
             </div>
           </div>
         </section>
