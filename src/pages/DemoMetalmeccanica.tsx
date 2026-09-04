@@ -906,10 +906,9 @@ const AurumFooter = () => (
             "L'architettura del metallo, la precisione del futuro."
           </p>
           <div className="space-y-2 text-sm" style={{ color: C.textDim }}>
-            <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: C.accent }} />Via delle Industrie 42, 25030 Erbusco (BS) — Italy</div>
-            <div className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: C.accent }} />+39 030 1234567</div>
+            <div className="flex items-start gap-2"><MapPin className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: C.accent }} />Via delle Industrie 42, 25030 Erbusco (BS) — Italy (placeholder)</div>
+            <div className="flex items-start gap-2"><Phone className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: C.accent }} />+39 030 1234567 (placeholder)</div>
             <div className="flex items-start gap-2"><Mail className="w-4 h-4 mt-0.5 flex-shrink-0" style={{ color: C.accent }} />info@aurum-meccanica.it</div>
-            <div className="text-xs mt-3 opacity-70">P.IVA 09876543210</div>
           </div>
         </div>
 
