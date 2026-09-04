@@ -22,6 +22,7 @@ import imgDentistico from "@/assets/dental-room.webp";
 import imgFotovoltaico from "@/assets/solaris-industrial.webp";
 import imgBoutique from "@/assets/bb-room-deluxe.webp";
 import imgFlowerAtelier from "@/assets/flower-atelier-card.webp";
+import imgPasticceria from "@/assets/farina-viva/card.webp";
 import imgComingSoon from "@/assets/concept-coming-soon.webp";
 import imgRbSnc from "@/assets/rb-snc-edilizia.webp";
 import imgVeraMethod from "@/assets/vera-method-hero.webp";
