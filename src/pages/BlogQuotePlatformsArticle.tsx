@@ -38,17 +38,6 @@ const BlogQuotePlatformsArticle = () => {
         <meta name="description" content="Preventivi siti web a basso costo su piattaforme online: conveniente o errore strategico? Ecco cosa succede davvero alla qualità del codice." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Piattaforme Preventivi Web (ProntoPro): Conviene?" />

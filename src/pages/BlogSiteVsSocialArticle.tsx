@@ -139,17 +139,6 @@ const BlogSiteVsSocialArticle = () => {
         <meta name="description" content="Social network o sito di proprietà? Confronto strategico su acquisizione clienti, controllo dei dati e conversioni per attività locali." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Blog", item: "https://4weblab.it/blog" },
-              { "@type": "ListItem", position: 3, name: pageTitle, item: pageUrl },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Sito Web o Pagina Social nel 2026? Cosa Scegliere" />

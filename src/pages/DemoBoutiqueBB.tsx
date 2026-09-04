@@ -833,10 +833,17 @@ const Reviews = () => {
                 <div className="text-[12px] tracking-[0.08em] uppercase mt-1" style={{ fontFamily: SANS, color: C.inkSoft }}>
                   {r.from}
                 </div>
+                <div className="text-[11px] tracking-[0.08em] uppercase mt-2" style={{ fontFamily: SANS, color: C.inkSoft }}>
+                  Recensione demo — contenuto fittizio
+                </div>
               </div>
             </div>
           ))}
         </div>
+
+        <p className="text-[12px] mt-8" style={{ fontFamily: SANS, color: C.inkSoft }}>
+          Recensioni illustrative create per la demo. Nessun dato reale è stato utilizzato.
+        </p>
       </div>
     </section>
   );

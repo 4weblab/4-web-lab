@@ -42,6 +42,17 @@ interface Project {
 
 const projects: Project[] = [
   {
+    slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
+    title: "Sito web R.B. s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
+    description:
+      "Lavoro reale online: restyling completo del sito, ottimizzazione SEO on-page e campagna Google Ads attiva per un'impresa edile specializzata in rimozione amianto e rifacimento coperture nel Veneto.",
+    badge: "Progetto reale",
+    badgeVariant: "real",
+    features: ["Restyling completo", "Ottimizzazione SEO", "Campagna Google Ads"],
+    image: imgRbSnc,
+    alt: "Operai con DPI rimuovono lastre di eternit e installano nuova copertura metallica su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab",
+  },
+  {
     slug: "sito-web-elisa-piovan-personal-trainer-padova",
     title: "Sito web per Elisa Piovan — Personal Trainer (Padova)",
     description:
@@ -53,17 +64,6 @@ const projects: Project[] = [
     alt: "Elisa Piovan, personal trainer a Padova, in palestra — nuovo sito professionale in sviluppo by 4 Web Lab",
     siteUrl: "https://elitrainer.it",
     siteUrlLabel: "elitrainer.it",
-  },
-  {
-    slug: "realizzazione-sito-web-edilizia-rb-snc-veneto",
-    title: "Sito web R.B. s.n.c. — rimozione eternit e rifacimento tetti, Cittadella (PD)",
-    description:
-      "Lavoro reale online: restyling completo del sito, ottimizzazione SEO on-page e campagna Google Ads attiva per un'impresa edile specializzata in rimozione amianto e rifacimento coperture nel Veneto.",
-    badge: "Progetto reale",
-    badgeVariant: "real",
-    features: ["Restyling completo", "Ottimizzazione SEO", "Campagna Google Ads"],
-    image: imgRbSnc,
-    alt: "Operai con DPI rimuovono lastre di eternit e installano nuova copertura metallica su un tetto industriale in Veneto — caso studio R.B s.n.c. realizzato da 4 Web Lab",
   },
   {
     slug: "demo-personal-trainer-vera-method",
