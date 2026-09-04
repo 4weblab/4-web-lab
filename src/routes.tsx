@@ -158,6 +158,12 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/DemoFlowerAtelier.tsx",
       },
       {
+        path: "realizzazioni/demo-pasticceria-artigianale",
+        lazy: page(() => import("./pages/DemoPasticceriaArtigianale")),
+        entry: "src/pages/DemoPasticceriaArtigianale.tsx",
+      },
+
+      {
         path: "realizzazioni/demo-personal-trainer-vera-method",
         lazy: page(() => import("./pages/DemoPersonalTrainerVeraMethod")),
         entry: "src/pages/DemoPersonalTrainerVeraMethod.tsx",

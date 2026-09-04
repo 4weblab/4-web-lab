@@ -125,6 +125,17 @@ const projects: Project[] = [
     image: imgFlowerAtelier,
     alt: "Concept di sito web premium per fioreria e negozio locale — demo realizzata da 4 Web Lab",
   },
+  {
+    slug: "demo-pasticceria-artigianale",
+    title: "Sito web per pasticceria artigianale — concept",
+    description:
+      "Demo calda e artigianale per pasticcerie, panifici e gastronomie: categorie prodotto, servizi su ordinazione, FAQ indicizzabili e contatti diretti con 4 Web Lab.",
+    badge: "Concept",
+    features: ["Palette artigianale", "Catalogo prodotti", "FAQ indicizzabili"],
+    image: imgPasticceria,
+    alt: "Vetrina di pasticceria e panificio artigianale — concept sito web 4 Web Lab",
+  },
+
 ];
 
 const methodPoints = [
