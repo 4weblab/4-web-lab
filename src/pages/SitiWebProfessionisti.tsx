@@ -434,8 +434,8 @@ const SitiWebProfessionisti = () => {
                     <ul className="space-y-4 mb-10" role="list">
                       {[
                         {
-                          label: "Sviluppo sito One page professionale",
-                          tooltip: "Possibilità di espansione a sito multi-pagina su richiesta.",
+                          label: "Sviluppo sito professionale",
+                          tooltip: "Include 3 pagine, possibilità di espansione su richiesta.",
                         },
                         { label: "Personalizzazione contenuti" },
                         { label: "Scelta font e tipografia" },
