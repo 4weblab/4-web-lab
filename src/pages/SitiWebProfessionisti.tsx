@@ -63,16 +63,6 @@ const SitiWebProfessionisti = () => {
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/siti-web-per-professionisti" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            itemListElement: [
-              { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-              { "@type": "ListItem", position: 2, name: "Siti web per professionisti", item: "https://4weblab.it/siti-web-per-professionisti" },
-            ],
-          })}
-        </script>
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/siti-web-per-professionisti" />
         <meta property="og:title" content="Siti Web per Liberi Professionisti e Studi | Da 990€" />
@@ -427,8 +417,8 @@ const SitiWebProfessionisti = () => {
                       </div>
                       <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
                       <p className="text-muted-foreground text-sm mt-4">
-                        La soluzione One-Page ideale per liberi professionisti che vogliono una presenza online completa,
-                        moderna ed efficace.
+                        La soluzione ideale per liberi professionisti che vogliono una presenza online completa,
+                        moderna ed efficace: 3 pagine, espandibili su richiesta.
                       </p>
                     </div>
                     <ul className="space-y-4 mb-10" role="list">
