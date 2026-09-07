@@ -427,8 +427,8 @@ const SitiWebProfessionisti = () => {
                       </div>
                       <p className="text-muted-foreground text-sm">una tantum · IVA esclusa</p>
                       <p className="text-muted-foreground text-sm mt-4">
-                        La soluzione One-Page ideale per liberi professionisti che vogliono una presenza online completa,
-                        moderna ed efficace.
+                        La soluzione ideale per liberi professionisti che vogliono una presenza online completa,
+                        moderna ed efficace: 3 pagine, espandibili su richiesta.
                       </p>
                     </div>
                     <ul className="space-y-4 mb-10" role="list">
