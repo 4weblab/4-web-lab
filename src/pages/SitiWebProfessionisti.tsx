@@ -554,7 +554,7 @@ const SitiWebProfessionisti = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Confronto sintetico tra le tre principali tipologie di sito per un'impresa, con pagine medie, obiettivo principale, costo indicativo e profilo ideale.
+                  Ecco come si posiziona il pacchetto pensato per il tuo profilo professionale rispetto alle altre tipologie di sito che realizziamo.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -563,39 +563,49 @@ const SitiWebProfessionisti = () => {
                     <thead className="bg-accent/8 text-foreground">
                       <tr>
                         <th className="px-5 py-4 font-semibold">Caratteristica</th>
-                        <th className="px-5 py-4 font-semibold">Sito vetrina</th>
-                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
-                        <th className="px-5 py-4 font-semibold">Sito corporate</th>
+                        <th className="px-5 py-4 font-semibold">One-Page</th>
+                        <th className="px-5 py-4 font-semibold bg-accent/15 border-x border-accent/30">Sito Vetrina</th>
+                        <th className="px-5 py-4 font-semibold">Sito Aziendale</th>
+                        <th className="px-5 py-4 font-semibold">Sito Corporate</th>
                       </tr>
                     </thead>
                     <tbody className="text-muted-foreground">
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
-                        <td className="px-5 py-4">1–3</td>
+                        <td className="px-5 py-4">1</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">1–3</td>
                         <td className="px-5 py-4">5–15</td>
                         <td className="px-5 py-4">15+ (anche multilingua)</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
-                        <td className="px-5 py-4">Presenza online di base</td>
+                        <td className="px-5 py-4">Presenza essenziale, contatto immediato</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Presenza online di base</td>
                         <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
                         <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
-                        <td className="px-5 py-4">da 990€</td>
+                        <td className="px-5 py-4">da 490€</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">da 990€</td>
                         <td className="px-5 py-4">da 1890€</td>
                         <td className="px-5 py-4">Preventivo su misura</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
-                        <td className="px-5 py-4">Liberi professionisti, micro-imprese</td>
+                        <td className="px-5 py-4">Negozi, attività locali</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Liberi professionisti, micro-imprese</td>
                         <td className="px-5 py-4">PMI che vogliono crescere online</td>
                         <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mt-8" delay={0.2}>
+                <p>
+                  Per un professionista come te, il Sito Vetrina è quasi sempre la scelta giusta: la vetrina digitale che ti presenta bene fin dal primo contatto.
+                </p>
               </AnimatedSection>
             </div>
           </div>
