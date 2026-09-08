@@ -8,9 +8,9 @@ import legnaroProssimita from "@/assets/legnaro-prossimita.webp";
 import legnaroVelocita from "@/assets/legnaro-velocita.webp";
 import legnaroIa from "@/assets/legnaro-ia.webp";
 
-const TITLE = "Web Agency Legnaro e Piove di Sacco | Siti Web da 490€";
+const TITLE = "Web Agency Legnaro (PD) | Siti Web da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per attività di Legnaro, Saonara e Piove di Sacco. Contatto diretto, zero intermediari e preventivo in 24h.";
+  "Realizzazione siti web ultra-veloci per attività di Legnaro e Saonara. Contatto diretto, zero intermediari e preventivo in 24h.";
 const URL = "https://4weblab.it/realizzazione-siti-web-legnaro";
 
 const vantaggi = [
@@ -122,7 +122,6 @@ const SitiWebLegnaro = () => {
                 areaServed: [
                   { "@type": "City", name: "Legnaro" },
                   { "@type": "City", name: "Saonara" },
-                  { "@type": "City", name: "Piove di Sacco" },
                   { "@type": "AdministrativeArea", name: "Saccisica" },
                 ],
                 offers: {
@@ -216,7 +215,7 @@ const SitiWebLegnaro = () => {
               <div className="section-divider" />
               <h2 className="heading-2 mb-5">Perché scegliere un web studio di Legnaro</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per le attività di Legnaro, Saonara, Piove di Sacco e di tutta la Saccisica.
+                Tre vantaggi concreti per le attività di Legnaro, Saonara e di tutta la Saccisica.
               </p>
             </AnimatedSection>
 
