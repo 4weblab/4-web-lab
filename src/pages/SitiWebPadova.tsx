@@ -231,19 +231,18 @@ const SitiWebPadova = () => {
                 Siti Web che Generano Clienti a Padova e Provincia
               </h1>
               <p
-                className="heading-1 text-primary-foreground mb-6 text-balance"
-                style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
+                className="body-large text-primary-foreground/90 mb-4 text-balance"
+                style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                <span className="block mt-3 text-[0.55em] sm:text-[0.6em] tracking-wide font-semibold opacity-90 leading-tight">
-                  Il web studio locale per artigiani, professionisti e PMI che vogliono crescere online.
-                </span>
+                Il web studio locale per artigiani, professionisti e PMI che vogliono crescere online.
               </p>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Progettiamo siti web veloci, ottimizzati SEO e pronti per i motori di ricerca e l'Intelligenza Artificiale. Con sede a Legnaro (PD), aiutiamo le attività di Padova e provincia a farsi trovare da chi cerca i loro servizi. Preventivo personalizzato gratuito in 24 ore.
+                Il cliente che cerca il tuo servizio a Padova oggi, deve trovare te — non il concorrente. Sede a Legnaro (PD), preventivo personalizzato gratuito in 24 ore.
               </p>
+
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
                   onClick={() => document.getElementById("contatti-padova")?.scrollIntoView({ behavior: "smooth" })}
