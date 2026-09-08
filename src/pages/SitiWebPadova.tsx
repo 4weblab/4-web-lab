@@ -313,7 +313,7 @@ const SitiWebPadova = () => {
                     <h3 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h3>
                   </div>
                   <p className="body-base text-muted-foreground">
-                    Affidarsi a un'agenzia web di Padova significa avere un interlocutore vicino, raggiungibile in 15 minuti dal centro città, con una comprensione concreta del territorio veneto. Niente call center, niente risposte automatiche: parli sempre direttamente con chi sviluppa e gestisce il tuo sito.
+                    Con noi non aspetti in coda a un call center: parli subito con chi sviluppa e gestisce il tuo sito, raggiungibile in 15 minuti dal centro di Padova.
                   </p>
                 </div>
 
@@ -362,21 +362,21 @@ const SitiWebPadova = () => {
                   {
                     title: "Siti per Professionisti & Studi",
                     description:
-                      "Presenze digitali autorevoli per medici, avvocati, psicologi e consulenti. Creiamo siti ottimizzati per posizionare il tuo nome su Google, trasmettere massima fiducia e facilitare la prenotazione di appuntamenti o contatti diretti.",
+                      "Il paziente o cliente che ti cerca su Google deve trovare subito fiducia: siti per medici, avvocati, psicologi e consulenti, ottimizzati per posizionare il tuo nome e facilitare prenotazioni o contatti diretti.",
                     link: "/siti-web-per-professionisti",
                     linkLabel: "Scopri il servizio",
                   },
                   {
                     title: "Siti per Negozi & Attività Locali",
                     description:
-                      "Siti moderni e pronti per la Local SEO dedicati a negozi, artigiani, ristoranti e showroom. Ottimizziamo la tua presenza per attirare nuovi clienti dal territorio padovano direttamente nel tuo punto vendita fisico o online.",
+                      "Porta il cliente dalla ricerca online al tuo punto vendita: siti pronti per la Local SEO per negozi, artigiani, ristoranti e showroom del territorio padovano.",
                     link: "/siti-web-per-negozi",
                     linkLabel: "Scopri il servizio",
                   },
                   {
                     title: "Siti Aziendali & Lead Generation",
                     description:
-                      "Piattaforme web complete per PMI e aziende strutturate che necessitano di una presenza online solida, performante e integrata. Progetti orientati alla generazione di contatti commerciali qualificati (lead) e alla conversione.",
+                      "Trasforma i visitatori in contatti commerciali qualificati: piattaforme complete per PMI e aziende strutturate che vogliono una presenza online solida e performante.",
                     link: "/siti-web-aziendali",
                     linkLabel: "Scopri il servizio",
                   },
@@ -472,7 +472,7 @@ const SitiWebPadova = () => {
 
               <AnimatedSection delay={0.1}>
                 <p className="body-base text-muted-foreground mb-10 max-w-3xl">
-                  Dall'idea iniziale al lancio online, seguiamo un processo strutturato e trasparente per garantirti un sito web veloce, sicuro e pronto a generare risultati reali per la tua attività.
+                  Sai sempre a che punto siamo, senza sorprese: dall'idea al lancio, in un processo trasparente pensato per portarti risultati reali.
                 </p>
               </AnimatedSection>
 
@@ -532,7 +532,7 @@ const SitiWebPadova = () => {
                   <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
                 </div>
                 <p className="body-large text-muted-foreground max-w-3xl">
-                  Copriamo capillarmente il territorio padovano per offrire una presenza digitale forte e un supporto tecnico reale, anche direttamente presso la tua sede.
+                  Ovunque tu sia in provincia di Padova, hai lo stesso supporto diretto — anche di persona, se ti serve.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.05}>
@@ -778,9 +778,9 @@ const SitiWebPadova = () => {
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <p className="heading-2 text-primary-foreground mb-6">
-                  Vuoi realizzare un sito web professionale a Padova?
+                  Il tuo prossimo cliente a Padova ti sta già cercando
                 </p>
-                <p className="body-large text-primary-foreground/70 mb-8">Richiedi un preventivo gratuito.</p>
+                <p className="body-large text-primary-foreground/70 mb-8">Raccontaci la tua attività: preventivo personalizzato in 24 ore, senza impegno.</p>
                 <div className="text-center">
                   <a
                     href="https://wa.me/393514656042"
