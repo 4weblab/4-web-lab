@@ -7,7 +7,7 @@ const previewFaqs = [
     question: "Quanto costa realizzare un sito web?",
     answer: (
       <>
-        Il costo per realizzare un sito web con 4 Web Lab parte da 490€ per i negozi locali. I pacchetti per professionisti partono da 990€, mentre i siti aziendali per PMI partono da 1890€. Il prezzo varia in base al numero di pagine, alle funzionalità e all'ottimizzazione SEO/AEO richiesta.
+        Parti da 490€ se hai un negozio locale, da 990€ come libero professionista, da 1890€ se sei un'azienda. Il prezzo finale dipende da pagine, funzionalità e livello di ottimizzazione SEO/AEO richiesto.
         <br />
         <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-sm text-accent hover:underline inline-block mt-2">
           Leggi "Quanto costa un sito web nel 2026?"
@@ -18,13 +18,13 @@ const previewFaqs = [
   {
     question: "In quanto tempo viene realizzato un sito web?",
     answer:
-      "4 Web Lab realizza e pubblica un sito web in 2-4 settimane. Le tempistiche dipendono dalla complessità del progetto e dalla velocità nella consegna dei materiali; i siti monopagina o per negozi sono pronti in circa 14 giorni, mentre i progetti aziendali articolati richiedono 3-4 settimane.",
+      "Il tuo sito è online in 2-4 settimane: 14 giorni se hai un negozio o serve una monopagina, 3-4 settimane per progetti aziendali più articolati.",
   },
   {
     question: "I siti web servono ancora nel 2026 con l'arrivo dell'IA?",
     answer: (
       <>
-        Sì, i siti web sono fondamentali nell'era dell'IA. Gli AI Overviews di Google e gli assistenti come ChatGPT, Gemini e Perplexity si basano sui contenuti dei siti web autoritativi per generare le risposte. Un sito sviluppato da 4 Web Lab fornisce la struttura semantica necessaria per far sì che la tua attività venga consigliata e citata dalle chat IA.
+        Sì, e oggi contano più di prima: ChatGPT, Gemini e Perplexity generano le risposte partendo dai siti autorevoli. Un sito 4 Web Lab dà al tuo business la struttura semantica per essere quello citato, non quello ignorato.
         <br />
         <Link to="/posizionamento-google-e-ai" className="text-sm text-accent hover:underline inline-block mt-2">
           Scopri come funziona il posizionamento su Google e IA →

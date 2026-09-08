@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.webp';
 const cards = [
   {
     title: 'Siti Web per Negozi e Attività Locali',
-    text: 'Presenza web ultra-veloce e ottimizzata per la Local SEO, Google Maps e le ricerche geolocalizzate degli assistenti IA. Ideale per farti trovare dai clienti vicino a te. Da 490€',
+    text: 'Il negozio sotto casa che tutti trovano online. Sito ultra-veloce pensato per chi cerca "vicino a me": ottimizzato per Google Maps e per le ricerche geolocalizzate delle IA. Da 490€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: 'Siti Web per Liberi Professionisti',
-    text: 'Dagli studi legali ai consulenti e artigiani: piattaforme personalizzate per posizionare il tuo personal brand, acquisire lead qualificati ed essere consigliato dalle chat IA. Da 990€',
+    text: 'Il tuo nome, la prima cosa che l\'IA consiglia. Piattaforma su misura per costruire autorevolezza, acquisire lead qualificati e comparire quando qualcuno chiede a ChatGPT "chi mi consiglia per..." Da 990€',
     cta: 'Scopri i siti per professionisti',
     link: '/siti-web-per-professionisti',
     image: cardProfessionista,
@@ -26,7 +26,7 @@ const cards = [
   },
   {
     title: 'Siti Web Aziendali per PMI',
-    text: 'Architetture complesse e performanti pensate per piccole e medie imprese: massima autorevolezza, posizionamento SEO/AEO avanzato e generazione di contatti B2B. Da 1890€',
+    text: 'Contatti B2B, non solo visite. Architetture avanzate per PMI che vogliono posizionamento SEO/AEO serio e generazione lead misurabile, non solo una vetrina. Da 1890€',
     cta: 'Scopri i siti aziendali',
     link: '/siti-web-aziendali',
     image: cardAzienda,
@@ -47,7 +47,7 @@ const UserRoutingSection = () => {
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Soluzioni Web e Pricing per ogni Tipologia di Business</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Piani trasparenti e architetture su misura per negozi locali, liberi professionisti e PMI. Scegli il tuo profilo e scopri la struttura ideale per la tua attività.
+            Qualsiasi sia la tua attività, il sito deve fare una cosa sola: portarti clienti. Scegli il tuo profilo.
           </p>
         </AnimatedSection>
 
