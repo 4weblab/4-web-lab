@@ -133,7 +133,7 @@ const SitiWebNegozi = () => {
                 Siti Web per Negozi a Padova (e in tutta Italia)
               </h1>
               <p className="body-large text-primary-foreground/80 mb-6 max-w-2xl mx-auto text-balance">
-                Realizziamo siti web professionali per negozi fisici e attività locali, pensati per portarti nuovi clienti da Google e trasformare chi ti trova online in visite reali in negozio.
+                Il tuo negozio diventa il primo che Google mostra a chi cerca vicino a te. Sito online in 2 settimane, pronto a trasformare le ricerche in visite reali.
               </p>
 
               <div className="inline-flex items-center gap-2 text-accent font-semibold bg-accent/10 px-6 py-3 rounded-full mb-8">
@@ -163,7 +163,7 @@ const SitiWebNegozi = () => {
                 <div className="icon-box w-13 h-13">
                   <Store className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Perché oggi un negozio senza sito web perde clienti ogni giorno</h2>
+                <h2 className="heading-2">Ogni giorno senza sito, un cliente sceglie il negozio della concorrenza al posto tuo</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
@@ -179,27 +179,27 @@ const SitiWebNegozi = () => {
                   {
                     icon: SearchX,
                     title: 'Sei invisibile su Google',
-                    description: 'Se qualcuno cerca il tuo prodotto a Padova e non trova il tuo negozio, troverà quello di un concorrente.',
+                    description: 'Chi cerca il tuo prodotto a Padova oggi trova il concorrente, non te.',
                   },
                   {
                     icon: MessageCircleWarning,
                     title: 'I social non bastano',
-                    description: 'Facebook e Instagram aiutano, ma non sostituiscono un sito web strutturato e trovabile su Google.',
+                    description: 'Chi ti cerca su Google e non ti trova, non arriva nemmeno a vedere il tuo Instagram.',
                   },
                   {
                     icon: ShieldAlert,
                     title: 'Perdi fiducia',
-                    description: 'Un cliente si fida molto di più di un negozio con un sito chiaro, aggiornato e professionale.',
+                    description: 'Senza un sito, il cliente sceglie chi sembra più affidabile — spesso solo perché ha un sito.',
                   },
                   {
                     icon: Globe,
                     title: 'Non controlli la tua presenza online',
-                    description: 'Il sito è l\'unico spazio davvero tuo, non dipendi da piattaforme esterne.',
+                    description: 'Il sito è l\'unico spazio che resta davvero tuo, qualsiasi cosa cambi sui social.',
                   },
                   {
                     icon: Sparkles,
                     title: 'Visibilità su Google e IA (GEO/AEO)',
-                    description: 'Presenza ottimizzata per i motori del futuro. La struttura dati consente al tuo negozio a Padova e in tutta Italia di essere trovato sia su Google sia nelle risposte generate da ChatGPT, Gemini e Perplexity.',
+                    description: 'Quando qualcuno chiede a ChatGPT "un negozio di [categoria] vicino a me", il tuo nome può essere la risposta.',
                   },
 
                 ].map((item, index) => (
@@ -226,7 +226,7 @@ const SitiWebNegozi = () => {
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Cosa realizziamo per il tuo negozio</h2>
+                <h2 className="heading-2">Un sito pensato per farti squillare il telefono, non solo per essere bello</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-10" delay={0.1}>
                 <p>
@@ -278,7 +278,7 @@ const SitiWebNegozi = () => {
                 <div className="icon-box w-13 h-13">
                   <MapPin className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Siti web progettati per negozi locali</h2>
+                <h2 className="heading-2">Il sito che porta il cliente dentro al negozio, non solo sullo schermo</h2>
               </AnimatedSection>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground order-2 md:order-1" direction="left">
@@ -338,7 +338,7 @@ const SitiWebNegozi = () => {
                   {
                     icon: Users,
                     title: 'Più clienti dal web',
-                    description: 'Chi cerca i tuoi prodotti online può trovarti facilmente.',
+                    description: 'Chi cerca online i tuoi prodotti ti trova e viene da te, non dal concorrente.',
                   },
                   {
                     icon: Award,
@@ -378,7 +378,7 @@ const SitiWebNegozi = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Confronto sintetico tra le tre principali tipologie di sito per un'impresa, con pagine medie, obiettivo principale, costo indicativo e profilo ideale.
+                  Ecco come si posiziona il pacchetto pensato per il tuo negozio rispetto alle altre tipologie di sito che realizziamo.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -420,6 +420,11 @@ const SitiWebNegozi = () => {
                     </tbody>
                   </table>
                 </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mt-8" delay={0.2}>
+                <p>
+                  Per un negozio come il tuo, il Sito Vetrina è quasi sempre la scelta giusta: meno pagine, stesso impatto, clienti in negozio più in fretta.
+                </p>
               </AnimatedSection>
             </div>
           </div>
@@ -687,11 +692,11 @@ const SitiWebNegozi = () => {
               </AnimatedSection>
               <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                 {[
-                  'Specializzati in attività locali e negozi fisici',
-                  'Approccio semplice e diretto, senza complicazioni',
-                  'Niente tecnicismi inutili: pensiamo noi a tutto',
-                  'Supporto diretto e veloce via WhatsApp o telefono',
-                  'Clienti in tutta Italia, con un metodo collaudato da remoto',
+                  'Conosciamo i negozi come il tuo: sappiamo cosa serve davvero',
+                  'Nessun tecnicismo da capire: al resto pensiamo noi',
+                  'Rispondi via WhatsApp in giornata, non aspetti settimane',
+                  'Da remoto o di persona: stessa attenzione ovunque tu sia in Italia',
+                  'Un solo referente per tutto il progetto, dall\'inizio alla pubblicazione',
                 ].map((item, index) => (
                   <StaggerItem key={index}>
                     <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
@@ -729,9 +734,9 @@ const SitiWebNegozi = () => {
           <div className="container-section relative z-10">
             <AnimatedSection className="grid md:grid-cols-2 gap-8 items-stretch">
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
-                <h2 className="heading-2 text-primary-foreground mb-6">Richiedi un preventivo per il tuo sito web</h2>
+                <h2 className="heading-2 text-primary-foreground mb-6">Il prossimo cliente ti sta già cercando. Fatti trovare.</h2>
                 <p className="body-large text-primary-foreground/70 mb-8">
-                  Raccontaci il tuo negozio e ti proponiamo la soluzione più adatta, senza impegno.
+                  Raccontaci il tuo negozio: ti diciamo in 24h come portarti nuovi clienti dal web, senza impegno.
                 </p>
                 <div className="text-center">
                   <a
