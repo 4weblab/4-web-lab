@@ -250,7 +250,7 @@ const SitiWebAziendali = () => {
                 4 Web Lab
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Realizziamo siti multipagina veloci, sicuri e ottimizzati per Google e IA. Da 1890€, in Veneto e in tutta Italia.
+                Il sito che genera contatti B2B qualificati mentre tu gestisci l'azienda: veloce, sicuro, trovato da Google e dalle IA. Da 1890€.
               </p>
               <button onClick={handleContactClick} className="btn-primary inline-flex items-center gap-2 px-10 py-5">
                 Richiedi un preventivo gratuito
@@ -259,7 +259,7 @@ const SitiWebAziendali = () => {
 
               <div className="aeo-answer mt-10 mx-auto max-w-3xl text-left rounded-2xl bg-primary-foreground/8 border border-primary-foreground/15 p-6 md:p-7 backdrop-blur-sm">
                 <p className="text-primary-foreground/95 text-base md:text-lg leading-relaxed mb-4">
-                  <strong>4 Web Lab</strong> è la web agency con sede a Legnaro (Padova) specializzata nello sviluppo di siti aziendali su architettura Jamstack ed hosting Netlify. Combiniamo design su misura, predisposizione per l'Intelligenza Artificiale (AEO) e SEO integrata a partire da <strong>1890€ una tantum</strong>.
+                  Con <strong>4 Web Lab</strong> la tua azienda ottiene un sito aziendale che lavora per te 24 ore su 24: architettura Jamstack e hosting Netlify per design su misura, predisposizione per l'Intelligenza Artificiale (AEO) e SEO integrata, a partire da <strong>1890€ una tantum</strong>.
                 </p>
                 <ul className="grid sm:grid-cols-3 gap-3 text-sm text-primary-foreground/85">
                   <li className="flex items-start gap-2"><CheckCircle2 className="w-4 h-4 mt-0.5 text-accent flex-shrink-0" /> Esperienza su PMI e settori tecnici</li>
@@ -295,7 +295,7 @@ const SitiWebAziendali = () => {
                   {
                     title: "Credibilità e autorevolezza",
                     description:
-                      "Solidità del brand e massima sicurezza. Un sito professionale progettato su misura trasmette affidabilità immediata a clienti e partner, proteggendo i dati senza rischi di vulnerabilità.",
+                      "I tuoi clienti e partner si fidano a colpo d'occhio. Un sito professionale progettato su misura trasmette affidabilità immediata, proteggendo i dati senza rischi di vulnerabilità.",
                   },
                   {
                     title: "Visibilità su Google e IA (GEO/AEO)",
@@ -305,7 +305,7 @@ const SitiWebAziendali = () => {
                   {
                     title: "Acquisizione contatti qualificati",
                     description:
-                      "Architettura orientata alla conversione. Trasforma i visitatori in lead commerciali grazie a percorsi di navigazione chiari, call-to-action strategiche e form ad alte prestazioni.",
+                      "Ogni visitatore diventa un potenziale contatto commerciale, grazie a percorsi di navigazione chiari, call-to-action strategiche e form ad alte prestazioni.",
                   },
                   {
                     title: "Prestazioni & Scalabilità",
@@ -338,7 +338,7 @@ const SitiWebAziendali = () => {
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" direction="left">
                   <p className="mb-5">
-                    Progettiamo siti aziendali multipagina con architetture scalabili e copy orientato alla conversione, evitando i limiti di un <Link to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026" className="text-accent hover:underline font-medium">sito datato che fa perdere clienti</Link>.
+                    Costruiamo il sito che porta contatti B2B qualificati oggi e continua a farlo tra tre anni, con architetture scalabili e copy orientato alla conversione — evitando i limiti di un <Link to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026" className="text-accent hover:underline font-medium">sito datato che fa perdere clienti</Link>.
                   </p>
                   <ul className="list-none space-y-2.5 not-prose">
                     {[
@@ -420,7 +420,7 @@ const SitiWebAziendali = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Confronto sintetico tra le tre principali tipologie di sito per un'impresa, con pagine medie, obiettivo principale, costo indicativo e profilo ideale.
+                  Ecco come si posiziona il pacchetto pensato per la tua azienda rispetto alle altre tipologie di sito che realizziamo.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -429,39 +429,49 @@ const SitiWebAziendali = () => {
                     <thead className="bg-accent/8 text-foreground">
                       <tr>
                         <th className="px-5 py-4 font-semibold">Caratteristica</th>
-                        <th className="px-5 py-4 font-semibold">Sito vetrina</th>
-                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
-                        <th className="px-5 py-4 font-semibold">Sito corporate</th>
+                        <th className="px-5 py-4 font-semibold">One-Page</th>
+                        <th className="px-5 py-4 font-semibold">Sito Vetrina</th>
+                        <th className="px-5 py-4 font-semibold bg-accent/15 border-x border-accent/30">Sito Aziendale</th>
+                        <th className="px-5 py-4 font-semibold">Sito Corporate</th>
                       </tr>
                     </thead>
                     <tbody className="text-muted-foreground">
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
+                        <td className="px-5 py-4">1</td>
                         <td className="px-5 py-4">1–3</td>
-                        <td className="px-5 py-4">5–15</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">5–15</td>
                         <td className="px-5 py-4">15+ (anche multilingua)</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
+                        <td className="px-5 py-4">Presenza essenziale, contatto immediato</td>
                         <td className="px-5 py-4">Presenza online di base</td>
-                        <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Presentazione strutturata e lead generation</td>
                         <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
+                        <td className="px-5 py-4">da 490€</td>
                         <td className="px-5 py-4">da 990€</td>
-                        <td className="px-5 py-4">da 1890€</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">da 1890€</td>
                         <td className="px-5 py-4">Preventivo su misura</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
+                        <td className="px-5 py-4">Negozi, attività locali</td>
                         <td className="px-5 py-4">Liberi professionisti, micro-imprese</td>
-                        <td className="px-5 py-4">PMI che vogliono crescere online</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">PMI che vogliono crescere online</td>
                         <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mt-8" delay={0.2}>
+                <p>
+                  Per un'azienda come la tua, il Sito Aziendale è il punto di partenza più solido: struttura pensata per generare contatti B2B qualificati.
+                </p>
               </AnimatedSection>
             </div>
           </div>
@@ -614,7 +624,7 @@ const SitiWebAziendali = () => {
                     price: "A partire da 1890€",
                     priceNote: "IVA esclusa",
                     description:
-                      "Soluzione essenziale per avere una presenza online chiara e professionale, con struttura semplice e contenuti mirati.",
+                      "La base solida per farti trovare da nuovi clienti B2B e presentare la tua azienda con autorevolezza fin dal primo click.",
                   },
 
                   {
@@ -847,11 +857,11 @@ const SitiWebAziendali = () => {
                 </p>
                 <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
-                    "Specializzazione nei siti web per aziende e PMI: conosciamo le dinamiche e le esigenze delle imprese",
-                    "Architetture scalabili: ogni sito è progettato per crescere insieme al tuo business",
-                    "Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto in tutta Italia",
-                    "Ottimizzazione SEO integrata: ogni pagina è costruita per posizionarsi sui motori di ricerca",
-                    "Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace e aggiornato",
+                    "Sappiamo cosa serve davvero a una PMI, non applichiamo formule standard",
+                    "Il tuo sito cresce insieme alla tua azienda, senza dover ripartire da zero",
+                    "Comunicazione chiara anche a distanza: sai sempre a che punto siamo",
+                    "Ogni pagina è pensata per portarti contatti, non solo visite",
+                    "Non ti abbandoniamo al lancio: continuiamo a seguirti",
                   ].map((item, index) => (
                     <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20">
@@ -862,8 +872,8 @@ const SitiWebAziendali = () => {
                   ))}
                 </StaggerContainer>
                 <p>
-                  Scegliere 4 Web Lab significa affidarsi a un partner affidabile per la realizzazione di un sito web
-                  aziendale che rappresenti al meglio la tua impresa e ne accompagni la crescita.
+                  Con 4 Web Lab il tuo sito aziendale diventa uno strumento che lavora per la tua crescita, non solo una
+                  vetrina online.
                 </p>
                 <div className="mt-8 space-y-4">
                   <Link
@@ -911,11 +921,11 @@ const SitiWebAziendali = () => {
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <p className="heading-2 text-primary-foreground mb-6">
-                  Richiedi un preventivo per il tuo sito web aziendale
+                  I tuoi clienti B2B ti stanno già cercando su Google. Fatti trovare pronto.
                 </p>
                 <p className="body-large text-primary-foreground/70 mb-8">
-                  Vuoi realizzare un sito web aziendale strutturato e professionale? Contattaci per un confronto senza
-                  impegno: lavoriamo con aziende clienti in Veneto e in tutta Italia.
+                  Raccontaci la tua azienda: in 24h ti diciamo come trasformare il tuo sito in uno strumento di
+                  acquisizione contatti B2B.
                 </p>
                 <div className="text-center">
                   <a

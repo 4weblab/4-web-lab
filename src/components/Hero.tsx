@@ -62,16 +62,15 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap uppercase">SITI WEB PRONTI PER LE IA</span>
-              <span className="block my-3 sm:my-4 sm:whitespace-nowrap">WEB AGENCY PADOVA</span>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 sm:whitespace-nowrap">SEO, GOOGLE ADS e BRANDING</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 uppercase">WEB AGENCY PADOVA — SEO, AEO, GOOGLE ADS</span>
+              <span className="block my-3 sm:my-4">Fatti trovare prima dei tuoi concorrenti — su Google e su ChatGPT</span>
             </h1>
 
             <p
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              4 Web Lab è la web agency a Padova specializzata nello sviluppo di siti web ultra-veloci pronti per i motori di ricerca IA&nbsp;(ChatGPT, Gemini, Perplexity), posizionamento SEO, AEO, GEO e campagne Google Ads. Consegna in 2-4 settimane.
+              Sviluppiamo siti ultra-veloci che portano clienti reali: ottimizzati per la ricerca locale a Padova e per gli assistenti IA&nbsp;(ChatGPT, Gemini, Perplexity). Online in 2-4 settimane, con un solo referente per tutto il progetto.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
@@ -79,9 +78,10 @@ const Hero = () => {
               <button
                 onClick={handleScrollToContact}
                 className="hero-cta hero-cta-primary"
-                aria-label="Richiedi un preventivo gratuito">
-                Richiedi preventivo gratuito
+                aria-label="Richiedi la tua Analisi AEO & SEO gratuita">
+                Richiedi la tua Analisi AEO &amp; SEO gratuita
               </button>
+
 
               <a
                 href={whatsappUrl}

@@ -23,35 +23,35 @@ const testimonials = [
 const cards: { icon: typeof Users; title: string; description: React.ReactNode }[] = [
   {
     icon: Zap,
-    title: 'Performance & Core Web Vitals',
-    description: 'Sviluppiamo codice statico custom privo di database pesanti o plugin ridondanti, garantendo punteggi vicini al 100/100 sui principali strumenti di analisi delle prestazioni. Ogni pagina viene erogata istantaneamente tramite reti CDN globali (Netlify). Risultato: tempi di risposta minimi, massima sicurezza contro i problemi di vulnerabilità e un vantaggio competitivo concreto sui motori di ricerca.',
+    title: 'Il tuo sito non fa aspettare nessuno',
+    description: 'Codice statico custom, zero database pesanti: pagine che si caricano all\'istante su CDN globale (Netlify). Risultato: meno abbandoni, più conversioni, vantaggio reale su Google.',
   },
   {
     icon: Search,
-    title: 'SEO Tradizionale e AEO/GEO Native',
-    description: 'Ottimizziamo la struttura semantica del sito per Google e per i motori di ricerca IA (ChatGPT, Gemini, Perplexity). Rendiamo il tuo brand la fonte citata dagli agenti IA per intercettare lead qualificati.',
+    title: 'Ti trovano anche le IA, non solo Google',
+    description: 'Struttura semantica ottimizzata per Google e per ChatGPT, Gemini, Perplexity. Il tuo brand diventa la fonte citata, non quella ignorata.',
   },
   {
     icon: Users,
-    title: 'Referente Tecnico Dedicato',
-    description: 'Parli ed entri in contatto diretto con chi progetta e scrive il codice del tuo sito, senza intermediari o commercialisti.',
+    title: 'Parli sempre con chi fa il lavoro',
+    description: 'Contatto diretto con lo sviluppatore. Nessun intermediario, nessuna attesa per un cambio testo.',
   },
   {
     icon: Lightbulb,
-    title: 'Codice Custom Senza Template',
-    description: 'Sviluppo 100% su misura senza l\'uso di page builder pesanti o temi WordPress predefiniti: massima velocità e sicurezza.',
+    title: 'Un sito che non somiglia a mille altri',
+    description: 'Sviluppo 100% su misura, senza template WordPress: il tuo sito è unico quanto la tua attività, ed è più sicuro.',
   },
   {
     icon: Smartphone,
-    title: 'UX & Design Mobile-First',
-    description: 'Interfaccia e navigazione progettate prioritariamente per smartphone e tablet: layout reattivi, codice leggero ed esperienza utente fluida su qualsiasi dispositivo.',
+    title: 'Funziona bene da telefono, dove ti cercano davvero',
+    description: 'Design mobile-first: la maggior parte dei tuoi clienti ti troverà da smartphone.',
   },
   {
     icon: Target,
-    title: 'Tempi Certi e Risultati Verificati',
+    title: 'Sai sempre quando va online',
     description: (
       <>
-        Dallo studio di fattibilità alla pubblicazione online, garantiamo tempi di consegna definiti (2-4 settimane) senza ritardi, con progetti reali e dati di traffico e conversioni misurabili, come il restyling per{' '}
+        2-4 settimane, tempi concordati e rispettati. Risultati verificabili, come il restyling per{' '}
         <Link to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto" className="text-accent hover:underline font-medium">R.B. s.n.c.</Link>
       </>
     ),
@@ -103,7 +103,7 @@ const AboutSection = () => {
           <div className="section-divider" />
           <h2 className="heading-3 mb-2">Cosa dicono i nostri clienti a Padova e in Italia</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            Valutazione media 4.9 su Google. Storie di business reali, restyling ad alte prestazioni e risultati di posizionamento verificabili.
+            4.9/5 su Google. Non parole nostre — risultati di chi ha già lavorato con noi.
           </p>
         </AnimatedSection>
 

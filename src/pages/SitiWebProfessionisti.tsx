@@ -135,9 +135,8 @@ const SitiWebProfessionisti = () => {
                 Siti Web per Professionisti e Studi Professionali
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
-                Realizziamo siti web per liberi professionisti e studi a Padova e in tutta Italia. Sviluppiamo
-                soluzioni su misura, veloci e ottimizzate per attirare nuovi clienti e posizionare il tuo brand con
-                autorevolezza.
+                Il sito che ti presenta prima ancora del primo appuntamento: autorevole, veloce, pensato per
+                trasformare chi ti cerca online in un cliente che ti chiama.
               </p>
               <button
                 onClick={() =>
@@ -160,12 +159,12 @@ const SitiWebProfessionisti = () => {
                 <div className="icon-box w-13 h-13">
                   <Users className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">A chi è rivolto il servizio</h2>
+                <h2 className="heading-2">Il sito giusto per chi vive di reputazione e primi contatti</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  Il nostro servizio di realizzazione siti web per professionisti è pensato per chi opera nel mondo
-                  delle libere professioni e degli studi professionali. Ci rivolgiamo a:
+                  Se il tuo lavoro dipende da quanto ti percepiscono affidabile e competente prima ancora di parlarti,
+                  il sito è la tua prima occasione per convincere. È pensato per:
                 </p>
                 <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
@@ -199,13 +198,12 @@ const SitiWebProfessionisti = () => {
                 <div className="icon-box w-13 h-13">
                   <Target className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Cosa deve comunicare un sito web per professionisti</h2>
+                <h2 className="heading-2">Cosa deve fare il tuo sito per portarti clienti, non solo visite</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-7">
-                  Un sito web professionale per chi opera nel mondo delle professioni deve trasmettere valori
-                  fondamentali che generano fiducia e facilitano il contatto con potenziali clienti. Ecco gli elementi
-                  chiave:
+                  Un potenziale cliente decide se contattarti nei primi 10 secondi sul tuo sito. Ecco cosa deve
+                  trovare per farlo:
                 </p>
                 <StaggerContainer className="grid md:grid-cols-2 gap-6 mb-8" staggerDelay={0.1}>
                   {[
@@ -342,11 +340,11 @@ const SitiWebProfessionisti = () => {
                 </p>
                 <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
                   {[
-                    "Approccio consulenziale: non vendiamo solo un sito, ma una soluzione pensata per i tuoi obiettivi",
-                    "Esperienza nel settore professionale: conosciamo le esigenze specifiche di chi opera nelle libere professioni",
-                    "Metodo collaudato: processi chiari e organizzati per collaborazioni efficaci da remoto",
-                    "Attenzione ai risultati: ogni sito è progettato per generare fiducia e facilitare il contatto con nuovi clienti",
-                    "Supporto continuativo: assistenza anche dopo il lancio per garantire che il sito resti sempre efficace",
+                    "Non ti vendiamo un sito, ti costruiamo uno strumento per acquisire clienti",
+                    "Sappiamo cosa serve a uno studio professionale, non improvvisiamo",
+                    "Processo chiaro anche a distanza: sai sempre a che punto siamo",
+                    "Il tuo sito continua a portarti risultati anche dopo il lancio, non ti lasciamo solo",
+                    "Nessun vincolo, nessuna sorpresa in fattura",
                   ].map((item, index) => (
                     <StaggerItem key={index}>
                       <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20 hover:-translate-y-[3px] hover:shadow-md">
@@ -357,8 +355,7 @@ const SitiWebProfessionisti = () => {
                   ))}
                 </StaggerContainer>
                 <p>
-                  Scegliere 4 Web Lab significa affidarsi a un partner affidabile per la realizzazione di un sito web
-                  professionale che rappresenti al meglio la tua attività professionale.
+                  Con 4 Web Lab il tuo sito diventa il tuo miglior biglietto da visita, disponibile 24 ore su 24.
                 </p>
               </AnimatedSection>
             </div>
@@ -481,12 +478,12 @@ const SitiWebProfessionisti = () => {
                         {
                           title: "Nessun vincolo contrattuale",
                           description:
-                            "4 Web Lab resta al fianco delle tue necessità di sviluppo online ma senza firme o vincoli di nessun tipo.",
+                            "Resti libero di scegliere quando e come far crescere il tuo sito, senza firme o vincoli di nessun tipo.",
                         },
                         {
                           title: "Gestione dell' hosting e dell'assistenza",
                           description:
-                            "​4 Web Lab può gestire l'hosting del tuo spazio, noi ci assicuriamo che tutto funzioni sempre al meglio e tu pensi alla tua attività.",
+                            "Non pensi più a hosting o problemi tecnici: ci pensiamo noi, tu ti concentri sui tuoi clienti.",
                         },
                       ].map((item, index) => (
                         <StaggerItem key={index}>
@@ -554,7 +551,7 @@ const SitiWebProfessionisti = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Confronto sintetico tra le tre principali tipologie di sito per un'impresa, con pagine medie, obiettivo principale, costo indicativo e profilo ideale.
+                  Ecco come si posiziona il pacchetto pensato per il tuo profilo professionale rispetto alle altre tipologie di sito che realizziamo.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
@@ -563,39 +560,49 @@ const SitiWebProfessionisti = () => {
                     <thead className="bg-accent/8 text-foreground">
                       <tr>
                         <th className="px-5 py-4 font-semibold">Caratteristica</th>
-                        <th className="px-5 py-4 font-semibold">Sito vetrina</th>
-                        <th className="px-5 py-4 font-semibold">Sito aziendale</th>
-                        <th className="px-5 py-4 font-semibold">Sito corporate</th>
+                        <th className="px-5 py-4 font-semibold">One-Page</th>
+                        <th className="px-5 py-4 font-semibold bg-accent/15 border-x border-accent/30">Sito Vetrina</th>
+                        <th className="px-5 py-4 font-semibold">Sito Aziendale</th>
+                        <th className="px-5 py-4 font-semibold">Sito Corporate</th>
                       </tr>
                     </thead>
                     <tbody className="text-muted-foreground">
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
-                        <td className="px-5 py-4">1–3</td>
+                        <td className="px-5 py-4">1</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">1–3</td>
                         <td className="px-5 py-4">5–15</td>
                         <td className="px-5 py-4">15+ (anche multilingua)</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
-                        <td className="px-5 py-4">Presenza online di base</td>
+                        <td className="px-5 py-4">Presenza essenziale, contatto immediato</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Presenza online di base</td>
                         <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
                         <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
-                        <td className="px-5 py-4">da 990€</td>
+                        <td className="px-5 py-4">da 490€</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">da 990€</td>
                         <td className="px-5 py-4">da 1890€</td>
                         <td className="px-5 py-4">Preventivo su misura</td>
                       </tr>
                       <tr className="border-t border-border/50">
                         <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
-                        <td className="px-5 py-4">Liberi professionisti, micro-imprese</td>
+                        <td className="px-5 py-4">Negozi, attività locali</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Liberi professionisti, micro-imprese</td>
                         <td className="px-5 py-4">PMI che vogliono crescere online</td>
                         <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mt-8" delay={0.2}>
+                <p>
+                  Per un professionista come te, il Sito Vetrina è quasi sempre la scelta giusta: la vetrina digitale che ti presenta bene fin dal primo contatto.
+                </p>
               </AnimatedSection>
             </div>
           </div>
@@ -780,11 +787,11 @@ const SitiWebProfessionisti = () => {
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <h2 className="heading-2 text-primary-foreground mb-6">
-                  Richiedi un preventivo per il tuo sito web professionale
+                  Il cliente che oggi ti cerca su Google, domani può essere già dalla concorrenza
                 </h2>
                 <p className="body-large text-primary-foreground/70 mb-8">
-                  Vuoi realizzare un sito web per professionisti che ti rappresenti al meglio? Contattaci per un
-                  confronto senza impegno: lavoriamo con professionisti in tutta Italia.
+                  Raccontaci la tua attività: in 24h ti diciamo come far diventare il tuo sito il tuo miglior canale
+                  di acquisizione clienti.
                 </p>
                 <div className="text-center">
                   <a
