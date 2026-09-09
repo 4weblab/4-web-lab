@@ -176,15 +176,15 @@ const SitiWebPonteSanNicolo = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Sviluppo Siti Web a Ponte San Nicolò: Soluzioni per Artigiani, Negozi e PMI Senza WordPress
+                Sviluppo Siti Web ad Albignasego: Soluzioni per Negozi, Professionisti e PMI Senza WordPress
               </h1>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sei un'attività lungo la Statale Piovese o nella zona industriale di Ponte San Nicolò? Creiamo siti web
-                ultra-veloci, sicuri e pronti per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in
-                14 giorni sei online.
+                Sei un'attività di Albignasego o della zona sud di Padova? Creiamo siti web ultra-veloci, sicuri e
+                pronti per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei
+                online.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
@@ -217,11 +217,11 @@ const SitiWebPonteSanNicolo = () => {
               <div className="section-divider" />
               <h2 className="heading-3 mb-5">Un territorio con un'identità precisa</h2>
               <p className="body-large text-muted-foreground text-balance">
-                Ponte San Nicolò non è un comune qualsiasi alle porte di Padova: è da sempre porta d'accesso alla
-                Saccisica, con due zone artigianali proprie e un lungo corridoio commerciale lungo la ex Statale Piovese,
-                oltre alla vicinanza diretta con la Zona Industriale di Padova (ZIP). Che la tua attività sia a
-                Roncaglia, Roncajette, Rio o nel cuore del paese, il tuo sito deve parlare la lingua di chi cerca un
-                fornitore, un artigiano o un negozio in questa zona — non un template generico.
+                Con quasi 27.000 abitanti, Albignasego è il secondo comune più popoloso della provincia di Padova — un
+                tessuto commerciale denso lungo la Strada Provinciale Conselvana, a soli 3 km dal centro storico. Che
+                la tua attività sia a San Tommaso, San Lorenzo, Carpanedo o in uno degli altri quartieri, il tuo sito
+                deve competere in una delle zone commerciali più vive della cintura padovana, non limitarsi a esistere
+                online.
               </p>
             </AnimatedSection>
           </div>
@@ -232,10 +232,10 @@ const SitiWebPonteSanNicolo = () => {
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
-              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino a Ponte San Nicolò</h2>
+              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino ad Albignasego</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per le attività di Ponte San Nicolò, Roncaglia, Roncajette, Rio e di tutta la
-                Saccisica.
+                Tre vantaggi concreti per le attività di Albignasego, Selvazzano Dentro, Maserà di Padova, Due Carrare
+                e di tutta la zona sud.
               </p>
             </AnimatedSection>
 
