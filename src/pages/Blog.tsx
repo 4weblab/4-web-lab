@@ -64,10 +64,10 @@ const Blog = () => {
                 "@type": "BlogPosting",
                 headline: article.title,
                 description: article.description,
-                url: `https://4weblab.it${article.slug}`,
+                url: `https://4weblab.it${article.path}`,
                 image: `https://4weblab.it${article.image}`,
                 datePublished: article.datePublished,
-                dateModified: article.datePublished,
+                dateModified: article.dateModified,
                 inLanguage: "it-IT",
                 author: {
                   "@type": "Person",
@@ -77,7 +77,7 @@ const Blog = () => {
                 publisher: { "@id": "https://4weblab.it/#business" },
                 mainEntityOfPage: {
                   "@type": "WebPage",
-                  "@id": `https://4weblab.it${article.slug}`,
+                  "@id": `https://4weblab.it${article.path}`,
                 },
               })),
             },
@@ -199,7 +199,7 @@ const Blog = () => {
 
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {articles.map((article) => (
-                <StaggerItem key={article.title}>
+                <StaggerItem key={article.slug}>
                   <article className="group h-full overflow-hidden rounded-2xl bg-card border border-border/60 shadow-sm transition-all duration-400 hover:-translate-y-1.5 hover:shadow-[var(--shadow-card-hover)] hover:border-accent/30 flex flex-col">
                     <div className="relative overflow-hidden aspect-[16/10] bg-muted">
                       <img
@@ -216,11 +216,11 @@ const Blog = () => {
                         {article.title}
                       </h3>
                       <p className="body-base text-muted-foreground mt-3 line-clamp-2">
-                        {article.description}
+                        {article.excerpt}
                       </p>
                       <div className="mt-6 pt-4 border-t border-border/50">
                         <Link
-                          to={article.slug}
+                          to={article.path}
                           className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all"
                         >
                           Leggi di più
