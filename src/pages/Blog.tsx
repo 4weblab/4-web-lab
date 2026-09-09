@@ -5,111 +5,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
-import blogAiWebsite from "@/assets/blog-ai-website.webp";
-import blogGdprPrivacy from "@/assets/blog-gdpr-privacy.webp";
-import blogOutdatedWebsite from "@/assets/blog-sito-obsoleto-2026.webp";
-import blogWebsiteCost from "@/assets/blog-website-cost.webp";
-import blogSiteVsSocial from "@/assets/blog-site-vs-social.webp";
-import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
-import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.webp";
-import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
-import blogArubaSupersite from "@/assets/blog-aruba-supersite.webp";
-import blogWordPressGuide from "@/assets/blog-guida-wordpress.webp";
-
-const articles = [
-  {
-    slug: "/blog/guida-wordpress-alternative-2026",
-    title: "Guida WordPress: È Davvero Facile da Usare? Pro, Contro, Alternative",
-    description:
-      "WordPress ha fama di essere semplice, ma tra plugin, aggiornamenti e sicurezza la realtà è diversa. Guida completa: cosa aspettarti davvero e le alternative nel 2026.",
-    image: blogWordPressGuide,
-    alt: "Pannello di controllo di un sito WordPress con plugin, ingranaggi e aggiornamenti",
-    datePublished: "2026-09-09",
-  },
-  {
-    slug: "/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
-    title: "Aruba SuperSite conviene davvero? Limiti, tempo perso e cosa sapere",
-    description:
-      "Aruba SuperSite sembra la scorciatoia perfetta per creare un sito da soli. Ecco i limiti reali, il tempo perso e cosa valutare prima di iniziare.",
-    image: blogArubaSupersite,
-    alt: "Schermata di Aruba SuperSite con editor drag and drop per creare un sito web da soli",
-    datePublished: "2026-06-09",
-  },
-  {
-    slug: "/blog/creare-sito-web-da-soli-conviene",
-    title: "Creare un sito web da soli conviene davvero? Costi, rischi e cosa sapere nel 2026",
-    description:
-      "Vuoi creare un sito web da solo con WordPress o altri strumenti? Scopri rischi, costi reali e perché spesso non porta clienti.",
-    image: blogDiyWebsite,
-    alt: "Persona che crea un sito web da sola con laptop e builder visuale WordPress",
-    datePublished: "2026-05-03",
-  },
-  {
-    slug: "/blog/siti-web-piattaforme-preventivi-online-conviene",
-    title: "Siti web su piattaforme di preventivi online: conviene davvero o è un errore costoso?",
-    description:
-      "Preventivi veloci e prezzi bassi: sembra la scelta giusta. Ma cosa succede davvero dietro piattaforme come ProntoPro e simili?",
-    image: blogQuotePlatforms,
-    alt: "Laptop con piattaforme di preventivi online per la realizzazione di siti web",
-    datePublished: "2026-05-02",
-  },
-  {
-    slug: "/blog/perche-il-tuo-sito-non-si-trova-su-google",
-    title: "Perché il tuo sito non si trova su Google (e come iniziare a comparire davvero)",
-    description:
-      "Il tuo sito non compare su Google? Scopri perché succede e cosa fare per iniziare a farti trovare dai clienti nel 2026.",
-    image: blogNotFoundOnGoogle,
-    alt: "Laptop con risultati di ricerca Google e lente di ingrandimento, sito web non posizionato",
-    datePublished: "2026-04-24",
-  },
-  {
-    slug: "/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026",
-    title: "Sito web obsoleto: 5 segnali che ti stanno facendo perdere clienti nel 2026",
-    description:
-      "Il tuo sito web è vecchio o inefficace? Scopri 5 segnali che fanno perdere clienti e come capire se è il momento di rifarlo.",
-    image: blogOutdatedWebsite,
-    alt: "Monitor e smartphone con un sito aziendale obsoleto e prestazioni in calo",
-    datePublished: "2026-03-26",
-  },
-  {
-    slug: "/blog/gdpr-siti-web-2026-obblighi-cookie-e-privacy",
-    title: "GDPR siti web 2026: obblighi, cookie e privacy",
-    description:
-      "GDPR siti web: cosa è obbligatorio nel 2026? Scopri cookie banner, privacy policy e cosa deve avere un sito per essere a norma.",
-    image: blogGdprPrivacy,
-    alt: "Cookie banner e privacy policy su un sito web aziendale conforme al GDPR",
-    datePublished: "2026-04-20",
-  },
-  {
-    slug: "/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026",
-    title: "Sito web o social network: cosa conviene davvero per un’attività nel 2026?",
-    description:
-      "Meglio un sito web o i social per la tua attività? Differenze, vantaggi e la scelta più solida per portare clienti nel 2026.",
-    image: blogSiteVsSocial,
-    alt: "Confronto tra sito web aziendale e presenza social per un'attività locale",
-    datePublished: "2026-03-15",
-  },
-  {
-    slug: "/blog/siti-web-creati-con-intelligenza-artificiale",
-    title: "Siti web fatti con intelligenza artificiale: opportunità o rischio?",
-    description:
-      "Sempre più aziende usano l'IA per creare siti web. Ma è davvero la scelta giusta o ci sono limiti da conoscere?",
-    image: blogAiWebsite,
-    alt: "Interfaccia digitale per la creazione di siti web con intelligenza artificiale",
-    datePublished: "2026-04-08",
-  },
-  {
-    slug: "/blog/quanto-costa-un-sito-web-nel-2026",
-    title: "Quanto costa un sito web nel 2026?",
-    description:
-      "Una guida chiara ai costi reali di un sito web: cosa incide sul prezzo e cosa aspettarsi davvero.",
-    image: blogWebsiteCost,
-    alt: "Costo di realizzazione di un sito web professionale nel 2026",
-    datePublished: "2026-03-04",
-  },
-];
+import { getSortedArticles } from "@/data/blogArticles";
 
 const Blog = () => {
+  const articles = getSortedArticles();
   const pageTitle = "Blog Siti Web, SEO e Strategie AI 2026 | 4 Web Lab Padova";
   const pageDescription =
     "Guide pratiche, approfondimenti su costi web, GDPR, SEO e AEO per far crescere la tua attività a Padova. Consigli dallo staff di 4 Web Lab.";
@@ -165,10 +64,10 @@ const Blog = () => {
                 "@type": "BlogPosting",
                 headline: article.title,
                 description: article.description,
-                url: `https://4weblab.it${article.slug}`,
+                url: `https://4weblab.it${article.path}`,
                 image: `https://4weblab.it${article.image}`,
                 datePublished: article.datePublished,
-                dateModified: article.datePublished,
+                dateModified: article.dateModified,
                 inLanguage: "it-IT",
                 author: {
                   "@type": "Person",
@@ -178,7 +77,7 @@ const Blog = () => {
                 publisher: { "@id": "https://4weblab.it/#business" },
                 mainEntityOfPage: {
                   "@type": "WebPage",
-                  "@id": `https://4weblab.it${article.slug}`,
+                  "@id": `https://4weblab.it${article.path}`,
                 },
               })),
             },
@@ -300,7 +199,7 @@ const Blog = () => {
 
             <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {articles.map((article) => (
-                <StaggerItem key={article.title}>
+                <StaggerItem key={article.slug}>
                   <article className="group h-full overflow-hidden rounded-2xl bg-card border border-border/60 shadow-sm transition-all duration-400 hover:-translate-y-1.5 hover:shadow-[var(--shadow-card-hover)] hover:border-accent/30 flex flex-col">
                     <div className="relative overflow-hidden aspect-[16/10] bg-muted">
                       <img
@@ -317,11 +216,11 @@ const Blog = () => {
                         {article.title}
                       </h3>
                       <p className="body-base text-muted-foreground mt-3 line-clamp-2">
-                        {article.description}
+                        {article.excerpt}
                       </p>
                       <div className="mt-6 pt-4 border-t border-border/50">
                         <Link
-                          to={article.slug}
+                          to={article.path}
                           className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:gap-3 transition-all"
                         >
                           Leggi di più
