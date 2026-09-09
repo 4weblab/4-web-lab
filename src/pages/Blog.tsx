@@ -14,8 +14,18 @@ import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
 import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.webp";
 import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
 import blogArubaSupersite from "@/assets/blog-aruba-supersite.webp";
+import blogWordPressGuide from "@/assets/blog-guida-wordpress.webp";
 
 const articles = [
+  {
+    slug: "/blog/guida-wordpress-alternative-2026",
+    title: "Guida WordPress: È Davvero Facile da Usare? Pro, Contro, Alternative",
+    description:
+      "WordPress ha fama di essere semplice, ma tra plugin, aggiornamenti e sicurezza la realtà è diversa. Guida completa: cosa aspettarti davvero e le alternative nel 2026.",
+    image: blogWordPressGuide,
+    alt: "Pannello di controllo di un sito WordPress con plugin, ingranaggi e aggiornamenti",
+    datePublished: "2026-09-09",
+  },
   {
     slug: "/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
     title: "Aruba SuperSite conviene davvero? Limiti, tempo perso e cosa sapere",
