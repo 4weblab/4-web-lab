@@ -118,6 +118,11 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/BlogArubaSupersiteArticle.tsx",
       },
       {
+        path: "blog/guida-wordpress-alternative-2026",
+        lazy: page(() => import("./pages/BlogWordPressGuideArticle")),
+        entry: "src/pages/BlogWordPressGuideArticle.tsx",
+      },
+      {
         path: "contatti",
         lazy: page(() => import("./pages/Contact")),
         entry: "src/pages/Contact.tsx",
