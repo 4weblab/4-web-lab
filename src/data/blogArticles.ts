@@ -7,6 +7,7 @@ import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
 import blogQuotePlatforms from "@/assets/blog-piattaforme-preventivi.webp";
 import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
 import blogArubaSupersite from "@/assets/blog-aruba-supersite.webp";
+import blogWordPressGuide from "@/assets/blog-guida-wordpress.webp";
 
 export type BlogArticle = {
   slug: string;
@@ -48,6 +49,23 @@ export const formatItalianDate = (iso: string): string => {
 };
 
 export const blogArticles: BlogArticle[] = [
+  {
+    slug: "guida-wordpress-alternative-2026",
+    path: "/blog/guida-wordpress-alternative-2026",
+    title: "Guida WordPress: È Davvero Facile da Usare? Pro, Contro, Alternative",
+    shortTitle: "Guida WordPress 2026",
+    description:
+      "WordPress ha fama di essere semplice, ma tra plugin, aggiornamenti e sicurezza la realtà è diversa. Guida completa: cosa aspettarti davvero e le alternative nel 2026.",
+    excerpt:
+      "WordPress ha fama di essere semplice da usare. La realtà, tra plugin e aggiornamenti, è diversa: ecco cosa aspettarti davvero.",
+    image: blogWordPressGuide,
+    alt: "Pannello di controllo di un sito WordPress con plugin, ingranaggi e aggiornamenti",
+    datePublished: "2026-09-09",
+    dateModified: "2026-09-09",
+    category: "Strategia digitale",
+    related: ["creare-sito-web-da-soli-conviene", "quanto-costa-un-sito-web-nel-2026"],
+    wordCount: 850,
+  },
   {
     slug: "aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
     path: "/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere",
