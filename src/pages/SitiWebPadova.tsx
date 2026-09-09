@@ -553,7 +553,7 @@ const SitiWebPadova = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  Con sede operativa a <Link to="/realizzazione-siti-web-legnaro" className="text-accent hover:underline font-medium">Legnaro (PD)</Link>, siamo il punto di riferimento concreto per le attività che cercano un servizio di <strong>sviluppo e creazione di siti internet a Padova</strong> e provincia, con un'attenzione particolare anche a <Link to="/realizzazione-siti-web-piove-di-sacco" className="text-accent hover:underline font-medium">Piove di Sacco</Link> e alla Saccisica. Lavoriamo fianco a fianco con{" "}
+                  Con sede operativa a <Link to="/realizzazione-siti-web-legnaro" className="text-accent hover:underline font-medium">Legnaro (PD)</Link>, siamo il punto di riferimento concreto per le attività che cercano un servizio di <strong>sviluppo e creazione di siti internet a Padova</strong> e provincia, con un'attenzione particolare anche a <Link to="/realizzazione-siti-web-piove-di-sacco" className="text-accent hover:underline font-medium">Piove di Sacco</Link>, <Link to="/realizzazione-siti-web-ponte-san-nicolo" className="text-accent hover:underline font-medium">Ponte San Nicolò</Link> e alla Saccisica. Lavoriamo fianco a fianco con{" "}
                   <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">
                     professionisti
                   </Link>
