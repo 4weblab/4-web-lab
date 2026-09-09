@@ -135,7 +135,7 @@ const SitiWebPadova = () => {
                     name: "Lavorate solo a Padova città o anche in provincia?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
+                      text: "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
                     }
                   },
                   {
@@ -538,7 +538,7 @@ const SitiWebPadova = () => {
               <AnimatedSection delay={0.05}>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {[
-                    "Padova", "Abano Terme", "Albignasego", "Selvazzano Dentro", "Vigonza",
+                    "Padova", "Abano Terme", "Selvazzano Dentro", "Vigonza",
                     "Cadoneghe", "Rubano", "Legnaro", "Este", "Monselice", "Cittadella",
                     "Piove di Sacco", "Vigodarzere", "Saonara",
                   ].map((comune) => (
@@ -695,7 +695,7 @@ const SitiWebPadova = () => {
                     {
                       question: "Lavorate solo a Padova città o anche in provincia?",
                       answer:
-                        "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Albignasego, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
+                        "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Selvazzano Dentro, Vigonza, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
                     },
                     {
                       question: "È possibile incontrarvi di persona a Padova?",
