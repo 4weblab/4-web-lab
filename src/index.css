@@ -462,8 +462,19 @@
   }
 }
 
+/* TrustBar — infinite marquee on mobile */
+@keyframes trustbar-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.trustbar-marquee {
+  animation: trustbar-marquee 30s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .scroll-indicator {
+  .scroll-indicator,
+  .trustbar-marquee {
     animation: none;
   }
 }
