@@ -3,7 +3,6 @@ import { Zap, CalendarCheck, Code2, MessageSquare } from 'lucide-react';
 const items = [
   { icon: Zap, text: 'Il tuo sito carica prima che il cliente cambi idea' },
   { icon: CalendarCheck, text: 'Online e operativo in 2-4 settimane' },
-  { icon: MessageSquare, text: 'Parli solo con chi scrive il tuo codice, mai con un centralino' },
   { icon: Code2, text: 'Zero costi nascosti di manutenzione, zero WordPress da aggiornare' },
 ];
 
