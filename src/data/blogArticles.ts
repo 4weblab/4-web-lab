@@ -258,3 +258,8 @@ export const getRelatedArticles = (slug: string): BlogArticle[] => {
     .map((s) => getArticleBySlug(s))
     .filter((a): a is BlogArticle => Boolean(a));
 };
+
+export const getSortedArticles = (): BlogArticle[] =>
+  [...blogArticles].sort(
+    (a, b) => new Date(b.datePublished).getTime() - new Date(a.datePublished).getTime()
+  );
