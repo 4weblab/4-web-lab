@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef, Fragment } from 'react';
-import { Menu, X, ArrowLeft, ChevronDown } from 'lucide-react';
+import { Menu, X, ArrowLeft, ChevronDown, Home } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const navItems = [
@@ -38,7 +38,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       : 'text-primary-foreground hover:bg-primary-foreground/10'
   }`;
 
-  const mobileBackLinkClass = `inline-flex items-center gap-2 px-3 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
+  const mobileBackLinkClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
     isScrolled
       ? 'text-foreground hover:bg-muted/60'
       : 'text-primary-foreground hover:bg-primary-foreground/10'
@@ -203,16 +203,14 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
 
         {/* Mobile Menu Button */}
         {satelliteMode ? (
-          <div className="lg:hidden flex items-center gap-2">
+          <div className="lg:hidden flex items-center gap-1.5">
             {isBlogArticle && (
-              <Link to="/blog" className={mobileBackLinkClass}>
-                <ArrowLeft className="w-4 h-4" />
-                Torna agli articoli
+              <Link to="/blog" className={mobileBackLinkClass} aria-label="Torna agli articoli">
+                <ArrowLeft className="w-5 h-5" />
               </Link>
             )}
-            <Link to="/" className={mobileBackLinkClass}>
-              <ArrowLeft className="w-4 h-4" />
-              Torna alla Home
+            <Link to="/" className={mobileBackLinkClass} aria-label="Torna alla Home">
+              <Home className="w-5 h-5" />
             </Link>
           </div>
         ) : (
