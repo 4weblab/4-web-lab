@@ -8,19 +8,19 @@ import albProssimita from "@/assets/albignasego-prossimita.webp";
 import albVelocita from "@/assets/albignasego-velocita.webp";
 import albIa from "@/assets/albignasego-ia.webp";
 
-const TITLE = "Web Agency Ponte San Nicolò (PD) | Siti Web da 490€";
+const TITLE = "Web Agency Albignasego (PD) | Siti Web da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per attività di Ponte San Nicolò e zona industriale. Contatto diretto, zero intermediari, preventivo in 24h.";
+  "Realizzazione siti web ultra-veloci per negozi e attività di Albignasego e zona sud di Padova. Contatto diretto, preventivo in 24h.";
 const URL = "https://4weblab.it/realizzazione-siti-web-albignasego";
 
 const vantaggi = [
   {
     image: albProssimita,
-    alt: "Incontro diretto tra sviluppatore e titolare di attività artigianale",
+    alt: "Incontro diretto tra sviluppatore e titolare di un negozio",
     icon: MapPin,
     title: "Prossimità Reale",
     description:
-      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice, a due passi dalla zona industriale e dalla Statale Piovese.",
+      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice, a pochi minuti da Albignasego e dalla zona sud di Padova.",
   },
   {
     image: albVelocita,
@@ -28,7 +28,7 @@ const vantaggi = [
     icon: Zap,
     title: "Zero Manutenzione",
     description:
-      "Architettura Jamstack pura: ideale per chi lavora e non ha tempo da perdere dietro ad aggiornamenti WordPress o plugin che si rompono.",
+      "Architettura Jamstack pura: il tuo sito resta veloce e sicuro senza doverci pensare, anche nei periodi di maggiore afflusso di clienti.",
   },
   {
     image: albIa,
@@ -36,7 +36,7 @@ const vantaggi = [
     icon: Sparkles,
     title: "Pronti per l'IA",
     description:
-      "Chi cerca un fornitore o un artigiano nella zona, oggi lo chiede anche a ChatGPT. Ottimizziamo il tuo sito per comparire lì, non solo su Google.",
+      "In una zona con tanti negozi e professionisti in concorrenza diretta, farsi consigliare da Google e da ChatGPT fa la differenza. Ottimizziamo il tuo sito per questo.",
   },
 ];
 
@@ -93,7 +93,7 @@ const SitiWebPonteSanNicolo = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Ponte San Nicolò", item: URL },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Albignasego", item: URL },
                 ],
               },
               {
@@ -117,12 +117,13 @@ const SitiWebPonteSanNicolo = () => {
               },
               {
                 "@type": "Service",
-                name: "Realizzazione siti web a Ponte San Nicolò e Saccisica",
+                name: "Realizzazione siti web ad Albignasego e zona sud di Padova",
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
-                  { "@type": "City", name: "Ponte San Nicolò" },
-                  { "@type": "City", name: "Saonara" },
-                  { "@type": "AdministrativeArea", name: "Saccisica" },
+                  { "@type": "City", name: "Albignasego" },
+                  { "@type": "City", name: "Selvazzano Dentro" },
+                  { "@type": "City", name: "Maserà di Padova" },
+                  { "@type": "City", name: "Due Carrare" },
                 ],
                 offers: {
                   "@type": "AggregateOffer",
