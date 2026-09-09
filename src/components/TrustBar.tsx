@@ -1,4 +1,4 @@
-import { Zap, CalendarCheck, Code2, MessageSquare } from 'lucide-react';
+import { Zap, CalendarCheck, Code2 } from 'lucide-react';
 
 const items = [
   { icon: Zap, text: 'Il tuo sito carica prima che il cliente cambi idea' },
