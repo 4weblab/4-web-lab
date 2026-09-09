@@ -540,7 +540,7 @@ const SitiWebPadova = () => {
                   {[
                     "Padova", "Abano Terme", "Albignasego", "Selvazzano Dentro", "Vigonza",
                     "Cadoneghe", "Rubano", "Legnaro", "Este", "Monselice", "Cittadella",
-                    "Piove di Sacco", "Vigodarzere", "Ponte San Nicolò", "Saonara",
+                    "Piove di Sacco", "Vigodarzere", "Saonara",
                   ].map((comune) => (
                     <span
                       key={comune}
