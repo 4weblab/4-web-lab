@@ -59,6 +59,9 @@ const Footer = () => {
                 <Link to="/realizzazione-siti-web-vigonza" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
                   Vigonza
                 </Link>
+                <Link to="/realizzazione-siti-web-abano-terme" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
+                  Abano Terme
+                </Link>
                 <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
                   Padova
                 </Link>
