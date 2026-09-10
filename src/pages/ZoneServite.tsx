@@ -103,7 +103,7 @@ const ZoneServite = () => {
         <script type="application/ld+json">{JSON.stringify(collectionSchema)}</script>
       </Helmet>
 
-      <Header />
+      <Header satelliteMode />
 
       <main id="main-content">
         {/* Hero */}
