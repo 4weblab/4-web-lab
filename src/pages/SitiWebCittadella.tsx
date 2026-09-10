@@ -228,7 +228,7 @@ const SitiWebCittadella = () => {
         </section>
 
         {/* Lo abbiamo già fatto qui */}
-        <section className="section-padding bg-background">
+        <section className="section-padding bg-background border-b border-border/30">>
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto">
               <div className="section-divider" />
@@ -267,10 +267,10 @@ const SitiWebCittadella = () => {
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
-              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino ad Abano Terme</h2>
+              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino a Cittadella</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per hotel, centri benessere e attività di Abano Terme, Montegrotto Terme,
-                Torreglia, Battaglia Terme e di tutto il comprensorio euganeo.
+                Tre vantaggi concreti per le attività di Cittadella, Tombolo, Fontaniva, San Martino di Lupari e di
+                tutta l'Alta Padovana.
               </p>
             </AnimatedSection>
 
