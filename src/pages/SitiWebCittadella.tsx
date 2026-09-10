@@ -94,7 +94,7 @@ const SitiWebCittadella = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Abano Terme", item: URL },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Cittadella", item: URL },
                 ],
               },
               {
@@ -118,13 +118,13 @@ const SitiWebCittadella = () => {
               },
               {
                 "@type": "Service",
-                name: "Realizzazione siti web ad Abano Terme e comprensorio euganeo",
+                name: "Realizzazione siti web a Cittadella e Alta Padovana",
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
-                  { "@type": "City", name: "Abano Terme" },
-                  { "@type": "City", name: "Montegrotto Terme" },
-                  { "@type": "City", name: "Torreglia" },
-                  { "@type": "City", name: "Battaglia Terme" },
+                  { "@type": "City", name: "Cittadella" },
+                  { "@type": "City", name: "Tombolo" },
+                  { "@type": "City", name: "Fontaniva" },
+                  { "@type": "City", name: "San Martino di Lupari" },
                 ],
                 offers: {
                   "@type": "AggregateOffer",
