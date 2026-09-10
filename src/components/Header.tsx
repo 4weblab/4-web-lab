@@ -33,8 +33,25 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
   const isSolid = isScrolled;
-  // Testo chiaro solo sopra hero scure (Home) e solo prima dello scroll
-  const lightText = !isSolid && !satelliteMode;
+  // Pagine con hero scura sotto l'header trasparente: serve testo chiaro (come la Home).
+  // Le altre pagine interne hanno hero chiara o padding superiore bianco: testo scuro.
+  const DARK_HERO_PATHS = new Set([
+    '/',
+    '/blog',
+    '/contatti',
+    '/privacy',
+    '/cookie',
+    '/zone-servite',
+    '/realizzazione-siti-web-legnaro',
+    '/realizzazione-siti-web-piove-di-sacco',
+    '/realizzazione-siti-web-ponte-san-nicolo',
+    '/realizzazione-siti-web-albignasego',
+    '/realizzazione-siti-web-vigonza',
+    '/realizzazione-siti-web-abano-terme',
+    '/realizzazione-siti-web-cittadella',
+  ]);
+  const hasDarkHero = DARK_HERO_PATHS.has(pathname) || isBlogArticle;
+  const lightText = !isSolid && hasDarkHero;
 
   const backIconClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
     lightText
