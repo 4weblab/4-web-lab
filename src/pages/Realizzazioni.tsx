@@ -237,7 +237,7 @@ const Realizzazioni = () => {
 
       <Header satelliteMode />
 
-      <main id="main-content" className="pt-[var(--header-height)]">
+      <main id="main-content">
         {/* HERO */}
         <section className="page-hero">
           {/* decorative pattern */}

@@ -42,6 +42,8 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
     '/privacy',
     '/cookie',
     '/zone-servite',
+    '/realizzazioni',
+    '/faq-realizzazione-siti-web',
     '/realizzazione-siti-web-legnaro',
     '/realizzazione-siti-web-piove-di-sacco',
     '/realizzazione-siti-web-ponte-san-nicolo',
