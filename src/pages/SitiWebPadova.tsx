@@ -135,7 +135,7 @@ const SitiWebPadova = () => {
                     name: "Lavorate solo a Padova città o anche in provincia?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
+                      text: "Operiamo in tutta la provincia di Padova: Padova città, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
                     }
                   },
                   {
@@ -695,7 +695,7 @@ const SitiWebPadova = () => {
                     {
                       question: "Lavorate solo a Padova città o anche in provincia?",
                       answer:
-                        "Operiamo in tutta la provincia di Padova: Padova città, Abano Terme, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
+                        "Operiamo in tutta la provincia di Padova: Padova città, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
                     },
                     {
                       question: "È possibile incontrarvi di persona a Padova?",
