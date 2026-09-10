@@ -42,24 +42,9 @@ const Footer = () => {
               Studio di soluzioni web per negozi, professionisti ed aziende con base a Legnaro (Padova), attivo su Padova e provincia. Creiamo siti professionali, ottimizzati per i motori di ricerca e orientati alla conversione per attività in tutta Italia.
             </p>
             <div className="mt-5">
-              <p className="text-accent text-xs font-semibold uppercase tracking-wider mb-2">Zone servite</p>
-              <div className="flex flex-wrap gap-x-3 gap-y-1 text-sm">
-                <Link to="/realizzazione-siti-web-legnaro" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
-                  Legnaro
-                </Link>
-                <Link to="/realizzazione-siti-web-piove-di-sacco" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
-                  Piove di Sacco
-                </Link>
-                <Link to="/realizzazione-siti-web-ponte-san-nicolo" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
-                  Ponte San Nicolò
-                </Link>
-                <Link to="/realizzazione-siti-web-albignasego" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
-                  Albignasego
-                </Link>
-                <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4">
-                  Padova
-                </Link>
-              </div>
+              <Link to="/zone-servite" className="text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-300 hover:underline underline-offset-4 text-xs font-semibold uppercase tracking-wider">
+                Zone Servite
+              </Link>
             </div>
           </div>
 

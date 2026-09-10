@@ -17,6 +17,11 @@ export const routes: RouteRecord[] = [
     children: [
       { index: true, Component: Index, entry: "src/pages/Index.tsx" },
       {
+        path: "zone-servite",
+        lazy: page(() => import("./pages/ZoneServite")),
+        entry: "src/pages/ZoneServite.tsx",
+      },
+      {
         path: "siti-web-per-professionisti",
         lazy: page(() => import("./pages/SitiWebProfessionisti")),
         entry: "src/pages/SitiWebProfessionisti.tsx",
@@ -50,6 +55,21 @@ export const routes: RouteRecord[] = [
         path: "realizzazione-siti-web-albignasego",
         lazy: page(() => import("./pages/SitiWebAlbignasego")),
         entry: "src/pages/SitiWebAlbignasego.tsx",
+      },
+      {
+        path: "realizzazione-siti-web-vigonza",
+        lazy: page(() => import("./pages/SitiWebVigonza")),
+        entry: "src/pages/SitiWebVigonza.tsx",
+      },
+      {
+        path: "realizzazione-siti-web-abano-terme",
+        lazy: page(() => import("./pages/SitiWebAbanoTerme")),
+        entry: "src/pages/SitiWebAbanoTerme.tsx",
+      },
+      {
+        path: "realizzazione-siti-web-cittadella",
+        lazy: page(() => import("./pages/SitiWebCittadella")),
+        entry: "src/pages/SitiWebCittadella.tsx",
       },
       {
         path: "siti-web-per-negozi",

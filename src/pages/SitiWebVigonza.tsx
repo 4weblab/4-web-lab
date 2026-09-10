@@ -5,39 +5,39 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/Ani
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import legnaroProssimita from "@/assets/legnaro-prossimita.webp";
-import legnaroVelocita from "@/assets/legnaro-velocita.webp";
-import legnaroIa from "@/assets/legnaro-ia.webp";
+import vigProssimita from "@/assets/vigonza-prossimita.webp";
+import vigVelocita from "@/assets/vigonza-velocita.webp";
+import vigIa from "@/assets/vigonza-ia.webp";
 
-const TITLE = "Web Agency Legnaro (PD) | Siti Web da 490€";
+const TITLE = "Web Agency Vigonza (PD) | Siti Web da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per attività di Legnaro e Saonara. Contatto diretto, zero intermediari e preventivo in 24h.";
-const URL = "https://4weblab.it/realizzazione-siti-web-legnaro";
+  "Realizzazione siti web ultra-veloci per attività di Vigonza e zona nord-est di Padova. Contatto diretto, preventivo in 24h.";
+const URL = "https://4weblab.it/realizzazione-siti-web-vigonza";
 
 const vantaggi = [
   {
-    image: legnaroProssimita,
+    image: vigProssimita,
     alt: "Incontro diretto tra sviluppatore e titolare di attività locale",
     icon: MapPin,
     title: "Prossimità Reale",
     description:
-      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice a due passi dalla tua attività.",
+      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice, a pochi minuti da Vigonza e dal corridoio verso Padova.",
   },
   {
-    image: legnaroVelocita,
+    image: vigVelocita,
     alt: "Sito web ultra-veloce con architettura Jamstack",
     icon: Zap,
     title: "Zero Manutenzione",
     description:
-      "Architettura Jamstack pura. Nessun plugin che si rompe, nessun aggiornamento mensile obbligatorio, velocità 100/100 fissa.",
+      "Architettura Jamstack pura: il tuo sito resta veloce e sicuro senza doverci pensare, anche mentre la tua attività cresce insieme al territorio.",
   },
   {
-    image: legnaroIa,
-    alt: "Sito web consigliato dai motori di ricerca e dagli assistenti IA",
+    image: vigIa,
+    alt: "Assistente IA che consiglia un'attività locale",
     icon: Sparkles,
     title: "Pronti per l'IA",
     description:
-      "Ottimizzazione nativa per farti consigliare da Google e dai motori di risposta artificiali (ChatGPT, Perplexity).",
+      "In una zona in forte espansione, farsi trovare da Google e consigliare da ChatGPT prima dei nuovi concorrenti fa la differenza. Ottimizziamo il tuo sito per questo.",
   },
 ];
 
@@ -66,7 +66,7 @@ const pacchetti = [
   },
 ];
 
-const SitiWebLegnaro = () => {
+const SitiWebVigonza = () => {
   return (
     <>
       <Helmet>
@@ -94,7 +94,7 @@ const SitiWebLegnaro = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Legnaro", item: URL },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Vigonza", item: URL },
                 ],
               },
               {
@@ -118,12 +118,12 @@ const SitiWebLegnaro = () => {
               },
               {
                 "@type": "Service",
-                name: "Realizzazione siti web a Legnaro e Saccisica",
+                name: "Realizzazione siti web a Vigonza e zona nord-est di Padova",
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
-                  { "@type": "City", name: "Legnaro" },
-                  { "@type": "City", name: "Saonara" },
-                  { "@type": "AdministrativeArea", name: "Saccisica" },
+                  { "@type": "City", name: "Vigonza" },
+                  { "@type": "City", name: "Vigodarzere" },
+                  { "@type": "City", name: "Camposampiero" },
                 ],
                 offers: {
                   "@type": "AggregateOffer",
@@ -146,10 +146,10 @@ const SitiWebLegnaro = () => {
         <section className="page-hero">
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="legnaro-hero-noise">
+              <filter id="vigonza-hero-noise">
                 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
               </filter>
-              <rect width="100%" height="100%" filter="url(#legnaro-hero-noise)" />
+              <rect width="100%" height="100%" filter="url(#vigonza-hero-noise)" />
             </svg>
           </div>
           <div className="hero-spotlight" aria-hidden="true" />
@@ -162,18 +162,19 @@ const SitiWebLegnaro = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Sviluppo Siti Web a Legnaro: Soluzioni per Negozi e PMI Senza WordPress
+                Sviluppo Siti Web a Vigonza: Soluzioni per Negozi, Professionisti e PMI Senza WordPress
               </h1>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sei un'attività della zona di Legnaro o della Saccisica? Creiamo siti web ultra-veloci, sicuri e pronti
-                per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei online.
+                Sei un'attività di Vigonza o della zona nord-est di Padova? Creiamo siti web ultra-veloci, sicuri e
+                pronti per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei
+                online.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
-                  onClick={() => document.getElementById("contatti-legnaro")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("contatti-vigonza")?.scrollIntoView({ behavior: "smooth" })}
                   className="btn-primary text-lg px-10 py-4"
                   aria-label="Richiedi una valutazione gratuita"
                 >
@@ -195,14 +196,33 @@ const SitiWebLegnaro = () => {
           </div>
         </section>
 
+        {/* Differenziazione locale */}
+        <section className="section-padding bg-surface-alt-2">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto text-center">
+              <div className="section-divider" />
+              <h2 className="heading-3 mb-5">Un territorio in crescita</h2>
+              <p className="body-large text-muted-foreground text-balance">
+                Con quasi 23.000 abitanti, Vigonza è il terzo comune più popoloso della provincia di Padova,
+                attraversato da importanti vie di comunicazione verso Padova, Venezia e Treviso. La frazione di Busa,
+                ormai quasi periferia della città, è tra le zone a maggiore sviluppo economico dell'area — mentre
+                Codiverno, Pionca, Peraga e San Vito mantengono un'identità più raccolta. Che la tua attività sia in
+                una di queste realtà o verso Camposampiero, il tuo sito deve rispecchiare un territorio in crescita,
+                non un indirizzo qualsiasi in provincia.
+              </p>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* Vantaggi */}
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
-              <h2 className="heading-2 mb-5">Perché scegliere un web studio di Legnaro</h2>
+              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino a Vigonza</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per le attività di Legnaro, Saonara e di tutta la Saccisica.
+                Tre vantaggi concreti per le attività di Vigonza, Vigodarzere, la zona di Camposampiero e tutta l'area
+                nord-est di Padova.
               </p>
             </AnimatedSection>
 
@@ -284,16 +304,16 @@ const SitiWebLegnaro = () => {
 
         {/* Conversione: doppia CTA */}
         <section
-          id="contatti-legnaro"
+          id="contatti-vigonza"
           className="section-padding relative overflow-hidden"
           style={{ background: "var(--gradient-hero)", scrollMarginTop: "var(--header-height)" }}
         >
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="legnaro-contact-noise">
+              <filter id="vigonza-contact-noise">
                 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
               </filter>
-              <rect width="100%" height="100%" filter="url(#legnaro-contact-noise)" />
+              <rect width="100%" height="100%" filter="url(#vigonza-contact-noise)" />
             </svg>
           </div>
           <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
@@ -337,4 +357,4 @@ const SitiWebLegnaro = () => {
   );
 };
 
-export default SitiWebLegnaro;
+export default SitiWebVigonza;

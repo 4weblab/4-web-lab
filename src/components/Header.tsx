@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
+  { label: 'Zone Servite', href: '/zone-servite' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
@@ -31,17 +32,33 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const servicesRef = useRef<HTMLLIElement>(null);
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
+  const isSolid = isScrolled;
+  // Pagine con hero scura sotto l'header trasparente: serve testo chiaro (come la Home).
+  // Le altre pagine interne hanno hero chiara o padding superiore bianco: testo scuro.
+  const DARK_HERO_PATHS = new Set([
+    '/',
+    '/blog',
+    '/contatti',
+    '/privacy',
+    '/cookie',
+    '/zone-servite',
+    '/realizzazioni',
+    '/faq-realizzazione-siti-web',
+    '/realizzazione-siti-web-legnaro',
+    '/realizzazione-siti-web-piove-di-sacco',
+    '/realizzazione-siti-web-ponte-san-nicolo',
+    '/realizzazione-siti-web-albignasego',
+    '/realizzazione-siti-web-vigonza',
+    '/realizzazione-siti-web-abano-terme',
+    '/realizzazione-siti-web-cittadella',
+  ]);
+  const hasDarkHero = DARK_HERO_PATHS.has(pathname) || isBlogArticle;
+  const lightText = !isSolid && hasDarkHero;
 
-  const backLinkClass = `inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-    isScrolled
-      ? 'text-foreground hover:bg-muted/60'
-      : 'text-primary-foreground hover:bg-primary-foreground/10'
-  }`;
-
-  const mobileBackLinkClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-    isScrolled
-      ? 'text-foreground hover:bg-muted/60'
-      : 'text-primary-foreground hover:bg-primary-foreground/10'
+  const backIconClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+    lightText
+      ? 'text-primary-foreground hover:bg-primary-foreground/10'
+      : 'text-foreground hover:bg-muted/60'
   }`;
 
   useEffect(() => {
@@ -77,17 +94,17 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isSolid
           ? 'border-b border-border/30'
           : 'bg-transparent'
       }`}
       style={{
         height: 'var(--header-height)',
-        ...(isScrolled
+        ...(isSolid
           ? {
               background: 'var(--glass-bg)',
-              backdropFilter: `blur(${isScrolled ? '20px' : '0px'})`,
-              WebkitBackdropFilter: `blur(${isScrolled ? '20px' : '0px'})`,
+              backdropFilter: `blur(${isSolid ? '20px' : '0px'})`,
+              WebkitBackdropFilter: `blur(${isSolid ? '20px' : '0px'})`,
               boxShadow: 'var(--shadow-sm)',
             }
           : {}),
@@ -96,25 +113,24 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <Link to="/" aria-label="Vai alla home" className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
           <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo-72.webp" srcSet="/logo-72.webp 72w, /logo-144.webp 144w" sizes="36px" width={36} height={36} decoding="async" />
-          <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground lg:text-foreground'}`}>
+          <span className={`transition-colors duration-300 ${lightText ? 'text-primary-foreground' : 'text-foreground'}`}>
             4 Web Lab
           </span>
         </Link>
 
-        {satelliteMode ? (
-          <div className="hidden lg:flex items-center gap-2">
+        {satelliteMode && (
+          <div className="flex items-center gap-1.5 ml-auto lg:ml-0 mr-1 lg:mr-0">
             {isBlogArticle && (
-              <Link to="/blog" className={backLinkClass}>
-                <ArrowLeft className="w-4 h-4" />
-                Torna agli articoli
+              <Link to="/blog" className={backIconClass} aria-label="Torna agli articoli">
+                <ArrowLeft className="w-5 h-5" />
               </Link>
             )}
-            <Link to="/" className={backLinkClass}>
-              <ArrowLeft className="w-4 h-4" />
-              Torna alla Home
+            <Link to="/" className={backIconClass} aria-label="Torna alla Home">
+              <Home className="w-5 h-5" />
             </Link>
           </div>
-        ) : (
+        )}
+
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isRoute = item.href.startsWith('/');
@@ -122,9 +138,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               const baseClass = `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
                 isActive
                   ? 'text-accent-foreground'
-                  : isScrolled
-                  ? 'text-foreground hover:bg-muted/60'
-                  : 'text-primary-foreground hover:bg-primary-foreground/10'
+                  : lightText
+                  ? 'text-primary-foreground hover:bg-primary-foreground/10'
+                  : 'text-foreground hover:bg-muted/60'
               }`;
               const activeStyle = isActive
                 ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
@@ -199,38 +215,24 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               );
             })}
           </ul>
-        )}
 
         {/* Mobile Menu Button */}
-        {satelliteMode ? (
-          <div className="lg:hidden flex items-center gap-1.5">
-            {isBlogArticle && (
-              <Link to="/blog" className={mobileBackLinkClass} aria-label="Torna agli articoli">
-                <ArrowLeft className="w-5 h-5" />
-              </Link>
-            )}
-            <Link to="/" className={mobileBackLinkClass} aria-label="Torna alla Home">
-              <Home className="w-5 h-5" />
-            </Link>
-          </div>
-        ) : (
-          <button
-            className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
-          >
-            {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-            )}
-          </button>
-        )}
+        <button
+          className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
+        >
+          {isOpen ? (
+            <X className={`w-6 h-6 ${lightText ? 'text-primary-foreground' : 'text-foreground'}`} />
+          ) : (
+            <Menu className={`w-6 h-6 ${lightText ? 'text-primary-foreground' : 'text-foreground'}`} />
+          )}
+        </button>
 
         {/* Mobile Menu */}
-        {isOpen && !satelliteMode && (
+        {isOpen && (
             <div
               id="mobile-menu"
               className="absolute top-full left-0 right-0 lg:hidden border-b border-border/30 bg-background/95"

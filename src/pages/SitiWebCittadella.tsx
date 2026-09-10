@@ -5,39 +5,40 @@ import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/Ani
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import legnaroProssimita from "@/assets/legnaro-prossimita.webp";
-import legnaroVelocita from "@/assets/legnaro-velocita.webp";
-import legnaroIa from "@/assets/legnaro-ia.webp";
+import vigProssimita from "@/assets/cittadella-prossimita.webp";
+import vigVelocita from "@/assets/cittadella-velocita.webp";
+import vigIa from "@/assets/cittadella-ia.webp";
+import rbSncEdilizia from "@/assets/rb-snc-edilizia.webp";
 
-const TITLE = "Web Agency Legnaro (PD) | Siti Web da 490€";
+const TITLE = "Web Agency Cittadella (PD) | Siti Web da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per attività di Legnaro e Saonara. Contatto diretto, zero intermediari e preventivo in 24h.";
-const URL = "https://4weblab.it/realizzazione-siti-web-legnaro";
+  "Realizzazione siti web ultra-veloci per negozi, artigiani e PMI di Cittadella e Alta Padovana. Contatto diretto, preventivo in 24h.";
+const URL = "https://4weblab.it/realizzazione-siti-web-cittadella";
 
 const vantaggi = [
   {
-    image: legnaroProssimita,
+    image: vigProssimita,
     alt: "Incontro diretto tra sviluppatore e titolare di attività locale",
     icon: MapPin,
     title: "Prossimità Reale",
     description:
-      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice a due passi dalla tua attività.",
+      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice — lo abbiamo già fatto per un'azienda di Cittadella.",
   },
   {
-    image: legnaroVelocita,
+    image: vigVelocita,
     alt: "Sito web ultra-veloce con architettura Jamstack",
     icon: Zap,
     title: "Zero Manutenzione",
     description:
-      "Architettura Jamstack pura. Nessun plugin che si rompe, nessun aggiornamento mensile obbligatorio, velocità 100/100 fissa.",
+      "Architettura Jamstack pura: ideale per chi lavora in un settore artigianale o industriale e non ha tempo per aggiornamenti WordPress.",
   },
   {
-    image: legnaroIa,
-    alt: "Sito web consigliato dai motori di ricerca e dagli assistenti IA",
+    image: vigIa,
+    alt: "Assistente IA che consiglia un'attività locale",
     icon: Sparkles,
     title: "Pronti per l'IA",
     description:
-      "Ottimizzazione nativa per farti consigliare da Google e dai motori di risposta artificiali (ChatGPT, Perplexity).",
+      "Chi cerca un fornitore o un negozio in Alta Padovana oggi lo chiede anche a ChatGPT. Ottimizziamo il tuo sito per comparire lì, non solo su Google.",
   },
 ];
 
@@ -66,7 +67,7 @@ const pacchetti = [
   },
 ];
 
-const SitiWebLegnaro = () => {
+const SitiWebCittadella = () => {
   return (
     <>
       <Helmet>
@@ -94,7 +95,7 @@ const SitiWebLegnaro = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Legnaro", item: URL },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Cittadella", item: URL },
                 ],
               },
               {
@@ -118,12 +119,13 @@ const SitiWebLegnaro = () => {
               },
               {
                 "@type": "Service",
-                name: "Realizzazione siti web a Legnaro e Saccisica",
+                name: "Realizzazione siti web a Cittadella e Alta Padovana",
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
-                  { "@type": "City", name: "Legnaro" },
-                  { "@type": "City", name: "Saonara" },
-                  { "@type": "AdministrativeArea", name: "Saccisica" },
+                  { "@type": "City", name: "Cittadella" },
+                  { "@type": "City", name: "Tombolo" },
+                  { "@type": "City", name: "Fontaniva" },
+                  { "@type": "City", name: "San Martino di Lupari" },
                 ],
                 offers: {
                   "@type": "AggregateOffer",
@@ -146,10 +148,10 @@ const SitiWebLegnaro = () => {
         <section className="page-hero">
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="legnaro-hero-noise">
+              <filter id="cittadella-hero-noise">
                 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
               </filter>
-              <rect width="100%" height="100%" filter="url(#legnaro-hero-noise)" />
+              <rect width="100%" height="100%" filter="url(#cittadella-hero-noise)" />
             </svg>
           </div>
           <div className="hero-spotlight" aria-hidden="true" />
@@ -162,18 +164,18 @@ const SitiWebLegnaro = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Sviluppo Siti Web a Legnaro: Soluzioni per Negozi e PMI Senza WordPress
+                Sviluppo Siti Web a Cittadella: Soluzioni per Negozi, Artigiani e PMI dell'Alta Padovana
               </h1>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sei un'attività della zona di Legnaro o della Saccisica? Creiamo siti web ultra-veloci, sicuri e pronti
-                per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei online.
+                Sei un'attività di Cittadella o dell'Alta Padovana? Creiamo siti web ultra-veloci, sicuri e pronti per
+                l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei online.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
-                  onClick={() => document.getElementById("contatti-legnaro")?.scrollIntoView({ behavior: "smooth" })}
+                  onClick={() => document.getElementById("contatti-cittadella")?.scrollIntoView({ behavior: "smooth" })}
                   className="btn-primary text-lg px-10 py-4"
                   aria-label="Richiedi una valutazione gratuita"
                 >
@@ -195,14 +197,67 @@ const SitiWebLegnaro = () => {
           </div>
         </section>
 
+        {/* Differenziazione locale */}
+        <section className="section-padding bg-surface-alt-2">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto text-center">
+              <div className="section-divider" />
+              <h2 className="heading-3 mb-5">Il cuore dell'Alta Padovana</h2>
+              <p className="body-large text-muted-foreground text-balance">
+                Cittadella, con la sua cinta muraria medievale tra le meglio conservate del Veneto, è il cuore dell'Alta
+                Padovana — una zona con una solida tradizione artigianale e industriale, ai confini con le province di
+                Vicenza e Treviso. Il commercio locale si sta già muovendo verso il digitale: il Distretto del Commercio
+                di Cittadella ha di recente lanciato itinerari digitali per negozi storici e attività ricettive del
+                centro. Il tuo sito web è il passo naturale successivo — non un optional.
+              </p>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Lo abbiamo già fatto qui */}
+        <section className="section-padding bg-background border-b border-border/30">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto">
+              <div className="section-divider" />
+              <h2 className="heading-2 text-center mb-8">Lo abbiamo già fatto qui</h2>
+              <article className="group overflow-hidden rounded-3xl border border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:bg-card/60 hover:shadow-[0_20px_50px_-20px_hsl(var(--accent)/0.18)]">
+                <img
+                  src={rbSncEdilizia}
+                  alt="Sito web realizzato per R.B. s.n.c., azienda di rimozione eternit di Cittadella"
+                  width={1024}
+                  height={768}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full aspect-[16/10] object-cover"
+                />
+                <div className="p-6 md:p-8">
+                  <h3 className="font-sans text-xl font-bold mb-3">R.B. s.n.c. — Cittadella (PD)</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-5">
+                    Non è la prima volta che lavoriamo a Cittadella. Abbiamo seguito R.B. s.n.c., azienda locale leader
+                    nella rimozione eternit, con un progetto web completo e campagne Google Ads mirate per massimizzare
+                    le richieste di preventivo.
+                  </p>
+                  <Link
+                    to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto"
+                    className="text-sm font-semibold text-accent hover:underline underline-offset-4"
+                  >
+                    Guarda il caso studio →
+                  </Link>
+                </div>
+              </article>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* Vantaggi */}
         <section className="section-padding bg-background">
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
-              <h2 className="heading-2 mb-5">Perché scegliere un web studio di Legnaro</h2>
+              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino a Cittadella</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per le attività di Legnaro, Saonara e di tutta la Saccisica.
+                Tre vantaggi concreti per le attività di Cittadella, Tombolo, Fontaniva, San Martino di Lupari e di
+                tutta l'Alta Padovana.
               </p>
             </AnimatedSection>
 
@@ -284,16 +339,16 @@ const SitiWebLegnaro = () => {
 
         {/* Conversione: doppia CTA */}
         <section
-          id="contatti-legnaro"
+          id="contatti-cittadella"
           className="section-padding relative overflow-hidden"
           style={{ background: "var(--gradient-hero)", scrollMarginTop: "var(--header-height)" }}
         >
           <div className="noise-overlay" aria-hidden="true">
             <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-              <filter id="legnaro-contact-noise">
+              <filter id="cittadella-contact-noise">
                 <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
               </filter>
-              <rect width="100%" height="100%" filter="url(#legnaro-contact-noise)" />
+              <rect width="100%" height="100%" filter="url(#cittadella-contact-noise)" />
             </svg>
           </div>
           <div className="absolute top-0 right-1/4 w-96 h-96 rounded-full bg-accent/8 blur-[120px]" aria-hidden="true" />
@@ -337,4 +392,4 @@ const SitiWebLegnaro = () => {
   );
 };
 
-export default SitiWebLegnaro;
+export default SitiWebCittadella;
