@@ -7,10 +7,11 @@ import Footer from "@/components/Footer";
 import vigProssimita from "@/assets/cittadella-prossimita.webp";
 import vigVelocita from "@/assets/cittadella-velocita.webp";
 import vigIa from "@/assets/cittadella-ia.webp";
+import rbSncEdilizia from "@/assets/rb-snc-edilizia.webp";
 
-const TITLE = "Web Agency Abano Terme (PD) | Siti Web da 490€";
+const TITLE = "Web Agency Cittadella (PD) | Siti Web da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per hotel, attività termali e commerciali di Abano Terme. Contatto diretto, preventivo in 24h.";
+  "Realizzazione siti web ultra-veloci per negozi, artigiani e PMI di Cittadella e Alta Padovana. Contatto diretto, preventivo in 24h.";
 const URL = "https://4weblab.it/realizzazione-siti-web-cittadella";
 
 const vantaggi = [
@@ -20,7 +21,7 @@ const vantaggi = [
     icon: MapPin,
     title: "Prossimità Reale",
     description:
-      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice, a due passi dal Bacino Termale Euganeo.",
+      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice — lo abbiamo già fatto per un'azienda di Cittadella.",
   },
   {
     image: vigVelocita,
@@ -28,7 +29,7 @@ const vantaggi = [
     icon: Zap,
     title: "Zero Manutenzione",
     description:
-      "Architettura Jamstack pura: il tuo sito resta veloce e sicuro anche nei picchi di stagione, senza plugin che si bloccano proprio quando arrivano più prenotazioni.",
+      "Architettura Jamstack pura: ideale per chi lavora in un settore artigianale o industriale e non ha tempo per aggiornamenti WordPress.",
   },
   {
     image: vigIa,
@@ -36,7 +37,7 @@ const vantaggi = [
     icon: Sparkles,
     title: "Pronti per l'IA",
     description:
-      "Chi cerca 'terme vicino a me' o 'hotel benessere Padova' oggi lo chiede anche a ChatGPT. Ottimizziamo il tuo sito per comparire lì, non solo su Google — un vantaggio che molte strutture della zona non hanno ancora sfruttato.",
+      "Chi cerca un fornitore o un negozio in Alta Padovana oggi lo chiede anche a ChatGPT. Ottimizziamo il tuo sito per comparire lì, non solo su Google.",
   },
 ];
 
