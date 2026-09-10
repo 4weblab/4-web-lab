@@ -32,9 +32,10 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const servicesRef = useRef<HTMLLIElement>(null);
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
+  const isSolid = isScrolled || satelliteMode;
 
   const backIconClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-    isScrolled
+    isSolid
       ? 'text-foreground hover:bg-muted/60'
       : 'text-primary-foreground hover:bg-primary-foreground/10'
   }`;
@@ -72,17 +73,17 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
+        isSolid
           ? 'border-b border-border/30'
           : 'bg-transparent'
       }`}
       style={{
         height: 'var(--header-height)',
-        ...(isScrolled
+        ...(isSolid
           ? {
               background: 'var(--glass-bg)',
-              backdropFilter: `blur(${isScrolled ? '20px' : '0px'})`,
-              WebkitBackdropFilter: `blur(${isScrolled ? '20px' : '0px'})`,
+              backdropFilter: `blur(${isSolid ? '20px' : '0px'})`,
+              WebkitBackdropFilter: `blur(${isSolid ? '20px' : '0px'})`,
               boxShadow: 'var(--shadow-sm)',
             }
           : {}),
@@ -91,7 +92,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <Link to="/" aria-label="Vai alla home" className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
           <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo-72.webp" srcSet="/logo-72.webp 72w, /logo-144.webp 144w" sizes="36px" width={36} height={36} decoding="async" />
-          <span className={`transition-colors duration-300 ${isScrolled ? 'text-foreground' : 'text-primary-foreground lg:text-foreground'}`}>
+          <span className={`transition-colors duration-300 ${isSolid ? 'text-foreground' : 'text-primary-foreground lg:text-foreground'}`}>
             4 Web Lab
           </span>
         </Link>
@@ -116,7 +117,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               const baseClass = `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
                 isActive
                   ? 'text-accent-foreground'
-                  : isScrolled
+                  : isSolid
                   ? 'text-foreground hover:bg-muted/60'
                   : 'text-primary-foreground hover:bg-primary-foreground/10'
               }`;
@@ -203,9 +204,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
         >
           {isOpen ? (
-            <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+            <X className={`w-6 h-6 ${isSolid ? 'text-foreground' : 'text-primary-foreground'}`} />
           ) : (
-            <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+            <Menu className={`w-6 h-6 ${isSolid ? 'text-foreground' : 'text-primary-foreground'}`} />
           )}
         </button>
 
