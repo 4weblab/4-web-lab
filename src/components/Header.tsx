@@ -119,9 +119,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               const baseClass = `px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 relative ${
                 isActive
                   ? 'text-accent-foreground'
-                  : isSolid
-                  ? 'text-foreground hover:bg-muted/60'
-                  : 'text-primary-foreground hover:bg-primary-foreground/10'
+                  : lightText
+                  ? 'text-primary-foreground hover:bg-primary-foreground/10'
+                  : 'text-foreground hover:bg-muted/60'
               }`;
               const activeStyle = isActive
                 ? { background: 'var(--gradient-accent)', boxShadow: '0 2px 8px hsl(207 90% 54% / 0.25)' }
@@ -206,9 +206,9 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
         >
           {isOpen ? (
-            <X className={`w-6 h-6 ${isSolid ? 'text-foreground' : 'text-primary-foreground'}`} />
+            <X className={`w-6 h-6 ${lightText ? 'text-primary-foreground' : 'text-foreground'}`} />
           ) : (
-            <Menu className={`w-6 h-6 ${isSolid ? 'text-foreground' : 'text-primary-foreground'}`} />
+            <Menu className={`w-6 h-6 ${lightText ? 'text-primary-foreground' : 'text-foreground'}`} />
           )}
         </button>
 
