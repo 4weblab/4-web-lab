@@ -177,15 +177,14 @@ const SitiWebCittadella = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Sviluppo Siti Web ad Abano Terme: Soluzioni per Hotel, Negozi e Attività del Termale
+                Sviluppo Siti Web a Cittadella: Soluzioni per Negozi, Artigiani e PMI dell'Alta Padovana
               </h1>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sei un hotel, un centro benessere o un'attività commerciale di Abano Terme? Creiamo siti web
-                ultra-veloci, sicuri e pronti per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e
-                in 14 giorni sei online.
+                Sei un'attività di Cittadella o dell'Alta Padovana? Creiamo siti web ultra-veloci, sicuri e pronti per
+                l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei online.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
@@ -216,15 +215,49 @@ const SitiWebCittadella = () => {
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <div className="section-divider" />
-              <h2 className="heading-3 mb-5">Il cuore del termale euganeo</h2>
+              <h2 className="heading-3 mb-5">Il cuore dell'Alta Padovana</h2>
               <p className="body-large text-muted-foreground text-balance">
-                Abano Terme fa parte del Bacino Termale Euganeo, la più grande destinazione termale d'Europa — un'economia
-                che non vive solo di hotel, ma di un'intera filiera che include agroalimentare, artigianato e servizi
-                legati al turismo del benessere. Che tu gestisca una struttura ricettiva, un'attività nel centro storico
-                pedonale o un servizio che lavora con il settore termale, il tuo sito è spesso il primo contatto con un
-                cliente che sta pianificando un soggiorno da un'altra città o dall'estero — non può permettersi di
-                essere lento o difficile da trovare.
+                Cittadella, con la sua cinta muraria medievale tra le meglio conservate del Veneto, è il cuore dell'Alta
+                Padovana — una zona con una solida tradizione artigianale e industriale, ai confini con le province di
+                Vicenza e Treviso. Il commercio locale si sta già muovendo verso il digitale: il Distretto del Commercio
+                di Cittadella ha di recente lanciato itinerari digitali per negozi storici e attività ricettive del
+                centro. Il tuo sito web è il passo naturale successivo — non un optional.
               </p>
+            </AnimatedSection>
+          </div>
+        </section>
+
+        {/* Lo abbiamo già fatto qui */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto">
+              <div className="section-divider" />
+              <h2 className="heading-2 text-center mb-8">Lo abbiamo già fatto qui</h2>
+              <article className="group overflow-hidden rounded-3xl border border-border/40 bg-card/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-1 hover:bg-card/60 hover:shadow-[0_20px_50px_-20px_hsl(var(--accent)/0.18)]">
+                <img
+                  src={rbSncEdilizia}
+                  alt="Sito web realizzato per R.B. s.n.c., azienda di rimozione eternit di Cittadella"
+                  width={1024}
+                  height={768}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full aspect-[16/10] object-cover"
+                />
+                <div className="p-6 md:p-8">
+                  <h3 className="font-sans text-xl font-bold mb-3">R.B. s.n.c. — Cittadella (PD)</h3>
+                  <p className="text-sm leading-relaxed text-muted-foreground mb-5">
+                    Non è la prima volta che lavoriamo a Cittadella. Abbiamo seguito R.B. s.n.c., azienda locale leader
+                    nella rimozione eternit, con un progetto web completo e campagne Google Ads mirate per massimizzare
+                    le richieste di preventivo.
+                  </p>
+                  <Link
+                    to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto"
+                    className="text-sm font-semibold text-accent hover:underline underline-offset-4"
+                  >
+                    Guarda il caso studio →
+                  </Link>
+                </div>
+              </article>
             </AnimatedSection>
           </div>
         </section>
