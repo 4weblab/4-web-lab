@@ -96,20 +96,19 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           </span>
         </Link>
 
-        {satelliteMode ? (
-          <div className="hidden lg:flex items-center gap-2">
+        {satelliteMode && (
+          <div className="flex items-center gap-1.5 ml-auto lg:ml-0 mr-1 lg:mr-0">
             {isBlogArticle && (
-              <Link to="/blog" className={backLinkClass}>
-                <ArrowLeft className="w-4 h-4" />
-                Torna agli articoli
+              <Link to="/blog" className={backIconClass} aria-label="Torna agli articoli">
+                <ArrowLeft className="w-5 h-5" />
               </Link>
             )}
-            <Link to="/" className={backLinkClass}>
-              <ArrowLeft className="w-4 h-4" />
-              Torna alla Home
+            <Link to="/" className={backIconClass} aria-label="Torna alla Home">
+              <Home className="w-5 h-5" />
             </Link>
           </div>
-        ) : (
+        )}
+
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isRoute = item.href.startsWith('/');
