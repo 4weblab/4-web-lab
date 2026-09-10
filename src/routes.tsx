@@ -52,6 +52,11 @@ export const routes: RouteRecord[] = [
         entry: "src/pages/SitiWebAlbignasego.tsx",
       },
       {
+        path: "realizzazione-siti-web-vigonza",
+        lazy: page(() => import("./pages/SitiWebVigonza")),
+        entry: "src/pages/SitiWebVigonza.tsx",
+      },
+      {
         path: "siti-web-per-negozi",
         lazy: page(() => import("./pages/SitiWebNegozi")),
         entry: "src/pages/SitiWebNegozi.tsx",
