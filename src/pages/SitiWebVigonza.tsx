@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, MapPin, Zap, Sparkles, MessageCircle, Store, Briefcase, Building2, Check } from "lucide-react";
+import { MapPin, Zap, Sparkles, MessageCircle, Store, Briefcase, Building2, Check } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
+import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import vigProssimita from "@/assets/vigonza-prossimita.webp";
 import vigVelocita from "@/assets/vigonza-velocita.webp";
@@ -138,21 +139,7 @@ const SitiWebVigonza = () => {
       </Helmet>
 
       {/* Header minimale - landing pura */}
-      <header className="absolute top-0 left-0 right-0 z-50">
-        <nav className="container-section flex items-center justify-between py-5" aria-label="Navigazione landing">
-          <Link to="/" aria-label="Vai alla home" className="flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
-            <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo.webp" width={36} height={36} decoding="async" />
-            <span className="font-serif text-xl font-semibold text-primary-foreground">4 Web Lab</span>
-          </Link>
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-primary-foreground/85 hover:text-primary-foreground transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-            Visita il sito principale
-          </Link>
-        </nav>
-      </header>
+      <Header satelliteMode />
 
       <main id="main-content">
         {/* Hero */}
