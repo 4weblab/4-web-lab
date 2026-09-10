@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
+  { label: 'Zone Servite', href: '/zone-servite' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
@@ -32,13 +33,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
 
-  const backLinkClass = `inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-    isScrolled
-      ? 'text-foreground hover:bg-muted/60'
-      : 'text-primary-foreground hover:bg-primary-foreground/10'
-  }`;
-
-  const mobileBackLinkClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+  const backIconClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
     isScrolled
       ? 'text-foreground hover:bg-muted/60'
       : 'text-primary-foreground hover:bg-primary-foreground/10'
