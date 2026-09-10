@@ -17,6 +17,11 @@ export const routes: RouteRecord[] = [
     children: [
       { index: true, Component: Index, entry: "src/pages/Index.tsx" },
       {
+        path: "zone-servite",
+        lazy: page(() => import("./pages/ZoneServite")),
+        entry: "src/pages/ZoneServite.tsx",
+      },
+      {
         path: "siti-web-per-professionisti",
         lazy: page(() => import("./pages/SitiWebProfessionisti")),
         entry: "src/pages/SitiWebProfessionisti.tsx",

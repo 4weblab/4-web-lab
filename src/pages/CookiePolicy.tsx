@@ -3,6 +3,8 @@ import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { AnimatedSection } from '@/components/AnimatedSection';
 import PageBreadcrumb from '@/components/PageBreadcrumb';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { openPreferences } from '@/lib/consent';
 
 const CookiePolicy = () => {
@@ -45,6 +47,8 @@ const CookiePolicy = () => {
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
       </Helmet>
+
+      <Header satelliteMode />
       {/* Header */}
       <header className="page-hero">
         <div className="absolute inset-0 bg-accent/5 blur-[100px]" aria-hidden="true" />
@@ -299,17 +303,7 @@ const CookiePolicy = () => {
         </AnimatedSection>
       </main>
 
-      {/* Footer link */}
-      <footer className="py-8" style={{ background: 'var(--gradient-surface)' }}>
-        <div className="container-section text-center">
-          <Link
-            to="/"
-            className="text-muted-foreground hover:text-foreground transition-colors duration-300"
-          >
-            ← Torna alla home
-          </Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import { Link, useLocation } from 'react-router-dom';
 const navItems = [
   { label: 'Home', href: '/' },
   { label: 'Realizzazioni', href: '/realizzazioni' },
+  { label: 'Zone Servite', href: '/zone-servite' },
   { label: 'Blog', href: '/blog' },
   { label: 'FAQ', href: '/faq-realizzazione-siti-web' },
   { label: 'Contatti', href: '/contatti' },
@@ -32,13 +33,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
 
-  const backLinkClass = `inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
-    isScrolled
-      ? 'text-foreground hover:bg-muted/60'
-      : 'text-primary-foreground hover:bg-primary-foreground/10'
-  }`;
-
-  const mobileBackLinkClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+  const backIconClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
     isScrolled
       ? 'text-foreground hover:bg-muted/60'
       : 'text-primary-foreground hover:bg-primary-foreground/10'
@@ -101,20 +96,19 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
           </span>
         </Link>
 
-        {satelliteMode ? (
-          <div className="hidden lg:flex items-center gap-2">
+        {satelliteMode && (
+          <div className="flex items-center gap-1.5 ml-auto lg:ml-0 mr-1 lg:mr-0">
             {isBlogArticle && (
-              <Link to="/blog" className={backLinkClass}>
-                <ArrowLeft className="w-4 h-4" />
-                Torna agli articoli
+              <Link to="/blog" className={backIconClass} aria-label="Torna agli articoli">
+                <ArrowLeft className="w-5 h-5" />
               </Link>
             )}
-            <Link to="/" className={backLinkClass}>
-              <ArrowLeft className="w-4 h-4" />
-              Torna alla Home
+            <Link to="/" className={backIconClass} aria-label="Torna alla Home">
+              <Home className="w-5 h-5" />
             </Link>
           </div>
-        ) : (
+        )}
+
           <ul className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const isRoute = item.href.startsWith('/');
@@ -199,38 +193,24 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               );
             })}
           </ul>
-        )}
 
         {/* Mobile Menu Button */}
-        {satelliteMode ? (
-          <div className="lg:hidden flex items-center gap-1.5">
-            {isBlogArticle && (
-              <Link to="/blog" className={mobileBackLinkClass} aria-label="Torna agli articoli">
-                <ArrowLeft className="w-5 h-5" />
-              </Link>
-            )}
-            <Link to="/" className={mobileBackLinkClass} aria-label="Torna alla Home">
-              <Home className="w-5 h-5" />
-            </Link>
-          </div>
-        ) : (
-          <button
-            className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
-          >
-            {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-            )}
-          </button>
-        )}
+        <button
+          className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
+        >
+          {isOpen ? (
+            <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+          ) : (
+            <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+          )}
+        </button>
 
         {/* Mobile Menu */}
-        {isOpen && !satelliteMode && (
+        {isOpen && (
             <div
               id="mobile-menu"
               className="absolute top-full left-0 right-0 lg:hidden border-b border-border/30 bg-background/95"
