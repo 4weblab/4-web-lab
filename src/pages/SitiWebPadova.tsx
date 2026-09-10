@@ -135,7 +135,7 @@ const SitiWebPadova = () => {
                     name: "Lavorate solo a Padova città o anche in provincia?",
                     acceptedAnswer: {
                       "@type": "Answer",
-                      text: "Operiamo in tutta la provincia di Padova: Padova città, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
+                      text: "Operiamo in tutta la provincia di Padova: Padova città, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice e Piove di Sacco. La nostra sede operativa è a Legnaro (PD)."
                     }
                   },
                   {
@@ -539,7 +539,7 @@ const SitiWebPadova = () => {
                 <div className="flex flex-wrap gap-2 mb-8">
                   {[
                     "Padova", "Selvazzano Dentro",
-                    "Cadoneghe", "Rubano", "Legnaro", "Este", "Monselice", "Cittadella",
+                    "Cadoneghe", "Rubano", "Legnaro", "Este", "Monselice",
                     "Piove di Sacco", "Saonara",
                   ].map((comune) => (
                     <span
@@ -553,7 +553,7 @@ const SitiWebPadova = () => {
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
                 <p className="mb-6">
-                  Con sede operativa a <Link to="/realizzazione-siti-web-legnaro" className="text-accent hover:underline font-medium">Legnaro (PD)</Link>, siamo il punto di riferimento concreto per le attività che cercano un servizio di <strong>sviluppo e creazione di siti internet a Padova</strong> e provincia, con un'attenzione particolare anche a <Link to="/realizzazione-siti-web-piove-di-sacco" className="text-accent hover:underline font-medium">Piove di Sacco</Link>, <Link to="/realizzazione-siti-web-ponte-san-nicolo" className="text-accent hover:underline font-medium">Ponte San Nicolò</Link> e alla Saccisica, oltre che ad <Link to="/realizzazione-siti-web-albignasego" className="text-accent hover:underline font-medium">Albignasego</Link>, <Link to="/realizzazione-siti-web-vigonza" className="text-accent hover:underline font-medium">Vigonza</Link>, <Link to="/realizzazione-siti-web-abano-terme" className="text-accent hover:underline font-medium">Abano Terme</Link> e alla rispettiva zona di competenza. Lavoriamo fianco a fianco con{" "}
+                  Con sede operativa a <Link to="/realizzazione-siti-web-legnaro" className="text-accent hover:underline font-medium">Legnaro (PD)</Link>, siamo il punto di riferimento concreto per le attività che cercano un servizio di <strong>sviluppo e creazione di siti internet a Padova</strong> e provincia, con un'attenzione particolare anche a <Link to="/realizzazione-siti-web-piove-di-sacco" className="text-accent hover:underline font-medium">Piove di Sacco</Link>, <Link to="/realizzazione-siti-web-ponte-san-nicolo" className="text-accent hover:underline font-medium">Ponte San Nicolò</Link> e alla Saccisica, oltre che ad <Link to="/realizzazione-siti-web-albignasego" className="text-accent hover:underline font-medium">Albignasego</Link>, <Link to="/realizzazione-siti-web-vigonza" className="text-accent hover:underline font-medium">Vigonza</Link>, <Link to="/realizzazione-siti-web-abano-terme" className="text-accent hover:underline font-medium">Abano Terme</Link>, <Link to="/realizzazione-siti-web-cittadella" className="text-accent hover:underline font-medium">Cittadella</Link> e alla rispettiva zona di competenza. Lavoriamo fianco a fianco con{" "}
                   <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">
                     professionisti
                   </Link>
@@ -695,7 +695,7 @@ const SitiWebPadova = () => {
                     {
                       question: "Lavorate solo a Padova città o anche in provincia?",
                       answer:
-                        "Operiamo in tutta la provincia di Padova: Padova città, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice, Cittadella e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
+                        "Operiamo in tutta la provincia di Padova: Padova città, Selvazzano Dentro, Cadoneghe, Rubano, Legnaro, Este, Monselice e Piove di Sacco. La nostra sede operativa è a Legnaro (PD).",
                     },
                     {
                       question: "È possibile incontrarvi di persona a Padova?",
