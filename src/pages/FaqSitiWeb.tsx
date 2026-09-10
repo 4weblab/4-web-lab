@@ -235,7 +235,7 @@ const FaqSitiWeb = () => {
 
       <Header satelliteMode />
 
-      <main id="main-content" className="pt-[var(--header-height)]">
+      <main id="main-content">
         {/* Hero */}
         <section className="page-hero">
 
