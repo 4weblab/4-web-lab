@@ -32,12 +32,14 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
   const servicesRef = useRef<HTMLLIElement>(null);
   const { pathname } = useLocation();
   const isBlogArticle = pathname.startsWith('/blog/') && pathname !== '/blog';
-  const isSolid = isScrolled || satelliteMode;
+  const isSolid = isScrolled;
+  // Testo chiaro solo sopra hero scure (Home) e solo prima dello scroll
+  const lightText = !isSolid && !satelliteMode;
 
   const backIconClass = `inline-flex items-center justify-center p-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-    isSolid
-      ? 'text-foreground hover:bg-muted/60'
-      : 'text-primary-foreground hover:bg-primary-foreground/10'
+    lightText
+      ? 'text-primary-foreground hover:bg-primary-foreground/10'
+      : 'text-foreground hover:bg-muted/60'
   }`;
 
   useEffect(() => {
@@ -92,7 +94,7 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
       <nav className="container-section h-full flex items-center justify-between" aria-label="Navigazione principale">
         <Link to="/" aria-label="Vai alla home" className="font-serif text-xl font-semibold text-foreground flex items-center gap-2.5 rounded-lg hover:opacity-90 transition-opacity">
           <img alt="4 Web Lab logo" className="w-9 h-9 rounded-lg object-contain" src="/logo-72.webp" srcSet="/logo-72.webp 72w, /logo-144.webp 144w" sizes="36px" width={36} height={36} decoding="async" />
-          <span className={`transition-colors duration-300 ${isSolid ? 'text-foreground' : 'text-primary-foreground lg:text-foreground'}`}>
+          <span className={`transition-colors duration-300 ${lightText ? 'text-primary-foreground lg:text-foreground' : 'text-foreground'}`}>
             4 Web Lab
           </span>
         </Link>
