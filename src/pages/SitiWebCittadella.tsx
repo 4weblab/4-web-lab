@@ -228,7 +228,7 @@ const SitiWebCittadella = () => {
         </section>
 
         {/* Lo abbiamo già fatto qui */}
-        <section className="section-padding bg-background border-b border-border/30">>
+        <section className="section-padding bg-background border-b border-border/30">
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto">
               <div className="section-divider" />
