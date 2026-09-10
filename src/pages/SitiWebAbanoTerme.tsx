@@ -8,9 +8,9 @@ import vigProssimita from "@/assets/abano-terme-prossimita.webp";
 import vigVelocita from "@/assets/abano-terme-velocita.webp";
 import vigIa from "@/assets/abano-terme-ia.webp";
 
-const TITLE = "Web Agency Vigonza (PD) | Siti Web da 490€";
+const TITLE = "Web Agency Abano Terme (PD) | Siti Web da 490€";
 const DESCRIPTION =
-  "Realizzazione siti web ultra-veloci per attività di Vigonza e zona nord-est di Padova. Contatto diretto, preventivo in 24h.";
+  "Realizzazione siti web ultra-veloci per hotel, attività termali e commerciali di Abano Terme. Contatto diretto, preventivo in 24h.";
 const URL = "https://4weblab.it/realizzazione-siti-web-abano-terme";
 
 const vantaggi = [
@@ -20,7 +20,7 @@ const vantaggi = [
     icon: MapPin,
     title: "Prossimità Reale",
     description:
-      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice, a pochi minuti da Vigonza e dal corridoio verso Padova.",
+      "Nessun intermediario o call center. Parli direttamente con chi sviluppa il codice, a due passi dal Bacino Termale Euganeo.",
   },
   {
     image: vigVelocita,
@@ -28,7 +28,7 @@ const vantaggi = [
     icon: Zap,
     title: "Zero Manutenzione",
     description:
-      "Architettura Jamstack pura: il tuo sito resta veloce e sicuro senza doverci pensare, anche mentre la tua attività cresce insieme al territorio.",
+      "Architettura Jamstack pura: il tuo sito resta veloce e sicuro anche nei picchi di stagione, senza plugin che si bloccano proprio quando arrivano più prenotazioni.",
   },
   {
     image: vigIa,
@@ -36,7 +36,7 @@ const vantaggi = [
     icon: Sparkles,
     title: "Pronti per l'IA",
     description:
-      "In una zona in forte espansione, farsi trovare da Google e consigliare da ChatGPT prima dei nuovi concorrenti fa la differenza. Ottimizziamo il tuo sito per questo.",
+      "Chi cerca 'terme vicino a me' o 'hotel benessere Padova' oggi lo chiede anche a ChatGPT. Ottimizziamo il tuo sito per comparire lì, non solo su Google — un vantaggio che molte strutture della zona non hanno ancora sfruttato.",
   },
 ];
 
@@ -93,7 +93,7 @@ const SitiWebAbanoTerme = () => {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                   { "@type": "ListItem", position: 1, name: "Home", item: "https://4weblab.it/" },
-                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Vigonza", item: URL },
+                  { "@type": "ListItem", position: 2, name: "Realizzazione siti web Abano Terme", item: URL },
                 ],
               },
               {
@@ -117,12 +117,13 @@ const SitiWebAbanoTerme = () => {
               },
               {
                 "@type": "Service",
-                name: "Realizzazione siti web a Vigonza e zona nord-est di Padova",
+                name: "Realizzazione siti web ad Abano Terme e comprensorio euganeo",
                 provider: { "@id": "https://4weblab.it/#business" },
                 areaServed: [
-                  { "@type": "City", name: "Vigonza" },
-                  { "@type": "City", name: "Vigodarzere" },
-                  { "@type": "City", name: "Camposampiero" },
+                  { "@type": "City", name: "Abano Terme" },
+                  { "@type": "City", name: "Montegrotto Terme" },
+                  { "@type": "City", name: "Torreglia" },
+                  { "@type": "City", name: "Battaglia Terme" },
                 ],
                 offers: {
                   "@type": "AggregateOffer",
@@ -175,15 +176,15 @@ const SitiWebAbanoTerme = () => {
                 className="heading-1 text-primary-foreground mb-6 text-balance"
                 style={{ textShadow: "0 1px 3px rgba(0,0,0,0.5), 0 0 8px rgba(0,0,0,0.2)" }}
               >
-                Sviluppo Siti Web a Vigonza: Soluzioni per Negozi, Professionisti e PMI Senza WordPress
+                Sviluppo Siti Web ad Abano Terme: Soluzioni per Hotel, Negozi e Attività del Termale
               </h1>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Sei un'attività di Vigonza o della zona nord-est di Padova? Creiamo siti web ultra-veloci, sicuri e
-                pronti per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e in 14 giorni sei
-                online.
+                Sei un hotel, un centro benessere o un'attività commerciale di Abano Terme? Creiamo siti web
+                ultra-veloci, sicuri e pronti per l'IA. Zero call infinite con agenzie lontane: ci sediamo al tavolo e
+                in 14 giorni sei online.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
@@ -214,14 +215,14 @@ const SitiWebAbanoTerme = () => {
           <div className="container-section">
             <AnimatedSection className="max-w-3xl mx-auto text-center">
               <div className="section-divider" />
-              <h2 className="heading-3 mb-5">Un territorio in crescita</h2>
+              <h2 className="heading-3 mb-5">Il cuore del termale euganeo</h2>
               <p className="body-large text-muted-foreground text-balance">
-                Con quasi 23.000 abitanti, Vigonza è il terzo comune più popoloso della provincia di Padova,
-                attraversato da importanti vie di comunicazione verso Padova, Venezia e Treviso. La frazione di Busa,
-                ormai quasi periferia della città, è tra le zone a maggiore sviluppo economico dell'area — mentre
-                Codiverno, Pionca, Peraga e San Vito mantengono un'identità più raccolta. Che la tua attività sia in
-                una di queste realtà o verso Camposampiero, il tuo sito deve rispecchiare un territorio in crescita,
-                non un indirizzo qualsiasi in provincia.
+                Abano Terme fa parte del Bacino Termale Euganeo, la più grande destinazione termale d'Europa — un'economia
+                che non vive solo di hotel, ma di un'intera filiera che include agroalimentare, artigianato e servizi
+                legati al turismo del benessere. Che tu gestisca una struttura ricettiva, un'attività nel centro storico
+                pedonale o un servizio che lavora con il settore termale, il tuo sito è spesso il primo contatto con un
+                cliente che sta pianificando un soggiorno da un'altra città o dall'estero — non può permettersi di
+                essere lento o difficile da trovare.
               </p>
             </AnimatedSection>
           </div>
@@ -232,10 +233,10 @@ const SitiWebAbanoTerme = () => {
           <div className="container-section">
             <AnimatedSection className="text-center mb-14">
               <div className="section-divider" />
-              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino a Vigonza</h2>
+              <h2 className="heading-2 mb-5">Perché scegliere un web studio vicino ad Abano Terme</h2>
               <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-                Tre vantaggi concreti per le attività di Vigonza, Vigodarzere, la zona di Camposampiero e tutta l'area
-                nord-est di Padova.
+                Tre vantaggi concreti per hotel, centri benessere e attività di Abano Terme, Montegrotto Terme,
+                Torreglia, Battaglia Terme e di tutto il comprensorio euganeo.
               </p>
             </AnimatedSection>
 
