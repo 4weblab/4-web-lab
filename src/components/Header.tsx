@@ -194,38 +194,24 @@ const Header = ({ satelliteMode = false }: HeaderProps) => {
               );
             })}
           </ul>
-        )}
 
         {/* Mobile Menu Button */}
-        {satelliteMode ? (
-          <div className="lg:hidden flex items-center gap-1.5">
-            {isBlogArticle && (
-              <Link to="/blog" className={mobileBackLinkClass} aria-label="Torna agli articoli">
-                <ArrowLeft className="w-5 h-5" />
-              </Link>
-            )}
-            <Link to="/" className={mobileBackLinkClass} aria-label="Torna alla Home">
-              <Home className="w-5 h-5" />
-            </Link>
-          </div>
-        ) : (
-          <button
-            className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-expanded={isOpen}
-            aria-controls="mobile-menu"
-            aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
-          >
-            {isOpen ? (
-              <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-            ) : (
-              <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
-            )}
-          </button>
-        )}
+        <button
+          className="lg:hidden p-2.5 rounded-xl hover:bg-muted/50 transition-colors"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? 'Chiudi menu' : 'Apri menu'}
+        >
+          {isOpen ? (
+            <X className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+          ) : (
+            <Menu className={`w-6 h-6 ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`} />
+          )}
+        </button>
 
         {/* Mobile Menu */}
-        {isOpen && !satelliteMode && (
+        {isOpen && (
             <div
               id="mobile-menu"
               className="absolute top-full left-0 right-0 lg:hidden border-b border-border/30 bg-background/95"
