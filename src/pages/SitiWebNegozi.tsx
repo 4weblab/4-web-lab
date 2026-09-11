@@ -579,13 +579,22 @@ const SitiWebNegozi = () => {
                         <span className="text-foreground">{feature}</span>
                       </li>
                     ))}
+                    <li className="flex items-start gap-3 rounded-xl bg-accent/10 px-4 py-3 border border-accent/20">
+                      <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/25 flex items-center justify-center mt-0.5">
+                        <Check className="w-3 h-3 text-accent" aria-hidden="true" />
+                      </span>
+                      <span className="font-semibold text-accent">3 mesi di Hosting inclusi nel prezzo*</span>
+                    </li>
                   </ul>
-                  <p className="text-xs text-muted-foreground text-center mb-6">
+                  <p className="text-xs text-muted-foreground text-center mb-2">
                     Il prezzo varia in base alle esigenze.{" "}
                     <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">
                       Scopri come si calcola il costo di un sito nel 2026
                     </Link>
                     .
+                  </p>
+                  <p className="text-xs text-muted-foreground text-center mb-6">
+                    *Al termine dei 3 mesi, 99€ all'anno IVA esclusa
                   </p>
                   <div className="text-center">
                     <button

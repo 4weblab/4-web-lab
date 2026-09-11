@@ -622,7 +622,8 @@ const SitiWebAziendali = () => {
                     label: "Base",
                     title: "Sito aziendale",
                     price: "A partire da 1890€",
-                    priceNote: "IVA esclusa",
+                    hosting: "12 mesi di Hosting inclusi nel prezzo*",
+                    priceNote: "*Al termine dei 12 mesi, 99€ all'anno IVA esclusa",
                     description:
                       "La base solida per farti trovare da nuovi clienti B2B e presentare la tua azienda con autorevolezza fin dal primo click.",
                   },
@@ -649,8 +650,16 @@ const SitiWebAziendali = () => {
                       <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                       <div className="mt-5 pt-5 border-t border-border/50">
                         <p className="text-base font-semibold text-foreground">{item.price}</p>
+                        {item.price === "A partire da 1890€" && (
+                          <p className="text-xs text-muted-foreground mt-1">IVA esclusa</p>
+                        )}
+                        {item.hosting && (
+                          <div className="mt-3 rounded-xl bg-accent/10 px-4 py-3 border border-accent/20">
+                            <span className="font-semibold text-accent text-sm">{item.hosting}</span>
+                          </div>
+                        )}
                         {item.priceNote && (
-                          <p className="text-xs text-muted-foreground mt-1">{item.priceNote}</p>
+                          <p className="text-xs text-muted-foreground mt-2">{item.priceNote}</p>
                         )}
                       </div>
                     </div>
