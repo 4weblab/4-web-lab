@@ -453,6 +453,14 @@ const SitiWebProfessionisti = () => {
                         </li>
                       ))}
                     </ul>
+                    <ul className="space-y-4 mb-6" role="list">
+                      <li className="flex items-start gap-3 rounded-xl bg-accent/10 px-4 py-3 border border-accent/20">
+                        <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/25 flex items-center justify-center mt-0.5">
+                          <Check className="w-3 h-3 text-accent" aria-hidden="true" />
+                        </span>
+                        <span className="font-semibold text-accent">6 mesi di Hosting inclusi nel prezzo*</span>
+                      </li>
+                    </ul>
                     <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
                       <Button
                         size="lg"
@@ -464,6 +472,9 @@ const SitiWebProfessionisti = () => {
                         Richiedi un preventivo gratuito
                       </Button>
                     </motion.div>
+                    <p className="text-xs text-muted-foreground text-center mt-3">
+                      *Al termine dei 6 mesi, 99€ all'anno IVA esclusa
+                    </p>
                   </div>
 
                   {/* Bullet points */}
