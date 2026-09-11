@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { MapPin, Zap, Sparkles, MessageCircle, Store, Briefcase, Building2, Check } from "lucide-react";
+import { MapPin, Zap, Sparkles, MessageCircle, Store, Briefcase, Building2, Check, HelpCircle } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -94,6 +95,24 @@ const MinimalFooter = () => {
   );
 };
 
+const faqs = [
+  {
+    question: "Quanto costa un sito web a Piove di Sacco?",
+    answer:
+      "Il prezzo parte da 490€ per un sito One-Page pensato per negozi e attività locali, da 990€ per un Sito Vetrina professionale, da 1.890€ per un Sito Aziendale multipagina — la stessa struttura di prezzi che applichiamo in tutta la provincia di Padova.",
+  },
+  {
+    question: "Quanto tempo serve per realizzare un sito a Piove di Sacco?",
+    answer:
+      "In genere 14 giorni per un sito One-Page o Vetrina, fino a 3-4 settimane per un sito aziendale più articolato.",
+  },
+  {
+    question: "Realizzate siti per negozi del centro storico di Piove di Sacco?",
+    answer:
+      "Sì, in particolare per le attività coinvolte nel distretto \"Piove di Shopping\": un sito web ben fatto è il naturale completamento di iniziative come questa per valorizzare botteghe storiche e negozi di vicinato.",
+  },
+];
+
 const SitiWebPioveDiSacco = () => {
   return (
     <>
@@ -118,6 +137,14 @@ const SitiWebPioveDiSacco = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@graph": [
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((f) => ({
+                  "@type": "Question",
+                  name: f.question,
+                  acceptedAnswer: { "@type": "Answer", text: f.answer },
+                })),
+              },
               {
                 "@type": "BreadcrumbList",
                 itemListElement: [
@@ -224,6 +251,19 @@ const SitiWebPioveDiSacco = () => {
           </div>
         </section>
 
+        {/* Identità locale */}
+        <section className="section-padding bg-surface-alt-2">
+          <div className="container-section">
+            <AnimatedSection className="max-w-3xl mx-auto text-center">
+              <div className="section-divider" />
+              <h2 className="heading-3 mb-5">Il capoluogo della Saccisica</h2>
+              <p className="body-large text-muted-foreground text-balance">
+                Con oltre 20.000 abitanti, Piove di Sacco è il capoluogo non ufficiale della Saccisica — un centro storico medievale a pianta quadrilatera, un tempo cinto da mura e torri. Il commercio locale si sta muovendo attivamente verso la valorizzazione digitale: il distretto “Piove di Shopping”, promosso da Ascom Confcommercio e dal Comune, punta a rilanciare botteghe storiche e negozi di vicinato del centro. Il tuo sito web è il passo naturale in questa stessa direzione — non un optional.
+              </p>
+            </AnimatedSection>
+          </div>
+        </section>
+
         {/* Vantaggi */}
         <section className="section-padding bg-background">
           <div className="container-section">
@@ -259,6 +299,38 @@ const SitiWebPioveDiSacco = () => {
                 </StaggerItem>
               ))}
             </StaggerContainer>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="section-padding bg-surface-alt-2 border-b border-border/30">
+          <div className="container-section">
+            <div className="max-w-3xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-8">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <h2 className="heading-2">Domande frequenti</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`faq-piove-di-sacco-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="text-left py-5 hover:no-underline">
+                        <span className="font-semibold text-foreground text-base pr-4">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer text-muted-foreground text-sm leading-relaxed pb-5">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
+            </div>
           </div>
         </section>
 
