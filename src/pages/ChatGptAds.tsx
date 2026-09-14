@@ -6,6 +6,7 @@ import {
   Bot,
   Target,
   TrendingUp,
+  Zap,
   ArrowRight,
   MessageCircle,
   Briefcase,
@@ -284,8 +285,32 @@ const ChatGptAds = () => {
           </div>
         </section>
 
-        {/* SECTION 2: Perché */}
+        {/* SECTION: Problema */}
         <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-8">
+                <div className="icon-box w-13 h-13">
+                  <Zap className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <h2 className="heading-2">
+                  Il tuo prossimo cliente sta chiedendo a ChatGPT, non a Google — e lì i concorrenti non ci sono ancora
+                </h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  Sempre più persone iniziano la ricerca di un prodotto o servizio chiedendo direttamente a ChatGPT,
+                  saltando del tutto Google. È un canale nuovo, con concorrenza pubblicitaria quasi assente: chi entra
+                  ora si assicura una visibilità che tra qualche mese, con l'aumento della domanda, costerà di più e
+                  sarà più difficile da ottenere.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION 2: Perché */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -312,7 +337,7 @@ const ChatGptAds = () => {
         </section>
 
         {/* SECTION 3: Scenari d'uso */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -341,7 +366,7 @@ const ChatGptAds = () => {
         </section>
 
         {/* SECTION 4: Metodo */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -366,7 +391,7 @@ const ChatGptAds = () => {
         </section>
 
         {/* SECTION 5: FAQ */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-3xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-8">
