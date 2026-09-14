@@ -19,6 +19,7 @@ import {
   LineChart,
   HelpCircle,
   Lightbulb,
+  MessageCircleQuestion,
 } from "lucide-react";
 
 const PAGE_URL = "https://4weblab.it/posizionamento-google-e-ai";
