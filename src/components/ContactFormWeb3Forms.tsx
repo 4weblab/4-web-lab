@@ -5,7 +5,15 @@ import { ArrowRight } from "lucide-react";
 type Status = { state: "idle" | "sending" | "success" | "error"; message: string };
 type FieldErrors = Record<string, string>;
 
-export default function ContactFormWeb3Forms() {
+type ContactFormWeb3FormsProps = {
+  submitLabel?: string;
+  sourcePage?: string;
+};
+
+export default function ContactFormWeb3Forms({
+  submitLabel = "Richiedi Analisi AEO & SEO Gratuita",
+  sourcePage,
+}: ContactFormWeb3FormsProps = {}) {
   const [status, setStatus] = useState<Status>({ state: "idle", message: "" });
   const [fieldErrors, setFieldErrors] = useState<FieldErrors>({});
 
