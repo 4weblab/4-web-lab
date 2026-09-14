@@ -462,10 +462,7 @@ const PosizionamentoGoogleEAi = () => {
         </section>
 
         {/* Come lavoriamo */}
-        <section
-          className="section-padding"
-          style={{ background: "var(--gradient-surface)" }}
-        >
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
