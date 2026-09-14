@@ -281,11 +281,38 @@ const PosizionamentoGoogleEAi = () => {
           </div>
         </section>
 
-        {/* Definizioni Q&A */}
+        {/* Problema */}
         <section
           className="section-padding"
           style={{ background: "var(--gradient-surface)" }}
         >
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="icon-box w-13 h-13">
+                    <MessageCircleQuestion className="w-6 h-6 text-accent-foreground" />
+                  </div>
+                  <h2 className="heading-2">
+                    Se il tuo sito non è ottimizzato per le IA, i tuoi clienti stanno già chiedendo a
+                    ChatGPT chi altro contattare
+                  </h2>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Sempre più persone non aprono più Google per cercare un fornitore: chiedono
+                  direttamente a ChatGPT, Gemini o Perplexity chi consigliano. Se il tuo sito non è
+                  strutturato per essere letto e citato da questi sistemi, la risposta che il tuo
+                  potenziale cliente riceve nomina un concorrente — anche se il tuo sito è ben
+                  posizionato su Google. SEO, AEO e GEO insieme sono l'unico modo per essere trovati
+                  ovunque le persone cercano oggi.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Definizioni Q&A */}
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto space-y-12">
               {/* SEO */}
