@@ -292,7 +292,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Perché un'azienda ha bisogno di un sito strutturato */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -345,7 +345,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Cosa realizziamo per le aziende */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -389,7 +389,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Siti multipagina e strutturati */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -493,7 +493,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Tabella comparativa - AEO friendly */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-6">
@@ -562,7 +562,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Quanto costa un sito web aziendale */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-6">
