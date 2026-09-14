@@ -310,7 +310,7 @@ const SitiWebPadova = () => {
                     <div className="icon-box w-13 h-13">
                       <MapPin className="w-6 h-6 text-accent-foreground" />
                     </div>
-                    <h3 className="heading-2">Web studio a Padova: perché la prossimità fa la differenza</h3>
+                    <h3 className="heading-3">Web studio a Padova: perché la prossimità fa la differenza</h3>
                   </div>
                   <p className="body-base text-muted-foreground">
                     Con noi non aspetti in coda a un call center: parli subito con chi sviluppa e gestisce il tuo sito, raggiungibile in 15 minuti dal centro di Padova.
