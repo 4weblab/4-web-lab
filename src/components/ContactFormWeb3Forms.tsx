@@ -222,6 +222,8 @@ export default function ContactFormWeb3Forms({
         </label>
       </div>
 
+      {sourcePage && <input type="hidden" name="source_page" value={sourcePage} />}
+
       {/* Submit */}
       <button
         type="submit"
@@ -232,7 +234,7 @@ export default function ContactFormWeb3Forms({
           "Invio..."
         ) : (
           <>
-            Richiedi Analisi AEO & SEO Gratuita
+            {submitLabel}
             <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </>
         )}
