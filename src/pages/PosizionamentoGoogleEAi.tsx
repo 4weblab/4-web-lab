@@ -568,10 +568,7 @@ const PosizionamentoGoogleEAi = () => {
         </section>
 
         {/* Interlinking — Approfondisci */}
-        <section
-          className="section-padding"
-          style={{ background: "var(--gradient-surface)" }}
-        >
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="text-center mb-10">
