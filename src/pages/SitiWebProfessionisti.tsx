@@ -827,7 +827,7 @@ const SitiWebProfessionisti = () => {
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <h2 className="heading-2 text-primary-foreground mb-6">
-                  Il cliente che oggi ti cerca su Google, domani può essere già dalla concorrenza
+                  Chi vive di reputazione non può permettersi un sito che non trasmette fiducia
                 </h2>
                 <p className="body-large text-primary-foreground/70 mb-8">
                   Raccontaci la tua attività: in 24h ti diciamo come far diventare il tuo sito il tuo miglior canale
@@ -863,7 +863,7 @@ const SitiWebProfessionisti = () => {
 
               {/* Box destra - Form */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8">
-                <ContactFormWeb3Forms />
+                <ContactFormWeb3Forms submitLabel="Richiedi Preventivo Gratuito in 24h" sourcePage="Professionisti" />
               </div>
             </AnimatedSection>
           </div>
