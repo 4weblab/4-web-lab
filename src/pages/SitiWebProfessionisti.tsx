@@ -17,6 +17,7 @@ import {
   Globe,
   MapPin,
   Layers,
+  Search,
   Wrench,
   Image as ImageIcon,
 } from "lucide-react";
@@ -150,9 +151,29 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
+        {/* Problema */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-8">
+                <div className="icon-box w-13 h-13">
+                  <Search className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <h2 className="heading-2">
+                  Il tuo prossimo cliente ti sta già cercando su Google — e decide in pochi secondi
+                </h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <p className="body-large text-muted-foreground">
+                  Prima di scegliere un professionista, chi cerca online guarda il sito in pochi secondi: se è lento, disordinato o non risponde subito alle domande giuste, il contatto lo lascia a chi si è già preso cura della propria presenza online. Non conta solo essere bravi nel proprio lavoro: conta essere trovati, e trasmettere fiducia prima ancora del primo messaggio.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
         {/* A chi è rivolto */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -190,8 +211,9 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
+
         {/* Cosa deve comunicare un sito */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -258,112 +280,156 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
-        {/* Il nostro metodo */}
-        <section className="section-padding bg-background">
-          <div className="container-section">
-            <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
-                <div className="icon-box w-13 h-13">
-                  <Settings className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h2 className="heading-2">Il nostro metodo di lavoro</h2>
-              </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-8">
-                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato, ideale anche per
-                  collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo garantisce trasparenza
-                  in ogni fase. Puoi vedere alcuni esempi nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>. Per chi vuole ricevere richieste di consulenza già nei primi giorni online, valutiamo insieme anche <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">la pubblicità su Google ADS</Link> dedicata ai professionisti:
-                </p>
-                <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
-                  {[
-                    {
-                      step: "01",
-                      title: "Analisi e briefing",
-                      description:
-                        "Raccogliamo le informazioni sulla tua attività, i tuoi obiettivi e il pubblico di riferimento attraverso un confronto strutturato.",
-                    },
-                    {
-                      step: "02",
-                      title: "Progettazione",
-                      description:
-                        "Definiamo la struttura del sito, l'architettura delle informazioni e il design in linea con la tua identità professionale.",
-                    },
-                    {
-                      step: "03",
-                      title: "Sviluppo",
-                      description:
-                        "Realizziamo il sito web professionale con tecnologie moderne, garantendo velocità, sicurezza e ottimizzazione SEO.",
-                    },
-                    {
-                      step: "04",
-                      title: "Revisione e lancio",
-                      description:
-                        "Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo formazione per la gestione.",
-                    },
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
-                      <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
-                        <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
-                          {item.step}
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
-                          <p className="text-sm">{item.description}</p>
-                        </div>
-                      </div>
-                    </StaggerItem>
-                  ))}
-                </StaggerContainer>
-                <p>
-                  Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per professionisti
-                  ovunque si trovino, mantenendo comunicazione costante e tempi certi.
-                </p>
-              </AnimatedSection>
-            </div>
-          </div>
-        </section>
 
-        {/* Perché scegliere 4 Web Lab */}
+        {/* Realizzazioni teaser */}
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
-            <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-3">
                 <div className="icon-box w-13 h-13">
-                  <Award className="w-6 h-6 text-accent-foreground" />
+                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Perché scegliere 4 Web Lab</h2>
+                <h2 className="heading-2">Alcuni siti web per professionisti realizzati</h2>
               </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-6">
-                  Siamo una realtà strutturata specializzata nella realizzazione di siti web per professionisti. Ecco
-                  cosa ci distingue:
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-10 max-w-3xl">
+                  Una selezione di lavori pubblicati e concept dedicati a studi e attività professionali.
                 </p>
-                <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
-                  {[
-                    "Non ti vendiamo un sito, ti costruiamo uno strumento per acquisire clienti",
-                    "Sappiamo cosa serve a uno studio professionale, non improvvisiamo",
-                    "Processo chiaro anche a distanza: sai sempre a che punto siamo",
-                    "Il tuo sito continua a portarti risultati anche dopo il lancio, non ti lasciamo solo",
-                    "Nessun vincolo, nessuna sorpresa in fattura",
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
-                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20 hover:-translate-y-[3px] hover:shadow-md">
-                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto" staggerDelay={0.1}>
+                {[
+                  {
+                    img: elisaPiovanPt,
+                    title: "Elisa Piovan — Personal Trainer (Padova)",
+                    desc: "Restyling completo del sito professionale di Elisa Piovan: struttura, grafica e ottimizzazione SEO, AEO e GEO, con hosting gestito per garantire i migliori punteggi PageSpeed Insights.",
+                    to: null,
+                    badge: "In costruzione",
+                  },
+                  {
+                    img: dentisticoImg,
+                    title: "Studio dentistico – concept",
+                    desc: "Demo per uno studio odontoiatrico moderno: struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
+                    to: "/realizzazioni/demo-studio-dentistico-premium",
+                    badge: null,
+                  },
+                ].map((item, i) => {
+                  const inner = (
+                    <>
+                      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          loading="lazy"
+                          width="640"
+                          height="400"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        {item.badge && (
+                          <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 shadow-md">
+                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-foreground animate-pulse" />
+                            {item.badge}
+                          </span>
+                        )}
                       </div>
+                      <div className="p-5">
+                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </>
+                  );
+                  return (
+                    <StaggerItem key={i}>
+                      {item.to ? (
+                        <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">{inner}</Link>
+                      ) : (
+                        <div className="block group card-elevated overflow-hidden p-0 h-full cursor-default">{inner}</div>
+                      )}
                     </StaggerItem>
-                  ))}
-                </StaggerContainer>
+                  );
+                })}
+              </StaggerContainer>
+              <AnimatedSection delay={0.2} className="mt-8 text-center">
+                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
+                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+
+        {/* Tabella comparativa */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Layers className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
-                  Con 4 Web Lab il tuo sito diventa il tuo miglior biglietto da visita, disponibile 24 ore su 24.
+                  Ecco come si posiziona il pacchetto pensato per il tuo profilo professionale rispetto alle altre tipologie di sito che realizziamo.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <div className="overflow-x-auto rounded-2xl border border-border/60 bg-white shadow-sm">
+                  <table className="w-full text-left text-sm">
+                    <thead className="bg-accent/8 text-foreground">
+                      <tr>
+                        <th className="px-5 py-4 font-semibold">Caratteristica</th>
+                        <th className="px-5 py-4 font-semibold">One-Page</th>
+                        <th className="px-5 py-4 font-semibold bg-accent/15 border-x border-accent/30">Sito Vetrina</th>
+                        <th className="px-5 py-4 font-semibold">Sito Aziendale</th>
+                        <th className="px-5 py-4 font-semibold">Sito Corporate</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-muted-foreground">
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
+                        <td className="px-5 py-4">1</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">1–3</td>
+                        <td className="px-5 py-4">5–15</td>
+                        <td className="px-5 py-4">15+ (anche multilingua)</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
+                        <td className="px-5 py-4">Presenza essenziale, contatto immediato</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Presenza online di base</td>
+                        <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
+                        <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
+                        <td className="px-5 py-4">da 490€</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">da 990€</td>
+                        <td className="px-5 py-4">da 1890€</td>
+                        <td className="px-5 py-4">Preventivo su misura</td>
+                      </tr>
+                      <tr className="border-t border-border/50">
+                        <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
+                        <td className="px-5 py-4">Negozi, attività locali</td>
+                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Liberi professionisti, micro-imprese</td>
+                        <td className="px-5 py-4">PMI che vogliono crescere online</td>
+                        <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mt-8" delay={0.2}>
+                <p>
+                  Per un professionista come te, il Sito Vetrina è quasi sempre la scelta giusta: la vetrina digitale che ti presenta bene fin dal primo contatto.
                 </p>
               </AnimatedSection>
             </div>
           </div>
         </section>
 
+
         {/* Quanto costa */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -550,153 +616,105 @@ const SitiWebProfessionisti = () => {
           </AnimatedSection>
         </section>
 
-        {/* Tabella comparativa */}
+        {/* Il nostro metodo */}
         <section className="section-padding bg-background">
           <div className="container-section">
-            <div className="max-w-5xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-6">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="icon-box w-13 h-13">
-                  <Layers className="w-6 h-6 text-accent-foreground" />
+                  <Settings className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
+                <h2 className="heading-2">Il nostro metodo di lavoro</h2>
               </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
-                <p>
-                  Ecco come si posiziona il pacchetto pensato per il tuo profilo professionale rispetto alle altre tipologie di sito che realizziamo.
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p className="mb-8">
+                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato, ideale anche per
+                  collaborazioni da remoto con professionisti in tutta Italia. Il nostro processo garantisce trasparenza
+                  in ogni fase. Puoi vedere alcuni esempi nelle nostre <Link to="/realizzazioni" className="text-accent hover:underline font-medium">realizzazioni</Link>. Per chi vuole ricevere richieste di consulenza già nei primi giorni online, valutiamo insieme anche <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">la pubblicità su Google ADS</Link> dedicata ai professionisti:
                 </p>
-              </AnimatedSection>
-              <AnimatedSection delay={0.15}>
-                <div className="overflow-x-auto rounded-2xl border border-border/60 bg-white shadow-sm">
-                  <table className="w-full text-left text-sm">
-                    <thead className="bg-accent/8 text-foreground">
-                      <tr>
-                        <th className="px-5 py-4 font-semibold">Caratteristica</th>
-                        <th className="px-5 py-4 font-semibold">One-Page</th>
-                        <th className="px-5 py-4 font-semibold bg-accent/15 border-x border-accent/30">Sito Vetrina</th>
-                        <th className="px-5 py-4 font-semibold">Sito Aziendale</th>
-                        <th className="px-5 py-4 font-semibold">Sito Corporate</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-muted-foreground">
-                      <tr className="border-t border-border/50">
-                        <td className="px-5 py-4 font-medium text-foreground">Pagine medie</td>
-                        <td className="px-5 py-4">1</td>
-                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">1–3</td>
-                        <td className="px-5 py-4">5–15</td>
-                        <td className="px-5 py-4">15+ (anche multilingua)</td>
-                      </tr>
-                      <tr className="border-t border-border/50">
-                        <td className="px-5 py-4 font-medium text-foreground">Obiettivo</td>
-                        <td className="px-5 py-4">Presenza essenziale, contatto immediato</td>
-                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Presenza online di base</td>
-                        <td className="px-5 py-4">Presentazione strutturata e lead generation</td>
-                        <td className="px-5 py-4">Identità di gruppo, più sedi/lingue, investor relations</td>
-                      </tr>
-                      <tr className="border-t border-border/50">
-                        <td className="px-5 py-4 font-medium text-foreground">Costo indicativo</td>
-                        <td className="px-5 py-4">da 490€</td>
-                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">da 990€</td>
-                        <td className="px-5 py-4">da 1890€</td>
-                        <td className="px-5 py-4">Preventivo su misura</td>
-                      </tr>
-                      <tr className="border-t border-border/50">
-                        <td className="px-5 py-4 font-medium text-foreground">Ideale per</td>
-                        <td className="px-5 py-4">Negozi, attività locali</td>
-                        <td className="px-5 py-4 bg-accent/8 border-x border-accent/30">Liberi professionisti, micro-imprese</td>
-                        <td className="px-5 py-4">PMI che vogliono crescere online</td>
-                        <td className="px-5 py-4">Grandi aziende, gruppi industriali</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mt-8" delay={0.2}>
+                <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
+                  {[
+                    {
+                      step: "01",
+                      title: "Analisi e briefing",
+                      description:
+                        "Raccogliamo le informazioni sulla tua attività, i tuoi obiettivi e il pubblico di riferimento attraverso un confronto strutturato.",
+                    },
+                    {
+                      step: "02",
+                      title: "Progettazione",
+                      description:
+                        "Definiamo la struttura del sito, l'architettura delle informazioni e il design in linea con la tua identità professionale.",
+                    },
+                    {
+                      step: "03",
+                      title: "Sviluppo",
+                      description:
+                        "Realizziamo il sito web professionale con tecnologie moderne, garantendo velocità, sicurezza e ottimizzazione SEO.",
+                    },
+                    {
+                      step: "04",
+                      title: "Revisione e lancio",
+                      description:
+                        "Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo formazione per la gestione.",
+                    },
+                  ].map((item, index) => (
+                    <StaggerItem key={index}>
+                      <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
+                        <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
+                          {item.step}
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
+                          <p className="text-sm">{item.description}</p>
+                        </div>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
                 <p>
-                  Per un professionista come te, il Sito Vetrina è quasi sempre la scelta giusta: la vetrina digitale che ti presenta bene fin dal primo contatto.
+                  Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per professionisti
+                  ovunque si trovino, mantenendo comunicazione costante e tempi certi.
                 </p>
               </AnimatedSection>
             </div>
           </div>
         </section>
 
-        {/* Realizzazioni teaser */}
-        <section className="section-padding bg-background">
+
+        {/* FAQ Section */}
+
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
-            <div className="max-w-5xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-3">
-                <div className="icon-box w-13 h-13">
-                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h2 className="heading-2">Alcuni siti web per professionisti realizzati</h2>
+            <div className="max-w-3xl mx-auto">
+              <AnimatedSection className="text-center mb-10">
+                <h2 className="heading-2">Domande Frequenti sui Siti Web per Professionisti</h2>
               </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <p className="text-muted-foreground mb-10 max-w-3xl">
-                  Una selezione di lavori pubblicati e concept dedicati a studi e attività professionali.
-                </p>
-              </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto" staggerDelay={0.1}>
-                {[
-                  {
-                    img: elisaPiovanPt,
-                    title: "Elisa Piovan — Personal Trainer (Padova)",
-                    desc: "Restyling completo del sito professionale di Elisa Piovan: struttura, grafica e ottimizzazione SEO, AEO e GEO, con hosting gestito per garantire i migliori punteggi PageSpeed Insights.",
-                    to: null,
-                    badge: "In costruzione",
-                  },
-                  {
-                    img: dentisticoImg,
-                    title: "Studio dentistico – concept",
-                    desc: "Demo per uno studio odontoiatrico moderno: struttura chiara, servizi ordinati e CTA strategiche per la prenotazione.",
-                    to: "/realizzazioni/demo-studio-dentistico-premium",
-                    badge: null,
-                  },
-                ].map((item, i) => {
-                  const inner = (
-                    <>
-                      <div className="relative aspect-[16/10] overflow-hidden bg-muted">
-                        <img
-                          src={item.img}
-                          alt={item.title}
-                          loading="lazy"
-                          width="640"
-                          height="400"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        {item.badge && (
-                          <span className="absolute top-3 left-3 inline-flex items-center gap-1.5 rounded-full bg-accent text-accent-foreground text-xs font-semibold px-3 py-1 shadow-md">
-                            <span className="inline-block w-1.5 h-1.5 rounded-full bg-accent-foreground animate-pulse" />
-                            {item.badge}
-                          </span>
-                        )}
-                      </div>
-                      <div className="p-5">
-                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground">{item.desc}</p>
-                      </div>
-                    </>
-                  );
-                  return (
-                    <StaggerItem key={i}>
-                      {item.to ? (
-                        <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">{inner}</Link>
-                      ) : (
-                        <div className="block group card-elevated overflow-hidden p-0 h-full cursor-default">{inner}</div>
-                      )}
-                    </StaggerItem>
-                  );
-                })}
-              </StaggerContainer>
-              <AnimatedSection delay={0.2} className="mt-8 text-center">
-                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
-                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
-                </Link>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="w-full space-y-3">
+                  {faqItems.map((item, index) => (
+                    <AccordionItem
+                      key={index}
+                      value={`item-${index}`}
+                      className="rounded-2xl border border-border/60 bg-card px-5 transition-all duration-300 hover:shadow-md"
+                    >
+                      <AccordionTrigger className="text-left font-semibold text-foreground">
+                        {item.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {item.a}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </AnimatedSection>
             </div>
           </div>
         </section>
+
 
         {/* Zone servite */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -744,35 +762,46 @@ const SitiWebProfessionisti = () => {
           </div>
         </section>
 
-        {/* FAQ Section */}
 
-        <section className="section-padding bg-background">
+        {/* Perché scegliere 4 Web Lab */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
-            <div className="max-w-3xl mx-auto">
-              <AnimatedSection className="text-center mb-10">
-                <h2 className="heading-2">Domande Frequenti sui Siti Web per Professionisti</h2>
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Award className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Perché scegliere 4 Web Lab</h2>
               </AnimatedSection>
-              <AnimatedSection delay={0.1}>
-                <Accordion type="single" collapsible className="w-full space-y-3">
-                  {faqItems.map((item, index) => (
-                    <AccordionItem
-                      key={index}
-                      value={`item-${index}`}
-                      className="rounded-2xl border border-border/60 bg-card px-5 transition-all duration-300 hover:shadow-md"
-                    >
-                      <AccordionTrigger className="text-left font-semibold text-foreground">
-                        {item.q}
-                      </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground">
-                        {item.a}
-                      </AccordionContent>
-                    </AccordionItem>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p className="mb-6">
+                  Siamo una realtà strutturata specializzata nella realizzazione di siti web per professionisti. Ecco
+                  cosa ci distingue:
+                </p>
+                <StaggerContainer className="space-y-3 mb-8" staggerDelay={0.08}>
+                  {[
+                    "Non ti vendiamo un sito, ti costruiamo uno strumento per acquisire clienti",
+                    "Sappiamo cosa serve a uno studio professionale, non improvvisiamo",
+                    "Processo chiaro anche a distanza: sai sempre a che punto siamo",
+                    "Il tuo sito continua a portarti risultati anche dopo il lancio, non ti lasciamo solo",
+                    "Nessun vincolo, nessuna sorpresa in fattura",
+                  ].map((item, index) => (
+                    <StaggerItem key={index}>
+                      <div className="flex items-start gap-3.5 p-4 rounded-2xl bg-accent/5 border border-accent/10 transition-all duration-300 hover:bg-accent/8 hover:border-accent/20 hover:-translate-y-[3px] hover:shadow-md">
+                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span>{item}</span>
+                      </div>
+                    </StaggerItem>
                   ))}
-                </Accordion>
+                </StaggerContainer>
+                <p>
+                  Con 4 Web Lab il tuo sito diventa il tuo miglior biglietto da visita, disponibile 24 ore su 24.
+                </p>
               </AnimatedSection>
             </div>
           </div>
         </section>
+
 
         {/* CTA Section */}
         <section
