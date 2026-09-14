@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import TrustBar from "@/components/TrustBar";
 import AboutSection from "@/components/AboutSection";
 import UserRoutingSection from "@/components/UserRoutingSection";
+import ExtraServicesSection from "@/components/ExtraServicesSection";
 import HomeFaqPreview from "@/components/HomeFaqPreview";
 import ContactSection from "@/components/ContactSection";
 
@@ -197,6 +198,7 @@ const Index = () => {
         <Hero />
         <TrustBar />
         <UserRoutingSection />
+        <ExtraServicesSection />
         <AboutSection />
         <HomeFaqPreview />
         <ContactSection />
