@@ -15,6 +15,7 @@ import {
   Wrench,
   ChevronDown,
   MapPin,
+  TrendingDown,
   Image as ImageIcon,
 } from "lucide-react";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
@@ -271,9 +272,27 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
+        {/* Problema */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-8">
+                <div className="icon-box w-13 h-13">
+                  <TrendingDown className="w-6 h-6 text-accent-foreground" aria-hidden="true" />
+                </div>
+                <h2 className="heading-2">Il tuo prossimo cliente B2B ti sta già valutando online — cosa vede?</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <p className="body-large text-muted-foreground leading-relaxed">
+                  Oltre il 90% delle persone cerca un'azienda su Google prima di contattarla. Se il buyer trova un sito lento, vecchio o generico, il preventivo lo chiede al concorrente che ha investito nella propria presenza online — anche se il tuo prodotto è migliore. Non è più una questione di “avere un sito”: è la prima prova di affidabilità che dai prima ancora di rispondere al telefono.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
 
         {/* Perché un'azienda ha bisogno di un sito strutturato */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -326,7 +345,7 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Cosa realizziamo per le aziende */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -370,14 +389,14 @@ const SitiWebAziendali = () => {
         </section>
 
         {/* Siti multipagina e strutturati */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="icon-box w-13 h-13">
                   <TrendingUp className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="heading-2">Siti multipagina e strutturati</h3>
+                <h2 className="heading-2">Siti multipagina e strutturati</h2>
               </AnimatedSection>
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <AnimatedSection direction="left" className="order-2 md:order-1">
@@ -408,15 +427,80 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
-        {/* Tabella comparativa - AEO friendly */}
+        {/* Realizzazioni teaser */}
         <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-3">
+                <div className="icon-box w-13 h-13">
+                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Alcuni siti web aziendali realizzati</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <p className="text-muted-foreground mb-10 max-w-3xl">
+                  Una selezione di lavori pubblicati e concept dedicati a imprese italiane, tra settori tecnici, servizi e attività professionali.
+                </p>
+              </AnimatedSection>
+              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
+                {[
+                  {
+                    img: rbSncEdilizia,
+                    title: "R.B. s.n.c. – Cittadella (PD)",
+                    desc: "Sito web aziendale, SEO e Google Ads per impresa di rimozione eternit e rifacimento tetti.",
+                    to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto",
+                  },
+                  {
+                    img: metalmeccanicaImg,
+                    title: "Azienda metalmeccanica – concept",
+                    desc: "Concept di sito aziendale multipagina per PMI metalmeccanica: catalogo prodotti, certificazioni e area B2B.",
+                    to: "/realizzazioni/demo-metalmeccanica",
+                  },
+                  {
+                    img: fotovoltaicoImg,
+                    title: "Azienda fotovoltaico – concept",
+                    desc: "Concept di sito aziendale per impianti fotovoltaici e accumulo: case studies industriali e lead generation B2B.",
+                    to: "/realizzazioni/demo-fotovoltaico",
+                  },
+                ].map((item, i) => (
+                  <StaggerItem key={i}>
+                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
+                      <div className="aspect-[16/10] overflow-hidden bg-muted">
+                        <img
+                          src={item.img}
+                          alt={item.title}
+                          loading="lazy"
+                          width="640"
+                          height="400"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      </div>
+                      <div className="p-5">
+                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-sm text-muted-foreground">{item.desc}</p>
+                      </div>
+                    </Link>
+                  </StaggerItem>
+                ))}
+              </StaggerContainer>
+              <AnimatedSection delay={0.2} className="mt-8 text-center">
+                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
+                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
+                </Link>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Tabella comparativa - AEO friendly */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-6">
                 <div className="icon-box w-13 h-13">
                   <Layers className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h3 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h3>
+                <h2 className="heading-2">Sito vetrina, aziendale o corporate: differenze</h2>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground mb-8" delay={0.1}>
                 <p>
@@ -477,122 +561,8 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
-        {/* Realizzazioni teaser */}
-        <section className="section-padding bg-background">
-          <div className="container-section">
-            <div className="max-w-5xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-3">
-                <div className="icon-box w-13 h-13">
-                  <ImageIcon className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h3 className="heading-2">Alcuni siti web aziendali realizzati</h3>
-              </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <p className="text-muted-foreground mb-10 max-w-3xl">
-                  Una selezione di lavori pubblicati e concept dedicati a imprese italiane, tra settori tecnici, servizi e attività professionali.
-                </p>
-              </AnimatedSection>
-              <StaggerContainer className="grid md:grid-cols-3 gap-6" staggerDelay={0.1}>
-                {[
-                  {
-                    img: rbSncEdilizia,
-                    title: "R.B. s.n.c. – Cittadella (PD)",
-                    desc: "Sito web aziendale, SEO e Google Ads per impresa di rimozione eternit e rifacimento tetti.",
-                    to: "/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto",
-                  },
-                  {
-                    img: metalmeccanicaImg,
-                    title: "Azienda metalmeccanica – concept",
-                    desc: "Concept di sito aziendale multipagina per PMI metalmeccanica: catalogo prodotti, certificazioni e area B2B.",
-                    to: "/realizzazioni/demo-metalmeccanica",
-                  },
-                  {
-                    img: fotovoltaicoImg,
-                    title: "Azienda fotovoltaico – concept",
-                    desc: "Concept di sito aziendale per impianti fotovoltaici e accumulo: case studies industriali e lead generation B2B.",
-                    to: "/realizzazioni/demo-fotovoltaico",
-                  },
-                ].map((item, i) => (
-                  <StaggerItem key={i}>
-                    <Link to={item.to} className="block group card-elevated overflow-hidden p-0 h-full">
-                      <div className="aspect-[16/10] overflow-hidden bg-muted">
-                        <img
-                          src={item.img}
-                          alt={item.title}
-                          loading="lazy"
-                          width="640"
-                          height="400"
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                      </div>
-                      <div className="p-5">
-                        <h3 className="font-semibold text-foreground mb-1.5">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground">{item.desc}</p>
-                      </div>
-                    </Link>
-                  </StaggerItem>
-                ))}
-              </StaggerContainer>
-              <AnimatedSection delay={0.2} className="mt-8 text-center">
-                <Link to="/realizzazioni" className="inline-flex items-center gap-2 text-accent font-medium hover:underline">
-                  Vedi tutte le realizzazioni <ArrowRight className="w-4 h-4" />
-                </Link>
-              </AnimatedSection>
-            </div>
-          </div>
-        </section>
-
-        {/* Zone servite GEO */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
-          <div className="container-section">
-            <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
-                <div className="icon-box w-13 h-13">
-                  <Globe className="w-6 h-6 text-accent-foreground" />
-                </div>
-                <h2 className="heading-2">Zone servite: Veneto e tutta Italia</h2>
-              </AnimatedSection>
-              <AnimatedSection delay={0.05}>
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {[
-                    { name: "Padova", to: "/realizzazione-siti-web-padova" },
-                    { name: "Venezia" },
-                    { name: "Vicenza" },
-                    { name: "Verona" },
-                    { name: "Treviso" },
-                    { name: "Rovigo" },
-                    { name: "Belluno" },
-                  ].map((c) =>
-                    c.to ? (
-                      <Link
-                        key={c.name}
-                        to={c.to}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-sm text-foreground hover:bg-accent/15 transition-colors"
-                      >
-                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
-                      </Link>
-                    ) : (
-                      <span
-                        key={c.name}
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/8 border border-accent/15 text-sm text-foreground/80"
-                      >
-                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
-                      </span>
-                    )
-                  )}
-                </div>
-              </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p>
-                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti web aziendali per imprese di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto. Operiamo con <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">studi professionali</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">attività commerciali</Link> e PMI di settori tecnici e dei servizi.
-                </p>
-              </AnimatedSection>
-            </div>
-          </div>
-        </section>
-
         {/* Quanto costa un sito web aziendale */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-6">
@@ -678,6 +648,71 @@ const SitiWebAziendali = () => {
                   Richiedi un preventivo gratuito
                   <ArrowRight className="w-5 h-5" />
                 </button>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* Il nostro metodo */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
+                <div className="icon-box w-13 h-13">
+                  <Settings className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Il nostro metodo</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p className="mb-8">
+                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato, pensato per
+                  collaborazioni da remoto con aziende in tutta Italia. Il nostro processo garantisce trasparenza, tempi
+                  certi e qualità in ogni fase della realizzazione del sito web aziendale.
+                </p>
+                <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
+                  {[
+                    {
+                      step: "01",
+                      title: "Analisi e briefing",
+                      description:
+                        "Raccogliamo le informazioni sulla tua azienda, i tuoi obiettivi di business e il pubblico di riferimento attraverso un confronto strutturato.",
+                    },
+                    {
+                      step: "02",
+                      title: "Progettazione",
+                      description:
+                        "Definiamo la struttura del sito, l'architettura delle informazioni e il design in linea con l'identità aziendale e gli obiettivi di crescita.",
+                    },
+                    {
+                      step: "03",
+                      title: "Sviluppo",
+                      description:
+                        "Realizziamo il sito web aziendale con tecnologie moderne, garantendo velocità, sicurezza, responsività e ottimizzazione SEO.",
+                    },
+                    {
+                      step: "04",
+                      title: "Revisione e lancio",
+                      description:
+                        "Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo supporto per la gestione.",
+                    },
+                  ].map((item, index) => (
+                    <StaggerItem key={index}>
+                      <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
+                        <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
+                          {item.step}
+                        </div>
+                        <div>
+                          <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
+                          <p className="text-sm">{item.description}</p>
+                        </div>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+                <p>
+                  Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per aziende ovunque
+                  si trovino, mantenendo comunicazione costante e risultati misurabili.
+                </p>
               </AnimatedSection>
             </div>
           </div>
@@ -784,65 +819,49 @@ const SitiWebAziendali = () => {
           </div>
         </section>
 
-        {/* Il nostro metodo */}
+        {/* Zone servite GEO */}
         <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="icon-box w-13 h-13">
-                  <Settings className="w-6 h-6 text-accent-foreground" />
+                  <Globe className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Il nostro metodo</h2>
+                <h2 className="heading-2">Zone servite: Veneto e tutta Italia</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.05}>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {[
+                    { name: "Padova", to: "/realizzazione-siti-web-padova" },
+                    { name: "Venezia" },
+                    { name: "Vicenza" },
+                    { name: "Verona" },
+                    { name: "Treviso" },
+                    { name: "Rovigo" },
+                    { name: "Belluno" },
+                  ].map((c) =>
+                    c.to ? (
+                      <Link
+                        key={c.name}
+                        to={c.to}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/10 border border-accent/20 text-sm text-foreground hover:bg-accent/15 transition-colors"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </Link>
+                    ) : (
+                      <span
+                        key={c.name}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-accent/8 border border-accent/15 text-sm text-foreground/80"
+                      >
+                        <MapPin className="w-3.5 h-3.5 text-accent" /> {c.name}
+                      </span>
+                    )
+                  )}
+                </div>
               </AnimatedSection>
               <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-8">
-                  In 4 Web Lab abbiamo sviluppato un metodo di lavoro chiaro, organizzato e collaudato, pensato per
-                  collaborazioni da remoto con aziende in tutta Italia. Il nostro processo garantisce trasparenza, tempi
-                  certi e qualità in ogni fase della realizzazione del sito web aziendale.
-                </p>
-                <StaggerContainer className="space-y-5 mb-8" staggerDelay={0.1}>
-                  {[
-                    {
-                      step: "01",
-                      title: "Analisi e briefing",
-                      description:
-                        "Raccogliamo le informazioni sulla tua azienda, i tuoi obiettivi di business e il pubblico di riferimento attraverso un confronto strutturato.",
-                    },
-                    {
-                      step: "02",
-                      title: "Progettazione",
-                      description:
-                        "Definiamo la struttura del sito, l'architettura delle informazioni e il design in linea con l'identità aziendale e gli obiettivi di crescita.",
-                    },
-                    {
-                      step: "03",
-                      title: "Sviluppo",
-                      description:
-                        "Realizziamo il sito web aziendale con tecnologie moderne, garantendo velocità, sicurezza, responsività e ottimizzazione SEO.",
-                    },
-                    {
-                      step: "04",
-                      title: "Revisione e lancio",
-                      description:
-                        "Condividiamo il risultato per eventuali modifiche e, una volta approvato, pubblichiamo il sito e forniamo supporto per la gestione.",
-                    },
-                  ].map((item, index) => (
-                    <StaggerItem key={index}>
-                      <div className="flex gap-5 items-start p-6 rounded-2xl bg-accent/3 border border-accent/8 transition-all duration-400 hover:bg-accent/6 hover:border-accent/15">
-                        <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
-                          {item.step}
-                        </div>
-                        <div>
-                          <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
-                          <p className="text-sm">{item.description}</p>
-                        </div>
-                      </div>
-                    </StaggerItem>
-                  ))}
-                </StaggerContainer>
                 <p>
-                  Questo approccio ci permette di seguire con efficacia la realizzazione di siti web per aziende ovunque
-                  si trovino, mantenendo comunicazione costante e risultati misurabili.
+                  La sede operativa è a <strong>Legnaro (PD)</strong>, ma realizziamo siti web aziendali per imprese di tutto il Veneto e di qualsiasi altra regione italiana, con un metodo interamente da remoto. Operiamo con <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">studi professionali</Link>, <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">attività commerciali</Link> e PMI di settori tecnici e dei servizi.
                 </p>
               </AnimatedSection>
             </div>

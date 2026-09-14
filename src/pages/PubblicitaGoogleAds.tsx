@@ -19,6 +19,8 @@ import {
   Store,
   UserCheck,
   Building2,
+  Clock,
+  Award,
 } from "lucide-react";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -275,13 +277,34 @@ const PubblicitaGoogleAds = () => {
           </div>
         </section>
 
-
-        {/* AEO Definition */}
+        {/* Problema */}
         <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
+                <div className="icon-box w-13 h-13">
+                  <Clock className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Mentre il tuo sito scala la classifica organica, i concorrenti sono già in cima — a pagamento</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p>
+                  La SEO richiede tempo: settimane o mesi prima di scalare le prime posizioni su Google. Nel frattempo,
+                  chi attiva una campagna ADS occupa gli spazi più visibili della pagina dei risultati, intercetta la
+                  domanda esistente e genera contatti da subito. Ogni giorno senza una campagna attiva è un cliente che
+                  clicca sull'annuncio del concorrente.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* AEO Definition */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
               <AnimatedSection className="p-6 md:p-8 rounded-2xl bg-accent/5 border border-accent/15">
-                <h3 className="font-bold text-foreground text-xl mb-3">Cos'è Google ADS e come funziona</h3>
+                <h2 className="heading-2 mb-3">Cos'è Google ADS e come funziona</h2>
                 <p className="aeo-definition text-muted-foreground leading-relaxed">
                   Google ADS (ex Google AdWords) è la piattaforma pubblicitaria di Google che permette a qualsiasi
                   attività di mostrare annunci in cima ai risultati di ricerca, su YouTube, Gmail e su milioni di
@@ -294,7 +317,7 @@ const PubblicitaGoogleAds = () => {
         </section>
 
         {/* Perché fare pubblicità */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -359,7 +382,7 @@ const PubblicitaGoogleAds = () => {
         </section>
 
         {/* Per chi è il servizio */}
-        <section className="section-padding bg-background">
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -428,7 +451,7 @@ const PubblicitaGoogleAds = () => {
         </section>
 
         {/* Tipi di campagne */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-5xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-10">
@@ -460,52 +483,38 @@ const PubblicitaGoogleAds = () => {
           </div>
         </section>
 
-        {/* Metodo */}
-        <section className="section-padding bg-background">
+        {/* Prova/caso reale */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
-            <div className="max-w-5xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-10">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-6">
                 <div className="icon-box w-13 h-13">
-                  <BarChart3 className="w-6 h-6 text-accent-foreground" />
+                  <Award className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Il nostro metodo in 5 step</h2>
+                <h2 className="heading-2">Non solo promesse: una campagna Ads reale, attiva oggi</h2>
               </AnimatedSection>
-              <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 items-start">
-                <AnimatedSection direction="left">
-                  <img
-                    src={methodImg}
-                    alt="Workflow gestione campagne Google ADS in 5 step"
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    decoding="async"
-                    className="rounded-2xl shadow-lg w-full h-auto"
-                  />
-                </AnimatedSection>
-                <AnimatedSection direction="right">
-                  <StaggerContainer className="space-y-4" staggerDelay={0.08}>
-                    {howToSteps.map((s) => (
-                      <StaggerItem key={s.n}>
-                        <div className="flex gap-5 items-start p-5 rounded-2xl bg-accent/3 border border-accent/8 hover:bg-accent/6 hover:border-accent/15 transition-all duration-400">
-                          <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
-                            {s.n}
-                          </div>
-                          <div>
-                            <h3 className="font-bold text-foreground mb-1.5">{s.title}</h3>
-                            <p className="text-sm text-muted-foreground">{s.desc}</p>
-                          </div>
-                        </div>
-                      </StaggerItem>
-                    ))}
-                  </StaggerContainer>
-                </AnimatedSection>
-              </div>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p>
+                  Per R.B. s.n.c., impresa di Cittadella specializzata in rimozione amianto e rifacimento coperture,
+                  abbiamo curato restyling del sito, ottimizzazione SEO e campagna Google ADS tuttora attiva — un
+                  esempio concreto di come lavoriamo, non un caso studio isolato.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.15}>
+                <Link
+                  to="/realizzazioni/realizzazione-sito-web-edilizia-rb-snc-veneto"
+                  className="inline-flex items-center gap-2 text-accent hover:underline font-medium"
+                >
+                  Scopri il progetto R.B. s.n.c.
+                  <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                </Link>
+              </AnimatedSection>
             </div>
           </div>
         </section>
 
         {/* Prezzi & consulenza */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-3xl mx-auto text-center">
               <AnimatedSection>
@@ -552,43 +561,52 @@ const PubblicitaGoogleAds = () => {
           </div>
         </section>
 
-        {/* GEO: Veneto e Italia */}
-        <section className="section-padding bg-background">
+        {/* Metodo */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
           <div className="container-section">
-            <div className="max-w-4xl mx-auto">
-              <AnimatedSection className="flex items-center gap-4 mb-8">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-10">
                 <div className="icon-box w-13 h-13">
-                  <MapPin className="w-6 h-6 text-accent-foreground" />
+                  <BarChart3 className="w-6 h-6 text-accent-foreground" />
                 </div>
-                <h2 className="heading-2">Google ADS in Veneto e in tutta Italia</h2>
+                <h2 className="heading-2">Il nostro metodo in 5 step</h2>
               </AnimatedSection>
-              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
-                <p className="mb-4">
-                  La nostra sede operativa è a <strong>Legnaro (PD)</strong>, nel cuore del Veneto. Gestiamo campagne
-                  Google ADS per attività in tutta la regione — Padova, Abano Terme, Albignasego, Selvazzano Dentro,
-                  Vigonza, Cadoneghe, Rubano, Este, Monselice, Cittadella, Piove di Sacco, Venezia, Vicenza, Verona,
-                  Treviso, Rovigo, Belluno — e in <strong>qualsiasi altra regione d'Italia</strong>.
-                </p>
-                <p>
-                  Lavoriamo al 100% da remoto con un metodo collaudato di confronti via call, email e WhatsApp:
-                  ricevi lo stesso livello di servizio ovunque tu sia. Se la tua attività è anche a Padova, vedi la
-                  nostra pagina dedicata alla{" "}
-                  <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
-                    realizzazione siti web a Padova
-                  </Link>{" "}
-                  e al{" "}
-                  <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">
-                    posizionamento su Google e AI
-                  </Link>
-                  .
-                </p>
-              </AnimatedSection>
+              <div className="grid md:grid-cols-[1fr_1.2fr] gap-12 items-start">
+                <AnimatedSection direction="left">
+                  <img
+                    src={methodImg}
+                    alt="Workflow gestione campagne Google ADS in 5 step"
+                    width={1024}
+                    height={1024}
+                    loading="lazy"
+                    decoding="async"
+                    className="rounded-2xl shadow-lg w-full h-auto"
+                  />
+                </AnimatedSection>
+                <AnimatedSection direction="right">
+                  <StaggerContainer className="space-y-4" staggerDelay={0.08}>
+                    {howToSteps.map((s) => (
+                      <StaggerItem key={s.n}>
+                        <div className="flex gap-5 items-start p-5 rounded-2xl bg-accent/3 border border-accent/8 hover:bg-accent/6 hover:border-accent/15 transition-all duration-400">
+                          <div className="icon-box w-12 h-12 rounded-full flex-shrink-0 text-sm font-bold text-accent-foreground">
+                            {s.n}
+                          </div>
+                          <div>
+                            <h3 className="font-bold text-foreground mb-1.5">{s.title}</h3>
+                            <p className="text-sm text-muted-foreground">{s.desc}</p>
+                          </div>
+                        </div>
+                      </StaggerItem>
+                    ))}
+                  </StaggerContainer>
+                </AnimatedSection>
+              </div>
             </div>
           </div>
         </section>
 
         {/* FAQ */}
-        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+        <section className="section-padding bg-background">
           <div className="container-section">
             <div className="max-w-3xl mx-auto">
               <AnimatedSection className="flex items-center gap-4 mb-8">
@@ -627,6 +645,41 @@ const PubblicitaGoogleAds = () => {
                     Vedi la FAQ generale
                   </Link>{" "}
                   oppure scrivici.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* GEO: Veneto e Italia */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-8">
+                <div className="icon-box w-13 h-13">
+                  <MapPin className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Google ADS in Veneto e in tutta Italia</h2>
+              </AnimatedSection>
+              <AnimatedSection className="prose prose-lg max-w-none text-muted-foreground" delay={0.1}>
+                <p className="mb-4">
+                  La nostra sede operativa è a <strong>Legnaro (PD)</strong>, nel cuore del Veneto. Gestiamo campagne
+                  Google ADS per attività in tutta la regione — Padova, Abano Terme, Albignasego, Selvazzano Dentro,
+                  Vigonza, Cadoneghe, Rubano, Este, Monselice, Cittadella, Piove di Sacco, Venezia, Vicenza, Verona,
+                  Treviso, Rovigo, Belluno — e in <strong>qualsiasi altra regione d'Italia</strong>.
+                </p>
+                <p>
+                  Lavoriamo al 100% da remoto con un metodo collaudato di confronti via call, email e WhatsApp:
+                  ricevi lo stesso livello di servizio ovunque tu sia. Se la tua attività è anche a Padova, vedi la
+                  nostra pagina dedicata alla{" "}
+                  <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">
+                    realizzazione siti web a Padova
+                  </Link>{" "}
+                  e al{" "}
+                  <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">
+                    posizionamento su Google e AI
+                  </Link>
+                  .
                 </p>
               </AnimatedSection>
             </div>
