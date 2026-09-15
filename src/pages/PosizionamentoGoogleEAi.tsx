@@ -20,7 +20,10 @@ import {
   HelpCircle,
   Lightbulb,
   MessageCircleQuestion,
+  Euro,
+  Check,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const PAGE_URL = "https://4weblab.it/posizionamento-google-e-ai";
 const PAGE_TITLE = "Posizionamento SEO e AEO Padova | Google, ChatGPT & Gemini";
@@ -106,9 +109,9 @@ const faqItems: { question: string; answerText: string; answerNode: React.ReactN
   {
     question: "Quanto costa il servizio SEO, AEO e GEO?",
     answerText:
-      "Il costo dipende dallo stato del sito, dalla competitività del settore e dagli obiettivi. Lavoriamo a progetto e non con abbonamenti vincolanti. Dopo un primo confronto inviamo un preventivo chiaro e senza impegno.",
+      "I nostri piani partono da 249€/mese per l'ottimizzazione base di un sito già online, fino a 649€/mese per una strategia completa con contenuti e ottimizzazione per gli assistenti IA (ChatGPT, Perplexity, Gemini). Per esigenze specifiche prepariamo un preventivo personalizzato.",
     answerNode:
-      "Il costo dipende dallo stato del sito, dalla competitività del settore e dagli obiettivi. Lavoriamo a progetto e non con abbonamenti vincolanti. Dopo un primo confronto inviamo un preventivo chiaro e senza impegno.",
+      "I nostri piani partono da 249€/mese per l'ottimizzazione base di un sito già online, fino a 649€/mese per una strategia completa con contenuti e ottimizzazione per gli assistenti IA (ChatGPT, Perplexity, Gemini). Per esigenze specifiche prepariamo un preventivo personalizzato.",
   },
 ];
 
@@ -157,12 +160,13 @@ const PosizionamentoGoogleEAi = () => {
             isPartOf: { "@id": "https://4weblab.it/#website" },
             provider: { "@id": "https://4weblab.it/#business" },
             offers: {
-              "@type": "Offer",
+              "@type": "AggregateOffer",
               url: PAGE_URL,
-              availability: "https://schema.org/InStock",
               priceCurrency: "EUR",
-              price: "0",
-              description: "Preventivo personalizzato gratuito",
+              lowPrice: "249",
+              highPrice: "649",
+              offerCount: "3",
+              availability: "https://schema.org/InStock",
             },
           })}
         </script>
@@ -561,6 +565,127 @@ const PosizionamentoGoogleEAi = () => {
             </div>
           </div>
         </section>
+
+        {/* Prezzi SEO, AEO e GEO */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-5xl mx-auto">
+              <AnimatedSection className="flex items-center gap-4 mb-8">
+                <div className="icon-box w-13 h-13">
+                  <Euro className="w-6 h-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Quanto costa il posizionamento SEO, AEO e GEO</h2>
+              </AnimatedSection>
+              <AnimatedSection className="text-muted-foreground mb-12" delay={0.1}>
+                <p>
+                  Lavoriamo con un canone mensile, non con progetti spot: la visibilità su Google e sugli
+                  assistenti IA si costruisce e si mantiene nel tempo. Nessun vincolo oltre il periodo minimo
+                  indicato.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <div className="grid md:grid-cols-2 gap-8 items-start">
+                  {[
+                    {
+                      badge: "INGRESSO",
+                      price: "€249",
+                      terms: "/mese · IVA esclusa · impegno minimo 3 mesi",
+                      subtitle:
+                        "Pensato per negozi e attività locali che vogliono mantenere e migliorare la visibilità di un sito già online.",
+                      features: [
+                        "Audit tecnico iniziale del sito",
+                        "Ottimizzazione on-page (title, meta description, H1-H3, alt text immagini)",
+                        "Ottimizzazione Google Business Profile",
+                        "Schema dati locale (LocalBusiness)",
+                        "Monitoraggio 10 parole chiave",
+                        "Report mensile essenziale",
+                      ],
+                    },
+                    {
+                      badge: "COMPLETO",
+                      price: "€649",
+                      terms: "/mese · IVA esclusa · impegno minimo 3-6 mesi",
+                      subtitle:
+                        "Per professionisti e aziende che affrontano una concorrenza reale sulle parole chiave e vogliono essere citati anche dagli assistenti IA.",
+                      features: [
+                        "Tutto quanto incluso nel piano Base",
+                        "Ottimizzazione avanzata Core Web Vitals",
+                        "2 articoli al mese ottimizzati SEO, AEO e GEO",
+                        "Schema avanzato basato su entità (Service, Product, Review)",
+                        "Contenuti strutturati per la citazione da ChatGPT, Perplexity e Gemini",
+                        "Monitoraggio menzioni sugli assistenti IA",
+                        "Monitoraggio di oltre 30 parole chiave",
+                        "Analisi competitor trimestrale",
+                        "Report mensile con dashboard KPI e call mensile",
+                      ],
+                    },
+                  ].map((plan, i) => (
+                    <div
+                      key={i}
+                      className="card-glass p-8 md:p-10 relative overflow-hidden h-full flex flex-col"
+                      style={{
+                        border: "1px solid hsl(210 30% 88%)",
+                        boxShadow:
+                          "0 8px 32px -4px hsl(210 73% 15% / 0.12), 0 2px 8px -2px hsl(210 73% 15% / 0.07)",
+                      }}
+                    >
+                      <div
+                        className="absolute top-0 right-0 px-5 py-1.5 rounded-bl-2xl text-xs font-bold tracking-wide"
+                        style={{ background: "var(--gradient-accent)", color: "white" }}
+                      >
+                        {plan.badge}
+                      </div>
+                      <div className="text-center mb-8 mt-6">
+                        <span className="text-sm text-muted-foreground block mb-2">a partire da</span>
+                        <span className="text-5xl font-serif font-bold text-foreground">{plan.price}</span>
+                        <p className="text-muted-foreground text-sm mt-2">{plan.terms}</p>
+                        <p className="text-muted-foreground text-sm mt-4">{plan.subtitle}</p>
+                      </div>
+                      <ul className="space-y-4 mb-8 flex-1" role="list">
+                        {plan.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <span className="flex-shrink-0 w-5 h-5 rounded-full bg-accent/15 flex items-center justify-center mt-0.5">
+                              <Check className="w-3 h-3 text-accent" aria-hidden="true" />
+                            </span>
+                            <span className="text-foreground text-sm">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]">
+                        <Button
+                          size="lg"
+                          className="w-full rounded-2xl h-13 text-base font-semibold"
+                          onClick={handleContactClick}
+                        >
+                          Richiedi un preventivo gratuito
+                        </Button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="mt-8">
+                  <div className="card-glass hover:-translate-y-1.5 transition-all duration-400 text-center p-10 border border-border/50 shadow-[var(--shadow-md)] hover:shadow-[var(--shadow-card-hover)]">
+                    <span className="inline-block text-xs font-semibold uppercase tracking-widest text-accent mb-4">
+                      Avanzato
+                    </span>
+                    <div className="icon-box w-16 h-16 mx-auto mb-5">
+                      <Wrench className="w-7 h-7 text-accent-foreground" aria-hidden="true" />
+                    </div>
+                    <h3 className="font-bold text-lg text-foreground mb-3">Progetto su misura</h3>
+                    <p className="text-2xl font-serif font-bold text-foreground mb-3">Preventivo da definire</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      Per attività multi-sede, e-commerce o settori ad alta competizione che richiedono una
+                      strategia SEO, AEO e GEO dedicata.
+                    </p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
 
         {/* FAQ */}
         <section
