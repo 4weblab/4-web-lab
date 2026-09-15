@@ -21,7 +21,7 @@ import {
   Wrench,
   Image as ImageIcon,
 } from "lucide-react";
-import { motion } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";
@@ -527,7 +527,7 @@ const SitiWebProfessionisti = () => {
                         <span className="font-semibold text-accent">6 mesi di Hosting inclusi nel prezzo*</span>
                       </li>
                     </ul>
-                    <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
+                    <div className="transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]">
                       <Button
                         size="lg"
                         className="w-full rounded-2xl h-13 text-base font-semibold"
@@ -537,7 +537,7 @@ const SitiWebProfessionisti = () => {
                       >
                         Richiedi un preventivo gratuito
                       </Button>
-                    </motion.div>
+                    </div>
                     <p className="text-xs text-muted-foreground text-center mt-3">
                       *Al termine dei 6 mesi, 99€ all'anno IVA esclusa
                     </p>
