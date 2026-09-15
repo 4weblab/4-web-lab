@@ -36,7 +36,23 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 
-const faqItems = [
+const faqItems: { q: string; a: string; aNode?: React.ReactNode }[] = [
+  {
+    q: "Quanto costa un sito web per liberi professionisti?",
+    a: "Il pacchetto per liberi professionisti parte da 990€ una tantum, IVA esclusa: include 3 pagine, design su misura e ottimizzazione SEO di base, con possibilità di espansione su richiesta. Il prezzo finale dipende da funzionalità e numero di pagine richieste — abbiamo riassunto cosa incide davvero sul costo in questo approfondimento.",
+    aNode: (
+      <>
+        Il pacchetto per liberi professionisti parte da 990€ una tantum, IVA esclusa: include 3 pagine,
+        design su misura e ottimizzazione SEO di base, con possibilità di espansione su richiesta. Il prezzo
+        finale dipende da funzionalità e numero di pagine richieste — abbiamo riassunto cosa incide davvero
+        sul costo in{" "}
+        <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">
+          questo approfondimento
+        </Link>
+        .
+      </>
+    ),
+  },
   {
     q: "Quanto tempo occorre per la realizzazione del sito?",
     a: "Mediamente consegniamo il sito web pronto e collaudato entro 2-4 settimane dalla fase di analisi e ricezione dei materiali.",
@@ -133,7 +149,7 @@ const SitiWebProfessionisti = () => {
                 ]}
               />
               <h1 className="heading-1 mb-8 font-extrabold tracking-tight text-primary-foreground">
-                Siti Web per Professionisti e Studi Professionali
+                Siti Web per Liberi Professionisti e Studi Professionali
               </h1>
               <p className="body-large text-primary-foreground/80 mb-8 max-w-2xl mx-auto text-balance">
                 Il sito che ti presenta prima ancora del primo appuntamento: autorevole, veloce, pensato per
@@ -702,7 +718,7 @@ const SitiWebProfessionisti = () => {
                         {item.q}
                       </AccordionTrigger>
                       <AccordionContent className="text-muted-foreground">
-                        {item.a}
+                        {item.aNode ?? item.a}
                       </AccordionContent>
                     </AccordionItem>
                   ))}
