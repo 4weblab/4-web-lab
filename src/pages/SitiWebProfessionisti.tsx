@@ -21,7 +21,7 @@ import {
   Wrench,
   Image as ImageIcon,
 } from "lucide-react";
-import { motion } from "framer-motion";
+
 import { Button } from "@/components/ui/button";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import ContactFormWeb3Forms from "@/components/ContactFormWeb3Forms";

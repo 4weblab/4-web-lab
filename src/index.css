@@ -367,11 +367,33 @@
     @apply fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full transition-all duration-300;
     background: #25D366;
     box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+    animation: whatsapp-pop-in 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.5s both;
   }
 
   .whatsapp-float:hover {
     @apply scale-110;
     box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+  }
+
+  .whatsapp-float:active {
+    @apply scale-95;
+  }
+
+  @keyframes whatsapp-pop-in {
+    from {
+      transform: scale(0);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp-float {
+      animation: none;
+    }
   }
 
   /* Section divider – refined */
