@@ -95,7 +95,7 @@ const steps = [
 
 const faqs = [
   {
-    q: "Quanto costa iniziare una campagna su ChatGPT Ads?",
+    q: "Quanto costa una campagna ChatGPT?",
     a: "Il budget pubblicitario viene definito in base ai tuoi obiettivi e al settore. Raccomandiamo un test iniziale di 2-3 mesi per raccogliere dati significativi.",
   },
   {
