@@ -180,11 +180,14 @@ const ChatGptAds = () => {
                   url: PAGE_URL,
                   availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
+                  price: "299",
                   priceSpecification: {
-                    "@type": "PriceSpecification",
+                    "@type": "UnitPriceSpecification",
                     priceCurrency: "EUR",
+                    price: "299",
+                    unitText: "MONTH",
                     description:
-                      "Preventivo personalizzato in base a obiettivi, settore e budget pubblicitario. Analisi di fattibilità iniziale gratuita.",
+                      "Canone di gestione mensile. Il budget pubblicitario versato a OpenAI è a parte e non è incluso.",
                   },
                 },
               },
