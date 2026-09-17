@@ -97,7 +97,7 @@ const steps = [
 const faqs = [
   {
     q: "Quanto costa una campagna ChatGPT?",
-    a: "Il budget pubblicitario viene definito in base ai tuoi obiettivi e al settore. Raccomandiamo un test iniziale di 2-3 mesi per raccogliere dati significativi.",
+    a: "Il costo è composto da due voci separate: il canone di gestione a 299€/mese e il budget pubblicitario versato direttamente a OpenAI, variabile in base a obiettivi e settore. Raccomandiamo un test iniziale di 2-3 mesi per raccogliere dati significativi.",
   },
   {
     q: "È adatto alla mia azienda?",
