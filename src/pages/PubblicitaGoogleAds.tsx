@@ -35,7 +35,7 @@ const PAGE_URL = "https://4weblab.it/pubblicita-google-ads";
 const faqs = [
   {
     q: "Quanto costa fare pubblicità su Google?",
-    a: "Il costo della pubblicità su Google ADS è composto da due voci: il budget media speso direttamente su Google (gestito dal cliente) e il compenso per la gestione professionale delle campagne. Non esiste un listino fisso perché il budget ideale dipende da settore, obiettivi, concorrenza e area geografica: per questo offriamo una consulenza iniziale gratuita per definire la strategia più sostenibile.",
+    a: "Il costo della pubblicità su Google ADS è composto da due voci separate: il compenso per la gestione professionale delle campagne, con canone fisso da 299€/mese, e il budget media speso direttamente su Google (gestito dal cliente, variabile in base a settore, obiettivi e concorrenza). Offriamo una consulenza iniziale gratuita per definire la strategia più sostenibile.",
   },
   {
     q: "In quanto tempo si vedono i risultati con Google ADS?",
