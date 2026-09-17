@@ -211,6 +211,18 @@ const ChatGptAds = () => {
                   })),
                 ],
               },
+              {
+                "@type": "HowTo",
+                "@id": `${PAGE_URL}#howto`,
+                name: "Come strutturiamo una campagna ChatGPT Ads",
+                description: "Il metodo in 4 fasi di 4 Web Lab per lanciare campagne ChatGPT Ads efficaci.",
+                step: steps.map((s, i) => ({
+                  "@type": "HowToStep",
+                  position: i + 1,
+                  name: s.title,
+                  text: s.desc,
+                })),
+              },
             ],
           })}
         </script>
