@@ -100,7 +100,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/chatgpt-ads" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
-                  ChatGPT Ads
+                  Campagne ChatGPT
                 </Link>
               </li>
               <li>

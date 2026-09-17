@@ -21,10 +21,10 @@ const services = [
   },
   {
     icon: MessageCircle,
-    title: "ChatGPT ADS",
+    title: "Campagne ChatGPT Ads",
     lead: "Il tuo brand, dentro la conversazione.",
     body: "Compari mentre i clienti chiedono consiglio direttamente all'IA — un canale nuovo, ancora senza concorrenza.",
-    linkLabel: "Scopri ChatGPT ADS",
+    linkLabel: "Scopri le Campagne ChatGPT",
     to: "/chatgpt-ads",
   },
 ];

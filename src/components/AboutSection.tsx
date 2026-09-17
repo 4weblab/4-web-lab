@@ -77,7 +77,7 @@ const AboutSection = () => {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
             </span>
-            Scopri il nuovo servizio di pubblicità in Chat GPT
+            Scopri come lanciare campagne ChatGPT per la tua azienda
           </Link>
         </AnimatedSection>
 
