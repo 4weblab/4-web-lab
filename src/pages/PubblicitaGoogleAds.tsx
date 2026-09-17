@@ -533,6 +533,39 @@ const PubblicitaGoogleAds = () => {
                   trasparente con stima del budget media e del compenso di gestione.
                 </p>
               </AnimatedSection>
+              <AnimatedSection delay={0.12} className="mb-10">
+                <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                  {[
+                    {
+                      badge: "BASE",
+                      price: "€299",
+                      terms: "/mese · IVA esclusa · gestione mensile per tutta la durata della campagna",
+                      desc: "Un canale (Search), setup, ottimizzazione e report mensile.",
+                    },
+                    {
+                      badge: "PREMIUM",
+                      price: "€549",
+                      terms: "/mese · IVA esclusa · gestione mensile per tutta la durata della campagna",
+                      desc: "Multi-campagna (Search + Performance Max + Remarketing), ottimizzazione più frequente e report avanzato.",
+                    },
+                  ].map((plan, i) => (
+                    <div key={i} className="card-glass p-6 text-left">
+                      <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full px-3 py-1 mb-3">
+                        {plan.badge}
+                      </span>
+                      <div className="flex items-baseline gap-1 mb-1">
+                        <span className="text-3xl font-extrabold text-foreground">{plan.price}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mb-3">{plan.terms}</p>
+                      <p className="text-sm text-muted-foreground">{plan.desc}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto mt-6">
+                  Questo è il compenso per la gestione professionale della campagna. Il budget pubblicitario versato
+                  direttamente a Google è a parte e non è incluso nel canone di gestione.
+                </p>
+              </AnimatedSection>
               <AnimatedSection delay={0.15}>
                 <StaggerContainer className="grid sm:grid-cols-2 gap-4 text-left mb-10" staggerDelay={0.08}>
                   {[
