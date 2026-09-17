@@ -164,17 +164,25 @@ const ChatGptAds = () => {
                 "@type": "Service",
                 "@id": `${PAGE_URL}/#service`,
                 name: "Gestione Campagne ChatGPT Ads",
-                provider: {
-                  "@type": "LocalBusiness",
-                  name: "4 Web Lab",
-                  url: "https://4weblab.it",
-                },
+                provider: { "@id": "https://4weblab.it/#business" },
                 description:
                   "Servizio specializzato di configurazione, ottimizzazione e gestione campagne pubblicitarie su ChatGPT Ads per aziende e professionisti.",
                 areaServed: "IT",
                 serviceType: "AI Advertising & Digital Marketing",
                 url: PAGE_URL,
                 inLanguage: "it-IT",
+                offers: {
+                  "@type": "Offer",
+                  url: PAGE_URL,
+                  availability: "https://schema.org/InStock",
+                  priceCurrency: "EUR",
+                  priceSpecification: {
+                    "@type": "PriceSpecification",
+                    priceCurrency: "EUR",
+                    description:
+                      "Preventivo personalizzato in base a obiettivi, settore e budget pubblicitario. Analisi di fattibilità iniziale gratuita.",
+                  },
+                },
               },
               {
                 "@type": "FAQPage",
