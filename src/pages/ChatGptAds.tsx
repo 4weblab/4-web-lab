@@ -360,6 +360,23 @@ const ChatGptAds = () => {
           </div>
         </section>
 
+        {/* SECTION: Prova */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center">
+              <AnimatedSection>
+                <h2 className="heading-2 mb-4">Tra le prime agenzie in Italia su questo canale</h2>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  ChatGPT Ads è una piattaforma pubblicitaria appena lanciata: pochissime agenzie in Italia hanno già
+                  competenze operative per gestirla. 4 Web Lab segue da vicino l'evoluzione degli Ads Manager basati su
+                  IA conversazionale, applicando lo stesso approccio dati-driven usato per Google ADS ai nuovi canali
+                  come questo.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 3: Scenari d'uso */}
         <section className="section-padding bg-background">
           <div className="container-section">
