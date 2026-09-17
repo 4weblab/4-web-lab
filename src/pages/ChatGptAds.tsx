@@ -106,6 +106,10 @@ const faqs = [
     q: "Come tracciamo i risultati e le conversioni?",
     a: "Configuriamo il tracciamento avanzato delle conversioni per monitorare contatti, lead e vendite generate dalle interazioni su ChatGPT.",
   },
+  {
+    q: "Come si avvia una campagna ChatGPT Ads?",
+    a: "Si parte con un'analisi di fattibilità per il tuo settore, poi si configura l'account ChatGPT Ads Manager, si scrivono i messaggi in formato conversazionale e si attiva il tracciamento delle conversioni.",
+  },
 ];
 
 const ChatGptAds = () => {
