@@ -95,7 +95,7 @@ const steps = [
 
 const faqs = [
   {
-    q: "Quanto costa iniziare una campagna su ChatGPT Ads?",
+    q: "Quanto costa una campagna ChatGPT?",
     a: "Il budget pubblicitario viene definito in base ai tuoi obiettivi e al settore. Raccomandiamo un test iniziale di 2-3 mesi per raccogliere dati significativi.",
   },
   {
@@ -105,6 +105,10 @@ const faqs = [
   {
     q: "Come tracciamo i risultati e le conversioni?",
     a: "Configuriamo il tracciamento avanzato delle conversioni per monitorare contatti, lead e vendite generate dalle interazioni su ChatGPT.",
+  },
+  {
+    q: "Come si avvia una campagna ChatGPT Ads?",
+    a: "Si parte con un'analisi di fattibilità per il tuo settore, poi si configura l'account ChatGPT Ads Manager, si scrivono i messaggi in formato conversazionale e si attiva il tracciamento delle conversioni.",
   },
 ];
 
@@ -164,17 +168,28 @@ const ChatGptAds = () => {
                 "@type": "Service",
                 "@id": `${PAGE_URL}/#service`,
                 name: "Gestione Campagne ChatGPT Ads",
-                provider: {
-                  "@type": "LocalBusiness",
-                  name: "4 Web Lab",
-                  url: "https://4weblab.it",
-                },
+                provider: { "@id": "https://4weblab.it/#business" },
                 description:
                   "Servizio specializzato di configurazione, ottimizzazione e gestione campagne pubblicitarie su ChatGPT Ads per aziende e professionisti.",
                 areaServed: "IT",
                 serviceType: "AI Advertising & Digital Marketing",
                 url: PAGE_URL,
                 inLanguage: "it-IT",
+                offers: {
+                  "@type": "Offer",
+                  url: PAGE_URL,
+                  availability: "https://schema.org/InStock",
+                  priceCurrency: "EUR",
+                  price: "299",
+                  priceSpecification: {
+                    "@type": "UnitPriceSpecification",
+                    priceCurrency: "EUR",
+                    price: "299",
+                    unitText: "MONTH",
+                    description:
+                      "Canone di gestione mensile. Il budget pubblicitario versato a OpenAI è a parte e non è incluso.",
+                  },
+                },
               },
               {
                 "@type": "FAQPage",
@@ -202,6 +217,18 @@ const ChatGptAds = () => {
                     acceptedAnswer: { "@type": "Answer", text: f.a },
                   })),
                 ],
+              },
+              {
+                "@type": "HowTo",
+                "@id": `${PAGE_URL}#howto`,
+                name: "Come strutturiamo una campagna ChatGPT Ads",
+                description: "Il metodo in 4 fasi di 4 Web Lab per lanciare campagne ChatGPT Ads efficaci.",
+                step: steps.map((s, i) => ({
+                  "@type": "HowToStep",
+                  position: i + 1,
+                  name: s.title,
+                  text: s.desc,
+                })),
               },
             ],
           })}
@@ -332,6 +359,50 @@ const ChatGptAds = () => {
                   </StaggerItem>
                 ))}
               </StaggerContainer>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION: Prova */}
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="max-w-4xl mx-auto text-center">
+              <AnimatedSection>
+                <h2 className="heading-2 mb-4">Tra le prime agenzie in Italia su questo canale</h2>
+                <p className="text-muted-foreground leading-relaxed text-lg">
+                  ChatGPT Ads è una piattaforma pubblicitaria appena lanciata: pochissime agenzie in Italia hanno già
+                  competenze operative per gestirla. 4 Web Lab segue da vicino l'evoluzione degli Ads Manager basati su
+                  IA conversazionale, applicando lo stesso approccio dati-driven usato per Google ADS ai nuovi canali
+                  come questo.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        {/* SECTION: Prezzo */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-2xl mx-auto text-center">
+              <AnimatedSection>
+                <h2 className="heading-2 mb-6">Quanto costa la gestione ChatGPT Ads</h2>
+                <div className="card-glass p-8 inline-block text-left mb-6">
+                  <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full px-3 py-1 mb-3">
+                    PIANO UNICO
+                  </span>
+                  <div className="flex items-baseline gap-1 mb-1">
+                    <span className="text-3xl font-extrabold text-foreground">€299</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    /mese · IVA esclusa · gestione mensile per tutta la durata della campagna
+                  </p>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Questo è il compenso per la gestione professionale della campagna: setup, copywriting conversazionale,
+                  monitoraggio e ottimizzazione. Il budget pubblicitario versato direttamente a OpenAI è a parte e non è
+                  incluso nel canone di gestione.
+                </p>
+              </AnimatedSection>
             </div>
           </div>
         </section>

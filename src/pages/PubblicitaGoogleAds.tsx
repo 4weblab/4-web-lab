@@ -35,7 +35,7 @@ const PAGE_URL = "https://4weblab.it/pubblicita-google-ads";
 const faqs = [
   {
     q: "Quanto costa fare pubblicità su Google?",
-    a: "Il costo della pubblicità su Google ADS è composto da due voci: il budget media speso direttamente su Google (gestito dal cliente) e il compenso per la gestione professionale delle campagne. Non esiste un listino fisso perché il budget ideale dipende da settore, obiettivi, concorrenza e area geografica: per questo offriamo una consulenza iniziale gratuita per definire la strategia più sostenibile.",
+    a: "Il costo della pubblicità su Google ADS è composto da due voci separate: il compenso per la gestione professionale delle campagne, con canone fisso da 299€/mese, e il budget media speso direttamente su Google (gestito dal cliente, variabile in base a settore, obiettivi e concorrenza). Offriamo una consulenza iniziale gratuita per definire la strategia più sostenibile.",
   },
   {
     q: "In quanto tempo si vedono i risultati con Google ADS?",
@@ -184,16 +184,13 @@ const PubblicitaGoogleAds = () => {
                   { "@type": "City", name: "Venezia" },
                 ],
                 offers: {
-                  "@type": "Offer",
+                  "@type": "AggregateOffer",
                   url: PAGE_URL,
-                  availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
-                  priceSpecification: {
-                    "@type": "PriceSpecification",
-                    priceCurrency: "EUR",
-                    description:
-                      "Preventivo personalizzato in base a obiettivi, settore e area geografica. Consulenza strategica iniziale gratuita.",
-                  },
+                  lowPrice: "299",
+                  highPrice: "549",
+                  offerCount: "2",
+                  availability: "https://schema.org/InStock",
                 },
               },
               {
@@ -531,6 +528,39 @@ const PubblicitaGoogleAds = () => {
                   Per questo il primo passo migliore è una <strong>consulenza completamente gratuita</strong>:
                   analizziamo insieme la tua attività, valutiamo il potenziale e ti proponiamo una strategia
                   trasparente con stima del budget media e del compenso di gestione.
+                </p>
+              </AnimatedSection>
+              <AnimatedSection delay={0.12} className="mb-10">
+                <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                  {[
+                    {
+                      badge: "BASE",
+                      price: "€299",
+                      terms: "/mese · IVA esclusa · gestione mensile per tutta la durata della campagna",
+                      desc: "Un canale (Search), setup, ottimizzazione e report mensile.",
+                    },
+                    {
+                      badge: "PREMIUM",
+                      price: "€549",
+                      terms: "/mese · IVA esclusa · gestione mensile per tutta la durata della campagna",
+                      desc: "Multi-campagna (Search + Performance Max + Remarketing), ottimizzazione più frequente e report avanzato.",
+                    },
+                  ].map((plan, i) => (
+                    <div key={i} className="card-glass p-6 text-left">
+                      <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full px-3 py-1 mb-3">
+                        {plan.badge}
+                      </span>
+                      <div className="flex items-baseline gap-1 mb-1">
+                        <span className="text-3xl font-extrabold text-foreground">{plan.price}</span>
+                      </div>
+                      <p className="text-xs text-muted-foreground mb-3">{plan.terms}</p>
+                      <p className="text-sm text-muted-foreground">{plan.desc}</p>
+                    </div>
+                  ))}
+                </div>
+                <p className="text-sm text-muted-foreground text-center max-w-2xl mx-auto mt-6">
+                  Questo è il compenso per la gestione professionale della campagna. Il budget pubblicitario versato
+                  direttamente a Google è a parte e non è incluso nel canone di gestione.
                 </p>
               </AnimatedSection>
               <AnimatedSection delay={0.15}>
