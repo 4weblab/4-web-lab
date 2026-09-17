@@ -17,7 +17,7 @@ const serviceItems = [
   { label: 'Siti per Aziende', href: '/siti-web-aziendali' },
   { label: 'SEO, AEO & GEO', href: '/posizionamento-google-e-ai', separatorBefore: true },
   { label: 'Google ADS', href: '/pubblicita-google-ads' },
-  { label: 'ChatGPT Ads', href: '/chatgpt-ads' },
+  { label: 'Campagne ChatGPT', href: '/chatgpt-ads' },
 ];
 interface HeaderProps {
   satelliteMode?: boolean;
