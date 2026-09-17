@@ -15,6 +15,7 @@ import {
   Sparkles,
   HelpCircle,
   Sparkle,
+  CheckCircle2,
 } from "lucide-react";
 import ContactFormChatGptAds from "@/components/ContactFormChatGptAds";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
@@ -386,6 +387,17 @@ const ChatGptAds = () => {
             <div className="max-w-2xl mx-auto text-center">
               <AnimatedSection>
                 <h2 className="heading-2 mb-6">Quanto costa la gestione ChatGPT Ads</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Il costo è composto da due voci separate: il canone di gestione, con prezzo fisso, e il budget
+                  pubblicitario versato direttamente a OpenAI, variabile in base a obiettivi e settore.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Per questo il primo passo migliore è un'<strong>analisi di fattibilità gratuita</strong>: verifichiamo
+                  se il tuo settore è adatto al canale e ti proponiamo una strategia trasparente su target e budget.
+                </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.1}>
                 <div className="card-glass p-8 inline-block text-left mb-6">
                   <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full px-3 py-1 mb-3">
                     PIANO UNICO
@@ -393,15 +405,44 @@ const ChatGptAds = () => {
                   <div className="flex items-baseline gap-1 mb-1">
                     <span className="text-3xl font-extrabold text-foreground">€299</span>
                   </div>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs text-muted-foreground mb-3">
                     /mese · IVA esclusa · gestione mensile per tutta la durata della campagna
                   </p>
+                  <p className="text-sm text-muted-foreground">
+                    Setup, copywriting conversazionale, monitoraggio e ottimizzazione continua.
+                  </p>
                 </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Questo è il compenso per la gestione professionale della campagna: setup, copywriting conversazionale,
-                  monitoraggio e ottimizzazione. Il budget pubblicitario versato direttamente a OpenAI è a parte e non è
-                  incluso nel canone di gestione.
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.15}>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Il budget pubblicitario versato direttamente a OpenAI è a parte e non è incluso nel canone di gestione.
                 </p>
+              </AnimatedSection>
+
+              <AnimatedSection delay={0.2}>
+                <StaggerContainer className="grid sm:grid-cols-2 gap-4 text-left mb-10" staggerDelay={0.08}>
+                  {[
+                    "Analisi di fattibilità per il settore",
+                    "Setup account e tracciamento conversioni",
+                    "Copywriting conversazionale incluso",
+                    "Nessun vincolo oltre il test iniziale",
+                  ].map((item, i) => (
+                    <StaggerItem key={i}>
+                      <div className="flex items-start gap-3 p-4 rounded-2xl bg-white border border-accent/10">
+                        <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-foreground font-medium">{item}</span>
+                      </div>
+                    </StaggerItem>
+                  ))}
+                </StaggerContainer>
+                <button
+                  onClick={scrollToForm}
+                  className="btn-primary inline-flex items-center gap-2.5 px-10 py-5 text-base"
+                >
+                  Richiedi Analisi di Fattibilità
+                  <ArrowRight className="w-5 h-5" />
+                </button>
               </AnimatedSection>
             </div>
           </div>
