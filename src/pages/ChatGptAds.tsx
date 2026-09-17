@@ -377,6 +377,33 @@ const ChatGptAds = () => {
           </div>
         </section>
 
+        {/* SECTION: Prezzo */}
+        <section className="section-padding" style={{ background: "var(--gradient-surface)" }}>
+          <div className="container-section">
+            <div className="max-w-2xl mx-auto text-center">
+              <AnimatedSection>
+                <h2 className="heading-2 mb-6">Quanto costa la gestione ChatGPT Ads</h2>
+                <div className="card-glass p-8 inline-block text-left mb-6">
+                  <span className="inline-block text-xs font-bold uppercase tracking-wider text-accent bg-accent/10 rounded-full px-3 py-1 mb-3">
+                    PIANO UNICO
+                  </span>
+                  <div className="flex items-baseline gap-1 mb-1">
+                    <span className="text-3xl font-extrabold text-foreground">€299</span>
+                  </div>
+                  <p className="text-xs text-muted-foreground">
+                    /mese · IVA esclusa · gestione mensile per tutta la durata della campagna
+                  </p>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Questo è il compenso per la gestione professionale della campagna: setup, copywriting conversazionale,
+                  monitoraggio e ottimizzazione. Il budget pubblicitario versato direttamente a OpenAI è a parte e non è
+                  incluso nel canone di gestione.
+                </p>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         {/* SECTION 3: Scenari d'uso */}
         <section className="section-padding bg-background">
           <div className="container-section">
