@@ -184,16 +184,13 @@ const PubblicitaGoogleAds = () => {
                   { "@type": "City", name: "Venezia" },
                 ],
                 offers: {
-                  "@type": "Offer",
+                  "@type": "AggregateOffer",
                   url: PAGE_URL,
-                  availability: "https://schema.org/InStock",
                   priceCurrency: "EUR",
-                  priceSpecification: {
-                    "@type": "PriceSpecification",
-                    priceCurrency: "EUR",
-                    description:
-                      "Preventivo personalizzato in base a obiettivi, settore e area geografica. Consulenza strategica iniziale gratuita.",
-                  },
+                  lowPrice: "299",
+                  highPrice: "549",
+                  offerCount: "2",
+                  availability: "https://schema.org/InStock",
                 },
               },
               {
