@@ -6,15 +6,44 @@ import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
 
 const introParagraphs = [
-  "Ti è mai capitato di cercare su Google il servizio che offri e scoprire che, al posto tuo, compaiono sempre gli stessi concorrenti?",
-  "Magari attività meno preparate della tua, ma online sembrano molto più presenti e organizzate.",
-  "Non è fortuna, e non è nemmeno “magia”.",
-  "Il punto è semplice: oggi, se non sei visibile su Google, per il cliente non esisti.",
-  "È come avere un negozio perfetto, ma aperto in una strada dove non passa nessuno.",
+  "Ti è mai capitato di cercare su Google il servizio che offri e scoprire che, al posto tuo, compaiono sempre gli stessi concorrenti — magari attività meno preparate della tua, ma che online sembrano molto più presenti e organizzate? Non è fortuna, e non è nemmeno «magia»: il punto è semplice, oggi se non sei visibile su Google, per il cliente semplicemente non esisti. È come avere un negozio perfetto, aperto però in una strada dove non passa nessuno.",
+];
+
+const faqs: { question: string; answer: string; answerNode?: React.ReactNode }[] = [
+  {
+    question: "Quanto tempo serve perché un sito inizi a comparire su Google?",
+    answer:
+      "Dipende dalla concorrenza nella tua zona e dal punto di partenza, ma servono generalmente alcuni mesi di lavoro costante su contenuti e struttura. Se ti serve visibilità immediata, una campagna Google ADS può coprire il tempo necessario alla SEO per dare risultati.",
+  },
+  {
+    question: "Basta essere su Google Maps per farsi trovare?",
+    answer:
+      "No, ma è una parte fondamentale. Sito web e scheda Google Business Profile devono lavorare insieme: uno curato e l'altro trascurato lascia comunque spazio ai concorrenti.",
+  },
+  {
+    question: "Perché il mio sito è online da mesi ma non arriva nessun contatto?",
+    answer:
+      "Molto spesso perché il sito non è stato costruito attorno alle ricerche reali dei tuoi clienti, o perché manca una struttura pensata per guidare chi lo visita verso un'azione concreta, come contattarti.",
+  },
+  {
+    question: "Come faccio a sapere se il mio sito ha un problema di posizionamento?",
+    answer:
+      "Un'analisi tecnica del sito individua in poco tempo se il problema è strutturale, di contenuti o di velocità: è il primo passo prima di decidere come intervenire.",
+    answerNode: (
+      <>
+        <Link to="/posizionamento-google-e-ai" className="text-accent font-medium hover:underline">
+          Un'analisi tecnica del sito
+        </Link>{" "}
+        individua in poco tempo se il problema è strutturale, di contenuti o di velocità: è il primo passo prima di
+        decidere come intervenire.
+      </>
+    ),
+  },
 ];
 
 const BlogNotFoundOnGoogleArticle = () => {
