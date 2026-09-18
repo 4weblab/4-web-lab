@@ -201,7 +201,7 @@ const BlogArubaSupersiteArticle = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content="Aruba SuperSite Conviene? Limiti e Alternative 2026" />
-        <meta name="twitter:description" content="Stai valutando Aruba SuperSite? Analizziamo limiti tecnici, costi nascosti e perché un sito fai-da-te rischia di bloccare la tua attività." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({
