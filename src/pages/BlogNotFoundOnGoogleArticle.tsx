@@ -316,13 +316,12 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Conclusione</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Essere su Google non è questione di fortuna.</p>
-                    <p>È una questione di struttura, chiarezza e strategia.</p>
                     <p>
-                      Se il tuo sito oggi non si trova, non significa che non funzioni il tuo lavoro.
+                      Essere su Google non è mai questione di fortuna. È una questione di struttura, chiarezza e
+                      strategia messe insieme. Se il tuo sito oggi non si trova, non significa che il tuo lavoro non
+                      funzioni: significa semplicemente che il sito non è stato costruito per essere trovato. E nel
+                      digitale, chi non si vede lascia semplicemente spazio a chi si vede al posto suo.
                     </p>
-                    <p>Significa semplicemente che non è stato costruito per essere trovato.</p>
-                    <p>E nel digitale, chi non si vede, lascia spazio agli altri.</p>
                   </div>
                 </article>
               </AnimatedSection>
