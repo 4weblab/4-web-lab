@@ -225,21 +225,23 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Le persone cercano servizi, non il nome della tua attività</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>A meno che tu non sia già conosciuto, nessuno cercherà il nome della tua azienda su Google.</p>
-                    <p>Le persone cercano soluzioni ai loro problemi.</p>
                     <p>
-                      Chi ha bisogno di un servizio scrive frasi semplici e dirette, spesso legate alla propria zona
-                      — pensa ad esempio a chi cerca un'{" "}
+                      A meno che tu non sia già un'attività conosciuta, difficilmente qualcuno cercherà il nome della
+                      tua azienda su Google. Le persone cercano soluzioni ai loro problemi, e chi ha bisogno di un
+                      servizio scrive frasi semplici e dirette, spesso legate alla propria zona — pensa a chi cerca
+                      un'{" "}
                       <Link to="/realizzazione-siti-web-padova" className="text-accent font-medium hover:underline">
                         agenzia web a Padova
                       </Link>{" "}
-                      invece del nome di uno studio specifico.
+                      invece del nome di uno studio specifico che magari non conosce nemmeno. Se il tuo sito non
+                      contiene queste ricerche reali — quelle che fa davvero chi ha bisogno di te — Google
+                      semplicemente non ha modo di collegarti a quella persona, e di conseguenza non ti mostrerà mai.
+                      È esattamente il lavoro che serve per costruire{" "}
+                      <Link to="/posizionamento-google-e-ai" className="text-accent font-medium hover:underline">
+                        un vero posizionamento su Google
+                      </Link>
+                      , pensato per la tua zona e per il tuo settore specifico.
                     </p>
-                    <p>
-                      Se il tuo sito non contiene queste ricerche reali, Google non ha modo di collegarti a chi sta
-                      cercando proprio quello che fai.
-                    </p>
-                    <p>E di conseguenza, non ti mostrerà.</p>
                   </div>
                 </article>
               </AnimatedSection>
