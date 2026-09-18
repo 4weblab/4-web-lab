@@ -197,30 +197,24 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Hai un sito ma non compare su Google</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Molti imprenditori pensano che basti avere un sito per ricevere contatti.</p>
-                    <p>In realtà, un sito senza posizionamento è invisibile.</p>
-                    <p>Se Google non capisce cosa fai e a chi ti rivolgi, non può mostrarti nei risultati di ricerca.</p>
                     <p>
-                      E questo significa finire nelle pagine che nessuno guarda. Spesso il problema non è solo
-                      tecnico: è strutturale, ed è uno dei{" "}
+                      Molti imprenditori pensano che basti avere un sito per iniziare a ricevere contatti. In realtà,
+                      un sito senza un vero posizionamento è, agli occhi di chi cerca, praticamente invisibile: se
+                      Google non capisce con chiarezza cosa fai e a chi ti rivolgi, non ha modo di mostrarti nei
+                      risultati di ricerca — e questo significa finire in pagine che nessuno guarda mai. Spesso il
+                      problema non è nemmeno solo tecnico, è strutturale: è uno dei{" "}
                       <Link
                         to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
                         className="text-accent font-medium hover:underline"
                       >
                         segnali tipici di un sito ormai obsoleto
                       </Link>
-                      .
-                    </p>
-                    <p>Avere un sito è solo il primo passo. Il vero obiettivo è farsi trovare.</p>
-                    <p>
-                      Per chi non può aspettare i tempi della SEO, una scorciatoia concreta è{" "}
-                      <Link
-                        to="/pubblicita-google-ads"
-                        className="text-accent font-medium hover:underline"
-                      >
+                      . Avere un sito, in fondo, è solo il primo passo. Il vero obiettivo è farsi trovare — e per chi
+                      non può aspettare i tempi naturali della SEO, una scorciatoia concreta è{" "}
+                      <Link to="/pubblicita-google-ads" className="text-accent font-medium hover:underline">
                         investire in pubblicità su Google ADS
-                      </Link>{" "}
-                      e iniziare a comparire da subito sopra ai risultati organici.
+                      </Link>
+                      , per iniziare a comparire da subito sopra ai risultati organici.
                     </p>
                   </div>
                 </article>
