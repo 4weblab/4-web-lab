@@ -150,7 +150,7 @@ const examples: ExampleImage[] = [
 const BlogArubaSupersiteArticle = () => {
   const pageTitle = "Aruba SuperSite conviene? Limiti e cosa sapere prima";
   const pageDescription =
-    "Aruba SuperSite è davvero la soluzione giusta per il tuo sito? Limiti, tempi nascosti e cosa valutare prima di scegliere una piattaforma fai-da-te.";
+    "Aruba SuperSite promette un sito in pochi minuti. Prima di sceglierlo per la tua attività, scopri cosa rischi davvero e quando ti conviene un'alternativa.";
   const pageUrl = "https://4weblab.it/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere";
   const pageImage = `https://4weblab.it${blogArubaHero}`;
   const articleData = getArticleBySlug("aruba-supersite-conviene-davvero-limiti-e-cosa-sapere");
