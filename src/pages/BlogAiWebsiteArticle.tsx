@@ -1,21 +1,19 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, HelpCircle } from "lucide-react";
 import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogAiWebsite from "@/assets/blog-ai-website.webp";
 
 const introParagraphs = [
-  "Negli ultimi anni, l’intelligenza artificiale è entrata in modo deciso anche nel mondo della creazione di siti web. Sempre più piattaforme promettono di generare un sito completo in pochi minuti, partendo da poche informazioni: nome dell’attività, settore, qualche preferenza grafica.",
-  "Per molte aziende, soprattutto piccole realtà o professionisti, la proposta è estremamente attraente: meno costi, meno tempi, meno complicazioni.",
-  "Ma la domanda vera è un’altra:",
-  "Un sito creato con l’IA può davvero sostituire un lavoro professionale?",
-  "La risposta, come spesso accade, non è né un sì né un no netto.",
+  "Hai visto le pubblicità, probabilmente più di una volta. Rispondi a due domande, l’intelligenza artificiale genera il tuo sito in pochi minuti, e in teoria sei pronto a partire. Zero competenze richieste, zero righe di codice da scrivere, spesso zero euro spesi. Se hai poco tempo, un budget limitato e la sensazione di dover “esistere online” il prima possibile, è difficile non essere tentati: perché pagare di più, aspettare settimane e affidarsi a qualcuno, quando puoi avere tutto subito e gratis?",
+  "La domanda però non è se puoi avere un sito in cinque minuti. Puoi. La domanda è un’altra, e conta più di ogni altra cosa: quel sito ti porterà davvero dei clienti, o resterà una vetrina online che nessuno vedrà mai? In questo articolo non troverai uno spot contro l’intelligenza artificiale — troverai un confronto onesto, pensato per farti capire quando questi strumenti sono davvero la scelta giusta per la tua attività, e quando invece rischiano di costarti più di quanto ti fanno risparmiare.",
 ];
 
 const linkClass = "text-accent font-medium hover:underline";
@@ -23,119 +21,108 @@ const linkClass = "text-accent font-medium hover:underline";
 type Section = {
   title: string;
   paragraphs: ReactNode[];
-  subSections?: { title: string; paragraphs: string[] }[];
 };
 
 const sections: Section[] = [
   {
-    title: "Perché i siti creati con IA stanno diventando così popolari",
+    title: "Perché ti conviene provarci (quando ha senso)",
     paragraphs: [
-      "Il successo di queste soluzioni non è casuale. Ci sono motivi molto concreti dietro questa crescita.",
-      "Il primo è la velocità. Oggi è possibile ottenere una struttura di sito completa in pochi minuti. Questo riduce drasticamente i tempi rispetto a uno sviluppo tradizionale.",
-      "Il secondo è il costo iniziale. Molti strumenti basati su intelligenza artificiale offrono piani economici o addirittura gratuiti, rendendo l’accesso molto più semplice rispetto a un progetto su misura.",
-      "Infine, la facilità d’uso. Non servono competenze tecniche, non serve conoscere codice o design: l’utente viene guidato passo dopo passo.",
-      "Per chi parte da zero, è una combinazione difficile da ignorare.",
+      "Partiamo da un punto fermo: i vantaggi di questi strumenti sono reali, non marketing. Liquidarli come inutili sarebbe disonesto, perché per alcune situazioni risolvono davvero un problema concreto — quello di non avere nulla online.",
+      "Il primo vantaggio è la velocità. Piattaforme come Wix, Framer AI o 10Web ti mettono in mano una struttura completa in pochi minuti: pagine, sezioni, immagini, testi di partenza. Quello che con un progetto su misura richiede settimane, qui lo hai prima di finire il caffè.",
+      "Il secondo è il rischio economico praticamente nullo. Se devi validare un’idea, testare una nicchia o capire se un servizio interessa a qualcuno, non ha senso investire prima di avere una risposta: qui puoi farlo spendendo zero, o pochi euro al mese, e cambiare direzione senza rimpianti.",
+      "Per questo, se la tua attività è appena nata, il budget è davvero zero e l’obiettivo è semplicemente esistere online mentre capisci la strada, un sito generato dall’intelligenza artificiale è una scelta sensata. Meglio un sito semplice che nessun sito.",
     ],
   },
   {
-    title: "I vantaggi reali: quando l’IA può essere una buona scelta",
+    title: "Cosa rischi davvero (quando la tua attività è già avviata)",
     paragraphs: [
-      "Sarebbe un errore liquidare questi strumenti come inutili. In realtà, in alcuni contesti sono estremamente efficaci.",
-      "Ad esempio, sono perfetti per creare una prima versione del sito. Un prototipo veloce permette di “mettere online qualcosa” e iniziare a esistere digitalmente senza lunghi tempi di attesa.",
+      "Il discorso cambia completamente nel momento in cui la tua attività è già in piedi, ha clienti, una reputazione e dei concorrenti. Qui il sito non serve più a “esserci”: serve a farti scegliere. Ed è esattamente dove questi strumenti mostrano i loro limiti.",
+      "Il primo problema è la struttura generica. I siti generati automaticamente si somigliano tutti: stesse sezioni, stessa sequenza, stessa aria. Chi ti visita non lo nota consapevolmente, ma percepisce qualcosa di anonimo — e l’anonimato, quando devi trasmettere competenza, lavora contro di te.",
+      "Il secondo sono i testi. L’intelligenza artificiale non conosce la tua attività: scrive di una versione media del tuo settore. Il risultato sono frasi corrette ma vuote, che non raccontano come lavori, cosa ti distingue e perché un cliente dovrebbe fidarsi di te invece del concorrente a due strade di distanza.",
       <>
-        Sono anche una soluzione valida per attività appena nate, con budget molto limitato. In
-        questi casi, avere un sito semplice è comunque meglio che non averne uno — anche se vale
-        la pena confrontarli con{" "}
+        Il terzo, e il più costoso, è la visibilità. Essere online non significa essere trovati:
+        senza un lavoro reale sulle ricerche locali, sull’intento di chi cerca e sulla struttura
+        delle pagine, il sito resta invisibile. Se vuoi capire cosa serve davvero, abbiamo
+        spiegato in dettaglio{" "}
+        <Link to="/posizionamento-google-e-ai" className={linkClass}>
+          come far comparire davvero il tuo sito su Google
+        </Link>
+        .
+      </>,
+      "Il quarto è la mancanza di un percorso. Un sito che funziona non è una somma di sezioni: è una strada che porta il visitatore da “chi sono questi” a “li contatto”. Questa logica nasce da scelte strategiche su cosa dire, in quale ordine e con quale invito all’azione — ed è esattamente ciò che un generatore automatico non può progettare per te.",
+    ],
+  },
+  {
+    title: "Quanto costa davvero (il confronto che conta)",
+    paragraphs: [
+      "Il confronto non è tra gratis e 990€: è tra un abbonamento che paghi per sempre e un sito che diventa tuo. Venti o trenta euro al mese sembrano nulla, ma in tre anni superano il costo di un progetto professionale — e alla fine non possiedi nulla, perché se smetti di pagare il sito sparisce.",
+      <>
+        Il metro giusto è un altro: quanti clienti ti porta. Un sito che non genera contatti è
+        costato troppo anche se era gratuito; uno che ti porta due lavori in più all’anno si
+        ripaga da solo. Abbiamo messo nero su bianco{" "}
         <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className={linkClass}>
-          i prezzi reali di un sito professionale nel 2026
-        </Link>
-        , che spesso non sono così distanti come si pensa.
-      </>,
-      "Un altro utilizzo interessante è il test di nuove idee. Se vuoi validare un servizio o una nicchia, l’IA ti permette di farlo rapidamente, senza investimenti importanti.",
-    ],
-  },
-  {
-    title: "I limiti dei siti generati con intelligenza artificiale",
-    paragraphs: ["Il primo limite evidente è la struttura."],
-    subSections: [
-      {
-        title: "Struttura generica",
-        paragraphs: [
-          "I siti generati con IA tendono a essere molto simili tra loro: layout standard, sezioni ripetitive, poca personalità. Questo rende difficile distinguersi, soprattutto in mercati competitivi.",
-        ],
-      },
-      {
-        title: "Contenuti poco credibili",
-        paragraphs: [
-          "I testi generati automaticamente spesso risultano generici, poco specifici e poco credibili. Non parlano davvero dell’azienda, ma di una versione “media” di quel tipo di attività.",
-        ],
-      },
-      {
-        title: "SEO debole",
-        paragraphs: [
-          "Anche se alcune piattaforme promettono ottimizzazione automatica, nella pratica manca una strategia reale: nessuna analisi delle ricerche locali, nessun lavoro sull’intento dell’utente, nessuna struttura pensata per posizionarsi.",
-        ],
-      },
-      {
-        title: "Mancanza di strategia",
-        paragraphs: [
-          "Un sito efficace non è solo una somma di sezioni, ma un percorso progettato per guidare l’utente verso un’azione. L’intelligenza artificiale, da sola, non è in grado di costruire questo tipo di logica.",
-        ],
-      },
-    ],
-  },
-  {
-    title: "Quando ha senso usare un sito creato con IA",
-    paragraphs: [
-      "Ha senso se sei all’inizio e hai bisogno di partire velocemente.",
-      "Ha senso se il budget è molto ridotto e non puoi investire subito in una soluzione professionale.",
-      "Ha senso se vuoi testare un’idea senza rischiare troppo.",
-    ],
-  },
-  {
-    title: "Quando invece diventa un limite",
-    paragraphs: [
-      "Se vuoi trovare clienti online, un sito generato automaticamente difficilmente basta.",
-      <>
-        Se hai già un’attività avviata, un sito generico rischia di danneggiare la percezione del
-        tuo brand. È anche uno dei motivi per cui{" "}
-        <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className={linkClass}>
-          molti siti non riescono a comparire su Google
-        </Link>
-        : contenuti standard, struttura uguale a mille altri.
-      </>,
-      <>
-        Se operi in un mercato competitivo, avere un sito simile a molti altri è un problema concreto: in questi casi diventa quasi obbligatorio affiancare al sito anche{" "}
-        <Link to="/pubblicita-google-ads" className={linkClass}>
-          campagne Google ADS gestite con criterio
+          quanto costa davvero un sito web nel 2026
         </Link>{" "}
-        per intercettare clienti reali.
+        e cosa incide sul prezzo finale.
       </>,
     ],
   },
   {
-    title: "L’IA è uno strumento, non una soluzione",
+    title: "Come lavoriamo diversamente",
     paragraphs: [
-      "L’intelligenza artificiale è uno strumento potente, ma non è una soluzione completa.",
-      "Può accelerare, può aiutare, può semplificare. Ma non sostituisce la strategia, la progettazione e la conoscenza del mercato.",
-      "I risultati migliori si ottengono quando l’IA viene usata come supporto, non come sostituto.",
-    ],
-  },
-  {
-    title: "Conclusione",
-    paragraphs: [
-      "I siti web creati con intelligenza artificiale rappresentano una grande opportunità, soprattutto per chi deve iniziare.",
-      "Ma non sono una scorciatoia universale.",
-      "Possono essere un buon punto di partenza, ma difficilmente sono un punto di arrivo per un’azienda che vuole crescere davvero online.",
-      "Se l’obiettivo è avere un sito che trasmetta fiducia, rappresenti l’attività in modo credibile e porti contatti concreti, serve qualcosa di più di un generatore automatico.",
+      <>
+        Noi partiamo dalla tua attività, non da un modello: capiamo chi sono i tuoi clienti, cosa
+        cercano e cosa li convince, poi costruiamo struttura, testi e percorso attorno a questo.
+        Il risultato è un sito veloce, scritto su misura e pensato per essere trovato — come i{" "}
+        <Link to="/siti-web-per-professionisti" className={linkClass}>
+          siti web per professionisti
+        </Link>{" "}
+        che realizziamo ogni giorno, a partire da 990€ una tantum, senza canoni obbligatori e con
+        il sito che resta di tua proprietà.
+      </>,
     ],
   },
 ];
 
+const faqs: { question: string; answer: string; answerNode?: ReactNode }[] = [
+  {
+    question: "Un sito fatto con l'intelligenza artificiale viene indicizzato da Google?",
+    answer:
+      "Sì, tecnicamente Google può indicizzarlo senza problemi. Il vero ostacolo non è l'indicizzazione, ma il posizionamento: senza una strategia SEO reale e contenuti specifici per la tua attività e la tua zona, il sito resta indicizzato ma resta anche invisibile, sepolto nelle pagine che nessuno apre.",
+  },
+  {
+    question: "Quanto costa un sito fatto con l'IA rispetto a uno professionale?",
+    answer:
+      "Le piattaforme basate su intelligenza artificiale vanno da gratis a circa 20-30€ al mese, pagati però a vita. Un sito professionale con 4 Web Lab parte da 990€ una tantum: nel tempo spesso costa meno di un abbonamento continuativo, e resta di tua proprietà.",
+  },
+  {
+    question: "Posso passare da un sito IA a uno professionale in un secondo momento?",
+    answer:
+      "Sì, è un percorso molto comune. Molte attività iniziano con un sito generato dall'IA per validare un'idea o partire in fretta, e passano a una soluzione professionale quando il bisogno diventa generare clienti in modo costante e prevedibile.",
+  },
+  {
+    question: "Un sito fatto con l'IA basta per un'attività locale a Padova?",
+    answer:
+      "Dipende dalla concorrenza nella tua zona specifica. Se operi in un settore con poca competizione online, può bastare per iniziare. Se i tuoi concorrenti hanno già un sito ottimizzato per le ricerche locali, un sito IA generico difficilmente riesce a competere.",
+    answerNode: (
+      <>
+        Dipende dalla concorrenza nella tua zona specifica. Se operi in un settore con poca
+        competizione online, può bastare per iniziare. Se i tuoi concorrenti hanno già un sito
+        ottimizzato per le ricerche locali, un sito IA generico difficilmente riesce a competere.
+        Puoi vedere tutte le{" "}
+        <Link to="/zone-servite" className={linkClass}>
+          zone in cui operiamo
+        </Link>
+        .
+      </>
+    ),
+  },
+];
+
 const BlogAiWebsiteArticle = () => {
-  const pageTitle = "Siti web con intelligenza artificiale: pro e contro per aziende";
+  const pageTitle = "Siti Web con IA: Convengono per la Tua Attività nel 2026?";
   const pageDescription =
-    "I siti web creati con IA sono davvero una soluzione? Scopri vantaggi, limiti e quando conviene usarli per la tua attività.";
+    "Un sito fatto dall'IA in 5 minuti sembra la scelta furba. Scopri quando ti fa risparmiare davvero e quando rischia di costarti clienti. Guida 2026.";
   const pageUrl = "https://4weblab.it/blog/siti-web-creati-con-intelligenza-artificiale";
   const pageImage = `https://4weblab.it${blogAiWebsite}`;
   const articleData = getArticleBySlug("siti-web-creati-con-intelligenza-artificiale");
@@ -143,20 +130,19 @@ const BlogAiWebsiteArticle = () => {
   const dateModified = articleData?.dateModified ?? "2026-04-08";
   const articleSection = articleData?.category ?? "Tecnologia & AI";
   const readingTime = calcReadingTime(articleData?.wordCount ?? 720);
-  const headline =
-    "Siti web creati con intelligenza artificiale: opportunità reale o rischio per le aziende?";
+  const headline = "Sito Web Fatto con l'Intelligenza Artificiale: Ti Conviene Davvero?";
 
   return (
     <>
       <Helmet>
-        <title>Siti Web Generati con IA: Pro, Contro e Limiti 2026</title>
-        <meta name="description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:title" content="Siti Web Generati con IA: Pro, Contro e Limiti 2026" />
-        <meta property="og:description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -166,31 +152,46 @@ const BlogAiWebsiteArticle = () => {
         <meta property="article:section" content={articleSection} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
-        <meta name="twitter:title" content="Siti Web Generati con IA: Pro, Contro e Limiti 2026" />
-        <meta name="twitter:description" content="I generatori di siti web con IA sono pronti per le aziende? Analisi tecnica su prestazioni, codice generato, SEO e limiti di personalizzazione." />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline,
-            description: pageDescription,
-            image: [pageImage],
-            inLanguage: "it-IT",
-            articleSection,
-            author: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              url: "https://4weblab.it/",
-            },
-            publisher: { "@id": "https://4weblab.it/#business" },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": pageUrl,
-            },
-            url: pageUrl,
-            datePublished,
-            dateModified,
+            "@graph": [
+              {
+                "@type": "BlogPosting",
+                headline,
+                description: pageDescription,
+                image: [pageImage],
+                inLanguage: "it-IT",
+                articleSection,
+                author: {
+                  "@type": "Person",
+                  name: "Carlo Fullin",
+                  url: "https://4weblab.it/",
+                },
+                publisher: { "@id": "https://4weblab.it/#business" },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": pageUrl,
+                },
+                url: pageUrl,
+                datePublished,
+                dateModified,
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -220,7 +221,7 @@ const BlogAiWebsiteArticle = () => {
                 Blog 4 Web Lab
               </span>
               <h1 className="heading-1 mt-6 text-primary-foreground text-balance">
-                Siti web creati con intelligenza artificiale: opportunità reale o rischio per le aziende?
+                Sito Web Fatto con l'Intelligenza Artificiale: Ti Conviene Davvero?
               </h1>
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-sm text-primary-foreground/70">
                 <span className="inline-flex items-center gap-1.5">
@@ -249,11 +250,8 @@ const BlogAiWebsiteArticle = () => {
             <AnimatedSection className="mx-auto max-w-3xl">
               <div className="rounded-[2rem] border border-border/60 bg-card px-6 py-8 shadow-sm md:px-10 md:py-12">
                 <div className="space-y-6 text-base leading-8 text-foreground md:text-lg">
-                  {introParagraphs.map((paragraph, index) => (
-                    <p
-                      key={paragraph}
-                      className={index === 3 ? "font-semibold text-foreground" : index === 2 ? "text-foreground" : "text-foreground/90"}
-                    >
+                  {introParagraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-foreground/90">
                       {paragraph}
                     </p>
                   ))}
@@ -272,26 +270,44 @@ const BlogAiWebsiteArticle = () => {
                     <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                     <h2 className="heading-3 text-foreground">{section.title}</h2>
                     <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                      {section.paragraphs?.map((paragraph, pIndex) => (
+                      {section.paragraphs.map((paragraph, pIndex) => (
                         <p key={pIndex}>{paragraph}</p>
                       ))}
                     </div>
-
-                    {section.subSections ? (
-                      <div className="mt-8 space-y-6 border-t border-border/50 pt-8">
-                        {section.subSections.map((subSection) => (
-                          <div key={subSection.title} className="rounded-2xl bg-muted/35 p-5 md:p-6">
-                            <h3 className="text-xl font-semibold text-foreground">{subSection.title}</h3>
-                            <div className="mt-3 space-y-4 text-base leading-8 text-foreground/85 md:text-lg">
-                              {subSection.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    ) : null}
                   </article>
                 </AnimatedSection>
               ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="mx-auto max-w-3xl">
+              <AnimatedSection className="mb-6 flex items-center gap-4">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sui siti creati con l'IA</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={faq.question}
+                      value={`faq-ai-website-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="py-5 text-left hover:no-underline">
+                        <span className="pr-4 text-base font-semibold text-foreground">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer pb-5 text-sm leading-relaxed text-muted-foreground">
+                        {faq.answerNode ?? faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
             </div>
           </div>
         </section>
@@ -302,13 +318,13 @@ const BlogAiWebsiteArticle = () => {
           <div className="container-section">
             <AnimatedSection className="mx-auto max-w-3xl rounded-[2rem] border border-border/60 bg-card px-6 py-8 text-center shadow-sm md:px-10 md:py-12">
               <div className="mx-auto mb-6 h-1 w-14 rounded-full bg-accent" />
-              <h2 className="heading-2 text-foreground">Vuoi capire qual è la soluzione giusta per la tua attività?</h2>
+              <h2 className="heading-2 text-foreground">Non sai se ti basta un sito IA o ti serve qualcosa di più?</h2>
               <p className="body-large mt-5 text-muted-foreground">
-                Raccontaci cosa fai e ti aiutiamo a capire se un sito base può bastare oppure se serve una struttura più efficace per ottenere risultati concreti.
+                Raccontaci la tua attività: ti diciamo onestamente se un sito semplice può bastare o se ti serve una struttura pensata per portarti clienti veri.
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una valutazione gratuita
+                  Richiedi Preventivo Gratuito in 24h
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
