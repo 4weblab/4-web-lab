@@ -293,21 +293,20 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <h2 className="heading-3 text-foreground">Un sito fatto “da solo” spesso non basta</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
                     <p>
-                      Oggi esistono molti strumenti per creare un sito in autonomia, compresi i generatori basati su{" "}
+                      Oggi esistono moltissimi strumenti per creare un sito in autonomia, compresi i generatori basati
+                      su{" "}
                       <Link
                         to="/blog/siti-web-creati-con-intelligenza-artificiale"
                         className="text-accent font-medium hover:underline"
                       >
                         intelligenza artificiale
                       </Link>
-                      .
+                      . Il problema è che un sito non deve solo essere online: deve funzionare. Deve essere strutturato
+                      in modo che Google lo capisca, e in modo da guidare chi lo visita verso un'azione concreta. Un
+                      sito fatto senza una vera strategia dietro può anche essere esteticamente bello, ma se non porta
+                      contatti, semplicemente non serve — e il tempo che hai investito per costruirlo diventa, di
+                      fatto, tempo perso.
                     </p>
-                    <p>Il problema è che un sito non deve solo essere online, deve funzionare.</p>
-                    <p>
-                      Deve essere strutturato per essere capito da Google e per guidare l'utente verso un'azione.
-                    </p>
-                    <p>Un sito fatto senza strategia può anche essere bello, ma se non porta contatti, non serve.</p>
-                    <p>E il tempo investito diventa tempo perso.</p>
                   </div>
                 </article>
               </AnimatedSection>
