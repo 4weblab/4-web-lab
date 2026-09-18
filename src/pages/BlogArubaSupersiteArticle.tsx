@@ -352,7 +352,7 @@ const BlogArubaSupersiteArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una valutazione gratuita
+                  Richiedi Preventivo Gratuito in 24h
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
