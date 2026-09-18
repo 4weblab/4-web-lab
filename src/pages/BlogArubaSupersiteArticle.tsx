@@ -16,12 +16,7 @@ import exampleImport from "@/assets/blog-aruba-example-importirrigation.webp";
 const linkClass = "text-accent font-medium hover:underline";
 
 const introParagraphs: ReactNode[] = [
-  "Hai deciso che è arrivato il momento di creare un sito web per la tua attività.",
-  "Fai una ricerca su Google, trovi Aruba SuperSite e la promessa sembra irresistibile: scegli un modello, inserisci i contenuti e in poco tempo il tuo sito è online.",
-  "Semplice. Veloce. Economico.",
-  "Ma la domanda giusta non è quanto sia facile creare un sito.",
-  "La domanda è: quel sito riuscirà davvero a portarti clienti?",
-  "Perché tra avere un sito online e avere un sito che genera contatti c'è una differenza enorme.",
+  "Hai deciso che è arrivato il momento di creare un sito web per la tua attività. Fai una ricerca su Google, trovi Aruba SuperSite, e la promessa sembra fatta apposta per te: scegli un modello, inserisci i tuoi contenuti, e in poco tempo il sito è online. Semplice, veloce, economico — tre parole che, quando devi decidere in fretta con un budget limitato, pesano parecchio. Ma la domanda che conta davvero non è quanto sia facile creare un sito con questo strumento. È un'altra: quel sito riuscirà a portarti clienti veri, o resterà solo una pagina online che nessuno troverà mai? Tra avere un sito e avere un sito che lavora per te, la differenza è enorme — ed è quello che vediamo in questa guida, con qualche esempio reale.",
 ];
 
 type Section = { title: string; paragraphs: ReactNode[] };
@@ -30,22 +25,14 @@ const sections: Section[] = [
   {
     title: "Creare un sito è facile. Farlo funzionare è un'altra storia",
     paragraphs: [
-      "Negli ultimi anni gli strumenti per creare siti web sono diventati sempre più semplici.",
-      "Anche Aruba SuperSite permette di realizzare pagine web senza conoscere codice o programmazione.",
-      "Questo però risolve solo una parte del problema.",
-      "Un sito web non è un documento da pubblicare online. È uno strumento di marketing che deve convincere una persona a compiere un'azione: chiamarti, richiedere un preventivo, prenotare un appuntamento o acquistare un prodotto.",
-      "Ed è proprio qui che molti progetti fai-da-te iniziano a mostrare i propri limiti.",
+      "Negli ultimi anni gli strumenti per creare siti web sono diventati incredibilmente più semplici, e Aruba SuperSite ne è un esempio concreto: ti permette di mettere online delle pagine senza scrivere una riga di codice né avere competenze tecniche. Questo però risolve solo una parte del tuo problema. Il sito che stai per creare non è un documento da pubblicare e dimenticare: è uno strumento che deve convincere chi lo visita a fare qualcosa di preciso — chiamarti, chiederti un preventivo, prenotare un appuntamento, comprare da te invece che dal tuo concorrente. Ed è esattamente qui che molti progetti fai-da-te, per quanto ben intenzionati, iniziano a mostrare i loro limiti.",
     ],
   },
   {
     title: "Il vero costo nascosto non è l'abbonamento",
     paragraphs: [
-      "Molti imprenditori scelgono una piattaforma fai-da-te come Aruba SuperSite per risparmiare.",
-      "In teoria sembra una buona idea. In pratica, spesso accade il contrario.",
-      "Tra scelta del template, personalizzazione delle pagine, caricamento delle immagini, scrittura dei testi, configurazioni tecniche e continui tentativi di miglioramento, possono passare settimane.",
-      "Tempo che potresti dedicare alla tua attività. Tempo che non produce fatturato. Tempo che difficilmente recupererai.",
       <>
-        Quando si parla di un'azienda, il tempo è quasi sempre la risorsa più costosa — e spesso pesa più del prezzo annuale dell'abbonamento. Ne abbiamo parlato anche{" "}
+        Se hai scelto — o stai valutando — una piattaforma come Aruba SuperSite, probabilmente l'hai fatto per risparmiare. Sulla carta è una logica corretta. Nella pratica, però, succede spesso il contrario: tra scegliere il template giusto, personalizzare ogni pagina, caricare le immagini, scrivere i testi, sistemare le configurazioni tecniche e provare più volte a migliorare il risultato, possono passare settimane — settimane che dedichi al sito invece che alla tua attività, e che non produrranno un euro di fatturato nel frattempo. Per un'azienda, il tempo è quasi sempre la risorsa più costosa che hai, molto più del prezzo dell'abbonamento annuale che stai cercando di evitare, come abbiamo approfondito{" "}
         <Link to="/blog/creare-sito-web-da-soli-conviene" className={linkClass}>
           nella guida dedicata al fai-da-te
         </Link>
@@ -56,29 +43,20 @@ const sections: Section[] = [
   {
     title: "Il rischio di avere un sito uguale a tanti altri",
     paragraphs: [
-      "Uno dei vantaggi delle piattaforme preconfezionate è la presenza di modelli grafici già pronti.",
-      "Ma proprio questo vantaggio può trasformarsi in un limite.",
-      "Molti siti realizzati con template standard finiscono per assomigliarsi: stesse strutture, stessi layout, stessa organizzazione delle informazioni.",
-      "Il risultato è che il visitatore fatica a percepire una vera differenza tra te e i tuoi concorrenti.",
-      "E se il tuo sito non comunica qualcosa di unico, diventa molto difficile convincere un potenziale cliente a scegliere proprio te.",
+      "Uno dei punti di forza di queste piattaforme è avere modelli grafici già pronti da compilare. Ma è proprio questo vantaggio a trasformarsi, per te, in un limite concreto: i siti realizzati con template standard finiscono per assomigliarsi tutti — stessa struttura, stesso layout, stessa organizzazione dei contenuti. Il risultato è che chi visita il tuo sito fa fatica a percepire una vera differenza tra te e chi fa il tuo stesso lavoro nella tua zona. E se il tuo sito non comunica nulla di unico su di te, diventa molto più difficile convincere qualcuno a scegliere proprio te invece che il primo risultato su Google.",
     ],
   },
   {
     title: "Essere online non significa essere visibili su Google",
     paragraphs: [
-      "Uno degli errori più comuni è pensare che basti pubblicare un sito per comparire su Google. Purtroppo non funziona così.",
-      "Google deve comprendere perfettamente cosa fai, dove lavori, quali problemi risolvi e perché dovrebbe mostrarti rispetto ai concorrenti.",
       <>
-        Aruba SuperSite e altre piattaforme offrono strumenti SEO di base, ma gli strumenti da soli non bastano. La differenza la fanno la strategia, la struttura dei contenuti, le parole chiave utilizzate e l'esperienza complessiva del sito. Se vuoi approfondire,{" "}
+        Uno degli errori più comuni — capita a chi usa Aruba SuperSite come a chi usa qualunque altro strumento fai-da-te — è pensare che basti pubblicare un sito per comparire su Google. Non funziona così: Google deve capire perfettamente cosa fai, dove lavori, quali problemi risolvi e perché dovrebbe mostrare proprio te rispetto a chi fa il tuo stesso mestiere. Aruba SuperSite offre strumenti SEO di base, ma gli strumenti da soli non bastano se manca una strategia dietro: la struttura dei contenuti, le parole chiave giuste per la tua zona, l'esperienza complessiva di chi visita il sito —{" "}
         <Link to="/blog/perche-il-tuo-sito-non-si-trova-su-google" className={linkClass}>
           abbiamo dedicato una guida intera al perché un sito non compare su Google
         </Link>
-        .
-      </>,
-      <>
-        In altre parole: avere un martello non significa saper costruire una casa. E se ti serve visibilità subito, valuta anche{" "}
+        . In altre parole, avere un martello non significa saper costruire una casa — e se ti serve visibilità subito, mentre lavori sulla parte organica, vale la pena valutare anche{" "}
         <Link to="/pubblicita-google-ads" className={linkClass}>
-          pubblicità su Google ADS gestita da chi conosce il tuo settore
+          una campagna pubblicitaria gestita da chi conosce il tuo settore
         </Link>
         .
       </>,
@@ -87,19 +65,14 @@ const sections: Section[] = [
   {
     title: "Quando il sito non genera contatti",
     paragraphs: [
-      "Questo è probabilmente il problema più sottovalutato.",
-      "Un sito può essere bello, può essere online, può perfino funzionare correttamente. Eppure non portare nemmeno un cliente.",
-      "Perché un sito efficace non si limita a mostrare informazioni: deve guidare il visitatore, costruire fiducia, rispondere alle domande che una persona si pone prima di acquistare e rendere semplice il contatto.",
-      "Senza questi elementi, il rischio è di avere una semplice brochure digitale che nessuno legge davvero.",
+      "Questo è probabilmente il problema più sottovalutato di tutti. Il tuo sito può essere bello, può essere online, può funzionare correttamente dal punto di vista tecnico — e non portarti comunque nemmeno un cliente. Perché un sito che funziona davvero non si limita a mostrare informazioni: deve guidare chi lo visita, costruire fiducia, rispondere alle domande che una persona si fa prima di comprare, e rendere naturale il passo successivo, cioè contattarti. Senza questi elementi, quello che hai in mano è una brochure digitale ben fatta — ma che quasi nessuno legge fino in fondo, e che ancora meno persone useranno per contattarti.",
     ],
   },
   {
     title: "Aruba SuperSite è una cattiva soluzione?",
     paragraphs: [
-      "No.",
-      "Per alcune situazioni può essere una soluzione più che valida. Ad esempio per chi vuole pubblicare rapidamente una presenza online essenziale o per chi desidera sperimentare un progetto personale.",
       <>
-        Il problema nasce quando si pretende che uno strumento pensato per la semplicità svolga il lavoro di una strategia professionale. Sono due cose completamente diverse — un po' come succede{" "}
+        No, e sarebbe disonesto dire il contrario. Per alcune situazioni specifiche può essere una scelta più che valida: se vuoi pubblicare in fretta una presenza online essenziale, o se stai sperimentando un progetto personale senza pretese commerciali, ti risponde bene. Il problema nasce quando pretendi che uno strumento pensato per la semplicità faccia il lavoro di una strategia professionale — sono due cose completamente diverse, un po' come succede{" "}
         <Link to="/blog/siti-web-piattaforme-preventivi-online-conviene" className={linkClass}>
           con le piattaforme di preventivi online
         </Link>
@@ -110,14 +83,12 @@ const sections: Section[] = [
   {
     title: "Prima di spendere soldi, spendi qualche minuto per informarti",
     paragraphs: [
-      "Molte persone investono tempo e denaro in piattaforme fai-da-te senza aver prima valutato tutte le alternative. E spesso scoprono i limiti della scelta solo dopo settimane di lavoro.",
-      "La realtà è che non tutte le attività hanno bisogno della stessa soluzione: un professionista, un negozio locale e un'azienda strutturata hanno esigenze completamente diverse.",
       <>
-        Per questo la domanda da porsi non è "Quale piattaforma devo usare?" ma piuttosto: "Qual è il modo più efficace per ottenere risultati online?". E in molti casi la risposta passa anche da{" "}
+        Molte persone investono tempo e denaro in piattaforme fai-da-te senza aver prima valutato con chi hanno davvero a che fare in termini di esigenze: un professionista, un negozio locale e un'azienda strutturata hanno bisogni completamente diversi, e spesso scoprono i limiti della scelta fatta solo dopo settimane di lavoro già investite. Per questo la domanda giusta da farti non è «quale piattaforma devo usare», ma «qual è il modo più efficace per ottenere risultati online per la mia attività specifica» — e la risposta passa spesso anche da{" "}
         <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className={linkClass}>
-          capire quanto costa davvero un sito web fatto bene
+          capire quanto costa davvero un sito fatto bene
         </Link>
-        .
+        , che probabilmente è meno distante da quello che pensi di quanto sembri all'inizio.
       </>,
     ],
   },
