@@ -329,6 +329,37 @@ const BlogNotFoundOnGoogleArticle = () => {
           </div>
         </section>
 
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="mx-auto max-w-3xl">
+              <AnimatedSection className="mb-6 flex items-center gap-4">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sulla visibilità su Google</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={faq.question}
+                      value={`faq-not-found-google-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="py-5 text-left hover:no-underline">
+                        <span className="pr-4 text-base font-semibold text-foreground">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer pb-5 text-sm leading-relaxed text-muted-foreground">
+                        {faq.answerNode ?? faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         <RelatedArticles currentSlug={slug} />
 
         <section className="section-padding bg-background">
