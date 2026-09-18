@@ -147,6 +147,29 @@ const examples: ExampleImage[] = [
   },
 ];
 
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "Un sito fatto con Aruba SuperSite viene indicizzato da Google?",
+    answer:
+      "Sì, tecnicamente può essere indicizzato senza problemi particolari. Il vero limite non è tecnico ma strategico: senza un lavoro reale sulle parole chiave della tua zona e sui contenuti specifici della tua attività, il sito resta online ma difficilmente compare tra i primi risultati.",
+  },
+  {
+    question: "Quanto costa un sito con Aruba SuperSite rispetto a uno fatto da un'agenzia?",
+    answer:
+      "Aruba SuperSite ha piani che partono da pochi euro al mese, pagati però nel tempo senza scadenza. Un sito professionale con 4 Web Lab parte da 990€ una tantum: nel medio periodo spesso costa meno di un abbonamento continuativo, e il sito resta di tua proprietà.",
+  },
+  {
+    question: "Posso passare da Aruba SuperSite a un sito professionale in un secondo momento?",
+    answer:
+      "Sì, è un percorso molto comune. Molte attività iniziano con una piattaforma fai-da-te per testare un'idea o partire in fretta, e passano a una soluzione professionale quando il bisogno diventa generare clienti in modo costante.",
+  },
+  {
+    question: "Chi può aiutarmi a creare un sito se non ho tempo o competenze per farlo da solo?",
+    answer:
+      "Un'agenzia specializzata come 4 Web Lab si occupa dell'intero processo al posto tuo: strategia, testi, struttura tecnica e SEO, lasciandoti il tempo di occuparti della tua attività invece che del sito.",
+  },
+];
+
 const BlogArubaSupersiteArticle = () => {
   const pageTitle = "Aruba SuperSite conviene? Limiti e cosa sapere prima";
   const pageDescription =
