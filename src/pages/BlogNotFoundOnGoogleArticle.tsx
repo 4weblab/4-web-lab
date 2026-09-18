@@ -178,11 +178,8 @@ const BlogNotFoundOnGoogleArticle = () => {
             <AnimatedSection className="mx-auto max-w-3xl">
               <div className="rounded-[2rem] border border-border/60 bg-card px-6 py-8 shadow-sm md:px-10 md:py-12">
                 <div className="space-y-6 text-base leading-8 text-foreground md:text-lg">
-                  {introParagraphs.map((paragraph, index) => (
-                    <p
-                      key={paragraph}
-                      className={index === 3 ? "font-semibold text-foreground" : "text-foreground/90"}
-                    >
+                  {introParagraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-foreground/90">
                       {paragraph}
                     </p>
                   ))}
