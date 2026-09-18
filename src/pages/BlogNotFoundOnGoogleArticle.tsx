@@ -1,20 +1,49 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, HelpCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogNotFoundOnGoogle from "@/assets/blog-sito-non-trovato-google.webp";
 
 const introParagraphs = [
-  "Ti è mai capitato di cercare su Google il servizio che offri e scoprire che, al posto tuo, compaiono sempre gli stessi concorrenti?",
-  "Magari attività meno preparate della tua, ma online sembrano molto più presenti e organizzate.",
-  "Non è fortuna, e non è nemmeno “magia”.",
-  "Il punto è semplice: oggi, se non sei visibile su Google, per il cliente non esisti.",
-  "È come avere un negozio perfetto, ma aperto in una strada dove non passa nessuno.",
+  "Ti è mai capitato di cercare su Google il servizio che offri e scoprire che, al posto tuo, compaiono sempre gli stessi concorrenti — magari attività meno preparate della tua, ma che online sembrano molto più presenti e organizzate? Non è fortuna, e non è nemmeno «magia»: il punto è semplice, oggi se non sei visibile su Google, per il cliente semplicemente non esisti. È come avere un negozio perfetto, aperto però in una strada dove non passa nessuno.",
+];
+
+const faqs: { question: string; answer: string; answerNode?: React.ReactNode }[] = [
+  {
+    question: "Quanto tempo serve perché un sito inizi a comparire su Google?",
+    answer:
+      "Dipende dalla concorrenza nella tua zona e dal punto di partenza, ma servono generalmente alcuni mesi di lavoro costante su contenuti e struttura. Se ti serve visibilità immediata, una campagna Google ADS può coprire il tempo necessario alla SEO per dare risultati.",
+  },
+  {
+    question: "Basta essere su Google Maps per farsi trovare?",
+    answer:
+      "No, ma è una parte fondamentale. Sito web e scheda Google Business Profile devono lavorare insieme: uno curato e l'altro trascurato lascia comunque spazio ai concorrenti.",
+  },
+  {
+    question: "Perché il mio sito è online da mesi ma non arriva nessun contatto?",
+    answer:
+      "Molto spesso perché il sito non è stato costruito attorno alle ricerche reali dei tuoi clienti, o perché manca una struttura pensata per guidare chi lo visita verso un'azione concreta, come contattarti.",
+  },
+  {
+    question: "Come faccio a sapere se il mio sito ha un problema di posizionamento?",
+    answer:
+      "Un'analisi tecnica del sito individua in poco tempo se il problema è strutturale, di contenuti o di velocità: è il primo passo prima di decidere come intervenire.",
+    answerNode: (
+      <>
+        <Link to="/posizionamento-google-e-ai" className="text-accent font-medium hover:underline">
+          Un'analisi tecnica del sito
+        </Link>{" "}
+        individua in poco tempo se il problema è strutturale, di contenuti o di velocità: è il primo passo prima di
+        decidere come intervenire.
+      </>
+    ),
+  },
 ];
 
 const BlogNotFoundOnGoogleArticle = () => {
@@ -57,25 +86,40 @@ const BlogNotFoundOnGoogleArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline,
-            description: pageDescription,
-            image: [pageImage],
-            inLanguage: "it-IT",
-            articleSection,
-            author: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              url: "https://4weblab.it/",
-            },
-            publisher: { "@id": "https://4weblab.it/#business" },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": pageUrl,
-            },
-            url: pageUrl,
-            datePublished,
-            dateModified,
+            "@graph": [
+              {
+                "@type": "BlogPosting",
+                headline,
+                description: pageDescription,
+                image: [pageImage],
+                inLanguage: "it-IT",
+                articleSection,
+                author: {
+                  "@type": "Person",
+                  name: "Carlo Fullin",
+                  url: "https://4weblab.it/",
+                },
+                publisher: { "@id": "https://4weblab.it/#business" },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": pageUrl,
+                },
+                url: pageUrl,
+                datePublished,
+                dateModified,
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -134,11 +178,8 @@ const BlogNotFoundOnGoogleArticle = () => {
             <AnimatedSection className="mx-auto max-w-3xl">
               <div className="rounded-[2rem] border border-border/60 bg-card px-6 py-8 shadow-sm md:px-10 md:py-12">
                 <div className="space-y-6 text-base leading-8 text-foreground md:text-lg">
-                  {introParagraphs.map((paragraph, index) => (
-                    <p
-                      key={paragraph}
-                      className={index === 3 ? "font-semibold text-foreground" : "text-foreground/90"}
-                    >
+                  {introParagraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-foreground/90">
                       {paragraph}
                     </p>
                   ))}
@@ -156,30 +197,24 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Hai un sito ma non compare su Google</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Molti imprenditori pensano che basti avere un sito per ricevere contatti.</p>
-                    <p>In realtà, un sito senza posizionamento è invisibile.</p>
-                    <p>Se Google non capisce cosa fai e a chi ti rivolgi, non può mostrarti nei risultati di ricerca.</p>
                     <p>
-                      E questo significa finire nelle pagine che nessuno guarda. Spesso il problema non è solo
-                      tecnico: è strutturale, ed è uno dei{" "}
+                      Molti imprenditori pensano che basti avere un sito per iniziare a ricevere contatti. In realtà,
+                      un sito senza un vero posizionamento è, agli occhi di chi cerca, praticamente invisibile: se
+                      Google non capisce con chiarezza cosa fai e a chi ti rivolgi, non ha modo di mostrarti nei
+                      risultati di ricerca — e questo significa finire in pagine che nessuno guarda mai. Spesso il
+                      problema non è nemmeno solo tecnico, è strutturale: è uno dei{" "}
                       <Link
                         to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
                         className="text-accent font-medium hover:underline"
                       >
                         segnali tipici di un sito ormai obsoleto
                       </Link>
-                      .
-                    </p>
-                    <p>Avere un sito è solo il primo passo. Il vero obiettivo è farsi trovare.</p>
-                    <p>
-                      Per chi non può aspettare i tempi della SEO, una scorciatoia concreta è{" "}
-                      <Link
-                        to="/pubblicita-google-ads"
-                        className="text-accent font-medium hover:underline"
-                      >
+                      . Avere un sito, in fondo, è solo il primo passo. Il vero obiettivo è farsi trovare — e per chi
+                      non può aspettare i tempi naturali della SEO, una scorciatoia concreta è{" "}
+                      <Link to="/pubblicita-google-ads" className="text-accent font-medium hover:underline">
                         investire in pubblicità su Google ADS
-                      </Link>{" "}
-                      e iniziare a comparire da subito sopra ai risultati organici.
+                      </Link>
+                      , per iniziare a comparire da subito sopra ai risultati organici.
                     </p>
                   </div>
                 </article>
@@ -190,21 +225,23 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Le persone cercano servizi, non il nome della tua attività</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>A meno che tu non sia già conosciuto, nessuno cercherà il nome della tua azienda su Google.</p>
-                    <p>Le persone cercano soluzioni ai loro problemi.</p>
                     <p>
-                      Chi ha bisogno di un servizio scrive frasi semplici e dirette, spesso legate alla propria zona
-                      — pensa ad esempio a chi cerca un'{" "}
+                      A meno che tu non sia già un'attività conosciuta, difficilmente qualcuno cercherà il nome della
+                      tua azienda su Google. Le persone cercano soluzioni ai loro problemi, e chi ha bisogno di un
+                      servizio scrive frasi semplici e dirette, spesso legate alla propria zona — pensa a chi cerca
+                      un'{" "}
                       <Link to="/realizzazione-siti-web-padova" className="text-accent font-medium hover:underline">
                         agenzia web a Padova
                       </Link>{" "}
-                      invece del nome di uno studio specifico.
+                      invece del nome di uno studio specifico che magari non conosce nemmeno. Se il tuo sito non
+                      contiene queste ricerche reali — quelle che fa davvero chi ha bisogno di te — Google
+                      semplicemente non ha modo di collegarti a quella persona, e di conseguenza non ti mostrerà mai.
+                      È esattamente il lavoro che serve per costruire{" "}
+                      <Link to="/posizionamento-google-e-ai" className="text-accent font-medium hover:underline">
+                        un vero posizionamento su Google
+                      </Link>
+                      , pensato per la tua zona e per il tuo settore specifico.
                     </p>
-                    <p>
-                      Se il tuo sito non contiene queste ricerche reali, Google non ha modo di collegarti a chi sta
-                      cercando proprio quello che fai.
-                    </p>
-                    <p>E di conseguenza, non ti mostrerà.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -215,16 +252,13 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <h2 className="heading-3 text-foreground">Google Maps: dove nascono molti contatti</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
                     <p>
-                      Quando una persona cerca un servizio locale, molto spesso la prima cosa che vede è la mappa con
-                      le attività nella zona.
+                      Quando una persona cerca un servizio locale, molto spesso la prima cosa che vede non è nemmeno
+                      l'elenco dei siti, ma la mappa con le attività della zona — ed è diventata una delle principali
+                      fonti di contatto reale oggi. Se non sei presente lì, o se la tua scheda non è curata nei
+                      dettagli, stai semplicemente lasciando spazio ai tuoi concorrenti diretti. Sito web e presenza su
+                      Google Maps devono lavorare insieme, come due metà dello stesso lavoro: se anche uno solo dei due
+                      viene trascurato, la visibilità che perdi si traduce in clienti che vanno da qualcun altro.
                     </p>
-                    <p>Quella è una delle principali fonti di contatto oggi.</p>
-                    <p>
-                      Se non sei presente o se la tua scheda non è curata, stai lasciando spazio diretto ai tuoi
-                      concorrenti.
-                    </p>
-                    <p>Sito web e presenza su Google Maps devono lavorare insieme.</p>
-                    <p>Se uno dei due è trascurato, perdi visibilità.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -234,17 +268,20 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Se il sito è lento, gli utenti se ne vanno</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>La velocità è uno dei fattori più sottovalutati.</p>
-                    <p>Se una pagina impiega troppo a caricarsi, l'utente non aspetta.</p>
-                    <p>Chiude e passa al sito successivo.</p>
-                    <p>Google osserva questo comportamento e lo usa per capire se il tuo sito è valido oppure no.</p>
                     <p>
-                      Un sito lento non solo fa scappare le persone, ma scende anche nei risultati di ricerca. È
-                      anche per questo che ha senso{" "}
-                      <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent font-medium hover:underline">
+                      La velocità è uno dei fattori più sottovalutati di tutti. Se una pagina impiega troppo a
+                      caricarsi, chi la visita semplicemente non aspetta: chiude e passa al sito successivo, spesso
+                      quello di un concorrente. Google osserva questo comportamento e lo usa concretamente per capire
+                      se il tuo sito merita di essere mostrato oppure no — un sito lento non solo fa scappare le
+                      persone, ma scende anche nei risultati di ricerca nel tempo. È anche per questo motivo che ha
+                      senso{" "}
+                      <Link
+                        to="/blog/quanto-costa-un-sito-web-nel-2026"
+                        className="text-accent font-medium hover:underline"
+                      >
                         investire in un sito ben fatto
-                      </Link>
-                      , invece di ripiegare su soluzioni improvvisate.
+                      </Link>{" "}
+                      fin dall'inizio, invece di ripiegare su soluzioni improvvisate che poi si pagano due volte.
                     </p>
                   </div>
                 </article>
@@ -256,21 +293,20 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <h2 className="heading-3 text-foreground">Un sito fatto “da solo” spesso non basta</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
                     <p>
-                      Oggi esistono molti strumenti per creare un sito in autonomia, compresi i generatori basati su{" "}
+                      Oggi esistono moltissimi strumenti per creare un sito in autonomia, compresi i generatori basati
+                      su{" "}
                       <Link
                         to="/blog/siti-web-creati-con-intelligenza-artificiale"
                         className="text-accent font-medium hover:underline"
                       >
                         intelligenza artificiale
                       </Link>
-                      .
+                      . Il problema è che un sito non deve solo essere online: deve funzionare. Deve essere strutturato
+                      in modo che Google lo capisca, e in modo da guidare chi lo visita verso un'azione concreta. Un
+                      sito fatto senza una vera strategia dietro può anche essere esteticamente bello, ma se non porta
+                      contatti, semplicemente non serve — e il tempo che hai investito per costruirlo diventa, di
+                      fatto, tempo perso.
                     </p>
-                    <p>Il problema è che un sito non deve solo essere online, deve funzionare.</p>
-                    <p>
-                      Deve essere strutturato per essere capito da Google e per guidare l'utente verso un'azione.
-                    </p>
-                    <p>Un sito fatto senza strategia può anche essere bello, ma se non porta contatti, non serve.</p>
-                    <p>E il tempo investito diventa tempo perso.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -280,15 +316,45 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Conclusione</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Essere su Google non è questione di fortuna.</p>
-                    <p>È una questione di struttura, chiarezza e strategia.</p>
                     <p>
-                      Se il tuo sito oggi non si trova, non significa che non funzioni il tuo lavoro.
+                      Essere su Google non è mai questione di fortuna. È una questione di struttura, chiarezza e
+                      strategia messe insieme. Se il tuo sito oggi non si trova, non significa che il tuo lavoro non
+                      funzioni: significa semplicemente che il sito non è stato costruito per essere trovato. E nel
+                      digitale, chi non si vede lascia semplicemente spazio a chi si vede al posto suo.
                     </p>
-                    <p>Significa semplicemente che non è stato costruito per essere trovato.</p>
-                    <p>E nel digitale, chi non si vede, lascia spazio agli altri.</p>
                   </div>
                 </article>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="mx-auto max-w-3xl">
+              <AnimatedSection className="mb-6 flex items-center gap-4">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sulla visibilità su Google</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={faq.question}
+                      value={`faq-not-found-google-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="py-5 text-left hover:no-underline">
+                        <span className="pr-4 text-base font-semibold text-foreground">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer pb-5 text-sm leading-relaxed text-muted-foreground">
+                        {faq.answerNode ?? faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </AnimatedSection>
             </div>
           </div>
@@ -307,7 +373,7 @@ const BlogNotFoundOnGoogleArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una valutazione gratuita
+                  Richiedi Preventivo Gratuito in 24h
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
