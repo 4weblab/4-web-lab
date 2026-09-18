@@ -184,7 +184,7 @@ const BlogArubaSupersiteArticle = () => {
     <>
       <Helmet>
         <title>Aruba SuperSite Conviene? Limiti e Alternative 2026</title>
-        <meta name="description" content="Stai valutando Aruba SuperSite? Analizziamo limiti tecnici, costi nascosti e perché un sito fai-da-te rischia di bloccare la tua attività." />
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="article" />
