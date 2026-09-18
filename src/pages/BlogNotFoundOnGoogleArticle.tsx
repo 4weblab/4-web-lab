@@ -268,17 +268,20 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Se il sito è lento, gli utenti se ne vanno</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>La velocità è uno dei fattori più sottovalutati.</p>
-                    <p>Se una pagina impiega troppo a caricarsi, l'utente non aspetta.</p>
-                    <p>Chiude e passa al sito successivo.</p>
-                    <p>Google osserva questo comportamento e lo usa per capire se il tuo sito è valido oppure no.</p>
                     <p>
-                      Un sito lento non solo fa scappare le persone, ma scende anche nei risultati di ricerca. È
-                      anche per questo che ha senso{" "}
-                      <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent font-medium hover:underline">
+                      La velocità è uno dei fattori più sottovalutati di tutti. Se una pagina impiega troppo a
+                      caricarsi, chi la visita semplicemente non aspetta: chiude e passa al sito successivo, spesso
+                      quello di un concorrente. Google osserva questo comportamento e lo usa concretamente per capire
+                      se il tuo sito merita di essere mostrato oppure no — un sito lento non solo fa scappare le
+                      persone, ma scende anche nei risultati di ricerca nel tempo. È anche per questo motivo che ha
+                      senso{" "}
+                      <Link
+                        to="/blog/quanto-costa-un-sito-web-nel-2026"
+                        className="text-accent font-medium hover:underline"
+                      >
                         investire in un sito ben fatto
-                      </Link>
-                      , invece di ripiegare su soluzioni improvvisate.
+                      </Link>{" "}
+                      fin dall'inizio, invece di ripiegare su soluzioni improvvisate che poi si pagano due volte.
                     </p>
                   </div>
                 </article>
