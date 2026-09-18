@@ -1,22 +1,18 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, HelpCircle } from "lucide-react";
 import type { ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogWebsiteCost from "@/assets/blog-website-cost.webp";
 
 const introParagraphs = [
-  "Nel 2026 una delle domande più frequenti per chi vuole creare un sito web è sempre la stessa:",
-  "Quanto costa davvero un sito web?",
-  "La risposta breve è: dipende.",
-  "La risposta reale, invece, è più interessante.",
-  "Oggi il prezzo di un sito web può variare da poche centinaia di euro fino a diverse migliaia, a seconda di come viene progettato, da chi viene realizzato e soprattutto da cosa deve fare.",
-  "In questa guida vediamo i costi reali, cosa li influenza e quanto ha senso investire in base al tipo di attività.",
+  "«Quanto costa un sito web?» è probabilmente la domanda che ti sei fatto per primo, prima ancora di iniziare a valutare chi farlo fare. Ed è comprensibile: online trovi risposte che vanno da poche centinaia di euro a diverse migliaia, senza che nessuno ti spieghi davvero perché la forbice sia così larga. La risposta breve — «dipende» — è vera ma inutile. Quella reale è più interessante, e soprattutto più utile per te: il prezzo di un sito cambia in base a chi sei, cosa vendi e dove operi. Un sito per un negozio a Padova non ha lo stesso bisogno di un ambulatorio medico o di uno studio di consulenza, e nemmeno lo stesso budget sensato. In questa guida trovi i prezzi reali che applichiamo, cosa li determina, e — soprattutto — quanto ha senso spendere per la tua attività specifica, non per un'attività generica da manuale.",
 ];
 
 const linkClass = "text-accent font-medium hover:underline";
@@ -26,34 +22,21 @@ type Section = {
   paragraphs?: ReactNode[];
   bullets?: string[];
   closing?: ReactNode[];
-  subSections?: { title: string; price: string; paragraphs: string[] }[];
+  subSections?: { title: string; to?: string; price: string; paragraphs: string[] }[];
 };
 
 const sections: Section[] = [
   {
     title: "Da cosa dipende il costo di un sito web",
     paragraphs: [
-      "Il prezzo di un sito web non è casuale. Dipende da diversi fattori concreti.",
-      "Il primo è la struttura. Un sito semplice con poche pagine ha un costo molto diverso rispetto a un sito più articolato, con più sezioni e contenuti.",
-      "Il secondo è il livello di personalizzazione. Template standard e soluzioni automatiche costano meno, mentre un sito progettato su misura richiede più lavoro.",
-      "Un altro fattore è il contenuto. Testi scritti bene, immagini curate e una struttura pensata per l’utente fanno la differenza, ma incidono sul prezzo.",
-      "Infine, c’è la strategia. Un sito creato solo per “esserci” costa meno rispetto a un sito progettato per portare contatti e clienti.",
+      "Il prezzo che ti verrà proposto per il tuo sito dipende sostanzialmente da quattro fattori, e conoscerli ti aiuta a distinguere subito un preventivo onesto da uno gonfiato — o, al contrario, da uno troppo basso per essere reale.",
+      "Il primo è la struttura: un sito con poche pagine essenziali costa ovviamente meno di un progetto più articolato, con più sezioni, contenuti e funzionalità. Il secondo è il livello di personalizzazione — un template standard, magari generato automaticamente, costa meno di un sito progettato su misura per la tua attività specifica, perché richiede meno lavoro reale dietro. Il terzo fattore è il contenuto: testi scritti pensando a te e ai tuoi clienti, immagini curate, una struttura pensata per chi ti legge, richiedono tempo e competenza, e quel tempo si paga. Il quarto, il più sottovalutato, è la strategia: un sito pensato solo per «esserci» online costa meno di un sito progettato per portarti contatti e clienti veri — e non è un caso che i due valgano prezzi molto diversi.",
     ],
   },
   {
     title: "Quanto costa un sito web nel 2026 in Italia",
     paragraphs: [
-      "Nel mercato italiano, i prezzi sono molto variabili.",
-      "Un sito web può costare:",
-    ],
-    bullets: [
-      "200–400€ per soluzioni molto basilari o fai-da-te",
-      "500–1500€ per siti realizzati da freelance o piccole realtà",
-      "1500€+ per progetti più strutturati o agenzie",
-    ],
-    closing: [
-      "Queste cifre cambiano in base a qualità, struttura e obiettivi.",
-      "Il problema è che spesso chi acquista non sa cosa sta realmente comprando.",
+      "Nel mercato italiano oggi trovi di tutto: si va dalle 200-400€ di soluzioni fai-da-te o piattaforme automatiche, ai 500-1.500€ di un freelance o una piccola realtà, fino a oltre 1.500€ per un progetto più strutturato seguito da un'agenzia. Il problema non è la forbice in sé, ma che spesso chi acquista non sa cosa sta davvero comprando — e scopre i limiti solo quando il sito è già online e non porta risultati.",
     ],
   },
   {
@@ -64,26 +47,26 @@ const sections: Section[] = [
     subSections: [
       {
         title: "Sito web per negozi",
+        to: "/siti-web-per-negozi",
         price: "490€",
         paragraphs: [
-          "Un sito per negozi ha l’obiettivo principale di presentare prodotti, servizi e informazioni in modo chiaro e accessibile.",
-          "È una soluzione pensata per avere una presenza online efficace, senza complicazioni inutili.",
+          "Se hai un negozio — di quartiere o specializzato — il tuo sito ha un obiettivo preciso: far capire in un colpo d'occhio cosa vendi, dove sei e come raggiungerti. Non ti serve una struttura complessa: ti serve una vetrina digitale chiara, veloce da consultare da telefono, che risponda alle domande più immediate di chi ti sta cercando nella tua zona.",
         ],
       },
       {
         title: "Sito web per professionisti",
+        to: "/siti-web-per-professionisti",
         price: "990€",
         paragraphs: [
-          "Per consulenti, liberi professionisti e attività individuali, il sito deve trasmettere fiducia e competenza.",
-          "In questo caso, la struttura è orientata a valorizzare la persona e facilitare il contatto.",
+          "Se lavori come consulente, libero professionista, osteopata o in una qualunque attività dove il cliente sceglie te prima ancora del servizio, il sito deve fare un lavoro diverso: trasmettere competenza e fiducia fin dal primo secondo. La struttura è pensata per valorizzare la tua figura professionale e rendere naturale il passo successivo — contattarti.",
         ],
       },
       {
         title: "Sito web aziendale",
+        to: "/siti-web-aziendali",
         price: "1890€",
         paragraphs: [
-          "Per aziende strutturate, il sito diventa uno strumento più completo: presentazione, servizi, posizionamento e acquisizione contatti.",
-          "Il costo varia in base alla complessità del progetto e agli obiettivi.",
+          "Se la tua azienda è già strutturata, con più servizi o reparti da presentare, il sito diventa uno strumento più completo: deve raccontare chi sei, cosa fai, posizionarti rispetto alla concorrenza e generare contatti in modo continuativo. Il costo riflette la complessità reale del progetto, non una tariffa arbitraria.",
         ],
       },
     ],
@@ -91,48 +74,29 @@ const sections: Section[] = [
   {
     title: "Perché alcuni siti costano molto di più",
     paragraphs: [
-      "È normale trovare preventivi molto più alti rispetto a queste cifre.",
-      "Questo succede perché entrano in gioco altri fattori:",
-    ],
-    bullets: [
-      "sviluppo completamente su misura",
-      "funzionalità avanzate",
-      "integrazioni particolari",
-      "team più grandi coinvolti nel progetto",
-    ],
-    closing: [
-      "In alcuni casi è giustificato. In altri, si paga più del necessario rispetto ai reali bisogni dell’attività.",
+      "È normale imbattersi in preventivi molto più alti di queste cifre, e non è necessariamente un campanello d'allarme. Spesso il costo sale perché entrano in gioco sviluppo completamente su misura, funzionalità avanzate, integrazioni particolari con altri sistemi, o un team più ampio coinvolto nel progetto. In alcuni casi questo extra è pienamente giustificato dalla complessità reale di ciò che serve. In altri, però, si finisce per pagare più del necessario rispetto ai bisogni concreti dell'attività — motivo per cui vale sempre la pena farsi spiegare, voce per voce, cosa giustifica la differenza di prezzo.",
     ],
   },
   {
     title: "Quanto ha senso spendere davvero",
     paragraphs: [
-      "La domanda giusta non è “quanto costa”, ma:",
-      "Quanto ha senso investire per la mia attività?",
-      "Se il sito serve solo come presenza base, non ha senso spendere cifre elevate.",
-      "Se invece deve portare clienti, allora diventa un investimento e va progettato in modo più strategico.",
-      "L’obiettivo deve essere sempre uno: ottenere un ritorno, non semplicemente avere un sito online.",
+      "La domanda giusta, a questo punto, non è più «quanto costa», ma quanto ha senso investire per la tua attività specifica. Se il sito ti serve solo come presenza base — una carta d'identità online — non ha senso spendere cifre elevate. Se invece deve portarti clienti in modo attivo, allora diventa un investimento vero e proprio, e va progettato con una logica diversa. L'obiettivo, in entrambi i casi, resta lo stesso: ottenere un ritorno, non semplicemente avere un sito online che esiste e basta.",
     ],
   },
   {
     title: "Il rischio dei prezzi troppo bassi",
-    paragraphs: [
-      "Prezzi molto bassi possono sembrare vantaggiosi, ma spesso nascondono limiti importanti:",
-    ],
-    bullets: [
-      "siti generici e poco curati",
-      "nessuna strategia",
-      "contenuti deboli",
-      "scarsa efficacia nel generare contatti",
-    ],
     closing: [
       <>
-        Un sito economico che non porta risultati è, di fatto, un costo inutile. È lo stesso rischio
-        che si corre con i{" "}
+        Un prezzo molto basso può sembrare vantaggioso sulla carta, ma spesso nasconde limiti che si
+        pagano più avanti: siti generici e poco curati, nessuna strategia dietro le scelte fatte,
+        contenuti deboli che non convincono nessuno, e di conseguenza scarsa capacità di generare
+        contatti reali. Un sito economico che non porta risultati è, di fatto, un costo inutile — lo
+        stesso rischio che si corre con i{" "}
         <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className={linkClass}>
           siti generati con intelligenza artificiale
         </Link>
-        : sembrano un affare, ma spesso restano una vetrina vuota. Quando il budget invece c'è, ha più senso destinarlo a un sito ben fatto e a{" "}
+        : sembrano un affare, ma spesso restano una vetrina vuota. Quando il budget invece c'è, ha
+        più senso destinarlo a un sito ben fatto e, se serve accelerare i risultati, a{" "}
         <Link to="/pubblicita-google-ads" className={linkClass}>
           campagne Google ADS gestite con criterio
         </Link>
@@ -141,22 +105,34 @@ const sections: Section[] = [
     ],
   },
   {
-    title: "Conclusione",
-    paragraphs: [
-      "Nel 2026 creare un sito web è più accessibile che mai.",
-      "Ma questo non significa che tutte le soluzioni siano uguali.",
-      "Il costo giusto è quello che ti permette di avere un sito:",
-    ],
-    bullets: [
-      "credibile",
-      "chiaro",
-      "utile per la tua attività",
-    ],
+    title: "Un'ultima cosa, se operi a Padova",
     closing: [
       <>
-        Senza spendere più del necessario, ma senza nemmeno scendere a compromessi che ti fanno
-        perdere opportunità — gli stessi compromessi che, col tempo, trasformano un sito nuovo in
-        uno di quei{" "}
+        Un'ultima considerazione, se operi a Padova o nei comuni limitrofi: il prezzo giusto per te
+        dipende anche da quanta concorrenza trovi già online nella tua zona. Se il tuo settore è già
+        presidiato da chi ha un sito ben posizionato, investire nel minimo indispensabile rischia di
+        lasciarti comunque invisibile. Puoi farti un'idea più precisa guardando la nostra pagina
+        dedicata a{" "}
+        <Link to="/realizzazione-siti-web-padova" className={linkClass}>
+          chi realizza siti web a Padova
+        </Link>{" "}
+        o consultando le{" "}
+        <Link to="/zone-servite" className={linkClass}>
+          zone in cui operiamo
+        </Link>
+        .
+      </>,
+    ],
+  },
+  {
+    title: "Conclusione",
+    closing: [
+      <>
+        Nel 2026 creare un sito web è più accessibile che mai, ma questo non significa che tutte le
+        soluzioni si equivalgano. Il prezzo giusto è quello che ti permette di avere un sito
+        credibile, chiaro e realmente utile per la tua attività — senza spendere più del necessario,
+        ma senza nemmeno scendere a compromessi che, col tempo, ti fanno perdere opportunità. Sono
+        proprio quei compromessi, spesso, a trasformare un sito nuovo in uno di quei{" "}
         <Link
           to="/blog/sito-web-obsoleto-5-segnali-che-ti-stanno-facendo-perdere-clienti-nel-2026"
           className={linkClass}
@@ -169,10 +145,32 @@ const sections: Section[] = [
   },
 ];
 
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "Quanto costa un sito web per un negozio a Padova?",
+    answer:
+      "Un sito per negozio parte da 490€ una tantum. Il prezzo può salire leggermente se nella tua zona la concorrenza online è già forte e serve un lavoro più mirato sul posizionamento locale, ma per la maggior parte delle attività di quartiere questa fascia copre già tutto il necessario.",
+  },
+  {
+    question: "Quanto costa un sito per un professionista, ad esempio un consulente o un osteopata?",
+    answer:
+      "Un sito per professionisti parte da 990€ una tantum. Rispetto a un sito per negozio, richiede più lavoro sulla struttura pensata per trasmettere fiducia e competenza, elementi decisivi quando il cliente sceglie te prima ancora del servizio.",
+  },
+  {
+    question: "Perché un sito economico può costare di più nel tempo?",
+    answer:
+      "Perché un sito che non genera contatti è un costo, non un investimento: continui a pagarlo (in hosting, dominio, tempo) senza ottenere nulla in cambio. Un sito ben progettato, anche se costa di più all'inizio, si ripaga con i clienti che porta.",
+  },
+  {
+    question: "Conviene chiedere un preventivo prima di decidere?",
+    answer:
+      "Sì, sempre. Un preventivo chiaro ti permette di capire esattamente cosa stai pagando — struttura, contenuti, strategia — prima di scegliere, evitando sia di spendere troppo sia di sottovalutare cosa ti serve davvero.",
+  },
+];
+
 const BlogWebsiteCostArticle = () => {
-  const pageTitle = "Quanto costa un sito web nel 2026? Prezzi reali in Italia";
   const pageDescription =
-    "Scopri quanto costa davvero un sito web nel 2026 per aziende, professionisti e negozi. Prezzi chiari e cosa aspettarti davvero.";
+    "Quanto spenderai davvero per il tuo sito nel 2026 dipende da cosa deve fare per la tua attività. Prezzi reali, senza sorprese: da 490€ a soluzioni su misura.";
   const pageUrl = "https://4weblab.it/blog/quanto-costa-un-sito-web-nel-2026";
   const pageImage = `https://4weblab.it${blogWebsiteCost}`;
   const articleData = getArticleBySlug("quanto-costa-un-sito-web-nel-2026");
@@ -186,13 +184,13 @@ const BlogWebsiteCostArticle = () => {
     <>
       <Helmet>
         <title>Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia</title>
-        <meta name="description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia" />
-        <meta property="og:description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -203,30 +201,45 @@ const BlogWebsiteCostArticle = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content="Quanto Costa un Sito Web nel 2026? Listino Prezzi Italia" />
-        <meta name="twitter:description" content="Prezzi reali 2026 per la realizzazione di siti web: da 490€ per negozi fino ai progetti aziendali PMI. Guida trasparente ai costi." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline,
-            description: pageDescription,
-            image: [pageImage],
-            inLanguage: "it-IT",
-            articleSection,
-            author: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              url: "https://4weblab.it/",
-            },
-            publisher: { "@id": "https://4weblab.it/#business" },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": pageUrl,
-            },
-            url: pageUrl,
-            datePublished,
-            dateModified,
+            "@graph": [
+              {
+                "@type": "BlogPosting",
+                headline,
+                description: pageDescription,
+                image: [pageImage],
+                inLanguage: "it-IT",
+                articleSection,
+                author: {
+                  "@type": "Person",
+                  name: "Carlo Fullin",
+                  url: "https://4weblab.it/",
+                },
+                publisher: { "@id": "https://4weblab.it/#business" },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": pageUrl,
+                },
+                url: pageUrl,
+                datePublished,
+                dateModified,
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -285,15 +298,8 @@ const BlogWebsiteCostArticle = () => {
             <AnimatedSection className="mx-auto max-w-3xl">
               <div className="rounded-[2rem] border border-border/60 bg-card px-6 py-8 shadow-sm md:px-10 md:py-12">
                 <div className="space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                  {introParagraphs.map((paragraph, index) => (
-                    <p
-                      key={paragraph}
-                      className={
-                        index === 1 || index === 3
-                          ? "font-semibold text-foreground"
-                          : "text-foreground/90"
-                      }
-                    >
+                  {introParagraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-foreground/90">
                       {paragraph}
                     </p>
                   ))}
@@ -351,7 +357,15 @@ const BlogWebsiteCostArticle = () => {
                           <div key={subSection.title} className="rounded-2xl bg-muted/35 p-5 md:p-6">
                             <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
                               <div>
-                                <h3 className="text-xl font-semibold text-foreground">{subSection.title}</h3>
+                                <h3 className="text-xl font-semibold text-foreground">
+                                  {subSection.to ? (
+                                    <Link to={subSection.to} className={linkClass}>
+                                      {subSection.title}
+                                    </Link>
+                                  ) : (
+                                    subSection.title
+                                  )}
+                                </h3>
                                 <p className="mt-2 text-sm font-semibold uppercase tracking-wide text-accent">
                                   Prezzo a partire da
                                 </p>
@@ -374,6 +388,37 @@ const BlogWebsiteCostArticle = () => {
           </div>
         </section>
 
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="mx-auto max-w-3xl">
+              <AnimatedSection className="mb-6 flex items-center gap-4">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sul costo di un sito web</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={faq.question}
+                      value={`faq-website-cost-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="py-5 text-left hover:no-underline">
+                        <span className="pr-4 text-base font-semibold text-foreground">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer pb-5 text-sm leading-relaxed text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
         <RelatedArticles currentSlug="quanto-costa-un-sito-web-nel-2026" />
 
         <section className="section-padding bg-background">
@@ -386,7 +431,7 @@ const BlogWebsiteCostArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una valutazione gratuita
+                  Richiedi Preventivo Gratuito in 24h
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>

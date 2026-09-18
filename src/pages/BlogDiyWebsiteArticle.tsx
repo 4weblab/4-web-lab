@@ -1,28 +1,46 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { ArrowRight, Calendar, Clock, HelpCircle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogDiyWebsite from "@/assets/blog-creare-sito-da-soli.webp";
 
 const introParagraphs = [
-  "Stai pensando di creare un sito web da solo?",
-  "Magari hai cercato “come creare un sito web gratis” oppure hai visto che WordPress è indicato ovunque come la soluzione migliore.",
-  "E in effetti, oggi mettere online un sito è facile.",
-  "Il problema è un altro.",
-  "Un sito web non serve a esistere, serve a portare clienti.",
-  "Ed è qui che il fai-da-te, nella maggior parte dei casi, si trasforma in una perdita di tempo e di opportunità.",
+  "Stai pensando di creare un sito web da solo? Magari hai cercato «come creare un sito web gratis», oppure hai letto ovunque che WordPress è la soluzione più semplice per iniziare. E in effetti, oggi mettere online un sito è più facile che mai. Il problema, però, è un altro: un sito non ti serve per esistere su internet, ti serve per portarti clienti. Ed è proprio qui che il fai-da-te, nella maggior parte dei casi, rischia di trasformarsi in una perdita di tempo — e di opportunità che potevi cogliere.",
+];
+
+const faqs: { question: string; answer: string }[] = [
+  {
+    question: "Conviene creare un sito web da soli con WordPress?",
+    answer:
+      "Dipende dal tuo obiettivo. Se vuoi solo fare esperienza o testare un'idea, può avere senso. Se invece il sito deve portarti clienti in modo costante, la gestione tecnica e la mancanza di una strategia reale spesso vanificano il risparmio iniziale.",
+  },
+  {
+    question: "Quanto tempo serve per creare un sito web da soli?",
+    answer:
+      "Anche per un sito semplice, tra scelta della piattaforma, personalizzazione, testi e configurazioni tecniche, si parla facilmente di diverse settimane di lavoro — tempo che nel frattempo non dedichi alla tua attività.",
+  },
+  {
+    question: "Un sito fatto da solo può comunque essere trovato su Google?",
+    answer:
+      "Tecnicamente sì, ma raramente per le ricerche che contano davvero. Senza una strategia SEO pensata per la tua attività e la tua zona, il sito resta online ma difficilmente compare tra i primi risultati.",
+  },
+  {
+    question: "Chi può costruire un sito web al posto mio se non ho tempo?",
+    answer:
+      "Un'agenzia come 4 Web Lab gestisce l'intero processo — strategia, testi, struttura tecnica e SEO — lasciandoti libero di occuparti della tua attività invece che del sito.",
+  },
 ];
 
 const BlogDiyWebsiteArticle = () => {
   const slug = "creare-sito-web-da-soli-conviene";
-  const pageTitle = "Creare sito web da soli: conviene davvero nel 2026?";
   const pageDescription =
-    "Vuoi creare un sito web da solo con WordPress o altri strumenti? Scopri rischi, costi reali e perché spesso non porta clienti.";
+    "Vuoi creare il sito della tua attività da solo con WordPress o un builder visuale? Scopri prima cosa rischi davvero e quanto ti costa in tempo e clienti persi.";
   const pageUrl = `https://4weblab.it/blog/${slug}`;
   const pageImage = `https://4weblab.it${blogDiyWebsite}`;
   const articleData = getArticleBySlug(slug);
@@ -36,13 +54,13 @@ const BlogDiyWebsiteArticle = () => {
     <>
       <Helmet>
         <title>Creare un Sito Web da Soli Conviene? Rischi e Costi</title>
-        <meta name="description" content="Creare un sito con Wix o WordPress da soli fa davvero risparmiare? Scopri i costi nascosti, i rischi SEO e la perdita di clienti reali." />
+        <meta name="description" content={pageDescription} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={pageUrl} />
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Creare un Sito Web da Soli Conviene? Rischi e Costi" />
-        <meta property="og:description" content="Creare un sito con Wix o WordPress da soli fa davvero risparmiare? Scopri i costi nascosti, i rischi SEO e la perdita di clienti reali." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
@@ -53,30 +71,45 @@ const BlogDiyWebsiteArticle = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content={pageUrl} />
         <meta name="twitter:title" content="Creare un Sito Web da Soli Conviene? Rischi e Costi" />
-        <meta name="twitter:description" content="Creare un sito con Wix o WordPress da soli fa davvero risparmiare? Scopri i costi nascosti, i rischi SEO e la perdita di clienti reali." />
+        <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline,
-            description: pageDescription,
-            image: [pageImage],
-            inLanguage: "it-IT",
-            articleSection,
-            author: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              url: "https://4weblab.it/",
-            },
-            publisher: { "@id": "https://4weblab.it/#business" },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": pageUrl,
-            },
-            url: pageUrl,
-            datePublished,
-            dateModified,
+            "@graph": [
+              {
+                "@type": "BlogPosting",
+                headline,
+                description: pageDescription,
+                image: [pageImage],
+                inLanguage: "it-IT",
+                articleSection,
+                author: {
+                  "@type": "Person",
+                  name: "Carlo Fullin",
+                  url: "https://4weblab.it/",
+                },
+                publisher: { "@id": "https://4weblab.it/#business" },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": pageUrl,
+                },
+                url: pageUrl,
+                datePublished,
+                dateModified,
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ],
           })}
         </script>
       </Helmet>
@@ -135,11 +168,8 @@ const BlogDiyWebsiteArticle = () => {
             <AnimatedSection className="mx-auto max-w-3xl">
               <div className="rounded-[2rem] border border-border/60 bg-card px-6 py-8 shadow-sm md:px-10 md:py-12">
                 <div className="space-y-6 text-base leading-8 text-foreground md:text-lg">
-                  {introParagraphs.map((paragraph, index) => (
-                    <p
-                      key={paragraph}
-                      className={index === 4 ? "font-semibold text-foreground" : "text-foreground/90"}
-                    >
+                  {introParagraphs.map((paragraph) => (
+                    <p key={paragraph} className="text-foreground/90">
                       {paragraph}
                     </p>
                   ))}
@@ -158,23 +188,27 @@ const BlogDiyWebsiteArticle = () => {
                   <h2 className="heading-3 text-foreground">Creare un sito web da soli è davvero così semplice?</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
                     <p>
-                      Piattaforme come WordPress, builder visuali e{" "}
+                      Piattaforme come WordPress,{" "}
+                      <Link
+                        to="/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere"
+                        className="text-accent font-medium hover:underline"
+                      >
+                        piattaforme preconfezionate come Aruba SuperSite
+                      </Link>
+                      , builder visuali e{" "}
                       <Link
                         to="/blog/siti-web-creati-con-intelligenza-artificiale"
                         className="text-accent font-medium hover:underline"
                       >
                         strumenti automatici basati sull'intelligenza artificiale
                       </Link>{" "}
-                      promettono semplicità.
+                      promettono tutte la stessa cosa: semplicità. E in parte è vero — con pochi click puoi avere un
+                      sito online, con un design accettabile e qualche pagina già pronta. Il punto è che questo è solo
+                      l'inizio del lavoro, non la fine. Un sito web non è soltanto una grafica da scegliere: è un
+                      insieme di elementi che devono funzionare insieme — velocità di caricamento, struttura logica,
+                      contenuti scritti bene, chiarezza per chi legge. E senza esperienza specifica, questi aspetti
+                      vengono quasi sempre trascurati, anche senza che tu te ne accorga subito.
                     </p>
-                    <p>E in parte è vero.</p>
-                    <p>Con pochi click puoi avere un sito online, con un design accettabile e qualche pagina pronta.</p>
-                    <p>Il punto è che questo è solo l'inizio.</p>
-                    <p>
-                      Un sito web non è solo una grafica, ma un insieme di elementi che devono funzionare insieme:
-                      velocità, struttura, contenuti, chiarezza.
-                    </p>
-                    <p>E senza esperienza, questi aspetti vengono quasi sempre trascurati.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -184,15 +218,15 @@ const BlogDiyWebsiteArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Il problema nascosto di WordPress e dei siti fai-da-te</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>WordPress è uno strumento potente.</p>
-                    <p>Ma proprio per questo non è automatico.</p>
                     <p>
-                      Senza sapere come configurarlo correttamente, il risultato è spesso un sito lento, pieno di
-                      plugin inutili, difficile da gestire e vulnerabile dal punto di vista della sicurezza.
+                      WordPress è, va detto, uno strumento potente — ed è proprio per questo che non è automatico da
+                      usare bene. Senza sapere come configurarlo correttamente, il risultato più comune è un sito
+                      lento, appesantito da plugin inutili, difficile da gestire nel tempo e vulnerabile dal punto di
+                      vista della sicurezza. Il problema, in questi casi, non è mai lo strumento in sé, ma l'uso che se
+                      ne fa: un sito costruito senza criterio può sembrare perfettamente funzionante in superficie,
+                      mentre sotto è fragile — e questa fragilità, prima o poi, si paga, spesso nel momento meno
+                      opportuno.
                     </p>
-                    <p>Il problema non è lo strumento, ma l'utilizzo.</p>
-                    <p>Un sito fatto senza criterio può sembrare funzionante, ma sotto è fragile.</p>
-                    <p>E questo, prima o poi, si paga.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -202,23 +236,22 @@ const BlogDiyWebsiteArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Perché un sito fai-da-te spesso non porta clienti</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Qui sta il punto centrale.</p>
-                    <p>Molti riescono a creare un sito.</p>
-                    <p>Pochi riescono a creare un sito che funziona.</p>
                     <p>
-                      Senza una struttura pensata per il cliente, il sito diventa un insieme di informazioni senza
-                      direzione. Non a caso, è la stessa logica che vale quando ci si chiede{" "}
+                      Qui sta il punto centrale di tutto il discorso. Molte persone riescono a creare un sito. Poche
+                      riescono a creare un sito che funziona davvero, cioè che porta risultati concreti. Senza una
+                      struttura pensata attorno a chi lo visita, un sito diventa un insieme di informazioni senza una
+                      direzione precisa — non a caso è la stessa logica che vale quando ci si chiede{" "}
                       <Link
                         to="/blog/sito-web-o-social-cosa-conviene-davvero-nel-2026"
                         className="text-accent font-medium hover:underline"
                       >
                         se conviene un sito web o i social network
                       </Link>
-                      : ciò che fa la differenza è la strategia, non lo strumento.
+                      : quello che fa davvero la differenza è la strategia dietro, non lo strumento scelto per
+                      costruirlo. Chi entra nel tuo sito lo guarda, e se ne va — non perché il sito sia brutto, ma
+                      perché non è stato progettato per guidarlo verso un'azione. E senza un'azione concreta da parte
+                      di chi visita, non ci sono risultati per te.
                     </p>
-                    <p>L'utente entra, guarda e se ne va.</p>
-                    <p>Non perché il sito sia brutto, ma perché non è progettato per guidarlo.</p>
-                    <p>E senza azione, non ci sono risultati.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -228,20 +261,18 @@ const BlogDiyWebsiteArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Il “buco nero” di Google</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Uno degli errori più comuni è pensare che basti avere un sito per comparire su Google.</p>
-                    <p>In realtà, se il sito non è strutturato nel modo giusto, non verrà trovato.</p>
                     <p>
-                      Google deve capire cosa fai, per chi lavori e perché dovrebbe mostrare proprio il tuo sito agli
-                      utenti che cercano i tuoi servizi.
-                    </p>
-                    <p>Se questi elementi non sono chiari, il sito resta invisibile.</p>
-                    <p>
-                      È come aprire un negozio perfetto in mezzo a un bosco. In questi casi, una strada veloce per essere
-                      trovati è affiancare al sito{" "}
+                      Uno degli errori più comuni, quando si crea un sito da soli, è pensare che basti pubblicarlo per
+                      comparire su Google. In realtà, se il sito non è strutturato nel modo giusto, semplicemente non
+                      verrà trovato: Google deve capire cosa fai, per chi lavori e perché dovrebbe mostrare proprio il
+                      tuo sito a chi cerca i servizi che offri. Se questi elementi non sono chiari — e raramente lo
+                      sono in un sito fatto senza una vera strategia SEO — il sito resta invisibile, anche se online da
+                      mesi. È un po' come aprire un negozio perfetto in mezzo a un bosco: nessuno passa di lì per caso.
+                      In questi casi, una strada più veloce per farti trovare nel frattempo è affiancare al sito una{" "}
                       <Link to="/pubblicita-google-ads" className="text-accent font-medium hover:underline">
-                        campagne Google ADS mirate
+                        campagna Google ADS mirata
                       </Link>
-                      .
+                      , gestita con criterio.
                     </p>
                   </div>
                 </article>
@@ -252,25 +283,23 @@ const BlogDiyWebsiteArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Il falso mito del risparmio</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Creare un sito web da soli sembra una scelta economica.</p>
-                    <p>Ma raramente lo è.</p>
                     <p>
-                      Il tempo speso a capire come funziona tutto, risolvere problemi e sistemare errori ha un costo
-                      reale. A questo si aggiungono eventuali correzioni future, clienti persi e opportunità mancate.
-                    </p>
-                    <p>
-                      Se vuoi avere un'idea più precisa di cosa incide davvero sul prezzo, abbiamo raccolto tutto
-                      nella nostra guida ai{" "}
+                      Creare un sito web da soli sembra, sulla carta, una scelta economica. Ma raramente lo è davvero.
+                      Il tempo che spendi a capire come funziona ogni cosa, a risolvere problemi tecnici e a correggere
+                      errori ha un costo reale, anche se non compare in nessuna fattura. A questo si aggiungono le
+                      correzioni che servono più avanti, i clienti persi nel frattempo e le opportunità mancate mentre
+                      il sito non era ancora pronto o non funzionava come doveva. Se vuoi farti un'idea più precisa di
+                      cosa incide davvero sul prezzo di un sito fatto bene, abbiamo raccolto tutto nella nostra guida
+                      ai{" "}
                       <Link
                         to="/blog/quanto-costa-un-sito-web-nel-2026"
                         className="text-accent font-medium hover:underline"
                       >
                         costi reali di un sito web nel 2026
                       </Link>
-                      .
+                      . Un sito che non porta risultati, in fondo, non è affatto un risparmio: è un costo nascosto,
+                      solo spostato più avanti nel tempo.
                     </p>
-                    <p>Un sito che non porta risultati non è un risparmio.</p>
-                    <p>È un costo nascosto.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -280,12 +309,14 @@ const BlogDiyWebsiteArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Quando ha senso fare un sito da soli</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Non è sempre una scelta sbagliata.</p>
                     <p>
-                      Può avere senso se vuoi fare esperienza, se stai testando un'idea o se non hai obiettivi
-                      commerciali immediati.
+                      Detto questo, non è sempre una scelta sbagliata. Farlo da soli può avere senso se vuoi
+                      semplicemente fare esperienza, se stai testando un'idea di business senza ancora sapere se
+                      funzionerà, o se non hai obiettivi commerciali immediati da raggiungere. Ma nel momento in cui il
+                      sito deve iniziare a lavorare per te — a portarti contatti, richieste, clienti — il discorso
+                      cambia radicalmente, e vale la pena valutare se non sia il momento di affidarti a chi lo fa di
+                      mestiere.
                     </p>
-                    <p>Ma nel momento in cui il sito deve lavorare per te, il discorso cambia.</p>
                   </div>
                 </article>
               </AnimatedSection>
@@ -295,15 +326,46 @@ const BlogDiyWebsiteArticle = () => {
                   <div className="mb-6 h-1 w-14 rounded-full bg-accent" />
                   <h2 className="heading-3 text-foreground">Conclusione</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
-                    <p>Creare un sito web da soli oggi è possibile.</p>
-                    <p>Ma creare un sito che funzioni davvero richiede qualcosa in più.</p>
                     <p>
-                      Struttura, strategia e chiarezza fanno la differenza tra un sito che esiste e un sito che porta
-                      clienti.
+                      Creare un sito web da soli, oggi, è certamente possibile. Ma creare un sito che funzioni davvero,
+                      che porti risultati concreti alla tua attività, richiede qualcosa in più della semplice
+                      pubblicazione online. Struttura, strategia e chiarezza sono gli elementi che fanno la differenza
+                      tra un sito che semplicemente esiste e un sito che ti porta clienti. E nel digitale, quella
+                      differenza è tutto.
                     </p>
-                    <p>E nel digitale, questa differenza è tutto.</p>
                   </div>
                 </article>
+              </AnimatedSection>
+            </div>
+          </div>
+        </section>
+
+        <section className="section-padding bg-background">
+          <div className="container-section">
+            <div className="mx-auto max-w-3xl">
+              <AnimatedSection className="mb-6 flex items-center gap-4">
+                <div className="icon-box w-13 h-13">
+                  <HelpCircle className="h-6 w-6 text-accent-foreground" />
+                </div>
+                <h2 className="heading-2">Domande frequenti sul creare un sito da soli</h2>
+              </AnimatedSection>
+              <AnimatedSection delay={0.1}>
+                <Accordion type="single" collapsible className="space-y-3">
+                  {faqs.map((faq, index) => (
+                    <AccordionItem
+                      key={faq.question}
+                      value={`faq-diy-website-${index}`}
+                      className="rounded-2xl border border-border bg-accent/3 px-6 transition-all duration-300 hover:border-accent/15 hover:bg-accent/6"
+                    >
+                      <AccordionTrigger className="py-5 text-left hover:no-underline">
+                        <span className="pr-4 text-base font-semibold text-foreground">{faq.question}</span>
+                      </AccordionTrigger>
+                      <AccordionContent className="aeo-faq-answer pb-5 text-sm leading-relaxed text-muted-foreground">
+                        {faq.answer}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
               </AnimatedSection>
             </div>
           </div>
@@ -322,7 +384,7 @@ const BlogDiyWebsiteArticle = () => {
               </p>
               <div className="mt-8">
                 <Link to="/contatti" className="btn-primary">
-                  Richiedi una consulenza
+                  Richiedi Preventivo Gratuito in 24h
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </div>
