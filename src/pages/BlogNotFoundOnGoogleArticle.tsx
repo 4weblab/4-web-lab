@@ -86,25 +86,40 @@ const BlogNotFoundOnGoogleArticle = () => {
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "BlogPosting",
-            headline,
-            description: pageDescription,
-            image: [pageImage],
-            inLanguage: "it-IT",
-            articleSection,
-            author: {
-              "@type": "Person",
-              name: "Carlo Fullin",
-              url: "https://4weblab.it/",
-            },
-            publisher: { "@id": "https://4weblab.it/#business" },
-            mainEntityOfPage: {
-              "@type": "WebPage",
-              "@id": pageUrl,
-            },
-            url: pageUrl,
-            datePublished,
-            dateModified,
+            "@graph": [
+              {
+                "@type": "BlogPosting",
+                headline,
+                description: pageDescription,
+                image: [pageImage],
+                inLanguage: "it-IT",
+                articleSection,
+                author: {
+                  "@type": "Person",
+                  name: "Carlo Fullin",
+                  url: "https://4weblab.it/",
+                },
+                publisher: { "@id": "https://4weblab.it/#business" },
+                mainEntityOfPage: {
+                  "@type": "WebPage",
+                  "@id": pageUrl,
+                },
+                url: pageUrl,
+                datePublished,
+                dateModified,
+              },
+              {
+                "@type": "FAQPage",
+                mainEntity: faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ],
           })}
         </script>
       </Helmet>
