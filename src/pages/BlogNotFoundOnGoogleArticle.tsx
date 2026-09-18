@@ -252,16 +252,13 @@ const BlogNotFoundOnGoogleArticle = () => {
                   <h2 className="heading-3 text-foreground">Google Maps: dove nascono molti contatti</h2>
                   <div className="mt-6 space-y-5 text-base leading-8 text-foreground/90 md:text-lg">
                     <p>
-                      Quando una persona cerca un servizio locale, molto spesso la prima cosa che vede è la mappa con
-                      le attività nella zona.
+                      Quando una persona cerca un servizio locale, molto spesso la prima cosa che vede non è nemmeno
+                      l'elenco dei siti, ma la mappa con le attività della zona — ed è diventata una delle principali
+                      fonti di contatto reale oggi. Se non sei presente lì, o se la tua scheda non è curata nei
+                      dettagli, stai semplicemente lasciando spazio ai tuoi concorrenti diretti. Sito web e presenza su
+                      Google Maps devono lavorare insieme, come due metà dello stesso lavoro: se anche uno solo dei due
+                      viene trascurato, la visibilità che perdi si traduce in clienti che vanno da qualcun altro.
                     </p>
-                    <p>Quella è una delle principali fonti di contatto oggi.</p>
-                    <p>
-                      Se non sei presente o se la tua scheda non è curata, stai lasciando spazio diretto ai tuoi
-                      concorrenti.
-                    </p>
-                    <p>Sito web e presenza su Google Maps devono lavorare insieme.</p>
-                    <p>Se uno dei due è trascurato, perdi visibilità.</p>
                   </div>
                 </article>
               </AnimatedSection>
