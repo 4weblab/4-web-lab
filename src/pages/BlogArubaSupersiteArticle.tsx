@@ -1,12 +1,13 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
-import { ArrowRight, Calendar, Clock, X, ZoomIn } from "lucide-react";
+import { ArrowRight, Calendar, Clock, HelpCircle, X, ZoomIn } from "lucide-react";
 import { useCallback, useEffect, useState, type ReactNode } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import PageBreadcrumb from "@/components/PageBreadcrumb";
 import RelatedArticles from "@/components/RelatedArticles";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { calcReadingTime, formatItalianDate, getArticleBySlug } from "@/data/blogArticles";
 import blogArubaHero from "@/assets/blog-aruba-supersite.webp";
 import exampleFavesrl from "@/assets/blog-aruba-example-favesrl.webp";
