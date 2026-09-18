@@ -190,7 +190,7 @@ const BlogArubaSupersiteArticle = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content={pageUrl} />
         <meta property="og:title" content="Aruba SuperSite Conviene? Limiti e Alternative 2026" />
-        <meta property="og:description" content="Stai valutando Aruba SuperSite? Analizziamo limiti tecnici, costi nascosti e perché un sito fai-da-te rischia di bloccare la tua attività." />
+        <meta property="og:description" content={pageDescription} />
         <meta property="og:image" content={pageImage} />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
