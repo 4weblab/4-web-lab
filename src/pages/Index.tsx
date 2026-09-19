@@ -14,20 +14,20 @@ const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web Ultra-Veloci a Padova | Da 490€ - 4 Web Lab</title>
+        <title>Web Agency Padova: Siti Web, SEO e Google Ads da 490€ | 4 Web Lab</title>
         <meta name="description" content="Il tuo sito online in 2-4 settimane: veloce, ottimizzato per Google e ChatGPT, zero costi di manutenzione. Richiedi l'Analisi AEO &amp; SEO gratuita — Padova." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/" />
-        <meta property="og:title" content="Siti Web Ultra-Veloci a Padova | Da 490€ - 4 Web Lab" />
+        <meta property="og:title" content="Web Agency Padova: Siti Web, SEO e Google Ads da 490€ | 4 Web Lab" />
         <meta property="og:description" content="Il tuo sito online in 2-4 settimane: veloce, ottimizzato per Google e ChatGPT, zero costi di manutenzione. Richiedi l'Analisi AEO &amp; SEO gratuita — Padova." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/" />
-        <meta name="twitter:title" content="Siti Web Ultra-Veloci a Padova | Da 490€ - 4 Web Lab" />
+        <meta name="twitter:title" content="Web Agency Padova: Siti Web, SEO e Google Ads da 490€ | 4 Web Lab" />
         <meta name="twitter:description" content="Il tuo sito online in 2-4 settimane: veloce, ottimizzato per Google e ChatGPT, zero costi di manutenzione. Richiedi l'Analisi AEO &amp; SEO gratuita — Padova." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
 
