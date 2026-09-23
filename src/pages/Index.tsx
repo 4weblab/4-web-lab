@@ -8,6 +8,8 @@ import UserRoutingSection from "@/components/UserRoutingSection";
 import ExtraServicesSection from "@/components/ExtraServicesSection";
 import HomeFaqPreview from "@/components/HomeFaqPreview";
 import ContactSection from "@/components/ContactSection";
+import TestimonialsSection from "@/components/TestimonialsSection";
+import HomeZoneSection from "@/components/HomeZoneSection";
 
 
 const Index = () => {
@@ -198,9 +200,11 @@ const Index = () => {
         <Hero />
         <TrustBar />
         <UserRoutingSection />
+        <TestimonialsSection />
         <ExtraServicesSection />
         <AboutSection />
         <HomeFaqPreview />
+        <HomeZoneSection />
         <ContactSection />
 
       </main>

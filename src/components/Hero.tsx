@@ -55,6 +55,13 @@ const Hero = () => {
         <div className="flex justify-center">
           {/* Main content */}
           <div className="max-w-3xl text-left">
+            <p
+              className="text-primary-foreground/90 font-semibold text-base sm:text-lg mb-4 text-balance"
+              style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
+            >
+              Il tuo sito non ti porta clienti? Su Google sei in seconda pagina, su ChatGPT non esisti.
+            </p>
+
             <h1
               className="heading-1 text-primary-foreground mb-8 text-balance"
               style={{
@@ -70,7 +77,7 @@ const Hero = () => {
               className="body-large text-primary-foreground mb-14 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              Sviluppiamo siti ultra-veloci che portano clienti reali: ottimizzati per la ricerca locale a Padova e per gli assistenti IA&nbsp;(ChatGPT, Gemini, Perplexity). Online in 2-4 settimane, con un solo referente per tutto il progetto.
+              Sviluppiamo siti ultra-veloci che portano clienti reali: ottimizzati per la ricerca locale a Padova e per gli assistenti IA. Online in 2-4 settimane, con un solo referente per tutto il progetto.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
