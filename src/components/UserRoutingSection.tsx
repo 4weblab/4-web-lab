@@ -8,7 +8,7 @@ import cardAzienda from '@/assets/card-azienda.webp';
 const cards = [
   {
     title: 'Siti Web per Negozi e Attività Locali',
-    text: 'Il negozio sotto casa che tutti trovano online. Sito ultra-veloce pensato per chi cerca "vicino a me": ottimizzato per Google Maps e per le ricerche geolocalizzate delle IA. Da 490€',
+    text: 'Il negozio sotto casa che tutti trovano online. Sito ultra-veloce pensato per chi cerca "vicino a me" su Google Maps. Da 490€',
     cta: 'Scopri i siti per negozi',
     link: '/siti-web-per-negozi',
     image: cardNegozio,
@@ -17,7 +17,7 @@ const cards = [
   },
   {
     title: 'Siti Web per Liberi Professionisti',
-    text: 'Il tuo nome, la prima cosa che l\'IA consiglia. Piattaforma su misura per costruire autorevolezza, acquisire lead qualificati e comparire quando qualcuno chiede a ChatGPT "chi mi consiglia per..." Da 990€',
+    text: 'Il tuo nome, la prima scelta di chi cerca un professionista. Piattaforma su misura per costruire autorevolezza, acquisire lead qualificati e comparire quando qualcuno chiede a ChatGPT "chi mi consiglia per..." Da 990€',
     cta: 'Scopri i siti per professionisti',
     link: '/siti-web-per-professionisti',
     image: cardProfessionista,
