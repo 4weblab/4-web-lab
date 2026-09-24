@@ -66,19 +66,9 @@ const AboutSection = () => {
         <AnimatedSection className="text-center mb-14 md:mb-16">
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Perché scegliere 4 Web Lab per il tuo sito web a Padova</h2>
-          <p className="aeo-answer body-large text-muted-foreground max-w-3xl mx-auto text-balance">
+          <p className="aeo-answer body-base text-muted-foreground max-w-2xl mx-auto text-center text-balance">
             <strong>4 Web Lab</strong> è uno studio web con base a Legnaro (PD) che realizza <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">siti web a Padova</Link> e in tutta Italia, <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le IA</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link> per negozi, professionisti e PMI.
           </p>
-          <Link
-            to="/chatgpt-ads"
-            className="inline-flex items-center gap-2 mt-6 px-5 py-2.5 rounded-full border-2 border-accent/60 bg-accent/5 text-accent font-semibold text-sm hover:bg-accent hover:text-white hover:border-accent transition-all duration-300 shadow-sm"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-accent" />
-            </span>
-            Scopri come lanciare campagne ChatGPT per la tua azienda
-          </Link>
         </AnimatedSection>
 
         <StaggerContainer className="grid gap-5 md:grid-cols-2 lg:grid-cols-3" staggerDelay={0.1}>
