@@ -294,7 +294,7 @@ const SitiWebPadova = () => {
           <div className="container-section">
             <div className="max-w-4xl mx-auto mb-12">
               <AnimatedSection>
-                <h2 className="heading-2 mb-4">Come un Web Studio Locale Posiziona la tua Attività su Google</h2>
+                <h2 className="heading-2 mb-4">Come 4 Web Lab Posiziona la tua Attività su Google</h2>
                 <p className="aeo-definition body-base text-muted-foreground leading-relaxed">
                   Realizzare un sito web a Padova non significa solo creare una bella vetrina grafica, ma strutturare una vera e propria calamita per i clienti locali. Ottimizziamo il tuo sito per intercettare le ricerche geolocalizzate dei tuoi potenziali clienti (es. "idraulico Padova", "centro estetico Legnaro", "consulente finanziario Padova"). Il vantaggio di scegliere uno studio del territorio è la combinazione tra una strategia SEO locale mirata, comunicazione diretta e la conoscenza reale del tessuto imprenditoriale padovano.
                 </p>
@@ -350,7 +350,7 @@ const SitiWebPadova = () => {
                   </div>
                 </div>
                 <h2 className="heading-2 mb-4">
-                  Soluzioni Web su Misura per il Tuo Business a Padova
+                  Soluzioni Web su Misura per il Tuo Business
                 </h2>
                 <p className="body-large text-muted-foreground max-w-3xl mx-auto text-balance">
                   Progettiamo esperienze digitali specifiche per ogni tipo di attività locale e aziendale.
@@ -529,7 +529,7 @@ const SitiWebPadova = () => {
                   <div className="icon-box w-13 h-13">
                     <Globe className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
+                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia</h2>
                 </div>
                 <p className="body-large text-muted-foreground max-w-3xl">
                   Ovunque tu sia in provincia di Padova, hai lo stesso supporto diretto — anche di persona, se ti serve.
@@ -653,7 +653,7 @@ const SitiWebPadova = () => {
               <AnimatedSection delay={0.1}>
                 <div className="prose prose-lg max-w-none text-muted-foreground">
                   <p>
-                    Se hai un'attività commerciale a Padova puoi partire dalla pagina dedicata ai <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">siti web per negozi</Link>, mentre per studi e liberi professionisti abbiamo una sezione specifica sulla <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">realizzazione di siti web per professionisti</Link>. Le PMI strutturate trovano un percorso dedicato nella pagina <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">siti web aziendali</Link>, con architetture multipagina e lead generation.
+                    Se hai un'attività commerciale puoi partire dalla pagina dedicata ai <Link to="/siti-web-per-negozi" className="text-accent hover:underline font-medium">siti web per negozi</Link>, mentre per studi e liberi professionisti abbiamo una sezione specifica sulla <Link to="/siti-web-per-professionisti" className="text-accent hover:underline font-medium">realizzazione di siti web per professionisti</Link>. Le PMI strutturate trovano un percorso dedicato nella pagina <Link to="/siti-web-aziendali" className="text-accent hover:underline font-medium">siti web aziendali</Link>, con architetture multipagina e lead generation.
                   </p>
                   <p>
                     Per capire meglio costi, tempistiche e tecnologie ti consigliamo la guida <Link to="/blog/quanto-costa-un-sito-web-nel-2026" className="text-accent hover:underline font-medium">quanto costa un sito web nel 2026</Link>, l'approfondimento su <Link to="/blog/siti-web-creati-con-intelligenza-artificiale" className="text-accent hover:underline font-medium">siti creati con intelligenza artificiale</Link> e l'analisi su <Link to="/blog/aruba-supersite-conviene-davvero-limiti-e-cosa-sapere" className="text-accent hover:underline font-medium">Aruba SuperSite</Link> per chi sta valutando soluzioni fai-da-te. Se invece ti interessa la visibilità organica oltre Padova, dai un'occhiata alla pagina <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">posizionamento Google e AI</Link>.
@@ -778,7 +778,7 @@ const SitiWebPadova = () => {
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <p className="heading-2 text-primary-foreground mb-6">
-                  Il tuo prossimo cliente a Padova ti sta già cercando
+                  Il tuo prossimo cliente ti sta già cercando
                 </p>
                 <p className="body-large text-primary-foreground/70 mb-8">Raccontaci la tua attività: preventivo personalizzato in 24 ore, senza impegno.</p>
                 <div className="text-center">
