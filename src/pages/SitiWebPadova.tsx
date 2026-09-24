@@ -350,7 +350,7 @@ const SitiWebPadova = () => {
                   </div>
                 </div>
                 <h2 className="heading-2 mb-4">
-                  Soluzioni Web su Misura per il Tuo Business a Padova
+                  Soluzioni Web su Misura per il Tuo Business
                 </h2>
                 <p className="body-large text-muted-foreground max-w-3xl mx-auto text-balance">
                   Progettiamo esperienze digitali specifiche per ogni tipo di attività locale e aziendale.
@@ -529,7 +529,7 @@ const SitiWebPadova = () => {
                   <div className="icon-box w-13 h-13">
                     <Globe className="w-6 h-6 text-accent-foreground" />
                   </div>
-                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia: la Tua Agenzia di Prossimità</h2>
+                  <h2 className="heading-2">Sviluppo Siti Web a Padova e Provincia</h2>
                 </div>
                 <p className="body-large text-muted-foreground max-w-3xl">
                   Ovunque tu sia in provincia di Padova, hai lo stesso supporto diretto — anche di persona, se ti serve.
@@ -778,7 +778,7 @@ const SitiWebPadova = () => {
               {/* Box sinistra - CTA */}
               <div className="bg-primary-foreground/5 border border-primary-foreground/10 rounded-2xl p-8 flex flex-col justify-center">
                 <p className="heading-2 text-primary-foreground mb-6">
-                  Il tuo prossimo cliente a Padova ti sta già cercando
+                  Il tuo prossimo cliente ti sta già cercando
                 </p>
                 <p className="body-large text-primary-foreground/70 mb-8">Raccontaci la tua attività: preventivo personalizzato in 24 ore, senza impegno.</p>
                 <div className="text-center">
