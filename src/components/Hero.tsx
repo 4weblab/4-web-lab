@@ -69,8 +69,8 @@ const Hero = () => {
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 uppercase">WEB AGENCY PADOVA — SEO, AEO, GOOGLE ADS</span>
-              <span className="block my-3 sm:my-4">Fatti trovare prima dei tuoi concorrenti — su Google e su ChatGPT</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 uppercase">WEB AGENCY PADOVA  SEO, AEO, GOOGLE ADS</span>
+              <span className="block my-3 sm:my-4">Fatti trovare prima dei tuoi concorrenti  su Google e sulle AI</span>
             </h1>
 
             <p
