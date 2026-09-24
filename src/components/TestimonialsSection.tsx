@@ -27,7 +27,7 @@ const TestimonialsSection = () => {
           <div className="section-divider" />
           <h2 className="heading-3 mb-2">Cosa dicono i nostri clienti a Padova e in Italia</h2>
           <p className="body-large text-muted-foreground max-w-2xl mx-auto text-balance">
-            4.9/5 su Google. Non parole nostre — risultati di chi ha già lavorato con noi.
+            4.9/5 su Google. Non parole nostre ma risultati di chi ha già lavorato con noi.
           </p>
         </AnimatedSection>
 

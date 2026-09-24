@@ -59,25 +59,25 @@ const Hero = () => {
               className="text-primary-foreground/90 font-semibold text-base sm:text-lg mb-4 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              Il tuo sito non ti porta clienti? Su Google sei in seconda pagina, su ChatGPT non esisti.
+              Il tuo sito non ti porta clienti?
             </p>
 
             <h1
-              className="heading-1 text-primary-foreground mb-8 text-balance"
+              className="heading-1 text-primary-foreground mb-6 text-balance"
               style={{
                 textShadow: '0 2px 8px rgba(0,0,0,0.55), 0 0 20px rgba(0,0,0,0.25)',
                 fontWeight: 800,
                 letterSpacing: '-0.03em'
               }}>
-              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 uppercase">WEB AGENCY PADOVA — SEO, AEO, GOOGLE ADS</span>
-              <span className="block my-3 sm:my-4">Fatti trovare prima dei tuoi concorrenti — su Google e su ChatGPT</span>
+              <span className="block text-[0.6em] tracking-wide font-semibold opacity-90 uppercase">WEB AGENCY PADOVA  SEO, AEO, GOOGLE ADS</span>
+              <span className="block my-3 sm:my-4">Fatti trovare prima dei tuoi concorrenti  su Google e sulle AI</span>
             </h1>
 
             <p
-              className="body-large text-primary-foreground mb-14 text-balance"
+              className="text-primary-foreground/90 font-medium text-base mb-12 text-balance"
               style={{ textShadow: '0 1px 4px rgba(0,0,0,0.5)' }}
             >
-              Sviluppiamo siti ultra-veloci che portano clienti reali: ottimizzati per la ricerca locale a Padova e per gli assistenti IA. Online in 2-4 settimane, con un solo referente per tutto il progetto.
+              Sito nuovo o da migliorare? 4 Web Lab è al tuo fianco.
             </p>
 
             <div className="flex flex-col sm:flex-row items-start gap-5">
