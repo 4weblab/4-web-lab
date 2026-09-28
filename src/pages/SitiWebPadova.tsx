@@ -22,21 +22,21 @@ const SitiWebPadova = () => {
   return (
     <>
       <Helmet>
-        <title>Siti Web Padova: Realizzazione Siti Internet da 490€ | 4 Web Lab</title>
+        <title>Realizzazione e Creazione Siti Web Padova da 490€ | 4 Web Lab</title>
         <meta name="description" content="Cerchi una web agency a Padova? Realizziamo siti professionali su misura per attività locali e PMI. Consegna in 2-4 settimane. Preventivo in 24h." />
 
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://4weblab.it/realizzazione-siti-web-padova" />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta property="og:title" content="Siti Web Padova: Realizzazione Siti Internet da 490€ | 4 Web Lab" />
+        <meta property="og:title" content="Realizzazione e Creazione Siti Web Padova da 490€ | 4 Web Lab" />
         <meta property="og:description" content="Cerchi una web agency a Padova? Realizziamo siti professionali su misura per attività locali e PMI. Consegna in 2-4 settimane. Preventivo in 24h." />
         <meta property="og:image" content="https://4weblab.it/og-image.webp" />
         <meta property="og:locale" content="it_IT" />
         <meta property="og:site_name" content="4 Web Lab" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:url" content="https://4weblab.it/realizzazione-siti-web-padova" />
-        <meta name="twitter:title" content="Siti Web Padova: Realizzazione Siti Internet da 490€ | 4 Web Lab" />
+        <meta name="twitter:title" content="Realizzazione e Creazione Siti Web Padova da 490€ | 4 Web Lab" />
         <meta name="twitter:description" content="Cerchi una web agency a Padova? Realizziamo siti professionali su misura per attività locali e PMI. Consegna in 2-4 settimane. Preventivo in 24h." />
         <meta name="twitter:image" content="https://4weblab.it/og-image.webp" />
         <script type="application/ld+json">
@@ -234,7 +234,7 @@ const SitiWebPadova = () => {
                 className="body-large text-primary-foreground/90 mb-4 text-balance"
                 style={{ textShadow: "0 1px 2px rgba(0,0,0,0.4)" }}
               >
-                Il web studio locale per artigiani, professionisti e PMI che vogliono crescere online.
+                Il web studio locale per la realizzazione siti web e siti internet per artigiani, professionisti e PMI che vogliono crescere online.
               </p>
               <p
                 className="body-large text-primary-foreground/95 mb-10 max-w-3xl mx-auto text-balance"
