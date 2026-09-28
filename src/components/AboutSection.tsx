@@ -67,7 +67,7 @@ const AboutSection = () => {
           <div className="section-divider" />
           <h2 className="heading-2 mb-5">Perché scegliere 4 Web Lab per il tuo sito web a Padova</h2>
           <p className="aeo-answer body-base text-muted-foreground max-w-2xl mx-auto text-center text-balance">
-            <strong>4 Web Lab</strong> è uno studio web con base a Legnaro (PD) che realizza <Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">siti web a Padova</Link> e in tutta Italia, <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le IA</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link> per negozi, professionisti e PMI.
+            <strong>4 Web Lab</strong> è uno studio web con base a Legnaro (PD): siti web professionali per negozi, professionisti e PMI (<Link to="/realizzazione-siti-web-padova" className="text-accent hover:underline font-medium">realizzazione siti web a Padova</Link> e in tutta Italia), <Link to="/posizionamento-google-e-ai" className="text-accent hover:underline font-medium">SEO per Google e per le IA</Link> (ChatGPT, Gemini, Perplexity) e <Link to="/pubblicita-google-ads" className="text-accent hover:underline font-medium">campagne Google Ads</Link>.
           </p>
         </AnimatedSection>
 
