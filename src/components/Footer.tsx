@@ -105,7 +105,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/realizzazione-siti-web-padova" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
-                  Siti Web a Padova
+                  Realizzazione Siti Web Padova
                 </Link>
               </li>
             </ul>
