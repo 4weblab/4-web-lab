@@ -12,6 +12,7 @@
 - [SEO, AEO e GEO](https://4weblab.it/posizionamento-google-e-ai): Posizionamento su Google (SEO), ottimizzazione per risposte dirette come AI Overviews e featured snippet (AEO), e ottimizzazione per essere citati da ChatGPT, Perplexity, Gemini e Copilot (GEO). Metodo in 5 fasi: audit, strategia di entità e keyword, ottimizzazione on-page e dati strutturati, contenuti AEO/GEO, monitoraggio.
 - [Google ADS](https://4weblab.it/pubblicita-google-ads): Gestione completa di campagne Search, Performance Max e Local per negozi, professionisti e PMI, con setup, ottimizzazione continua e report mensili.
 - [ChatGPT Ads](https://4weblab.it/chatgpt-ads): Gestione di campagne pubblicitarie conversazionali su ChatGPT Ads, rivolte a servizi B2B, prodotti/servizi ad alto scontrino e lead generation qualificata.
+- [Perizia sito web](https://4weblab.it/perizia-sito-web): Perizia del sito web: analisi tecnica indipendente di un sito esistente, con report scritto. Essential 219 € + IVA, Premium 499 € + IVA. Non è una perizia forense.
 - [Siti Web a Padova e provincia](https://4weblab.it/realizzazione-siti-web-padova): Landing dedicata alla realizzazione siti web per attività di Padova e provincia.
 
 ## Realizzazioni

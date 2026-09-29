@@ -55,6 +55,11 @@ const Footer = () => {
             </h3>
             <ul className="space-y-3">
               <li>
+                <Link to="/perizia-sito-web" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
+                  Perizia sito web
+                </Link>
+              </li>
+              <li>
                 <Link to="/siti-web-per-negozi" className="text-primary-foreground/70 hover:text-primary-foreground text-sm transition-colors duration-300 hover:underline underline-offset-4">
                   Siti per Negozi
                 </Link>

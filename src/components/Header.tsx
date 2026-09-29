@@ -12,6 +12,7 @@ const navItems = [
 ];
 
 const serviceItems = [
+  { label: 'Perizia sito web', href: '/perizia-sito-web' },
   { label: 'Siti per Negozi', href: '/siti-web-per-negozi' },
   { label: 'Siti per Professionisti', href: '/siti-web-per-professionisti' },
   { label: 'Siti per Aziende', href: '/siti-web-aziendali' },
