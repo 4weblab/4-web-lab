@@ -96,6 +96,11 @@ export const routes: RouteRecord[] = [
         lazy: page(() => import("./pages/ChatGptAds")),
         entry: "src/pages/ChatGptAds.tsx",
       },
+      {
+        path: "perizia-sito-web",
+        lazy: page(() => import("./pages/PeriziaSitoWeb")),
+        entry: "src/pages/PeriziaSitoWeb.tsx",
+      },
 
       {
         path: "blog",

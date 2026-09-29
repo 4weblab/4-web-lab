@@ -28,6 +28,10 @@
 - **AEO (Answer Engine Optimization)**: strutturazione dei contenuti per essere scelti come risposta diretta da Google AI Overviews, featured snippet, People Also Ask e assistenti vocali. Schema FAQPage, HowTo, Article, formato Q&A con risposta concisa in apertura.
 - **GEO (Generative Engine Optimization)**: ottimizzazione del brand per essere citati dalle AI generative (ChatGPT, Perplexity, Gemini, Claude, Copilot). Costruzione dell'entità brand, file llms.txt, dati strutturati Organization/WebSite, presenza coerente su fonti esterne autorevoli.
 
+### Perizia sito web
+
+- **Perizia sito web** (`/perizia-sito-web`) — Perizia del sito web: analisi tecnica indipendente di un sito esistente, con report scritto. Essential 219 € + IVA, Premium 499 € + IVA. Non è una perizia forense.
+
 ### SEO locale
 
 - **Pagina dedicata**: `/realizzazione-siti-web-padova` — Servizio rivolto a Padova e provincia (Legnaro, Albignasego, Selvazzano, Abano Terme, Vigodarzere e tutta l'area metropolitana).
