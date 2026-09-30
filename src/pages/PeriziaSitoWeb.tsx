@@ -296,7 +296,7 @@ const PeriziaSitoWeb = () => {
               ))}
             </div>
             <p className="text-xs text-muted-foreground mt-6 text-center">
-              Prezzi IVA esclusa. Perizia tecnica indipendente, non forense.
+              Perizia tecnica indipendente, non forense.
             </p>
           </div>
         </section>
