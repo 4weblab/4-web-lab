@@ -243,7 +243,7 @@ const PeriziaSitoWeb = () => {
               </AnimatedSection>
             </div>
             <p className="text-sm text-muted-foreground mt-8 text-center">
-              Sui cookie e privacy verifichiamo solo che banner e pagine esistano, non esprimiamo pareri legali.
+              Sui cookie e privacy verifichiamo solo che banner e le pagine esistano, non esprimiamo pareri legali.
             </p>
           </div>
         </section>
